@@ -10,13 +10,13 @@
 
     <ImageView
         android:id="@+id/tour_dramalist_dramaimage"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:srcCompat="@drawable/sample_image" />
 
     <TextView
         android:id="@+id/tour_dramalist_dramaname"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tour_dramalist_dramaimage"
         android:layout_alignLeft="@id/tour_dramalist_dramaimage"
