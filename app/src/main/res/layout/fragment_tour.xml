@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tour_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/tour_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -15,35 +18,33 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="14dp"
             app:srcCompat="@drawable/sample_image" />
 
-        <FrameLayout
-            android:layout_width="264dp"
+        <RelativeLayout
+            android:id="@+id/tour_searchbar"
+            android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="14dp">
+            android:layout_marginRight="20dp"
+            android:background="@drawable/tour_searchbar">
 
             <ImageView
-                android:id="@+id/tour_searchbar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/tour_searchbar" />
-
-            <ImageView
-                android:id="@+id/tour_searchbar_remove"
+                android:id="@+id/imageView"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
-                android:layout_marginLeft="242dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 app:srcCompat="@drawable/tour_searchbar_remove" />
-        </FrameLayout>
+        </RelativeLayout>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tour_notice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tour_title"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:text="내가 좋아하는 K-drama 로케지를\n드라마 속 배우와 함께 여행해요 :)"
@@ -51,24 +52,45 @@
         android:textStyle="bold" />
 
     <LinearLayout
+        android:id="@+id/tour_spinner"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tour_notice"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="16dp"
         android:orientation="horizontal">
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/tour_spinner_genre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="24dp" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/tour_spinner_actor"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/tour_spinner_sort"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp" />
     </LinearLayout>
-</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tour_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tour_spinner"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="15dp" />
+
+    <FrameLayout
+        android:id="@+id/tour_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</RelativeLayout>
