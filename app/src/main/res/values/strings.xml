@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FIKA_Project</string>
+    <string name="img_app_logo">FIKA_logo</string>
+
+    <string name="btm_nav_stamp">스탬프</string>
+    <string name="btm_nav_tour">투어탐색</string>
+    <string name="btm_nav_home">홈</string>
+    <string name="btm_nav_mypage">마이페이지</string>
+
+
+    <!-- 로그인 -->
+    <string name="login">로그인</string>
+    <string name="login_email_hint">이메일 입력</string>
+    <string name="login_ps_hint">비밀번호 입력</string>
+    <string name="login_name_hint">이름</string>
+    <string name="login_signup">회원가입</string>
+</resources>
