@@ -44,6 +44,8 @@ dependencies {
     // firebase
     implementation platform('com.google.firebase:firebase-bom:30.3.1')
     implementation 'com.google.firebase:firebase-analytics-ktx'
+    // 카카오로그인
+    implementation "com.kakao.sdk:v2-user:2.7.0"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'

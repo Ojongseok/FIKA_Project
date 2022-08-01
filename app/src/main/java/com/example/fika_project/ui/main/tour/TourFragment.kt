@@ -1,5 +1,6 @@
 package com.example.fika_project.ui.main.tour
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,8 @@ class TourFragment :Fragment() {
         _binding = FragmentTourBinding.inflate(inflater, container, false)
 
         spinnerSetting()
+
+
 
         val recyclerviewManager = GridLayoutManager(activity,3)
         val recyclerAdapter = TourRecyclerviewAdapter(this)

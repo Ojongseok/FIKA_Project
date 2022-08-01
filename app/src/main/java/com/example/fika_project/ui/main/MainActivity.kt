@@ -2,12 +2,14 @@ package com.example.fika_project.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityMainBinding
 import com.example.fika_project.ui.main.home.HomeFragment
 import com.example.fika_project.ui.main.mypage.MypageFragment
 import com.example.fika_project.ui.main.stamp.StampFragment
 import com.example.fika_project.ui.main.tour.TourFragment
+import com.kakao.sdk.common.util.Utility
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
