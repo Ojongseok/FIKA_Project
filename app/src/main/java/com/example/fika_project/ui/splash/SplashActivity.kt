@@ -21,4 +21,5 @@ class SplashActivity : AppCompatActivity(){
             startActivity(intent)
         },200)
     }
+
 }
