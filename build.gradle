@@ -3,6 +3,12 @@ buildscript {
         google()  // Google's Maven repository
         mavenCentral()
     }
+
+    ext{
+        retrofit_version = "2.9.0"
+        okHttp_version = "4.9.0"
+    }
+
     dependencies {
         classpath 'com.google.gms:google-services:4.3.13'
     }

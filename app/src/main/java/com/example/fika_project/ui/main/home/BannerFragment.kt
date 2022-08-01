@@ -5,11 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentBannerBinding
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
-class BannerFragment(val img : Int, title:String) : Fragment(){
+class BannerFragment(val img : Int, val title:String, val subImg:Int?, val drama:String) : Fragment(){
     lateinit var binding: FragmentBannerBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -17,7 +15,9 @@ class BannerFragment(val img : Int, title:String) : Fragment(){
         binding = FragmentBannerBinding.inflate(inflater, container, false)
 
         binding.bannerImageIv.setImageResource(img)
-        binding.bannerTitleTv.setText("미리보기")
+        binding.bannerTitleTv.setText(title)
+        binding.bannerSubImgIv.setImageResource(subImg!!)
+        binding.bannerDramaTitleTv.setText(drama)
 
         return binding.root
     }

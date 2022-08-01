@@ -1,19 +1,13 @@
 package com.example.fika_project.ui.main
 
-import android.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewpager.widget.ViewPager
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityMainBinding
-import com.example.fika_project.databinding.FragmentBannerBinding
-import com.example.fika_project.ui.main.home.BannerFragment
-import com.example.fika_project.ui.main.home.BannerVPAdapter
 import com.example.fika_project.ui.main.home.HomeFragment
 import com.example.fika_project.ui.main.mypage.MypageFragment
 import com.example.fika_project.ui.main.stamp.StampFragment
 import com.example.fika_project.ui.main.tour.TourFragment
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
