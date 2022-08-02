@@ -18,8 +18,9 @@ class TestActivity : AppCompatActivity() {
 
 
         val mapView = MapView(this)
-
         val mapViewContainer = findViewById<View>(com.example.fika_project.R.id.map_view) as ViewGroup
         mapViewContainer.addView(mapView)
+
+
     }
 }

@@ -34,8 +34,8 @@ class HomeFragment : Fragment() {
         binding.homeBannerVp.adapter = bannerAdapter
         binding.homeBannerVp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-        bannerAdapter.addFragment(BannerFragment(R.color.sub_blue,"추천코스"))
-        bannerAdapter.addFragment(BannerFragment(R.color.main_yellow,"인기코스코스"))
+        //bannerAdapter.addFragment(BannerFragment(R.color.sub_blue,"추천코스"))
+        //bannerAdapter.addFragment(BannerFragment(R.color.main_yellow,"인기코스코스"))
 
         binding.homeCourseMakingRv.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)

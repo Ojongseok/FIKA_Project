@@ -15,6 +15,8 @@ class TourActorSelectFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentTourActorSelectBinding.inflate(inflater, container, false)
 
+
+
         return binding.root
     }
 

@@ -47,6 +47,9 @@ dependencies {
     // 카카오api
     implementation "com.kakao.sdk:v2-user:2.7.0"
     implementation files('libs/libDaumMapAndroid.jar')
+    // sliding panel
+    implementation 'com.github.hannesa2:AndroidSlidingUpPanel:4.2.1'
+
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
