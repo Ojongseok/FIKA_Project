@@ -30,6 +30,4 @@ class TourRecyclerviewAdapter(val frg : Fragment): RecyclerView.Adapter<Recycler
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
     override fun getItemCount() = 11
-
-
 }
