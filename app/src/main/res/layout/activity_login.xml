@@ -21,7 +21,7 @@
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:layout_marginTop="56dp"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/sample_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -94,7 +94,6 @@
         app:layout_constraintEnd_toEndOf="@+id/login_ps_et"
         app:layout_constraintStart_toStartOf="@+id/login_ps_et"
         app:layout_constraintTop_toBottomOf="@+id/login_ps_et" />
-
 
     <TextView
         android:id="@+id/login_ps_warning_tv"
