@@ -1,75 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.main.tour.search.SearchActivity">
 
-    <ImageView
-        android:id="@+id/search_searchbar"
+    <RelativeLayout
+        android:id="@+id/top_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="14dp"
         android:layout_marginRight="20dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/tour_searchbar" />
+        android:background="@drawable/tour_searchbar">
 
-    <ImageView
-        android:id="@+id/search_remove_button"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_alignTop="@id/search_searchbar"
-        android:layout_alignBottom="@id/search_searchbar"
-        android:layout_marginRight="10dp"
-        android:layout_toLeftOf="@id/search_ok_button"
-        app:srcCompat="@drawable/tour_searchbar_remove" />
+        <ImageView
+            android:id="@+id/search_remove_button"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/search_ok_button"
+            app:srcCompat="@drawable/tour_searchbar_remove" />
 
-    <EditText
-        android:id="@+id/search_contents_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/search_searchbar"
-        android:layout_alignTop="@id/search_searchbar"
-        android:layout_alignBottom="@id/search_searchbar"
-        android:layout_marginLeft="50dp"
-        android:background="@null"
-        android:ems="15"
-        android:hint="검색어를 입력해주세요."
-        android:inputType="textPersonName|text"
-        android:textSize="14sp" />
+        <EditText
+            android:id="@+id/search_contents_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50dp"
+            android:background="@null"
+            android:ems="15"
+            android:hint="검색어를 입력해주세요."
+            android:inputType="textPersonName|text"
+            android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/search_ok_button"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignTop="@id/search_searchbar"
-        android:layout_alignRight="@id/search_searchbar"
-        android:layout_alignBottom="@id/search_searchbar"
-        android:layout_marginRight="5dp"
-        android:text="Button" />
+        <Button
+            android:id="@+id/search_ok_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:text="Button" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/search_searchbar"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="24dp"
         android:text="최근 검색어" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recent_keyword_recyclerview"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView3"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="8dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/search_recent_keyword_recyclerview"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:text="최근 검색어" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:text="인기 검색어" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/search_rank_1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-</RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="1. " />
+
+        <TextView
+            android:id="@+id/search_rank_1_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/search_rank_1"
+            android:layout_alignBottom="@id/search_rank_1"
+            android:layout_toRightOf="@id/search_rank_1"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/search_rank_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_rank_1"
+            android:layout_marginTop="16dp"
+            android:text="2. " />
+
+        <TextView
+            android:id="@+id/search_rank_2_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/search_rank_2"
+            android:layout_alignBottom="@id/search_rank_2"
+            android:layout_toRightOf="@id/search_rank_2"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/search_rank_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_rank_2"
+            android:layout_marginTop="16dp"
+            android:text="3. " />
+
+        <TextView
+            android:id="@+id/search_rank_3_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/search_rank_3"
+            android:layout_alignBottom="@id/search_rank_3"
+            android:layout_toRightOf="@id/search_rank_3"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/search_rank_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_rank_3"
+            android:layout_marginTop="16dp"
+            android:text="4. " />
+
+        <TextView
+            android:id="@+id/search_rank_4_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/search_rank_4"
+            android:layout_alignBottom="@id/search_rank_4"
+            android:layout_toRightOf="@id/search_rank_4"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/search_rank_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_rank_4"
+            android:layout_marginTop="16dp"
+            android:text="5. " />
+        <TextView
+            android:id="@+id/search_rank_5_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/search_rank_5"
+            android:layout_alignBottom="@id/search_rank_5"
+            android:layout_toRightOf="@id/search_rank_5"
+            android:text="TextView" />
+    </RelativeLayout>
+</LinearLayout>

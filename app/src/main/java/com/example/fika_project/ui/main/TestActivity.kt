@@ -23,4 +23,8 @@ class TestActivity : AppCompatActivity() {
 
 
     }
+    override fun onDestroy() {
+        _Binding = null
+        super.onDestroy()
+    }
 }

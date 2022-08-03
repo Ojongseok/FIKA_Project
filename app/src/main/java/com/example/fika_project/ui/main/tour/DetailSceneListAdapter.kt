@@ -3,15 +3,13 @@ package com.example.fika_project.ui.main.tour
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fika_project.R
 import com.example.fika_project.ui.main.tour.search.SearchRecentKeywordAdapter
-import kotlinx.android.synthetic.main.tour_recyclerview_dramalist_item.view.*
 
-class DramaListAdapter(val frg : Fragment): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class DetailSceneListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.tour_recyclerview_dramalist_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.detail_scene_list_item,parent,false)
 
         return CustomViewHolder(view)
     }
@@ -19,12 +17,8 @@ class DramaListAdapter(val frg : Fragment): RecyclerView.Adapter<RecyclerView.Vi
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val view = (holder as CustomViewHolder).itemView
 
-        view.tour_dramalist_dramaimage.setOnClickListener {
-            frg.parentFragmentManager.beginTransaction().replace(R.id.tour_container,ActorSelectFragment()).addToBackStack(null).commit()
 
-
-        }
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
-    override fun getItemCount() = 11
+    override fun getItemCount() = 8
 }

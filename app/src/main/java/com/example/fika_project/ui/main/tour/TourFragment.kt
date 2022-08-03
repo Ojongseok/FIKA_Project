@@ -20,6 +20,7 @@ class TourFragment :Fragment() {
 
         spinnerSetting()
 
+
         val recyclerviewManager = GridLayoutManager(activity,3)
         val recyclerAdapter = DramaListAdapter(this)
         binding.tourRecyclerview.apply {

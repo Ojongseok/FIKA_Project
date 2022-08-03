@@ -9,7 +9,6 @@ import com.example.fika_project.R
 import kotlinx.android.synthetic.main.search_recent_keyword_item.view.*
 
 class SearchRecentKeywordAdapter(val context : Context, var recentKeywordList : ArrayList<String>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    val SearchRecentKeywordClass = SearchRecentKeywordClass()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.search_recent_keyword_item,parent,false)
         return CustomViewHolder(view)
