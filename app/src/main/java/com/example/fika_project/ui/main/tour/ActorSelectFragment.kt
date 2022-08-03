@@ -9,7 +9,7 @@ import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentTourActorSelectBinding
 import com.example.fika_project.databinding.FragmentTourBinding
 
-class TourActorSelectFragment : Fragment() {
+class ActorSelectFragment : Fragment() {
     private var _binding: FragmentTourActorSelectBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

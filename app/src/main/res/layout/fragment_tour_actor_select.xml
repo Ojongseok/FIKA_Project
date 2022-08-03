@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CC9D9D9D"
-    tools:context=".ui.main.tour.TourActorSelectFragment" >
+    tools:context=".ui.main.tour.ActorSelectFragment" >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:text="이태원클라쓰" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/actor_select_item1"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_above="@id/textView"
@@ -32,7 +32,7 @@
             android:text="박새로이" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/actor_select_item4"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerVertical="true"
@@ -42,7 +42,7 @@
             android:text="오수아" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/actor_select_item2"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerVertical="true"
@@ -52,7 +52,7 @@
             android:text="조이서" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/actor_select_item3"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_below="@id/textView"

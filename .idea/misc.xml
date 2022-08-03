@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/login_btn.xml" value="0.1095" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/tour_actor_select_shape.xml" value="0.252" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_actor_detail_scene.xml" value="0.48704663212435234" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_login.xml" value="0.536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_search.xml" value="0.72" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_test.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_banner.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
@@ -17,8 +19,9 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_homecourse.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_homerank.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/kakaomap_test_layout.xml" value="0.37890625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/search_recent_keyword_item.xml" value="1.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/tour_actor_select_shape.xml" value="0.5927734375" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/tour_recyclerview_dramalist_item.xml" value="0.8" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/tour_recyclerview_dramalist_item.xml" value="0.536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2625" />
         <entry key="..\:/~29/FIKA/app/src/main/res/drawable/login_btn.xml" value="0.1" />
         <entry key="..\:/~29/FIKA/app/src/main/res/layout/activity_login.xml" value="0.4" />
