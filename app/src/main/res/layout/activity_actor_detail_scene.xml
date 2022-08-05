@@ -18,7 +18,7 @@
             android:layout_height="24dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/sample_image" />
+            app:srcCompat="@drawable/ic_back_button" />
 
         <LinearLayout
             android:layout_width="match_parent"

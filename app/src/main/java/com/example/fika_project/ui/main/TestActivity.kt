@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fika_project.databinding.ActivityTestBinding
+import net.daum.mf.map.api.MapPOIItem
+import net.daum.mf.map.api.MapPoint
 import net.daum.mf.map.api.MapView
 
 class TestActivity : AppCompatActivity() {
@@ -21,6 +23,22 @@ class TestActivity : AppCompatActivity() {
         val mapViewContainer = findViewById<View>(com.example.fika_project.R.id.map_view) as ViewGroup
         mapViewContainer.addView(mapView)
 
+        mapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(37.5518018, 127.0736343),true)
+
+        val marker = MapPOIItem()
+        val marker2 = MapPOIItem()
+        marker.apply {
+            itemName = "우리학교"
+            mapPoint = MapPoint.mapPointWithGeoCoord(37.5518018, 127.0736343)
+            markerType = MapPOIItem.MarkerType.BluePin
+        }
+        mapView.addPOIItem(marker)
+        marker2.apply {
+            itemName = "어디가"
+            mapPoint = MapPoint.mapPointWithGeoCoord(37.5518018, 127.0736349)
+            markerType = MapPOIItem.MarkerType.RedPin
+        }
+        mapView.addPOIItem(marker2)
 
     }
     override fun onDestroy() {
