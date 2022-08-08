@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ui.main.tour.DramaDetailInfoActivity">
+
+    <RelativeLayout
+        android:id="@+id/drama_detail_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <ImageView
+            android:id="@+id/drama_detail_info_backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/ic_back_button" />
+
+        <Spinner
+            android:id="@+id/drama_detail_info_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/drama_detail_info_flatButton"
+            android:layout_toRightOf="@id/drama_detail_info_backButton" />
+
+        <ImageView
+            android:id="@+id/drama_detail_info_flatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/ic_flag" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/drama_detail_top_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/drama_detail_top_layout"
+        android:background="#F3F3F3">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/drama_detail_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/drama_detail_top_layout1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1화. 새로이가 수아와 ~" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/sample_image" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="일산 호수공원"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/textView12"
+                android:layout_alignBottom="@id/textView12"
+                android:layout_toLeftOf="@id/textView12"
+                android:background="@drawable/tour_love" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="경기 고양시 일산동구 호수로 731"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/drama_detail_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/drama_detail_layout2">
+
+        <ImageView
+            android:id="@+id/drama_detail_actor_circleImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/tour_actor_select_circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="37dp"
+            android:layout_toRightOf="@id/drama_detail_actor_circleImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chat_textview_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_rectangle"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="14dp"
+                android:text="여기는 내가 수아랑 만났던 공원이야"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/imageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/chat_rectangle"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="14dp"
+                android:text="우리는 이 공원에서 잊지 못할 첫 데이트를 했지.."
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/drama_detail_layout4"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@id/drama_detail_layout3"
+        android:layout_marginTop="40dp"
+        android:background="#F3F3F3">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+</RelativeLayout>

@@ -35,7 +35,7 @@ class TestActivity : AppCompatActivity() {
         mapView.addPOIItem(marker)
         marker2.apply {
             itemName = "어디가"
-            mapPoint = MapPoint.mapPointWithGeoCoord(37.5518018, 127.0736349)
+            mapPoint = MapPoint.mapPointWithGeoCoord(37.5518018, 127.973634)
             markerType = MapPOIItem.MarkerType.RedPin
         }
         mapView.addPOIItem(marker2)

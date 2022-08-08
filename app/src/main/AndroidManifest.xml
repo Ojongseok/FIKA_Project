@@ -16,15 +16,8 @@
         android:theme="@style/Theme.FIKA_Project"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.login.SignUpActivity"
+            android:name=".ui.main.tour.DramaDetailInfoActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.main.tour.search.SearchActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.main.tour.ActorDetailSceneActivity"
-            android:exported="false" />
-        <activity android:name=".ui.main.TestActivity" />
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true">
@@ -36,6 +29,10 @@
         </activity>
         <activity android:name=".ui.main.MainActivity" />
         <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.login.SignUpActivity" />
+        <activity android:name=".ui.main.tour.search.SearchActivity" />
+        <activity android:name=".ui.main.tour.ActorDetailSceneActivity" />
+        <activity android:name=".ui.main.TestActivity" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"

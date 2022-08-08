@@ -18,7 +18,7 @@ class ActorDetailSceneActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.detailSceneListRecyclerview.layoutManager = LinearLayoutManager(this)
-        binding.detailSceneListRecyclerview.adapter = DetailSceneListAdapter()
+        binding.detailSceneListRecyclerview.adapter = DetailSceneListAdapter(this)
 
     }
     override fun onDestroy() {
