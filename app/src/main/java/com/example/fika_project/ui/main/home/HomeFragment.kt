@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentHomeBinding
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+import kotlinx.android.synthetic.main.fragment_banner.*
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -16,7 +19,6 @@ class HomeFragment : Fragment() {
 
     private var rankDatas = ArrayList<Rank>();
     private var courseDatas = ArrayList<Course>();
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
@@ -29,17 +31,11 @@ class HomeFragment : Fragment() {
 
     private fun initView() {
         val bannerAdapter = BannerVPAdapter(this)
-
         binding.homeBannerVp.adapter = bannerAdapter
         binding.homeBannerVp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-        val VP2 = binding.homeBannerVp
-        binding.homeBannerIndicator.attachTo(VP2)
-
-        bannerAdapter.addFragment(BannerFragment(R.color.sub_blue,"가나다라마바추천코스",R.drawable.sample_image,"우영우"))
-        bannerAdapter.addFragment(BannerFragment(R.color.sub_yellow,"인기코스코스",R.drawable.sample_image,"우영우"))
-        bannerAdapter.addFragment(BannerFragment(R.color.main_blue,"추천코스",R.drawable.sample_image,"우영우"))
-        bannerAdapter.addFragment(BannerFragment(R.color.sub_yellow,"인기코스코스",R.drawable.sample_image,"우영우"))
+        //bannerAdapter.addFragment(BannerFragment(R.color.sub_blue,"추천코스"))
+        //bannerAdapter.addFragment(BannerFragment(R.color.main_yellow,"인기코스코스"))
 
         binding.homeCourseMakingRv.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)

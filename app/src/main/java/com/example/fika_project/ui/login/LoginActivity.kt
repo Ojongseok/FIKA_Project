@@ -14,8 +14,14 @@ class LoginActivity : AppCompatActivity(),LoginView {
         binding = ActivityLoginBinding.inflate(layoutInflater)
 
         initClickListener()
-
         setContentView(binding.root)
+
+        // 편의상 시작
+        startActivity(Intent(this,MainActivity::class.java))
+
+        binding.loginSignUpTv.setOnClickListener {
+            startActivity(Intent(this,SignUpActivity::class.java))
+        }
     }
 
     private fun initClickListener(){
