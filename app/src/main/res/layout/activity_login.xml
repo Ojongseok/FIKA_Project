@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -115,38 +114,38 @@
         android:id="@+id/login_find_id_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="409dp"
-        android:layout_marginEnd="58dp"
         android:text="아이디 찾기"
         android:textColor="@color/login_text"
         android:textSize="12sp"
+        android:layout_marginTop="372dp"
+        android:layout_marginEnd="58dp"
         app:layout_constraintEnd_toStartOf="@id/login_find_ps_tv"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
     <TextView
         android:id="@+id/login_find_ps_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="409dp"
         android:text="비밀번호 찾기"
         android:textColor="@color/login_text"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="372dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/login_sign_up_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="409dp"
         android:text="회원가입"
         android:textColor="@color/login_text"
         android:textSize="12sp"
+        android:layout_marginTop="372dp"
+        android:layout_marginStart="58dp"
         app:layout_constraintStart_toEndOf="@id/login_find_ps_tv"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_kakao_btn"
@@ -187,17 +186,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="357dp"
-        android:layout_marginRight="22dp"
-        android:text="로그인"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
