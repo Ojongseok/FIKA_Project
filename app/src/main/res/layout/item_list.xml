@@ -48,14 +48,13 @@
             android:focusable="true"
             android:orientation="horizontal">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="?attr/selectableItemBackground"
-                android:orientation="horizontal">
+                android:background="?attr/selectableItemBackground">
 
                 <TextView
-                    android:id="@+id/handleIcon"
+                    android:id="@+id/course_item_number"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_marginLeft="52dp"
@@ -69,6 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@id/course_item_number"
                     android:background="@drawable/item_list_rec">
 
                     <ImageView
@@ -118,7 +118,7 @@
                     </LinearLayout>
                 </RelativeLayout>
 
-            </LinearLayout>
+            </RelativeLayout>
 
         </LinearLayout>
 
