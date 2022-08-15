@@ -22,7 +22,6 @@ class ApplicationClass : Application() {
         lateinit var mSharedPreferences: SharedPreferences
         lateinit var retrofit: Retrofit
     }
-
     override fun onCreate() {
         super.onCreate()
 

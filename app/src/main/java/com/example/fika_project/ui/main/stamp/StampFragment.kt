@@ -4,13 +4,12 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fika_project.databinding.FragmentStampBinding
-import com.example.fika_project.ui.main.TestActivity
+import com.example.fika_project.ui.main.tour.course_edit.TestActivity
 
 class StampFragment:Fragment() {
     private var _binding: FragmentStampBinding? = null
@@ -20,7 +19,7 @@ class StampFragment:Fragment() {
         _binding = FragmentStampBinding.inflate(inflater, container, false)
 
         binding.button.setOnClickListener {
-            startActivity(Intent(requireContext(),TestActivity::class.java))
+            startActivity(Intent(requireContext(), TestActivity::class.java))
         }
         binding.testButton1.setOnClickListener {
             val url = "kakaomap://route?sp=37.5518018, 127.0736343&ep=37.5518018, 127.973634&by=CAR"

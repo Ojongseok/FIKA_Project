@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.TestActivity"
+    tools:context=".ui.main.tour.course_edit.TestActivity"
     android:gravity="bottom"
     app:umanoDragView="@id/slide_layout"
-    app:umanoPanelHeight="70dp">
+    app:umanoPanelHeight="50dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,62 +16,40 @@
         android:id="@+id/map_view" >
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/slide_layout"
         android:layout_width="match_parent"
         android:layout_height="600dp"
-        android:id="@+id/slide_layout">
-        <Button
-            android:id="@+id/btn_touch"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="터치잠금"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_toggle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/btn_toggle" />
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-        <Button
-            android:id="@+id/btn_toggle"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="70dp"
+            android:layout_height="6dp"
+            android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="열기"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_enable"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="비활성화"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_toggle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/btn_toggle" />
+            android:scaleType="fitXY"
+            app:srcCompat="@android:drawable/button_onoff_indicator_off" />
 
         <TextView
-            android:id="@+id/tv_slideText1"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="128dp"
-            android:text="slideOffset"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_gravity="end"
+            android:layout_marginRight="20dp"
+            android:text="편집" />
 
-        <TextView
-            android:id="@+id/tv_slideOffset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="TextView"
-            android:textColor="?android:attr/textColorPrimary"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_slideText1" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    </LinearLayout>
 
 
 
