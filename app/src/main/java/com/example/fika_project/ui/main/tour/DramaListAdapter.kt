@@ -20,8 +20,6 @@ class DramaListAdapter(val frg : Fragment): RecyclerView.Adapter<RecyclerView.Vi
         val view = (holder as CustomViewHolder).itemView
 
         view.tour_dramalist_dramaimage.setOnClickListener {
-            frg.parentFragmentManager.beginTransaction().replace(R.id.tour_container,ActorSelectFragment()).addToBackStack(null).commit()
-
 
         }
     }
