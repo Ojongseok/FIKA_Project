@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.tour.search
+package com.example.fika_project.ui.main.mycourse.search
 
 import android.content.Context
 import android.view.LayoutInflater

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".ui.main.tour.DramaDetailInfoActivity">
+    tools:context=".ui.main.mycourse.DramaDetailInfoActivity">
 
     <RelativeLayout
         android:id="@+id/drama_detail_top_layout"
@@ -86,15 +86,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp">
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/textView12"
-                android:layout_alignBottom="@id/textView12"
-                android:layout_toLeftOf="@id/textView12"
-                android:background="@drawable/tour_love" />
 
             <TextView
                 android:id="@+id/textView12"

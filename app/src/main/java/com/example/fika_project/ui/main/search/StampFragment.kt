@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.stamp
+package com.example.fika_project.ui.main.search
 
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fika_project.databinding.FragmentStampBinding
-import com.example.fika_project.ui.main.tour.course_edit.TestActivity
+import com.example.fika_project.ui.main.mycourse.course_edit.TestActivity
 
 class StampFragment:Fragment() {
     private var _binding: FragmentStampBinding? = null

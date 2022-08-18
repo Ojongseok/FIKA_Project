@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.tour.course_edit
+package com.example.fika_project.ui.main.mycourse.course_edit
 
 import android.os.Bundle
 import android.view.View
@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.databinding.ActivityTestBinding
 import com.example.myapplication.MyRecyclerViewAdapter
 import com.example.myapplication.SwipeHelperCallback

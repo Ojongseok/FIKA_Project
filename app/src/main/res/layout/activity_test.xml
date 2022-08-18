@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.tour.course_edit.TestActivity"
+    tools:context=".ui.main.mycourse.course_edit.TestActivity"
     android:gravity="bottom"
     app:umanoDragView="@id/slide_layout"
     app:umanoPanelHeight="50dp">

@@ -9,13 +9,13 @@
     <item
         android:id="@+id/btm_nav_tour"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="@string/btm_nav_tour"
+        android:title="@string/btm_nav_mycourse"
         android:enabled="true"/>
 
     <item
         android:id="@+id/btm_nav_stamp"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="@string/btm_nav_stamp"
+        android:title="@string/btm_nav_search"
         android:enabled="true"/>
 
     <item

@@ -1,6 +1,5 @@
-package com.example.fika_project.ui.main.tour
+package com.example.fika_project.ui.main.mycourse
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater

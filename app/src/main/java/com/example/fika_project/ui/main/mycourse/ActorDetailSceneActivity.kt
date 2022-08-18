@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.tour
+package com.example.fika_project.ui.main.mycourse
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,7 +15,6 @@ class ActorDetailSceneActivity : AppCompatActivity() {
 
         binding.detailSceneListRecyclerview.layoutManager = LinearLayoutManager(this)
         binding.detailSceneListRecyclerview.adapter = DetailSceneListAdapter(this)
-
     }
     override fun onDestroy() {
         _Binding = null

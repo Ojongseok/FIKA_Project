@@ -12,12 +12,12 @@
 
         <fragment
             android:id="@+id/navigation_dashboard"
-            android:label="@string/btm_nav_tour"
+            android:label="@string/btm_nav_mycourse"
             tools:layout="@layout/fragment_tour" />
 
         <fragment
             android:id="@+id/navigation_notifications"
-            android:label="@string/btm_nav_stamp"
+            android:label="@string/btm_nav_search"
             tools:layout="@layout/fragment_stamp" />
 
         <fragment

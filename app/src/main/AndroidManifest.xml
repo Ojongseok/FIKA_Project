@@ -16,7 +16,7 @@
         android:theme="@style/Theme.FIKA_Project"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.main.tour.DramaDetailInfoActivity"
+            android:name=".ui.main.mycourse.DramaDetailInfoActivity"
             android:exported="false" />
         <activity
             android:name=".ui.splash.SplashActivity"
@@ -30,9 +30,9 @@
         <activity android:name=".ui.main.MainActivity" />
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.login.SignUpActivity" />
-        <activity android:name=".ui.main.tour.search.SearchActivity" />
-        <activity android:name=".ui.main.tour.ActorDetailSceneActivity" />
-        <activity android:name=".ui.main.tour.course_edit.TestActivity" />
+        <activity android:name=".ui.main.mycourse.search.SearchActivity" />
+        <activity android:name=".ui.main.mycourse.ActorDetailSceneActivity" />
+        <activity android:name=".ui.main.mycourse.course_edit.TestActivity" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"

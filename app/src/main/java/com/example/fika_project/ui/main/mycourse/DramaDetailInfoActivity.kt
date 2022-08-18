@@ -1,9 +1,7 @@
-package com.example.fika_project.ui.main.tour
+package com.example.fika_project.ui.main.mycourse
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fika_project.databinding.ActivityActorDetailSceneBinding
 import com.example.fika_project.databinding.ActivityDramaDetailInfoBinding
 
 class DramaDetailInfoActivity : AppCompatActivity() {

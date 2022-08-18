@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.tour
+package com.example.fika_project.ui.main.mycourse
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentTourBinding
-import com.example.fika_project.ui.main.tour.search.SearchActivity
+import com.example.fika_project.ui.main.mycourse.search.SearchActivity
 
 class TourFragment :Fragment() {
     private var _binding: FragmentTourBinding? = null
