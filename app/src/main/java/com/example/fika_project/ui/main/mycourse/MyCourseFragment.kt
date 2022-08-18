@@ -8,18 +8,16 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.fika_project.R
-import com.example.fika_project.databinding.FragmentTourBinding
+import com.example.fika_project.databinding.FragmentMycourseBinding
 import com.example.fika_project.ui.main.mycourse.search.SearchActivity
 
-class TourFragment :Fragment() {
-    private var _binding: FragmentTourBinding? = null
+class MyCourseFragment :Fragment() {
+    private var _binding: FragmentMycourseBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        _binding = FragmentTourBinding.inflate(inflater, container, false)
+        _binding = FragmentMycourseBinding.inflate(inflater, container, false)
 
         spinnerSetting()
-
 
         val recyclerviewManager = GridLayoutManager(activity,3)
         val recyclerAdapter = DramaListAdapter(this)

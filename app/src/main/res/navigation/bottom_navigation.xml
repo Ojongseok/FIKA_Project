@@ -13,15 +13,15 @@
         <fragment
             android:id="@+id/navigation_dashboard"
             android:label="@string/btm_nav_mycourse"
-            tools:layout="@layout/fragment_tour" />
+            tools:layout="@layout/fragment_mycourse" />
 
         <fragment
             android:id="@+id/navigation_notifications"
             android:label="@string/btm_nav_search"
-            tools:layout="@layout/fragment_stamp" />
+            tools:layout="@layout/fragment_explore" />
 
         <fragment
             android:id="@+id/navigation_mypage"
             android:label="@string/btm_nav_mypage"
-            tools:layout="@layout/fragment_stamp" />
+            tools:layout="@layout/fragment_explore" />
 </navigation>

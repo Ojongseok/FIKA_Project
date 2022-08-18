@@ -4,7 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.fika_project.databinding.ItemListBinding
+import com.example.fika_project.databinding.MycourseViewItemListBinding
+import com.example.fika_project.ui.main.mycourse.DramaListAdapter
+import kotlinx.android.synthetic.main.mycourse_view_item_list.view.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -12,7 +14,7 @@ import kotlin.collections.ArrayList
 class MyRecyclerViewAdapter(private val items : ArrayList<String>) : RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder>() {
     // 뷰 레이아웃 (item_list.xml) 연결 후 뷰 홀더 만들어서 반환
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder = MyViewHolder (
-        ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        MycourseViewItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )
     // 전달받은 위치의 아이템 연결
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.MyViewHolder, position: Int) = holder.bind(items[position])
@@ -33,15 +35,17 @@ class MyRecyclerViewAdapter(private val items : ArrayList<String>) : RecyclerVie
     }
 
     // 뷰 홀더 설정
-    inner class MyViewHolder(private val binding : ItemListBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class MyViewHolder(private val binding : MycourseViewItemListBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(title : String) {
             // 제목 달기
             binding.title = title
+            binding.courseItemNumber.text = (layoutPosition+1).toString()
 
             // 삭제 텍스트뷰 클릭시 토스트 표시
             binding.tvRemove.setOnClickListener {
                 removeData(this.layoutPosition)
                 Toast.makeText(binding.root.context, "삭제했습니다.", Toast.LENGTH_SHORT).show()
+                notifyDataSetChanged()
             }
         }
     }

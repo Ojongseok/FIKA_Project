@@ -10,8 +10,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
+        android:layout_height="wrap_content">
 
         <!--삭제 버튼 있는 레이아웃-->
         <LinearLayout
@@ -63,11 +62,21 @@
                     android:gravity="center"
                     android:text="1" />
 
+                <LinearLayout
+                    android:id="@+id/mycourse_list_line"
+                    android:layout_width="2dp"
+                    android:layout_height="76dp"
+                    android:layout_below="@+id/course_item_number"
+                    android:layout_marginLeft="60dp"
+                    android:background="#9D9D9D"
+                    android:orientation="vertical"></LinearLayout>
+
                 <RelativeLayout
                     android:id="@+id/item_list_contents_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
+                    android:layout_marginBottom="8dp"
                     android:layout_toRightOf="@id/course_item_number"
                     android:background="@drawable/item_list_rec">
 

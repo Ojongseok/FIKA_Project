@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.databinding.ActivitySearchBinding
 import kotlinx.android.synthetic.main.activity_search.*
 
-
 class SearchActivity : AppCompatActivity() {
     private var _Binding: ActivitySearchBinding? = null
     private val binding get() = _Binding!!

@@ -1,29 +1,42 @@
 package com.example.fika_project.ui.main.mycourse.course_edit
 
+import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
-import com.example.fika_project.databinding.ActivityTestBinding
+import com.example.fika_project.databinding.ActivityMycourseViewBinding
 import com.example.myapplication.MyRecyclerViewAdapter
 import com.example.myapplication.SwipeHelperCallback
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
 import net.daum.mf.map.api.MapView
 
-class TestActivity : AppCompatActivity() {
-    private var _Binding: ActivityTestBinding? = null
+class MyCourseViewActivity :AppCompatActivity() {
+    private var _Binding: ActivityMycourseViewBinding? = null
     private val binding get() = _Binding!!
+    var editState : Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _Binding = ActivityTestBinding.inflate(layoutInflater)
+        _Binding = ActivityMycourseViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         slidePanelInit()
         initKakaomapData()
 
+        binding.mycourseEditBtn.setOnClickListener {
+            if (editState) {
+                binding.mycourseEditBtn.text = "편집"
+                editState = false
+            } else {
+                binding.mycourseEditBtn.text = "저장"
+                editState = true
+
+
+            }
+        }
 
 
     }
@@ -50,7 +63,8 @@ class TestActivity : AppCompatActivity() {
 
     }
     fun slidePanelInit() {
-// 리사이클러뷰 아이템 생성
+
+        // 리사이클러뷰 아이템 생성
         val items = arrayListOf("안녕 - 조이", "Je T'aime - 조이", "Day by Day - 조이", "좋을텐데(If Only)(Feat. 폴킴) - 조이",
             "Happy Birthday To You - 조이", "그럴때마다(Be There For You) - 조이", "매일 그대와 - 아이유", "너의 의미 - 아이유",
             "여우야 - 조이", "요즘 너 말야 - 조이", "러브레터 - 정승환")
@@ -65,15 +79,15 @@ class TestActivity : AppCompatActivity() {
             setClamp(resources.displayMetrics.widthPixels.toFloat() / 4)    // 1080 / 4 = 270
         }
         ItemTouchHelper(swipeHelperCallback).attachToRecyclerView(binding.recyclerView)
-
-        // 구분선 추가
-        binding.recyclerView.addItemDecoration(DividerItemDecoration(applicationContext, DividerItemDecoration.VERTICAL))
-
         // 다른 곳 터치 시 기존 선택했던 뷰 닫기
         binding.recyclerView.setOnTouchListener { _, _ ->
             swipeHelperCallback.removePreviousClamp(binding.recyclerView)
             false
         }
+        binding.mycourseViewAddLocation.setOnClickListener {
+            startActivity(Intent(this,MyHoldLocationActivity::class.java))
+        }
+
 
     }
     override fun onDestroy() {

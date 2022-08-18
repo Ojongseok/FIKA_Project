@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slide_layout"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity">
+
+    <ImageView
+        android:id="@+id/mycourse_indicator_bar"
+        android:layout_width="70dp"
+        android:layout_height="6dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/button_onoff_indicator_off"
+        android:scaleType="fitXY" />
+
+    <FrameLayout
+        android:id="@+id/mycourse_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mycourse_indicator_bar"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="18dp">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/calender" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/mycourse_edit_btn_shape"
+            android:paddingLeft="12dp"
+            android:paddingTop="2dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="2dp"
+            android:text="편집" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mycourse_view_add_location"
+        android:layout_below="@id/mycourse_layout_1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/mycourse_view_add_location"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:background="#F3F3F3"
+        android:gravity="center"
+        android:text="장소 추가하기"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

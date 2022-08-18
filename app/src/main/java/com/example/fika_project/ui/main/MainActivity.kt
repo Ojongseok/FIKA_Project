@@ -6,8 +6,8 @@ import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityMainBinding
 import com.example.fika_project.ui.main.home.HomeFragment
 import com.example.fika_project.ui.main.mypage.MypageFragment
-import com.example.fika_project.ui.main.search.StampFragment
-import com.example.fika_project.ui.main.mycourse.TourFragment
+import com.example.fika_project.ui.main.explore.ExploreFragment
+import com.example.fika_project.ui.main.mycourse.MyCourseFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -37,14 +37,14 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.btm_nav_tour -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, TourFragment())
+                        .replace(R.id.main_frm, MyCourseFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
 
                 R.id.btm_nav_stamp -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, StampFragment())
+                        .replace(R.id.main_frm, ExploreFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
