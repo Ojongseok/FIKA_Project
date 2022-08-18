@@ -63,7 +63,6 @@ class MyCourseViewActivity :AppCompatActivity() {
 
     }
     fun slidePanelInit() {
-
         // 리사이클러뷰 아이템 생성
         val items = arrayListOf("안녕 - 조이", "Je T'aime - 조이", "Day by Day - 조이", "좋을텐데(If Only)(Feat. 폴킴) - 조이",
             "Happy Birthday To You - 조이", "그럴때마다(Be There For You) - 조이", "매일 그대와 - 아이유", "너의 의미 - 아이유",

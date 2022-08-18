@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fika_project.R
 
-class ExploreDramaPageAdapter(val context: ExploreDramaPage) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ExploreCoursePageAdapter(val context: ExploreCoursePage) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.dramalist_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.explore_course_item_list,parent,false)
 
         return CustomViewHolder(view)
     }
@@ -20,5 +20,5 @@ class ExploreDramaPageAdapter(val context: ExploreDramaPage) : RecyclerView.Adap
 
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
-    override fun getItemCount() = 8
+    override fun getItemCount() = 6
 }

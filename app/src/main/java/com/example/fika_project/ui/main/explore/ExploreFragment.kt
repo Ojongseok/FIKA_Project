@@ -25,6 +25,7 @@ class ExploreFragment:Fragment() {
         binding.exploreCourseTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.INVISIBLE
             binding.exploreCourseClickCircle.visibility = View.VISIBLE
+            parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,ExploreCoursePage()).commit()
         }
 
         return binding.root

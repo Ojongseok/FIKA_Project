@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/tour_dramalist_dramaimage"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="160dp"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/sample_image" />
 
@@ -27,12 +27,4 @@
         android:gravity="center"
         android:text="드라마명" />
 
-    <ImageView
-        android:id="@+id/tour_dramalist_love"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/tour_dramalist_dramaimage"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="4dp"
-        app:srcCompat="@drawable/tour_love" />
 </RelativeLayout>
