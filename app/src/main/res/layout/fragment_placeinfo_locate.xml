@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/placeinfo_locate_top_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/placeinfo_locate_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/placeinfo_locate_back_iv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back"
+                android:layout_gravity="start" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+
+            <TextView
+                android:id="@+id/placeinfo_locate_top_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="장소 정보"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/placeinfo_locate_more_iv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home"
+                android:layout_gravity="end"/>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/placeinfo_locate_cover_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_top_appbar"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/placeinfo_locate_cover_iv"
+            android:layout_width="323dp"
+            android:layout_height="180dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/sample_image" />
+
+        <TextView
+            android:id="@+id/placeinfo_locate_cover_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:text="단밤"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/placeinfo_locate_cover_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="경기 고양시 일산동구 호수로 731"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="48dp"
+            android:text="내 코스에 담기"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/login_btn"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/placeinfo_locate_cover_layout_underview"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_cover_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/drama_detail_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_cover_layout_underview">
+        <ImageView
+            android:id="@+id/drama_detail_actor_circleImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/tour_actor_select_circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="37dp"
+            android:layout_toRightOf="@id/drama_detail_actor_circleImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chat_textview_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_rectangle"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="14dp"
+                android:text="여기는 내가 수아랑 만났던 공원이야"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/imageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/chat_rectangle"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="14dp"
+                android:text="우리는 이 공원에서 잊지 못할 첫 데이트를 했지.."
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
