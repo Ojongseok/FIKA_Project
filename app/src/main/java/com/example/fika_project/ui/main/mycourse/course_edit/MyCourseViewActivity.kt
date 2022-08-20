@@ -33,12 +33,8 @@ class MyCourseViewActivity :AppCompatActivity() {
             } else {
                 binding.mycourseEditBtn.text = "저장"
                 editState = true
-
-
             }
         }
-
-
     }
     fun initKakaomapData() {
         val mapView = MapView(this)

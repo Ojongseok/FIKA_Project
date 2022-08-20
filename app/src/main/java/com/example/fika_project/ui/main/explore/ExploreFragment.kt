@@ -1,5 +1,6 @@
 package com.example.fika_project.ui.main.explore
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentExploreBinding
+import com.example.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity
 import kotlinx.android.synthetic.main.fragment_explore.*
 
 class ExploreFragment:Fragment() {
@@ -16,6 +18,10 @@ class ExploreFragment:Fragment() {
         _binding = FragmentExploreBinding.inflate(inflater, container, false)
 
         parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,ExploreDramaPage()).commit()
+
+        binding.kakaomapBtn.setOnClickListener {
+            startActivity(Intent(context, MyCourseViewActivity::class.java))
+        }
 
         binding.exploreDramaTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.VISIBLE

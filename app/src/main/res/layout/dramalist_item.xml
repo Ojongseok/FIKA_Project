@@ -9,19 +9,19 @@
     android:layout_marginBottom="16dp">
 
     <ImageView
-        android:id="@+id/tour_dramalist_dramaimage"
+        android:id="@+id/dramalist_dramaimage"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/sample_image" />
 
     <TextView
-        android:id="@+id/tour_dramalist_dramaname"
+        android:id="@+id/dramalist_dramaname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tour_dramalist_dramaimage"
-        android:layout_alignLeft="@id/tour_dramalist_dramaimage"
-        android:layout_alignRight="@id/tour_dramalist_dramaimage"
+        android:layout_below="@id/dramalist_dramaimage"
+        android:layout_alignLeft="@id/dramalist_dramaimage"
+        android:layout_alignRight="@id/dramalist_dramaimage"
         android:layout_centerHorizontal="false"
         android:layout_marginTop="8dp"
         android:gravity="center"

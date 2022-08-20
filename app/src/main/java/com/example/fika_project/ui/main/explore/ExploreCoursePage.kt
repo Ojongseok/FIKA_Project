@@ -15,7 +15,7 @@ class ExploreCoursePage : Fragment() {
         _binding = FragmentExploreCoursePageBinding.inflate(inflater, container, false)
 
         binding.exploreCoursePageRecyclerview.layoutManager = LinearLayoutManager(requireContext())
-        binding.exploreCoursePageRecyclerview.adapter = ExploreCoursePageAdapter(this)
+        binding.exploreCoursePageRecyclerview.adapter = ExploreCoursePageAdapter(requireContext())
 
         return binding.root
     }

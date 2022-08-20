@@ -16,7 +16,7 @@ class ExploreDramaPage : Fragment() {
         _binding = FragmentExploreDramaPageBinding.inflate(inflater, container, false)
 
         binding.exploreDramaPageRecyclerview.layoutManager = GridLayoutManager(activity,3)
-        binding.exploreDramaPageRecyclerview.adapter = ExploreDramaPageAdapter(this)
+        binding.exploreDramaPageRecyclerview.adapter = ExploreDramaPageAdapter(requireContext())
 
         return binding.root
     }
