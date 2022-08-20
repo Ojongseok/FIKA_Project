@@ -1,6 +1,6 @@
 package com.example.fika_project.ui.main.explore
 
-import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityCourseDetailDramaBinding
-import com.example.fika_project.databinding.ActivityDramaInfoBinding
 
 class CourseDetailDrama : AppCompatActivity() {
     private var _Binding: ActivityCourseDetailDramaBinding? = null
@@ -20,11 +19,23 @@ class CourseDetailDrama : AppCompatActivity() {
         _Binding = ActivityCourseDetailDramaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.detailCourseLocationRecyclerview.layoutManager = LinearLayoutManager(this)
-        binding.detailCourseLocationRecyclerview.adapter = CourseDetailLocationAdapter()
+        binding.detailCourseLocationRecyclerview.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = CourseDetailLocationAdapter()
+        }
+        binding.detailCourseTogetherRecyclerview.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = CourseDetailTogetherAdapter()
+        }
 
-        binding.detailCourseTogetherRecyclerview.layoutManager = LinearLayoutManager(this)
-        binding.detailCourseTogetherRecyclerview.adapter = CourseDetailTogetherAdapter()
+        binding.courseDetailHoldBtn.setOnClickListener {
+            startActivity(Intent(this,FolderSelectActivity::class.java))
+            overridePendingTransition(R.anim.slide_up_enter,R.anim.slide_up_exit)
+        }
+    }
+    override fun onDestroy() {
+        _Binding = null
+        super.onDestroy()
     }
 }
 class CourseDetailLocationAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -36,7 +47,6 @@ class CourseDetailLocationAdapter() : RecyclerView.Adapter<RecyclerView.ViewHold
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val view = (holder as CustomViewHolder).itemView
-
 
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)

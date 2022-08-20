@@ -19,9 +19,6 @@ class ExploreFragment:Fragment() {
 
         parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,ExploreDramaPage()).commit()
 
-        binding.kakaomapBtn.setOnClickListener {
-            startActivity(Intent(context, MyCourseViewActivity::class.java))
-        }
 
         binding.exploreDramaTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.VISIBLE

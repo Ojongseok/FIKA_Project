@@ -108,11 +108,7 @@ class SwipeHelperCallback(private val recyclerViewAdapter : MyRecyclerViewAdapte
     private fun getView(viewHolder: RecyclerView.ViewHolder) : View = viewHolder.itemView.findViewById(R.id.swipe_view)
 
     // swipe_view 를 swipe 했을 때 <삭제> 화면이 보이도록 고정
-    private fun clampViewPositionHorizontal(
-        dX: Float,
-        isClamped: Boolean,
-        isCurrentlyActive: Boolean
-    ) : Float {
+    private fun clampViewPositionHorizontal(dX: Float, isClamped: Boolean, isCurrentlyActive: Boolean) : Float {
         // RIGHT 방향으로 swipe 막기
         val max = 0f
 
@@ -139,7 +135,6 @@ class SwipeHelperCallback(private val recyclerViewAdapter : MyRecyclerViewAdapte
     private fun setTag(viewHolder: RecyclerView.ViewHolder, isClamped: Boolean) { viewHolder.itemView.tag = isClamped }
     private fun getTag(viewHolder: RecyclerView.ViewHolder) : Boolean =  viewHolder.itemView.tag as? Boolean ?: false
 
-
     // view가 swipe 되었을 때 고정될 크기 설정
     fun setClamp(clamp: Float) { this.clamp = clamp }
 
@@ -155,7 +150,5 @@ class SwipeHelperCallback(private val recyclerViewAdapter : MyRecyclerViewAdapte
             setTag(viewHolder, false)
             previousPosition = null
         }
-
     }
-
 }

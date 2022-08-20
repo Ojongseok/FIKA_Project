@@ -5,8 +5,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fika_project.databinding.MycourseViewItemListBinding
-import com.example.fika_project.ui.main.mycourse.DramaListAdapter
-import kotlinx.android.synthetic.main.mycourse_view_item_list.view.*
 import java.util.*
 import kotlin.collections.ArrayList
 

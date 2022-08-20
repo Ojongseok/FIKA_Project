@@ -15,20 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FIKA_Project"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".ui.main.explore.CourseDetailDrama"
-            android:exported="false" />
-        <activity
-            android:name=".ui.main.explore.DramaInfoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.main.mycourse.course_edit.MyHoldLocationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.main.mycourse.DramaDetailInfoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.splash.SplashActivity"
+        <activity android:name=".ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,6 +29,11 @@
         <activity android:name=".ui.main.mycourse.search.SearchActivity" />
         <activity android:name=".ui.main.mycourse.ActorDetailSceneActivity" />
         <activity android:name=".ui.main.mycourse.course_edit.MyCourseViewActivity" />
+        <activity android:name=".ui.main.explore.FolderSelectActivity"/>
+        <activity android:name=".ui.main.explore.CourseDetailDrama"/>
+        <activity android:name=".ui.main.explore.DramaInfoActivity"/>
+        <activity android:name=".ui.main.mycourse.course_edit.MyHoldLocationActivity"/>
+        <activity android:name=".ui.main.mycourse.DramaDetailInfoActivity"/>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"

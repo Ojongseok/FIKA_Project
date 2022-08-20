@@ -1,96 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/tour_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/tour_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/logo_image"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="20dp"
-            app:srcCompat="@drawable/sample_image" />
-
-        <RelativeLayout
-            android:id="@+id/tour_searchbar"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/tour_searchbar">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                app:srcCompat="@drawable/tour_searchbar_remove" />
-        </RelativeLayout>
-    </LinearLayout>
-
     <TextView
         android:id="@+id/tour_notice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tour_title"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="내가 좋아하는 K-drama 로케지를\n드라마 속 배우와 함께 여행해요 :)"
+        android:layout_marginTop="16dp"
+        android:text="내가 만든 로케지 코스"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="방문 예정"
+        android:textColor="@color/black"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        app:layout_constraintStart_toStartOf="@+id/tour_notice"
+        app:layout_constraintTop_toBottomOf="@+id/tour_notice" />
 
-    <LinearLayout
-        android:id="@+id/tour_spinner"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tour_notice"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="24dp"
+        android:text="방문 완료"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tour_notice" />
 
-        <Spinner
-            android:id="@+id/tour_spinner_genre"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp" />
-
-        <Spinner
-            android:id="@+id/tour_spinner_actor"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:layout_marginLeft="8dp" />
-
-        <Spinner
-            android:id="@+id/tour_spinner_sort"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp" />
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tour_recyclerview"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tour_spinner"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="15dp" />
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView35"
+        app:layout_constraintEnd_toStartOf="@+id/textView35"
+        app:layout_constraintTop_toTopOf="@+id/textView35"
+        app:srcCompat="@drawable/plus" />
 
-    <FrameLayout
-        android:id="@+id/tour_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="그룹 추가"
+        android:textColor="#9D9D9D"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView32" />
 
-    </FrameLayout>
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

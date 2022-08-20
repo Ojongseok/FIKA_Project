@@ -9,7 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView32"
+        app:layout_constraintBottom_toTopOf="@+id/course_detail_hold_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -200,7 +200,7 @@
 
 
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/course_detail_hold_btn"
         android:layout_width="0dp"
         android:layout_height="72dp"
         android:background="#F3F3F3"
