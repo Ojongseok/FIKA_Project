@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.btm_nav_mypage -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, PlaceinfoLocateFragment())
+                        .replace(R.id.main_frm, MypageFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
