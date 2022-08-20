@@ -24,6 +24,7 @@ class MyRecyclerViewAdapter(private val items : ArrayList<String>) : RecyclerVie
     fun removeData(position: Int) {
         items.removeAt(position)
         notifyItemRemoved(position)
+        notifyItemRangeChanged(position, itemCount - position)
     }
 
     // 현재 선택된 데이터와 드래그한 위치에 있는 데이터를 교환

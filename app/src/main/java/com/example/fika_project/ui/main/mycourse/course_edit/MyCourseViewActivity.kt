@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
+import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityMycourseViewBinding
 import com.example.myapplication.MyRecyclerViewAdapter
 import com.example.myapplication.SwipeHelperCallback
@@ -23,17 +24,27 @@ class MyCourseViewActivity :AppCompatActivity() {
         _Binding = ActivityMycourseViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        slidePanelInit()
+        //slidePanelInit()
         initKakaomapData()
+        supportFragmentManager.beginTransaction().replace(R.id.mycourse_view_list_container,MyCourseSaveState()).commit()
 
         binding.mycourseEditBtn.setOnClickListener {
             if (editState) {
                 binding.mycourseEditBtn.text = "편집"
                 editState = false
+                binding.mycourseEditText.visibility = View.INVISIBLE
+                binding.myholdTitle.visibility = View.VISIBLE
+                supportFragmentManager.beginTransaction().replace(R.id.mycourse_view_list_container,MyCourseSaveState()).commit()
             } else {
                 binding.mycourseEditBtn.text = "저장"
                 editState = true
+                binding.mycourseEditText.visibility = View.VISIBLE
+                binding.myholdTitle.visibility = View.INVISIBLE
+                supportFragmentManager.beginTransaction().replace(R.id.mycourse_view_list_container,MyCourseEditState()).commit()
             }
+        }
+        binding.mycourseViewAddLocation.setOnClickListener {
+            startActivity(Intent(this, MyHoldLocationActivity::class.java))
         }
     }
     fun initKakaomapData() {
@@ -58,33 +69,33 @@ class MyCourseViewActivity :AppCompatActivity() {
         mapView.addPOIItem(marker2)
 
     }
-    fun slidePanelInit() {
-        // 리사이클러뷰 아이템 생성
-        val items = arrayListOf("안녕 - 조이", "Je T'aime - 조이", "Day by Day - 조이", "좋을텐데(If Only)(Feat. 폴킴) - 조이",
-            "Happy Birthday To You - 조이", "그럴때마다(Be There For You) - 조이", "매일 그대와 - 아이유", "너의 의미 - 아이유",
-            "여우야 - 조이", "요즘 너 말야 - 조이", "러브레터 - 정승환")
+//    fun slidePanelInit() {
+//        // 리사이클러뷰 아이템 생성
+//        val items = arrayListOf("안녕 - 조이", "Je T'aime - 조이", "Day by Day - 조이", "좋을텐데(If Only)(Feat. 폴킴) - 조이",
+//            "Happy Birthday To You - 조이", "그럴때마다(Be There For You) - 조이", "매일 그대와 - 아이유", "너의 의미 - 아이유",
+//            "여우야 - 조이", "요즘 너 말야 - 조이", "러브레터 - 정승환")
+//
+//        // 리사이클러뷰 어댑터 달기
+//        val recyclerViewAdapter = MyRecyclerViewAdapter(items)
+//        binding.recyclerView.adapter = recyclerViewAdapter
+//
+//        // 리사이클러뷰에 스와이프, 드래그 기능 달기
+//        val swipeHelperCallback = SwipeHelperCallback(recyclerViewAdapter).apply {
+//            // 스와이프한 뒤 고정시킬 위치 지정
+//            setClamp(resources.displayMetrics.widthPixels.toFloat() / 4)    // 1080 / 4 = 270
+//        }
+//        ItemTouchHelper(swipeHelperCallback).attachToRecyclerView(binding.recyclerView)
+//        // 다른 곳 터치 시 기존 선택했던 뷰 닫기
+//        binding.recyclerView.setOnTouchListener { _, _ ->
+//            swipeHelperCallback.removePreviousClamp(binding.recyclerView)
+//            false
+//        }
+//        binding.mycourseViewAddLocation.setOnClickListener {
+//            startActivity(Intent(this,MyHoldLocationActivity::class.java))
+//        }
 
-        // 리사이클러뷰 어댑터 달기
-        val recyclerViewAdapter = MyRecyclerViewAdapter(items)
-        binding.recyclerView.adapter = recyclerViewAdapter
 
-        // 리사이클러뷰에 스와이프, 드래그 기능 달기
-        val swipeHelperCallback = SwipeHelperCallback(recyclerViewAdapter).apply {
-            // 스와이프한 뒤 고정시킬 위치 지정
-            setClamp(resources.displayMetrics.widthPixels.toFloat() / 4)    // 1080 / 4 = 270
-        }
-        ItemTouchHelper(swipeHelperCallback).attachToRecyclerView(binding.recyclerView)
-        // 다른 곳 터치 시 기존 선택했던 뷰 닫기
-        binding.recyclerView.setOnTouchListener { _, _ ->
-            swipeHelperCallback.removePreviousClamp(binding.recyclerView)
-            false
-        }
-        binding.mycourseViewAddLocation.setOnClickListener {
-            startActivity(Intent(this,MyHoldLocationActivity::class.java))
-        }
-
-
-    }
+  //  }
     override fun onDestroy() {
         _Binding = null
         super.onDestroy()
