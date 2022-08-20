@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentExploreBinding
 import com.example.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity
+import com.example.fika_project.ui.main.mycourse.search.SearchActivity
 import kotlinx.android.synthetic.main.fragment_explore.*
 
 class ExploreFragment:Fragment() {
@@ -31,6 +32,9 @@ class ExploreFragment:Fragment() {
             parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,ExploreCoursePage()).commit()
         }
 
+        binding.button2.setOnClickListener {
+            startActivity(Intent(requireContext(),SearchActivity::class.java))
+        }
         return binding.root
     }
 

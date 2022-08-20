@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         binding.btmNavi.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.btm_nav_home -> {
+
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_frm, HomeFragment())
                         .commitAllowingStateLoss()

@@ -33,6 +33,7 @@ class CourseDetailDrama : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_up_enter,R.anim.slide_up_exit)
         }
     }
+
     override fun onDestroy() {
         _Binding = null
         super.onDestroy()
