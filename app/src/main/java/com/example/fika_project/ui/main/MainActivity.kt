@@ -1,12 +1,13 @@
 package com.example.fika_project.ui.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityMainBinding
 import com.example.fika_project.ui.main.home.HomeFragment
-import com.example.fika_project.ui.main.mypage.MypageFragment
 import com.example.fika_project.ui.main.explore.ExploreFragment
+import com.example.fika_project.ui.main.mycourse.review.AllReviewFragment
 import com.example.fika_project.ui.main.mycourse.MyCourseFragment
 import com.example.fika_project.ui.main.mycourse.PlaceinfoLocateFragment
 
@@ -53,13 +54,28 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.btm_nav_mypage -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, MypageFragment())
+                        .replace(R.id.main_frm, PlaceinfoLocateFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
-
             }
             false
+        }
+    }
+
+
+    fun changeFragment(index: Int){
+        when (index) {
+            1 -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+
+            2 -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.placeinfo_locate_frm, AllReviewFragment())
+                    .commitAllowingStateLoss()
+            }
         }
     }
 

@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/signup_02_back_btn"
@@ -163,7 +164,7 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/login_sign_up_tv"
+            android:id="@+id/login_login_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LOG IN"

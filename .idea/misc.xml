@@ -32,7 +32,7 @@
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/folder_background.xml" value="0.149" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/login_btn.xml" value="0.18" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/mypage_card_background.xml" value="0.149" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/mypage_card_background.xml" value="0.4" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/signup_textbox.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/tour_actor_select_shape.xml" value="0.18" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/font-v26/custom_font_family.xml" value="0.2169230769230769" />
@@ -43,16 +43,18 @@
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_search.xml" value="0.175" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_splash.xml" value="0.152" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/detail_scene_list_item.xml" value="0.264" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/ex_activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_all_review.xml" value="0.152" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_banner.xml" value="0.264" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_home.xml" value="0.176" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_mypage.xml" value="0.152" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_mycourse.xml" value="0.21248396750748183" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_mypage.xml" value="0.176" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_placeinfo.xml" value="0.2" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_placeinfo_locate.xml" value="0.2" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_signup_01.xml" value="0.2" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_signup_02.xml" value="0.72" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_signup_01.xml" value="0.176" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_signup_02.xml" value="0.1492921492921493" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_tour.xml" value="0.16203703703703703" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_tour_actor_select.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_home_course.xml" value="0.4" />

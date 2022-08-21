@@ -66,19 +66,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/mypage_profile_iv" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mypage_place_layout"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mypage_place_layout_cv"
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:elevation="50dp"
         android:background="@drawable/mypage_card_background"
-        android:scaleType="fitXY"
+        app:cardCornerRadius="32dp"
+        android:elevation="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mypage_profile_tv">
+        app:layout_constraintTop_toBottomOf="@id/mypage_profile_tv"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mypage_place_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:elevation="2dp"
+        app:layout_constraintTop_toTopOf="@id/mypage_place_layout_cv"
+        app:layout_constraintStart_toStartOf="@id/mypage_place_layout_cv"
+        app:layout_constraintEnd_toEndOf="@id/mypage_place_layout_cv"
+        app:layout_constraintBottom_toBottomOf="@id/mypage_place_layout_cv">
 
         <ImageView
             android:id="@+id/mypage_place_flag_iv"
@@ -146,21 +158,36 @@
             app:layout_constraintTop_toTopOf="@id/mypage_place_cover_iv"
             app:layout_constraintEnd_toEndOf="@id/mypage_place_cover_iv"/>
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mypage_course_layout"
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mypage_course_layout_cv"
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:elevation="50dp"
+        android:elevation="1dp"
+        app:cardCornerRadius="32dp"
         android:background="@drawable/mypage_card_background"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mypage_place_layout">
+        app:layout_constraintTop_toBottomOf="@id/mypage_place_layout"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mypage_course_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="@id/mypage_course_layout_cv"
+        app:layout_constraintEnd_toEndOf="@id/mypage_course_layout_cv"
+        app:layout_constraintTop_toTopOf="@id/mypage_course_layout_cv"
+        app:layout_constraintBottom_toBottomOf="@id/mypage_course_layout_cv">
 
         <ImageView
             android:id="@+id/mypage_course_flag_iv"

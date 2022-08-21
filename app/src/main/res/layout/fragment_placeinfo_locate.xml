@@ -5,10 +5,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <FrameLayout
+        android:id="@+id/placeinfo_locate_frm"
+        android:elevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <ScrollView
         android:id="@+id/placeinfo_locate_sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <com.ramotion.foldingcell.FoldingCell
+            android:id="@+id/folding_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -35,7 +48,6 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1" />
-
 
                 <TextView
                     android:id="@+id/placeinfo_locate_top_title_tv"
@@ -64,7 +76,7 @@
                 android:layout_width="323dp"
                 android:layout_height="180dp"
                 android:scaleType="fitXY"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="24dp"
                 app:srcCompat="@drawable/sample_image"
                 app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_top_layout"
                 app:layout_constraintStart_toStartOf="parent"
@@ -703,6 +715,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ImageView
+                android:id="@+id/placeinfo_locate_all_review_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/btn_all_review"
@@ -713,8 +726,10 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+        </com.ramotion.foldingcell.FoldingCell>
     </ScrollView>
+
+
 
     <ImageView
         android:id="@+id/placeinfo_locate_up_btn"
@@ -725,5 +740,15 @@
         android:padding="22dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/placeinfo_more_info_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_more_info"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:padding="22dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"/>-->
 
 </RelativeLayout>

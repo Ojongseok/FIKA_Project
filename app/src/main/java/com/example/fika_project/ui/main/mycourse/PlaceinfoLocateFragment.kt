@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ScrollView
 import androidx.fragment.app.Fragment
 import com.example.fika_project.databinding.FragmentPlaceinfoLocateBinding
-import kotlinx.android.synthetic.main.fragment_placeinfo_locate.*
+import com.example.fika_project.ui.main.MainActivity
 
 class PlaceinfoLocateFragment: Fragment() {
     private var _binding: FragmentPlaceinfoLocateBinding? = null
@@ -22,16 +22,14 @@ class PlaceinfoLocateFragment: Fragment() {
     }
 
     private fun initView() {
-
-//        binding.placeinfoLocateUpBtn.setOnClickListener {
-//            binding.placeinfoLocateSv.post(Runnable {
-//                binding.placeinfoLocateSv.fullScroll(ScrollView.FOCUS_UP)
-//            }
-//            )
-//        }
+        val mActivity = activity as MainActivity
 
         binding.placeinfoLocateUpBtn.setOnClickListener {
                 binding.placeinfoLocateSv.fullScroll(ScrollView.FOCUS_UP)
+        }
+
+        binding.placeinfoLocateAllReviewBtn.setOnClickListener {
+            mActivity.changeFragment(2)
         }
     }
 
