@@ -1,6 +1,7 @@
 package com.example.fika_project.ui.main.mycourse
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +21,7 @@ class VisitCompleteCourseAdapter(val context: Context) : RecyclerView.Adapter<Re
         val view = (holder as CustomViewHolder).itemView
 
         view.visit_complete_review_write_btn.setOnClickListener {
-
+            context.startActivity(Intent(context.applicationContext,ReviewWriteActivity::class.java))
         }
 
     }
