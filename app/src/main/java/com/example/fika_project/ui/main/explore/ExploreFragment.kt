@@ -18,9 +18,6 @@ class ExploreFragment:Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentExploreBinding.inflate(inflater, container, false)
 
-        parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,ExploreDramaPage()).commit()
-
-
         binding.exploreDramaTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.VISIBLE
             binding.exploreCourseClickCircle.visibility = View.INVISIBLE
@@ -36,6 +33,13 @@ class ExploreFragment:Fragment() {
             startActivity(Intent(requireContext(),SearchActivity::class.java))
         }
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,ExploreDramaPage()).commit()
+
     }
 
     override fun onDestroyView() {

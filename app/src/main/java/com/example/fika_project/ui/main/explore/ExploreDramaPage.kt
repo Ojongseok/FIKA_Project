@@ -15,7 +15,7 @@ class ExploreDramaPage : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentExploreDramaPageBinding.inflate(inflater, container, false)
 
-        binding.exploreDramaPageRecyclerview.layoutManager = GridLayoutManager(activity,3)
+        binding.exploreDramaPageRecyclerview.layoutManager = GridLayoutManager(requireContext(),3)
         binding.exploreDramaPageRecyclerview.adapter = ExploreDramaPageAdapter(requireContext())
 
         return binding.root

@@ -52,7 +52,7 @@
         app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_drama_title_tv" />
 
     <TextView
-        android:id="@+id/item_home_coursescrap_article_tv"
+        android:id="@+id/child_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
@@ -105,5 +105,16 @@
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_info_tv" />
+
+    <ImageView
+        android:id="@+id/drama_info_course_item_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="4dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_star_off" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

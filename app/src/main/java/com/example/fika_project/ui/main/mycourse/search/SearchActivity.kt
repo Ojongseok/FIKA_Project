@@ -1,5 +1,6 @@
 package com.example.fika_project.ui.main.mycourse.search
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,14 +21,18 @@ class SearchActivity : AppCompatActivity() {
         binding.searchRecentKeywordRecyclerview.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         binding.searchRecentKeywordRecyclerview.adapter = SearchRecentKeywordAdapter(this, recentKeywordList)
 
+        binding.searchReccomendRecyclerview.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        binding.searchReccomendRecyclerview.adapter = SearchRecommendAdapter(this)
+
         binding.searchOkButton.setOnClickListener {
             if (recentKeywordList.size>=5) {
                 recentKeywordList.removeAt(4)
             }
             recentKeywordList.add(0, search_contents_textview.text.toString())
             SearchRecentKeywordClass.setStringArrayPref(this,"settings_item_json",recentKeywordList)
-            search_contents_textview.setText("")
+            binding.searchContentsTextview.setText("")
 
+            startActivity(Intent(this,SearchResultActivity::class.java))
         }
     }
     override fun onDestroy() {

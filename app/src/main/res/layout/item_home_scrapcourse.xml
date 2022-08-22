@@ -63,7 +63,7 @@
         />
 
     <TextView
-        android:id="@+id/item_home_coursescrap_article_tv"
+        android:id="@+id/child_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="우리의 밤은 당신의 낮보다 아름답다"
