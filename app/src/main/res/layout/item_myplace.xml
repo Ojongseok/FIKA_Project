@@ -4,20 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="88dp">
 
-    <CheckBox
-        android:id="@+id/myhold_checkbox_btn"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/item_myplace_iv"
         android:layout_width="140dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="36dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:scaleType="fitXY"
@@ -27,29 +18,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="152dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_flag_off" />
+        android:id="@+id/item_myplace_flag_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        app:srcCompat="@drawable/ic_flag_on"
+        app:layout_constraintEnd_toEndOf="@id/item_myplace_iv"
+        app:layout_constraintTop_toTopOf="@id/item_myplace_iv"
+        />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="9dp"
         android:layout_marginBottom="9dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintStart_toEndOf="@+id/item_myplace_iv"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/item_myplace_place_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="투명 카약"
@@ -57,7 +48,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/item_myplace_place_where_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="제주시 한경면" />
@@ -69,21 +60,21 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/item_myplace_place_where_tv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="서울" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/item_myplace_place_verti_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:text="ㅣ" />
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/verti_bar" />
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/item_myplace_place_cate_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="공원" />

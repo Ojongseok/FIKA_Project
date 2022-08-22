@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityLoginBinding
+import com.example.fika_project.retrofit.AuthResponse
 import com.example.fika_project.ui.main.MainActivity
 
 class LoginActivity : AppCompatActivity(),LoginView {
@@ -45,5 +46,17 @@ class LoginActivity : AppCompatActivity(),LoginView {
                     .commitAllowingStateLoss()
             }
         }
+    }
+
+    override fun onLoginLoading() {
+//        TODO("Not yet implemented")
+    }
+
+    override fun onLoginSuccess(response: AuthResponse) {
+//        TODO("Not yet implemented")
+    }
+
+    override fun onLoginFailure(code: Int, message: String) {
+//        TODO("Not yet implemented")
     }
 }
