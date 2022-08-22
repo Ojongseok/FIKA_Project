@@ -16,6 +16,12 @@
         android:theme="@style/Theme.FIKA_Project"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ReviewWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.mycourse.VisitCompleteCourse"
+            android:exported="false" />
+        <activity
             android:name=".ui.main.mycourse.search.SearchResultActivity"
             android:exported="false" />
         <activity

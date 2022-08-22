@@ -1,4 +1,5 @@
 package com.example.fika_project.ui.main.mycourse
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,6 +28,10 @@ class MyCourseFragment :Fragment() {
 
         binding.mycourseExpandListRecyclerview.layoutManager = LinearLayoutManager(requireContext())
         binding.mycourseExpandListRecyclerview.adapter = ExpandableListAdapter(data)
+
+        binding.visitCompleteBtn.setOnClickListener {
+            startActivity(Intent(requireContext(),VisitCompleteCourse::class.java))
+        }
 
 
         return binding.root

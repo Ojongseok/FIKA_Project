@@ -5,17 +5,24 @@
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable-v24/home_rank_background.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable-v24/home_scraprank_background.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/btn_add_my_course.xml" value="0.107" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/btn_all_review.xml" value="0.107" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/checkbox_custom.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/edittext_background.xml" value="0.107" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/explore_circle.xml" value="0.10400000000000001" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/filter_rec.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/folder_background.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/folder_button_background.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/ic_flag.xml" value="0.107" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/ic_more_info.xml" value="0.107" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/ic_mypage.xml" value="0.107" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/item_list_circle.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/item_list_rec.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/login_btn.xml" value="0.1095" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/mycourse_edit_btn_shape.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/mypage_card_background.xml" value="0.107" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/mypage_setting_btn.xml" value="0.107" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/nav_color_course.xml" value="0.1075" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/nav_color_explore.xml" value="0.107" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/nav_color_home.xml" value="0.107" />
@@ -36,11 +43,13 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_my_hold_location.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_mycourse_view.xml" value="0.5120925341745531" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_review_write.xml" value="0.536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_search.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_search_result.xml" value="0.47327502429543244" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_sign_up.xml" value="0.2625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_splash.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_test.xml" value="0.6" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_visit_complete_course.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/detail_scene_list_item.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/drama_info_course_item.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/drama_info_courselist_item.xml" value="0.37890625" />
@@ -52,6 +61,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/explore_course_page.xml" value="0.37890625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/explore_drama_page.xml" value="0.6156763590391909" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/folder_item.xml" value="0.536" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_all_review.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_banner.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_explore.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_explore_course_page.xml" value="0.536" />
@@ -61,7 +71,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_my_course_edit_state.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_my_course_save_state.xml" value="0.2390625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_mycourse.xml" value="0.4" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_mycourse_list_child.xml" value="0.536" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_mycourse_list_child.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_mycourse_list_header.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_mypage.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_placeinfo.xml" value="0.1125" />
@@ -90,6 +100,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/test.xml" value="0.40641711229946526" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/tour_actor_select_shape.xml" value="0.5927734375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/tour_recyclerview_dramalist_item.xml" value="0.536" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/visit_complete_course_list.xml" value="0.536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/User/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.6" />
