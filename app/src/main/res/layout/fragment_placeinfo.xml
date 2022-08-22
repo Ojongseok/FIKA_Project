@@ -52,7 +52,7 @@
                     android:layout_weight="1" />
 
                 <ImageView
-                    android:id="@+id/placeinfo_more_iv"
+                    android:id="@+id/placeinfo_home_iv"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"

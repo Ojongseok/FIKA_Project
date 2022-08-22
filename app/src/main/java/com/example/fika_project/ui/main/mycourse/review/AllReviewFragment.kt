@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentAllReviewBinding
-import com.example.fika_project.ui.main.home.Course
-import com.example.fika_project.ui.main.home.PlaceRankRVAdapter
+import com.example.fika_project.ui.main.MainActivity
+import com.google.gson.Gson
 
 class AllReviewFragment: Fragment() {
     private var _binding: FragmentAllReviewBinding? = null
@@ -31,6 +31,13 @@ class AllReviewFragment: Fragment() {
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         val allReviewRVAdapter = AllReviewRVAdapter(reviewDatas)
         binding.allReviewRv.adapter = allReviewRVAdapter
+
+        allReviewRVAdapter.setMyItemClickListener(object : AllReviewRVAdapter.MyItemClickListener{
+            override fun onItemClick(review: Review) {
+                viewReviewImgFrag(review)
+            }
+
+        })
     }
 
     private fun initData() {
@@ -41,7 +48,20 @@ class AllReviewFragment: Fragment() {
             add(Review(1, "조이서짱", R.drawable.ic_star_off, "2011-1-11", R.color.purple_500,"아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~"))
         }
     }
-        override fun onDestroy() {
+
+    private fun viewReviewImgFrag(review: Review) {
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+            .add(R.id.placeinfo_locate_frm, ReviewImgFragment().apply {
+                arguments = Bundle().apply {
+                    val gson = Gson()
+                    val reviewJson = gson.toJson(review)
+                    putString("review", reviewJson)
+                }
+            })
+            .commitAllowingStateLoss()
+    }
+
+    override fun onDestroy() {
         _binding = null
         super.onDestroy()
     }

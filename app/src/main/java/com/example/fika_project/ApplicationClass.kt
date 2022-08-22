@@ -15,7 +15,7 @@ class ApplicationClass : Application() {
         const val TAG: String = "FIKA-Prj"                      // Log, SharedPreference
         const val APP_DATABASE = "$TAG-DB"
 
-        const val DEV_URL: String = "";       // 테스트 서버 주소
+        const val DEV_URL: String = "http://ec2-15-165-255-15.ap-northeast-2.compute.amazonaws.com:9090";       // 테스트 서버 주소
         const val PROD_URL: String = ""    // 실서버 주소
         const val BASE_URL: String = DEV_URL
 

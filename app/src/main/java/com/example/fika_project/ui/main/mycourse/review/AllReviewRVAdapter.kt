@@ -25,6 +25,7 @@ class AllReviewRVAdapter (private val reviewList: ArrayList<Review>) : RecyclerV
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(reviewList[position])
+
         holder.itemView.setOnClickListener{
             mItemClickListner.onItemClick(reviewList[position]) }
     }
