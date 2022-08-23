@@ -31,22 +31,7 @@ class QuitFragment : Fragment() {
         }
 
         binding.quitBtn.setOnClickListener {
-            AlertDialog.Builder(requireContext())
-                .setTitle("탈퇴")
-                .setMessage("FIKA는 여러분을 위해 새로운 드라마 장소를 계속 업데이트하고 있습니다.\n" +
-                        "아쉽지만 그래도 탈퇴하시겠어요?")
-                .setPositiveButton("돌아가기", object : DialogInterface.OnClickListener {
-                    override fun onClick(dialog: DialogInterface, which: Int) {
-                        Log.d("MyTag", "positive")
-                    }
-                })
-                .setNegativeButton("탈퇴", object : DialogInterface.OnClickListener {
-                    override fun onClick(dialog: DialogInterface, which: Int) {
-                        Log.d("MyTag", "negative")
-                    }
-                })
-                .create()
-                .show()
+            QuitDialog(requireContext()){}.show()
         }
     }
 

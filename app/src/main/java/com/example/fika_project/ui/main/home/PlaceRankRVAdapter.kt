@@ -25,8 +25,8 @@ class PlaceRankRVAdapter (private val placeRankList: ArrayList<PlaceRank>) : Rec
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(placeRankList[position])
-        holder.itemView.setOnClickListener{
-            mItemClickListner.onItemClick(placeRankList[position]) }
+//        holder.itemView.setOnClickListener{
+//            mItemClickListner.onItemClick(placeRankList[position]) }
     }
 
     override fun getItemCount(): Int = placeRankList.size

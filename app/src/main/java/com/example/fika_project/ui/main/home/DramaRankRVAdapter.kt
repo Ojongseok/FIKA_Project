@@ -17,7 +17,6 @@ class DramaRankRVAdapter (private val dramaRankList: ArrayList<DramaRank>) : Rec
         mItemClickListner = itemClickListener
     }
 
-
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val binding: ItemHomeDramarankBinding = ItemHomeDramarankBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
         return ViewHolder(binding)
@@ -25,8 +24,8 @@ class DramaRankRVAdapter (private val dramaRankList: ArrayList<DramaRank>) : Rec
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(dramaRankList[position])
-        holder.itemView.setOnClickListener{
-            mItemClickListner.onItemClick(dramaRankList[position]) }
+//        holder.itemView.setOnClickListener{
+//            mItemClickListner.onItemClick(dramaRankList[position]) }
     }
 
     override fun getItemCount(): Int = dramaRankList.size

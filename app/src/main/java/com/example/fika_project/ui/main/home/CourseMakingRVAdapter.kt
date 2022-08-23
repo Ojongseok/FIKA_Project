@@ -25,8 +25,8 @@ class CourseMakingRVAdapter(private val courseList: ArrayList<Course>) : Recycle
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(courseList[position])
-        holder.itemView.setOnClickListener{
-        mItemClickListner.onItemClick(courseList[position]) }
+//        holder.itemView.setOnClickListener{
+//        mItemClickListner.onItemClick(courseList[position]) }
     }
 
     override fun getItemCount(): Int = courseList.size

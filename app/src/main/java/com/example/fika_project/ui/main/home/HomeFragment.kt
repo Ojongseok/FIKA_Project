@@ -6,13 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentHomeBinding
 import com.example.fika_project.retrofit.AuthResponse
+import com.example.fika_project.retrofit.RetrofitInterface
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(), HomeView {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    val service = HomeService(this)
 
     private var courseDatas = ArrayList<Course>();
     private var dramaRankData = ArrayList<DramaRank>();
@@ -25,6 +30,9 @@ class HomeFragment : Fragment(), HomeView {
         initView()
         initData()
 
+
+        service.tryLoadHome()
+
         return binding.root
     }
 
@@ -33,11 +41,11 @@ class HomeFragment : Fragment(), HomeView {
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         val courseRVAdaper = CourseMakingRVAdapter(courseDatas)
         binding.homeCourseMakingRv.adapter = courseRVAdaper
-
-        binding.homeDramaRankRv.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankData)
-        binding.homeDramaRankRv.adapter = dramaRankRVAdapter
+//
+//        binding.homeDramaRankRv.layoutManager =
+//            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+//        val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankData)
+//        binding.homeDramaRankRv.adapter = dramaRankRVAdapter
 
         binding.homeScrapcourseRankRv.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
@@ -50,8 +58,6 @@ class HomeFragment : Fragment(), HomeView {
         binding.homePlaceRankRv.adapter = placeRankRVAdapter
 
     }
-
-
 
     private fun initData(){
         courseDatas.apply {
@@ -88,14 +94,15 @@ class HomeFragment : Fragment(), HomeView {
     }
 
     override fun onHomeLoading() {
-        TODO("Not yet implemented")
+//        TODO("Not yet implemented")
     }
 
-    override fun onHomeSuccess(response: AuthResponse) {
-        TODO("Not yet implemented")
+    override fun onHomeSuccess(response: HomeResponse) {
+        Glide.with(requireContext()).load(response.result?.dramaList?.get(1)!!.thumbnailUrl).centerCrop().into(binding.itemDramaRankImgIv01)
+
     }
 
     override fun onHomeFailure(code: Int, message: String) {
-        TODO("Not yet implemented")
+//        TODO("Not yet implemented")
     }
 }

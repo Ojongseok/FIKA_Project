@@ -39,6 +39,13 @@ class MypageFragment : Fragment() {
                 add(R.id.mypage_frm, MyplaceFragment())
             }
         }
+
+        binding.mypageEditBtn.setOnClickListener {
+            fragmentManager.commit {
+                setReorderingAllowed(true)
+                add(R.id.mypage_frm, EditPersonalFragment())
+            }
+        }
     }
 
     override fun onDestroyView() {

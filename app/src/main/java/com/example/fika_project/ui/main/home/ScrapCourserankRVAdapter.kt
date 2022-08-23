@@ -25,8 +25,8 @@ class ScrapCourserankRVAdapter (private val scrapCourserankList: ArrayList<Scrap
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(scrapCourserankList[position])
-        holder.itemView.setOnClickListener{
-            mItemClickListner.onItemClick(scrapCourserankList[position]) }
+//        holder.itemView.setOnClickListener{
+//            mItemClickListner.onItemClick(scrapCourserankList[position]) }
     }
 
     override fun getItemCount(): Int = scrapCourserankList.size
