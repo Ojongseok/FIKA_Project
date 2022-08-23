@@ -8,7 +8,7 @@ import com.example.fika_project.databinding.ActivityLoginBinding
 import com.example.fika_project.retrofit.AuthResponse
 import com.example.fika_project.ui.main.MainActivity
 
-class LoginActivity : AppCompatActivity(),LoginView {
+class LoginActivity : AppCompatActivity() {
     lateinit var binding : ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +25,9 @@ class LoginActivity : AppCompatActivity(),LoginView {
     private fun initClickListener(){
         binding.loginSignUpTv.setOnClickListener {
             changeFragment(2)
+        }
+
+        binding.loginKakaoIv.setOnClickListener {
         }
     }
 
@@ -46,17 +49,5 @@ class LoginActivity : AppCompatActivity(),LoginView {
                     .commitAllowingStateLoss()
             }
         }
-    }
-
-    override fun onLoginLoading() {
-//        TODO("Not yet implemented")
-    }
-
-    override fun onLoginSuccess(response: AuthResponse) {
-//        TODO("Not yet implemented")
-    }
-
-    override fun onLoginFailure(code: Int, message: String) {
-//        TODO("Not yet implemented")
     }
 }

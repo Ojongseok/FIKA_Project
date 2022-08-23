@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentHomeBinding
+import com.example.fika_project.retrofit.AuthResponse
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), HomeView {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -84,5 +85,17 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onHomeLoading() {
+        TODO("Not yet implemented")
+    }
+
+    override fun onHomeSuccess(response: AuthResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onHomeFailure(code: Int, message: String) {
+        TODO("Not yet implemented")
     }
 }

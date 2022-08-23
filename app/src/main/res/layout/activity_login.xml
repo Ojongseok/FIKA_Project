@@ -160,7 +160,7 @@
                 android:id="@+id/login_kakao_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="구글"
+                android:text="카카오"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/login_text"
                 android:textSize="12sp"/>

@@ -7,6 +7,4 @@ interface RetrofitInterface {
     //카카오 로그인
     @POST("/oauth/login/kakao")
     fun kakaoLogin(): Call<AuthResponse>
-
-
 }

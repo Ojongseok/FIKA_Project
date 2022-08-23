@@ -12,19 +12,23 @@ import java.util.concurrent.TimeUnit
 class ApplicationClass : Application() {
     companion object{
         const val X_ACCESS_TOKEN: String = "X-ACCESS-TOKEN"         // JWT Token Key
-        const val TAG: String = "FIKA-Prj"                      // Log, SharedPreference
-        const val APP_DATABASE = "$TAG-DB"
+        const val TAG: String = "FIKA-Prj"
 
-        const val DEV_URL: String = "http://ec2-15-165-255-15.ap-northeast-2.compute.amazonaws.com:9090";       // 테스트 서버 주소
-        const val PROD_URL: String = ""    // 실서버 주소
-        const val BASE_URL: String = DEV_URL
+        const val API_URL: String = "";
 
-        lateinit var mSharedPreferences: SharedPreferences
+        lateinit var prefs: SharedPreferences
+
         lateinit var retrofit: Retrofit
     }
+
     override fun onCreate() {
         super.onCreate()
+        prefs = applicationContext.getSharedPreferences(TAG, Context.MODE_PRIVATE)
 
+        initRetrofitInstance()
+    }
+
+    private fun initRetrofitInstance(){
         val client: OkHttpClient = OkHttpClient.Builder()
             .readTimeout(30000, TimeUnit.MILLISECONDS)
             .connectTimeout(30000, TimeUnit.MILLISECONDS)
@@ -32,11 +36,9 @@ class ApplicationClass : Application() {
             .build()
 
         retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(API_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-
-        mSharedPreferences = applicationContext.getSharedPreferences(TAG, Context.MODE_PRIVATE)
     }
 }
