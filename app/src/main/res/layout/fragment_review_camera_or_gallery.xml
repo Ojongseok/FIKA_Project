@@ -16,7 +16,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/explore_circle"
         android:backgroundTint="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/start_gallery_btn"
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
@@ -28,7 +28,7 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout2"
+        android:id="@+id/start_gallery_btn"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginEnd="20dp"
@@ -64,7 +64,7 @@
         android:layout_marginRight="16dp"
         android:text="갤러리에서 첨부"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout2"
-        app:layout_constraintEnd_toStartOf="@+id/frameLayout2"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout2" />
+        app:layout_constraintBottom_toBottomOf="@+id/start_gallery_btn"
+        app:layout_constraintEnd_toStartOf="@+id/start_gallery_btn"
+        app:layout_constraintTop_toTopOf="@+id/start_gallery_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

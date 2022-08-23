@@ -36,29 +36,18 @@
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toStartOf="@+id/imageView14"
-                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <Spinner
-                    android:id="@+id/spinnerYear"
-                    android:layout_width="200dp"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:background="@drawable/bg_spinner_year"
-                    android:paddingLeft="12dp"
-                    android:paddingRight="12dp" />
-            </LinearLayout>
+                    android:text="박새로이와 일산 코스"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/home" />
+            </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
@@ -90,17 +79,28 @@
                     android:text="박새로이와 조이서가 함께 오픈한 꿀밤포차"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView16"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView15"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/imageView16"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/dot" />
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="by."
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView26"
+                    app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="새로이짱"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView48"
+                    app:layout_constraintTop_toTopOf="@+id/textView48" />
 
                 <TextView
                     android:id="@+id/textView29"
@@ -154,11 +154,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="로케지"
+                android:text="대표 로케지 >"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/textView31"
                 app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="이태원 클라쓰"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView33"
+                app:layout_constraintStart_toEndOf="@+id/textView33"
+                app:layout_constraintTop_toTopOf="@+id/textView33" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/detail_course_location_recyclerview"
