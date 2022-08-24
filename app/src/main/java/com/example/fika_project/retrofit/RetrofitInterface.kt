@@ -2,6 +2,7 @@ package com.example.fika_project.retrofit
 
 import com.example.fika_project.ui.main.explore.DramaInfoResponse
 import com.example.fika_project.ui.main.explore.ExploreCourseResponse
+import com.example.fika_project.ui.main.explore.course_detail.CourseDetailResponse
 import com.example.fika_project.ui.main.explore.filter_drama.ExploreDramaResponse
 import com.example.fika_project.ui.main.home.HomeResponse
 import retrofit2.Call
@@ -45,5 +46,5 @@ interface RetrofitInterface {
     fun loadDetailCourse(
         @Header("Access-Token") token: String,
         @Path("courseId") courseId : Int
-    ) :Call<DramaInfoResponse>
+    ) :Call<CourseDetailResponse>
 }

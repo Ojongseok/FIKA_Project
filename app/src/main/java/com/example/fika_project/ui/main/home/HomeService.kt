@@ -15,12 +15,12 @@ class HomeService(val View: HomeView) {
     fun tryLoadHome(){
         loadhome.enqueue(object : Callback<HomeResponse> {
             override fun onResponse(call: Call<HomeResponse>, response: Response<HomeResponse>) {
-                val result : HomeResponse? = response.body()!!
-                val resp = response.body()!!
+                val result : HomeResponse? = response.body()
+                val resp = response.body()
 
                 Log.d("LOADHOME/API", result.toString())
 
-                when(resp.code){
+                when(resp?.code){
                     1000 -> {
                         View.onHomeSuccess(response.body() as HomeResponse)
                         Log.d("LOADHOME", "성공.")
