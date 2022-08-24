@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.explore.todrama
+package com.example.fika_project.ui.main.explore.filter_drama
 
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.fika_project.R
-import com.example.fika_project.ui.main.explore.dramainfo.DramaInfoActivity
+import com.example.fika_project.ui.main.explore.drama_info.DramaInfoActivity
 import kotlinx.android.synthetic.main.dramalist_item.view.*
 
 class ExploreDramaPageAdapter(val dramalist : ArrayList<result>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

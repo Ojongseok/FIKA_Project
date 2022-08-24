@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.explore.dramainfo
+package com.example.fika_project.ui.main.explore.drama_info
 
 import android.content.Context
 import android.view.LayoutInflater

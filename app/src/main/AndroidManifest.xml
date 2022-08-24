@@ -46,7 +46,7 @@
         <activity android:name=".ui.main.mycourse.course_edit.MyCourseViewActivity" />
         <activity android:name=".ui.main.explore.FolderSelectActivity" />
         <activity android:name=".ui.main.explore.CourseDetailDrama" />
-        <activity android:name=".ui.main.explore.dramainfo.DramaInfoActivity" />
+        <activity android:name=".ui.main.explore.drama_info.DramaInfoActivity" />
         <activity android:name=".ui.main.mycourse.course_edit.MyHoldLocationActivity" />
 
         <meta-data

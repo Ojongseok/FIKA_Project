@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentExploreBinding
-import com.example.fika_project.ui.main.explore.tocourse.ExploreCoursePage
-import com.example.fika_project.ui.main.explore.todrama.ExploreDramaPage
+import com.example.fika_project.ui.main.explore.filter_course.ExploreCoursePage
+import com.example.fika_project.ui.main.explore.filter_drama.ExploreDramaPage
 import com.example.fika_project.ui.main.mycourse.search.SearchActivity
 
 class ExploreFragment:Fragment() {

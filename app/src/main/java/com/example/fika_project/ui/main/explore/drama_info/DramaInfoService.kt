@@ -1,8 +1,7 @@
-package com.example.fika_project.ui.main.explore.dramainfo
+package com.example.fika_project.ui.main.explore.drama_info
 
 import android.util.Log
 import com.example.fika_project.ApplicationClass
-import com.example.fika_project.R
 import com.example.fika_project.retrofit.RetrofitInterface
 import com.example.fika_project.ui.main.explore.DramaInfoResponse
 import retrofit2.Call

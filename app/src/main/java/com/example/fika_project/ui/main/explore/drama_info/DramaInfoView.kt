@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.explore.dramainfo
+package com.example.fika_project.ui.main.explore.drama_info
 
 import com.example.fika_project.ui.main.explore.DramaInfoResponse
 

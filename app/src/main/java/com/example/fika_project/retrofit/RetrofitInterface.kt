@@ -2,7 +2,7 @@ package com.example.fika_project.retrofit
 
 import com.example.fika_project.ui.main.explore.DramaInfoResponse
 import com.example.fika_project.ui.main.explore.ExploreCourseResponse
-import com.example.fika_project.ui.main.explore.todrama.ExploreDramaResponse
+import com.example.fika_project.ui.main.explore.filter_drama.ExploreDramaResponse
 import com.example.fika_project.ui.main.home.HomeResponse
 import retrofit2.Call
 import retrofit2.http.GET
@@ -40,10 +40,10 @@ interface RetrofitInterface {
         @Path("dramaId") dramaId : Int
     ) :Call<DramaInfoResponse>
 
-//    //13. 코스 상세 조회
-//   @GET("/course/18")
-//    fun loadDramaInfoCourse(
-//        @Header("Access-Token") token: String,
-//        @Header("courseId") courseId : Int
-//    ) :Call<DramaInfoResponse>
+    //13. 코스 상세 조회
+   @GET("/course/{courseId}")
+    fun loadDetailCourse(
+        @Header("Access-Token") token: String,
+        @Path("courseId") courseId : Int
+    ) :Call<DramaInfoResponse>
 }

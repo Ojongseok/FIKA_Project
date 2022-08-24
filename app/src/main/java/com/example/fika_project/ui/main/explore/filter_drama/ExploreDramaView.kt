@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.explore.todrama
+package com.example.fika_project.ui.main.explore.filter_drama
 
 interface ExploreDramaView {
     fun onExploreLoading()

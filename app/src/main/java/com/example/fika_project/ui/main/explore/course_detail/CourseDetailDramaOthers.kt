@@ -20,6 +20,8 @@ class CourseDetailDramaOthers : AppCompatActivity() {
         _Binding = ActivityCourseDetailDramaOthersBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initData()
+
         binding.detailCourseLocationRecyclerview.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = CourseDetailLocationOthersAdapter()
@@ -33,6 +35,9 @@ class CourseDetailDramaOthers : AppCompatActivity() {
             startActivity(Intent(this,FolderSelectActivity::class.java))
             overridePendingTransition(R.anim.slide_up_enter, R.anim.slide_up_exit)
         }
+    }
+
+    private fun initData() {
     }
 }
 

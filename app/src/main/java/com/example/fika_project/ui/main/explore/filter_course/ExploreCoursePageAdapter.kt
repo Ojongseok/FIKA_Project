@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.explore.tocourse
+package com.example.fika_project.ui.main.explore.filter_course
 
 import android.content.Context
 import android.content.Intent
@@ -11,7 +11,6 @@ import com.example.fika_project.R
 import com.example.fika_project.ui.main.explore.CourseDetailDramaOthers
 import com.example.fika_project.ui.main.explore.course
 import kotlinx.android.synthetic.main.drama_info_course_item.view.*
-import kotlinx.android.synthetic.main.explore_course_item_list.view.*
 import kotlinx.android.synthetic.main.explore_course_item_list.view.item_home_coursescrap_drama_title_tv
 
 class ExploreCoursePageAdapter(val dramalist : ArrayList<course>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -30,7 +29,9 @@ class ExploreCoursePageAdapter(val dramalist : ArrayList<course>, val context: C
         Glide.with(context).load(dramalist[position].locageImageUrl).into(view.drama_info_course_image)
 
         view.drama_info_course_item_layout.setOnClickListener {
-            context.startActivity(Intent(context,CourseDetailDramaOthers::class.java))
+            val intent =Intent(context,CourseDetailDramaOthers::class.java)
+            intent.putExtra("courseId",dramalist[position].courseId)
+            context.startActivity(intent)
         }
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)

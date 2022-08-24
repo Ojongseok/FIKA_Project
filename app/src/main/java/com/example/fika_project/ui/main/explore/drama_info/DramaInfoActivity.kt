@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.explore.dramainfo
+package com.example.fika_project.ui.main.explore.drama_info
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.fika_project.databinding.ActivityDramaInfoBinding
 import com.example.fika_project.ui.main.explore.DramaInfoResponse
-import com.example.fika_project.ui.main.explore.todrama.result
+import com.example.fika_project.ui.main.explore.filter_drama.result
 import net.daum.mf.map.api.MapView
 
 class DramaInfoActivity : AppCompatActivity(), DramaInfoView {

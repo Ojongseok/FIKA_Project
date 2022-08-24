@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.explore.tocourse
+package com.example.fika_project.ui.main.explore.filter_course
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

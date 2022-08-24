@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.explore.todrama
+package com.example.fika_project.ui.main.explore.filter_drama
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

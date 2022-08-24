@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.explore.dramainfo
+package com.example.fika_project.ui.main.explore.drama_info
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,7 +10,6 @@ import com.example.fika_project.R
 import com.example.fika_project.ui.main.explore.courseList
 import kotlinx.android.synthetic.main.drama_info_course_item.view.*
 import kotlinx.android.synthetic.main.drama_info_course_item.view.item_home_coursescrap_drama_title_tv
-import kotlinx.android.synthetic.main.explore_course_item_list.view.*
 
 class DramaInfoCourseAdapter(val courselist : ArrayList<courseList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

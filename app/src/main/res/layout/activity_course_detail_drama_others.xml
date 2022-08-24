@@ -206,12 +206,11 @@
     </ScrollView>
 
 
-
     <TextView
         android:id="@+id/course_detail_hold_btn"
         android:layout_width="0dp"
         android:layout_height="72dp"
-        android:background="#F3F3F3"
+        android:background="#94B4EC"
         android:gravity="center"
         android:text="내 코스에 담기"
         android:textSize="16sp"

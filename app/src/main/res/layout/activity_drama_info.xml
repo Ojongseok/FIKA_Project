@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.explore.dramainfo.DramaInfoActivity">
+    tools:context=".ui.main.explore.drama_info.DramaInfoActivity">
 
     <ScrollView
         android:layout_width="match_parent"
