@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentExploreBinding
-import com.example.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity
+import com.example.fika_project.ui.main.explore.tocourse.ExploreCoursePage
+import com.example.fika_project.ui.main.explore.todrama.ExploreDramaPage
 import com.example.fika_project.ui.main.mycourse.search.SearchActivity
-import kotlinx.android.synthetic.main.fragment_explore.*
 
 class ExploreFragment:Fragment() {
     private var _binding: FragmentExploreBinding? = null
@@ -21,24 +21,31 @@ class ExploreFragment:Fragment() {
         binding.exploreDramaTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.VISIBLE
             binding.exploreCourseClickCircle.visibility = View.INVISIBLE
-            parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,ExploreDramaPage()).commit()
+            parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,
+                ExploreDramaPage()
+            ).commit()
         }
         binding.exploreCourseTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.INVISIBLE
             binding.exploreCourseClickCircle.visibility = View.VISIBLE
-            parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,ExploreCoursePage()).commit()
+            parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,
+                ExploreCoursePage()
+            ).commit()
         }
 
         binding.button2.setOnClickListener {
             startActivity(Intent(requireContext(),SearchActivity::class.java))
         }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,ExploreDramaPage()).commit()
+        parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,
+            ExploreDramaPage()
+        ).commit()
 
     }
 
@@ -46,4 +53,5 @@ class ExploreFragment:Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }

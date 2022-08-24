@@ -1,14 +1,11 @@
 package com.example.fika_project.ui.main.mycourse.search
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fika_project.R
-import com.example.fika_project.ui.main.explore.DramaInfoActivity
-import kotlinx.android.synthetic.main.dramalist_item.view.*
 
 class SearchRecommendAdapter(val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

@@ -124,12 +124,12 @@
                 android:textColor="@color/login_text"
                 android:textSize="14sp"
                 android:textStyle="normal"
-                app:layout_constraintEnd_toStartOf="@id/item_home_coursescrap_where_tv"
+                app:layout_constraintEnd_toStartOf="@id/item_drama_coursescrap_where_tv"
                 app:layout_constraintStart_toEndOf="@id/item_home_coursescrap_drama_title_tv"
                 app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_drama_title_tv" />
 
             <TextView
-                android:id="@+id/item_home_coursescrap_where_tv"
+                android:id="@+id/item_drama_coursescrap_where_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="18dp"
@@ -255,14 +255,76 @@
         app:layout_constraintStart_toStartOf="@+id/review_write_image_select_btn"
         app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/review_write_fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CC9D9D9D"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/review_camera_btn"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/explore_circle"
+            android:backgroundTint="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/start_gallery_btn"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView27"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/camera" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/start_gallery_btn"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/explore_circle"
+            android:backgroundTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView28"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/gallery" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="카메라 촬영"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/review_camera_btn"
+            app:layout_constraintEnd_toStartOf="@+id/review_camera_btn"
+            app:layout_constraintTop_toTopOf="@+id/review_camera_btn" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="갤러리에서 첨부"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/start_gallery_btn"
+            app:layout_constraintEnd_toStartOf="@+id/start_gallery_btn"
+            app:layout_constraintTop_toTopOf="@+id/start_gallery_btn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

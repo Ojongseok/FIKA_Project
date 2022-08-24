@@ -1,4 +1,4 @@
-package com.example.fika_project.ui.main.explore
+package com.example.fika_project.ui.main.explore.todrama
 
 import android.content.Context
 import android.content.Intent
@@ -6,23 +6,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.fika_project.R
+import com.example.fika_project.ui.main.explore.dramainfo.DramaInfoActivity
 import kotlinx.android.synthetic.main.dramalist_item.view.*
 
-class ExploreDramaPageAdapter(val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ExploreDramaPageAdapter(val dramalist : ArrayList<result>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.dramalist_item,parent,false)
-
         return CustomViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val view = (holder as CustomViewHolder).itemView
+        view.dramalist_dramaname.text = dramalist[position].dramaTitle
+        Glide.with(context).load(dramalist[position].thumbnailUrl).into(view.dramalist_dramaimage)
 
         view.dramalist_dramaimage.setOnClickListener {
-            context.startActivity(Intent(context,DramaInfoActivity::class.java))
+            val intent = Intent(context, DramaInfoActivity::class.java)
+            intent.putExtra("dramalist",dramalist)
+            intent.putExtra("number",position)
+            context.startActivity(intent)
         }
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
-    override fun getItemCount() = 8
+    override fun getItemCount() = dramalist.size
 }

@@ -7,6 +7,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.core.net.toUri
 import com.example.fika_project.R
@@ -23,18 +24,37 @@ class ReviewWriteActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.reviewWriteImageSelectBtn.setOnClickListener {
-            supportFragmentManager.beginTransaction().replace(R.id.review_write_fragment_container,ReviewCameraOrGallery()).commit()
+            binding.reviewWriteFragmentContainer.visibility = View.VISIBLE
+
+            binding.startGalleryBtn.setOnClickListener {
+                val intent = Intent(Intent.ACTION_GET_CONTENT)
+                intent.type = "image/*"
+                startActivityForResult(intent,2000)
+            }
+
+            binding.reviewWriteFragmentContainer.setOnClickListener {
+                binding.reviewWriteFragmentContainer.visibility = View.INVISIBLE
+            }
         }
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(resultCode==Activity.RESULT_OK){
-            Toast.makeText(this,data?.getStringExtra("result").toString(),Toast.LENGTH_SHORT).show()
-//            if (data?.hasExtra("result") == true) {
-//                var result = data?.getParcelableExtra<Uri>("result")
-//                Log.d("TAG",result.toString())
-//            }
-//            binding.reviewWriteImageSelectBtn.setImageURI(result)
+        if(resultCode != Activity.RESULT_OK) {
+            Toast.makeText(this,"잘못된 접근입니다 1",Toast.LENGTH_SHORT).show()
+            return
+        }
+        when(requestCode) {
+            2000 -> {
+                val selectedImageURI : Uri? = data?.data
+                if(selectedImageURI != null) {
+                    binding.reviewWriteFragmentContainer.visibility = View.INVISIBLE
+                    binding.reviewWriteImageSelectBtn.setImageURI(selectedImageURI)
+                }else {
+                    Toast.makeText(this,"사진을 가져오지 못했습니다",Toast.LENGTH_SHORT).show()
+                }
+            } else -> {
+            Toast.makeText(this,"잘못된 접근입니다 2",Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

@@ -38,7 +38,7 @@ class CourseDetailDrama : AppCompatActivity() {
             startActivity(Intent(this,FolderSelectActivity::class.java))
             overridePendingTransition(R.anim.slide_up_enter,R.anim.slide_up_exit)
         }
-        // 스피너 커슽머
+        // 스피너 커스텀
         spinnerTest()
     }
 

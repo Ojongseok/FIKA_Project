@@ -32,13 +32,16 @@ class ApplicationClass : Application() {
 
     private fun initRetrofitInstance(){
         // Set Log Level of OkHttp
-        val httpLoggingInterceptor = HttpLoggingInterceptor()
-        httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+        val interceptor = HttpLoggingInterceptor()
+        if (BuildConfig.DEBUG) {
+            interceptor.level = HttpLoggingInterceptor.Level.BODY
+        } else {
+            interceptor.level = HttpLoggingInterceptor.Level.NONE
+        }
 
         val client: OkHttpClient = OkHttpClient.Builder()
             .readTimeout(30000, TimeUnit.MILLISECONDS)
             .connectTimeout(30000, TimeUnit.MILLISECONDS)
-            .addInterceptor(httpLoggingInterceptor) // API Response 로그 작성
             .addNetworkInterceptor(XAccessTokenInterceptor()) // JWT 자동 헤더 전송
             .build()
 

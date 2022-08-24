@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.explore.DramaInfoActivity">
+    tools:context=".ui.main.explore.dramainfo.DramaInfoActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,13 +22,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/drama_info_main_iv"
                     android:layout_width="match_parent"
                     android:layout_height="411dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/sample_image" />
 
                 <TextView
-                    android:id="@+id/textView21"
+                    android:id="@+id/drama_info_title_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"

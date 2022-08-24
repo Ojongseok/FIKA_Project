@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">FIKA_Project</string>
     <string name="img_app_logo">FIKA_logo</string>
+    <string name="my_token">eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJtZW1iZXJJZCI6MywibWVtYmVyRW1haWwiOiJ0ZXN0ZXJAdGVzdC5jb20iLCJpYXQiOjE2NjEyNDMyNjEsImV4cCI6MTY2MTg0ODA2MX0.3CLhVPdl4UmPJf5TTvQ5Z2mm_XGruXh7GL6aX4nCynI</string>
 
     <string name="btm_nav_search">탐색</string>
     <string name="btm_nav_mycourse">내코스</string>

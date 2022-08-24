@@ -20,7 +20,7 @@
         tools:targetApi="m">
 
         <activity
-            android:name=".CourseDetailDramaOthers"
+            android:name=".ui.main.explore.CourseDetailDramaOthers"
             android:exported="false" />
         <activity
             android:name=".ui.main.mycourse.ReviewWriteActivity"
@@ -46,7 +46,7 @@
         <activity android:name=".ui.main.mycourse.course_edit.MyCourseViewActivity" />
         <activity android:name=".ui.main.explore.FolderSelectActivity" />
         <activity android:name=".ui.main.explore.CourseDetailDrama" />
-        <activity android:name=".ui.main.explore.DramaInfoActivity" />
+        <activity android:name=".ui.main.explore.dramainfo.DramaInfoActivity" />
         <activity android:name=".ui.main.mycourse.course_edit.MyHoldLocationActivity" />
 
         <meta-data

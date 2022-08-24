@@ -9,18 +9,18 @@ import retrofit2.Response
 
 class HomeService(val View: HomeView) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
-    val loadhome = retrofit.loadHome("eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJtZW1iZXJJZCI6MywibWVtYmVyRW1haWwiOiJ0ZXN0ZXJAdGVzdC5jb20iLCJpYXQiOjE2NjEyNDMyNjEsImV4cCI6MTY2MTg0ODA2MX0.3CLhVPdl4UmPJf5TTvQ5Z2mm_XGruXh7GL6aX4nCynI")
+    val token = ApplicationClass.X_ACCESS_TOKEN
+    val loadhome = retrofit.loadHome(token)
 
     fun tryLoadHome(){
         loadhome.enqueue(object : Callback<HomeResponse> {
             override fun onResponse(call: Call<HomeResponse>, response: Response<HomeResponse>) {
-
-                val result : HomeResponse? = response.body()
-                val resp = response.body()
+                val result : HomeResponse? = response.body()!!
+                val resp = response.body()!!
 
                 Log.d("LOADHOME/API", result.toString())
 
-                when(resp?.code){
+                when(resp.code){
                     1000 -> {
                         View.onHomeSuccess(response.body() as HomeResponse)
                         Log.d("LOADHOME", "성공.")

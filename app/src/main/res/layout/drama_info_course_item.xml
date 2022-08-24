@@ -13,7 +13,9 @@
         android:layout_width="124dp"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/sample_image" />
+        android:src="@drawable/sample_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/item_home_coursescrap_drama_title_tv"
@@ -35,12 +37,12 @@
         android:textColor="@color/login_text"
         android:textSize="14sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toStartOf="@id/item_home_coursescrap_where_tv"
+        app:layout_constraintEnd_toStartOf="@id/item_drama_coursescrap_where_tv"
         app:layout_constraintStart_toEndOf="@id/item_home_coursescrap_drama_title_tv"
         app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_drama_title_tv" />
 
     <TextView
-        android:id="@+id/item_home_coursescrap_where_tv"
+        android:id="@+id/item_drama_coursescrap_where_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -68,7 +70,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/item_home_coursescrap_info_tv"
+        android:id="@+id/item_drama_coursescrap_info_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
@@ -84,18 +86,19 @@
         app:layout_constraintStart_toStartOf="@id/item_home_coursescrap_drama_title_tv" />
 
     <TextView
+        android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
         android:text="|"
         android:textColor="@color/login_text"
         android:textSize="14sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toStartOf="@id/item_home_coursescrap_number_tv"
-        app:layout_constraintStart_toEndOf="@id/item_home_coursescrap_info_tv"
-        app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_info_tv" />
+        app:layout_constraintEnd_toStartOf="@+id/item_drama_coursescrap_number_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_drama_coursescrap_info_tv" />
 
     <TextView
-        android:id="@+id/item_home_coursescrap_number_tv"
+        android:id="@+id/item_drama_coursescrap_number_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -104,7 +107,7 @@
         android:textSize="14sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_info_tv" />
+        app:layout_constraintTop_toTopOf="@+id/item_drama_coursescrap_info_tv" />
 
     <ImageView
         android:id="@+id/drama_info_course_item_star"
@@ -112,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
         android:layout_marginTop="4dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_star_off" />

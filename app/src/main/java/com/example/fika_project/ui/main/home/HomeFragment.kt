@@ -43,20 +43,7 @@ class HomeFragment : Fragment(), HomeView {
 
     }
 
-    private fun setDramaRankRVAdapter(dramaRankList: ArrayList<dramaList>){
-        val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankList,requireContext())
 
-        binding.homeDramaRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        binding.homeDramaRankRv.adapter = dramaRankRVAdapter
-        binding.homeDramaRankRv.setHasFixedSize(false)
-
-        dramaRankRVAdapter.setMyItemClickListener(object  : DramaRankRVAdapter.MyItemClickListener{
-            override fun onItemClick(dramaRank: dramaList) {
-                TODO("Not yet implemented")
-            }
-
-        })
-    }
 
     private fun setCourseRVAdapter(scrapCourserankList: ArrayList<coursesSortBySaved>){
         val scrapCourserankRVAdapter = ScrapCourserankRVAdapter(scrapCourserankList,requireContext())
@@ -88,6 +75,20 @@ class HomeFragment : Fragment(), HomeView {
             add(PlaceRank(3, R.color.sub_yellow, "우영우우우"))
         }
     }
+    private fun setDramaRankRVAdapter(dramaRankList: ArrayList<dramaList>){
+        val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankList,requireContext())
+
+        binding.homeDramaRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.homeDramaRankRv.adapter = dramaRankRVAdapter
+        binding.homeDramaRankRv.setHasFixedSize(false)
+
+        dramaRankRVAdapter.setMyItemClickListener(object  : DramaRankRVAdapter.MyItemClickListener{
+            override fun onItemClick(dramaRank: dramaList) {
+                TODO("Not yet implemented")
+            }
+
+        })
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -99,7 +100,7 @@ class HomeFragment : Fragment(), HomeView {
     }
 
     override fun onHomeSuccess(response: HomeResponse) {
-        when(response.code){
+        when(response.code) {
             1000 -> {
                 response.let {
                     response?.let { setDramaRankRVAdapter((it.result?.dramaList!!)) }
