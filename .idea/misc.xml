@@ -128,6 +128,9 @@
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/btn_add_my_course.xml" value="0.1065" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/checkbox_custom.xml" value="0.1065" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/edittext_background.xml" value="0.1" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/folder_background.xml" value="0.1" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/folder_button_background.xml" value="0.1" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/logindialog_background.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/logo_fikaduck.xml" value="0.106" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/logo_fulltext.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/mypage_card_background.xml" value="0.1075" />
@@ -135,9 +138,11 @@
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/quitdialog_bottom_background.xml" value="0.1065" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/quitdialog_bottom_left_background.xml" value="0.143" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/quitdialog_bottom_right_background.xml" value="0.1065" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_search.xml" value="0.2" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_splash.xml" value="0.4" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/dialog_login.xml" value="0.264" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/dialog_quit.xml" value="0.2" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_banner.xml" value="0.264" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_edit_personal.xml" value="0.14151346729371525" />
@@ -146,7 +151,10 @@
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_mypage.xml" value="0.14151346729371525" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_myplace.xml" value="0.15519452757588714" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_myscrapcourse.xml" value="0.14151346729371525" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_placeinfo_locate.xml" value="0.15433946130825138" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_quit.xml" value="0.1195551436515292" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_review_report.xml" value="0.1" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_signup_01.xml" value="0.1483539974348012" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_tour.xml" value="0.16203703703703703" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_tour_actor_select.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_home_course.xml" value="0.15519452757588714" />
@@ -155,6 +163,7 @@
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_homecourse.xml" value="0.4" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_homerank.xml" value="0.2578125" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_myplace.xml" value="0.15519452757588714" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_placeinfo_review.xml" value="0.15519452757588714" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/myhold_location_item_list.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/tour_recyclerview_dramalist_item.xml" value="0.2578125" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1695" />

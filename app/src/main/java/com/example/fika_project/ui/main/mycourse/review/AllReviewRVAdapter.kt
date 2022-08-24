@@ -9,6 +9,7 @@ class AllReviewRVAdapter (private val reviewList: ArrayList<Review>) : RecyclerV
 {
     interface MyItemClickListener{
         fun onItemClick(review: Review)
+        fun onItemMoreClick(position: Int)
     }
 
     private lateinit var mItemClickListner: MyItemClickListener
@@ -27,7 +28,12 @@ class AllReviewRVAdapter (private val reviewList: ArrayList<Review>) : RecyclerV
         holder.bind(reviewList[position])
 
         holder.itemView.setOnClickListener{
-            mItemClickListner.onItemClick(reviewList[position]) }
+            mItemClickListner.onItemClick(reviewList[position])
+        }
+
+        holder.binding.itemPlaceinfoReviewMoreIv.setOnClickListener {
+            mItemClickListner.onItemMoreClick(position)
+        }
     }
 
     override fun getItemCount(): Int = reviewList.size
@@ -39,6 +45,7 @@ class AllReviewRVAdapter (private val reviewList: ArrayList<Review>) : RecyclerV
             binding.itemPlaceinfoReviewImg01.setImageResource(review.reviewImg!!)
             binding.itemPlaceinfoReviewContentsTv.text = review.contents
         }
+
     }
 
 }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentAllReviewBinding
@@ -22,9 +23,19 @@ class AllReviewFragment: Fragment() {
 
         initView()
         initData()
+        onClickListener()
 
         return binding.root
     }
+
+    private fun onClickListener(){
+        val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
+        binding.allViewBackBtn.setOnClickListener {
+            fragmentManager.beginTransaction().remove(this).commit()
+            fragmentManager.popBackStack()
+        }
+    }
+
 
     private fun initView() {
         binding.allReviewRv.layoutManager =
@@ -37,6 +48,9 @@ class AllReviewFragment: Fragment() {
                 viewReviewImgFrag(review)
             }
 
+            override fun onItemMoreClick(position: Int) {
+                viewReviewReportFrag()
+            }
         })
     }
 
@@ -60,6 +74,13 @@ class AllReviewFragment: Fragment() {
             })
             .commitAllowingStateLoss()
     }
+
+    private fun viewReviewReportFrag() {
+        (context as MainActivity).supportFragmentManager.beginTransaction()
+            .add(R.id.placeinfo_locate_frm, ReviewReportFragment())
+            .commitAllowingStateLoss()
+    }
+
 
     override fun onDestroy() {
         _binding = null

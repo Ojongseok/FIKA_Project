@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityLoginBinding
-import com.example.fika_project.retrofit.AuthResponse
 import com.example.fika_project.ui.main.MainActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -18,13 +17,14 @@ class LoginActivity : AppCompatActivity() {
         initClickListener()
         setContentView(binding.root)
 
-//         편의상 시작
+////         편의상 시작
         startActivity(Intent(this,MainActivity::class.java))
     }
 
     private fun initClickListener(){
-        binding.loginSignUpTv.setOnClickListener {
-            changeFragment(2)
+        binding.loginQuestionTv.setOnClickListener {
+            val bottomDialog = Signup01Dialog()
+            bottomDialog.show(supportFragmentManager, bottomDialog.tag)
         }
 
         binding.loginKakaoIv.setOnClickListener {

@@ -9,6 +9,7 @@ import com.example.fika_project.ui.main.home.HomeFragment
 import com.example.fika_project.ui.main.explore.ExploreFragment
 import com.example.fika_project.ui.main.mycourse.review.AllReviewFragment
 import com.example.fika_project.ui.main.mycourse.MyCourseFragment
+import com.example.fika_project.ui.main.mycourse.PlaceinfoLocateFragment
 import com.example.fika_project.ui.main.mypage.MypageFragment
 import com.example.fika_project.ui.main.mypage.QuitFragment
 
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.btm_nav_mypage -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, MypageFragment())
+                        .replace(R.id.main_frm, PlaceinfoLocateFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }

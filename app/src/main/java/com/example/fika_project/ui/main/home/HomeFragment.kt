@@ -6,12 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentHomeBinding
-import com.example.fika_project.retrofit.AuthResponse
-import com.example.fika_project.retrofit.RetrofitInterface
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(), HomeView {
     private var _binding: FragmentHomeBinding? = null
@@ -20,8 +16,6 @@ class HomeFragment : Fragment(), HomeView {
     val service = HomeService(this)
 
     private var courseDatas = ArrayList<Course>();
-    private var dramaRankData = ArrayList<DramaRank>();
-    private var scrapCourserankData = ArrayList<ScrapCourserank>();
     private var placeRankData = ArrayList<PlaceRank>();
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -29,7 +23,6 @@ class HomeFragment : Fragment(), HomeView {
 
         initView()
         initData()
-
 
         service.tryLoadHome()
 
@@ -41,16 +34,7 @@ class HomeFragment : Fragment(), HomeView {
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         val courseRVAdaper = CourseMakingRVAdapter(courseDatas)
         binding.homeCourseMakingRv.adapter = courseRVAdaper
-//
-//        binding.homeDramaRankRv.layoutManager =
-//            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-//        val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankData)
-//        binding.homeDramaRankRv.adapter = dramaRankRVAdapter
 
-        binding.homeScrapcourseRankRv.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        val scrapCourserankRVAdapter = ScrapCourserankRVAdapter(scrapCourserankData)
-        binding.homeScrapcourseRankRv.adapter = scrapCourserankRVAdapter
 
         binding.homePlaceRankRv.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
@@ -59,26 +43,43 @@ class HomeFragment : Fragment(), HomeView {
 
     }
 
+    private fun setDramaRankRVAdapter(dramaRankList: ArrayList<dramaList>){
+        val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankList,requireContext())
+
+        binding.homeDramaRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.homeDramaRankRv.adapter = dramaRankRVAdapter
+        binding.homeDramaRankRv.setHasFixedSize(false)
+
+        dramaRankRVAdapter.setMyItemClickListener(object  : DramaRankRVAdapter.MyItemClickListener{
+            override fun onItemClick(dramaRank: dramaList) {
+                TODO("Not yet implemented")
+            }
+
+        })
+    }
+
+    private fun setCourseRVAdapter(scrapCourserankList: ArrayList<coursesSortBySaved>){
+        val scrapCourserankRVAdapter = ScrapCourserankRVAdapter(scrapCourserankList,requireContext())
+
+        binding.homeScrapcourseRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        binding.homeScrapcourseRankRv.adapter = scrapCourserankRVAdapter
+        binding.homeDramaRankRv.setHasFixedSize(false)
+
+        scrapCourserankRVAdapter.setMyItemClickListener(object  : ScrapCourserankRVAdapter.MyItemClickListener{
+            override fun onItemClick(scrapCourserank: coursesSortBySaved) {
+                TODO("Not yet implemented")
+            }
+
+        })
+    }
+
+
     private fun initData(){
         courseDatas.apply {
             add(Course(1, R.color.sub_blue, "우영우 코스","이상한 변호사 우영우","법원"))
             add(Course(2, R.color.sub_yellow, "박새로이 코스","이태원클라스","단밤포차"))
             add(Course(3, R.color.main_blue, "우영우 코스","이상한 변호사 우영우","법원"))
             add(Course(4, R.color.main_yellow, "박새로이 코스","이태원클라스","단밤포차"))
-        }
-
-        dramaRankData.apply {
-            add(DramaRank(1, R.color.sub_blue, "우영우"))
-            add(DramaRank(2, R.color.main_blue, "우영우우우"))
-            add(DramaRank(3, R.color.sub_yellow, "우영우우우"))
-            add(DramaRank(4, R.color.main_yellow, "우영우우우"))
-            add(DramaRank(5, R.color.sub_blue, "우영우우우"))
-        }
-
-        scrapCourserankData.apply {
-            add(ScrapCourserank(1, R.color.sub_blue, "우영우"))
-            add(ScrapCourserank(2, R.color.main_blue, "우영우우우"))
-            add(ScrapCourserank(3, R.color.sub_yellow, "우영우우우"))
         }
 
         placeRankData.apply {
@@ -98,8 +99,14 @@ class HomeFragment : Fragment(), HomeView {
     }
 
     override fun onHomeSuccess(response: HomeResponse) {
-        Glide.with(requireContext()).load(response.result?.dramaList?.get(1)!!.thumbnailUrl).centerCrop().into(binding.itemDramaRankImgIv01)
-
+        when(response.code){
+            1000 -> {
+                response.let {
+                    response?.let { setDramaRankRVAdapter((it.result?.dramaList!!)) }
+                    response?.let { setCourseRVAdapter((it.result?.coursesSortBySaved!!)) }
+                }
+            }
+        }
     }
 
     override fun onHomeFailure(code: Int, message: String) {

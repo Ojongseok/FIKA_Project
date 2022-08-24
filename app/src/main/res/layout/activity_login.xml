@@ -168,52 +168,17 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/login_question_tv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="FIKA가 처음이신가요?"
+        android:textColor="@color/login_text"
+        android:textSize="16sp"
         android:layout_marginBottom="24dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginEnd="88dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <TextView
-            android:id="@+id/login_sign_up_question_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FIKA가 처음이신가요?"
-            android:textColor="@color/login_text"
-            android:textSize="16sp"/>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/verti_bar"
-            android:textColor="@color/login_text"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <TextView
-            android:id="@+id/login_sign_up_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SIGN UP"
-            android:textColor="@color/login_text"
-            android:textSize="16sp"/>
-
-    </LinearLayout>
-
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <ProgressBar
         android:id="@+id/login_loading_pb"

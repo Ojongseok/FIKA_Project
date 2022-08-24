@@ -1,14 +1,16 @@
 package com.example.fika_project.ui.main.home
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.fika_project.databinding.ItemHomeScrapcourseBinding
 
-class ScrapCourserankRVAdapter (private val scrapCourserankList: ArrayList<ScrapCourserank>) : RecyclerView.Adapter<ScrapCourserankRVAdapter.ViewHolder>()
+class ScrapCourserankRVAdapter(private val scrapCourserankList: ArrayList<coursesSortBySaved>, val context: Context) : RecyclerView.Adapter<ScrapCourserankRVAdapter.ViewHolder>()
 {
     interface MyItemClickListener{
-        fun onItemClick(scrapCourserank: ScrapCourserank)
+        fun onItemClick(scrapCourserank: coursesSortBySaved)
     }
 
     private lateinit var mItemClickListner: MyItemClickListener
@@ -25,6 +27,7 @@ class ScrapCourserankRVAdapter (private val scrapCourserankList: ArrayList<Scrap
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(scrapCourserankList[position])
+
 //        holder.itemView.setOnClickListener{
 //            mItemClickListner.onItemClick(scrapCourserankList[position]) }
     }
@@ -33,9 +36,14 @@ class ScrapCourserankRVAdapter (private val scrapCourserankList: ArrayList<Scrap
 
     inner class ViewHolder(val binding: ItemHomeScrapcourseBinding):RecyclerView.ViewHolder(binding.root){
 
-        fun bind(scrapCourserank: ScrapCourserank){
-            binding.itemHomeCoursescrapDramaTitleTv.text = scrapCourserank.dramaName
-            binding.itemHomeScrapcourseIv.setImageResource(scrapCourserank.img!!)
+        fun bind(itemScrapCourserank: coursesSortBySaved){
+            binding.itemHomeCoursescrapDramaTitleTv.text = itemScrapCourserank.dramaTitle
+            binding.itemHomeCoursescrapWhereTv.text = itemScrapCourserank.baseAddress
+            binding.childTitle.text = itemScrapCourserank.courseTitle
+            binding.itemHomeCoursescrapInfoTv.text = itemScrapCourserank.spotTitleList.toString()
+            binding.itemHomeCoursescrapNumberTv.text = itemScrapCourserank.courseSavedCount.toString()
+            Glide.with(context).load(itemScrapCourserank.locageImageUrl).into(binding.itemHomeScrapcourseIv)
+
         }
     }
 

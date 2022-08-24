@@ -42,7 +42,6 @@
         </activity>
         <activity android:name=".ui.main.MainActivity" />
         <activity android:name=".ui.login.LoginActivity" />
-        <activity android:name=".ui.login.SignUpActivity" />
         <activity android:name=".ui.main.mycourse.search.SearchActivity" />
         <activity android:name=".ui.main.mycourse.course_edit.MyCourseViewActivity" />
         <activity android:name=".ui.main.explore.FolderSelectActivity" />
