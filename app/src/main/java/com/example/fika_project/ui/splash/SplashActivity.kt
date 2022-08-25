@@ -7,6 +7,7 @@ import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fika_project.databinding.ActivitySplashBinding
 import com.example.fika_project.ui.login.LoginActivity
+import timber.log.Timber
 
 class SplashActivity : AppCompatActivity(){
     lateinit var binding : ActivitySplashBinding
@@ -16,6 +17,8 @@ class SplashActivity : AppCompatActivity(){
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupTimber()
+
         Handler(Looper.getMainLooper()).postDelayed({
             val intent= Intent(this, LoginActivity::class.java)
             startActivity(intent)
@@ -23,5 +26,8 @@ class SplashActivity : AppCompatActivity(){
         },200)
     }
 
+    private fun setupTimber() {
+        Timber.plant(Timber.DebugTree())
 
+    }
 }

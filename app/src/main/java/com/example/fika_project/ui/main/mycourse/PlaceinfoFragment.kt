@@ -8,7 +8,6 @@ import android.widget.ScrollView
 import androidx.fragment.app.Fragment
 import com.example.fika_project.databinding.FragmentPlaceinfoBinding
 import com.example.fika_project.ui.main.MainActivity
-import kotlinx.android.synthetic.main.fragment_placeinfo_locate.*
 
 class PlaceinfoFragment: Fragment() {
     private var _binding: FragmentPlaceinfoBinding? = null

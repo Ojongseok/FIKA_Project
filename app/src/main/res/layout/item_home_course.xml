@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="68dp"
             android:gravity="center"
-            android:background="@color/sub_yellow"
+            android:background="@color/sub_blue"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
@@ -37,7 +37,7 @@
                     android:id="@+id/item_home_course_iv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:src="@drawable/sample_image"/>
             </androidx.cardview.widget.CardView>
 
             <TextView

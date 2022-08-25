@@ -34,11 +34,11 @@ android {
 
     buildFeatures {
         viewBinding true
-        dataBinding true
+        dataBinding = true
     }
 
-    buildFeatures{
-        dataBinding = true
+    lintOptions {
+       disable 'MissingTranslation'
     }
 }
 apply plugin: 'com.android.application'
@@ -91,4 +91,7 @@ dependencies {
     //kakaoLogin
     implementation group: 'com.kakao.sdk', name: 'usermgmt', version: '1.30.0'
     implementation group: 'com.kakao.sdk', name: 'kakaolink', version: '1.30.5'
+
+    //Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 }

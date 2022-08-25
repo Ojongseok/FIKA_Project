@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FIKA_Project"
         android:usesCleartextTraffic="true"
-        tools:targetApi="m">
+        tools:targetApi="m"
+        >
 
         <activity
             android:name=".ui.main.explore.CourseDetailDramaOthers"
@@ -48,6 +49,22 @@
         <activity android:name=".ui.main.explore.CourseDetailDrama" />
         <activity android:name=".ui.main.explore.drama_info.DramaInfoActivity" />
         <activity android:name=".ui.main.mycourse.course_edit.MyHoldLocationActivity" />
+        <activity android:name=".ui.main.mycourse.PlaceinfoLocateActivity" />
+
+        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
+                <data
+                    android:host="oauth"
+                    android:scheme="@string/kakao_native_key" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
