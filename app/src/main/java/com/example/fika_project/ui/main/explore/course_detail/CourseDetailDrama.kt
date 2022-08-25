@@ -10,29 +10,27 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityCourseDetailDramaBinding
 import com.example.fika_project.ui.main.SpinnerAdapter
 import com.example.fika_project.ui.main.SpinnerModel
+import com.example.fika_project.ui.main.explore.course_detail.*
+import com.example.fika_project.ui.main.home.Course
 import kotlinx.android.synthetic.main.item_spinner.view.*
 
-class CourseDetailDrama : AppCompatActivity() {
+class CourseDetailDrama : AppCompatActivity(),CourseDetailView {
     private var _Binding: ActivityCourseDetailDramaBinding? = null
     private val binding get() = _Binding!!
     private val listOfYear = ArrayList<SpinnerModel>()
+    lateinit var dramaAdapter: CourseDetailDramaAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityCourseDetailDramaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.detailCourseLocationRecyclerview.apply {
-            layoutManager = LinearLayoutManager(context)
-            adapter = CourseDetailLocationAdapter()
-        }
-        binding.detailCourseTogetherRecyclerview.apply {
-            layoutManager = LinearLayoutManager(context)
-            adapter = CourseDetailTogetherAdapter()
-        }
+        val service = CourseDetailService(this,intent.getIntExtra("courseId",0))
+
 
         binding.courseDetailHoldBtn.setOnClickListener {
             startActivity(Intent(this,FolderSelectActivity::class.java))
@@ -40,7 +38,51 @@ class CourseDetailDrama : AppCompatActivity() {
         }
         // 스피너 커스텀
         spinnerTest()
+
+        service.tryLoadCourseDetail()
     }
+    private fun initData(initList: result) {
+        binding.courseDetailLocageTiltleByDrama.text = initList.courseTitle
+        Glide.with(this).load(initList.locageSceneImageUrl).into(binding.courseDetailIv)
+        binding.courseDetailLocageTiltleByDrama.text = initList.locageSceneDescribe
+        binding.detailCourseHashTvByDrama.text = initList.hashTag
+
+        Glide.with(this).load(initList.courseLocage?.spotImageUrl).into(binding.courseDetailIv)
+        binding.courseDetailWhereTv.text = initList.courseLocage?.shortAddress
+        binding.courseDetailCategoryTv.text = initList.courseLocage?.type
+        binding.courseDetailCourseName.text = initList.courseLocage?.spotTitle
+    }
+
+    private fun setOnClickEvent() {
+        dramaAdapter.setItemClickListener(object: CourseDetailDramaAdapter.OnItemClickListener {
+            override fun onClick(view: View, position: Int) {
+                super.onClick(view, position) // 미리 정의해둔 onClick 호출
+                dramaAdapter.notifyDataSetChanged()
+            }
+        })
+    }
+
+    override fun onExploreSuccess(response: CourseDetailResponse) {
+        when(response.code) {
+            1000 -> {
+                response.let {
+                    binding.detailCourseTogetherRecyclerview.apply {
+                        layoutManager = LinearLayoutManager(context)
+                        dramaAdapter = CourseDetailDramaAdapter(it.result?.spotList!!, context)
+                        adapter = dramaAdapter
+                    }
+
+                    setOnClickEvent()
+                    initData(it.result!!)
+                }
+            }
+        }
+    }
+
+
+
+
+
 
     private fun spinnerTest() {
         setupSpinnerYear()
@@ -76,38 +118,15 @@ class CourseDetailDrama : AppCompatActivity() {
             }
         }
     }
-
     override fun onDestroy() {
         _Binding = null
         super.onDestroy()
     }
-}
-class CourseDetailLocationAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.myhold_location_item_list,parent,false)
 
-        return CustomViewHolder(view)
+    override fun onExploreLoading() {
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val view = (holder as CustomViewHolder).itemView
 
+    override fun onExploreFailure(code: Int, message: String) {
     }
-    inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
-    override fun getItemCount() = 2
-}
-class CourseDetailTogetherAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.myhold_location_item_list,parent,false)
-
-        return CustomViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val view = (holder as CustomViewHolder).itemView
-
-
-    }
-    inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
-    override fun getItemCount() = 4
 }

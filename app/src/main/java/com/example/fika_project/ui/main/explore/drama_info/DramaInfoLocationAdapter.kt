@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.fika_project.R
 import com.example.fika_project.ui.main.explore.spotDataList
+import kotlinx.android.synthetic.main.drama_info_course_item.view.*
 import kotlinx.android.synthetic.main.drama_info_location_item.view.*
 
 class DramaInfoLocationAdapter(val locationList : ArrayList<spotDataList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -24,6 +25,10 @@ class DramaInfoLocationAdapter(val locationList : ArrayList<spotDataList>, val c
         view.item__location_placerank_where_tv.text = locationList[position].shortAddress
         view.item_location_placerank_title_tv.text = locationList[position].spotTitle
         view.item_location_placerank_category_tv.text = locationList[position].type
+
+        view.item_home_placerank_layout.setOnClickListener {
+
+        }
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
     override fun getItemCount() = locationList.size

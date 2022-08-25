@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/course_detail_iv_by_drama"
             android:layout_width="116dp"
             android:layout_height="116dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +74,7 @@
             app:srcCompat="@drawable/sample_image" />
 
         <TextView
-            android:id="@+id/textView26"
+            android:id="@+id/course_detail_locage_tiltle_by_drama"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -82,7 +82,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/imageView16"
-            app:layout_constraintStart_toEndOf="@+id/imageView15"
+            app:layout_constraintStart_toEndOf="@+id/course_detail_iv_by_drama"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -94,12 +94,12 @@
             app:srcCompat="@drawable/dot" />
 
         <TextView
-            android:id="@+id/textView29"
+            android:id="@+id/detail_course_hash_tv_by_drama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="# 순두부찌개"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView26" />
+            app:layout_constraintStart_toStartOf="@+id/course_detail_locage_tiltle_by_drama" />
 
         <TextView
             android:id="@+id/textView30"
@@ -108,7 +108,7 @@
             android:layout_marginLeft="8dp"
             android:text="# 분위기"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView29" />
+            app:layout_constraintStart_toEndOf="@+id/detail_course_hash_tv_by_drama" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

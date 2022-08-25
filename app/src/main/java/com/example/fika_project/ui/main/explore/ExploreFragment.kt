@@ -21,16 +21,12 @@ class ExploreFragment:Fragment() {
         binding.exploreDramaTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.VISIBLE
             binding.exploreCourseClickCircle.visibility = View.INVISIBLE
-            parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,
-                ExploreDramaPage()
-            ).commit()
+            parentFragmentManager.beginTransaction().replace(R.id.explore_main_container, ExploreDramaPage()).commit()
         }
         binding.exploreCourseTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.INVISIBLE
             binding.exploreCourseClickCircle.visibility = View.VISIBLE
-            parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,
-                ExploreCoursePage()
-            ).commit()
+            parentFragmentManager.beginTransaction().replace(R.id.explore_main_container, ExploreCoursePage()).commit()
         }
 
         binding.button2.setOnClickListener {

@@ -56,9 +56,9 @@ class FolderSelectAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val view = (holder as CustomViewHolder).itemView
         var list : ArrayList<String> = ArrayList()
-        list.add("이태원 클라쓰 투어")
-        list.add("사랑의 불시착 투어")
-        list.add("알고있지만 투어")
+        list.add("기본 그룹")
+        list.add("새로운 그룹1")
+        list.add("새로운 그룹2")
 
         view.folder_name_tv.text = list[position]
     }

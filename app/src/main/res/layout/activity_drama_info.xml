@@ -55,7 +55,8 @@
             <FrameLayout
                 android:id="@+id/drama_info_mapview"
                 android:layout_width="match_parent"
-                android:layout_height="262dp">
+                android:layout_height="262dp"
+                android:layout_marginTop="4dp">
 
             </FrameLayout>
 

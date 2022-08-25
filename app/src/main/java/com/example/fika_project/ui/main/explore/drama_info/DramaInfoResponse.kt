@@ -28,7 +28,7 @@ data class spotDataList(
     @SerializedName("locage") val locage : Boolean?
 )
 data class courseList(
-    @SerializedName("spotId") val spotId : Int?,
+    @SerializedName("courseId") val courseId : Int?,
     @SerializedName("locageImageUrl") val locageImageUrl : String?,
     @SerializedName("courseTitle") val courseTitle : String?,
     @SerializedName("dramaTitle") val dramaTitle : String?,

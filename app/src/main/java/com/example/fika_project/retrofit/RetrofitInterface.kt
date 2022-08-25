@@ -5,6 +5,7 @@ import com.example.fika_project.ui.main.explore.ExploreCourseResponse
 import com.example.fika_project.ui.main.explore.course_detail.CourseDetailResponse
 import com.example.fika_project.ui.main.explore.filter_drama.ExploreDramaResponse
 import com.example.fika_project.ui.main.home.HomeResponse
+import com.example.fika_project.ui.main.mypage.myspot.MySpotResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -41,10 +42,16 @@ interface RetrofitInterface {
         @Path("dramaId") dramaId : Int
     ) :Call<DramaInfoResponse>
 
-    //13. 코스 상세 조회
-   @GET("/course/{courseId}")
+    //18. 코스 상세 조회
+   @GET("course/detail/{courseId}")
     fun loadDetailCourse(
         @Header("Access-Token") token: String,
         @Path("courseId") courseId : Int
     ) :Call<CourseDetailResponse>
+
+    // 19. 내가 담은 장소 조회
+    @GET("/spot/my")
+    fun loadMySpot (
+        @Header("Access-Token") token: String,
+    ) : Call<MySpotResponse>
 }

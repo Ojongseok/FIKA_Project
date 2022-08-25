@@ -37,7 +37,7 @@ class ExploreDramaPage : Fragment(), ExploreDramaView {
     private fun setDramalist(dramalist: ArrayList<result>) {
         binding.exploreDramaPageRecyclerview.layoutManager = GridLayoutManager(requireContext(),3)
         binding.exploreDramaPageRecyclerview.adapter = ExploreDramaPageAdapter(dramalist, requireContext())
-
+        binding.exploreDranaPageSearchNumber.text = dramalist.size.toString()
     }
     override fun onExploreFailure(code: Int, message: String) {
     }
