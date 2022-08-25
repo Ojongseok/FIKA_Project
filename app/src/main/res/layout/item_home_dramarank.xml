@@ -7,26 +7,36 @@
     android:layout_height="wrap_content"
     android:layout_margin="3dp">
 
-    <ImageView
-        android:id="@+id/item_drama_rank_img_iv"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_drama_rank_img_cv"
         android:layout_width="88dp"
         android:layout_height="126dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/sample_image"
+        app:cardCornerRadius="4dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:id="@+id/item_drama_rank_img_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@color/grey3"/>
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/item_drama_rank_title_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
         android:text="드라마명"
         android:textSize="14sp"
-        android:textColor="@color/login_hint"
-        app:layout_constraintEnd_toEndOf="@id/item_drama_rank_img_iv"
-        app:layout_constraintStart_toStartOf="@+id/item_drama_rank_img_iv"
-        app:layout_constraintTop_toBottomOf="@+id/item_drama_rank_img_iv"
+        android:textColor="@color/black2"
+        app:layout_constraintEnd_toEndOf="@id/item_drama_rank_img_cv"
+        app:layout_constraintStart_toStartOf="@+id/item_drama_rank_img_cv"
+        app:layout_constraintTop_toBottomOf="@+id/item_drama_rank_img_cv"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
