@@ -22,4 +22,4 @@ data class result(
     @SerializedName("mapY") val mapY : Double?,
     @SerializedName("scrapped") val scrapped : Boolean?,
     @SerializedName("locage") val locage : Boolean?,
-)
+) : Serializable

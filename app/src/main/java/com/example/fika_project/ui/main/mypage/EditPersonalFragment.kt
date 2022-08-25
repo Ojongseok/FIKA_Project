@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.fika_project.databinding.FragmentEditPersonalBinding
-import com.example.fika_project.databinding.FragmentMyplaceBinding
 
 class EditPersonalFragment: Fragment() {
     private var _binding: FragmentEditPersonalBinding? = null

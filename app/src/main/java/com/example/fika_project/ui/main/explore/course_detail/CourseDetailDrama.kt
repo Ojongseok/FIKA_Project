@@ -16,7 +16,6 @@ import com.example.fika_project.databinding.ActivityCourseDetailDramaBinding
 import com.example.fika_project.ui.main.SpinnerAdapter
 import com.example.fika_project.ui.main.SpinnerModel
 import com.example.fika_project.ui.main.explore.course_detail.*
-import com.example.fika_project.ui.main.home.Course
 import kotlinx.android.synthetic.main.item_spinner.view.*
 
 class CourseDetailDrama : AppCompatActivity(),CourseDetailView {
@@ -43,7 +42,7 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView {
     }
     private fun initData(initList: result) {
         binding.courseDetailLocageTiltleByDrama.text = initList.courseTitle
-        Glide.with(this).load(initList.locageSceneImageUrl).into(binding.courseDetailIv)
+        Glide.with(this).load(initList.locageSceneImageUrl).into(binding.courseDetailIvByDrama)
         binding.courseDetailLocageTiltleByDrama.text = initList.locageSceneDescribe
         binding.detailCourseHashTvByDrama.text = initList.hashTag
 

@@ -1,5 +1,6 @@
 package com.example.fika_project.ui.main.mypage
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentMypageBinding
 import com.example.fika_project.ui.main.explore.course_detail.result
 import com.example.fika_project.ui.main.explore.filter_drama.ExploreService
+import com.example.fika_project.ui.main.mypage.myspot.MySpotActivity
 import com.example.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.example.fika_project.ui.main.mypage.myspot.MySpotService
 import com.example.fika_project.ui.main.mypage.myspot.MySpotView
@@ -49,18 +51,14 @@ class MypageFragment : Fragment(),MySpotView {
     private fun onClickListener(){
         val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
 
-        binding.mypageCourseLayout.setOnClickListener{
-            fragmentManager.commit {
-                setReorderingAllowed(true)
-                add(R.id.mypage_frm, MyscrapcourseFragment())
-            }
+        binding.mypagePlaceLayout.setOnClickListener{
+            val intent = Intent(context,MySpotActivity::class.java)
+            intent.putExtra("mySpotList",mySpotList)
+            context?.startActivity(intent)
         }
 
-        binding.mypagePlaceLayout.setOnClickListener {
-            fragmentManager.commit {
-                setReorderingAllowed(true)
-                add(R.id.mypage_frm, MyplaceFragment())
-            }
+        binding.mypageCourseLayout.setOnClickListener {
+
         }
 
         binding.mypageEditBtn.setOnClickListener {
