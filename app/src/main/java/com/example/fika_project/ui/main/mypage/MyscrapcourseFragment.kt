@@ -9,12 +9,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentMyscrapcourseBinding
-import com.example.fika_project.ui.main.home.Course
-import com.example.fika_project.ui.main.home.DramaRank
-import com.example.fika_project.ui.main.home.PlaceRank
-import com.example.fika_project.ui.main.home.ScrapCourserank
-import com.example.fika_project.ui.main.mycourse.review.AllReviewRVAdapter
-import com.example.fika_project.ui.main.mycourse.review.Review
 
 class MyscrapcourseFragment: Fragment() {
     private var _binding: FragmentMyscrapcourseBinding? = null

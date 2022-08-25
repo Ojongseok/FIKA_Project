@@ -1,5 +1,6 @@
 package com.example.fika_project.retrofit
 
+import com.example.fika_project.ui.login.LoginResponse
 import com.example.fika_project.ui.main.explore.DramaInfoResponse
 import com.example.fika_project.ui.main.explore.ExploreCourseResponse
 import com.example.fika_project.ui.main.explore.course_detail.CourseDetailResponse
@@ -15,7 +16,7 @@ import retrofit2.http.Path
 interface RetrofitInterface {
     //카카오 로그인
     @POST("/oauth/login/kakao")
-    fun kakaoLogin(): Call<AuthResponse>
+    fun kakaoLogin(): Call<LoginResponse>
 
     //8. 메인 페이지 데이터 조회
     @GET("/nav/main")

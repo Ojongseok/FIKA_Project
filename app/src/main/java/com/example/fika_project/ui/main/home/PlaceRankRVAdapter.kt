@@ -1,14 +1,16 @@
 package com.example.fika_project.ui.main.home
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.fika_project.databinding.ItemHomePlacerankBinding
 
-class PlaceRankRVAdapter (private val placeRankList: ArrayList<PlaceRank>) : RecyclerView.Adapter<PlaceRankRVAdapter.ViewHolder>()
+class PlaceRankRVAdapter (private val placeRankList: ArrayList<spotsSortBySaved>, val context: Context) : RecyclerView.Adapter<PlaceRankRVAdapter.ViewHolder>()
 {
     interface MyItemClickListener{
-        fun onItemClick(placeRank: PlaceRank)
+        fun onItemClick(placeRank: spotsSortBySaved)
     }
 
     private lateinit var mItemClickListner: MyItemClickListener
@@ -33,9 +35,12 @@ class PlaceRankRVAdapter (private val placeRankList: ArrayList<PlaceRank>) : Rec
 
     inner class ViewHolder(val binding: ItemHomePlacerankBinding):RecyclerView.ViewHolder(binding.root){
 
-        fun bind(placeRank: PlaceRank){
-            binding.itemPlacerankTitleTv.text = placeRank.title
-            binding.itemPlacerankImgIv.setImageResource(placeRank.img!!)
+        fun bind(itemPlaceRank: spotsSortBySaved){
+            Glide.with(context).load(itemPlaceRank.spotImageUrl).into(binding.itemPlacerankImgIv)
+            binding.itemPlacerankWhereTv.text = itemPlaceRank.shortAddress
+            binding.itemPlacerankCategoryTv.text = itemPlaceRank.type
+            binding.itemPlacerankTitleTv.text = itemPlaceRank.spotTitle
+            binding.itemPlacerankWhereTv2.text = itemPlaceRank.shortAddress
         }
     }
 

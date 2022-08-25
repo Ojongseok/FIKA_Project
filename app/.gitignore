@@ -1,2 +1,3 @@
-/build
-/src/main/java/com/example/fika_project/ApplicationClass.kt
+.build
+.app/src/main/java/com/example/fika_project/ApplicationClass.kt
+.app/src/main/res/values/api_secret_key.xml

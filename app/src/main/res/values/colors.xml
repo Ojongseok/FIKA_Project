@@ -12,12 +12,16 @@
     <color name="sub_yellow">#FCE49C</color>
 
     <color name="black">#FF000000</color>
-    <color name="grey">#AFAFAF</color>
+    <color name="black2">#424242</color>
+
+    <color name="grey">#767676</color>
+    <color name="grey2">#9D9D9D</color>
+    <color name="grey3">#D9D9D9</color>
+
     <color name="white">#FFFFFFFF</color>
 
     <!--로그인-->
     <color name="login_hint">#D9D9D9</color>
-    <color name="grey3">#D9D9D9</color>
 
     <color name="login_text">#9D9D9D</color>
     <color name="login_btn">#F3F3F3</color>

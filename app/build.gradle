@@ -34,11 +34,11 @@ android {
 
     buildFeatures {
         viewBinding true
-        dataBinding true
+        dataBinding = true
     }
 
-    buildFeatures{
-        dataBinding = true
+    lintOptions {
+       disable 'MissingTranslation'
     }
 }
 apply plugin: 'com.android.application'
@@ -85,6 +85,13 @@ dependencies {
     implementation "com.tbuonomo:dotsindicator:4.3"
 
     //Glide
-    implementation 'com.github.bumptech.glide:glide:4.10.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //kakaoLogin
+    implementation group: 'com.kakao.sdk', name: 'usermgmt', version: '1.30.0'
+    implementation group: 'com.kakao.sdk', name: 'kakaolink', version: '1.30.5'
+
+    //Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 }

@@ -15,14 +15,19 @@ class ApplicationClass : Application() {
         const val X_ACCESS_TOKEN: String = "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJtZW1iZXJJZCI6MywibWVtYmVyRW1haWwiOiJ0ZXN0ZXJAdGVzdC5jb20iLCJpYXQiOjE2NjEyNDMyNjEsImV4cCI6MTY2MTg0ODA2MX0.3CLhVPdl4UmPJf5TTvQ5Z2mm_XGruXh7GL6aX4nCynI"
 
         const val TAG: String = "FIKA-Prj"
-        const val API_URL: String = "http://ec2-15-165-255-15.ap-northeast-2.compute.amazonaws.com:9090"
+        const val API_URL: String = "API_URL";
         lateinit var prefs: SharedPreferences
         lateinit var retrofit: Retrofit
+
+        var appContext : Context? = null
     }
 
     override fun onCreate() {
         super.onCreate()
         prefs = applicationContext.getSharedPreferences(TAG, Context.MODE_PRIVATE)
+
+        appContext = this
+        KakaoSdk.init(this,getString(R.string.kakao_native_key))
 
         initRetrofitInstance()
     }

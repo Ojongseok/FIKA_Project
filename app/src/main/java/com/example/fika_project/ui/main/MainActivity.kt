@@ -9,9 +9,7 @@ import com.example.fika_project.ui.main.home.HomeFragment
 import com.example.fika_project.ui.main.explore.ExploreFragment
 import com.example.fika_project.ui.main.mycourse.review.AllReviewFragment
 import com.example.fika_project.ui.main.mycourse.MyCourseFragment
-import com.example.fika_project.ui.main.mycourse.PlaceinfoLocateFragment
 import com.example.fika_project.ui.main.mypage.MypageFragment
-import com.example.fika_project.ui.main.mypage.QuitFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding

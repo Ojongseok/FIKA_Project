@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(), HomeView {
@@ -15,35 +15,38 @@ class HomeFragment : Fragment(), HomeView {
 
     val service = HomeService(this)
 
-    private var courseDatas = ArrayList<Course>();
-    private var placeRankData = ArrayList<PlaceRank>();
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        initView()
-        initData()
-
         service.tryLoadHome()
-
         return binding.root
     }
 
-    private fun initView() {
-        binding.homeCourseMakingRv.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        val courseRVAdaper = CourseMakingRVAdapter(courseDatas)
-        binding.homeCourseMakingRv.adapter = courseRVAdaper
+    private fun setMyCourseRVAdapter(courseList: ArrayList<myCourseList>){
+        val myCourseRVAdapter = MyCourseRVAdapter(courseList,requireContext())
 
+        binding.homeMyCourseRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.homeMyCourseRv.adapter = myCourseRVAdapter
+        binding.homeMyCourseRv.setHasFixedSize(false)
 
-        binding.homePlaceRankRv.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        val placeRankRVAdapter = PlaceRankRVAdapter(placeRankData)
-        binding.homePlaceRankRv.adapter = placeRankRVAdapter
-
+        myCourseRVAdapter.setMyItemClickListener(object  : MyCourseRVAdapter.MyItemClickListener{
+            override fun onItemClick(course: myCourseList) {
+                TODO("Not yet implemented")
+            } })
     }
 
+    private fun setDramaRankRVAdapter(dramaRankList: ArrayList<dramaList>){
+        val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankList,requireContext())
 
+        binding.homeDramaRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.homeDramaRankRv.adapter = dramaRankRVAdapter
+        binding.homeDramaRankRv.setHasFixedSize(false)
+
+        dramaRankRVAdapter.setMyItemClickListener(object  : DramaRankRVAdapter.MyItemClickListener{
+            override fun onItemClick(dramaRank: dramaList) {
+                TODO("Not yet implemented")
+            } })
+    }
 
     private fun setCourseRVAdapter(scrapCourserankList: ArrayList<coursesSortBySaved>){
         val scrapCourserankRVAdapter = ScrapCourserankRVAdapter(scrapCourserankList,requireContext())
@@ -56,39 +59,20 @@ class HomeFragment : Fragment(), HomeView {
             override fun onItemClick(scrapCourserank: coursesSortBySaved) {
                 TODO("Not yet implemented")
             }
+        }) }
 
-        })
-    }
+    private fun setPlaceRankRVAdapter(placeRankList: ArrayList<spotsSortBySaved>){
+        val placeRankRVAdapter = PlaceRankRVAdapter(placeRankList,requireContext())
 
+        binding.homePlaceRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.homePlaceRankRv.adapter = placeRankRVAdapter
+        binding.homePlaceRankRv.setHasFixedSize(false)
 
-    private fun initData(){
-        courseDatas.apply {
-            add(Course(1, R.color.sub_blue, "우영우 코스","이상한 변호사 우영우","법원"))
-            add(Course(2, R.color.sub_yellow, "박새로이 코스","이태원클라스","단밤포차"))
-            add(Course(3, R.color.main_blue, "우영우 코스","이상한 변호사 우영우","법원"))
-            add(Course(4, R.color.main_yellow, "박새로이 코스","이태원클라스","단밤포차"))
-        }
-
-        placeRankData.apply {
-            add(PlaceRank(1, R.color.sub_blue, "우영우"))
-            add(PlaceRank(2, R.color.main_blue, "우영우우우"))
-            add(PlaceRank(3, R.color.sub_yellow, "우영우우우"))
-        }
-    }
-    private fun setDramaRankRVAdapter(dramaRankList: ArrayList<dramaList>){
-        val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankList,requireContext())
-
-        binding.homeDramaRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        binding.homeDramaRankRv.adapter = dramaRankRVAdapter
-        binding.homeDramaRankRv.setHasFixedSize(false)
-
-        dramaRankRVAdapter.setMyItemClickListener(object  : DramaRankRVAdapter.MyItemClickListener{
-            override fun onItemClick(dramaRank: dramaList) {
+        placeRankRVAdapter.setMyItemClickListener(object  : PlaceRankRVAdapter.MyItemClickListener{
+            override fun onItemClick(placeRank: spotsSortBySaved) {
                 TODO("Not yet implemented")
             }
-
-        })
-    }
+        }) }
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -96,21 +80,24 @@ class HomeFragment : Fragment(), HomeView {
     }
 
     override fun onHomeLoading() {
-//        TODO("Not yet implemented")
+        binding.homePb.visibility = View.VISIBLE
     }
 
     override fun onHomeSuccess(response: HomeResponse) {
         when(response.code) {
             1000 -> {
                 response.let {
+                    response?.let { setMyCourseRVAdapter((it.result?.myCourseList!!)) }
                     response?.let { setDramaRankRVAdapter((it.result?.dramaList!!)) }
                     response?.let { setCourseRVAdapter((it.result?.coursesSortBySaved!!)) }
+                    response?.let { setPlaceRankRVAdapter((it.result?.spotsSortBySaved!!)) }
+                    binding.homePb.visibility = View.GONE
                 }
             }
         }
     }
 
     override fun onHomeFailure(code: Int, message: String) {
-//        TODO("Not yet implemented")
+        Toast.makeText(requireContext(),"통신 에러",Toast.LENGTH_SHORT).show()
     }
 }
