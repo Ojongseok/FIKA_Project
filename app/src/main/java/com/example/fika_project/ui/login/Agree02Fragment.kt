@@ -22,7 +22,7 @@ class Agree02Fragment  : Fragment() {
         val lActivity = activity as LoginActivity
 
         binding.agree02CountinueBtn.setOnClickListener{
-            lActivity.changeFragment(1)
+            lActivity.changeFragment(4)
         }
     }
 

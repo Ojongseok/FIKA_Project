@@ -1,22 +1,29 @@
 package com.example.fika_project.retrofit
 
-import com.example.fika_project.ui.login.LoginResponse
 import com.example.fika_project.ui.main.explore.DramaInfoResponse
 import com.example.fika_project.ui.main.explore.ExploreCourseResponse
 import com.example.fika_project.ui.main.explore.course_detail.CourseDetailResponse
 import com.example.fika_project.ui.main.explore.filter_drama.ExploreDramaResponse
 import com.example.fika_project.ui.main.home.HomeResponse
 import com.example.fika_project.ui.main.mypage.myspot.MySpotResponse
+import com.example.fika_project.ui.login.AuthResponse
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface RetrofitInterface {
-    //카카오 로그인
+    //1. 카카오 로그인
     @POST("/oauth/login/kakao")
-    fun kakaoLogin(): Call<LoginResponse>
+    fun kakaoLogin(
+        @Header("Access-Token") token: String?
+    ): Call<AuthResponse>
+
+    //4. 닉네임 유효성 검사
+    @FormUrlEncoded
+    @POST("/member/valid/nickname")
+    fun nicknameCheck(
+        @Field("nickname") nickname: String
+    ): Call<AuthResponse>
+
 
     //8. 메인 페이지 데이터 조회
     @GET("/nav/main")
@@ -57,4 +64,11 @@ interface RetrofitInterface {
     fun loadMySpot (
         @Header("Access-Token") token: String,
     ) : Call<MySpotResponse>
+
+    //20. 소셜 인증 후 회원가입
+    @FormUrlEncoded
+    @POST("/member/social")
+    fun signUp(
+        @Body user: User
+    ): Call<AuthResponse>
 }

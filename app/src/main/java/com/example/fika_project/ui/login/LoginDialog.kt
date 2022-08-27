@@ -14,7 +14,7 @@ interface BottomSheetClickListener {
     fun onButtomSheetClicked(type: String)
 }
 
-class Signup01Dialog : BottomSheetDialogFragment() {
+class LoginDialog : BottomSheetDialogFragment() {
     lateinit var binding : DialogLoginBinding
     lateinit var bottomSheetClickListener: BottomSheetClickListener
 

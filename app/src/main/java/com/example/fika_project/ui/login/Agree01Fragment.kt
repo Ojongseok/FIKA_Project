@@ -21,11 +21,17 @@ class Agree01Fragment  : Fragment() {
     private fun initClickListener(){
         val lActivity = activity as LoginActivity
 
-        binding.reviewReportBackBtn.setOnClickListener{
+        binding.agree01BackBtn.setOnClickListener{
             lActivity.changeFragment(1)
         }
-        binding.signup01CountinueBtn.setOnClickListener {
+        binding.agree01More03.setOnClickListener {
             lActivity.changeFragment(3)
+        }
+        binding.agree01More04.setOnClickListener {
+            lActivity.changeFragment(4)
+        }
+        binding.agree01CountinueBtn.setOnClickListener {
+            lActivity.changeFragment(5)
         }
     }
 

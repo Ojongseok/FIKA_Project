@@ -6,7 +6,7 @@
     android:background="@color/white">
 
     <ImageView
-        android:id="@+id/review_report_back_btn"
+        android:id="@+id/agree_01_back_btn"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_margin="20dp"
@@ -16,7 +16,7 @@
         android:contentDescription="@string/back_btn"/>
 
     <TextView
-        android:id="@+id/review_report_title_tv"
+        android:id="@+id/agree_01_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <LinearLayout
-        android:id="@+id/review_report_contents_layout"
+        android:id="@+id/agree_01_contents_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -37,25 +37,25 @@
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/review_report_title_tv">
+        app:layout_constraintTop_toBottomOf="@id/agree_01_title_tv">
 
 
         <LinearLayout
-            android:id="@+id/review_report_contents_layout_01"
+            android:id="@+id/agree_01_contents_layout_01"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/review_report_title_tv">
+            app:layout_constraintTop_toBottomOf="@id/agree_01_title_tv">
 
             <CheckBox
-                android:id="@+id/review_report_cb_01"
+                android:id="@+id/agree_01_cb_01"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
 
             <TextView
-                android:id="@+id/review_report_contents_01"
+                android:id="@+id/agree_01_contents_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="약관 전체동의"
@@ -70,7 +70,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/review_report_contents_layout_02"
+            android:id="@+id/agree_01_contents_layout_02"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="16dp"
@@ -78,12 +78,12 @@
             android:gravity="center">
 
             <CheckBox
-                android:id="@+id/review_report_cb_02"
+                android:id="@+id/agree_01_cb_02"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
 
             <TextView
-                android:id="@+id/review_report_contents_02"
+                android:id="@+id/agree_01_contents_02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="만 14세 이상입니다."
@@ -96,19 +96,19 @@
                 android:layout_weight="1"/>
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/review_report_contents_layout_03"
+            android:id="@+id/agree_01_contents_layout_03"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:gravity="center">
 
             <CheckBox
-                android:id="@+id/review_report_cb_03"
+                android:id="@+id/agree_01_cb_03"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
 
             <TextView
-                android:id="@+id/review_report_contents_03"
+                android:id="@+id/agree_01_contents_03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(필수) 서비스 이용약관"
@@ -121,7 +121,7 @@
                 android:layout_weight="1"/>
 
             <ImageView
-                android:id="@+id/review_report_more_03"
+                android:id="@+id/agree_01_more_03"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/arrow"
@@ -129,19 +129,19 @@
 
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/review_report_contents_layout_04"
+            android:id="@+id/agree_01_contents_layout_04"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:gravity="center">
 
             <CheckBox
-                android:id="@+id/review_report_cb_04"
+                android:id="@+id/agree_01_cb_04"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
 
             <TextView
-                android:id="@+id/review_report_contents_04"
+                android:id="@+id/agree_01_contents_04"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(필수) 개인정보 처리방침"
@@ -154,7 +154,7 @@
                 android:layout_weight="1"/>
 
             <ImageView
-                android:id="@+id/review_report_more_04"
+                android:id="@+id/agree_01_more_04"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/arrow"
@@ -162,19 +162,19 @@
 
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/review_report_contents_layout_05"
+            android:id="@+id/agree_01_contents_layout_05"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:gravity="center">
 
             <CheckBox
-                android:id="@+id/review_report_cb_05"
+                android:id="@+id/agree_01_cb_05"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
 
             <TextView
-                android:id="@+id/review_report_contents_05"
+                android:id="@+id/agree_01_contents_05"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(선택) 마케팅 정보 수신동의"
@@ -187,7 +187,7 @@
                 android:layout_weight="1"/>
 
             <ImageView
-                android:id="@+id/review_report_more_05"
+                android:id="@+id/agree_01_more_05"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/arrow"
@@ -197,7 +197,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/signup_01_countinue_btn"
+        android:id="@+id/agree_01_countinue_btn"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:textStyle="bold"
