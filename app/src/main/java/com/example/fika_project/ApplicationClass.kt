@@ -16,7 +16,7 @@ class ApplicationClass : Application() {
         const val X_ACCESS_TOKEN: String = "X_ACCESS_TOKEN"
 
         const val TAG: String = "FIKA-Prj"
-        const val API_URL: String = "API_URL"
+        const val API_URL: String = "API_URL";
         lateinit var prefs: SharedPreferences
         lateinit var retrofit: Retrofit
 
