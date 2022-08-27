@@ -16,10 +16,10 @@ import java.util.concurrent.TimeUnit
 
 class ApplicationClass : Application() {
     companion object{
-        const val X_ACCESS_TOKEN: String = "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJtZW1iZXJJZCI6MywibWVtYmVyRW1haWwiOiJ0ZXN0ZXJAdGVzdC5jb20iLCJpYXQiOjE2NjE0MTQzNTEsImV4cCI6MTY2MjAxOTE1MX0.1XpRpBYCog3BfoYc3z_vq4fedFWkPOHbtoIzw03VW9g"
+        const val X_ACCESS_TOKEN: String = "X_ACCESS_TOKEN"
 
         const val TAG: String = "FIKA-Prj"
-        const val API_URL: String = "http://ec2-15-165-255-15.ap-northeast-2.compute.amazonaws.com:9090"
+        const val API_URL: String = "API_URL"
         lateinit var prefs: SharedPreferences
         lateinit var retrofit: Retrofit
 
