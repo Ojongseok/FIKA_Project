@@ -7,10 +7,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ExploreService(val View: ExploreDramaView) {
+class ExploreService(val View: ExploreDramaView, private val filter : String) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
     val token = ApplicationClass.X_ACCESS_TOKEN
-    val loadExploreDrama = retrofit.loadDramaFilter(token)
+    val loadExploreDrama = retrofit.loadDramaFilter(token,filter)
     fun tryLoadExploreDrama(){
         loadExploreDrama.enqueue(object : Callback<ExploreDramaResponse> {
             override fun onResponse(call: Call<ExploreDramaResponse>, response: Response<ExploreDramaResponse>) {

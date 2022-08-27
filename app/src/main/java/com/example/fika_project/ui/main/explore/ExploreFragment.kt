@@ -29,10 +29,6 @@ class ExploreFragment:Fragment() {
             parentFragmentManager.beginTransaction().replace(R.id.explore_main_container, ExploreCoursePage()).commit()
         }
 
-        binding.button2.setOnClickListener {
-            startActivity(Intent(requireContext(),SearchActivity::class.java))
-        }
-
         return binding.root
     }
 

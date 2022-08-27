@@ -20,7 +20,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/course_detail_drama_back_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -37,17 +37,25 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toStartOf="@+id/imageView14"
-                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                app:layout_constraintStart_toEndOf="@+id/course_detail_drama_back_btn"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <Spinner
-                    android:id="@+id/spinnerYear"
-                    android:layout_width="200dp"
+                <TextView
+                    android:id="@+id/course_detail_drama_name_tv"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:background="@drawable/bg_spinner_year"
-                    android:paddingLeft="12dp"
-                    android:paddingRight="12dp" />
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:text="드라마 제목"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/course_detail_drama_name_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/down" />
             </LinearLayout>
 
             <ImageView
@@ -152,19 +160,11 @@
                 app:layout_constraintStart_toStartOf="@+id/constraintLayout"
                 app:layout_constraintTop_toBottomOf="@+id/textView33">
 
-                <CheckBox
-                    android:id="@+id/myhold_checkbox_btn"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <ImageView
                     android:id="@+id/course_detail_iv"
                     android:layout_width="140dp"
                     android:layout_height="0dp"
-                    android:layout_marginLeft="36dp"
+                    android:layout_marginStart="4dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
                     android:scaleType="fitXY"
@@ -177,7 +177,7 @@
                     android:id="@+id/imageView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="152dp"
+                    android:layout_marginStart="121dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"

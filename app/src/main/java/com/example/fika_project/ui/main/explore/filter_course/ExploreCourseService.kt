@@ -8,10 +8,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ExploreCourseService(val View: ExploreCourseView) {
+class ExploreCourseService(val View: ExploreCourseView, val filter : String) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
     val token = ApplicationClass.X_ACCESS_TOKEN
-    val loadExploreCourse = retrofit.loadCourseFilter(token)
+    val loadExploreCourse = retrofit.loadCourseFilter(token, filter)
     fun tryLoadExploreCourse(){
         loadExploreCourse.enqueue(object : Callback<ExploreCourseResponse> {
             override fun onResponse(call: Call<ExploreCourseResponse>, response: Response<ExploreCourseResponse>) {

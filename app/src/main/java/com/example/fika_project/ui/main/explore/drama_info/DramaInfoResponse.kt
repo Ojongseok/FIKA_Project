@@ -1,6 +1,7 @@
 package com.example.fika_project.ui.main.explore
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class DramaInfoResponse(
     @SerializedName("isSuccess") val isSuccess: Boolean?,
@@ -26,7 +27,7 @@ data class spotDataList(
     @SerializedName("mapX") val mapX : Double?,
     @SerializedName("mapY") val mapY : Double?,
     @SerializedName("locage") val locage : Boolean?
-)
+) : Serializable
 data class courseList(
     @SerializedName("courseId") val courseId : Int?,
     @SerializedName("locageImageUrl") val locageImageUrl : String?,

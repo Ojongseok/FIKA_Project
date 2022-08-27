@@ -27,11 +27,8 @@ class MyCourseFragment :Fragment() {
         data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "우리의 밤은 당신의 낮보다"))
 
         binding.mycourseExpandListRecyclerview.layoutManager = LinearLayoutManager(requireContext())
-        binding.mycourseExpandListRecyclerview.adapter = ExpandableListAdapter(data)
+        binding.mycourseExpandListRecyclerview.adapter = ExpandableListAdapter(requireContext(), data)
 
-        binding.visitCompleteBtn.setOnClickListener {
-            startActivity(Intent(requireContext(),VisitCompleteCourse::class.java))
-        }
 
 
         return binding.root

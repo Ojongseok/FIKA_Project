@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:background="@drawable/filter_rec"
-        android:backgroundTint="#D9D9D9"
+        android:backgroundTint="#94B4EC"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingLeft="8dp"
@@ -98,12 +98,14 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginRight="4dp"
-            app:srcCompat="@drawable/review" />
+            app:srcCompat="@drawable/review_white" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="리뷰"
-            android:textSize="16sp" />
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

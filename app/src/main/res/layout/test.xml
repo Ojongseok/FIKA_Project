@@ -7,7 +7,7 @@
     tools:context=".ui.main.explore.CourseDetailDrama">
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/course_detail_drama_back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -24,7 +24,7 @@
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toStartOf="@+id/imageView14"
-        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintStart_toEndOf="@+id/course_detail_drama_back_btn"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView

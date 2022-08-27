@@ -1,5 +1,6 @@
 package com.example.fika_project.ui.main.explore.drama_info
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,12 +11,17 @@ import com.example.fika_project.databinding.ActivityDramaInfoBinding
 import com.example.fika_project.ui.main.explore.DramaInfoResponse
 import com.example.fika_project.ui.main.explore.courseList
 import com.example.fika_project.ui.main.explore.filter_drama.result
+import com.example.fika_project.ui.main.explore.spotDataList
 import net.daum.mf.map.api.MapPoint
 import net.daum.mf.map.api.MapView
+import java.io.Serializable
 
-class DramaInfoActivity : AppCompatActivity(), DramaInfoView {
+class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
     private var _Binding: ActivityDramaInfoBinding? = null
     private val binding get() = _Binding!!
+    lateinit var dramalist : ArrayList<result>
+    var position = 0
+    lateinit var spotlist : ArrayList<spotDataList>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityDramaInfoBinding.inflate(layoutInflater)
@@ -23,22 +29,18 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView {
 
         initData()
 
-    }
-
-    private fun initMap(courseList: ArrayList<courseList>) {
-        val mapView = MapView(this)
-        binding.dramaInfoMapview.addView(mapView)
-
-        mapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(37.53737528, 127.00557633), true)
-
-        val mapPoint : HashMap<Double,Double> = HashMap()
+        binding.largeMapBtn.setOnClickListener {
+            val intent = Intent(this,LargeMapActivity::class.java)
+            intent.putExtra("spotlist",spotlist)
+            intent.putExtra("position",dramalist[position].dramaTitle)
+            startActivity(intent)
+        }
 
     }
 
     private fun initData() {
-        val dramalist: ArrayList<result> =
-            intent.getSerializableExtra("dramalist") as ArrayList<result>
-        val position = intent.getIntExtra("number", 0)
+        dramalist = intent.getSerializableExtra("dramalist") as ArrayList<result>
+        position = intent.getIntExtra("number", 0)
 
         val service = DramaInfoService(this, dramalist[position].dramaId!!)
         service.tryLoadDramaInfoCourse()
@@ -58,8 +60,7 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView {
 
                     binding.dramaInfoLocationRecyclerview.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
                     binding.dramaInfoLocationRecyclerview.adapter = DramaInfoLocationAdapter(it.result.spotDataList!!, this)
-
-                    initMap(it.result.courseList!!)
+                    spotlist = it.result.spotDataList
                 }
             }
         }

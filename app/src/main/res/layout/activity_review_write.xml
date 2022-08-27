@@ -46,12 +46,13 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:background="@drawable/folder_button_background"
-            android:backgroundTint="#F3F3F3"
+            android:backgroundTint="#94B4EC"
             android:paddingLeft="12dp"
             android:paddingTop="6dp"
             android:paddingRight="12dp"
             android:paddingBottom="6dp"
-            android:text="리뷰 등록"
+            android:text="완료"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -157,6 +158,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="#F3F3F3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_write_container">
+
+    </FrameLayout>
+
     <TextView
         android:id="@+id/textView43"
         android:layout_width="wrap_content"
@@ -180,6 +191,7 @@
             android:id="@+id/imageView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_star_off" />
 
@@ -187,6 +199,7 @@
             android:id="@+id/imageView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_star_off" />
 
@@ -194,6 +207,7 @@
             android:id="@+id/imageView19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_star_off" />
 
@@ -201,6 +215,7 @@
             android:id="@+id/imageView23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_star_off" />
 
@@ -230,7 +245,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/textView44"
         app:layout_constraintTop_toBottomOf="@+id/textView44"
-        app:srcCompat="@drawable/sample_image" />
+        android:src="@drawable/gallery_plus"/>
 
     <TextView
         android:id="@+id/textView45"
@@ -249,7 +264,10 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/edittext_background"
         android:ems="10"
+        android:gravity="top"
+        android:hint="리뷰를 작성해주세요."
         android:inputType="textPersonName"
+        android:padding="16dp"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/review_write_container"
         app:layout_constraintStart_toStartOf="@+id/review_write_image_select_btn"
@@ -264,7 +282,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone">
 
 
         <FrameLayout

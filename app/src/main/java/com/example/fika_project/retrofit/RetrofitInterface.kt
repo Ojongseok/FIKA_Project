@@ -25,15 +25,17 @@ interface RetrofitInterface {
     ): Call<HomeResponse>
 
     //10. 드라마 필터 조회
-    @GET("/drama/all")
+    @GET("/drama/{filter}")
     fun loadDramaFilter(
-        @Header("Access-Token") token : String
+        @Header("Access-Token") token : String,
+        @Path("filter") filter : String
     ) :Call<ExploreDramaResponse>
 
     //11. 코스 필터 조회
-    @GET("/course/all")
+    @GET("/course/{filter}")
     fun loadCourseFilter(
-        @Header("Access-Token") token : String
+        @Header("Access-Token") token : String,
+        @Path("filter") filter : String
     ) :Call<ExploreCourseResponse>
 
     //12. 드라마 상세 조회
