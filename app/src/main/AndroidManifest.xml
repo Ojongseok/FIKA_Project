@@ -7,7 +7,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
+    <queries>
+        <package android:name="com.kakao.talk" />
+    </queries>
     <application
         android:name=".ApplicationClass"
         android:allowBackup="true"
@@ -19,7 +21,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name=".MyScrapActivity"
+            android:name=".ui.main.mypage.myscrap.MyScrapActivity"
             android:exported="false" />
         <activity
             android:name=".ui.main.mypage.myspot.MySpotActivity"
@@ -54,12 +56,12 @@
         <activity android:name=".ui.main.explore.drama_info.DramaInfoActivity" />
         <activity android:name=".ui.main.mycourse.course_edit.MyHoldLocationActivity" />
         <activity android:name=".ui.main.mycourse.PlaceinfoLocateActivity" />
+
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 

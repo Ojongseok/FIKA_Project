@@ -80,7 +80,6 @@
             android:layout_margin="16dp"
             android:text="@string/service_agree_k"
             android:textSize="14sp"/>
-
     </ScrollView>
 
     <TextView
