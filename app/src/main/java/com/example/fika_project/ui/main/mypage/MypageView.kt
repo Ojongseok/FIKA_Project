@@ -8,4 +8,6 @@ interface MypageView {
     // 25. 마이페이지 조회
     fun onMypageSuccess(response: MypageResponse)
 
+
+    fun onMyScrapSuccess(response: MyScrapResponse)
 }

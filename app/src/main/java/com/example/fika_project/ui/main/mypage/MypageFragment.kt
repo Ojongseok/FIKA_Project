@@ -81,4 +81,8 @@ class MypageFragment : Fragment(),MypageView {
             }
         }
     }
+
+    override fun onMyScrapSuccess(response: MyScrapResponse) {
+//        TODO("Not yet implemented")
+    }
 }
