@@ -37,7 +37,15 @@ class ExploreCoursePage : Fragment(), ExploreCourseView {
             })
             dialog.show()
         }
+        binding.filterCourseSortingBtn.setOnClickListener {
+            val menuList =arrayOf("최신순","평점 높은순")
+            val dialog = AlertDialog.Builder(requireContext(),android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar)
+            dialog.setTitle("정렬").setItems(menuList, DialogInterface.OnClickListener { dialogInterface, i ->
+                binding.filterSortTvCourse.text = menuList[i]
 
+            })
+            dialog.show()
+        }
         service.tryLoadExploreCourse()
         return binding.root
     }

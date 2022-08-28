@@ -36,6 +36,15 @@ class ExploreDramaPage : Fragment(), ExploreDramaView {
             })
             dialog.show()
         }
+        binding.filterDramaSortingBtn.setOnClickListener {
+            val menuList =arrayOf("최신순","평점 높은순")
+            val dialog = AlertDialog.Builder(requireContext(),android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar)
+            dialog.setTitle("정렬").setItems(menuList, DialogInterface.OnClickListener { dialogInterface, i ->
+                binding.filterSortingTv.text = menuList[i]
+
+            })
+            dialog.show()
+        }
         service.tryLoadExploreDrama()
         return binding.root
     }
