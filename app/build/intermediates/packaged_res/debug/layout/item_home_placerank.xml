@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/item_home_placerank_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp">
+
+    <ImageView
+        android:id="@+id/item_placerank_img_iv"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:scaleType="fitXY"
+        android:src="@color/grey3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/item_placerank_flag_iv"
+        android:layout_width="24dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_flag"
+        app:layout_constraintTop_toTopOf="@id/item_placerank_img_iv"
+        app:layout_constraintEnd_toEndOf="@id/item_placerank_img_iv"
+        />
+
+    <TextView
+        android:id="@+id/item_placerank_where_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서울"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="@color/black2"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/item_placerank_img_iv"
+        app:layout_constraintTop_toBottomOf="@id/item_placerank_img_iv"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="@color/black2"
+        app:layout_constraintStart_toEndOf="@id/item_placerank_where_tv"
+        app:layout_constraintEnd_toStartOf="@id/item_placerank_category_tv"
+        app:layout_constraintTop_toTopOf="@id/item_placerank_where_tv"
+        />
+
+    <TextView
+        android:id="@+id/item_placerank_category_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공원"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="@color/black2"
+        android:layout_marginStart="18dp"
+        app:layout_constraintStart_toEndOf="@id/item_placerank_where_tv"
+        app:layout_constraintTop_toTopOf="@id/item_placerank_where_tv"
+        />
+
+    <TextView
+        android:id="@+id/item_placerank_title_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="투명 카약"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black2"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/item_placerank_img_iv"
+        app:layout_constraintEnd_toEndOf="@id/item_placerank_img_iv"
+        app:layout_constraintTop_toBottomOf="@id/item_placerank_where_tv"
+        />
+
+    <TextView
+        android:id="@+id/item_placerank_where_tv_2"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="제주시 한경면"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="14dp"
+        android:textColor="@color/black2"
+        app:layout_constraintStart_toStartOf="@id/item_placerank_img_iv"
+        app:layout_constraintTop_toBottomOf="@id/item_placerank_title_tv"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

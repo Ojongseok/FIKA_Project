@@ -8,19 +8,24 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentMypageBinding
 import com.example.fika_project.ui.main.explore.course_detail.result
+import com.example.fika_project.ui.main.explore.drama_info.DramaInfoCourseAdapter
+import com.example.fika_project.ui.main.explore.drama_info.DramaInfoLocationAdapter
 import com.example.fika_project.ui.main.explore.filter_drama.ExploreService
 import com.example.fika_project.ui.main.mypage.myspot.MySpotActivity
 import com.example.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.example.fika_project.ui.main.mypage.myspot.MySpotService
 import com.example.fika_project.ui.main.mypage.myspot.MySpotView
+import com.example.fika_project.utils.spfManager
 
-class MypageFragment : Fragment(),MySpotView {
+class MypageFragment : Fragment(),MypageView {
     private var _binding: FragmentMypageBinding? = null
     private val binding get() = _binding!!
-    val service = MySpotService(this)
+    val service = MypageService(this)
+
     lateinit var mySpotList : ArrayList<com.example.fika_project.ui.main.mypage.myspot.result>
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentMypageBinding.inflate(inflater, container, false)
@@ -33,18 +38,8 @@ class MypageFragment : Fragment(),MySpotView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        service.tryloadMySpot()
-    }
-
-    override fun onExploreSuccess(response: MySpotResponse) {
-        when(response.code) {
-            1000 -> {
-                response.let {
-                    mySpotList = it.result!!
-                    binding.mypagePlaceNumberTv.text = it.result?.size.toString() + "개"
-                }
-            }
-        }
+        service.tryMypage()
+//        binding.mypageProfileTv.setText(spfManager.getNickname().toString())
     }
 
 
@@ -73,8 +68,18 @@ class MypageFragment : Fragment(),MySpotView {
         super.onDestroyView()
         _binding = null
     }
-    override fun onExploreLoading() {
+
+    override fun onLoading() {
+//        TODO("Not yet implemented")
     }
-    override fun onExploreFailure(code: Int, message: String) {
+
+    override fun onMypageSuccess(response: MypageResponse) {
+        when(response.code) {
+            1000 -> {
+                binding.mypageProfileTv.setText(response.result!![0].memberNickname)
+                binding.mypagePlaceNumberTv.setText(response.result!![0].savedSpotCount)
+                binding.mypageCourseNumberTv.setText(response.result!![0].savedCourseCount)
+            }
+        }
     }
 }

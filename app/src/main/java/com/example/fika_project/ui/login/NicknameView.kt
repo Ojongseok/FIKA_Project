@@ -6,5 +6,5 @@ interface NicknameView {
     // 4. 닉네임 유효성
     fun onNicknameCheckSuccess(response: AuthResponse)
     // 20. 소셜 인증 후 회원가입
-    fun onSignUpSuccess(response: AuthResponse)
+    fun onSignUpSuccess(response: KakaoResponse)
 }

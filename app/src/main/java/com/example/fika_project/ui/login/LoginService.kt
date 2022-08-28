@@ -11,11 +11,10 @@ import retrofit2.Response
 class LoginService (val View : LoginView) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
 
-
     fun tryKakaoLogin(token: String){
-        retrofit.kakaoLogin(token).enqueue(object : Callback<AuthResponse> {
-            override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
-                var result: AuthResponse? = response.body()
+        retrofit.kakaoLogin(token).enqueue(object : Callback<KakaoResponse> {
+            override fun onResponse(call: Call<KakaoResponse>, response: Response<KakaoResponse>) {
+                var result: KakaoResponse? = response.body()
                 val resp = response.body()
 
                 Log.d("KAKAOLOGIN/token", token)
@@ -25,12 +24,12 @@ class LoginService (val View : LoginView) {
                 when(resp?.code){
                     //성공
                     1000 -> {
-                        View.onKakaoSuccess(response.body() as AuthResponse)
+                        View.onKakaoSuccess(response.body() as KakaoResponse)
                         Log.d("KAKAOLOGIN/1000", resp.message)
                     }
                     //최초
                     1002 -> {
-                        View.onKakaoSuccess(response.body() as AuthResponse)
+                        View.onKakaoSuccess(response.body() as KakaoResponse)
                         spfManager.setEmail(resp.result)
                         Log.d("KAKAOLOGIN/1002", spfManager.getEmail().toString())
                     }
@@ -41,7 +40,7 @@ class LoginService (val View : LoginView) {
                 } }
             }
 
-            override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
+            override fun onFailure(call: Call<KakaoResponse>, t: Throwable) {
                 Log.d("LOGIN", "로그인 실패 : 서버 오류")
             }
         })}

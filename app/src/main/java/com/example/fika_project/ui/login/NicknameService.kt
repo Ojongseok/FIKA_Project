@@ -2,9 +2,9 @@ package com.example.fika_project.ui.login
 
 import android.util.Log
 import com.example.fika_project.ApplicationClass
+import com.example.fika_project.retrofit.Nickname
 import com.example.fika_project.retrofit.RetrofitInterface
 import com.example.fika_project.retrofit.User
-import com.example.fika_project.utils.spfManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -12,7 +12,7 @@ import retrofit2.Response
 class NicknameService(val View : NicknameView) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
 
-    fun tryNicknameCheck(nickname: String){
+    fun tryNicknameCheck(nickname: Nickname){
         retrofit.nicknameCheck(nickname).enqueue(object : Callback<AuthResponse> {
             override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
                 var result: AuthResponse? = response.body()
@@ -41,9 +41,9 @@ class NicknameService(val View : NicknameView) {
         })}
 
     fun trySignUp(user : User){
-        retrofit.signUp(user).enqueue(object : Callback<AuthResponse> {
-            override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
-                var result: AuthResponse? = response.body()
+        retrofit.signUp(user).enqueue(object : Callback<KakaoResponse> {
+            override fun onResponse(call: Call<KakaoResponse>, response: Response<KakaoResponse>) {
+                var result: KakaoResponse? = response.body()
                 val resp = response.body()
 
                 Log.d("SIGHUP/API-RESPONSE", result.toString())
@@ -51,7 +51,7 @@ class NicknameService(val View : NicknameView) {
                 when(resp?.code){
                     //성공
                     1000 -> {
-                        View.onSignUpSuccess(response.body() as AuthResponse)
+                        View.onSignUpSuccess(response.body() as KakaoResponse)
                         Log.d("SIGNUP", resp.message)
                     }
                     //최초
@@ -61,7 +61,7 @@ class NicknameService(val View : NicknameView) {
                     } }
             }
 
-            override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
+            override fun onFailure(call: Call<KakaoResponse>, t: Throwable) {
                 Log.d("SIGNUP-FAIL", "SIGNUP 실패 : 서버 오류")
             }
         })}

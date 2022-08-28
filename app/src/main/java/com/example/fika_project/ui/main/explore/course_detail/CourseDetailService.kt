@@ -9,8 +9,8 @@ import retrofit2.Response
 
 class CourseDetailService(val View: CourseDetailView, val courseId : Int) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
-    val token = ApplicationClass.X_ACCESS_TOKEN
-    val load = retrofit.loadDetailCourse(token, courseId)
+    val load = retrofit.loadDetailCourse(36)
+
     fun tryLoadCourseDetail(){
         load.enqueue(object : Callback<CourseDetailResponse> {
             override fun onResponse(call: Call<CourseDetailResponse>, response: Response<CourseDetailResponse>) {

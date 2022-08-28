@@ -5,3 +5,8 @@ data class User(
     var nickname: String?,
     var email: String?
 )
+
+
+data class Nickname(
+    var nickname: String
+)

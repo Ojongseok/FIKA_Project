@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.mycourse.search.SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/search_back_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/back" />
+
+        <EditText
+            android:id="@+id/search_contents_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/search_ok_button"
+            android:layout_toRightOf="@id/search_back_btn"
+            android:background="@drawable/folder_button_background"
+            android:backgroundTint="#F3F3F3"
+            android:ems="15"
+            android:hint="검색어를 입력해주세요."
+            android:inputType="textPersonName|text"
+            android:paddingLeft="42dp"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/search_remove_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignEnd="@id/search_contents_textview"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/tour_searchbar_remove" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/search_contents_textview"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/search" />
+
+        <Button
+            android:id="@+id/search_ok_button"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:text="Button" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:text="최근 검색어"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recent_keyword_recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:text="추천 검색어"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_reccomend_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:text="인기 검색어"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:text="FIKA 이용자들이 많이 검색했어요." />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/search_rank_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="1. " />
+
+        <TextView
+            android:id="@+id/search_rank_1_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/search_rank_1"
+            android:layout_alignBottom="@id/search_rank_1"
+            android:layout_toRightOf="@id/search_rank_1"
+            android:text="붉은 단심" />
+
+        <TextView
+            android:id="@+id/search_rank_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_rank_1"
+            android:layout_marginTop="16dp"
+            android:text="2. " />
+
+        <TextView
+            android:id="@+id/search_rank_2_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/search_rank_2"
+            android:layout_alignBottom="@id/search_rank_2"
+            android:layout_toRightOf="@id/search_rank_2"
+            android:text="이준" />
+
+        <TextView
+            android:id="@+id/search_rank_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_rank_2"
+            android:layout_marginTop="16dp"
+            android:text="3. " />
+
+        <TextView
+            android:id="@+id/search_rank_3_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/search_rank_3"
+            android:layout_alignBottom="@id/search_rank_3"
+            android:layout_toRightOf="@id/search_rank_3"
+            android:text="강한나" />
+
+        <TextView
+            android:id="@+id/search_rank_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_rank_3"
+            android:layout_marginTop="16dp"
+            android:text="4. " />
+
+        <TextView
+            android:id="@+id/search_rank_4_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/search_rank_4"
+            android:layout_alignBottom="@id/search_rank_4"
+            android:layout_toRightOf="@id/search_rank_4"
+            android:text="이상한 변호사 우영우" />
+
+        <TextView
+            android:id="@+id/search_rank_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_rank_4"
+            android:layout_marginTop="16dp"
+            android:text="5. " />
+
+        <TextView
+            android:id="@+id/search_rank_5_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/search_rank_5"
+            android:layout_alignBottom="@id/search_rank_5"
+            android:layout_toRightOf="@id/search_rank_5"
+            android:text="우영우" />
+    </RelativeLayout>
+</LinearLayout>

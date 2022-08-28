@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fika_project.databinding.FragmentAgree03Binding
 import com.example.fika_project.databinding.FragmentNicknameBinding
+import com.example.fika_project.retrofit.Nickname
 import com.example.fika_project.retrofit.User
 import com.example.fika_project.ui.main.MainActivity
 import com.example.fika_project.utils.spfManager
@@ -34,8 +35,12 @@ class NicknameFragment  : Fragment(), NicknameView {
         }
         binding.nicknameDoneTv.setOnClickListener {
             //4번 api 닉네임 중복 검사
-            val inputNickname = binding.nicknameEt.toString()
-            service.tryNicknameCheck(inputNickname)
+            val inputNickname = binding.nicknameEt.getText().toString()
+            Log.d("닉네임 input", inputNickname)
+
+            val getNickname = Nickname(inputNickname)
+
+            service.tryNicknameCheck(getNickname)
             //1000 이면 20번 api 회원가입 완료
        }
     }
@@ -59,7 +64,7 @@ class NicknameFragment  : Fragment(), NicknameView {
         when(response?.code){
             //성공
             1000 -> {
-                spfManager.setNickname(binding.nicknameEt.toString())
+                spfManager.setNickname(binding.nicknameEt.getText().toString())
 
                 val nickname = spfManager.getNickname().toString()
                 val email = spfManager.getEmail().toString()
@@ -67,19 +72,22 @@ class NicknameFragment  : Fragment(), NicknameView {
 
                 service.trySignUp(getUser)
             }
-            else ->  { Log.d("LOGIN", "로그인 실패 : 서버 오류") }
+            4020 ->  { Log.d("LOGIN/4020", "필수값이 포함되지 않은 경우") }
+            4024 ->  { Log.d("LOGIN/4024", "닉네임이 중복된 경우") }
+            4026 ->  { Log.d("LOGIN/4026", "닉네임 형식이 아닌경우") }
+            else ->  { Log.d("LOGIN", "로그인 실패 : 오류") }
         }
     }
 
-    override fun onSignUpSuccess(response: AuthResponse) {
-        when(response?.code){
+    override fun onSignUpSuccess(response: KakaoResponse) {
+        when(response.code){
             //성공
             1000 -> {
-                spfManager.setJwt(response.result.toString())
+                spfManager.setJwt(response.result)
                 val intent = Intent(activity, MainActivity::class.java)
                 startActivity(intent)
             }
-            else ->  { Log.d("SIGNUP", "회원가입 실패") }
+            else ->  { Log.d("LOGIN-FAIL", "회원가입 실패") }
         }
     }
 

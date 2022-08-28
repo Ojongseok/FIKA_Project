@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.example.fika_project.config.XAccessTokenInterceptor
 import com.kakao.auth.BuildConfig
-import com.kakao.auth.KakaoSDK
 import com.kakao.sdk.common.KakaoSdk
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -20,6 +19,7 @@ class ApplicationClass : Application() {
 
         const val TAG: String = "FIKA-Prj"
         const val API_URL: String = ""
+
         lateinit var prefs: SharedPreferences
         lateinit var retrofit: Retrofit
 

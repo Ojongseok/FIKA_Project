@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/logindialog_background"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="44dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그인에 어려움이 있나요?"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="예전에 이 소셜서비스로 로그인했는데 지금은 안돼요."
+            android:layout_marginTop="32dp"
+            android:gravity="start"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- 혹시 로그인했던 소셜 서비스의 계정을 삭제했거나, 비밀번호를 변경했나요? 이 경우, 해당 소셜 서비스에서 확인 후 FIKA에 로그인이 가능합니다."
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="3dp"
+            android:gravity="start"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="문제가 계속 해결되지 않는다면 고객센터로 이메일을 보내주세요. 여러분을 위해 발전하는 FIKA가 되겠습니다😊"
+            android:layout_marginTop="68dp"
+            android:lineSpacingExtra="3dp"
+            android:gravity="start"
+            android:textSize="14sp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:src="@drawable/login_dialog_btn"/>
+    </LinearLayout>

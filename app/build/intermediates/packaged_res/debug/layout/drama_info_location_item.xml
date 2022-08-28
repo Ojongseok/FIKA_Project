@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_home_placerank_layout"
+    android:layout_width="160dp"
+    android:layout_height="140dp"
+    android:layout_marginRight="16dp">
+
+    <ImageView
+        android:id="@+id/item_location_placerank_img_iv"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/sample_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_location_placerank_flag_iv"
+        android:layout_width="24dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_flag"
+        app:layout_constraintEnd_toEndOf="@id/item_location_placerank_img_iv"
+        app:layout_constraintTop_toTopOf="@id/item_location_placerank_img_iv" />
+
+    <TextView
+        android:id="@+id/item__location_placerank_where_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="서울"
+        android:textColor="@color/login_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@id/item_location_placerank_img_iv"
+        app:layout_constraintTop_toBottomOf="@id/item_location_placerank_img_iv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textColor="@color/login_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@id/item_location_placerank_category_tv"
+        app:layout_constraintStart_toEndOf="@id/item__location_placerank_where_tv"
+        app:layout_constraintTop_toTopOf="@id/item__location_placerank_where_tv" />
+
+    <TextView
+        android:id="@+id/item_location_placerank_category_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="공원"
+        android:textColor="@color/login_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@id/item__location_placerank_where_tv"
+        app:layout_constraintTop_toTopOf="@id/item__location_placerank_where_tv" />
+
+    <TextView
+        android:id="@+id/item_location_placerank_title_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="투명 카약"
+        android:textColor="@color/login_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/item_location_placerank_img_iv"
+        app:layout_constraintStart_toStartOf="@id/item_location_placerank_img_iv"
+        app:layout_constraintTop_toBottomOf="@id/item__location_placerank_where_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

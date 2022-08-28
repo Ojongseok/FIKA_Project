@@ -33,8 +33,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
         setContentView(binding.root)
 
 ////         편의상 시작
-        startActivity( Intent(this, MainActivity::class.java))
-        finish()
+//        startActivity(Intent(this, MainActivity::class.java))
     }
 
     private fun initClickListener(){
@@ -126,7 +125,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
 //        TODO("Not yet implemented")
     }
 
-    override fun onKakaoSuccess(response: AuthResponse) {
+    override fun onKakaoSuccess(response: KakaoResponse) {
         Toast.makeText(this,"카카오 로그인",Toast.LENGTH_SHORT).show()
         when(response.code){
             //성공

@@ -8,6 +8,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <queries>
+        <package android:name="com.kakao.talk" />
+    </queries>
+
     <application
         android:name=".ApplicationClass"
         android:allowBackup="true"
@@ -42,6 +46,7 @@
         <activity
             android:name=".ui.main.mycourse.search.SearchResultActivity"
             android:exported="false" />
+
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true">
@@ -51,6 +56,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".ui.main.MainActivity" />
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.main.mycourse.search.SearchActivity" />
@@ -59,7 +65,7 @@
         <activity android:name=".ui.main.explore.CourseDetailDrama" />
         <activity android:name=".ui.main.explore.drama_info.DramaInfoActivity" />
         <activity android:name=".ui.main.mycourse.course_edit.MyHoldLocationActivity" />
-        <activity android:name=".ui.main.mycourse.PlaceinfoLocateActivity" />
+        <activity android:name=".ui.main.mycourse.placeinfo.PlaceinfoActivity" />
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
@@ -80,5 +86,4 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="8f19d7b7c42cc6b338c1a0abda3e3b93" />
     </application>
-
 </manifest>

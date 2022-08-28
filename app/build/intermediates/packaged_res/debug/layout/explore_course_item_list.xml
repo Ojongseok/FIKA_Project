@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_marginBottom="12dp">
+
+    <ImageView
+        android:id="@+id/item_home_scrapcourse_iv"
+        android:layout_width="124dp"
+        android:layout_height="90dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/sample_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/item_home_scrapcourse_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_star_off" />
+
+    <TextView
+        android:id="@+id/item_home_coursescrap_drama_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:text="이태원 클라쓰"
+        android:textColor="@color/login_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/item_home_scrapcourse_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textColor="@color/login_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@id/item_drama_coursescrap_where_tv"
+        app:layout_constraintStart_toEndOf="@id/item_home_coursescrap_drama_title_tv"
+        app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_drama_title_tv" />
+
+    <TextView
+        android:id="@+id/item_home_coursescrap_where_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="서울"
+        android:textColor="@color/login_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@id/item_home_coursescrap_drama_title_tv"
+        app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_drama_title_tv" />
+
+    <TextView
+        android:id="@+id/explore_child_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="우리의 밤은 당신의 낮보다 아름답다"
+        android:textColor="@color/login_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/item_home_coursescrap_drama_title_tv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_home_coursescrap_info_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="가나다라마바사아자차카타파하"
+        android:textColor="@color/login_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_home_coursescrap_number_tv"
+        app:layout_constraintStart_toStartOf="@id/item_home_coursescrap_drama_title_tv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textColor="@color/login_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@id/item_home_coursescrap_number_tv"
+        app:layout_constraintStart_toEndOf="@id/item_home_coursescrap_info_tv"
+        app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_info_tv" />
+
+    <TextView
+        android:id="@+id/item_home_coursescrap_number_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="총 110곳"
+        android:textColor="@color/login_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_info_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
