@@ -8,16 +8,20 @@
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\activity_course_detail_drama_others.xml"
     },
     {
+        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\balloon_layout.xml",
+        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\balloon_layout.xml"
+    },
+    {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_search.xml",
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\activity_search.xml"
     },
     {
-        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_course_info_edit.xml",
-        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\activity_course_info_edit.xml"
-    },
-    {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_mypage.xml",
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\fragment_mypage.xml"
+    },
+    {
+        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_course_info_edit.xml",
+        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\activity_course_info_edit.xml"
     },
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_edit_personal.xml",
@@ -52,12 +56,12 @@
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
-        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_mycourse.xml",
-        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\fragment_mycourse.xml"
-    },
-    {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_placeinfo.xml",
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\fragment_placeinfo.xml"
+    },
+    {
+        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_mycourse.xml",
+        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\fragment_mycourse.xml"
     },
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_all_review.xml",
@@ -158,6 +162,10 @@
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_placeinfo_review.xml",
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\item_placeinfo_review.xml"
+    },
+    {
+        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\review_dialog.xml",
+        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\review_dialog.xml"
     },
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_agree_02.xml",

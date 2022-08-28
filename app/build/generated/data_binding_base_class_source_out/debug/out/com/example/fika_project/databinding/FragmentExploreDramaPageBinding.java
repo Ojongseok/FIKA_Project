@@ -38,6 +38,12 @@ public final class FragmentExploreDramaPageBinding implements ViewBinding {
   public final LinearLayout filterDramaBtn;
 
   @NonNull
+  public final LinearLayout filterDramaSortingBtn;
+
+  @NonNull
+  public final TextView filterSortingTv;
+
+  @NonNull
   public final TextView genreFilterTv;
 
   @NonNull
@@ -47,28 +53,26 @@ public final class FragmentExploreDramaPageBinding implements ViewBinding {
   public final ImageView imageView99;
 
   @NonNull
-  public final LinearLayout linearLayout2;
-
-  @NonNull
   public final TextView textView24;
 
   private FragmentExploreDramaPageBinding(@NonNull ConstraintLayout rootView,
       @NonNull RecyclerView exploreDramaPageRecyclerview,
       @NonNull TextView exploreDranaPageSearchNumber, @NonNull TextView filterActorTv,
       @NonNull LinearLayout filterDramaActorBtn, @NonNull LinearLayout filterDramaBtn,
+      @NonNull LinearLayout filterDramaSortingBtn, @NonNull TextView filterSortingTv,
       @NonNull TextView genreFilterTv, @NonNull ImageView imageView6,
-      @NonNull ImageView imageView99, @NonNull LinearLayout linearLayout2,
-      @NonNull TextView textView24) {
+      @NonNull ImageView imageView99, @NonNull TextView textView24) {
     this.rootView = rootView;
     this.exploreDramaPageRecyclerview = exploreDramaPageRecyclerview;
     this.exploreDranaPageSearchNumber = exploreDranaPageSearchNumber;
     this.filterActorTv = filterActorTv;
     this.filterDramaActorBtn = filterDramaActorBtn;
     this.filterDramaBtn = filterDramaBtn;
+    this.filterDramaSortingBtn = filterDramaSortingBtn;
+    this.filterSortingTv = filterSortingTv;
     this.genreFilterTv = genreFilterTv;
     this.imageView6 = imageView6;
     this.imageView99 = imageView99;
-    this.linearLayout2 = linearLayout2;
     this.textView24 = textView24;
   }
 
@@ -129,6 +133,18 @@ public final class FragmentExploreDramaPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.filter_drama_sorting_btn;
+      LinearLayout filterDramaSortingBtn = ViewBindings.findChildViewById(rootView, id);
+      if (filterDramaSortingBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.filter_sorting_tv;
+      TextView filterSortingTv = ViewBindings.findChildViewById(rootView, id);
+      if (filterSortingTv == null) {
+        break missingId;
+      }
+
       id = R.id.genre_filter_tv;
       TextView genreFilterTv = ViewBindings.findChildViewById(rootView, id);
       if (genreFilterTv == null) {
@@ -147,12 +163,6 @@ public final class FragmentExploreDramaPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.linearLayout2;
-      LinearLayout linearLayout2 = ViewBindings.findChildViewById(rootView, id);
-      if (linearLayout2 == null) {
-        break missingId;
-      }
-
       id = R.id.textView24;
       TextView textView24 = ViewBindings.findChildViewById(rootView, id);
       if (textView24 == null) {
@@ -161,8 +171,8 @@ public final class FragmentExploreDramaPageBinding implements ViewBinding {
 
       return new FragmentExploreDramaPageBinding((ConstraintLayout) rootView,
           exploreDramaPageRecyclerview, exploreDranaPageSearchNumber, filterActorTv,
-          filterDramaActorBtn, filterDramaBtn, genreFilterTv, imageView6, imageView99,
-          linearLayout2, textView24);
+          filterDramaActorBtn, filterDramaBtn, filterDramaSortingBtn, filterSortingTv,
+          genreFilterTv, imageView6, imageView99, textView24);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

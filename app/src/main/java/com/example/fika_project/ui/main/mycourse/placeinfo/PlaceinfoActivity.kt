@@ -37,7 +37,7 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
         when(response?.code){
             //성공
             1000 -> {
-                val resp = response.result!![0]
+                val resp = response.result!!
                 Glide.with(this).load(resp.spotImageUrl).into(binding.placeinfoLocateCoverIv)
                 binding.placeinfoHashtagTv.text = resp.hashTag
                 Glide.with(this).load(resp.dialogImageUrl).into(binding.placeinfoDialogIv)
@@ -50,5 +50,7 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
             4026 -> { Log.d("PLACEINFO/4026", "spotId가 숫자가 아닌경우") }
             else ->  {
                 Log.d("PLACEINFO", "실패 : 오류")
-            } }    }
+            }
+        }
+    }
 }

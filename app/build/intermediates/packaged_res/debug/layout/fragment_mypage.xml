@@ -16,9 +16,9 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@color/sub_yellow"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:background="#F3F3F3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/mypage_logo_iv"
@@ -127,11 +127,11 @@
             android:layout_width="154dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="28dp"
-            android:text="12개"
-            android:textSize="16sp"
+            android:text="0개"
             android:textAlignment="textEnd"
-            app:layout_constraintStart_toStartOf="@id/mypage_place_flag_iv"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/mypage_place_flag_iv" />
 
         <ImageView
             android:id="@+id/mypage_place_arrow_iv"
@@ -224,7 +224,7 @@
             android:layout_width="154dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="28dp"
-            android:text="12개"
+            android:text="0개"
             android:textSize="16sp"
             android:textAlignment="textEnd"
             app:layout_constraintStart_toStartOf="@id/mypage_course_flag_iv"

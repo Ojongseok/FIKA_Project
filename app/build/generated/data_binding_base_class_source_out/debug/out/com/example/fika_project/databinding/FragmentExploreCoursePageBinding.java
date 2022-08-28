@@ -37,10 +37,13 @@ public final class FragmentExploreCoursePageBinding implements ViewBinding {
   public final LinearLayout filterCoursePageBtn2;
 
   @NonNull
+  public final LinearLayout filterCourseSortingBtn;
+
+  @NonNull
   public final TextView filterCourseTv2;
 
   @NonNull
-  public final LinearLayout linearLayout2;
+  public final TextView filterSortTvCourse;
 
   @NonNull
   public final TextView textView24;
@@ -49,16 +52,17 @@ public final class FragmentExploreCoursePageBinding implements ViewBinding {
       @NonNull RecyclerView exploreCoursePageRecyclerview,
       @NonNull TextView exploreCoursepageSearchNumber, @NonNull TextView filerCourseTv1,
       @NonNull LinearLayout filterCoursePageBtn1, @NonNull LinearLayout filterCoursePageBtn2,
-      @NonNull TextView filterCourseTv2, @NonNull LinearLayout linearLayout2,
-      @NonNull TextView textView24) {
+      @NonNull LinearLayout filterCourseSortingBtn, @NonNull TextView filterCourseTv2,
+      @NonNull TextView filterSortTvCourse, @NonNull TextView textView24) {
     this.rootView = rootView;
     this.exploreCoursePageRecyclerview = exploreCoursePageRecyclerview;
     this.exploreCoursepageSearchNumber = exploreCoursepageSearchNumber;
     this.filerCourseTv1 = filerCourseTv1;
     this.filterCoursePageBtn1 = filterCoursePageBtn1;
     this.filterCoursePageBtn2 = filterCoursePageBtn2;
+    this.filterCourseSortingBtn = filterCourseSortingBtn;
     this.filterCourseTv2 = filterCourseTv2;
-    this.linearLayout2 = linearLayout2;
+    this.filterSortTvCourse = filterSortTvCourse;
     this.textView24 = textView24;
   }
 
@@ -119,15 +123,21 @@ public final class FragmentExploreCoursePageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.filter_course_sorting_btn;
+      LinearLayout filterCourseSortingBtn = ViewBindings.findChildViewById(rootView, id);
+      if (filterCourseSortingBtn == null) {
+        break missingId;
+      }
+
       id = R.id.filter_course_tv_2;
       TextView filterCourseTv2 = ViewBindings.findChildViewById(rootView, id);
       if (filterCourseTv2 == null) {
         break missingId;
       }
 
-      id = R.id.linearLayout2;
-      LinearLayout linearLayout2 = ViewBindings.findChildViewById(rootView, id);
-      if (linearLayout2 == null) {
+      id = R.id.filter_sort_tv_course;
+      TextView filterSortTvCourse = ViewBindings.findChildViewById(rootView, id);
+      if (filterSortTvCourse == null) {
         break missingId;
       }
 
@@ -139,7 +149,8 @@ public final class FragmentExploreCoursePageBinding implements ViewBinding {
 
       return new FragmentExploreCoursePageBinding((ConstraintLayout) rootView,
           exploreCoursePageRecyclerview, exploreCoursepageSearchNumber, filerCourseTv1,
-          filterCoursePageBtn1, filterCoursePageBtn2, filterCourseTv2, linearLayout2, textView24);
+          filterCoursePageBtn1, filterCoursePageBtn2, filterCourseSortingBtn, filterCourseTv2,
+          filterSortTvCourse, textView24);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

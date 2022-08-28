@@ -2,10 +2,7 @@ package com.example.fika_project.ui.main.mypage
 
 import android.util.Log
 import com.example.fika_project.ApplicationClass
-import com.example.fika_project.retrofit.Nickname
 import com.example.fika_project.retrofit.RetrofitInterface
-import com.example.fika_project.ui.login.AuthResponse
-import com.example.fika_project.ui.login.NicknameView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -37,7 +34,7 @@ class MypageService(val View : MypageView) {
             }
 
             override fun onFailure(call: Call<MypageResponse>, t: Throwable) {
-                Log.d("MYPAGE-FAIL", "MYPAGE 실패 : 서버 오류")
+                Log.d("MYPAGE-FAIL", "MYPAGE 실패 : 서버 오류 ${t.toString()}")
             }
         })}
 }

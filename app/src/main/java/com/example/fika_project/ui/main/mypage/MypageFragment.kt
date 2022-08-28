@@ -8,18 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentMypageBinding
-import com.example.fika_project.ui.main.explore.course_detail.result
-import com.example.fika_project.ui.main.explore.drama_info.DramaInfoCourseAdapter
-import com.example.fika_project.ui.main.explore.drama_info.DramaInfoLocationAdapter
-import com.example.fika_project.ui.main.explore.filter_drama.ExploreService
 import com.example.fika_project.ui.main.mypage.myspot.MySpotActivity
-import com.example.fika_project.ui.main.mypage.myspot.MySpotResponse
-import com.example.fika_project.ui.main.mypage.myspot.MySpotService
-import com.example.fika_project.ui.main.mypage.myspot.MySpotView
-import com.example.fika_project.utils.spfManager
 
 class MypageFragment : Fragment(),MypageView {
     private var _binding: FragmentMypageBinding? = null
@@ -76,9 +67,17 @@ class MypageFragment : Fragment(),MypageView {
     override fun onMypageSuccess(response: MypageResponse) {
         when(response.code) {
             1000 -> {
-                binding.mypageProfileTv.setText(response.result!![0].memberNickname)
-                binding.mypagePlaceNumberTv.setText(response.result!![0].savedSpotCount)
-                binding.mypageCourseNumberTv.setText(response.result!![0].savedCourseCount)
+                val resp = response.result!!
+
+                val spot = resp.savedSpotCount.toString()
+                val course = resp.savedCourseCount.toString()
+
+                binding.mypageProfileTv.setText(resp.memberNickname)
+                binding.mypagePlaceNumberTv.text = spot+"개"
+                binding.mypageCourseNumberTv.text = course + "개"
+            }
+            else ->{
+                binding.mypageProfileTv.setText("FIKA")
             }
         }
     }

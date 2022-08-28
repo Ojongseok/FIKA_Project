@@ -14,8 +14,13 @@ object spfManager {
         return prefs.getString("kakaoToken", "").toString()
     }
 
-    fun setJwt(jwtToken: String) { editor.putString(X_ACCESS_TOKEN, jwtToken).apply() }
-    fun getJwt(): String? { return prefs.getString(X_ACCESS_TOKEN, "").toString()}
+    fun setJwt(jwtToken: String?) {
+        editor.putString(X_ACCESS_TOKEN, jwtToken).apply()
+    }
+
+    fun getJwt(): String? {
+        return prefs.getString(X_ACCESS_TOKEN, "").toString()
+    }
 
     fun setEmail(email: String) { editor.putString("Email", email).apply() }
     fun getEmail(): String? = prefs.getString("Email", "")

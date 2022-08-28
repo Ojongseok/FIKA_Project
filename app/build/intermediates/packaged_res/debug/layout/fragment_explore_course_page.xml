@@ -80,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@id/filter_course_page_btn_2" />
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/filter_course_sorting_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -92,6 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/filter_course_page_btn_1">
 
         <TextView
+            android:id="@+id/filter_sort_tv_course"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="최신순" />

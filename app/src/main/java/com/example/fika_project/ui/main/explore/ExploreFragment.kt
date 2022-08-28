@@ -2,10 +2,12 @@ package com.example.fika_project.ui.main.explore
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.fika_project.ApplicationClass
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentExploreBinding
 import com.example.fika_project.ui.main.explore.filter_course.ExploreCoursePage
@@ -17,7 +19,6 @@ class ExploreFragment:Fragment() {
     private val binding get() = _binding!!
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentExploreBinding.inflate(inflater, container, false)
-
 
         binding.exploreDramaTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.VISIBLE
