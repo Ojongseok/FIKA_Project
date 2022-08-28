@@ -7,6 +7,7 @@ import com.example.fika_project.ui.main.explore.filter_drama.ExploreDramaRespons
 import com.example.fika_project.ui.main.home.HomeResponse
 import com.example.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.example.fika_project.ui.login.AuthResponse
+import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -64,6 +65,13 @@ interface RetrofitInterface {
     fun loadMySpot (
         @Header("Access-Token") token: String,
     ) : Call<MySpotResponse>
+
+    // 15. 장소 담기
+    @POST("/spot/scrap/{spotId}")
+    fun postLocationHold(
+        @Header("Access-Token") token: String,
+        @Path("spotId") spotId : Int
+    ): Call<LocationHoldResponse>
 
     //20. 소셜 인증 후 회원가입
     @FormUrlEncoded

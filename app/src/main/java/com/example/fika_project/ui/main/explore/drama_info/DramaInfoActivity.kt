@@ -29,6 +29,7 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
 
         initData()
 
+        binding.dramaDetailBackBtn.setOnClickListener { finish() }
         binding.largeMapBtn.setOnClickListener {
             val intent = Intent(this,LargeMapActivity::class.java)
             intent.putExtra("spotlist",spotlist)
@@ -47,6 +48,7 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
 
         Glide.with(this).load(dramalist[position].thumbnailUrl).into(binding.dramaInfoMainIv)
         binding.dramaInfoTitleTv.text = dramalist[position].dramaTitle
+        binding.dramaDetailInfoTitleName.text = dramalist[position].dramaTitle
 
     }
     override fun onExploreLoading() {

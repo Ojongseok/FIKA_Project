@@ -12,12 +12,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.fika_project.databinding.FragmentExploreDramaPageBinding
 
 class ExploreDramaPage : Fragment(), ExploreDramaView {
-    private var _binding: FragmentExploreDramaPageBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentExploreDramaPageBinding
     var filter : String = "all"
     val service = ExploreService(this, filter)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        _binding = FragmentExploreDramaPageBinding.inflate(inflater, container, false)
+        binding = FragmentExploreDramaPageBinding.inflate(inflater, container, false)
 
         binding.filterDramaBtn.setOnClickListener {
             val menuList =arrayOf("전체","이태원클라쓰","사랑의 불시착","그 해 우리는")
@@ -57,9 +56,5 @@ class ExploreDramaPage : Fragment(), ExploreDramaView {
         binding.exploreDranaPageSearchNumber.text = dramalist.size.toString()
     }
     override fun onExploreFailure(code: Int, message: String) {
-    }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

@@ -26,6 +26,7 @@ data class spotDataList(
     @SerializedName("spotSavedCount") val spotSavedCount : Int?,
     @SerializedName("mapX") val mapX : Double?,
     @SerializedName("mapY") val mapY : Double?,
+    @SerializedName("scrapped") val scrapped : Boolean?,
     @SerializedName("locage") val locage : Boolean?
 ) : Serializable
 data class courseList(

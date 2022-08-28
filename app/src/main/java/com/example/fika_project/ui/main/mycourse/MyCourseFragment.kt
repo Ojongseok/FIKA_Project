@@ -9,25 +9,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.databinding.FragmentMycourseBinding
 
 class MyCourseFragment :Fragment() {
-    private var _binding: FragmentMycourseBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentMycourseBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        _binding = FragmentMycourseBinding.inflate(inflater, container, false)
+        binding = FragmentMycourseBinding.inflate(inflater, container, false)
 
 
-        val data: MutableList<ExpandableListAdapter.Item> = ArrayList() // 데이터를 담을 List
-        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "기본 그룹"))
-        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "우리의 밤은 당신의 낮보다"))
-        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "우리의 밤은 당신의 낮보다"))
 
-        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "새로운 그룹 1"))
-        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "우리의 밤은 당신의 낮보다"))
-        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "우리의 밤은 당신의 낮보다"))
-        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "우리의 밤은 당신의 낮보다"))
-        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "우리의 밤은 당신의 낮보다"))
-
-        binding.mycourseExpandListRecyclerview.layoutManager = LinearLayoutManager(requireContext())
-        binding.mycourseExpandListRecyclerview.adapter = ExpandableListAdapter(requireContext(), data)
 
 
 
@@ -36,10 +23,14 @@ class MyCourseFragment :Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val data: MutableList<ExpandableListAdapter.Item> = ArrayList() // 데이터를 담을 List
+        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "기본 그룹"))
+        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "우리의 밤은 당신의 낮보다"))
 
-    }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "새로운 그룹 1"))
+        data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "우리의 밤은 당신의 낮보다"))
+
+        binding.mycourseExpandListRecyclerview.layoutManager = LinearLayoutManager(requireContext())
+        binding.mycourseExpandListRecyclerview.adapter = ExpandableListAdapter(requireContext(), data)
     }
 }

@@ -7,8 +7,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import com.example.fika_project.databinding.DialogQuitBinding
 
-class QuitDialog(context: Context, private val okCallback: (String) -> Unit,
-    ) : Dialog(context) {
+class QuitDialog(context: Context, private val okCallback: (String) -> Unit, ) : Dialog(context) {
     private lateinit var binding: DialogQuitBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

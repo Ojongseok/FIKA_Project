@@ -23,6 +23,8 @@ class MySpotActivity : AppCompatActivity() {
         _Binding = ActivityMySpotBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.myplaceBackIv.setOnClickListener { finish() }
+
         mySpotList = intent.getSerializableExtra("mySpotList") as ArrayList<com.example.fika_project.ui.main.mypage.myspot.result>
 
         binding.myplaceRv.layoutManager = LinearLayoutManager(this)

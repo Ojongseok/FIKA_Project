@@ -33,7 +33,8 @@ class LoginActivity : AppCompatActivity(), LoginView {
         setContentView(binding.root)
 
 ////         편의상 시작
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity( Intent(this, MainActivity::class.java))
+        finish()
     }
 
     private fun initClickListener(){

@@ -18,6 +18,7 @@ class ExploreFragment:Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentExploreBinding.inflate(inflater, container, false)
 
+
         binding.exploreDramaTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.VISIBLE
             binding.exploreCourseClickCircle.visibility = View.INVISIBLE
@@ -35,9 +36,7 @@ class ExploreFragment:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        parentFragmentManager.beginTransaction().replace(R.id.explore_main_container,
-            ExploreDramaPage()
-        ).commit()
+        parentFragmentManager.beginTransaction().replace(R.id.explore_main_container, ExploreDramaPage()).commit()
 
     }
 

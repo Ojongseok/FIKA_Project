@@ -21,8 +21,10 @@ class VisitCompleteCourseAdapter(val context: Context) : RecyclerView.Adapter<Re
         val view = (holder as CustomViewHolder).itemView
 
         view.visit_complete_review_write_btn.setOnClickListener {
-            context.startActivity(Intent(context.applicationContext,ReviewWriteActivity::class.java))
+            val dialog = ReviewDialog(context)
+            dialog.showDialog()
         }
+
 
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)

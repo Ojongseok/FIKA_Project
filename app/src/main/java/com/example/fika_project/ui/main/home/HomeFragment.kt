@@ -19,6 +19,7 @@ class HomeFragment : Fragment(), HomeView {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         service.tryLoadHome()
+
         return binding.root
     }
 
@@ -84,6 +85,7 @@ class HomeFragment : Fragment(), HomeView {
     }
 
     override fun onHomeSuccess(response: HomeResponse) {
+
         when(response.code) {
             1000 -> {
                 response.let {
