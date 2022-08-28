@@ -4,5 +4,5 @@ interface LoginView {
     fun onLoading()
 
     // 1. 카카오 로그인
-    fun onKakaoSuccess(response: AuthResponse)
+    fun onKakaoSuccess(response: KakaoResponse)
 }

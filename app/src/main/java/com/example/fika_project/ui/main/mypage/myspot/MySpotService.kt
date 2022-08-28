@@ -9,8 +9,8 @@ import retrofit2.Response
 
 class MySpotService(val View: MySpotView) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
-    val token = ApplicationClass.X_ACCESS_TOKEN
-    val load = retrofit.loadMySpot(token)
+    val load = retrofit.loadMySpot()
+
     fun tryloadMySpot(){
         load.enqueue(object : Callback<MySpotResponse> {
             override fun onResponse(call: Call<MySpotResponse>, response: Response<MySpotResponse>) {

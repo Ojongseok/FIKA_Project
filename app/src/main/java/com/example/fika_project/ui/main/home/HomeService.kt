@@ -9,11 +9,9 @@ import retrofit2.Response
 
 class HomeService(val View: HomeView) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
-    val token = ApplicationClass.X_ACCESS_TOKEN
-    val loadhome = retrofit.loadHome(token)
 
     fun tryLoadHome(){
-        loadhome.enqueue(object : Callback<HomeResponse> {
+        retrofit.loadHome().enqueue(object : Callback<HomeResponse> {
             override fun onResponse(call: Call<HomeResponse>, response: Response<HomeResponse>) {
                 val result : HomeResponse? = response.body()
                 val resp = response.body()

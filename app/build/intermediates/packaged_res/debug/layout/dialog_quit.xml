@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="267dp"
+    android:layout_width="330dp"
+    android:background="@drawable/quitdialog_background">
+
+    <TextView
+        android:id="@+id/dialog_quit_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="탈퇴"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/dialog_quit_contents_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:text="FIKA는 여러분을 위해 새로운 드라마 장소를 계속 업데이트하고 있습니다.\n아쉽지만 그래도 탈퇴하시겠어요?"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_quit_title_tv"/>
+
+    <TextView
+        android:id="@+id/dialog_quit_back_btn"
+        android:layout_width="164.7dp"
+        android:layout_height="63dp"
+        android:textSize="16sp"
+        android:text="돌아가기"
+        android:gravity="center"
+        android:background="@drawable/quitdialog_bottom_left_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/dialog_quit_quit_btn"
+        android:layout_width="164.7dp"
+        android:layout_height="63dp"
+        android:textSize="16sp"
+        android:text="탈퇴"
+        android:gravity="center"
+        android:background="@drawable/quitdialog_bottom_right_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
