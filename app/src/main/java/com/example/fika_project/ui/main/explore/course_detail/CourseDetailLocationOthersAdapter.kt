@@ -1,12 +1,9 @@
 package com.example.fika_project.ui.main.explore.course_detail
 
 import android.content.Context
-import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -37,7 +34,7 @@ class CourseDetailLocationOthersAdapter(val locationList: ArrayList<spotList>, v
         Glide.with(context).load(locationList[position].spotImageUrl).into(view.course_detail_iv)
         view.course_detail_where_tv.text = locationList[position].shortAddress
         view.course_detail_category_tv.text = locationList[position].type
-        view.course_detail_course_name.text = locationList[position].spotTitle
+        view.map_title_name_tv.text = locationList[position].spotTitle
 
         view.myhold_checkbox_btn.setOnCheckedChangeListener { compoundButton, checked ->
             if (checked) {

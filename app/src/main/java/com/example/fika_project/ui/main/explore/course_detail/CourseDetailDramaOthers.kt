@@ -37,8 +37,7 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView {
         Glide.with(this).load(initList.courseLocage?.spotImageUrl).into(binding.courseDetailIvLocation)
         binding.courseDetailWhereTv.text = initList.courseLocage?.shortAddress
         binding.courseDetailCategoryTv.text = initList.courseLocage?.type
-        binding.courseDetailCourseName.text = initList.courseLocage?.spotTitle
-
+        binding.mapTitleNameTv.text = initList.courseLocage?.spotTitle
     }
 
     private fun setOnClickEvent() {

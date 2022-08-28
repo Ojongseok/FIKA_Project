@@ -8,6 +8,7 @@ import com.example.fika_project.ui.main.home.HomeResponse
 import com.example.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.example.fika_project.ui.login.AuthResponse
 import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
+import com.example.fika_project.ui.main.hold_and_scrap.LocationScrapResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -60,11 +61,18 @@ interface RetrofitInterface {
         @Path("courseId") courseId : Int
     ) :Call<CourseDetailResponse>
 
-    // 19. 내가 담은 장소 조회
-    @GET("/spot/my")
+    // 22. 내가 담은 장소 조회
+    @GET("/spot/my/scrap")
     fun loadMySpot (
         @Header("Access-Token") token: String,
     ) : Call<MySpotResponse>
+
+    // 14. 코스 스크랩
+    @POST("/course/scrap/{courseId}")
+    fun postLocationScrap(
+        @Header("Access-Token") token: String,
+        @Path("courseId") courseId : Int
+    ): Call<LocationScrapResponse>
 
     // 15. 장소 담기
     @POST("/spot/scrap/{spotId}")

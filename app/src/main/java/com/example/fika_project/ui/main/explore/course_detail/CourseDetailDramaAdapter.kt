@@ -26,7 +26,7 @@ class CourseDetailDramaAdapter(val locationList: ArrayList<spotList>, val contex
         Glide.with(context).load(locationList[position].spotImageUrl).into(view.course_detail_iv)
         view.course_detail_where_tv.text = locationList[position].shortAddress
         view.course_detail_category_tv.text = locationList[position].type
-        view.course_detail_course_name.text = locationList[position].spotTitle
+        view.map_title_name_tv.text = locationList[position].spotTitle
 
         view.myhold_checkbox_btn.setOnClickListener {
             itemClickListener.onClick(it,position)

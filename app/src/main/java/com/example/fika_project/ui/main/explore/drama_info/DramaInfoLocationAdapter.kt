@@ -27,7 +27,8 @@ class DramaInfoLocationAdapter(private val locationList : ArrayList<spotDataList
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val view = (holder as CustomViewHolder).itemView
-        val service = LocationHoldService(this,locationList[position].spotId!!)
+
+        var service = LocationHoldService(this,locationList[position].spotId!!)
 
         Glide.with(context).load(locationList[position].spotImageUrl).into(view.item_location_placerank_img_iv)
         view.item__location_placerank_where_tv.text = locationList[position].shortAddress
@@ -35,24 +36,23 @@ class DramaInfoLocationAdapter(private val locationList : ArrayList<spotDataList
         view.item_location_placerank_category_tv.text = locationList[position].type
 
         if (locationList[position].scrapped!!) {
-            Log.d("TAG",locationList[position].spotTitle.toString())
             view.item_location_placerank_flag_iv.setImageResource(R.drawable.ic_flag_on)
         } else {
-            Log.d("TAG",locationList[position].spotId.toString())
             view.item_location_placerank_flag_iv.setImageResource(R.drawable.ic_flag_off)
         }
 
         view.item_location_placerank_flag_iv.setOnClickListener {
             service.tryLoadLocationHold(view.item_location_placerank_flag_iv)
         }
+
+
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
     override fun getItemCount() = locationList.size
 
     override fun onExploreLoading() {
     }
-
-    override fun onExploreSuccess(response: LocationHoldResponse, iv : ImageView) {
+    override fun onExploreSuccess(response: LocationHoldResponse, iv: ImageView) {
         when(response.code) {
             1012 -> {
                 response.let {
@@ -66,6 +66,7 @@ class DramaInfoLocationAdapter(private val locationList : ArrayList<spotDataList
             }
         }
     }
+
     override fun onExploreFailure(code: Int, message: String) {
     }
 }

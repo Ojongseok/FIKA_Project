@@ -26,7 +26,7 @@ class HomeFragment : Fragment(), HomeView {
     private fun setMyCourseRVAdapter(courseList: ArrayList<myCourseList>){
         val myCourseRVAdapter = MyCourseRVAdapter(courseList,requireContext())
 
-        binding.homeMyCourseRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.homeMyCourseRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.homeMyCourseRv.adapter = myCourseRVAdapter
         binding.homeMyCourseRv.setHasFixedSize(false)
 
@@ -39,7 +39,7 @@ class HomeFragment : Fragment(), HomeView {
     private fun setDramaRankRVAdapter(dramaRankList: ArrayList<dramaList>){
         val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankList,requireContext())
 
-        binding.homeDramaRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.homeDramaRankRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.homeDramaRankRv.adapter = dramaRankRVAdapter
         binding.homeDramaRankRv.setHasFixedSize(false)
 
@@ -52,7 +52,7 @@ class HomeFragment : Fragment(), HomeView {
     private fun setCourseRVAdapter(scrapCourserankList: ArrayList<coursesSortBySaved>){
         val scrapCourserankRVAdapter = ScrapCourserankRVAdapter(scrapCourserankList,requireContext())
 
-        binding.homeScrapcourseRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        binding.homeScrapcourseRankRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.homeScrapcourseRankRv.adapter = scrapCourserankRVAdapter
         binding.homeDramaRankRv.setHasFixedSize(false)
 
@@ -65,7 +65,7 @@ class HomeFragment : Fragment(), HomeView {
     private fun setPlaceRankRVAdapter(placeRankList: ArrayList<spotsSortBySaved>){
         val placeRankRVAdapter = PlaceRankRVAdapter(placeRankList,requireContext())
 
-        binding.homePlaceRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.homePlaceRankRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.homePlaceRankRv.adapter = placeRankRVAdapter
         binding.homePlaceRankRv.setHasFixedSize(false)
 

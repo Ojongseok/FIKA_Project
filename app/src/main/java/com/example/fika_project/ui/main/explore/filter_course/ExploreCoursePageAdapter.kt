@@ -28,7 +28,11 @@ class ExploreCoursePageAdapter(val dramalist : ArrayList<course>, val context: C
         view.child_title.text = dramalist[position].courseTitle
         view.item_drama_coursescrap_number_tv.text = "총 " +dramalist[position].spotTitleList?.size.toString()+"곳"
         Glide.with(context).load(dramalist[position].locageImageUrl).into(view.drama_info_course_image)
-
+        if (dramalist[position].scrapped!!) {
+            view.drama_info_course_item_star.setImageResource(R.drawable.ic_star_on)
+        } else {
+            view.drama_info_course_item_star.setImageResource(R.drawable.ic_star_off)
+        }
         view.drama_info_course_item_layout.setOnClickListener {
             val intent =Intent(context,CourseDetailDramaOthers::class.java)
             intent.putExtra("courseId",dramalist[position].courseId)

@@ -36,5 +36,6 @@ data class courseList(
     @SerializedName("dramaTitle") val dramaTitle : String?,
     @SerializedName("baseAddress") val baseAddress : String?,
     @SerializedName("spotTitleList") val spotTitleList : ArrayList<String>?,
-    @SerializedName("courseSavedCount") val courseSavedCount : Int?
-)
+    @SerializedName("courseSavedCount") val courseSavedCount : Int?,
+    @SerializedName("scrapped") val scrapped : Boolean?
+) : Serializable

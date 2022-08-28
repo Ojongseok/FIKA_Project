@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
             clickable = false
             Handler(Looper.getMainLooper()).postDelayed({
                 clickable = true
-            }, 200)
+            }, 300)
             return true
         } else {
             Log.i("TAG", "waiting for a while")
