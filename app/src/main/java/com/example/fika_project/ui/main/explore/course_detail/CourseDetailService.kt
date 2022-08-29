@@ -9,7 +9,7 @@ import retrofit2.Response
 
 class CourseDetailService(val View: CourseDetailView, val courseId : Int) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
-    val load = retrofit.loadDetailCourse(36)
+    val load = retrofit.loadDetailCourse(courseId)
 
     fun tryLoadCourseDetail(){
         load.enqueue(object : Callback<CourseDetailResponse> {

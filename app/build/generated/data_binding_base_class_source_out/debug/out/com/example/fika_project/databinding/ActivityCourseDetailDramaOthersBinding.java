@@ -29,9 +29,6 @@ public final class ActivityCourseDetailDramaOthersBinding implements ViewBinding
   public final TextView courseDetailCategoryTv;
 
   @NonNull
-  public final TextView courseDetailCourseName;
-
-  @NonNull
   public final TextView courseDetailCourseTitle;
 
   @NonNull
@@ -74,6 +71,9 @@ public final class ActivityCourseDetailDramaOthersBinding implements ViewBinding
   public final ImageView imageView17;
 
   @NonNull
+  public final TextView mapTitleNameTv;
+
+  @NonNull
   public final ConstraintLayout myholdTopLayout;
 
   @NonNull
@@ -96,20 +96,19 @@ public final class ActivityCourseDetailDramaOthersBinding implements ViewBinding
 
   private ActivityCourseDetailDramaOthersBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout constraintLayout, @NonNull TextView courseDetailCategoryTv,
-      @NonNull TextView courseDetailCourseName, @NonNull TextView courseDetailCourseTitle,
-      @NonNull ImageView courseDetailDramaBackBtn, @NonNull TextView courseDetailDramaTitle,
-      @NonNull TextView courseDetailHoldBtn, @NonNull ImageView courseDetailIv,
-      @NonNull ImageView courseDetailIvLocation, @NonNull TextView courseDetailLocageTiltle,
-      @NonNull TextView courseDetailWhereTv, @NonNull TextView detailCourseHash,
-      @NonNull RecyclerView detailCourseTogetherRecyclerview, @NonNull TextView dwdwedddsa,
-      @NonNull LinearLayout filterDramaSortingBtn, @NonNull ImageView imageView12,
-      @NonNull ImageView imageView17, @NonNull ConstraintLayout myholdTopLayout,
+      @NonNull TextView courseDetailCourseTitle, @NonNull ImageView courseDetailDramaBackBtn,
+      @NonNull TextView courseDetailDramaTitle, @NonNull TextView courseDetailHoldBtn,
+      @NonNull ImageView courseDetailIv, @NonNull ImageView courseDetailIvLocation,
+      @NonNull TextView courseDetailLocageTiltle, @NonNull TextView courseDetailWhereTv,
+      @NonNull TextView detailCourseHash, @NonNull RecyclerView detailCourseTogetherRecyclerview,
+      @NonNull TextView dwdwedddsa, @NonNull LinearLayout filterDramaSortingBtn,
+      @NonNull ImageView imageView12, @NonNull ImageView imageView17,
+      @NonNull TextView mapTitleNameTv, @NonNull ConstraintLayout myholdTopLayout,
       @NonNull TextView textView20, @NonNull TextView textView27, @NonNull TextView textView31,
       @NonNull TextView textView33, @NonNull TextView textView48, @NonNull TextView textView49) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
     this.courseDetailCategoryTv = courseDetailCategoryTv;
-    this.courseDetailCourseName = courseDetailCourseName;
     this.courseDetailCourseTitle = courseDetailCourseTitle;
     this.courseDetailDramaBackBtn = courseDetailDramaBackBtn;
     this.courseDetailDramaTitle = courseDetailDramaTitle;
@@ -124,6 +123,7 @@ public final class ActivityCourseDetailDramaOthersBinding implements ViewBinding
     this.filterDramaSortingBtn = filterDramaSortingBtn;
     this.imageView12 = imageView12;
     this.imageView17 = imageView17;
+    this.mapTitleNameTv = mapTitleNameTv;
     this.myholdTopLayout = myholdTopLayout;
     this.textView20 = textView20;
     this.textView27 = textView27;
@@ -169,12 +169,6 @@ public final class ActivityCourseDetailDramaOthersBinding implements ViewBinding
       id = R.id.course_detail_category_tv;
       TextView courseDetailCategoryTv = ViewBindings.findChildViewById(rootView, id);
       if (courseDetailCategoryTv == null) {
-        break missingId;
-      }
-
-      id = R.id.course_detail_course_name;
-      TextView courseDetailCourseName = ViewBindings.findChildViewById(rootView, id);
-      if (courseDetailCourseName == null) {
         break missingId;
       }
 
@@ -262,6 +256,12 @@ public final class ActivityCourseDetailDramaOthersBinding implements ViewBinding
         break missingId;
       }
 
+      id = R.id.map_title_name_tv;
+      TextView mapTitleNameTv = ViewBindings.findChildViewById(rootView, id);
+      if (mapTitleNameTv == null) {
+        break missingId;
+      }
+
       id = R.id.myhold_top_layout;
       ConstraintLayout myholdTopLayout = ViewBindings.findChildViewById(rootView, id);
       if (myholdTopLayout == null) {
@@ -305,12 +305,12 @@ public final class ActivityCourseDetailDramaOthersBinding implements ViewBinding
       }
 
       return new ActivityCourseDetailDramaOthersBinding((ConstraintLayout) rootView,
-          constraintLayout, courseDetailCategoryTv, courseDetailCourseName, courseDetailCourseTitle,
+          constraintLayout, courseDetailCategoryTv, courseDetailCourseTitle,
           courseDetailDramaBackBtn, courseDetailDramaTitle, courseDetailHoldBtn, courseDetailIv,
           courseDetailIvLocation, courseDetailLocageTiltle, courseDetailWhereTv, detailCourseHash,
           detailCourseTogetherRecyclerview, dwdwedddsa, filterDramaSortingBtn, imageView12,
-          imageView17, myholdTopLayout, textView20, textView27, textView31, textView33, textView48,
-          textView49);
+          imageView17, mapTitleNameTv, myholdTopLayout, textView20, textView27, textView31,
+          textView33, textView48, textView49);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

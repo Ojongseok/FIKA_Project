@@ -295,6 +295,7 @@ id home_place_rank_tv
 id home_scrapcourse_rank_rv
 id home_scrapcourse_rank_tv
 id home_search_et
+id imageView
 id imageView10
 id imageView12
 id imageView13
@@ -320,6 +321,7 @@ id imageView7
 id imageView8
 id imageView9
 id imageView99
+id indicator_tv
 id item__location_placerank_where_tv
 id item_drama_coursescrap_info_tv
 id item_drama_coursescrap_number_tv
@@ -378,11 +380,7 @@ id item_placerank_where_tv_2
 id large_map
 id large_map_bottom_view
 id large_map_btn
-id large_map_category_tv
-id large_map_iv
-id large_map_location_name
 id large_map_title_name
-id large_map_where_tv
 id linearLayout
 id linearLayout3
 id linearLayout4
@@ -408,7 +406,14 @@ id login_sign_up_question_tv
 id login_yahoo_iv
 id login_yahoo_tv
 id main_frm
+id map_flag
+id map_iv
+id map_title_name
+id map_title_name_tv
+id map_top_layout
 id map_view
+id map_where_tv1
+id map_where_tv2
 id mycourse_calender_btn
 id mycourse_child_layout
 id mycourse_edit_btn
@@ -700,6 +705,8 @@ id tour_layout
 id tour_notice
 id tvRemove
 id txt_name
+id viewPager
+id viewpager_container
 id visit_complete_course_recyclerview
 id visit_complete_review_write_btn
 layout activity_course_detail_drama
@@ -754,6 +761,7 @@ layout fragment_quit
 layout fragment_review_img
 layout fragment_review_report
 layout fragment_signup_02
+layout fragment_view_pager
 layout item_home_course
 layout item_home_dramarank
 layout item_home_placerank
@@ -762,6 +770,7 @@ layout item_myplace
 layout item_myplace_2
 layout item_placeinfo_review
 layout item_spinner
+layout item_view
 layout mycourse_save_state_list
 layout mycourse_view_item_list
 layout myhold_location_item_list

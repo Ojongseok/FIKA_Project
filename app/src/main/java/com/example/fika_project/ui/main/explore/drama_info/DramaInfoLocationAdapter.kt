@@ -35,6 +35,7 @@ class DramaInfoLocationAdapter(private val locationList : ArrayList<spotDataList
         view.item_location_placerank_title_tv.text = locationList[position].spotTitle
         view.item_location_placerank_category_tv.text = locationList[position].type
 
+
         if (locationList[position].scrapped!!) {
             view.item_location_placerank_flag_iv.setImageResource(R.drawable.ic_flag_on)
         } else {

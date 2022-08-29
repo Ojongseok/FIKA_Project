@@ -18,7 +18,6 @@ class MypageFragment : Fragment(),MypageView {
     private val binding get() = _binding!!
     val service = MypageService(this)
 
-    lateinit var mySpotList : ArrayList<com.example.fika_project.ui.main.mypage.myspot.result>
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentMypageBinding.inflate(inflater, container, false)
 
@@ -30,6 +29,7 @@ class MypageFragment : Fragment(),MypageView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         service.tryMypage()
 //        binding.mypageProfileTv.setText(spfManager.getNickname().toString())
     }
@@ -37,11 +37,8 @@ class MypageFragment : Fragment(),MypageView {
 
     private fun onClickListener(){
         val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
-
         binding.mypagePlaceLayout.setOnClickListener{
-            val intent = Intent(context,MySpotActivity::class.java)
-            intent.putExtra("mySpotList",mySpotList)
-            context?.startActivity(intent)
+            context?.startActivity(Intent(context,MySpotActivity::class.java))
         }
 
         binding.mypageCourseLayout.setOnClickListener {

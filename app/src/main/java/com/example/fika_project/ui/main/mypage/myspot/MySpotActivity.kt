@@ -17,7 +17,6 @@ import kotlinx.android.synthetic.main.item_myplace.view.*
 class MySpotActivity : AppCompatActivity() {
     private var _Binding: ActivityMySpotBinding? = null
     private val binding get() = _Binding!!
-    lateinit var mySpotList : ArrayList<com.example.fika_project.ui.main.mypage.myspot.result>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityMySpotBinding.inflate(layoutInflater)
@@ -25,10 +24,9 @@ class MySpotActivity : AppCompatActivity() {
 
         binding.myplaceBackIv.setOnClickListener { finish() }
 
-        mySpotList = intent.getSerializableExtra("mySpotList") as ArrayList<com.example.fika_project.ui.main.mypage.myspot.result>
 
-        binding.myplaceRv.layoutManager = LinearLayoutManager(this)
-        binding.myplaceRv.adapter = MySpotAdapter(mySpotList, this)
+//        binding.myplaceRv.layoutManager = LinearLayoutManager(this)
+//        binding.myplaceRv.adapter = MySpotAdapter(mySpotList, this)
     }
 }
 class MySpotAdapter(val mySpotList : ArrayList<com.example.fika_project.ui.main.mypage.myspot.result>,val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

@@ -12,5 +12,7 @@ class MyScrapActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _Binding = ActivityMyScrapBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
     }
 }

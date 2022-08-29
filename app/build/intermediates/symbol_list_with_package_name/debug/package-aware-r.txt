@@ -3163,6 +3163,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id imageView10
 id imageView12
 id imageView13
@@ -3190,6 +3191,7 @@ id imageView9
 id imageView99
 id immediateStop
 id included
+id indicator_tv
 id info
 id invisible
 id inward
@@ -3256,11 +3258,7 @@ id labeled
 id large_map
 id large_map_bottom_view
 id large_map_btn
-id large_map_category_tv
-id large_map_iv
-id large_map_location_name
 id large_map_title_name
-id large_map_where_tv
 id layout
 id left
 id leftToRight
@@ -3304,7 +3302,14 @@ id login_yahoo_iv
 id login_yahoo_tv
 id ltr
 id main_frm
+id map_flag
+id map_iv
+id map_title_name
+id map_title_name_tv
+id map_top_layout
 id map_view
+id map_where_tv1
+id map_where_tv2
 id masked
 id match_constraint
 id match_parent
@@ -3832,12 +3837,14 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
+id viewPager
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id viewpager_container
 id visible
 id visible_removing_fragment_view_tag
 id visit_complete_course_recyclerview
@@ -4021,6 +4028,7 @@ layout fragment_quit
 layout fragment_review_img
 layout fragment_review_report
 layout fragment_signup_02
+layout fragment_view_pager
 layout item_home_course
 layout item_home_dramarank
 layout item_home_placerank
@@ -4029,6 +4037,7 @@ layout item_myplace
 layout item_myplace_2
 layout item_placeinfo_review
 layout item_spinner
+layout item_view
 layout kakao_login_layout
 layout layout_login_dialog
 layout layout_login_item

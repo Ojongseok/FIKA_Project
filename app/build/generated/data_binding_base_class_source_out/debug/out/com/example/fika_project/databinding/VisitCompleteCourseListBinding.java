@@ -25,9 +25,6 @@ public final class VisitCompleteCourseListBinding implements ViewBinding {
   public final TextView courseDetailCategoryTv;
 
   @NonNull
-  public final TextView courseDetailCourseName;
-
-  @NonNull
   public final ImageView courseDetailIv;
 
   @NonNull
@@ -43,25 +40,28 @@ public final class VisitCompleteCourseListBinding implements ViewBinding {
   public final LinearLayout linearLayout3;
 
   @NonNull
+  public final TextView mapTitleNameTv;
+
+  @NonNull
   public final TextView textView20;
 
   @NonNull
   public final LinearLayout visitCompleteReviewWriteBtn;
 
   private VisitCompleteCourseListBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView courseDetailCategoryTv, @NonNull TextView courseDetailCourseName,
-      @NonNull ImageView courseDetailIv, @NonNull TextView courseDetailWhereTv,
-      @NonNull ImageView imageView12, @NonNull ImageView imageView18,
-      @NonNull LinearLayout linearLayout3, @NonNull TextView textView20,
+      @NonNull TextView courseDetailCategoryTv, @NonNull ImageView courseDetailIv,
+      @NonNull TextView courseDetailWhereTv, @NonNull ImageView imageView12,
+      @NonNull ImageView imageView18, @NonNull LinearLayout linearLayout3,
+      @NonNull TextView mapTitleNameTv, @NonNull TextView textView20,
       @NonNull LinearLayout visitCompleteReviewWriteBtn) {
     this.rootView = rootView;
     this.courseDetailCategoryTv = courseDetailCategoryTv;
-    this.courseDetailCourseName = courseDetailCourseName;
     this.courseDetailIv = courseDetailIv;
     this.courseDetailWhereTv = courseDetailWhereTv;
     this.imageView12 = imageView12;
     this.imageView18 = imageView18;
     this.linearLayout3 = linearLayout3;
+    this.mapTitleNameTv = mapTitleNameTv;
     this.textView20 = textView20;
     this.visitCompleteReviewWriteBtn = visitCompleteReviewWriteBtn;
   }
@@ -99,12 +99,6 @@ public final class VisitCompleteCourseListBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.course_detail_course_name;
-      TextView courseDetailCourseName = ViewBindings.findChildViewById(rootView, id);
-      if (courseDetailCourseName == null) {
-        break missingId;
-      }
-
       id = R.id.course_detail_iv;
       ImageView courseDetailIv = ViewBindings.findChildViewById(rootView, id);
       if (courseDetailIv == null) {
@@ -135,6 +129,12 @@ public final class VisitCompleteCourseListBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.map_title_name_tv;
+      TextView mapTitleNameTv = ViewBindings.findChildViewById(rootView, id);
+      if (mapTitleNameTv == null) {
+        break missingId;
+      }
+
       id = R.id.textView20;
       TextView textView20 = ViewBindings.findChildViewById(rootView, id);
       if (textView20 == null) {
@@ -148,8 +148,8 @@ public final class VisitCompleteCourseListBinding implements ViewBinding {
       }
 
       return new VisitCompleteCourseListBinding((ConstraintLayout) rootView, courseDetailCategoryTv,
-          courseDetailCourseName, courseDetailIv, courseDetailWhereTv, imageView12, imageView18,
-          linearLayout3, textView20, visitCompleteReviewWriteBtn);
+          courseDetailIv, courseDetailWhereTv, imageView12, imageView18, linearLayout3,
+          mapTitleNameTv, textView20, visitCompleteReviewWriteBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

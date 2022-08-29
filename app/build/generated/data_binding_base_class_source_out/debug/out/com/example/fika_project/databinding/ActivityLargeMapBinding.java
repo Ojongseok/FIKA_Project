@@ -23,7 +23,7 @@ public final class ActivityLargeMapBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView imageView12;
+  public final ImageView imageView;
 
   @NonNull
   public final FrameLayout largeMap;
@@ -32,19 +32,7 @@ public final class ActivityLargeMapBinding implements ViewBinding {
   public final CardView largeMapBottomView;
 
   @NonNull
-  public final TextView largeMapCategoryTv;
-
-  @NonNull
-  public final ImageView largeMapIv;
-
-  @NonNull
-  public final TextView largeMapLocationName;
-
-  @NonNull
   public final TextView largeMapTitleName;
-
-  @NonNull
-  public final TextView largeMapWhereTv;
 
   @NonNull
   public final ImageView myholdBackBtn;
@@ -56,33 +44,22 @@ public final class ActivityLargeMapBinding implements ViewBinding {
   public final FrameLayout myholdTitleBar;
 
   @NonNull
-  public final ConstraintLayout myholdTopLayout;
+  public final FrameLayout viewpagerContainer;
 
-  @NonNull
-  public final TextView textView20;
-
-  private ActivityLargeMapBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView imageView12, @NonNull FrameLayout largeMap,
-      @NonNull CardView largeMapBottomView, @NonNull TextView largeMapCategoryTv,
-      @NonNull ImageView largeMapIv, @NonNull TextView largeMapLocationName,
-      @NonNull TextView largeMapTitleName, @NonNull TextView largeMapWhereTv,
-      @NonNull ImageView myholdBackBtn, @NonNull ImageView myholdHomeBtn,
-      @NonNull FrameLayout myholdTitleBar, @NonNull ConstraintLayout myholdTopLayout,
-      @NonNull TextView textView20) {
+  private ActivityLargeMapBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView imageView,
+      @NonNull FrameLayout largeMap, @NonNull CardView largeMapBottomView,
+      @NonNull TextView largeMapTitleName, @NonNull ImageView myholdBackBtn,
+      @NonNull ImageView myholdHomeBtn, @NonNull FrameLayout myholdTitleBar,
+      @NonNull FrameLayout viewpagerContainer) {
     this.rootView = rootView;
-    this.imageView12 = imageView12;
+    this.imageView = imageView;
     this.largeMap = largeMap;
     this.largeMapBottomView = largeMapBottomView;
-    this.largeMapCategoryTv = largeMapCategoryTv;
-    this.largeMapIv = largeMapIv;
-    this.largeMapLocationName = largeMapLocationName;
     this.largeMapTitleName = largeMapTitleName;
-    this.largeMapWhereTv = largeMapWhereTv;
     this.myholdBackBtn = myholdBackBtn;
     this.myholdHomeBtn = myholdHomeBtn;
     this.myholdTitleBar = myholdTitleBar;
-    this.myholdTopLayout = myholdTopLayout;
-    this.textView20 = textView20;
+    this.viewpagerContainer = viewpagerContainer;
   }
 
   @Override
@@ -112,9 +89,9 @@ public final class ActivityLargeMapBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imageView12;
-      ImageView imageView12 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView12 == null) {
+      id = R.id.imageView;
+      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
+      if (imageView == null) {
         break missingId;
       }
 
@@ -130,33 +107,9 @@ public final class ActivityLargeMapBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.large_map_category_tv;
-      TextView largeMapCategoryTv = ViewBindings.findChildViewById(rootView, id);
-      if (largeMapCategoryTv == null) {
-        break missingId;
-      }
-
-      id = R.id.large_map_iv;
-      ImageView largeMapIv = ViewBindings.findChildViewById(rootView, id);
-      if (largeMapIv == null) {
-        break missingId;
-      }
-
-      id = R.id.large_map_location_name;
-      TextView largeMapLocationName = ViewBindings.findChildViewById(rootView, id);
-      if (largeMapLocationName == null) {
-        break missingId;
-      }
-
       id = R.id.large_map_title_name;
       TextView largeMapTitleName = ViewBindings.findChildViewById(rootView, id);
       if (largeMapTitleName == null) {
-        break missingId;
-      }
-
-      id = R.id.large_map_where_tv;
-      TextView largeMapWhereTv = ViewBindings.findChildViewById(rootView, id);
-      if (largeMapWhereTv == null) {
         break missingId;
       }
 
@@ -178,22 +131,15 @@ public final class ActivityLargeMapBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.myhold_top_layout;
-      ConstraintLayout myholdTopLayout = ViewBindings.findChildViewById(rootView, id);
-      if (myholdTopLayout == null) {
+      id = R.id.viewpager_container;
+      FrameLayout viewpagerContainer = ViewBindings.findChildViewById(rootView, id);
+      if (viewpagerContainer == null) {
         break missingId;
       }
 
-      id = R.id.textView20;
-      TextView textView20 = ViewBindings.findChildViewById(rootView, id);
-      if (textView20 == null) {
-        break missingId;
-      }
-
-      return new ActivityLargeMapBinding((ConstraintLayout) rootView, imageView12, largeMap,
-          largeMapBottomView, largeMapCategoryTv, largeMapIv, largeMapLocationName,
-          largeMapTitleName, largeMapWhereTv, myholdBackBtn, myholdHomeBtn, myholdTitleBar,
-          myholdTopLayout, textView20);
+      return new ActivityLargeMapBinding((ConstraintLayout) rootView, imageView, largeMap,
+          largeMapBottomView, largeMapTitleName, myholdBackBtn, myholdHomeBtn, myholdTitleBar,
+          viewpagerContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

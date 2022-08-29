@@ -67,7 +67,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/course_detail_course_name"
+            android:id="@+id/map_title_name_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="투명 카약"

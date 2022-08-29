@@ -42,7 +42,7 @@ class DramaInfoCourseAdapter(val courselist : ArrayList<courseList>, val context
             context.startActivity(intent)
         }
 
-        var service = LocationScrapService(this,courselist[position].courseId!!)
+        val service = LocationScrapService(this,courselist[position].courseId!!)
 
         if (courselist[position].scrapped!!) {
             view.drama_info_course_item_star.setImageResource(R.drawable.ic_star_on)

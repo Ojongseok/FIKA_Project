@@ -57,9 +57,6 @@ interface RetrofitInterface {
         @Path("courseId") courseId : Int
     ) :Call<CourseDetailResponse>
 
-    // 19. 내가 담은 장소 조회
-    @GET("/spot/my")
-    fun loadMySpot () : Call<MySpotResponse>
     // 22. 내가 담은 장소 조회
     @GET("/spot/my/scrap")
     fun loadMySpot (

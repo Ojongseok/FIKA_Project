@@ -25,9 +25,6 @@ public final class MyholdLocationItemListBinding implements ViewBinding {
   public final TextView courseDetailCategoryTv;
 
   @NonNull
-  public final TextView courseDetailCourseName;
-
-  @NonNull
   public final ImageView courseDetailIv;
 
   @NonNull
@@ -35,6 +32,9 @@ public final class MyholdLocationItemListBinding implements ViewBinding {
 
   @NonNull
   public final ImageView imageView12;
+
+  @NonNull
+  public final TextView mapTitleNameTv;
 
   @NonNull
   public final CheckBox myholdCheckboxBtn;
@@ -46,16 +46,16 @@ public final class MyholdLocationItemListBinding implements ViewBinding {
   public final TextView textView20;
 
   private MyholdLocationItemListBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView courseDetailCategoryTv, @NonNull TextView courseDetailCourseName,
-      @NonNull ImageView courseDetailIv, @NonNull TextView courseDetailWhereTv,
-      @NonNull ImageView imageView12, @NonNull CheckBox myholdCheckboxBtn,
+      @NonNull TextView courseDetailCategoryTv, @NonNull ImageView courseDetailIv,
+      @NonNull TextView courseDetailWhereTv, @NonNull ImageView imageView12,
+      @NonNull TextView mapTitleNameTv, @NonNull CheckBox myholdCheckboxBtn,
       @NonNull ConstraintLayout myholdTopLayout, @NonNull TextView textView20) {
     this.rootView = rootView;
     this.courseDetailCategoryTv = courseDetailCategoryTv;
-    this.courseDetailCourseName = courseDetailCourseName;
     this.courseDetailIv = courseDetailIv;
     this.courseDetailWhereTv = courseDetailWhereTv;
     this.imageView12 = imageView12;
+    this.mapTitleNameTv = mapTitleNameTv;
     this.myholdCheckboxBtn = myholdCheckboxBtn;
     this.myholdTopLayout = myholdTopLayout;
     this.textView20 = textView20;
@@ -94,12 +94,6 @@ public final class MyholdLocationItemListBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.course_detail_course_name;
-      TextView courseDetailCourseName = ViewBindings.findChildViewById(rootView, id);
-      if (courseDetailCourseName == null) {
-        break missingId;
-      }
-
       id = R.id.course_detail_iv;
       ImageView courseDetailIv = ViewBindings.findChildViewById(rootView, id);
       if (courseDetailIv == null) {
@@ -118,6 +112,12 @@ public final class MyholdLocationItemListBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.map_title_name_tv;
+      TextView mapTitleNameTv = ViewBindings.findChildViewById(rootView, id);
+      if (mapTitleNameTv == null) {
+        break missingId;
+      }
+
       id = R.id.myhold_checkbox_btn;
       CheckBox myholdCheckboxBtn = ViewBindings.findChildViewById(rootView, id);
       if (myholdCheckboxBtn == null) {
@@ -133,8 +133,8 @@ public final class MyholdLocationItemListBinding implements ViewBinding {
       }
 
       return new MyholdLocationItemListBinding((ConstraintLayout) rootView, courseDetailCategoryTv,
-          courseDetailCourseName, courseDetailIv, courseDetailWhereTv, imageView12,
-          myholdCheckboxBtn, myholdTopLayout, textView20);
+          courseDetailIv, courseDetailWhereTv, imageView12, mapTitleNameTv, myholdCheckboxBtn,
+          myholdTopLayout, textView20);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

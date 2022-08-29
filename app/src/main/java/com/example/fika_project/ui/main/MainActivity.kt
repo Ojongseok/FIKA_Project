@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import android.widget.Toast
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityMainBinding
 import com.example.fika_project.ui.main.home.HomeFragment
@@ -13,6 +14,7 @@ import com.example.fika_project.ui.main.explore.ExploreFragment
 import com.example.fika_project.ui.main.mycourse.review.AllReviewFragment
 import com.example.fika_project.ui.main.mycourse.MyCourseFragment
 import com.example.fika_project.ui.main.mypage.MypageFragment
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         initNavigation()
     }
+
 
     private fun initNavigation() {
         supportFragmentManager.beginTransaction().replace(R.id.main_frm, HomeFragment())
@@ -91,5 +94,18 @@ class MainActivity : AppCompatActivity() {
             Log.i("TAG", "waiting for a while")
             return false
         }
+    }
+
+    private var backPressedTime : Long = 0
+    override fun onBackPressed() {
+        Log.d("TAG", "뒤로가기")
+        // 2초내 다시 클릭하면 앱 종료
+        if (System.currentTimeMillis() - backPressedTime < 2000) {
+            finish()
+            return
+        }
+        // 처음 클릭 메시지
+        Toast.makeText(this, "'뒤로가기' 버튼을 한번 더 누르시면 앱이 종료됩니다.", Toast.LENGTH_SHORT).show()
+        backPressedTime = System.currentTimeMillis()
     }
 }
