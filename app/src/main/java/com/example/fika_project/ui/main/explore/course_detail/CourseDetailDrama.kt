@@ -20,6 +20,7 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView {
     private val binding get() = _Binding!!
     private val listOfYear = ArrayList<SpinnerModel>()
     lateinit var dramaAdapter: CourseDetailDramaAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityCourseDetailDramaBinding.inflate(layoutInflater)

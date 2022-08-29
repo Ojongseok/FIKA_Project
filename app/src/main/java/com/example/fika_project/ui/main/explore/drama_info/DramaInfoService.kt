@@ -27,7 +27,6 @@ class DramaInfoService(val View: DramaInfoView, val dramaId : Int) {
                 }
             }
             override fun onFailure(call: Call<DramaInfoResponse>, t: Throwable) {
-                View.onExploreFailure(400,t.message?:"load/API-ERROR")
                 Log.d("load/API-ERROR", t.toString())
             }
         })

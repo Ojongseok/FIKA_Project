@@ -10,6 +10,7 @@ import retrofit2.Response
 class ExploreService(val View: ExploreDramaView, private val filter : String) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
     val loadExploreDrama = retrofit.loadDramaFilter(filter)
+
     fun tryLoadExploreDrama(){
         loadExploreDrama.enqueue(object : Callback<ExploreDramaResponse> {
             override fun onResponse(call: Call<ExploreDramaResponse>, response: Response<ExploreDramaResponse>) {

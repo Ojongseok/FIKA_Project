@@ -12,12 +12,12 @@
         "source": "D:\\~29\\FIKA_Prj\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\btn_all_review.png"
     },
     {
-        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable_up.png.flat",
-        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\drawable\\up.png"
-    },
-    {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\layout_folder_item.xml.flat",
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\folder_item.xml"
+    },
+    {
+        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable_up.png.flat",
+        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\drawable\\up.png"
     },
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_visit_complete_course.xml.flat",
@@ -64,24 +64,24 @@
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\drawable\\dot.png"
     },
     {
-        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable_checkbox_custom.xml.flat",
-        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\drawable\\checkbox_custom.xml"
-    },
-    {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable_checkbox_custom.xml.flat",
+        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\drawable\\checkbox_custom.xml"
     },
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_quit.xml.flat",
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\fragment_quit.xml"
     },
     {
-        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable_home_make_course_btn.xml.flat",
-        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\drawable\\home_make_course_btn.xml"
-    },
-    {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_mypage_card_background.png.flat",
         "source": "D:\\~29\\FIKA_Prj\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\mypage_card_background.png"
+    },
+    {
+        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable_home_make_course_btn.xml.flat",
+        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\drawable\\home_make_course_btn.xml"
     },
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_agree_01.xml.flat",
@@ -212,20 +212,20 @@
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\drawable\\nav_selector_mystate.xml"
     },
     {
-        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\layout_search_recent_keyword_item.xml.flat",
-        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\search_recent_keyword_item.xml"
-    },
-    {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_flag.png.flat",
         "source": "D:\\~29\\FIKA_Prj\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_flag.png"
     },
     {
-        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_mypage_card_background.png.flat",
-        "source": "D:\\~29\\FIKA_Prj\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\mypage_card_background.png"
+        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\layout_search_recent_keyword_item.xml.flat",
+        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\search_recent_keyword_item.xml"
     },
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable_switch_thumb.xml.flat",
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\drawable\\switch_thumb.xml"
+    },
+    {
+        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_mypage_card_background.png.flat",
+        "source": "D:\\~29\\FIKA_Prj\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\mypage_card_background.png"
     },
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\layout_detail_scene_list_item.xml.flat",
@@ -240,12 +240,12 @@
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_flag.png.flat",
-        "source": "D:\\~29\\FIKA_Prj\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_flag.png"
-    },
-    {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_more_info.png.flat",
         "source": "D:\\~29\\FIKA_Prj\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_more_info.png"
+    },
+    {
+        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_flag.png.flat",
+        "source": "D:\\~29\\FIKA_Prj\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_flag.png"
     },
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_more_info.png.flat",
@@ -658,10 +658,6 @@
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\drawable_explore_circle.xml.flat",
         "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\drawable\\explore_circle.xml"
-    },
-    {
-        "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_banner.xml.flat",
-        "source": "D:\\~29\\FIKA_Prj\\app\\src\\main\\res\\layout\\fragment_banner.xml"
     },
     {
         "merged": "D:\\~29\\FIKA_Prj\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_login.xml.flat",

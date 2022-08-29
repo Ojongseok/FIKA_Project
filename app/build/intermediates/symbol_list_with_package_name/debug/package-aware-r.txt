@@ -2903,10 +2903,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id banner_drama_title_tv
-id banner_image_iv
-id banner_sub_img_iv
-id banner_title_tv
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3284,6 +3280,7 @@ id list_item
 id locale
 id login_close_button
 id login_close_layout
+id login_dialog_email
 id login_easy_login_tv
 id login_frm
 id login_google_iv
@@ -3408,6 +3405,7 @@ id myplace_rv
 id myplace_top_layout
 id myplace_top_title_tv
 id myscrapcourse_back_iv
+id myscrapcourse_empty_iv
 id myscrapcourse_home_iv
 id myscrapcourse_rv
 id myscrapcourse_top_layout
@@ -4004,7 +4002,6 @@ layout fragment_agree_01
 layout fragment_agree_02
 layout fragment_agree_03
 layout fragment_all_review
-layout fragment_banner
 layout fragment_edit_personal
 layout fragment_explore
 layout fragment_explore_course_page
