@@ -15,6 +15,7 @@ class ExploreDramaPage : Fragment(), ExploreDramaView {
     private lateinit var binding: FragmentExploreDramaPageBinding
     var filter : String = "all"
     val service = ExploreService(this, filter)
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentExploreDramaPageBinding.inflate(inflater, container, false)
 
@@ -52,10 +53,7 @@ class ExploreDramaPage : Fragment(), ExploreDramaView {
     }
     override fun onExploreSuccess(response: ExploreDramaResponse) {
         when(response.code) {
-            1000 -> {
-                response.let {
-                    response?.let { setDramalist(it.result!!) }
-                }
+            1000 -> { response?.let { setDramalist(it.result!!) }
             }
         }
     }

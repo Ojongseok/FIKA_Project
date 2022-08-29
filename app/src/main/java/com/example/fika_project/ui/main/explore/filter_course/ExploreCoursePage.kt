@@ -69,7 +69,6 @@ class ExploreCoursePage : Fragment(), ExploreCourseView {
     private fun setDramalist(dramalist : ArrayList<course>) {
         binding.exploreCoursePageRecyclerview.layoutManager = LinearLayoutManager(requireContext())
         binding.exploreCoursePageRecyclerview.adapter = ExploreCoursePageAdapter(dramalist, requireContext())
-
         binding.exploreCoursepageSearchNumber.text = dramalist.size.toString()
     }
 

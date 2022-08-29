@@ -2902,10 +2902,6 @@ int id auto 0x7f0a0085
 int id autoComplete 0x7f0a0086
 int id autoCompleteToEnd 0x7f0a0087
 int id autoCompleteToStart 0x7f0a0088
-int id banner_drama_title_tv 0x7f0a0089
-int id banner_image_iv 0x7f0a008a
-int id banner_sub_img_iv 0x7f0a008b
-int id banner_title_tv 0x7f0a008c
 int id barrier 0x7f0a008d
 int id baseline 0x7f0a008e
 int id beginOnFirstDraw 0x7f0a008f
@@ -3283,6 +3279,7 @@ int id list_item 0x7f0a0202
 int id locale 0x7f0a0203
 int id login_close_button 0x7f0a0204
 int id login_close_layout 0x7f0a0205
+int id login_dialog_email 0x7f0a0442
 int id login_easy_login_tv 0x7f0a0206
 int id login_frm 0x7f0a0207
 int id login_google_iv 0x7f0a0208
@@ -3407,6 +3404,7 @@ int id myplace_rv 0x7f0a027e
 int id myplace_top_layout 0x7f0a027f
 int id myplace_top_title_tv 0x7f0a0280
 int id myscrapcourse_back_iv 0x7f0a0281
+int id myscrapcourse_empty_iv 0x7f0a0441
 int id myscrapcourse_home_iv 0x7f0a0282
 int id myscrapcourse_rv 0x7f0a0283
 int id myscrapcourse_top_layout 0x7f0a0284
@@ -4003,7 +4001,6 @@ int layout fragment_agree_01 0x7f0d004f
 int layout fragment_agree_02 0x7f0d0050
 int layout fragment_agree_03 0x7f0d0051
 int layout fragment_all_review 0x7f0d0052
-int layout fragment_banner 0x7f0d0053
 int layout fragment_edit_personal 0x7f0d0054
 int layout fragment_explore 0x7f0d0055
 int layout fragment_explore_course_page 0x7f0d0056

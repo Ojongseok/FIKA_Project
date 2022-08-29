@@ -22,9 +22,18 @@ object spfManager {
         return prefs.getString(X_ACCESS_TOKEN, "").toString()
     }
 
+    fun setDramaId(dramaId: Int) {
+        editor.putInt("dramaId", dramaId).apply()
+    }
+
+    fun getDramaId(): Int? {
+        return prefs.getInt("dramaId", 0)
+    }
+
     fun setEmail(email: String) { editor.putString("Email", email).apply() }
     fun getEmail(): String? = prefs.getString("Email", "")
 
     fun setNickname(nickname: String) { editor.putString("Nickname", nickname).apply() }
     fun getNickname(): String? = prefs.getString("Nickname", "")
+
 }

@@ -1,6 +1,8 @@
 package com.example.fika_project.ui.login
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -24,6 +26,7 @@ class LoginDialog : BottomSheetDialogFragment() {
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DialogLoginBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
@@ -46,6 +49,10 @@ class LoginDialog : BottomSheetDialogFragment() {
     }
 
     private fun initClikckListener() {
+        binding.loginDialogEmail.setOnClickListener{
+            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSfX-j0oxVoXsTW5DPd-kVrex_ZLq7LTF8N3Idl_9pFAw-jZfg/viewform?usp=sf_link"))
+            startActivity(intent)
+        }
     }
 
 }

@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".ui.main.explore.drama_info.DramaInfoActivity">
+
     <FrameLayout
         android:id="@+id/myhold_title_bar"
         android:layout_width="match_parent"

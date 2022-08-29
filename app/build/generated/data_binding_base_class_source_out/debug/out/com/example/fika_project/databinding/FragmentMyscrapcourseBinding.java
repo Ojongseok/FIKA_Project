@@ -26,6 +26,9 @@ public final class FragmentMyscrapcourseBinding implements ViewBinding {
   public final ImageView myscrapcourseBackIv;
 
   @NonNull
+  public final ImageView myscrapcourseEmptyIv;
+
+  @NonNull
   public final ImageView myscrapcourseHomeIv;
 
   @NonNull
@@ -38,11 +41,12 @@ public final class FragmentMyscrapcourseBinding implements ViewBinding {
   public final TextView myscrapcourseTopTitleTv;
 
   private FragmentMyscrapcourseBinding(@NonNull ScrollView rootView,
-      @NonNull ImageView myscrapcourseBackIv, @NonNull ImageView myscrapcourseHomeIv,
-      @NonNull RecyclerView myscrapcourseRv, @NonNull LinearLayout myscrapcourseTopLayout,
-      @NonNull TextView myscrapcourseTopTitleTv) {
+      @NonNull ImageView myscrapcourseBackIv, @NonNull ImageView myscrapcourseEmptyIv,
+      @NonNull ImageView myscrapcourseHomeIv, @NonNull RecyclerView myscrapcourseRv,
+      @NonNull LinearLayout myscrapcourseTopLayout, @NonNull TextView myscrapcourseTopTitleTv) {
     this.rootView = rootView;
     this.myscrapcourseBackIv = myscrapcourseBackIv;
+    this.myscrapcourseEmptyIv = myscrapcourseEmptyIv;
     this.myscrapcourseHomeIv = myscrapcourseHomeIv;
     this.myscrapcourseRv = myscrapcourseRv;
     this.myscrapcourseTopLayout = myscrapcourseTopLayout;
@@ -82,6 +86,12 @@ public final class FragmentMyscrapcourseBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.myscrapcourse_empty_iv;
+      ImageView myscrapcourseEmptyIv = ViewBindings.findChildViewById(rootView, id);
+      if (myscrapcourseEmptyIv == null) {
+        break missingId;
+      }
+
       id = R.id.myscrapcourse_home_iv;
       ImageView myscrapcourseHomeIv = ViewBindings.findChildViewById(rootView, id);
       if (myscrapcourseHomeIv == null) {
@@ -107,7 +117,8 @@ public final class FragmentMyscrapcourseBinding implements ViewBinding {
       }
 
       return new FragmentMyscrapcourseBinding((ScrollView) rootView, myscrapcourseBackIv,
-          myscrapcourseHomeIv, myscrapcourseRv, myscrapcourseTopLayout, myscrapcourseTopTitleTv);
+          myscrapcourseEmptyIv, myscrapcourseHomeIv, myscrapcourseRv, myscrapcourseTopLayout,
+          myscrapcourseTopTitleTv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

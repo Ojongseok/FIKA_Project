@@ -32,7 +32,7 @@ class HomeFragment : Fragment(), HomeView {
 
         myCourseRVAdapter.setMyItemClickListener(object  : MyCourseRVAdapter.MyItemClickListener{
             override fun onItemClick(course: myCourseList) {
-                TODO("Not yet implemented")
+
             } })
     }
 
@@ -42,11 +42,6 @@ class HomeFragment : Fragment(), HomeView {
         binding.homeDramaRankRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.homeDramaRankRv.adapter = dramaRankRVAdapter
         binding.homeDramaRankRv.setHasFixedSize(false)
-
-        dramaRankRVAdapter.setMyItemClickListener(object  : DramaRankRVAdapter.MyItemClickListener{
-            override fun onItemClick(dramaRank: dramaList) {
-                TODO("Not yet implemented")
-            } })
     }
 
     private fun setCourseRVAdapter(scrapCourserankList: ArrayList<coursesSortBySaved>){
@@ -56,11 +51,12 @@ class HomeFragment : Fragment(), HomeView {
         binding.homeScrapcourseRankRv.adapter = scrapCourserankRVAdapter
         binding.homeDramaRankRv.setHasFixedSize(false)
 
-        scrapCourserankRVAdapter.setMyItemClickListener(object  : ScrapCourserankRVAdapter.MyItemClickListener{
-            override fun onItemClick(scrapCourserank: coursesSortBySaved) {
-                TODO("Not yet implemented")
-            }
-        }) }
+//        scrapCourserankRVAdapter.setMyItemClickListener(object  : ScrapCourserankRVAdapter.MyItemClickListener{
+//            override fun onItemClick(scrapCourserank: coursesSortBySaved) {
+//                TODO("Not yet implemented")
+//            }
+//        })
+    }
 
     private fun setPlaceRankRVAdapter(placeRankList: ArrayList<spotsSortBySaved>){
         val placeRankRVAdapter = PlaceRankRVAdapter(placeRankList,requireContext())
@@ -88,13 +84,11 @@ class HomeFragment : Fragment(), HomeView {
 
         when(response.code) {
             1000 -> {
-                response.let {
-                    response?.let { setMyCourseRVAdapter((it.result?.myCourseList!!)) }
-                    response?.let { setDramaRankRVAdapter((it.result?.dramaList!!)) }
-                    response?.let { setCourseRVAdapter((it.result?.coursesSortBySaved!!)) }
-                    response?.let { setPlaceRankRVAdapter((it.result?.spotsSortBySaved!!)) }
-                    binding.homePb.visibility = View.GONE
-                }
+                response?.let { setMyCourseRVAdapter((it.result?.myCourseList!!)) }
+                response?.let { setDramaRankRVAdapter((it.result?.dramaList!!)) }
+                response?.let { setCourseRVAdapter((it.result?.coursesSortBySaved!!)) }
+                response?.let { setPlaceRankRVAdapter((it.result?.spotsSortBySaved!!)) }
+                binding.homePb.visibility = View.GONE
             }
         }
     }
@@ -102,4 +96,17 @@ class HomeFragment : Fragment(), HomeView {
     override fun onHomeFailure(code: Int, message: String) {
         Toast.makeText(requireContext(),"통신 에러",Toast.LENGTH_SHORT).show()
     }
+
+//    //어댑터 아이템 클릭
+//    private fun changeDramaInfo(dramaRank: dramaList) {
+//        (context as MainActivity).supportFragmentManager.beginTransaction()
+//            .add(R.id.main_frm, DramaRankFragment().apply {
+//            arguments = Bundle().apply {
+//                val gson = Gson()
+//                val DramaInfo = gson.toJson(dramaRank!!)
+//                putString("DramaInfo", DramaInfo)
+//            }
+//        })
+//    }
 }
+

@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentMypageBinding
+import com.example.fika_project.ui.main.mycourse.MyCourseFragment
 import com.example.fika_project.ui.main.mypage.myspot.MySpotActivity
 
 class MypageFragment : Fragment(),MypageView {
@@ -44,7 +45,10 @@ class MypageFragment : Fragment(),MypageView {
         }
 
         binding.mypageCourseLayout.setOnClickListener {
-
+            fragmentManager.commit {
+                setReorderingAllowed(true)
+                add(R.id.mypage_frm, MyscrapcourseFragment())
+            }
         }
 
         binding.mypageEditBtn.setOnClickListener {
