@@ -20,7 +20,7 @@
         android:layout_width="24dp"
         android:layout_height="25dp"
         android:layout_marginTop="4dp"
-        android:src="@drawable/ic_flag"
+        android:src="@drawable/ic_flag_off"
         app:layout_constraintEnd_toEndOf="@id/item_location_placerank_img_iv"
         app:layout_constraintTop_toTopOf="@id/item_location_placerank_img_iv" />
 

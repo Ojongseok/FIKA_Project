@@ -5,6 +5,7 @@ import com.example.fika_project.ApplicationClass
 import com.example.fika_project.retrofit.Nickname
 import com.example.fika_project.retrofit.RetrofitInterface
 import com.example.fika_project.retrofit.User
+import com.example.fika_project.utils.spfManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,11 +47,14 @@ class NicknameService(val View : NicknameView) {
                 var result: KakaoResponse? = response.body()
                 val resp = response.body()
 
-                Log.d("SIGHUP/API-RESPONSE", result.toString())
+                Log.d("SIGNUP/API-RESPONSE", result.toString())
 
                 when(resp?.code){
                     //성공
                     1000 -> {
+                        spfManager.setJwt(resp.result)
+                        Log.d("SIGNUP-setJwt", resp.result)
+
                         View.onSignUpSuccess(response.body() as KakaoResponse)
                         Log.d("SIGNUP", resp.message)
                     }

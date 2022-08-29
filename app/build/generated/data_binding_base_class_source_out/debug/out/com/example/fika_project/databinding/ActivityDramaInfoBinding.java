@@ -23,6 +23,12 @@ public final class ActivityDramaInfoBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final ImageView dramaDetailBackBtn;
+
+  @NonNull
+  public final TextView dramaDetailInfoTitleName;
+
+  @NonNull
   public final RecyclerView dramaInfoCourseRecyclerview;
 
   @NonNull
@@ -41,20 +47,28 @@ public final class ActivityDramaInfoBinding implements ViewBinding {
   public final TextView largeMapBtn;
 
   @NonNull
+  public final FrameLayout myholdTitleBar;
+
+  @NonNull
   public final TextView textView22;
 
   private ActivityDramaInfoBinding(@NonNull LinearLayout rootView,
+      @NonNull ImageView dramaDetailBackBtn, @NonNull TextView dramaDetailInfoTitleName,
       @NonNull RecyclerView dramaInfoCourseRecyclerview,
       @NonNull RecyclerView dramaInfoLocationRecyclerview, @NonNull ImageView dramaInfoMainIv,
       @NonNull FrameLayout dramaInfoMapview, @NonNull TextView dramaInfoTitleTv,
-      @NonNull TextView largeMapBtn, @NonNull TextView textView22) {
+      @NonNull TextView largeMapBtn, @NonNull FrameLayout myholdTitleBar,
+      @NonNull TextView textView22) {
     this.rootView = rootView;
+    this.dramaDetailBackBtn = dramaDetailBackBtn;
+    this.dramaDetailInfoTitleName = dramaDetailInfoTitleName;
     this.dramaInfoCourseRecyclerview = dramaInfoCourseRecyclerview;
     this.dramaInfoLocationRecyclerview = dramaInfoLocationRecyclerview;
     this.dramaInfoMainIv = dramaInfoMainIv;
     this.dramaInfoMapview = dramaInfoMapview;
     this.dramaInfoTitleTv = dramaInfoTitleTv;
     this.largeMapBtn = largeMapBtn;
+    this.myholdTitleBar = myholdTitleBar;
     this.textView22 = textView22;
   }
 
@@ -85,6 +99,18 @@ public final class ActivityDramaInfoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.drama_detail_back_btn;
+      ImageView dramaDetailBackBtn = ViewBindings.findChildViewById(rootView, id);
+      if (dramaDetailBackBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.drama_detail_info_title_name;
+      TextView dramaDetailInfoTitleName = ViewBindings.findChildViewById(rootView, id);
+      if (dramaDetailInfoTitleName == null) {
+        break missingId;
+      }
+
       id = R.id.drama_info_course_recyclerview;
       RecyclerView dramaInfoCourseRecyclerview = ViewBindings.findChildViewById(rootView, id);
       if (dramaInfoCourseRecyclerview == null) {
@@ -121,15 +147,22 @@ public final class ActivityDramaInfoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.myhold_title_bar;
+      FrameLayout myholdTitleBar = ViewBindings.findChildViewById(rootView, id);
+      if (myholdTitleBar == null) {
+        break missingId;
+      }
+
       id = R.id.textView22;
       TextView textView22 = ViewBindings.findChildViewById(rootView, id);
       if (textView22 == null) {
         break missingId;
       }
 
-      return new ActivityDramaInfoBinding((LinearLayout) rootView, dramaInfoCourseRecyclerview,
-          dramaInfoLocationRecyclerview, dramaInfoMainIv, dramaInfoMapview, dramaInfoTitleTv,
-          largeMapBtn, textView22);
+      return new ActivityDramaInfoBinding((LinearLayout) rootView, dramaDetailBackBtn,
+          dramaDetailInfoTitleName, dramaInfoCourseRecyclerview, dramaInfoLocationRecyclerview,
+          dramaInfoMainIv, dramaInfoMapview, dramaInfoTitleTv, largeMapBtn, myholdTitleBar,
+          textView22);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

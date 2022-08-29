@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.fika_project.ApplicationClass.Companion.TAG
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityLoginBinding
+import com.example.fika_project.retrofit.User
 import com.example.fika_project.ui.main.MainActivity
 import com.example.fika_project.utils.spfManager
 import com.kakao.sdk.auth.model.OAuthToken
@@ -33,7 +34,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
         setContentView(binding.root)
 
 ////         편의상 시작
-//        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
     }
 
     private fun initClickListener(){
@@ -85,6 +86,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
                 UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
                 val kakaoToken = spfManager.getKakaoJwt()
 
+                Log.i(TAG,"카카오 로그인 토큰44444 : ${kakaoToken}")
                 service.tryKakaoLogin(kakaoToken)
             }
         }

@@ -26,6 +26,10 @@ class LoginService (val View : LoginView) {
                     1000 -> {
                         View.onKakaoSuccess(response.body() as KakaoResponse)
                         Log.d("KAKAOLOGIN/1000", resp.message)
+
+                        spfManager.setJwt(resp.result)
+                        Log.d("KAKAOLOGIN-setJwt", resp.result)
+
                     }
                     //최초
                     1002 -> {

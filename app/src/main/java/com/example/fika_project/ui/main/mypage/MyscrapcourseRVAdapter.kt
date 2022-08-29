@@ -1,14 +1,16 @@
 package com.example.fika_project.ui.main.mypage
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.fika_project.databinding.ItemHomeScrapcourseBinding
 
-class MyscrapcourseRVAdapter (private val myscrapcourseList: ArrayList<Myscrapcourse>) : RecyclerView.Adapter<MyscrapcourseRVAdapter.ViewHolder>()
+class MyscrapcourseRVAdapter (private val myscrapcourseList: ArrayList<MyScrap>,val context: Context) : RecyclerView.Adapter<MyscrapcourseRVAdapter.ViewHolder>()
 {
     interface MyItemClickListener{
-        fun onItemClick(myscrapcourse: Myscrapcourse)
+        fun onItemClick(myscrapcourse: MyScrap)
     }
 
     private lateinit var mItemClickListner: MyItemClickListener
@@ -35,10 +37,10 @@ class MyscrapcourseRVAdapter (private val myscrapcourseList: ArrayList<Myscrapco
 
     inner class ViewHolder(val binding: ItemHomeScrapcourseBinding):RecyclerView.ViewHolder(binding.root){
 
-        fun bind(myscrapcourse: Myscrapcourse){
-            binding.itemHomeCoursescrapDramaTitleTv.text = myscrapcourse.dramaName
-            binding.itemHomeScrapcourseIv.setImageResource(myscrapcourse.img!!)
-            binding.childTitle.text = myscrapcourse.courseName
+        fun bind(itemScrapcourse: MyScrap){
+            binding.itemHomeCoursescrapDramaTitleTv.text = itemScrapcourse.dramaTitle
+            Glide.with(context).load(itemScrapcourse.locageImageUrl).into(binding.itemHomeScrapcourseIv)
+            binding.childTitle.text = itemScrapcourse.courseTitle
         }
     }
 

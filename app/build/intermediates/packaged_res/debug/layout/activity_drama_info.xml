@@ -7,7 +7,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.main.explore.drama_info.DramaInfoActivity">
+    <FrameLayout
+        android:id="@+id/myhold_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/drama_detail_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/drama_detail_info_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="이태원 클라쓰"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

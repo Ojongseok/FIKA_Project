@@ -10,6 +10,7 @@ import com.example.fika_project.ui.login.AuthResponse
 import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.example.fika_project.ui.login.KakaoResponse
 import com.example.fika_project.ui.main.mycourse.placeinfo.PlaceInfoResponse
+import com.example.fika_project.ui.main.mypage.MyScrapResponse
 import com.example.fika_project.ui.main.mypage.MypageResponse
 import com.example.fika_project.ui.main.hold_and_scrap.LocationScrapResponse
 import retrofit2.Call
@@ -94,4 +95,8 @@ interface RetrofitInterface {
     // 25. 마이페이지 조회
     @GET("/nav/mypage")
     fun Mypage() : Call<MypageResponse>
+
+    // 25. 마이페이지 조회
+    @GET("/course/my/scrap")
+    fun MyScrap() : Call<MyScrapResponse>
 }

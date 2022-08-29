@@ -2581,6 +2581,8 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable btn_x
 drawable bus
+drawable button_background_off
+drawable button_background_on
 drawable calender
 drawable call
 drawable camera
@@ -2608,6 +2610,7 @@ drawable filter
 drawable filter_rec
 drawable folder_background
 drawable folder_button_background
+drawable folder_button_background_on
 drawable gallery
 drawable gallery_plus
 drawable home
@@ -2927,6 +2930,7 @@ id btm_nav_stamp
 id btm_nav_tour
 id btm_navi
 id button
+id button2
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3038,6 +3042,8 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drama_detail_back_btn
+id drama_detail_info_title_name
 id drama_info_course_image
 id drama_info_course_item_layout
 id drama_info_course_item_star
@@ -3104,9 +3110,13 @@ id filled
 id filter_actor_tv
 id filter_course_page_btn_1
 id filter_course_page_btn_2
+id filter_course_sorting_btn
 id filter_course_tv_2
 id filter_drama_actor_btn
 id filter_drama_btn
+id filter_drama_sorting_btn
+id filter_sort_tv_course
+id filter_sorting_tv
 id fitCenter
 id fitEnd
 id fitStart
@@ -3263,7 +3273,6 @@ id line1
 id line3
 id linear
 id linearLayout
-id linearLayout2
 id linearLayout3
 id linearLayout4
 id linearLayout5
@@ -3639,6 +3648,9 @@ id search_result_drama_recyclerview
 id search_result_location_recyclerview
 id search_src_text
 id search_voice_btn
+id sejong_login_dialog_no
+id sejong_login_dialog_tv
+id sejong_login_dialog_yes
 id select_dialog_listview
 id selected
 id selection_type
@@ -3753,6 +3765,7 @@ id textView2
 id textView20
 id textView21
 id textView22
+id textView23
 id textView24
 id textView27
 id textView3
@@ -3957,6 +3970,7 @@ layout activity_search_result
 layout activity_splash
 layout activity_talk_auth_code
 layout activity_visit_complete_course
+layout balloon_layout
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -4087,6 +4101,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout review_dialog
 layout search_reccomend_keyword_item
 layout search_recent_keyword_item
 layout select_dialog_item_material

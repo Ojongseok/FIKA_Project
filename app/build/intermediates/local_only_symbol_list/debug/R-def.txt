@@ -33,6 +33,8 @@ drawable blue_btn
 drawable btn_add_my_course
 drawable btn_all_review
 drawable bus
+drawable button_background_off
+drawable button_background_on
 drawable calender
 drawable call
 drawable camera
@@ -54,6 +56,7 @@ drawable filter
 drawable filter_rec
 drawable folder_background
 drawable folder_button_background
+drawable folder_button_background_on
 drawable gallery
 drawable gallery_plus
 drawable home
@@ -194,6 +197,7 @@ id btm_nav_stamp
 id btm_nav_tour
 id btm_navi
 id button
+id button2
 id cardView
 id child_title
 id constraintLayout
@@ -230,6 +234,8 @@ id dialog_review_close_iv
 id dialog_review_cv
 id dialog_review_iv
 id dialog_review_layout
+id drama_detail_back_btn
+id drama_detail_info_title_name
 id drama_info_course_image
 id drama_info_course_item_layout
 id drama_info_course_item_star
@@ -271,9 +277,13 @@ id filer_course_tv_1
 id filter_actor_tv
 id filter_course_page_btn_1
 id filter_course_page_btn_2
+id filter_course_sorting_btn
 id filter_course_tv_2
 id filter_drama_actor_btn
 id filter_drama_btn
+id filter_drama_sorting_btn
+id filter_sort_tv_course
+id filter_sorting_tv
 id folder_name_tv
 id folder_select_go_course_btn
 id folder_select_recyclerview
@@ -378,7 +388,6 @@ id large_map_location_name
 id large_map_title_name
 id large_map_where_tv
 id linearLayout
-id linearLayout2
 id linearLayout3
 id linearLayout4
 id linearLayout5
@@ -609,6 +618,9 @@ id search_remove_button
 id search_result_course_recyclerview
 id search_result_drama_recyclerview
 id search_result_location_recyclerview
+id sejong_login_dialog_no
+id sejong_login_dialog_tv
+id sejong_login_dialog_yes
 id siginup_email_editText
 id siginup_nickname_editText
 id siginup_passwordRe_editText
@@ -653,6 +665,7 @@ id textView2
 id textView20
 id textView21
 id textView22
+id textView23
 id textView24
 id textView27
 id textView3
@@ -709,6 +722,7 @@ layout activity_search
 layout activity_search_result
 layout activity_splash
 layout activity_visit_complete_course
+layout balloon_layout
 layout detail_scene_list_item
 layout dialog_login
 layout dialog_quit
@@ -754,6 +768,7 @@ layout item_spinner
 layout mycourse_save_state_list
 layout mycourse_view_item_list
 layout myhold_location_item_list
+layout review_dialog
 layout search_reccomend_keyword_item
 layout search_recent_keyword_item
 layout test
