@@ -1,23 +1,19 @@
 package com.example.fika_project.ui.login
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.webkit.WebView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fika_project.ApplicationClass.Companion.TAG
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityLoginBinding
-import com.example.fika_project.retrofit.User
 import com.example.fika_project.ui.main.MainActivity
 import com.example.fika_project.utils.spfManager
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
 import com.kakao.sdk.user.UserApiClient
-import timber.log.Timber
 
 class LoginActivity : AppCompatActivity(), LoginView {
     lateinit var binding : ActivityLoginBinding
@@ -27,15 +23,21 @@ class LoginActivity : AppCompatActivity(), LoginView {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
 
+        spfManager.ClearJwt()
+
 //        var keyHash = Utility.getKeyHash(this)
 //        Log.e(TAG, "해시 키 값 : ${keyHash}")
 
         initClickListener()
         setContentView(binding.root)
 
+<<<<<<< Updated upstream
         spfManager.ClearJwt()
 
 ////         편의상 시작
+=======
+//         편의상 시작
+>>>>>>> Stashed changes
 //        val intent = Intent(this, MainActivity::class.java)
 //        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 //        startActivity(intent)
@@ -78,6 +80,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
                         UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
                     } else if (token != null) {
                         Log.i(TAG, "카카오톡으로 로그인 성공2 : ${token.accessToken}")
+
                         spfManager.saveKakaoJwt(token.accessToken).toString()
                         val kakaoToken = spfManager.getKakaoJwt()
 
@@ -89,7 +92,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
                 UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
                 val kakaoToken = spfManager.getKakaoJwt()
 
-                Log.i(TAG,"카카오 로그인 토큰44444 : ${kakaoToken}")
+                Log.i(TAG,"카카오 로그인 토큰4 : ${kakaoToken}")
                 service.tryKakaoLogin(kakaoToken)
             }
         }

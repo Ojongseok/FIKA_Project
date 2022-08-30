@@ -31,6 +31,9 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
   public final ConstraintLayout itemPlaceinfoReviewBottomLayout;
 
   @NonNull
+  public final TextView itemPlaceinfoReviewContentsTv;
+
+  @NonNull
   public final TextView itemPlaceinfoReviewDateTv;
 
   @NonNull
@@ -219,10 +222,11 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
   private ActivityPlaceinfoLocateBinding(@NonNull RelativeLayout rootView,
       @NonNull LinearLayout itemPlaceinfoReviewBottomImgLayout,
       @NonNull ConstraintLayout itemPlaceinfoReviewBottomLayout,
-      @NonNull TextView itemPlaceinfoReviewDateTv, @NonNull ImageView itemPlaceinfoReviewImg01,
-      @NonNull ImageView itemPlaceinfoReviewImg02, @NonNull ImageView itemPlaceinfoReviewImg03,
-      @NonNull ImageView itemPlaceinfoReviewMoreIv, @NonNull TextView itemPlaceinfoReviewNameTv,
-      @NonNull ImageView itemPlaceinfoReviewProfileIv, @NonNull ImageView itemPlaceinfoReviewStarTv,
+      @NonNull TextView itemPlaceinfoReviewContentsTv, @NonNull TextView itemPlaceinfoReviewDateTv,
+      @NonNull ImageView itemPlaceinfoReviewImg01, @NonNull ImageView itemPlaceinfoReviewImg02,
+      @NonNull ImageView itemPlaceinfoReviewImg03, @NonNull ImageView itemPlaceinfoReviewMoreIv,
+      @NonNull TextView itemPlaceinfoReviewNameTv, @NonNull ImageView itemPlaceinfoReviewProfileIv,
+      @NonNull ImageView itemPlaceinfoReviewStarTv,
       @NonNull ConstraintLayout itemPlaceinfoReviewTopLayout, @NonNull ImageView placeinfoDialogIv,
       @NonNull TextView placeinfoHashtagTv, @NonNull ImageView placeinfoLocateAddMyCourseBtn,
       @NonNull ImageView placeinfoLocateAllReviewBtn, @NonNull ImageView placeinfoLocateBackIv,
@@ -260,6 +264,7 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
     this.rootView = rootView;
     this.itemPlaceinfoReviewBottomImgLayout = itemPlaceinfoReviewBottomImgLayout;
     this.itemPlaceinfoReviewBottomLayout = itemPlaceinfoReviewBottomLayout;
+    this.itemPlaceinfoReviewContentsTv = itemPlaceinfoReviewContentsTv;
     this.itemPlaceinfoReviewDateTv = itemPlaceinfoReviewDateTv;
     this.itemPlaceinfoReviewImg01 = itemPlaceinfoReviewImg01;
     this.itemPlaceinfoReviewImg02 = itemPlaceinfoReviewImg02;
@@ -360,6 +365,12 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
       id = R.id.item_placeinfo_review_bottom_layout;
       ConstraintLayout itemPlaceinfoReviewBottomLayout = ViewBindings.findChildViewById(rootView, id);
       if (itemPlaceinfoReviewBottomLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.item_placeinfo_review_contents_tv;
+      TextView itemPlaceinfoReviewContentsTv = ViewBindings.findChildViewById(rootView, id);
+      if (itemPlaceinfoReviewContentsTv == null) {
         break missingId;
       }
 
@@ -737,28 +748,29 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
 
       return new ActivityPlaceinfoLocateBinding((RelativeLayout) rootView,
           itemPlaceinfoReviewBottomImgLayout, itemPlaceinfoReviewBottomLayout,
-          itemPlaceinfoReviewDateTv, itemPlaceinfoReviewImg01, itemPlaceinfoReviewImg02,
-          itemPlaceinfoReviewImg03, itemPlaceinfoReviewMoreIv, itemPlaceinfoReviewNameTv,
-          itemPlaceinfoReviewProfileIv, itemPlaceinfoReviewStarTv, itemPlaceinfoReviewTopLayout,
-          placeinfoDialogIv, placeinfoHashtagTv, placeinfoLocateAddMyCourseBtn,
-          placeinfoLocateAllReviewBtn, placeinfoLocateBackIv, placeinfoLocateBasicInfoLayout,
-          placeinfoLocateBasicInfoLayoutUnderview, placeinfoLocateBasicInfoTitleTv,
-          placeinfoLocateCallIv, placeinfoLocateCallLayout, placeinfoLocateCallTv,
-          placeinfoLocateCoverAddressIv, placeinfoLocateCoverAddressTv, placeinfoLocateCoverIv,
-          placeinfoLocateCoverLayout, placeinfoLocateCoverLayoutUnderview, placeinfoLocateCoverTv,
-          placeinfoLocateFlagIv, placeinfoLocateFrm, placeinfoLocateMenuLayout,
-          placeinfoLocateMenuLayoutDetail1, placeinfoLocateMenuLayoutDetail2,
-          placeinfoLocateMenuLayoutUnderview, placeinfoLocateMenuPriceIv1,
-          placeinfoLocateMenuPriceIv2, placeinfoLocateMenuPriceTv1, placeinfoLocateMenuPriceTv2,
-          placeinfoLocateMenuTitleTv, placeinfoLocateMenuTv1, placeinfoLocateMenuTv2,
-          placeinfoLocateMoreIv, placeinfoLocateReviewLayout, placeinfoLocateReviewTitleTv,
-          placeinfoLocateSv, placeinfoLocateTagIv, placeinfoLocateTalkLayoutUnderview,
-          placeinfoLocateTimeIv, placeinfoLocateTimeLayout, placeinfoLocateTimeTv1,
-          placeinfoLocateTimeTv2, placeinfoLocateTimeTv3, placeinfoLocateTopLayout,
-          placeinfoLocateTopTitleTv, placeinfoLocateUpBtn, placeinfoLocateWebIv,
-          placeinfoLocateWebLayout, placeinfoLocateWebTv, placeinfoLocateWhereInfoIv,
-          placeinfoLocateWhereInfoLayout, placeinfoLocateWhereInfoLayoutUnderview,
-          placeinfoLocateWhereInfoMap, placeinfoLocateWhereInfoTitleTv, placeinfoLocateWhereInfoTv);
+          itemPlaceinfoReviewContentsTv, itemPlaceinfoReviewDateTv, itemPlaceinfoReviewImg01,
+          itemPlaceinfoReviewImg02, itemPlaceinfoReviewImg03, itemPlaceinfoReviewMoreIv,
+          itemPlaceinfoReviewNameTv, itemPlaceinfoReviewProfileIv, itemPlaceinfoReviewStarTv,
+          itemPlaceinfoReviewTopLayout, placeinfoDialogIv, placeinfoHashtagTv,
+          placeinfoLocateAddMyCourseBtn, placeinfoLocateAllReviewBtn, placeinfoLocateBackIv,
+          placeinfoLocateBasicInfoLayout, placeinfoLocateBasicInfoLayoutUnderview,
+          placeinfoLocateBasicInfoTitleTv, placeinfoLocateCallIv, placeinfoLocateCallLayout,
+          placeinfoLocateCallTv, placeinfoLocateCoverAddressIv, placeinfoLocateCoverAddressTv,
+          placeinfoLocateCoverIv, placeinfoLocateCoverLayout, placeinfoLocateCoverLayoutUnderview,
+          placeinfoLocateCoverTv, placeinfoLocateFlagIv, placeinfoLocateFrm,
+          placeinfoLocateMenuLayout, placeinfoLocateMenuLayoutDetail1,
+          placeinfoLocateMenuLayoutDetail2, placeinfoLocateMenuLayoutUnderview,
+          placeinfoLocateMenuPriceIv1, placeinfoLocateMenuPriceIv2, placeinfoLocateMenuPriceTv1,
+          placeinfoLocateMenuPriceTv2, placeinfoLocateMenuTitleTv, placeinfoLocateMenuTv1,
+          placeinfoLocateMenuTv2, placeinfoLocateMoreIv, placeinfoLocateReviewLayout,
+          placeinfoLocateReviewTitleTv, placeinfoLocateSv, placeinfoLocateTagIv,
+          placeinfoLocateTalkLayoutUnderview, placeinfoLocateTimeIv, placeinfoLocateTimeLayout,
+          placeinfoLocateTimeTv1, placeinfoLocateTimeTv2, placeinfoLocateTimeTv3,
+          placeinfoLocateTopLayout, placeinfoLocateTopTitleTv, placeinfoLocateUpBtn,
+          placeinfoLocateWebIv, placeinfoLocateWebLayout, placeinfoLocateWebTv,
+          placeinfoLocateWhereInfoIv, placeinfoLocateWhereInfoLayout,
+          placeinfoLocateWhereInfoLayoutUnderview, placeinfoLocateWhereInfoMap,
+          placeinfoLocateWhereInfoTitleTv, placeinfoLocateWhereInfoTv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

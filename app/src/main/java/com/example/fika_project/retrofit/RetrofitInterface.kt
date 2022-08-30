@@ -13,6 +13,7 @@ import com.example.fika_project.ui.main.mycourse.placeinfo.PlaceInfoResponse
 import com.example.fika_project.ui.main.mypage.MyScrapResponse
 import com.example.fika_project.ui.main.mypage.MypageResponse
 import com.example.fika_project.ui.main.hold_and_scrap.LocationScrapResponse
+import com.example.fika_project.ui.main.mycourse.placeinfo.ReportResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -85,6 +86,10 @@ interface RetrofitInterface {
     fun placeInfo(
         @Path("spotId") spotId : Int
     ): Call<PlaceInfoResponse>
+
+    // 24. 리뷰 신고
+    @POST("/review/report")
+    fun ReviewReport(@Body reviewReport: ReviewReport) : Call<ReportResponse>
 
     // 25. 마이페이지 조회
     @GET("/nav/mypage")

@@ -6,123 +6,158 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml
+8-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml
+9-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-11-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:6:5-79
-11-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:6:22-76
+11-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:6:5-79
+11-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:6:22-76
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:7:5-67
-12-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:7:22-64
+12-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:7:5-67
+12-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:7:22-64
 13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-13-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:8:5-79
-13-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:8:22-76
+13-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:8:5-79
+13-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:8:22-76
 14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-14-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:9:5-81
-14-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:9:22-78
+14-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:9:5-81
+14-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:9:22-78
 15
 16    <queries>
-16-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:11:5-13:15
+16-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:11:5-13:15
 17        <package android:name="com.kakao.talk" />
-17-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:12:9-50
-17-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:12:18-47
+17-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:12:9-50
+17-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:12:18-47
 18        <package android:name="com.kakao.talk.alpha" />
-18-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:13:9-56
-18-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:13:18-53
+18-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:13:9-56
+18-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:13:18-53
 19        <package android:name="com.kakao.talk.sandbox" />
-19-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:14:9-58
-19-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:14:18-55
+19-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:14:9-58
+19-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:14:18-55
 20        <package android:name="com.kakao.onetalk" />
-20-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:15:9-53
-20-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:15:18-50
+20-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:15:9-53
+20-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:15:18-50
 21        <package android:name="com.android.chrome" />
-21-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:16:9-54
-21-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:16:18-51
+21-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:16:9-54
+21-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:16:18-51
 22        <package android:name="com.chrome.beta" />
-22-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:17:9-51
-22-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:17:18-48
+22-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:17:9-51
+22-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:17:18-48
 23        <package android:name="com.chrome.dev" />
-23-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:18:9-50
-23-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\User\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:18:18-47
+23-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:18:9-50
+23-->[com.kakao.sdk:v2-common:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\c52ce6ac06b895c23827cb6e3ecbd322\transformed\v2-common-2.7.0\AndroidManifest.xml:18:18-47
 24    </queries>
 25
 26    <uses-permission android:name="android.permission.WAKE_LOCK" />
-26-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\User\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:24:5-68
-26-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\User\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:24:22-65
+26-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:24:5-68
+26-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:24:22-65
 27    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-27-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\User\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:25:5-79
-27-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\User\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:25:22-76
+27-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:25:5-79
+27-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:25:22-76
 28    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-28-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\User\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:26:5-110
-28-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\User\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:26:22-107
+28-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:26:5-110
+28-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:26:22-107
 29
 30    <application
+<<<<<<< Updated upstream
 30-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:15:5-85:19
+=======
+30-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:15:5-88:19
+>>>>>>> Stashed changes
 31        android:name="com.example.fika_project.ApplicationClass"
-31-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:16:9-41
+31-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:16:9-41
 32        android:allowBackup="true"
-32-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:17:9-35
+32-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:17:9-35
 33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-33-->[androidx.core:core:1.8.0] C:\Users\User\.gradle\caches\transforms-3\0bc489ff238d80f50d8f6a1f7be0e4c5\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+33-->[androidx.core:core:1.8.0] C:\Users\yuny0\.gradle\caches\transforms-3\0bc489ff238d80f50d8f6a1f7be0e4c5\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 34        android:debuggable="true"
 35        android:icon="@mipmap/ic_launcher"
-35-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:18:9-43
+35-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:18:9-43
 36        android:label="@string/app_name"
-36-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:19:9-41
+36-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:19:9-41
 37        android:roundIcon="@mipmap/ic_launcher_round"
-37-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:20:9-54
+37-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:20:9-54
 38        android:supportsRtl="true"
-38-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:21:9-35
+38-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:21:9-35
 39        android:testOnly="true"
 40        android:theme="@style/Theme.FIKA_Project"
-40-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:22:9-50
+40-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:22:9-50
 41        android:usesCleartextTraffic="true" >
-41-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:23:9-44
+41-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:23:9-44
 42        <activity
-42-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:25:9-27:40
+42-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:25:9-27:40
 43            android:name="com.example.fika_project.ui.main.mycourse.CourseInfoEditActivity"
-43-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:26:13-68
+43-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:26:13-68
 44            android:exported="false" />
-44-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:27:13-37
+44-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:27:13-37
 45        <activity
-45-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:28:9-30:40
+45-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:28:9-30:40
 46            android:name="com.example.fika_project.ui.main.explore.drama_info.LargeMapActivity"
-46-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:29:13-72
+46-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:29:13-72
 47            android:exported="false" />
-47-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:30:13-37
+47-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:30:13-37
 48        <activity
+<<<<<<< Updated upstream
 48-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:31:9-33:40
 49            android:name="com.example.fika_project.ui.main.mypage.myspot.MySpotActivity"
 49-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:32:13-65
+=======
+48-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:31:9-33:40
+49            android:name="com.example.fika_project.ui.main.mypage.myscrap.MyScrapActivity"
+49-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:32:13-67
+>>>>>>> Stashed changes
 50            android:exported="false" />
-50-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:33:13-37
+50-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:33:13-37
 51        <activity
+<<<<<<< Updated upstream
 51-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:34:9-36:40
 52            android:name="com.example.fika_project.ui.main.explore.CourseDetailDramaOthers"
 52-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:35:13-68
+=======
+51-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:34:9-36:40
+52            android:name="com.example.fika_project.ui.main.mypage.myspot.MySpotActivity"
+52-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:35:13-65
+>>>>>>> Stashed changes
 53            android:exported="false" />
-53-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:36:13-37
+53-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:36:13-37
 54        <activity
+<<<<<<< Updated upstream
 54-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:37:9-39:40
 55            android:name="com.example.fika_project.ui.main.mycourse.ReviewWriteActivity"
 55-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:38:13-65
+=======
+54-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:37:9-39:40
+55            android:name="com.example.fika_project.ui.main.explore.CourseDetailDramaOthers"
+55-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:38:13-68
+>>>>>>> Stashed changes
 56            android:exported="false" />
-56-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:39:13-37
+56-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:39:13-37
 57        <activity
+<<<<<<< Updated upstream
 57-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:40:9-42:40
 58            android:name="com.example.fika_project.ui.main.mycourse.VisitCompleteCourse"
 58-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:41:13-65
+=======
+57-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:40:9-42:40
+58            android:name="com.example.fika_project.ui.main.mycourse.ReviewWriteActivity"
+58-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:41:13-65
+>>>>>>> Stashed changes
 59            android:exported="false" />
-59-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:42:13-37
+59-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:42:13-37
 60        <activity
+<<<<<<< Updated upstream
 60-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:43:9-45:40
 61            android:name="com.example.fika_project.ui.main.mycourse.search.SearchResultActivity"
 61-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:44:13-73
+=======
+60-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:43:9-45:40
+61            android:name="com.example.fika_project.ui.main.mycourse.VisitCompleteCourse"
+61-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:44:13-65
+>>>>>>> Stashed changes
 62            android:exported="false" />
-62-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:45:13-37
+62-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:45:13-37
 63        <activity
+<<<<<<< Updated upstream
 63-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:47:9-55:20
 64            android:name="com.example.fika_project.ui.splash.SplashActivity"
 64-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:48:13-53
@@ -353,3 +388,241 @@
 181    </application>
 182
 183</manifest>
+=======
+63-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:46:9-48:40
+64            android:name="com.example.fika_project.ui.main.mycourse.search.SearchResultActivity"
+64-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:47:13-73
+65            android:exported="false" />
+65-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:48:13-37
+66        <activity
+66-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:50:9-58:20
+67            android:name="com.example.fika_project.ui.splash.SplashActivity"
+67-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:51:13-53
+68            android:exported="true" >
+68-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:52:13-36
+69            <intent-filter>
+69-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:53:13-57:29
+70                <action android:name="android.intent.action.MAIN" />
+70-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:54:17-69
+70-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:54:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:56:17-77
+72-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:56:27-74
+73            </intent-filter>
+74        </activity>
+75        <activity android:name="com.example.fika_project.ui.main.MainActivity" />
+75-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:60:9-58
+75-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:60:19-55
+76        <activity android:name="com.example.fika_project.ui.login.LoginActivity" />
+76-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:61:9-60
+76-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:61:19-57
+77        <activity android:name="com.example.fika_project.ui.main.mycourse.search.SearchActivity" />
+77-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:62:9-76
+77-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:62:19-73
+78        <activity android:name="com.example.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity" />
+78-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:63:9-87
+78-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:63:19-84
+79        <activity android:name="com.example.fika_project.ui.main.explore.FolderSelectActivity" />
+79-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:64:9-74
+79-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:64:19-71
+80        <activity android:name="com.example.fika_project.ui.main.explore.CourseDetailDrama" />
+80-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:65:9-71
+80-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:65:19-68
+81        <activity android:name="com.example.fika_project.ui.main.explore.drama_info.DramaInfoActivity" />
+81-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:66:9-82
+81-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:66:19-79
+82        <activity android:name="com.example.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity" />
+82-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:67:9-89
+82-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:67:19-86
+83        <activity android:name="com.example.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity" />
+83-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:68:9-82
+83-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:68:19-79
+84        <activity
+84-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:69:9-83:20
+85            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+85-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:70:13-70
+86            android:exported="true"
+86-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:71:13-36
+87            android:launchMode="singleTask"
+87-->[com.kakao.sdk:v2-auth:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\051375f6d3016fab07097f856c023817\transformed\v2-auth-2.7.0\AndroidManifest.xml:19:13-44
+88            android:theme="@style/TransparentCompat" >
+88-->[com.kakao.sdk:v2-auth:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\051375f6d3016fab07097f856c023817\transformed\v2-auth-2.7.0\AndroidManifest.xml:20:13-53
+89            <intent-filter>
+89-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:72:13-82:29
+90                <action android:name="android.intent.action.VIEW" />
+90-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:73:17-69
+90-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:73:25-66
+91
+92                <category android:name="android.intent.category.DEFAULT" />
+92-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:75:17-76
+92-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:75:27-73
+93                <category android:name="android.intent.category.BROWSABLE" />
+93-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:76:17-78
+93-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:76:27-75
+94
+95                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
+96                <data
+96-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:79:17-81:65
+97                    android:host="oauth"
+97-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:80:21-41
+98                    android:scheme="@string/kakao_native_key" />
+98-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:81:21-62
+99            </intent-filter>
+100        </activity>
+101
+102        <meta-data
+102-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:85:9-87:64
+103            android:name="com.kakao.sdk.AppKey"
+103-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:86:13-48
+104            android:value="8f19d7b7c42cc6b338c1a0abda3e3b93" />
+104-->D:\~29\FIKA_Prj\app\src\main\AndroidManifest.xml:87:13-61
+105
+106        <activity
+106-->[com.kakao.sdk:v2-auth:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\051375f6d3016fab07097f856c023817\transformed\v2-auth-2.7.0\AndroidManifest.xml:12:9-16:56
+107            android:name="com.kakao.sdk.auth.TalkAuthCodeActivity"
+107-->[com.kakao.sdk:v2-auth:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\051375f6d3016fab07097f856c023817\transformed\v2-auth-2.7.0\AndroidManifest.xml:13:13-67
+108            android:exported="false"
+108-->[com.kakao.sdk:v2-auth:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\051375f6d3016fab07097f856c023817\transformed\v2-auth-2.7.0\AndroidManifest.xml:14:13-37
+109            android:launchMode="singleTask"
+109-->[com.kakao.sdk:v2-auth:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\051375f6d3016fab07097f856c023817\transformed\v2-auth-2.7.0\AndroidManifest.xml:15:13-44
+110            android:theme="@style/TransparentCompat" />
+110-->[com.kakao.sdk:v2-auth:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\051375f6d3016fab07097f856c023817\transformed\v2-auth-2.7.0\AndroidManifest.xml:16:13-53
+111
+112        <uses-library
+112-->[androidx.window:window:1.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\073da2f410ca49964bd1bfb364aca84f\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+113            android:name="androidx.window.extensions"
+113-->[androidx.window:window:1.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\073da2f410ca49964bd1bfb364aca84f\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+114            android:required="false" />
+114-->[androidx.window:window:1.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\073da2f410ca49964bd1bfb364aca84f\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+115        <uses-library
+115-->[androidx.window:window:1.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\073da2f410ca49964bd1bfb364aca84f\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+116            android:name="androidx.window.sidecar"
+116-->[androidx.window:window:1.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\073da2f410ca49964bd1bfb364aca84f\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+117            android:required="false" />
+117-->[androidx.window:window:1.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\073da2f410ca49964bd1bfb364aca84f\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+118
+119        <activity
+119-->[com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:12:9-19:20
+120            android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity"
+120-->[com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:13:13-86
+121            android:configChanges="orientation|screenSize"
+121-->[com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:14:13-59
+122            android:exported="false"
+122-->[com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:15:13-37
+123            android:label="@string/com_kakao_login_button"
+123-->[com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:16:13-59
+124            android:launchMode="singleTop"
+124-->[com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:17:13-43
+125            android:windowSoftInputMode="adjustResize" >
+125-->[com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:18:13-55
+126        </activity>
+127
+128        <service
+128-->[com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:8:9-14:19
+129            android:name="com.google.firebase.components.ComponentDiscoveryService"
+129-->[com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:9:13-84
+130            android:directBootAware="true"
+130-->[com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:35:13-43
+131            android:exported="false" >
+131-->[com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:10:13-37
+132            <meta-data
+132-->[com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:11:13-13:85
+133                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+133-->[com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:12:17-126
+134                android:value="com.google.firebase.components.ComponentRegistrar" />
+134-->[com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:13:17-82
+135            <meta-data
+135-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\9a02ebf3ac3615f6ef876cce870b22c8\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:15:13-17:85
+136                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+136-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\9a02ebf3ac3615f6ef876cce870b22c8\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:16:17-113
+137                android:value="com.google.firebase.components.ComponentRegistrar" />
+137-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\9a02ebf3ac3615f6ef876cce870b22c8\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:17:17-82
+138            <meta-data
+138-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:31:13-33:85
+139                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+139-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:32:17-139
+140                android:value="com.google.firebase.components.ComponentRegistrar" />
+140-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:33:17-82
+141            <meta-data
+141-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\f101ce963aebdb0909d46bb9c14a1234\transformed\firebase-installations-17.0.1\AndroidManifest.xml:18:13-20:85
+142                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+142-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\f101ce963aebdb0909d46bb9c14a1234\transformed\firebase-installations-17.0.1\AndroidManifest.xml:19:17-127
+143                android:value="com.google.firebase.components.ComponentRegistrar" />
+143-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\f101ce963aebdb0909d46bb9c14a1234\transformed\firebase-installations-17.0.1\AndroidManifest.xml:20:17-82
+144        </service>
+145
+146        <provider
+146-->[com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:26:9-31:39
+147            android:name="com.google.firebase.provider.FirebaseInitProvider"
+147-->[com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:27:13-77
+148            android:authorities="com.example.fika_project.firebaseinitprovider"
+148-->[com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:28:13-72
+149            android:directBootAware="true"
+149-->[com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:29:13-43
+150            android:exported="false"
+150-->[com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:30:13-37
+151            android:initOrder="100" />
+151-->[com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:31:13-36
+152
+153        <receiver
+153-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:29:9-33:20
+154            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+154-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:30:13-85
+155            android:enabled="true"
+155-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:31:13-35
+156            android:exported="false" >
+156-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:32:13-37
+157        </receiver>
+158
+159        <service
+159-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:35:9-38:40
+160            android:name="com.google.android.gms.measurement.AppMeasurementService"
+160-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:36:13-84
+161            android:enabled="true"
+161-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:37:13-35
+162            android:exported="false" />
+162-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:38:13-37
+163        <service
+163-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:39:9-43:72
+164            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+164-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:40:13-87
+165            android:enabled="true"
+165-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:41:13-35
+166            android:exported="false"
+166-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:42:13-37
+167            android:permission="android.permission.BIND_JOB_SERVICE" />
+167-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:43:13-69
+168
+169        <meta-data
+169-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+170            android:name="com.google.android.gms.version"
+170-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+171            android:value="@integer/google_play_services_version" />
+171-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+172
+173        <provider
+173-->[androidx.emoji2:emoji2:1.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\a5e92bc27fe73a696e034afe60b05d75\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+174            android:name="androidx.startup.InitializationProvider"
+174-->[androidx.emoji2:emoji2:1.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\a5e92bc27fe73a696e034afe60b05d75\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+175            android:authorities="com.example.fika_project.androidx-startup"
+175-->[androidx.emoji2:emoji2:1.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\a5e92bc27fe73a696e034afe60b05d75\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+176            android:exported="false" >
+176-->[androidx.emoji2:emoji2:1.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\a5e92bc27fe73a696e034afe60b05d75\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+177            <meta-data
+177-->[androidx.emoji2:emoji2:1.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\a5e92bc27fe73a696e034afe60b05d75\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+178                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+178-->[androidx.emoji2:emoji2:1.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\a5e92bc27fe73a696e034afe60b05d75\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+179                android:value="androidx.startup" />
+179-->[androidx.emoji2:emoji2:1.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\a5e92bc27fe73a696e034afe60b05d75\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+180            <meta-data
+180-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\yuny0\.gradle\caches\transforms-3\7c98fea4d132ec2d8d101aa08431d132\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+181                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+181-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\yuny0\.gradle\caches\transforms-3\7c98fea4d132ec2d8d101aa08431d132\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+182                android:value="androidx.startup" />
+182-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\yuny0\.gradle\caches\transforms-3\7c98fea4d132ec2d8d101aa08431d132\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+183        </provider>
+184    </application>
+185
+186</manifest>
+>>>>>>> Stashed changes

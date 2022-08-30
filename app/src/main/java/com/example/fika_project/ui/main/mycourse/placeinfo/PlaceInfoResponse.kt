@@ -31,17 +31,26 @@ data class PlaceInfo (
 
 data class MenuList (
     @SerializedName("menuName") val menuName: String,
-    @SerializedName("menuPrice") val menuPrice: ArrayList<PlaceInfo>?
+    @SerializedName("menuPrice") val menuPrice: String
 )
 
 data class ReviewList (
-    @SerializedName("reviewId") val reviewId: String,
-    @SerializedName("spotDataId") val spotDataId: ArrayList<PlaceInfo>?,
-    @SerializedName("spotDataTitle") val spotDataTitle: ArrayList<MenuList>?,
-    @SerializedName("rate") val rate: ArrayList<ReviewList>,
+    @SerializedName("reviewId") val reviewId: Int,
+    @SerializedName("spotDataId") val spotDataId: Int,
+    @SerializedName("spotDataTitle") val spotDataTitle: String,
+    @SerializedName("rate") val rate: Int,
     @SerializedName("userNickname") val userNickname: String,
-    @SerializedName("reviewContents") val reviewContents: ArrayList<PlaceInfo>?,
-    @SerializedName("imageUrls") val imageUrls: ArrayList<PlaceInfo>?,
-    @SerializedName("createAt") val createAt: ArrayList<PlaceInfo>?,
-    @SerializedName("imageReview") val imageReview: ArrayList<PlaceInfo>?,
+    @SerializedName("reviewContents") val reviewContents: String,
+    @SerializedName("imageUrls") val imageUrls: ArrayList<String>?,
+    @SerializedName("createAt") val createAt: String,
+    @SerializedName("imageReview") val imageReview: Boolean,
+)
+
+
+data class ReportResponse (
+    @SerializedName("isSuccess") val isSuccess: Boolean,
+    @SerializedName("code") val code: Int,
+    @SerializedName("message") val message: String,
+    @SerializedName("result") val result: String,
+    @SerializedName("httpStatus") val httpStatus: String
 )

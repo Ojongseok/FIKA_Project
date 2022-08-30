@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 #Tue Aug 30 23:37:21 KST 2022
+=======
+#Wed Aug 31 00:35:49 KST 2022
+>>>>>>> Stashed changes
 path.4=13/classes.dex
 path.3=12/classes.dex
 path.2=11/classes.dex
@@ -16,11 +20,35 @@ renamed.11=classes12.dex
 renamed.10=classes11.dex
 base.14=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 path.0=classes.dex
+<<<<<<< Updated upstream
 base.4=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
 base.3=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
 base.2=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
 base.1=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.0=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+=======
+base.4=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.3=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.2=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.1=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+path.9=4/classes.dex
+base.9=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.8=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.7=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.6=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
+base.5=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+renamed.9=classes10.dex
+renamed.8=classes9.dex
+renamed.15=classes16.dex
+renamed.14=classes15.dex
+renamed.13=classes14.dex
+renamed.12=classes13.dex
+renamed.11=classes12.dex
+renamed.10=classes11.dex
+base.15=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.14=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+>>>>>>> Stashed changes
 renamed.3=classes4.dex
 path.12=7/classes.dex
 renamed.2=classes3.dex
@@ -39,8 +67,16 @@ renamed.5=classes6.dex
 base.6=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
 path.14=9/classes.dex
 renamed.4=classes5.dex
+<<<<<<< Updated upstream
 base.5=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
 base.13=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
 base.12=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 base.11=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
 base.10=C\:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+=======
+path.15=classes2.dex
+base.13=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
+base.12=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.11=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.10=D\:\\~29\\FIKA_Prj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+>>>>>>> Stashed changes

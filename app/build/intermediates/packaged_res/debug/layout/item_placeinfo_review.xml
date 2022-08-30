@@ -15,14 +15,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <ImageView
-            android:id="@+id/item_placeinfo_review_profile_iv"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/item_placeinfo_review_profile_cv"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/profile_sample_img"
+            app:cardCornerRadius="100dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/item_placeinfo_review_profile_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_fikaduck"/>
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/item_placeinfo_review_name_tv"
@@ -33,13 +41,13 @@
             android:textStyle="bold"
             android:layout_marginStart="6dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/item_placeinfo_review_profile_iv"/>
+            app:layout_constraintStart_toEndOf="@id/item_placeinfo_review_profile_cv"/>
 
         <ImageView
             android:id="@+id/item_placeinfo_review_star_tv"
             android:layout_width="14dp"
             android:layout_height="14dp"
-            android:src="@drawable/ic_star_on"
+            android:src="@drawable/star_blue"
             app:layout_constraintStart_toStartOf="@id/item_placeinfo_review_name_tv"
             app:layout_constraintTop_toBottomOf="@id/item_placeinfo_review_name_tv"/>
 

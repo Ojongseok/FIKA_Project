@@ -66,12 +66,7 @@ class HomeFragment : Fragment(), HomeView {
         binding.homePlaceRankRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.homePlaceRankRv.adapter = placeRankRVAdapter
         binding.homePlaceRankRv.setHasFixedSize(false)
-
-        placeRankRVAdapter.setMyItemClickListener(object  : PlaceRankRVAdapter.MyItemClickListener{
-            override fun onItemClick(placeRank: spotsSortBySaved) {
-                TODO("Not yet implemented")
-            }
-        }) }
+ }
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -98,17 +93,5 @@ class HomeFragment : Fragment(), HomeView {
     override fun onHomeFailure(code: Int, message: String) {
         Toast.makeText(requireContext(),"통신 에러",Toast.LENGTH_SHORT).show()
     }
-
-//    //어댑터 아이템 클릭
-//    private fun changeDramaInfo(dramaRank: dramaList) {
-//        (context as MainActivity).supportFragmentManager.beginTransaction()
-//            .add(R.id.main_frm, DramaRankFragment().apply {
-//            arguments = Bundle().apply {
-//                val gson = Gson()
-//                val DramaInfo = gson.toJson(dramaRank!!)
-//                putString("DramaInfo", DramaInfo)
-//            }
-//        })
-//    }
 }
 

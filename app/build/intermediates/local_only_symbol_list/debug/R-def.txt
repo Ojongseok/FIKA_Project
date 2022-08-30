@@ -54,12 +54,14 @@ drawable explore_on
 drawable eye
 drawable filter
 drawable filter_rec
+drawable flag_blue
 drawable folder_background
 drawable folder_button_background
 drawable folder_button_background_on
 drawable gallery
 drawable gallery_plus
 drawable home
+drawable home_course_null_card
 drawable home_make_course_btn
 drawable home_off
 drawable home_on
@@ -88,6 +90,10 @@ drawable kakaomap_somenail
 drawable loacte_tag
 drawable login_btn
 drawable login_dialog_btn
+drawable login_google
+drawable login_kakao
+drawable login_line
+drawable login_yahoo
 drawable logindialog_background
 drawable logo_fikaapp
 drawable logo_fikaduck
@@ -123,6 +129,8 @@ drawable search
 drawable share
 drawable signup_textbox
 drawable sort
+drawable star_blue
+drawable star_yellow
 drawable stroke_down
 drawable stroke_up
 drawable switch_thumb
@@ -372,6 +380,7 @@ id item_placeinfo_review_img_02
 id item_placeinfo_review_img_03
 id item_placeinfo_review_more_iv
 id item_placeinfo_review_name_tv
+id item_placeinfo_review_profile_cv
 id item_placeinfo_review_profile_iv
 id item_placeinfo_review_star_tv
 id item_placeinfo_review_top_layout
@@ -478,24 +487,8 @@ id nickname_warning_tv
 id others_star_count_tv
 id passwordRe_editText_usable
 id password_editText_usable
-id placeinfo_add_my_course_btn
-id placeinfo_all_review_btn
-id placeinfo_back_iv
-id placeinfo_basic_info_layout
-id placeinfo_basic_info_layout_underview
-id placeinfo_basic_info_title_tv
-id placeinfo_call_iv
-id placeinfo_call_layout
-id placeinfo_call_tv
-id placeinfo_cover_address_iv
-id placeinfo_cover_address_tv
-id placeinfo_cover_iv
-id placeinfo_cover_layout
-id placeinfo_cover_layout_underview
-id placeinfo_cover_tv
 id placeinfo_dialog_iv
 id placeinfo_hashtag_tv
-id placeinfo_home_iv
 id placeinfo_locate_add_my_course_btn
 id placeinfo_locate_all_review_btn
 id placeinfo_locate_back_iv
@@ -547,6 +540,7 @@ id placeinfo_locate_where_info_layout_underview
 id placeinfo_locate_where_info_map
 id placeinfo_locate_where_info_title_tv
 id placeinfo_locate_where_info_tv
+<<<<<<< Updated upstream
 id placeinfo_sv
 id placeinfo_time_iv
 id placeinfo_time_layout
@@ -560,6 +554,8 @@ id placeinfo_web_iv
 id placeinfo_web_layout
 id placeinfo_web_tv
 id progressBar2
+=======
+>>>>>>> Stashed changes
 id quit_back_btn
 id quit_btn
 id quit_contents_layout
@@ -761,7 +757,6 @@ layout fragment_myholdcourse
 layout fragment_mypage
 layout fragment_myscrapcourse
 layout fragment_nickname
-layout fragment_placeinfo
 layout fragment_quit
 layout fragment_review_img
 layout fragment_review_report

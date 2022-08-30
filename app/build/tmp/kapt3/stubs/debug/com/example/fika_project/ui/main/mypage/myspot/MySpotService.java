@@ -8,7 +8,11 @@ public final class MySpotService {
     private final com.example.fika_project.ui.main.mypage.myspot.MySpotView View = null;
     private final com.example.fika_project.retrofit.RetrofitInterface retrofit = null;
     @org.jetbrains.annotations.NotNull()
+<<<<<<< Updated upstream
     private final java.lang.String token = "";
+=======
+    private final java.lang.String token = "X_ACCESS_TOKEN";
+>>>>>>> Stashed changes
     @org.jetbrains.annotations.NotNull()
     private final retrofit2.Call<com.example.fika_project.ui.main.mypage.myspot.MySpotResponse> load = null;
     

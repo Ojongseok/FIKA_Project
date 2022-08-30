@@ -10,21 +10,23 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentAllReviewBinding
 import com.example.fika_project.ui.main.MainActivity
+import com.example.fika_project.ui.main.mycourse.placeinfo.*
+import com.example.fika_project.utils.spfManager
 import com.google.gson.Gson
 
-class AllReviewFragment: Fragment() {
+class AllReviewFragment: Fragment(), PlaceinfoView {
     private var _binding: FragmentAllReviewBinding? = null
     private val binding get() = _binding!!
+    val courseId = spfManager.getCourseId()!!.toInt()
+    val service = PlaceinfoService(this)
 
-    private var reviewDatas = ArrayList<Review>();
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentAllReviewBinding.inflate(inflater, container, false)
 
-        initView()
-        initData()
         onClickListener()
 
+        service.tryPlaceinfo(courseId)
         return binding.root
     }
 
@@ -37,46 +39,21 @@ class AllReviewFragment: Fragment() {
     }
 
 
-    private fun initView() {
-        binding.allReviewRv.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        val allReviewRVAdapter = AllReviewRVAdapter(reviewDatas)
+    private fun setAdapter(reviewList: ArrayList<ReviewList>) {
+        val allReviewRVAdapter = AllReviewRVAdapter(reviewList,requireContext())
+        binding.allReviewRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.allReviewRv.adapter = allReviewRVAdapter
+        binding.allReviewRv.setHasFixedSize(false)
 
         allReviewRVAdapter.setMyItemClickListener(object : AllReviewRVAdapter.MyItemClickListener{
-            override fun onItemClick(review: Review) {
-                viewReviewImgFrag(review)
-            }
-
             override fun onItemMoreClick(position: Int) {
                 viewReviewReportFrag()
             }
         })
     }
 
-    private fun initData() {
-        reviewDatas.apply {
-            add(Review(1, "새로이짱", R.drawable.ic_star_on, "2011-1-11", R.color.main_blue,"아아아아 좋다~~"))
-            add(Review(1, "다람쥐", R.drawable.ic_star_off, "2011-1-11", R.color.black,"아아아아 좋다~~아아아아 좋다~~"))
-            add(Review(1, "가나다", R.drawable.ic_star_on, "2011-1-11", R.color.sub_yellow,"아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~"))
-            add(Review(1, "조이서짱", R.drawable.ic_star_off, "2011-1-11", R.color.purple_500,"아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~아아아아 좋다~~"))
-        }
-    }
-
-    private fun viewReviewImgFrag(review: Review) {
-            (context as MainActivity).supportFragmentManager.beginTransaction()
-            .add(R.id.placeinfo_locate_frm, ReviewImgFragment().apply {
-                arguments = Bundle().apply {
-                    val gson = Gson()
-                    val reviewJson = gson.toJson(review)
-                    putString("review", reviewJson)
-                }
-            })
-            .commitAllowingStateLoss()
-    }
-
     private fun viewReviewReportFrag() {
-        (context as MainActivity).supportFragmentManager.beginTransaction()
+        (context as PlaceinfoActivity).supportFragmentManager.beginTransaction()
             .add(R.id.placeinfo_locate_frm, ReviewReportFragment())
             .commitAllowingStateLoss()
     }
@@ -85,5 +62,22 @@ class AllReviewFragment: Fragment() {
     override fun onDestroy() {
         _binding = null
         super.onDestroy()
+    }
+
+    override fun onLoading() {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPlaceinfoSuccess(response: PlaceInfoResponse) {
+        when(response.code){
+            1000 -> {
+                response?.let { setAdapter(it.result!!.reviewList) }
+                binding.allViewSubTitleNumTv.text = response.result!!.reviewCount.toString()
+            }
+        }
+    }
+
+    override fun onReviewReportSuccess(response: ReportResponse) {
+        //없는 함수
     }
 }

@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -49,6 +50,9 @@ public final class ItemPlaceinfoReviewBinding implements ViewBinding {
   public final TextView itemPlaceinfoReviewNameTv;
 
   @NonNull
+  public final CardView itemPlaceinfoReviewProfileCv;
+
+  @NonNull
   public final ImageView itemPlaceinfoReviewProfileIv;
 
   @NonNull
@@ -63,8 +67,8 @@ public final class ItemPlaceinfoReviewBinding implements ViewBinding {
       @NonNull TextView itemPlaceinfoReviewContentsTv, @NonNull TextView itemPlaceinfoReviewDateTv,
       @NonNull ImageView itemPlaceinfoReviewImg01, @NonNull ImageView itemPlaceinfoReviewImg02,
       @NonNull ImageView itemPlaceinfoReviewImg03, @NonNull ImageView itemPlaceinfoReviewMoreIv,
-      @NonNull TextView itemPlaceinfoReviewNameTv, @NonNull ImageView itemPlaceinfoReviewProfileIv,
-      @NonNull ImageView itemPlaceinfoReviewStarTv,
+      @NonNull TextView itemPlaceinfoReviewNameTv, @NonNull CardView itemPlaceinfoReviewProfileCv,
+      @NonNull ImageView itemPlaceinfoReviewProfileIv, @NonNull ImageView itemPlaceinfoReviewStarTv,
       @NonNull ConstraintLayout itemPlaceinfoReviewTopLayout) {
     this.rootView = rootView;
     this.itemPlaceinfoReviewBottomImgLayout = itemPlaceinfoReviewBottomImgLayout;
@@ -76,6 +80,7 @@ public final class ItemPlaceinfoReviewBinding implements ViewBinding {
     this.itemPlaceinfoReviewImg03 = itemPlaceinfoReviewImg03;
     this.itemPlaceinfoReviewMoreIv = itemPlaceinfoReviewMoreIv;
     this.itemPlaceinfoReviewNameTv = itemPlaceinfoReviewNameTv;
+    this.itemPlaceinfoReviewProfileCv = itemPlaceinfoReviewProfileCv;
     this.itemPlaceinfoReviewProfileIv = itemPlaceinfoReviewProfileIv;
     this.itemPlaceinfoReviewStarTv = itemPlaceinfoReviewStarTv;
     this.itemPlaceinfoReviewTopLayout = itemPlaceinfoReviewTopLayout;
@@ -162,6 +167,12 @@ public final class ItemPlaceinfoReviewBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.item_placeinfo_review_profile_cv;
+      CardView itemPlaceinfoReviewProfileCv = ViewBindings.findChildViewById(rootView, id);
+      if (itemPlaceinfoReviewProfileCv == null) {
+        break missingId;
+      }
+
       id = R.id.item_placeinfo_review_profile_iv;
       ImageView itemPlaceinfoReviewProfileIv = ViewBindings.findChildViewById(rootView, id);
       if (itemPlaceinfoReviewProfileIv == null) {
@@ -184,8 +195,8 @@ public final class ItemPlaceinfoReviewBinding implements ViewBinding {
           itemPlaceinfoReviewBottomImgLayout, itemPlaceinfoReviewBottomLayout,
           itemPlaceinfoReviewContentsTv, itemPlaceinfoReviewDateTv, itemPlaceinfoReviewImg01,
           itemPlaceinfoReviewImg02, itemPlaceinfoReviewImg03, itemPlaceinfoReviewMoreIv,
-          itemPlaceinfoReviewNameTv, itemPlaceinfoReviewProfileIv, itemPlaceinfoReviewStarTv,
-          itemPlaceinfoReviewTopLayout);
+          itemPlaceinfoReviewNameTv, itemPlaceinfoReviewProfileCv, itemPlaceinfoReviewProfileIv,
+          itemPlaceinfoReviewStarTv, itemPlaceinfoReviewTopLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

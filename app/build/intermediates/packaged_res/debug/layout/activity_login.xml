@@ -16,20 +16,19 @@
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_margin="20dp"
-        android:src="@drawable/sample_image"
+        android:src="@drawable/logo_fikaapp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/img_app_logo"/>
 
     <ImageView
         android:id="@+id/login_logo_big_iv"
-        android:layout_width="0dp"
+        android:layout_width="220dp"
         android:layout_height="260dp"
         android:layout_marginTop="88dp"
         android:layout_marginStart="96dp"
         android:layout_marginEnd="96dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/sample_image"
+        android:src="@drawable/logo_fikaduck"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -41,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="간편로그인"
         android:textStyle="bold"
-        android:textColor="@color/login_text"
+        android:textColor="@color/black2"
         android:textSize="18sp"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,46 +65,17 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/login_google_iv"
+                android:id="@+id/login_kakao_iv"
                 android:layout_width="58dp"
                 android:layout_height="58dp"
-                android:src="@drawable/sample_image"/>
+                android:src="@drawable/login_kakao"/>
 
 
             <TextView
-                android:id="@+id/login_google_tv"
+                android:id="@+id/login_kakao_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="구글"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/login_text"
-                android:textSize="12sp"/>
-        </LinearLayout>
-
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/login_yahoo_iv"
-                android:layout_width="58dp"
-                android:layout_height="58dp"
-                android:src="@drawable/sample_image"/>
-
-
-            <TextView
-                android:id="@+id/login_yahoo_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="야후재팬"
+                android:text="카카오"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/login_text"
                 android:textSize="12sp"/>
@@ -126,7 +96,7 @@
                 android:id="@+id/login_line_iv"
                 android:layout_width="58dp"
                 android:layout_height="58dp"
-                android:src="@drawable/sample_image"/>
+                android:src="@drawable/login_line"/>
 
 
             <TextView
@@ -150,17 +120,43 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/login_kakao_iv"
+                android:id="@+id/login_google_iv"
                 android:layout_width="58dp"
                 android:layout_height="58dp"
-                android:src="@drawable/sample_image"/>
+                android:src="@drawable/login_google"/>
 
 
             <TextView
-                android:id="@+id/login_kakao_tv"
+                android:id="@+id/login_google_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="카카오"
+                android:text="구글"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/login_text"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/login_yahoo_iv"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:src="@drawable/login_yahoo"/>
+
+
+            <TextView
+                android:id="@+id/login_yahoo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="야후재팬"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/login_text"
                 android:textSize="12sp"/>
@@ -172,10 +168,10 @@
         android:id="@+id/login_question_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FIKA가 처음이신가요?"
+        android:text="로그인에 어려움이 있나요?"
         android:textColor="@color/login_text"
         android:textSize="16sp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="68dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

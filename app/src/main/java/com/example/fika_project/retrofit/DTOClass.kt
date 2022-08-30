@@ -10,3 +10,9 @@ data class User(
 data class Nickname(
     var nickname: String
 )
+
+data class ReviewReport(
+    var reviewId: Int,
+    var reportType: String?,
+    var reportDetail: String?
+)

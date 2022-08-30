@@ -37,6 +37,7 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding:ItemHomeCourseBinding = ItemHomeCourseBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
 
+
         return when(viewType) {
             FOOTER -> FooterViewHolder(viewGroup.inflate(R.layout.footer_home_my_course_rv))
             else ->  ItemViewHolder(binding)
@@ -55,38 +56,40 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
 
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when(holder){
-        is FooterViewHolder -> {
-            holder.itemView.setOnClickListener {
-                Snackbar.make(it, "Footer is Clicked!!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
+            when(holder){
+            is FooterViewHolder -> {
+                holder.itemView.setOnClickListener {
+                    Snackbar.make(it, "Footer is Clicked!!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
+                }
             }
-        }
-        else -> {
+            else -> {
 
-            if (tasks.size!== 0) {
-                val item = tasks[position]
+                if (tasks.size!== 0) {
+                    val item = tasks[position]
+                }
+
+                // 내부 데이터를 사용하여 각 아이템 값 설정
+                holder.itemView.apply {
+
+                }
+
+                }
             }
-
-            // 내부 데이터를 사용하여 각 아이템 값 설정
-            holder.itemView.apply {
-
-            }
-
-            }
-        }
     }
 
     inner class FooterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     inner class ItemViewHolder(val binding: ItemHomeCourseBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(itemCourse: myCourseList){
             //코스 없을 경우
-//            val urlString = itemCourse.locageImageUrl
-//            if(urlString?.isEmpty()!!){
-//                binding.itemHomeCourseIv?.setImageResource(R.color.sub_yellow)
-//            } else {
-//                binding.itemHomeCourseIv?.visibility = View.GONE }
+            val urlString = itemCourse.locageImageUrl
 
-//            Glide.with().load(itemCourse.locageImageUrl).into(binding.itemHomeCourseIv)
+            if(urlString?.isEmpty()!!){
+                binding.itemHomeCourseIv?.setImageResource(R.color.sub_yellow)
+            } else {
+                binding.itemHomeCourseIv?.visibility = View.GONE }
+
+            Glide.with(context).load(itemCourse.locageImageUrl).into(binding.itemHomeCourseIv)
+
             binding.itemHomeCourseNameTv.text = itemCourse.courseTitle
             binding.itemHomeCourseDramaNameTv.text = itemCourse.dramaTitle
             binding.itemHomeCourseSpotTv.text = itemCourse.spotTitleList.toString()
