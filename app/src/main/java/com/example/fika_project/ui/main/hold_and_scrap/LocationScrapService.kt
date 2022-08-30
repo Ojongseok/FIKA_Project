@@ -10,8 +10,7 @@ import retrofit2.Response
 
 class LocationScrapService(val View: LocationScrapView, private val filter : Int) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
-    val token = ApplicationClass.X_ACCESS_TOKEN
-    val load = retrofit.postLocationScrap(token,filter)
+    val load = retrofit.postLocationScrap(filter)
     fun tryLoadLocationScrap(iv : ImageView){
         load.clone().enqueue(object : Callback<LocationScrapResponse> {
             override fun onResponse(call: Call<LocationScrapResponse>, response: Response<LocationScrapResponse>) {

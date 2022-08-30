@@ -84,6 +84,7 @@ drawable ic_star_on
 drawable item_list_circle
 drawable item_list_rec
 drawable item_list_rec_start
+drawable kakaomap_somenail
 drawable loacte_tag
 drawable login_btn
 drawable login_dialog_btn
@@ -111,6 +112,7 @@ drawable quit_btn
 drawable quitdialog_background
 drawable quitdialog_bottom_left_background
 drawable quitdialog_bottom_right_background
+drawable rectangle_bgwhite_corner_radius_all
 drawable remove_property
 drawable remove_property_circle
 drawable review
@@ -139,6 +141,8 @@ drawable yen_currency
 font custom_font_family
 font pretendardbold
 font pretendardregular
+id add12dkhk
+id add_group_btn
 id agree_01_back_btn
 id agree_01_cb_01
 id agree_01_cb_02
@@ -242,8 +246,8 @@ id drama_info_mapview
 id drama_info_title_tv
 id dramalist_dramaimage
 id dramalist_dramaname
-id dwdwedddsa
 id editTextTextPersonName
+id edit_group_name_btn
 id edit_personal_back_btn
 id edit_personal_email_edit_btn
 id edit_personal_email_et
@@ -381,9 +385,7 @@ id large_map
 id large_map_bottom_view
 id large_map_btn
 id large_map_title_name
-id linearLayout
 id linearLayout3
-id linearLayout4
 id linearLayout5
 id list_child_toggle_btn
 id list_header_expand_btn
@@ -473,6 +475,7 @@ id nickname_et_background
 id nickname_sub_title_tv
 id nickname_title_tv
 id nickname_warning_tv
+id others_star_count_tv
 id passwordRe_editText_usable
 id password_editText_usable
 id placeinfo_add_my_course_btn
@@ -556,6 +559,7 @@ id placeinfo_up_btn
 id placeinfo_web_iv
 id placeinfo_web_layout
 id placeinfo_web_tv
+id progressBar2
 id quit_back_btn
 id quit_btn
 id quit_contents_layout
@@ -598,6 +602,7 @@ id review_report_title_tv
 id review_write_container
 id review_write_fragment_container
 id review_write_image_select_btn
+id sadasdwq
 id save_state_line
 id save_state_recyclerview
 id search_back_btn
@@ -657,14 +662,12 @@ id textView
 id textView10
 id textView11
 id textView12
-id textView13
 id textView14
 id textView15
 id textView16
 id textView17
 id textView18
 id textView19
-id textView2
 id textView20
 id textView21
 id textView22
@@ -729,6 +732,7 @@ layout activity_splash
 layout activity_visit_complete_course
 layout balloon_layout
 layout detail_scene_list_item
+layout dialog_loading
 layout dialog_login
 layout dialog_quit
 layout drama_info_course_item
@@ -753,6 +757,7 @@ layout fragment_my_course_save_state
 layout fragment_mycourse
 layout fragment_mycourse_list_child
 layout fragment_mycourse_list_header
+layout fragment_myholdcourse
 layout fragment_mypage
 layout fragment_myscrapcourse
 layout fragment_nickname

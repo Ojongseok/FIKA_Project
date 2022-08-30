@@ -22,14 +22,14 @@
 
     <ImageView
         android:id="@+id/mypage_logo_iv"
-        android:layout_width="56dp"
+        android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:scaleType="fitXY"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sample_image" />
+        app:srcCompat="@drawable/logo_fikaapp" />
 
     <TextView
         android:id="@+id/mypage_title_tv"

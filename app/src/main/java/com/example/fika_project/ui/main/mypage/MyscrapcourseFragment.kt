@@ -1,28 +1,20 @@
 package com.example.fika_project.ui.main.mypage
 
-import android.opengl.Visibility
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fika_project.ApplicationClass
-import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentMyscrapcourseBinding
+import com.example.fika_project.ui.main.MainActivity
 import com.example.fika_project.ui.main.home.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import com.example.fika_project.retrofit.RetrofitInterface as RetrofitInterface
+
 
 class MyscrapcourseFragment: Fragment(), MypageView {
     private var _binding: FragmentMyscrapcourseBinding? = null
     private val binding get() = _binding!!
-
     val service = MypageService(this)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -35,6 +27,7 @@ class MyscrapcourseFragment: Fragment(), MypageView {
 
         return binding.root
     }
+
 
     fun setScrapRVAdapter(myScrapList: ArrayList<MyScrap>) {
         val scrapRVAdapter = MyscrapcourseRVAdapter(myScrapList, requireContext())
@@ -49,7 +42,7 @@ class MyscrapcourseFragment: Fragment(), MypageView {
             } })
     }
 
-        private fun onClickListener() {
+    private fun onClickListener() {
         val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
 
         binding.myscrapcourseBackIv.setOnClickListener {

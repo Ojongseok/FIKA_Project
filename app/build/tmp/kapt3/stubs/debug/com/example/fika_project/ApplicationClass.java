@@ -7,7 +7,7 @@ public final class ApplicationClass extends android.app.Application {
     @org.jetbrains.annotations.NotNull()
     public static final com.example.fika_project.ApplicationClass.Companion Companion = null;
     @org.jetbrains.annotations.NotNull()
-    public static final java.lang.String X_ACCESS_TOKEN = "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJtZW1iZXJJZCI6MSwibWVtYmVyRW1haWwiOiJ4b2R4b2QwOTA1QG5hdGUuY29tIiwiaWF0IjoxNjYxNjE4NjM4LCJleHAiOjE2NjIyMjM0Mzh9.4cJpjO2zbvBzHRn6l-vLUFrlJj0sHDvkSLQxvnwEwkc";
+    public static final java.lang.String X_ACCESS_TOKEN = "";
     @org.jetbrains.annotations.NotNull()
     public static final java.lang.String TAG = "FIKA-Prj";
     @org.jetbrains.annotations.NotNull()

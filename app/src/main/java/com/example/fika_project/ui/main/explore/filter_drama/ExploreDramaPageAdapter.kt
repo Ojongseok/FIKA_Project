@@ -25,20 +25,15 @@ class ExploreDramaPageAdapter(val dramalist : ArrayList<result>, val context: Co
         val dramaId = dramalist[position].dramaId
         spfManager.setDramaId(dramaId!!)
 
-        view.setOnClickListener {
-            val intent = Intent(context, DramaInfoActivity::class.java)
-            context.startActivity(intent)
-        }
 
         view.dramalist_dramaname.text = dramalist[position].dramaTitle
         Glide.with(context).load(dramalist[position].thumbnailUrl).into(view.dramalist_dramaimage)
 
-//        view.dramalist_dramaimage.setOnClickListener {
-//            val intent = Intent(context, DramaInfoActivity::class.java)
-//            intent.putExtra("dramalist",dramalist)
-//            intent.putExtra("number",position)
-//            context.startActivity(intent)
-//        }
+        view.dramalist_dramaimage.setOnClickListener {
+            val intent = Intent(context, DramaInfoActivity::class.java)
+            intent.putExtra("number",dramaId)
+            context.startActivity(intent)
+        }
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
     override fun getItemCount() = dramalist.size

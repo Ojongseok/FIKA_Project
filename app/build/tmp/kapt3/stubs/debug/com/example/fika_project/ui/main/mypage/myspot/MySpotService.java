@@ -8,7 +8,7 @@ public final class MySpotService {
     private final com.example.fika_project.ui.main.mypage.myspot.MySpotView View = null;
     private final com.example.fika_project.retrofit.RetrofitInterface retrofit = null;
     @org.jetbrains.annotations.NotNull()
-    private final java.lang.String token = "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJtZW1iZXJJZCI6MSwibWVtYmVyRW1haWwiOiJ4b2R4b2QwOTA1QG5hdGUuY29tIiwiaWF0IjoxNjYxNjE4NjM4LCJleHAiOjE2NjIyMjM0Mzh9.4cJpjO2zbvBzHRn6l-vLUFrlJj0sHDvkSLQxvnwEwkc";
+    private final java.lang.String token = "";
     @org.jetbrains.annotations.NotNull()
     private final retrofit2.Call<com.example.fika_project.ui.main.mypage.myspot.MySpotResponse> load = null;
     

@@ -16,15 +16,14 @@ import java.util.concurrent.TimeUnit
 
 class ApplicationClass : Application() {
     companion object{
-        const val X_ACCESS_TOKEN: String = "X_ACCESS_TOKEN"
+        const val X_ACCESS_TOKEN: String = ""
         const val TAG: String = "FIKA-Prj"
-        const val API_URL: String = "API_URL"
+        const val API_URL: String = ""
 
         lateinit var prefs: SharedPreferences
         lateinit var retrofit: Retrofit
 
         var appContext : Context? = null
-
     }
 
     override fun onCreate() {

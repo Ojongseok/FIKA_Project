@@ -44,9 +44,6 @@ public final class TestBinding implements ViewBinding {
   public final RecyclerView detailCourseTogetherRecyclerview;
 
   @NonNull
-  public final TextView dwdwedddsa;
-
-  @NonNull
   public final LinearLayout filterDramaSortingBtn;
 
   @NonNull
@@ -57,6 +54,9 @@ public final class TestBinding implements ViewBinding {
 
   @NonNull
   public final ImageView imageView17;
+
+  @NonNull
+  public final TextView othersStarCountTv;
 
   @NonNull
   public final TextView textView27;
@@ -75,9 +75,10 @@ public final class TestBinding implements ViewBinding {
       @NonNull ImageView courseDetailIvByDrama, @NonNull TextView courseDetailLocageTiltleByDrama,
       @NonNull TextView detailCourseHashTvByDrama,
       @NonNull RecyclerView detailCourseLocationRecyclerview,
-      @NonNull RecyclerView detailCourseTogetherRecyclerview, @NonNull TextView dwdwedddsa,
+      @NonNull RecyclerView detailCourseTogetherRecyclerview,
       @NonNull LinearLayout filterDramaSortingBtn, @NonNull ImageView imageView14,
-      @NonNull ImageView imageView16, @NonNull ImageView imageView17, @NonNull TextView textView27,
+      @NonNull ImageView imageView16, @NonNull ImageView imageView17,
+      @NonNull TextView othersStarCountTv, @NonNull TextView textView27,
       @NonNull TextView textView30, @NonNull TextView textView31, @NonNull TextView textView33) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
@@ -87,11 +88,11 @@ public final class TestBinding implements ViewBinding {
     this.detailCourseHashTvByDrama = detailCourseHashTvByDrama;
     this.detailCourseLocationRecyclerview = detailCourseLocationRecyclerview;
     this.detailCourseTogetherRecyclerview = detailCourseTogetherRecyclerview;
-    this.dwdwedddsa = dwdwedddsa;
     this.filterDramaSortingBtn = filterDramaSortingBtn;
     this.imageView14 = imageView14;
     this.imageView16 = imageView16;
     this.imageView17 = imageView17;
+    this.othersStarCountTv = othersStarCountTv;
     this.textView27 = textView27;
     this.textView30 = textView30;
     this.textView31 = textView31;
@@ -167,12 +168,6 @@ public final class TestBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.dwdwedddsa;
-      TextView dwdwedddsa = ViewBindings.findChildViewById(rootView, id);
-      if (dwdwedddsa == null) {
-        break missingId;
-      }
-
       id = R.id.filter_drama_sorting_btn;
       LinearLayout filterDramaSortingBtn = ViewBindings.findChildViewById(rootView, id);
       if (filterDramaSortingBtn == null) {
@@ -194,6 +189,12 @@ public final class TestBinding implements ViewBinding {
       id = R.id.imageView17;
       ImageView imageView17 = ViewBindings.findChildViewById(rootView, id);
       if (imageView17 == null) {
+        break missingId;
+      }
+
+      id = R.id.others_star_count_tv;
+      TextView othersStarCountTv = ViewBindings.findChildViewById(rootView, id);
+      if (othersStarCountTv == null) {
         break missingId;
       }
 
@@ -224,8 +225,8 @@ public final class TestBinding implements ViewBinding {
       return new TestBinding((ConstraintLayout) rootView, constraintLayout,
           courseDetailDramaBackBtn, courseDetailIvByDrama, courseDetailLocageTiltleByDrama,
           detailCourseHashTvByDrama, detailCourseLocationRecyclerview,
-          detailCourseTogetherRecyclerview, dwdwedddsa, filterDramaSortingBtn, imageView14,
-          imageView16, imageView17, textView27, textView30, textView31, textView33);
+          detailCourseTogetherRecyclerview, filterDramaSortingBtn, imageView14, imageView16,
+          imageView17, othersStarCountTv, textView27, textView30, textView31, textView33);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

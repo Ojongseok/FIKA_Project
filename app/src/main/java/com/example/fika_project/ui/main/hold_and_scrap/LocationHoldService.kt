@@ -12,7 +12,7 @@ class LocationHoldService(val View: LocationHoldView, private val filter : Int) 
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
     val token = ApplicationClass.X_ACCESS_TOKEN
 
-    val load = retrofit.postLocationHold(token,filter)
+    val load = retrofit.postLocationHold(filter)
     fun tryLoadLocationHold(iv : ImageView){
         load.clone().enqueue(object : Callback<LocationHoldResponse> {
             override fun onResponse(call: Call<LocationHoldResponse>, response: Response<LocationHoldResponse>) {

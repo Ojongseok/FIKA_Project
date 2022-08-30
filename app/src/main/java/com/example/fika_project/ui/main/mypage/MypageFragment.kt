@@ -38,7 +38,10 @@ class MypageFragment : Fragment(),MypageView {
     private fun onClickListener(){
         val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
         binding.mypagePlaceLayout.setOnClickListener{
-            context?.startActivity(Intent(context,MySpotActivity::class.java))
+            fragmentManager.commit {
+                setReorderingAllowed(true)
+                add(R.id.mypage_frm, MyholdcourseFragment())
+            }
         }
 
         binding.mypageCourseLayout.setOnClickListener {
@@ -62,7 +65,6 @@ class MypageFragment : Fragment(),MypageView {
     }
 
     override fun onLoading() {
-//        TODO("Not yet implemented")
     }
 
     override fun onMypageSuccess(response: MypageResponse) {

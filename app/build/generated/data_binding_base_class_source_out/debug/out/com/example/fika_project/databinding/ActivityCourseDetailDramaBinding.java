@@ -62,9 +62,6 @@ public final class ActivityCourseDetailDramaBinding implements ViewBinding {
   public final RecyclerView detailCourseTogetherRecyclerview;
 
   @NonNull
-  public final TextView dwdwedddsa;
-
-  @NonNull
   public final LinearLayout filterDramaSortingBtn;
 
   @NonNull
@@ -78,6 +75,9 @@ public final class ActivityCourseDetailDramaBinding implements ViewBinding {
 
   @NonNull
   public final ConstraintLayout myholdTopLayout;
+
+  @NonNull
+  public final TextView othersStarCountTv;
 
   @NonNull
   public final TextView textView20;
@@ -98,11 +98,12 @@ public final class ActivityCourseDetailDramaBinding implements ViewBinding {
       @NonNull TextView courseDetailHoldBtn, @NonNull ImageView courseDetailIv,
       @NonNull ImageView courseDetailIvByDrama, @NonNull TextView courseDetailLocageTiltleByDrama,
       @NonNull TextView courseDetailWhereTv, @NonNull TextView detailCourseHashTvByDrama,
-      @NonNull RecyclerView detailCourseTogetherRecyclerview, @NonNull TextView dwdwedddsa,
+      @NonNull RecyclerView detailCourseTogetherRecyclerview,
       @NonNull LinearLayout filterDramaSortingBtn, @NonNull ImageView imageView12,
       @NonNull ImageView imageView14, @NonNull ImageView imageView17,
-      @NonNull ConstraintLayout myholdTopLayout, @NonNull TextView textView20,
-      @NonNull TextView textView27, @NonNull TextView textView31, @NonNull TextView textView33) {
+      @NonNull ConstraintLayout myholdTopLayout, @NonNull TextView othersStarCountTv,
+      @NonNull TextView textView20, @NonNull TextView textView27, @NonNull TextView textView31,
+      @NonNull TextView textView33) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
     this.courseDetailCategoryTv = courseDetailCategoryTv;
@@ -117,12 +118,12 @@ public final class ActivityCourseDetailDramaBinding implements ViewBinding {
     this.courseDetailWhereTv = courseDetailWhereTv;
     this.detailCourseHashTvByDrama = detailCourseHashTvByDrama;
     this.detailCourseTogetherRecyclerview = detailCourseTogetherRecyclerview;
-    this.dwdwedddsa = dwdwedddsa;
     this.filterDramaSortingBtn = filterDramaSortingBtn;
     this.imageView12 = imageView12;
     this.imageView14 = imageView14;
     this.imageView17 = imageView17;
     this.myholdTopLayout = myholdTopLayout;
+    this.othersStarCountTv = othersStarCountTv;
     this.textView20 = textView20;
     this.textView27 = textView27;
     this.textView31 = textView31;
@@ -234,12 +235,6 @@ public final class ActivityCourseDetailDramaBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.dwdwedddsa;
-      TextView dwdwedddsa = ViewBindings.findChildViewById(rootView, id);
-      if (dwdwedddsa == null) {
-        break missingId;
-      }
-
       id = R.id.filter_drama_sorting_btn;
       LinearLayout filterDramaSortingBtn = ViewBindings.findChildViewById(rootView, id);
       if (filterDramaSortingBtn == null) {
@@ -267,6 +262,12 @@ public final class ActivityCourseDetailDramaBinding implements ViewBinding {
       id = R.id.myhold_top_layout;
       ConstraintLayout myholdTopLayout = ViewBindings.findChildViewById(rootView, id);
       if (myholdTopLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.others_star_count_tv;
+      TextView othersStarCountTv = ViewBindings.findChildViewById(rootView, id);
+      if (othersStarCountTv == null) {
         break missingId;
       }
 
@@ -298,8 +299,8 @@ public final class ActivityCourseDetailDramaBinding implements ViewBinding {
           courseDetailCategoryTv, courseDetailCourseName, courseDetailDramaBackBtn,
           courseDetailDramaNameBtn, courseDetailDramaNameTv, courseDetailHoldBtn, courseDetailIv,
           courseDetailIvByDrama, courseDetailLocageTiltleByDrama, courseDetailWhereTv,
-          detailCourseHashTvByDrama, detailCourseTogetherRecyclerview, dwdwedddsa,
-          filterDramaSortingBtn, imageView12, imageView14, imageView17, myholdTopLayout, textView20,
+          detailCourseHashTvByDrama, detailCourseTogetherRecyclerview, filterDramaSortingBtn,
+          imageView12, imageView14, imageView17, myholdTopLayout, othersStarCountTv, textView20,
           textView27, textView31, textView33);
     }
     String missingId = rootView.getResources().getResourceName(id);

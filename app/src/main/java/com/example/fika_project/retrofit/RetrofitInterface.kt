@@ -60,20 +60,17 @@ interface RetrofitInterface {
     // 22. 내가 담은 장소 조회
     @GET("/spot/my/scrap")
     fun loadMySpot (
-        @Header("Access-Token") token: String,
     ) : Call<MySpotResponse>
 
     // 14. 코스 스크랩
     @POST("/course/scrap/{courseId}")
     fun postLocationScrap(
-        @Header("Access-Token") token: String,
         @Path("courseId") courseId : Int
     ): Call<LocationScrapResponse>
 
     // 15. 장소 담기
     @POST("/spot/scrap/{spotId}")
     fun postLocationHold(
-        @Header("Access-Token") token: String,
         @Path("spotId") spotId : Int
     ): Call<LocationHoldResponse>
 

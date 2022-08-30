@@ -2657,6 +2657,7 @@ drawable kakao_login_button_background
 drawable kakao_login_symbol
 drawable kakao_profile_boxbg
 drawable kakaoaccount_icon
+drawable kakaomap_somenail
 drawable kakaostory_icon
 drawable kakaotalk_icon
 drawable loacte_tag
@@ -2727,6 +2728,7 @@ drawable quit_btn
 drawable quitdialog_background
 drawable quitdialog_bottom_left_background
 drawable quitdialog_bottom_right_background
+drawable rectangle_bgwhite_corner_radius_all
 drawable remove_property
 drawable remove_property_circle
 drawable review
@@ -2838,6 +2840,8 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add12dkhk
+id add_group_btn
 id agree_01_back_btn
 id agree_01_cb_01
 id agree_01_cb_02
@@ -3053,12 +3057,12 @@ id dramalist_dramaname
 id dropdown_editable
 id dropdown_menu
 id dropdown_noneditable
-id dwdwedddsa
 id easeIn
 id easeInOut
 id easeOut
 id east
 id editTextTextPersonName
+id edit_group_name_btn
 id edit_personal_back_btn
 id edit_personal_email_edit_btn
 id edit_personal_email_et
@@ -3266,9 +3270,7 @@ id legacy
 id line1
 id line3
 id linear
-id linearLayout
 id linearLayout3
-id linearLayout4
 id linearLayout5
 id listMode
 id list_child_toggle_btn
@@ -3452,6 +3454,7 @@ id on
 id onAttachStateChangeListener
 id onDateChanged
 id onInterceptTouchReturnSwipe
+id others_star_count_tv
 id outline
 id outward
 id overshoot
@@ -3552,6 +3555,7 @@ id placeinfo_web_layout
 id placeinfo_web_tv
 id position
 id postLayout
+id progressBar2
 id progress_bar
 id progress_circular
 id progress_horizontal
@@ -3608,6 +3612,7 @@ id right_side
 id rounded
 id row_index_key
 id rtl
+id sadasdwq
 id save_non_transition_alpha
 id save_overlay_view
 id save_state_line
@@ -3757,14 +3762,12 @@ id textView
 id textView10
 id textView11
 id textView12
-id textView13
 id textView14
 id textView15
 id textView16
 id textView17
 id textView18
 id textView19
-id textView2
 id textView20
 id textView21
 id textView22
@@ -3995,6 +3998,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout detail_scene_list_item
+layout dialog_loading
 layout dialog_login
 layout dialog_quit
 layout dot_layout
@@ -4020,6 +4024,7 @@ layout fragment_my_course_save_state
 layout fragment_mycourse
 layout fragment_mycourse_list_child
 layout fragment_mycourse_list_header
+layout fragment_myholdcourse
 layout fragment_mypage
 layout fragment_myscrapcourse
 layout fragment_nickname

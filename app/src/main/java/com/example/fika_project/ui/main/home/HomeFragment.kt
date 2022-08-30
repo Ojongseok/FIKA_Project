@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.databinding.FragmentHomeBinding
+import com.example.fika_project.ui.main.explore.filter_drama.result
 
 class HomeFragment : Fragment(), HomeView {
     private var _binding: FragmentHomeBinding? = null
@@ -33,7 +34,8 @@ class HomeFragment : Fragment(), HomeView {
         myCourseRVAdapter.setMyItemClickListener(object  : MyCourseRVAdapter.MyItemClickListener{
             override fun onItemClick(course: myCourseList) {
 
-            } })
+            }
+        })
     }
 
     private fun setDramaRankRVAdapter(dramaRankList: ArrayList<dramaList>){
@@ -85,7 +87,7 @@ class HomeFragment : Fragment(), HomeView {
         when(response.code) {
             1000 -> {
                 response?.let { setMyCourseRVAdapter((it.result?.myCourseList!!)) }
-                response?.let { setDramaRankRVAdapter((it.result?.dramaList!!)) }
+                response?.let { setDramaRankRVAdapter(it.result?.dramaList!!) }
                 response?.let { setCourseRVAdapter((it.result?.coursesSortBySaved!!)) }
                 response?.let { setPlaceRankRVAdapter((it.result?.spotsSortBySaved!!)) }
                 binding.homePb.visibility = View.GONE

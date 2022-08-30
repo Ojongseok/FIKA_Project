@@ -4,10 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.fika_project.databinding.ItemHomeDramarankBinding
 import com.example.fika_project.ui.main.explore.drama_info.DramaInfoActivity
+import com.example.fika_project.ui.main.explore.filter_drama.result
 import com.example.fika_project.utils.spfManager
 
 class DramaRankRVAdapter(private val dramaRankList: ArrayList<dramaList>, val context: Context) : RecyclerView.Adapter<DramaRankRVAdapter.ViewHolder>()
@@ -18,14 +20,14 @@ class DramaRankRVAdapter(private val dramaRankList: ArrayList<dramaList>, val co
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(dramaRankList[position])
+        holder.bind(dramaRankList[position],position)
     }
 
     override fun getItemCount(): Int = dramaRankList.size
 
     inner class ViewHolder(val binding: ItemHomeDramarankBinding):RecyclerView.ViewHolder(binding.root){
 
-        fun bind(itemdramaRank: dramaList){
+        fun bind(itemdramaRank: dramaList, position: Int){
             val DramaId = itemdramaRank.dramaId
             spfManager.setDramaId(DramaId!!)
 
@@ -34,6 +36,7 @@ class DramaRankRVAdapter(private val dramaRankList: ArrayList<dramaList>, val co
 
             itemView.setOnClickListener{
                 val intent = Intent(context, DramaInfoActivity::class.java)
+                intent.putExtra("number",itemdramaRank.dramaId)
                 context.startActivity(intent)
             }
         }

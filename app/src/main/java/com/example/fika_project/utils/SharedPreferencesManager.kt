@@ -36,4 +36,7 @@ object spfManager {
     fun setNickname(nickname: String) { editor.putString("Nickname", nickname).apply() }
     fun getNickname(): String? = prefs.getString("Nickname", "")
 
+    fun ClearJwt() {
+        prefs.edit().clear().commit()
+    }
 }

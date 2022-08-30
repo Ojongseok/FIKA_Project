@@ -91,18 +91,22 @@
                     android:id="@+id/drama_info_mapview"
                     android:layout_width="match_parent"
                     android:layout_height="262dp"
-                    android:layout_marginTop="4dp">
-                </FrameLayout>
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/kakaomap_somenail"></FrameLayout>
+
                 <TextView
                     android:id="@+id/large_map_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="320dp"
+                    android:layout_gravity="end"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@drawable/filter_rec"
-                    android:backgroundTint="#9D9D9D"
-                    android:padding="4dp"
-                    android:text="확대하기"
+                    android:backgroundTint="@color/main_blue"
+                    android:padding="8dp"
+                    android:text="확대해서 카카오맵으로 보기"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />

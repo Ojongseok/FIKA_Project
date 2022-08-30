@@ -12,7 +12,7 @@ data class ExploreDramaResponse(
 )
 
 data class result(
-    @SerializedName("dramaId") val dramaId: Int?,
-    @SerializedName("dramaTitle") val dramaTitle : String?,
-    @SerializedName("thumbnailUrl") val thumbnailUrl : String?
+    @SerializedName("dramaId") var dramaId: Int?,
+    @SerializedName("dramaTitle") var dramaTitle : String?,
+    @SerializedName("thumbnailUrl") var thumbnailUrl : String?
 ) : Serializable

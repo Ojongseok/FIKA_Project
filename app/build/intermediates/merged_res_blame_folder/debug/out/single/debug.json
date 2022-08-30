@@ -356,6 +356,10 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle_bgwhite_corner_radius_all.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\rectangle_bgwhite_corner_radius_all.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_signup_textbox.xml.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\signup_textbox.xml"
     },
@@ -748,6 +752,10 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\font\\custom_font_family.xml"
     },
     {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_myholdcourse.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\fragment_myholdcourse.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_parking.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\parking.png"
     },
@@ -758,6 +766,10 @@
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\menu_bottom_nav_menu.xml.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_kakaomap_somenail.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\kakaomap_somenail.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_flag_on.png.flat",
@@ -854,6 +866,10 @@
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_down_enter.xml.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\anim\\slide_down_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_loading.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\dialog_loading.xml"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\layout_balloon_layout.xml.flat",

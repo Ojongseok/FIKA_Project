@@ -29,9 +29,6 @@
             android:name=".ui.main.explore.drama_info.LargeMapActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.mypage.myscrap.MyScrapActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.main.mypage.myspot.MySpotActivity"
             android:exported="false" />
         <activity

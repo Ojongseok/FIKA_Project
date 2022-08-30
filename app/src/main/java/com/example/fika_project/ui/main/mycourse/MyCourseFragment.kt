@@ -1,4 +1,5 @@
 package com.example.fika_project.ui.main.mycourse
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,11 +13,6 @@ class MyCourseFragment :Fragment() {
     private lateinit var binding: FragmentMycourseBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentMycourseBinding.inflate(inflater, container, false)
-
-
-
-
-
 
         return binding.root
     }
@@ -32,5 +28,12 @@ class MyCourseFragment :Fragment() {
 
         binding.mycourseExpandListRecyclerview.layoutManager = LinearLayoutManager(requireContext())
         binding.mycourseExpandListRecyclerview.adapter = ExpandableListAdapter(requireContext(), data)
+
+        binding.addGroupBtn.setOnClickListener {
+
+        }
+        binding.editGroupNameBtn.setOnClickListener {
+
+        }
     }
 }

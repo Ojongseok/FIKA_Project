@@ -60,6 +60,7 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView {
         binding.courseDetailWhereTv.text = initList.courseLocage?.shortAddress
         binding.courseDetailCategoryTv.text = initList.courseLocage?.type
         binding.courseDetailCourseName.text = initList.courseLocage?.spotTitle
+        binding.othersStarCountTv.text = initList.courseSavedCount.toString()
     }
 
     private fun setOnClickEvent() {

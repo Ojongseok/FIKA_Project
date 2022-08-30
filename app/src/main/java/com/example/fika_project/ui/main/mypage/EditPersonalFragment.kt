@@ -19,6 +19,11 @@ class EditPersonalFragment: Fragment() {
 
         onClickListener()
 
+        binding.editPersonalBackBtn.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+        }
+
         return binding.root
     }
 

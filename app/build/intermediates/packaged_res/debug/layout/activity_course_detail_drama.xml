@@ -123,11 +123,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
             <TextView
-                android:id="@+id/dwdwedddsa"
+                android:id="@+id/others_star_count_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
-                android:text="1061"
+                android:text="-"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView31" />
 
@@ -135,8 +135,8 @@
                 android:id="@+id/imageView17"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                app:layout_constraintBottom_toBottomOf="@+id/dwdwedddsa"
-                app:layout_constraintEnd_toStartOf="@+id/dwdwedddsa"
+                app:layout_constraintBottom_toBottomOf="@+id/others_star_count_tv"
+                app:layout_constraintEnd_toStartOf="@+id/others_star_count_tv"
                 app:layout_constraintTop_toTopOf="@+id/textView31"
                 app:srcCompat="@drawable/ic_star_off" />
 
