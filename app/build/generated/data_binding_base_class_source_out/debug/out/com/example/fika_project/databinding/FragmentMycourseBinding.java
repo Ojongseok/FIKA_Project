@@ -23,25 +23,25 @@ public final class FragmentMycourseBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextView add12dkhk;
+
+  @NonNull
+  public final LinearLayout addGroupBtn;
+
+  @NonNull
+  public final LinearLayout editGroupNameBtn;
+
+  @NonNull
   public final ImageView imageView10;
 
   @NonNull
   public final ImageView imageView13;
 
   @NonNull
-  public final LinearLayout linearLayout;
-
-  @NonNull
-  public final LinearLayout linearLayout4;
-
-  @NonNull
   public final RecyclerView mycourseExpandListRecyclerview;
 
   @NonNull
-  public final TextView textView13;
-
-  @NonNull
-  public final TextView textView2;
+  public final TextView sadasdwq;
 
   @NonNull
   public final ConstraintLayout tourLayout;
@@ -49,20 +49,19 @@ public final class FragmentMycourseBinding implements ViewBinding {
   @NonNull
   public final TextView tourNotice;
 
-  private FragmentMycourseBinding(@NonNull ConstraintLayout rootView,
+  private FragmentMycourseBinding(@NonNull ConstraintLayout rootView, @NonNull TextView add12dkhk,
+      @NonNull LinearLayout addGroupBtn, @NonNull LinearLayout editGroupNameBtn,
       @NonNull ImageView imageView10, @NonNull ImageView imageView13,
-      @NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout4,
-      @NonNull RecyclerView mycourseExpandListRecyclerview, @NonNull TextView textView13,
-      @NonNull TextView textView2, @NonNull ConstraintLayout tourLayout,
-      @NonNull TextView tourNotice) {
+      @NonNull RecyclerView mycourseExpandListRecyclerview, @NonNull TextView sadasdwq,
+      @NonNull ConstraintLayout tourLayout, @NonNull TextView tourNotice) {
     this.rootView = rootView;
+    this.add12dkhk = add12dkhk;
+    this.addGroupBtn = addGroupBtn;
+    this.editGroupNameBtn = editGroupNameBtn;
     this.imageView10 = imageView10;
     this.imageView13 = imageView13;
-    this.linearLayout = linearLayout;
-    this.linearLayout4 = linearLayout4;
     this.mycourseExpandListRecyclerview = mycourseExpandListRecyclerview;
-    this.textView13 = textView13;
-    this.textView2 = textView2;
+    this.sadasdwq = sadasdwq;
     this.tourLayout = tourLayout;
     this.tourNotice = tourNotice;
   }
@@ -94,6 +93,24 @@ public final class FragmentMycourseBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.add12dkhk;
+      TextView add12dkhk = ViewBindings.findChildViewById(rootView, id);
+      if (add12dkhk == null) {
+        break missingId;
+      }
+
+      id = R.id.add_group_btn;
+      LinearLayout addGroupBtn = ViewBindings.findChildViewById(rootView, id);
+      if (addGroupBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_group_name_btn;
+      LinearLayout editGroupNameBtn = ViewBindings.findChildViewById(rootView, id);
+      if (editGroupNameBtn == null) {
+        break missingId;
+      }
+
       id = R.id.imageView10;
       ImageView imageView10 = ViewBindings.findChildViewById(rootView, id);
       if (imageView10 == null) {
@@ -106,33 +123,15 @@ public final class FragmentMycourseBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.linearLayout;
-      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
-      if (linearLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.linearLayout4;
-      LinearLayout linearLayout4 = ViewBindings.findChildViewById(rootView, id);
-      if (linearLayout4 == null) {
-        break missingId;
-      }
-
       id = R.id.mycourse_expand_list_recyclerview;
       RecyclerView mycourseExpandListRecyclerview = ViewBindings.findChildViewById(rootView, id);
       if (mycourseExpandListRecyclerview == null) {
         break missingId;
       }
 
-      id = R.id.textView13;
-      TextView textView13 = ViewBindings.findChildViewById(rootView, id);
-      if (textView13 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView2;
-      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
-      if (textView2 == null) {
+      id = R.id.sadasdwq;
+      TextView sadasdwq = ViewBindings.findChildViewById(rootView, id);
+      if (sadasdwq == null) {
         break missingId;
       }
 
@@ -144,8 +143,8 @@ public final class FragmentMycourseBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentMycourseBinding((ConstraintLayout) rootView, imageView10, imageView13,
-          linearLayout, linearLayout4, mycourseExpandListRecyclerview, textView13, textView2,
+      return new FragmentMycourseBinding((ConstraintLayout) rootView, add12dkhk, addGroupBtn,
+          editGroupNameBtn, imageView10, imageView13, mycourseExpandListRecyclerview, sadasdwq,
           tourLayout, tourNotice);
     }
     String missingId = rootView.getResources().getResourceName(id);
