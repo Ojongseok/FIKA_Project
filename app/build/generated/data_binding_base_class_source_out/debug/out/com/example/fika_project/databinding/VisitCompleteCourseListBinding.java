@@ -28,10 +28,10 @@ public final class VisitCompleteCourseListBinding implements ViewBinding {
   public final ImageView courseDetailIv;
 
   @NonNull
-  public final TextView courseDetailWhereTv;
+  public final ImageView courseDetailLocationFlagBtn;
 
   @NonNull
-  public final ImageView imageView12;
+  public final TextView courseDetailWhereTv;
 
   @NonNull
   public final ImageView imageView18;
@@ -50,15 +50,15 @@ public final class VisitCompleteCourseListBinding implements ViewBinding {
 
   private VisitCompleteCourseListBinding(@NonNull ConstraintLayout rootView,
       @NonNull TextView courseDetailCategoryTv, @NonNull ImageView courseDetailIv,
-      @NonNull TextView courseDetailWhereTv, @NonNull ImageView imageView12,
+      @NonNull ImageView courseDetailLocationFlagBtn, @NonNull TextView courseDetailWhereTv,
       @NonNull ImageView imageView18, @NonNull LinearLayout linearLayout3,
       @NonNull TextView mapTitleNameTv, @NonNull TextView textView20,
       @NonNull LinearLayout visitCompleteReviewWriteBtn) {
     this.rootView = rootView;
     this.courseDetailCategoryTv = courseDetailCategoryTv;
     this.courseDetailIv = courseDetailIv;
+    this.courseDetailLocationFlagBtn = courseDetailLocationFlagBtn;
     this.courseDetailWhereTv = courseDetailWhereTv;
-    this.imageView12 = imageView12;
     this.imageView18 = imageView18;
     this.linearLayout3 = linearLayout3;
     this.mapTitleNameTv = mapTitleNameTv;
@@ -105,15 +105,15 @@ public final class VisitCompleteCourseListBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.course_detail_where_tv;
-      TextView courseDetailWhereTv = ViewBindings.findChildViewById(rootView, id);
-      if (courseDetailWhereTv == null) {
+      id = R.id.course_detail_location_flag_btn;
+      ImageView courseDetailLocationFlagBtn = ViewBindings.findChildViewById(rootView, id);
+      if (courseDetailLocationFlagBtn == null) {
         break missingId;
       }
 
-      id = R.id.imageView12;
-      ImageView imageView12 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView12 == null) {
+      id = R.id.course_detail_where_tv;
+      TextView courseDetailWhereTv = ViewBindings.findChildViewById(rootView, id);
+      if (courseDetailWhereTv == null) {
         break missingId;
       }
 
@@ -148,8 +148,8 @@ public final class VisitCompleteCourseListBinding implements ViewBinding {
       }
 
       return new VisitCompleteCourseListBinding((ConstraintLayout) rootView, courseDetailCategoryTv,
-          courseDetailIv, courseDetailWhereTv, imageView12, imageView18, linearLayout3,
-          mapTitleNameTv, textView20, visitCompleteReviewWriteBtn);
+          courseDetailIv, courseDetailLocationFlagBtn, courseDetailWhereTv, imageView18,
+          linearLayout3, mapTitleNameTv, textView20, visitCompleteReviewWriteBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

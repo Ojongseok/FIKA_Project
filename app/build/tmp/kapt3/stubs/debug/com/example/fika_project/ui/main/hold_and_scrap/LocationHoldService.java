@@ -9,7 +9,7 @@ public final class LocationHoldService {
     private final int filter = 0;
     private final com.example.fika_project.retrofit.RetrofitInterface retrofit = null;
     @org.jetbrains.annotations.NotNull()
-    private final java.lang.String token = "X_ACCESS_TOKEN";
+    private final java.lang.String token = "";
     @org.jetbrains.annotations.NotNull()
     private final retrofit2.Call<com.example.fika_project.ui.main.hold_and_scrap.LocationHoldResponse> load = null;
     

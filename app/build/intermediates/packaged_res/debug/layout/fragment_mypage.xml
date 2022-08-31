@@ -22,7 +22,6 @@
 
     <ImageView
         android:id="@+id/mypage_logo_iv"
-<<<<<<< Updated upstream
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginLeft="20dp"
@@ -31,7 +30,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_fikaapp" />
-=======
         android:layout_width="67dp"
         android:layout_height="36dp"
         android:layout_marginLeft="20dp"
@@ -39,7 +37,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_fulltext" />
->>>>>>> Stashed changes
 
     <TextView
         android:id="@+id/mypage_title_tv"

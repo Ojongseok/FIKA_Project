@@ -34,6 +34,7 @@ class MyholdcourseFragment : Fragment(),MySpotView {
         return binding.root
     }
 
+
     private fun onClickListener() {
         val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
 
@@ -42,7 +43,7 @@ class MyholdcourseFragment : Fragment(),MySpotView {
             fragmentManager.popBackStack()
         }
         binding.myplaceHomeIv.setOnClickListener {
-
+            // 홈버튼 누르면 홈으로 가도록 어떻게 만들죠,,?
         }
 
     }

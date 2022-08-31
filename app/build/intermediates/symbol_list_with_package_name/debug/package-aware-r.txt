@@ -2998,6 +2998,7 @@ id course_detail_iv_by_drama
 id course_detail_iv_location
 id course_detail_locage_tiltle
 id course_detail_locage_tiltle_by_drama
+id course_detail_location_flag_btn
 id course_detail_where_tv
 id course_info_back_btn
 id course_info_edit_switch_btn
@@ -3177,7 +3178,6 @@ id ignoreRequest
 id image
 id imageView
 id imageView10
-id imageView12
 id imageView13
 id imageView14
 id imageView16
@@ -4121,6 +4121,7 @@ layout visit_complete_course_list
 layout worm_dot_layout
 menu bottom_nav_menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation bottom_navigation
 plurals mtrl_badge_content_description

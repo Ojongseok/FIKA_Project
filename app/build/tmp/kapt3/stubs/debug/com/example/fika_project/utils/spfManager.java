@@ -2,11 +2,7 @@ package com.example.fika_project.utils;
 
 import java.lang.System;
 
-<<<<<<< Updated upstream
-@kotlin.Metadata(mv = {1, 6, 0}, k = 1, d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u000e\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\u0006\u0010\b\u001a\u00020\tJ\r\u0010\n\u001a\u0004\u0018\u00010\u000b\u00a2\u0006\u0002\u0010\fJ\b\u0010\r\u001a\u0004\u0018\u00010\u000eJ\b\u0010\u000f\u001a\u0004\u0018\u00010\u000eJ\u0006\u0010\u0010\u001a\u00020\u000eJ\b\u0010\u0011\u001a\u0004\u0018\u00010\u000eJ\u0010\u0010\u0012\u001a\u00020\t2\b\u0010\u0013\u001a\u0004\u0018\u00010\u000eJ\u000e\u0010\u0014\u001a\u00020\t2\u0006\u0010\u0015\u001a\u00020\u000bJ\u000e\u0010\u0016\u001a\u00020\t2\u0006\u0010\u0017\u001a\u00020\u000eJ\u0010\u0010\u0018\u001a\u00020\t2\b\u0010\u0019\u001a\u0004\u0018\u00010\u000eJ\u000e\u0010\u001a\u001a\u00020\t2\u0006\u0010\u001b\u001a\u00020\u000eR\u0019\u0010\u0003\u001a\n \u0005*\u0004\u0018\u00010\u00040\u0004\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007\u00a8\u0006\u001c"}, d2 = {"Lcom/example/fika_project/utils/spfManager;", "", "()V", "editor", "Landroid/content/SharedPreferences$Editor;", "kotlin.jvm.PlatformType", "getEditor", "()Landroid/content/SharedPreferences$Editor;", "ClearJwt", "", "getDramaId", "", "()Ljava/lang/Integer;", "getEmail", "", "getJwt", "getKakaoJwt", "getNickname", "saveKakaoJwt", "kakaoToken", "setDramaId", "dramaId", "setEmail", "email", "setJwt", "jwtToken", "setNickname", "nickname", "app_debug"})
-=======
 @kotlin.Metadata(mv = {1, 6, 0}, k = 1, d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0019\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\u0006\u0010\b\u001a\u00020\tJ\r\u0010\n\u001a\u0004\u0018\u00010\u000b\u00a2\u0006\u0002\u0010\fJ\r\u0010\r\u001a\u0004\u0018\u00010\u000b\u00a2\u0006\u0002\u0010\fJ\b\u0010\u000e\u001a\u0004\u0018\u00010\u000fJ\b\u0010\u0010\u001a\u0004\u0018\u00010\u000fJ\b\u0010\u0011\u001a\u0004\u0018\u00010\u000fJ\u0006\u0010\u0012\u001a\u00020\u000fJ\b\u0010\u0013\u001a\u0004\u0018\u00010\u000fJ\r\u0010\u0014\u001a\u0004\u0018\u00010\u000b\u00a2\u0006\u0002\u0010\fJ\r\u0010\u0015\u001a\u0004\u0018\u00010\u000b\u00a2\u0006\u0002\u0010\fJ\u0010\u0010\u0016\u001a\u00020\t2\b\u0010\u0017\u001a\u0004\u0018\u00010\u000fJ\u000e\u0010\u0018\u001a\u00020\t2\u0006\u0010\u0019\u001a\u00020\u000bJ\u000e\u0010\u001a\u001a\u00020\t2\u0006\u0010\u001b\u001a\u00020\u000bJ\u000e\u0010\u001c\u001a\u00020\t2\u0006\u0010\u001d\u001a\u00020\u000fJ\u000e\u0010\u001e\u001a\u00020\t2\u0006\u0010\u001f\u001a\u00020\u000fJ\u0010\u0010 \u001a\u00020\t2\b\u0010!\u001a\u0004\u0018\u00010\u000fJ\u000e\u0010\"\u001a\u00020\t2\u0006\u0010#\u001a\u00020\u000fJ\u000e\u0010$\u001a\u00020\t2\u0006\u0010%\u001a\u00020\u000bJ\u000e\u0010&\u001a\u00020\t2\u0006\u0010\'\u001a\u00020\u000bR\u0019\u0010\u0003\u001a\n \u0005*\u0004\u0018\u00010\u00040\u0004\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007\u00a8\u0006("}, d2 = {"Lcom/example/fika_project/utils/spfManager;", "", "()V", "editor", "Landroid/content/SharedPreferences$Editor;", "kotlin.jvm.PlatformType", "getEditor", "()Landroid/content/SharedPreferences$Editor;", "ClearJwt", "", "getCourseId", "", "()Ljava/lang/Integer;", "getDramaId", "getEmail", "", "getImgUrl", "getJwt", "getKakaoJwt", "getNickname", "getReviewId", "getSpotId", "saveKakaoJwt", "kakaoToken", "setCourseId", "courseId", "setDramaId", "dramaId", "setEmail", "email", "setImgUrl", "imgUrl", "setJwt", "jwtToken", "setNickname", "nickname", "setReviewId", "reviewId", "setSpotId", "spotId", "app_debug"})
->>>>>>> Stashed changes
 public final class spfManager {
     @org.jetbrains.annotations.NotNull()
     public static final com.example.fika_project.utils.spfManager INSTANCE = null;
@@ -67,9 +63,6 @@ public final class spfManager {
         return null;
     }
     
-<<<<<<< Updated upstream
-    public final void ClearJwt() {
-=======
     public final void setCourseId(int courseId) {
     }
     
@@ -101,6 +94,5 @@ public final class spfManager {
     @org.jetbrains.annotations.Nullable()
     public final java.lang.String getImgUrl() {
         return null;
->>>>>>> Stashed changes
     }
 }

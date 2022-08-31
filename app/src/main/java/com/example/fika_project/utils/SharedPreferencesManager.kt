@@ -35,11 +35,6 @@ object spfManager {
     fun setNickname(nickname: String) { editor.putString("Nickname", nickname).apply() }
     fun getNickname(): String? = prefs.getString("Nickname", "")
 
-<<<<<<< Updated upstream
-    fun ClearJwt() {
-        prefs.edit().clear().commit()
-    }
-=======
     fun setCourseId(courseId: Int) { editor.putInt("courseId", courseId).apply() }
     fun getCourseId(): Int? { return prefs.getInt("courseId", 0) }
 
@@ -52,5 +47,4 @@ object spfManager {
     fun setImgUrl(imgUrl: String) { editor.putString("imgUrl", imgUrl).apply() }
     fun getImgUrl(): String? { return prefs.getString("imgUrl", "").toString() }
 
->>>>>>> Stashed changes
 }

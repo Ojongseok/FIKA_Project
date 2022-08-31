@@ -1,6 +1,7 @@
 package com.example.fika_project.ui.main.explore.drama_info
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import com.example.fika_project.ui.main.explore.spotDataList
 import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldService
 import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldView
+import com.example.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
 import kotlinx.android.synthetic.main.drama_info_course_item.view.*
 import kotlinx.android.synthetic.main.drama_info_location_item.view.*
 
@@ -45,7 +47,10 @@ class DramaInfoLocationAdapter(private val locationList : ArrayList<spotDataList
         view.item_location_placerank_flag_iv.setOnClickListener {
             service.tryLoadLocationHold(view.item_location_placerank_flag_iv)
         }
-
+        view.item_home_placerank_layout.setOnClickListener {
+            val intent = Intent(context, PlaceinfoActivity::class.java)
+            context.startActivity(intent)
+        }
 
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)

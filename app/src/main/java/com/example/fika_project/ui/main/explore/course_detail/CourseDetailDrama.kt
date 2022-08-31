@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -13,9 +14,13 @@ import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityCourseDetailDramaBinding
 import com.example.fika_project.ui.main.SpinnerModel
 import com.example.fika_project.ui.main.explore.course_detail.*
+import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
+import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldService
+import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldView
 import kotlinx.android.synthetic.main.item_spinner.view.*
+import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
 
-class CourseDetailDrama : AppCompatActivity(),CourseDetailView {
+class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView {
     private var _Binding: ActivityCourseDetailDramaBinding? = null
     private val binding get() = _Binding!!
     private val listOfYear = ArrayList<SpinnerModel>()
@@ -35,8 +40,6 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView {
         binding.courseDetailDramaBackBtn.setOnClickListener {
             finish()
         }
-        // 스피너 커스텀
-//        spinnerTest()
 
         binding.courseDetailDramaNameBtn.setOnClickListener {
             val menuList =arrayOf("하나","둘","셋")
@@ -61,6 +64,11 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView {
         binding.courseDetailCategoryTv.text = initList.courseLocage?.type
         binding.courseDetailCourseName.text = initList.courseLocage?.spotTitle
         binding.othersStarCountTv.text = initList.courseSavedCount.toString()
+
+        binding.courseDetailLocationFlagBtn.setOnClickListener {
+            var service = LocationHoldService(this,initList.courseLocage?.spotId!!)
+            service.tryLoadLocationHold(binding.courseDetailLocationFlagBtn)
+        }
     }
 
     private fun setOnClickEvent() {
@@ -86,54 +94,30 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView {
                     initData(it.result!!)
                 }
             }
+
         }
     }
-
-
-
-
-
-//
-//    private fun spinnerTest() {
-//        setupSpinnerYear()
-//        setupSpinnerHandler()
-//    }
-//    private fun setupSpinnerYear() {
-//        lateinit var spinnerAdapterYear: SpinnerAdapter
-//        var years : ArrayList<String> = ArrayList()
-//        years.add("배우")
-//        years.add("박서준")
-//        years.add("조이서")
-//        years.add("서강준")
-//        years.add("강 다니엘")
-//
-//        for (i in years.indices) {
-//            val year = SpinnerModel(years[i])
-//            listOfYear.add(year)
-//        }
-//        spinnerAdapterYear = SpinnerAdapter(this, R.layout.item_spinner, listOfYear)
-//        binding.spinnerYear.adapter = spinnerAdapterYear
-//    }
-//    private fun setupSpinnerHandler() {
-//        binding.spinnerYear.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//                val year = binding.spinnerYear.getItemAtPosition(position) as SpinnerModel
-//                if (!year.name.equals("배우")) {
-//                    binding.spinnerYear.txt_name.text = year.name
-//                }
-//            }
-//
-//            override fun onNothingSelected(p0: AdapterView<*>?) {
-//
-//            }
-//        }
-//    }
     override fun onDestroy() {
         _Binding = null
         super.onDestroy()
     }
 
     override fun onExploreLoading() {
+    }
+
+    override fun onExploreSuccess(response: LocationHoldResponse, iv: ImageView) {
+        when(response.code) {
+            1012 -> {
+                response.let {
+                    iv.setImageResource(R.drawable.ic_flag_on)
+                }
+            }
+            1013 -> {
+                response.let {
+                    iv.setImageResource(R.drawable.ic_flag_off)
+                }
+            }
+        }
     }
 
 

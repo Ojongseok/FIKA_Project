@@ -49,7 +49,6 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
 
 
     private fun initData() {
-<<<<<<< Updated upstream
         position = intent.getIntExtra("number", 0)
 
         val service = DramaInfoService(this, position)
@@ -61,11 +60,9 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
     override fun onResume() {
         super.onResume()
 
-=======
         val dramaId = spfManager.getDramaId()!!.toInt()
         val service = DramaInfoService(this, dramaId)
         service.tryLoadDramaInfoCourse()
->>>>>>> Stashed changes
     }
 
     override fun onExploreLoading() {

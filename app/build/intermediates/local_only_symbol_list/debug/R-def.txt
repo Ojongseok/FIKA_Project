@@ -224,6 +224,7 @@ id course_detail_iv_by_drama
 id course_detail_iv_location
 id course_detail_locage_tiltle
 id course_detail_locage_tiltle_by_drama
+id course_detail_location_flag_btn
 id course_detail_where_tv
 id course_info_back_btn
 id course_info_edit_switch_btn
@@ -309,7 +310,6 @@ id home_scrapcourse_rank_tv
 id home_search_et
 id imageView
 id imageView10
-id imageView12
 id imageView13
 id imageView14
 id imageView16
@@ -540,22 +540,7 @@ id placeinfo_locate_where_info_layout_underview
 id placeinfo_locate_where_info_map
 id placeinfo_locate_where_info_title_tv
 id placeinfo_locate_where_info_tv
-<<<<<<< Updated upstream
-id placeinfo_sv
-id placeinfo_time_iv
-id placeinfo_time_layout
-id placeinfo_time_tv1
-id placeinfo_time_tv2
-id placeinfo_time_tv3
-id placeinfo_top_layout
-id placeinfo_top_title_tv
-id placeinfo_up_btn
-id placeinfo_web_iv
-id placeinfo_web_layout
-id placeinfo_web_tv
 id progressBar2
-=======
->>>>>>> Stashed changes
 id quit_back_btn
 id quit_btn
 id quit_contents_layout
@@ -781,6 +766,7 @@ layout test
 layout visit_complete_course_list
 menu bottom_nav_menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation bottom_navigation
 string app_name

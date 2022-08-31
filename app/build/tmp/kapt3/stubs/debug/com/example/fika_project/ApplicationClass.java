@@ -7,11 +7,7 @@ public final class ApplicationClass extends android.app.Application {
     @org.jetbrains.annotations.NotNull()
     public static final com.example.fika_project.ApplicationClass.Companion Companion = null;
     @org.jetbrains.annotations.NotNull()
-<<<<<<< Updated upstream
     public static final java.lang.String X_ACCESS_TOKEN = "";
-=======
-    public static final java.lang.String X_ACCESS_TOKEN = "X_ACCESS_TOKEN";
->>>>>>> Stashed changes
     @org.jetbrains.annotations.NotNull()
     public static final java.lang.String TAG = "FIKA-Prj";
     @org.jetbrains.annotations.NotNull()

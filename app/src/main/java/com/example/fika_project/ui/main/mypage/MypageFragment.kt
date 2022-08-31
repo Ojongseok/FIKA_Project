@@ -10,8 +10,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentMypageBinding
-import com.example.fika_project.ui.main.mycourse.MyCourseFragment
-import com.example.fika_project.ui.main.mypage.myspot.MySpotActivity
 
 class MypageFragment : Fragment(),MypageView {
     private var _binding: FragmentMypageBinding? = null

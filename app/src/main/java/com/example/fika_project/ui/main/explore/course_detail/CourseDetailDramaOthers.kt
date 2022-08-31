@@ -5,15 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityCourseDetailDramaOthersBinding
 import com.example.fika_project.ui.main.explore.course_detail.*
+import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
+import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldService
+import com.example.fika_project.ui.main.hold_and_scrap.LocationHoldView
 import okhttp3.internal.notify
 
-class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView {
+class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHoldView {
     private var _Binding: ActivityCourseDetailDramaOthersBinding? = null
     private val binding get() = _Binding!!
     lateinit var locationAdapter : CourseDetailLocationOthersAdapter
@@ -39,6 +43,11 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView {
         binding.courseDetailCategoryTv.text = initList.courseLocage?.type
         binding.mapTitleNameTv.text = initList.courseLocage?.spotTitle
         binding.othersStarCountTv.text = initList.courseSavedCount.toString()
+
+        binding.courseDetailLocationFlagBtn.setOnClickListener {
+            var service = LocationHoldService(this,initList.courseLocage?.spotId!!)
+            service.tryLoadLocationHold(binding.courseDetailLocationFlagBtn)
+        }
     }
 
     private fun setOnClickEvent() {
@@ -69,6 +78,22 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView {
 
     override fun onExploreLoading() {
     }
+
+    override fun onExploreSuccess(response: LocationHoldResponse, iv: ImageView) {
+        when(response.code) {
+            1012 -> {
+                response.let {
+                    iv.setImageResource(R.drawable.ic_flag_on)
+                }
+            }
+            1013 -> {
+                response.let {
+                    iv.setImageResource(R.drawable.ic_flag_off)
+                }
+            }
+        }
+    }
+
     override fun onExploreSuccess(response: CourseDetailResponse) {
         when(response.code) {
             1000 -> {

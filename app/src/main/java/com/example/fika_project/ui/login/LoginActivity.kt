@@ -23,7 +23,6 @@ class LoginActivity : AppCompatActivity(), LoginView {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
 
-        spfManager.ClearJwt()
 
 //        var keyHash = Utility.getKeyHash(this)
 //        Log.e(TAG, "해시 키 값 : ${keyHash}")
@@ -31,13 +30,9 @@ class LoginActivity : AppCompatActivity(), LoginView {
         initClickListener()
         setContentView(binding.root)
 
-<<<<<<< Updated upstream
         spfManager.ClearJwt()
 
-////         편의상 시작
-=======
 //         편의상 시작
->>>>>>> Stashed changes
 //        val intent = Intent(this, MainActivity::class.java)
 //        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 //        startActivity(intent)
@@ -139,6 +134,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
             //성공
             1000 -> {
                 val intent = Intent(this, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
             }
             //최초

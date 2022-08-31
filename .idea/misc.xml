@@ -51,7 +51,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_course_detail_drama_others.xml" value="0.5253505933117584" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_course_info_edit.xml" value="0.536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_drama_detail_info.xml" value="0.3194444444444444" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_drama_info.xml" value="0.3586156111929308" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_drama_info.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_folder_select.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_large_map.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/activity_login.xml" value="0.2" />
@@ -72,7 +72,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/bg_spinner_year.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/detail_scene_list_item.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/dialog_loading.xml" value="0.2526041666666667" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/drama_info_course_item.xml" value="0.4" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/drama_info_course_item.xml" value="0.536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/drama_info_courselist_item.xml" value="0.37890625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/drama_info_item.xml" value="0.37890625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/drama_info_location_item.xml" value="0.38046875" />
@@ -86,7 +86,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_banner.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_edit_personal.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_explore.xml" value="0.264" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_explore_course_page.xml" value="0.536" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_explore_course_page.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_explore_drama_page.xml" value="0.3380530973451327" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_home.xml" value="0.8" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_kakaomap_test.xml" value="0.38046875" />
@@ -99,6 +99,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_mypage.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_myplace.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_myscrapcourse.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_nickname.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_placeinfo.xml" value="0.1125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_placeinfo_locate.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_quit.xml" value="0.536" />
@@ -167,9 +168,8 @@
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/quitdialog_bottom_background.xml" value="0.1065" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/quitdialog_bottom_left_background.xml" value="0.143" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/drawable/quitdialog_bottom_right_background.xml" value="0.1065" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_login.xml" value="0.8" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_my_scrap.xml" value="0.13296280461735785" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_placeinfo_locate.xml" value="0.11770157553290084" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_review_write.xml" value="0.10987601539119282" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_search.xml" value="0.2" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
@@ -181,7 +181,6 @@
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_agree_01.xml" value="0.2164750957854406" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_agree_02.xml" value="0.16" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_agree_03.xml" value="0.15049166310389056" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_all_review.xml" value="0.2097931616715914" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_banner.xml" value="0.264" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_edit_personal.xml" value="0.14151346729371525" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_home.xml" value="0.2" />
@@ -193,7 +192,6 @@
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_nickname.xml" value="0.2" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_placeinfo_locate.xml" value="0.15433946130825138" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_quit.xml" value="0.1195551436515292" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_review_img.xml" value="0.1085934159897392" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_review_report.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_signup_01.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/fragment_signup_02.xml" value="0.15049166310389056" />
@@ -206,7 +204,7 @@
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_homecourse.xml" value="0.4" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_homerank.xml" value="0.2578125" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_myplace.xml" value="0.15519452757588714" />
-        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_placeinfo_review.xml" value="0.25677603423680456" />
+        <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/item_placeinfo_review.xml" value="0.15519452757588714" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/myhold_location_item_list.xml" value="0.1" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/layout/tour_recyclerview_dramalist_item.xml" value="0.2578125" />
         <entry key="..\:/~29/FIKA_Prj/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1695" />
@@ -214,7 +212,6 @@
       </map>
     </option>
   </component>
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

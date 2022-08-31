@@ -94,7 +94,9 @@
                     android:layout_marginLeft="6dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginRight="6dp"
-                    android:background="@drawable/kakaomap_somenail"></FrameLayout>
+                    android:background="@drawable/kakaomap_somenail">
+
+                </FrameLayout>
 
                 <TextView
                     android:id="@+id/large_map_btn"
