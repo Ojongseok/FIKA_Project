@@ -18,11 +18,7 @@ class ApplicationClass : Application() {
     companion object{
         const val X_ACCESS_TOKEN: String = ""
         const val TAG: String = "FIKA-Prj"
-<<<<<<< Updated upstream
-        const val API_URL: String = ""
-=======
         const val API_URL: String = "http://ec2-15-165-255-15.ap-northeast-2.compute.amazonaws.com:9090"
->>>>>>> Stashed changes
 
         lateinit var prefs: SharedPreferences
         lateinit var retrofit: Retrofit
