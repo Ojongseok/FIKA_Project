@@ -7,7 +7,7 @@ object spfManager {
     val editor = prefs.edit()
 
     fun saveKakaoJwt(kakaoToken: String?) {
-        editor.putString("kakaoToken", kakaoToken).apply()
+        editor.putString("kakaoToken" , kakaoToken).apply()
     }
 
     fun getKakaoJwt(): String {
