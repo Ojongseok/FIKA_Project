@@ -58,14 +58,17 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
                 if(resp.locage == true){
                     binding.placeinfoLocateTagIv.visibility = View.VISIBLE
                     Glide.with(this).load(resp.dialogImageUrl).into(binding.placeinfoDialogIv)
+                    binding.placeinfoHashtagTv.text = resp.hashTag
                 }else{
                     binding.placeinfoLocateTagIv.visibility = View.GONE
                     binding.placeinfoDialogIv.visibility = View.GONE
+                    binding.placeinfoHashtagTv.visibility = View.GONE
                 }
 
-                binding.placeinfoHashtagTv.text = resp.hashTag
+
                 Glide.with(this).load(resp.spotImageUrl).into(binding.placeinfoLocateCoverIv)
                 binding.placeinfoLocateCoverTv.text = resp.spotTitle
+                binding.placeinfoLocateTimeTv1.text = resp.timeOpened
                 binding.placeinfoLocateCoverAddressTv.text = resp.address
                 binding.placeinfoLocateWhereInfoTv.text = resp.address
                 binding.placeinfoLocateCallTv.text = resp.phoneNumber

@@ -8,6 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ItemHomeCourseBinding
+import com.example.fika_project.ui.main.MainActivity
+import com.example.fika_project.ui.main.explore.ExploreFragment
+import com.example.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
+import com.example.fika_project.ui.main.mycourse.review.ReviewReportFragment
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.item_home_course.view.*
 
@@ -59,7 +63,10 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
             when(holder){
             is FooterViewHolder -> {
                 holder.itemView.setOnClickListener {
-                    Snackbar.make(it, "Footer is Clicked!!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
+                    (context as MainActivity).supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_frm, ExploreFragment())
+                        .commitAllowingStateLoss()
+                    Snackbar.make(it, "드라마를 탐색하러 갑니다!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
                 }
             }
             else -> {

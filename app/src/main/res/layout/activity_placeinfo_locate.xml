@@ -174,27 +174,27 @@
                 android:id="@+id/placeinfo_hashtag_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="#시끌벅적한 #순두부찌개 #포차문화 #포차문화"
+                android:layout_marginTop="24dp"
                 android:gravity="center"
+                android:text="#시끌벅적한 #순두부찌개 #포차문화 #포차문화"
                 android:textSize="14sp"
                 android:textStyle="normal"
-                android:layout_marginTop="24dp"
-                app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_cover_layout_underview"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_cover_layout_underview" />
 
             <ImageView
                 android:id="@+id/placeinfo_dialog_iv"
                 android:layout_width="0dp"
                 android:layout_height="250dp"
-                android:src="@drawable/sample_image"
-                android:layout_marginTop="24dp"
                 android:layout_marginStart="44dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="44dp"
-                app:layout_constraintTop_toBottomOf="@id/placeinfo_hashtag_tv"
-                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/sample_image"
+                app:layout_constraintBottom_toTopOf="@id/placeinfo_locate_talk_layout_underview"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/placeinfo_locate_talk_layout_underview"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/placeinfo_hashtag_tv" />
 
             <View
                 android:id="@+id/placeinfo_locate_talk_layout_underview"
@@ -365,29 +365,29 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp">
 
-                    <FrameLayout
+                    <ImageView
                         android:id="@+id/placeinfo_locate_where_info_map"
                         android:layout_width="match_parent"
                         android:layout_height="262dp"
-                        android:background="@color/grey"
+                        android:background="@drawable/kakaomap_somenail"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:layout_gravity="center"
                         android:layout_marginTop="16dp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:orientation="horizontal"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_where_info_map" >
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_where_info_map">
 
                         <ImageView
                             android:id="@+id/placeinfo_locate_where_info_iv"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:background="@drawable/ic_location_off"/>
+                            android:background="@drawable/ic_location_off" />
 
                         <TextView
                             android:id="@+id/placeinfo_locate_where_info_tv"
@@ -395,7 +395,7 @@
                             android:layout_height="wrap_content"
                             android:text="서울특별시 이태원~"
                             android:textSize="14sp"
-                            android:textStyle="normal"/>
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
