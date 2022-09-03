@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -215,7 +215,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_talk_layout_underview">
 
-
                 <TextView
                     android:id="@+id/placeinfo_locate_basic_info_title_tv"
                     android:layout_width="wrap_content"
@@ -239,66 +238,17 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <LinearLayout
-                        android:id="@+id/placeinfo_locate_time_layout"
-                        android:layout_width="match_parent"
+
+                    <TextView
+                        android:id="@+id/placeinfo_locate_time_tv"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="26dp"
-                        android:orientation="vertical"
-                        app:layout_constraintStart_toStartOf="@id/placeinfo_locate_time_iv"
-                        app:layout_constraintTop_toTopOf="@id/placeinfo_locate_time_iv">
-
-                        <TextView
-                            android:id="@+id/placeinfo_locate_time_tv1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="운영중"
-                            android:textSize="16sp"
-                            android:textStyle="normal" />
-
-                        <TextView
-                            android:id="@+id/placeinfo_locate_time_tv2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="운영중"
-                            android:textSize="16sp"
-                            android:textStyle="normal" />
-
-                        <TextView
-                            android:id="@+id/placeinfo_locate_time_tv3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="운영중"
-                            android:textSize="16sp"
-                            android:textStyle="normal" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/placeinfo_locate_web_iv"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginTop="16dp"
-                        android:background="@drawable/website"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_time_layout" />
-
-                    <LinearLayout
-                        android:id="@+id/placeinfo_locate_web_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="26dp"
-                        android:orientation="vertical"
-                        app:layout_constraintStart_toStartOf="@id/placeinfo_locate_web_iv"
-                        app:layout_constraintTop_toTopOf="@id/placeinfo_locate_web_iv">
-
-                        <TextView
-                            android:id="@+id/placeinfo_locate_web_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="운영중"
-                            android:textSize="16sp"
-                            android:textStyle="normal" />
-                    </LinearLayout>
+                        android:layout_marginStart="4dp"
+                        android:text="운영중"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toEndOf="@id/placeinfo_locate_time_iv"
+                        app:layout_constraintTop_toTopOf="@id/placeinfo_locate_time_iv" />
 
                     <ImageView
                         android:id="@+id/placeinfo_locate_call_iv"
@@ -307,26 +257,19 @@
                         android:layout_marginTop="16dp"
                         android:background="@drawable/call"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_web_layout" />
+                        app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_time_tv" />
 
-                    <LinearLayout
-                        android:id="@+id/placeinfo_locate_call_layout"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/placeinfo_locate_call_tv"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="26dp"
-                        android:orientation="vertical"
-                        app:layout_constraintStart_toStartOf="@id/placeinfo_locate_call_iv"
-                        app:layout_constraintTop_toTopOf="@id/placeinfo_locate_call_iv">
+                        android:text="운영중"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="4dp"
+                        app:layout_constraintStart_toEndOf="@id/placeinfo_locate_call_iv"
+                        app:layout_constraintTop_toTopOf="@id/placeinfo_locate_call_iv"/>
 
-                        <TextView
-                            android:id="@+id/placeinfo_locate_call_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="운영중"
-                            android:textSize="16sp"
-                            android:textStyle="normal" />
-
-                    </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
@@ -528,25 +471,45 @@
 
             <LinearLayout
                 android:id="@+id/placeinfo_locate_review_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="411dp"
+                android:layout_height="56dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/item_placeinfo_review_top_layout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_menu_layout_underview">
+                app:layout_constraintTop_toBottomOf="@+id/placeinfo_locate_menu_layout_underview">
 
 
                 <TextView
                     android:id="@+id/placeinfo_locate_review_title_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
                     android:text="리뷰"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black2"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/item_placeinfo_review_score_iv"
+                    android:layout_width="70dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/black_5stars" />
+
+                <TextView
+                    android:id="@+id/item_placeinfo_review_score_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_gravity="center"
+                    android:text="( - )"
+                    android:textColor="@color/black2"
+                    android:textSize="16sp" />
 
 
                 <!--            <com.github.rubensousa.gravitysnaphelper.GravitySnapRecyclerView-->
@@ -596,7 +559,7 @@
                     android:id="@+id/item_placeinfo_review_star_tv"
                     android:layout_width="14dp"
                     android:layout_height="14dp"
-                    android:src="@drawable/star_blue"
+                    android:src="@drawable/blue_5stars"
                     app:layout_constraintStart_toStartOf="@id/item_placeinfo_review_name_tv"
                     app:layout_constraintTop_toBottomOf="@id/item_placeinfo_review_name_tv" />
 

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,63 +26,40 @@ public final class FragmentEditPersonalBinding implements ViewBinding {
   public final ImageView editPersonalBackBtn;
 
   @NonNull
-  public final ImageView editPersonalEmailEditBtn;
+  public final TextView editPersonalDoneBtn;
 
   @NonNull
-  public final EditText editPersonalEmailEt;
+  public final EditText editPersonalEt;
 
   @NonNull
-  public final View editPersonalEmailEtUnderscoreView;
-
-  @NonNull
-  public final ImageView editPersonalEmailIv;
-
-  @NonNull
-  public final TextView editPersonalEmailWarningTv;
-
-  @NonNull
-  public final ImageView editPersonalNicknameEditBtn;
-
-  @NonNull
-  public final EditText editPersonalNicknameEt;
-
-  @NonNull
-  public final View editPersonalNicknameEtUnderscoreView;
-
-  @NonNull
-  public final ImageView editPersonalNicknameIv;
-
-  @NonNull
-  public final TextView editPersonalNicknameWarningTv;
+  public final LinearLayout editPersonalEtBackground;
 
   @NonNull
   public final TextView editPersonalQuitTv;
 
   @NonNull
+  public final TextView editPersonalSubTitleTv;
+
+  @NonNull
   public final TextView editPersonalTitleTv;
 
+  @NonNull
+  public final TextView editPersonalWarningTv;
+
   private FragmentEditPersonalBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView editPersonalBackBtn, @NonNull ImageView editPersonalEmailEditBtn,
-      @NonNull EditText editPersonalEmailEt, @NonNull View editPersonalEmailEtUnderscoreView,
-      @NonNull ImageView editPersonalEmailIv, @NonNull TextView editPersonalEmailWarningTv,
-      @NonNull ImageView editPersonalNicknameEditBtn, @NonNull EditText editPersonalNicknameEt,
-      @NonNull View editPersonalNicknameEtUnderscoreView, @NonNull ImageView editPersonalNicknameIv,
-      @NonNull TextView editPersonalNicknameWarningTv, @NonNull TextView editPersonalQuitTv,
-      @NonNull TextView editPersonalTitleTv) {
+      @NonNull ImageView editPersonalBackBtn, @NonNull TextView editPersonalDoneBtn,
+      @NonNull EditText editPersonalEt, @NonNull LinearLayout editPersonalEtBackground,
+      @NonNull TextView editPersonalQuitTv, @NonNull TextView editPersonalSubTitleTv,
+      @NonNull TextView editPersonalTitleTv, @NonNull TextView editPersonalWarningTv) {
     this.rootView = rootView;
     this.editPersonalBackBtn = editPersonalBackBtn;
-    this.editPersonalEmailEditBtn = editPersonalEmailEditBtn;
-    this.editPersonalEmailEt = editPersonalEmailEt;
-    this.editPersonalEmailEtUnderscoreView = editPersonalEmailEtUnderscoreView;
-    this.editPersonalEmailIv = editPersonalEmailIv;
-    this.editPersonalEmailWarningTv = editPersonalEmailWarningTv;
-    this.editPersonalNicknameEditBtn = editPersonalNicknameEditBtn;
-    this.editPersonalNicknameEt = editPersonalNicknameEt;
-    this.editPersonalNicknameEtUnderscoreView = editPersonalNicknameEtUnderscoreView;
-    this.editPersonalNicknameIv = editPersonalNicknameIv;
-    this.editPersonalNicknameWarningTv = editPersonalNicknameWarningTv;
+    this.editPersonalDoneBtn = editPersonalDoneBtn;
+    this.editPersonalEt = editPersonalEt;
+    this.editPersonalEtBackground = editPersonalEtBackground;
     this.editPersonalQuitTv = editPersonalQuitTv;
+    this.editPersonalSubTitleTv = editPersonalSubTitleTv;
     this.editPersonalTitleTv = editPersonalTitleTv;
+    this.editPersonalWarningTv = editPersonalWarningTv;
   }
 
   @Override
@@ -117,63 +95,21 @@ public final class FragmentEditPersonalBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edit_personal_email_edit_btn;
-      ImageView editPersonalEmailEditBtn = ViewBindings.findChildViewById(rootView, id);
-      if (editPersonalEmailEditBtn == null) {
+      id = R.id.edit_personal_done_btn;
+      TextView editPersonalDoneBtn = ViewBindings.findChildViewById(rootView, id);
+      if (editPersonalDoneBtn == null) {
         break missingId;
       }
 
-      id = R.id.edit_personal_email_et;
-      EditText editPersonalEmailEt = ViewBindings.findChildViewById(rootView, id);
-      if (editPersonalEmailEt == null) {
+      id = R.id.edit_personal_et;
+      EditText editPersonalEt = ViewBindings.findChildViewById(rootView, id);
+      if (editPersonalEt == null) {
         break missingId;
       }
 
-      id = R.id.edit_personal_email_et_underscore_view;
-      View editPersonalEmailEtUnderscoreView = ViewBindings.findChildViewById(rootView, id);
-      if (editPersonalEmailEtUnderscoreView == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_personal_email_iv;
-      ImageView editPersonalEmailIv = ViewBindings.findChildViewById(rootView, id);
-      if (editPersonalEmailIv == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_personal_email_warning_tv;
-      TextView editPersonalEmailWarningTv = ViewBindings.findChildViewById(rootView, id);
-      if (editPersonalEmailWarningTv == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_personal_nickname_edit_btn;
-      ImageView editPersonalNicknameEditBtn = ViewBindings.findChildViewById(rootView, id);
-      if (editPersonalNicknameEditBtn == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_personal_nickname_et;
-      EditText editPersonalNicknameEt = ViewBindings.findChildViewById(rootView, id);
-      if (editPersonalNicknameEt == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_personal_nickname_et_underscore_view;
-      View editPersonalNicknameEtUnderscoreView = ViewBindings.findChildViewById(rootView, id);
-      if (editPersonalNicknameEtUnderscoreView == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_personal_nickname_iv;
-      ImageView editPersonalNicknameIv = ViewBindings.findChildViewById(rootView, id);
-      if (editPersonalNicknameIv == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_personal_nickname_warning_tv;
-      TextView editPersonalNicknameWarningTv = ViewBindings.findChildViewById(rootView, id);
-      if (editPersonalNicknameWarningTv == null) {
+      id = R.id.edit_personal_et_background;
+      LinearLayout editPersonalEtBackground = ViewBindings.findChildViewById(rootView, id);
+      if (editPersonalEtBackground == null) {
         break missingId;
       }
 
@@ -183,17 +119,27 @@ public final class FragmentEditPersonalBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.edit_personal_sub_title_tv;
+      TextView editPersonalSubTitleTv = ViewBindings.findChildViewById(rootView, id);
+      if (editPersonalSubTitleTv == null) {
+        break missingId;
+      }
+
       id = R.id.edit_personal_title_tv;
       TextView editPersonalTitleTv = ViewBindings.findChildViewById(rootView, id);
       if (editPersonalTitleTv == null) {
         break missingId;
       }
 
+      id = R.id.edit_personal_warning_tv;
+      TextView editPersonalWarningTv = ViewBindings.findChildViewById(rootView, id);
+      if (editPersonalWarningTv == null) {
+        break missingId;
+      }
+
       return new FragmentEditPersonalBinding((ConstraintLayout) rootView, editPersonalBackBtn,
-          editPersonalEmailEditBtn, editPersonalEmailEt, editPersonalEmailEtUnderscoreView,
-          editPersonalEmailIv, editPersonalEmailWarningTv, editPersonalNicknameEditBtn,
-          editPersonalNicknameEt, editPersonalNicknameEtUnderscoreView, editPersonalNicknameIv,
-          editPersonalNicknameWarningTv, editPersonalQuitTv, editPersonalTitleTv);
+          editPersonalDoneBtn, editPersonalEt, editPersonalEtBackground, editPersonalQuitTv,
+          editPersonalSubTitleTv, editPersonalTitleTv, editPersonalWarningTv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

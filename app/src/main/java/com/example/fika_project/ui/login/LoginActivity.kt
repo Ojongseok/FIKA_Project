@@ -9,6 +9,7 @@ import com.example.fika_project.ApplicationClass.Companion.TAG
 import com.example.fika_project.R
 import com.example.fika_project.databinding.ActivityLoginBinding
 import com.example.fika_project.ui.main.MainActivity
+import com.example.fika_project.ui.main.home.HomeFragment
 import com.example.fika_project.utils.spfManager
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
@@ -33,15 +34,21 @@ class LoginActivity : AppCompatActivity(), LoginView {
         spfManager.ClearJwt()
 
 //         편의상 시작
-//        val intent = Intent(this, MainActivity::class.java)
-//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//        startActivity(intent)
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
     }
 
     private fun initClickListener(){
         binding.loginQuestionTv.setOnClickListener {
             val bottomDialog = LoginDialog()
             bottomDialog.show(supportFragmentManager, bottomDialog.tag)
+        }
+
+        binding.loginGoogleIv.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.login_frm, Agree01Fragment())
+                .commitAllowingStateLoss()
         }
 
         binding.loginKakaoIv.setOnClickListener {
@@ -97,28 +104,33 @@ class LoginActivity : AppCompatActivity(), LoginView {
         when (index) {
             1->{
                 val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent) }
+                startActivity(intent)
+            }
 
             2 -> {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.login_frm, Agree01Fragment())
-                    .commitAllowingStateLoss()
+                    .add(R.id.login_frm, Agree01Fragment())
+                    .addToBackStack(null)
+                    .commit()
             }
 
             3 -> {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.login_frm, Agree02Fragment())
-                    .commitAllowingStateLoss()
+                    .add(R.id.login_frm, Agree02Fragment())
+                    .addToBackStack(null)
+                    .commit()
             }
             4->{
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.login_frm, Agree03Fragment())
-                    .commitAllowingStateLoss()
+                    .add(R.id.login_frm, Agree03Fragment())
+                    .addToBackStack(null)
+                    .commit()
             }
             5->{
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.login_frm, NicknameFragment())
-                    .commitAllowingStateLoss()
+                    .add(R.id.login_frm, NicknameFragment())
+                    .addToBackStack(null)
+                    .commit()
             }
         }
     }
@@ -129,7 +141,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
     }
 
     override fun onKakaoSuccess(response: KakaoResponse) {
-        Toast.makeText(this,"카카오 로그인",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,"카카오 로그인되었습니다",Toast.LENGTH_SHORT).show()
         when(response.code){
             //성공
             1000 -> {

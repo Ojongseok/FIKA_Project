@@ -68,7 +68,7 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
 
                 Glide.with(this).load(resp.spotImageUrl).into(binding.placeinfoLocateCoverIv)
                 binding.placeinfoLocateCoverTv.text = resp.spotTitle
-                binding.placeinfoLocateTimeTv1.text = resp.timeOpened
+                binding.placeinfoLocateTimeTv.text = resp.timeOpened
                 binding.placeinfoLocateCoverAddressTv.text = resp.address
                 binding.placeinfoLocateWhereInfoTv.text = resp.address
                 binding.placeinfoLocateCallTv.text = resp.phoneNumber
@@ -92,6 +92,7 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
                     binding.itemPlaceinfoReviewBottomLayout.visibility = View.GONE
                     binding.itemPlaceinfoReviewBottomImgLayout.visibility = View.GONE
                 }else{
+                    binding.itemPlaceinfoReviewScoreTv.text = "( ${resp.reviewCount} )"
                     binding.itemPlaceinfoReviewNameTv.text = resp.reviewList!![0].userNickname
                     binding.itemPlaceinfoReviewContentsTv.text = resp.reviewList!![0].reviewContents
                     Glide.with(this).load(resp.reviewList!![0].imageUrls!![0]).into(binding.itemPlaceinfoReviewImg01)

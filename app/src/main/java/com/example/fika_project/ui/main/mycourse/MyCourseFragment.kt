@@ -8,9 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.databinding.FragmentMycourseBinding
+import com.example.fika_project.ui.main.home.HomeResponse
 
-class MyCourseFragment :Fragment() {
+class MyCourseFragment :Fragment(), MyCourseView {
     private lateinit var binding: FragmentMycourseBinding
+    val service = MyCourseService(this)
+
     // 데이터를 담을 List
     private val data: MutableList<ExpandableListAdapter.Item> = ArrayList()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -20,6 +23,8 @@ class MyCourseFragment :Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        service.tryMyCourse()
 
         data.add(ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "기본 그룹"))
         data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "기본 그룹 - 1"))
@@ -40,4 +45,16 @@ class MyCourseFragment :Fragment() {
 
         }
     }
+
+    override fun onMyCourseLoading() {
+//        TODO("Not yet implemented")
+    }
+
+    override fun onMyCourseSuccess(response: MyCourseResponse) {
+        when(response.code) {
+            1000 -> {
+
+        }
+    }
+}
 }

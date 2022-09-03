@@ -9,10 +9,8 @@ import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentAllReviewBinding
-import com.example.fika_project.ui.main.MainActivity
 import com.example.fika_project.ui.main.mycourse.placeinfo.*
 import com.example.fika_project.utils.spfManager
-import com.google.gson.Gson
 
 class AllReviewFragment: Fragment(), PlaceinfoView {
     private var _binding: FragmentAllReviewBinding? = null
@@ -20,6 +18,7 @@ class AllReviewFragment: Fragment(), PlaceinfoView {
     val courseId = spfManager.getCourseId()!!.toInt()
     val service = PlaceinfoService(this)
 
+    private var isChecked: Boolean = false
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentAllReviewBinding.inflate(inflater, container, false)
@@ -36,8 +35,17 @@ class AllReviewFragment: Fragment(), PlaceinfoView {
             fragmentManager.beginTransaction().remove(this).commit()
             fragmentManager.popBackStack()
         }
-    }
 
+        binding.allReviewLookPhotoCb.setOnClickListener {
+            isChecked = !isChecked
+
+            if(isChecked){
+                binding.allReviewLookPhotoCb.setImageResource(R.drawable.ic_checkbox_off)
+            }else{
+                binding.allReviewLookPhotoCb.setImageResource(R.drawable.ic_checkbox_on)
+            }
+        }
+    }
 
     private fun setAdapter(reviewList: ArrayList<ReviewList>) {
         val allReviewRVAdapter = AllReviewRVAdapter(reviewList,requireContext())
@@ -71,8 +79,9 @@ class AllReviewFragment: Fragment(), PlaceinfoView {
     override fun onPlaceinfoSuccess(response: PlaceInfoResponse) {
         when(response.code){
             1000 -> {
-                response?.let { setAdapter(it.result!!.reviewList) }
+                response.let { setAdapter(it.result!!.reviewList) }
                 binding.allViewSubTitleNumTv.text = response.result!!.reviewCount.toString()
+                if(response.result.reviewCount > 0){ binding.allReviewEmptyTv.visibility = View.GONE }
             }
         }
     }

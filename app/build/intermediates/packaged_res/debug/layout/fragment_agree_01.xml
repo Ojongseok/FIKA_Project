@@ -49,8 +49,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/agree_01_title_tv">
 
-            <CheckBox
+            <ImageButton
                 android:id="@+id/agree_01_cb_01"
+                android:src="@drawable/round_checkbox_off"
+                android:backgroundTint="@color/white"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
 
@@ -77,8 +79,10 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <CheckBox
+            <ImageButton
                 android:id="@+id/agree_01_cb_02"
+                android:src="@drawable/round_checkbox_off"
+                android:backgroundTint="@color/white"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
 
@@ -102,8 +106,10 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <CheckBox
+            <ImageButton
                 android:id="@+id/agree_01_cb_03"
+                android:src="@drawable/round_checkbox_off"
+                android:backgroundTint="@color/white"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
 
@@ -135,8 +141,10 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <CheckBox
+            <ImageButton
                 android:id="@+id/agree_01_cb_04"
+                android:src="@drawable/round_checkbox_off"
+                android:backgroundTint="@color/white"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
 
@@ -168,8 +176,10 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <CheckBox
+            <ImageButton
                 android:id="@+id/agree_01_cb_05"
+                android:src="@drawable/round_checkbox_off"
+                android:backgroundTint="@color/white"
                 android:layout_width="24dp"
                 android:layout_height="24dp"/>
 

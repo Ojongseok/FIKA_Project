@@ -17,6 +17,7 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
     override fun onCreateViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
         var view: View? = null
         val context = parent.context
+
         when (type) {
             HEADER -> {
                 val inflaterHeader =

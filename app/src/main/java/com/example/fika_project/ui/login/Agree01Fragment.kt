@@ -5,11 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import com.example.fika_project.R
 import com.example.fika_project.databinding.FragmentAgree01Binding
+import java.lang.reflect.Array.newInstance
+import java.net.URLClassLoader.newInstance
 
 class Agree01Fragment  : Fragment() {
     private var _binding: FragmentAgree01Binding? = null
     private val binding get() = _binding!!
+
+    private var isChecked: Boolean = false
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentAgree01Binding.inflate(inflater, container, false)
 
@@ -33,12 +40,60 @@ class Agree01Fragment  : Fragment() {
         binding.agree01CountinueBtn.setOnClickListener {
             lActivity.changeFragment(5)
         }
-    }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        binding.agree01Cb01.setOnClickListener{
+            isChecked = !isChecked
 
+            if(isChecked){
+                binding.agree01Cb01.setImageResource(R.drawable.round_checkbox_off)
+            }else{
+                binding.agree01Cb01.setImageResource(R.drawable.round_checkbox_on)
+                binding.agree01Cb02.setImageResource(R.drawable.round_checkbox_on)
+                binding.agree01Cb03.setImageResource(R.drawable.round_checkbox_on)
+                binding.agree01Cb04.setImageResource(R.drawable.round_checkbox_on)
+                binding.agree01Cb05.setImageResource(R.drawable.round_checkbox_on)
+            }
+        }
 
+        binding.agree01Cb02.setOnClickListener{
+            isChecked = !isChecked
+
+            if(isChecked){
+                binding.agree01Cb02.setImageResource(R.drawable.round_checkbox_off)
+            }else{
+                binding.agree01Cb02.setImageResource(R.drawable.round_checkbox_on)
+            }
+        }
+
+        binding.agree01Cb03.setOnClickListener{
+            isChecked = !isChecked
+
+            if(isChecked){
+                binding.agree01Cb03.setImageResource(R.drawable.round_checkbox_off)
+            }else{
+                binding.agree01Cb03.setImageResource(R.drawable.round_checkbox_on)
+            }
+        }
+
+        binding.agree01Cb04.setOnClickListener{
+            isChecked = !isChecked
+
+            if(isChecked){
+                binding.agree01Cb04.setImageResource(R.drawable.round_checkbox_off)
+            }else{
+                binding.agree01Cb04.setImageResource(R.drawable.round_checkbox_on)
+            }
+        }
+
+        binding.agree01Cb05.setOnClickListener{
+            isChecked = !isChecked
+
+            if(isChecked){
+                binding.agree01Cb05.setImageResource(R.drawable.round_checkbox_off)
+            }else{
+                binding.agree01Cb05.setImageResource(R.drawable.round_checkbox_on)
+            }
+        }
     }
 
     override fun onDestroyView() {

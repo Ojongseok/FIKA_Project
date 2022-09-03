@@ -4,7 +4,6 @@ package com.example.fika_project.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -25,7 +24,10 @@ public final class FragmentAllReviewBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final CheckBox allReviewLookPhotoCb;
+  public final TextView allReviewEmptyTv;
+
+  @NonNull
+  public final ImageView allReviewLookPhotoCb;
 
   @NonNull
   public final LinearLayout allReviewOptionLayout;
@@ -51,13 +53,14 @@ public final class FragmentAllReviewBinding implements ViewBinding {
   @NonNull
   public final TextView allViewTitleTv;
 
-  private FragmentAllReviewBinding(@NonNull ScrollView rootView,
-      @NonNull CheckBox allReviewLookPhotoCb, @NonNull LinearLayout allReviewOptionLayout,
+  private FragmentAllReviewBinding(@NonNull ScrollView rootView, @NonNull TextView allReviewEmptyTv,
+      @NonNull ImageView allReviewLookPhotoCb, @NonNull LinearLayout allReviewOptionLayout,
       @NonNull RecyclerView allReviewRv, @NonNull Spinner allReviewSpinner,
       @NonNull TextView allReviewSpinnerTv, @NonNull ImageView allViewBackBtn,
       @NonNull TextView allViewSubTitleNumTv, @NonNull TextView allViewSubTitleTv,
       @NonNull TextView allViewTitleTv) {
     this.rootView = rootView;
+    this.allReviewEmptyTv = allReviewEmptyTv;
     this.allReviewLookPhotoCb = allReviewLookPhotoCb;
     this.allReviewOptionLayout = allReviewOptionLayout;
     this.allReviewRv = allReviewRv;
@@ -96,8 +99,14 @@ public final class FragmentAllReviewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.all_review_empty_tv;
+      TextView allReviewEmptyTv = ViewBindings.findChildViewById(rootView, id);
+      if (allReviewEmptyTv == null) {
+        break missingId;
+      }
+
       id = R.id.all_review_look_photo_cb;
-      CheckBox allReviewLookPhotoCb = ViewBindings.findChildViewById(rootView, id);
+      ImageView allReviewLookPhotoCb = ViewBindings.findChildViewById(rootView, id);
       if (allReviewLookPhotoCb == null) {
         break missingId;
       }
@@ -150,9 +159,10 @@ public final class FragmentAllReviewBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentAllReviewBinding((ScrollView) rootView, allReviewLookPhotoCb,
-          allReviewOptionLayout, allReviewRv, allReviewSpinner, allReviewSpinnerTv, allViewBackBtn,
-          allViewSubTitleNumTv, allViewSubTitleTv, allViewTitleTv);
+      return new FragmentAllReviewBinding((ScrollView) rootView, allReviewEmptyTv,
+          allReviewLookPhotoCb, allReviewOptionLayout, allReviewRv, allReviewSpinner,
+          allReviewSpinnerTv, allViewBackBtn, allViewSubTitleNumTv, allViewSubTitleTv,
+          allViewTitleTv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -37,6 +37,9 @@ public final class ItemHomeCourseBinding implements ViewBinding {
   public final TextView itemHomeCourseNameTv;
 
   @NonNull
+  public final ImageView itemHomeCourseNullCard;
+
+  @NonNull
   public final TextView itemHomeCourseSpotTv;
 
   @NonNull
@@ -45,14 +48,15 @@ public final class ItemHomeCourseBinding implements ViewBinding {
   private ItemHomeCourseBinding(@NonNull ConstraintLayout rootView,
       @NonNull CardView itemHomeCourseBottomCv, @NonNull CardView itemHomeCourseCv,
       @NonNull TextView itemHomeCourseDramaNameTv, @NonNull ImageView itemHomeCourseIv,
-      @NonNull TextView itemHomeCourseNameTv, @NonNull TextView itemHomeCourseSpotTv,
-      @NonNull CardView itemHomeCourseTopCv) {
+      @NonNull TextView itemHomeCourseNameTv, @NonNull ImageView itemHomeCourseNullCard,
+      @NonNull TextView itemHomeCourseSpotTv, @NonNull CardView itemHomeCourseTopCv) {
     this.rootView = rootView;
     this.itemHomeCourseBottomCv = itemHomeCourseBottomCv;
     this.itemHomeCourseCv = itemHomeCourseCv;
     this.itemHomeCourseDramaNameTv = itemHomeCourseDramaNameTv;
     this.itemHomeCourseIv = itemHomeCourseIv;
     this.itemHomeCourseNameTv = itemHomeCourseNameTv;
+    this.itemHomeCourseNullCard = itemHomeCourseNullCard;
     this.itemHomeCourseSpotTv = itemHomeCourseSpotTv;
     this.itemHomeCourseTopCv = itemHomeCourseTopCv;
   }
@@ -114,6 +118,12 @@ public final class ItemHomeCourseBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.item_home_course_null_card;
+      ImageView itemHomeCourseNullCard = ViewBindings.findChildViewById(rootView, id);
+      if (itemHomeCourseNullCard == null) {
+        break missingId;
+      }
+
       id = R.id.item_home_course_spot_tv;
       TextView itemHomeCourseSpotTv = ViewBindings.findChildViewById(rootView, id);
       if (itemHomeCourseSpotTv == null) {
@@ -128,7 +138,7 @@ public final class ItemHomeCourseBinding implements ViewBinding {
 
       return new ItemHomeCourseBinding((ConstraintLayout) rootView, itemHomeCourseBottomCv,
           itemHomeCourseCv, itemHomeCourseDramaNameTv, itemHomeCourseIv, itemHomeCourseNameTv,
-          itemHomeCourseSpotTv, itemHomeCourseTopCv);
+          itemHomeCourseNullCard, itemHomeCourseSpotTv, itemHomeCourseTopCv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

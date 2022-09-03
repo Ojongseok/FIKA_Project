@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="로그인에 어려움이 있나요?"
+            android:textColor="@color/black"
             android:gravity="center"
             android:textSize="20sp"
             android:textStyle="bold"/>
@@ -21,6 +22,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black2"
             android:text="예전에 이 소셜서비스로 로그인했는데 지금은 안돼요."
             android:layout_marginTop="32dp"
             android:gravity="start"
@@ -30,6 +32,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black2"
             android:text="- 혹시 로그인했던 소셜 서비스의 계정을 삭제했거나, 비밀번호를 변경했나요? 이 경우, 해당 소셜 서비스에서 확인 후 FIKA에 로그인이 가능합니다."
             android:layout_marginTop="16dp"
             android:lineSpacingExtra="3dp"
@@ -40,6 +43,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black2"
             android:text="문제가 계속 해결되지 않는다면 고객센터로 이메일을 보내주세요. 여러분을 위해 발전하는 FIKA가 되겠습니다😊"
             android:layout_marginTop="68dp"
             android:lineSpacingExtra="3dp"

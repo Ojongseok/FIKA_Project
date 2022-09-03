@@ -55,6 +55,12 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
   public final ImageView itemPlaceinfoReviewProfileIv;
 
   @NonNull
+  public final ImageView itemPlaceinfoReviewScoreIv;
+
+  @NonNull
+  public final TextView itemPlaceinfoReviewScoreTv;
+
+  @NonNull
   public final ImageView itemPlaceinfoReviewStarTv;
 
   @NonNull
@@ -86,9 +92,6 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
 
   @NonNull
   public final ImageView placeinfoLocateCallIv;
-
-  @NonNull
-  public final LinearLayout placeinfoLocateCallLayout;
 
   @NonNull
   public final TextView placeinfoLocateCallTv;
@@ -172,16 +175,7 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
   public final ImageView placeinfoLocateTimeIv;
 
   @NonNull
-  public final LinearLayout placeinfoLocateTimeLayout;
-
-  @NonNull
-  public final TextView placeinfoLocateTimeTv1;
-
-  @NonNull
-  public final TextView placeinfoLocateTimeTv2;
-
-  @NonNull
-  public final TextView placeinfoLocateTimeTv3;
+  public final TextView placeinfoLocateTimeTv;
 
   @NonNull
   public final LinearLayout placeinfoLocateTopLayout;
@@ -193,15 +187,6 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
   public final ImageView placeinfoLocateUpBtn;
 
   @NonNull
-  public final ImageView placeinfoLocateWebIv;
-
-  @NonNull
-  public final LinearLayout placeinfoLocateWebLayout;
-
-  @NonNull
-  public final TextView placeinfoLocateWebTv;
-
-  @NonNull
   public final ImageView placeinfoLocateWhereInfoIv;
 
   @NonNull
@@ -211,7 +196,7 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
   public final View placeinfoLocateWhereInfoLayoutUnderview;
 
   @NonNull
-  public final FrameLayout placeinfoLocateWhereInfoMap;
+  public final ImageView placeinfoLocateWhereInfoMap;
 
   @NonNull
   public final TextView placeinfoLocateWhereInfoTitleTv;
@@ -226,6 +211,7 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
       @NonNull ImageView itemPlaceinfoReviewImg01, @NonNull ImageView itemPlaceinfoReviewImg02,
       @NonNull ImageView itemPlaceinfoReviewImg03, @NonNull ImageView itemPlaceinfoReviewMoreIv,
       @NonNull TextView itemPlaceinfoReviewNameTv, @NonNull ImageView itemPlaceinfoReviewProfileIv,
+      @NonNull ImageView itemPlaceinfoReviewScoreIv, @NonNull TextView itemPlaceinfoReviewScoreTv,
       @NonNull ImageView itemPlaceinfoReviewStarTv,
       @NonNull ConstraintLayout itemPlaceinfoReviewTopLayout, @NonNull ImageView placeinfoDialogIv,
       @NonNull TextView placeinfoHashtagTv, @NonNull ImageView placeinfoLocateAddMyCourseBtn,
@@ -233,8 +219,7 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
       @NonNull LinearLayout placeinfoLocateBasicInfoLayout,
       @NonNull View placeinfoLocateBasicInfoLayoutUnderview,
       @NonNull TextView placeinfoLocateBasicInfoTitleTv, @NonNull ImageView placeinfoLocateCallIv,
-      @NonNull LinearLayout placeinfoLocateCallLayout, @NonNull TextView placeinfoLocateCallTv,
-      @NonNull ImageView placeinfoLocateCoverAddressIv,
+      @NonNull TextView placeinfoLocateCallTv, @NonNull ImageView placeinfoLocateCoverAddressIv,
       @NonNull TextView placeinfoLocateCoverAddressTv, @NonNull ImageView placeinfoLocateCoverIv,
       @NonNull LinearLayout placeinfoLocateCoverLayout,
       @NonNull View placeinfoLocateCoverLayoutUnderview, @NonNull TextView placeinfoLocateCoverTv,
@@ -250,15 +235,12 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
       @NonNull ImageView placeinfoLocateMoreIv, @NonNull LinearLayout placeinfoLocateReviewLayout,
       @NonNull TextView placeinfoLocateReviewTitleTv, @NonNull ScrollView placeinfoLocateSv,
       @NonNull ImageView placeinfoLocateTagIv, @NonNull View placeinfoLocateTalkLayoutUnderview,
-      @NonNull ImageView placeinfoLocateTimeIv, @NonNull LinearLayout placeinfoLocateTimeLayout,
-      @NonNull TextView placeinfoLocateTimeTv1, @NonNull TextView placeinfoLocateTimeTv2,
-      @NonNull TextView placeinfoLocateTimeTv3, @NonNull LinearLayout placeinfoLocateTopLayout,
-      @NonNull TextView placeinfoLocateTopTitleTv, @NonNull ImageView placeinfoLocateUpBtn,
-      @NonNull ImageView placeinfoLocateWebIv, @NonNull LinearLayout placeinfoLocateWebLayout,
-      @NonNull TextView placeinfoLocateWebTv, @NonNull ImageView placeinfoLocateWhereInfoIv,
+      @NonNull ImageView placeinfoLocateTimeIv, @NonNull TextView placeinfoLocateTimeTv,
+      @NonNull LinearLayout placeinfoLocateTopLayout, @NonNull TextView placeinfoLocateTopTitleTv,
+      @NonNull ImageView placeinfoLocateUpBtn, @NonNull ImageView placeinfoLocateWhereInfoIv,
       @NonNull LinearLayout placeinfoLocateWhereInfoLayout,
       @NonNull View placeinfoLocateWhereInfoLayoutUnderview,
-      @NonNull FrameLayout placeinfoLocateWhereInfoMap,
+      @NonNull ImageView placeinfoLocateWhereInfoMap,
       @NonNull TextView placeinfoLocateWhereInfoTitleTv,
       @NonNull TextView placeinfoLocateWhereInfoTv) {
     this.rootView = rootView;
@@ -272,6 +254,8 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
     this.itemPlaceinfoReviewMoreIv = itemPlaceinfoReviewMoreIv;
     this.itemPlaceinfoReviewNameTv = itemPlaceinfoReviewNameTv;
     this.itemPlaceinfoReviewProfileIv = itemPlaceinfoReviewProfileIv;
+    this.itemPlaceinfoReviewScoreIv = itemPlaceinfoReviewScoreIv;
+    this.itemPlaceinfoReviewScoreTv = itemPlaceinfoReviewScoreTv;
     this.itemPlaceinfoReviewStarTv = itemPlaceinfoReviewStarTv;
     this.itemPlaceinfoReviewTopLayout = itemPlaceinfoReviewTopLayout;
     this.placeinfoDialogIv = placeinfoDialogIv;
@@ -283,7 +267,6 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
     this.placeinfoLocateBasicInfoLayoutUnderview = placeinfoLocateBasicInfoLayoutUnderview;
     this.placeinfoLocateBasicInfoTitleTv = placeinfoLocateBasicInfoTitleTv;
     this.placeinfoLocateCallIv = placeinfoLocateCallIv;
-    this.placeinfoLocateCallLayout = placeinfoLocateCallLayout;
     this.placeinfoLocateCallTv = placeinfoLocateCallTv;
     this.placeinfoLocateCoverAddressIv = placeinfoLocateCoverAddressIv;
     this.placeinfoLocateCoverAddressTv = placeinfoLocateCoverAddressTv;
@@ -311,16 +294,10 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
     this.placeinfoLocateTagIv = placeinfoLocateTagIv;
     this.placeinfoLocateTalkLayoutUnderview = placeinfoLocateTalkLayoutUnderview;
     this.placeinfoLocateTimeIv = placeinfoLocateTimeIv;
-    this.placeinfoLocateTimeLayout = placeinfoLocateTimeLayout;
-    this.placeinfoLocateTimeTv1 = placeinfoLocateTimeTv1;
-    this.placeinfoLocateTimeTv2 = placeinfoLocateTimeTv2;
-    this.placeinfoLocateTimeTv3 = placeinfoLocateTimeTv3;
+    this.placeinfoLocateTimeTv = placeinfoLocateTimeTv;
     this.placeinfoLocateTopLayout = placeinfoLocateTopLayout;
     this.placeinfoLocateTopTitleTv = placeinfoLocateTopTitleTv;
     this.placeinfoLocateUpBtn = placeinfoLocateUpBtn;
-    this.placeinfoLocateWebIv = placeinfoLocateWebIv;
-    this.placeinfoLocateWebLayout = placeinfoLocateWebLayout;
-    this.placeinfoLocateWebTv = placeinfoLocateWebTv;
     this.placeinfoLocateWhereInfoIv = placeinfoLocateWhereInfoIv;
     this.placeinfoLocateWhereInfoLayout = placeinfoLocateWhereInfoLayout;
     this.placeinfoLocateWhereInfoLayoutUnderview = placeinfoLocateWhereInfoLayoutUnderview;
@@ -416,6 +393,18 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.item_placeinfo_review_score_iv;
+      ImageView itemPlaceinfoReviewScoreIv = ViewBindings.findChildViewById(rootView, id);
+      if (itemPlaceinfoReviewScoreIv == null) {
+        break missingId;
+      }
+
+      id = R.id.item_placeinfo_review_score_tv;
+      TextView itemPlaceinfoReviewScoreTv = ViewBindings.findChildViewById(rootView, id);
+      if (itemPlaceinfoReviewScoreTv == null) {
+        break missingId;
+      }
+
       id = R.id.item_placeinfo_review_star_tv;
       ImageView itemPlaceinfoReviewStarTv = ViewBindings.findChildViewById(rootView, id);
       if (itemPlaceinfoReviewStarTv == null) {
@@ -479,12 +468,6 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
       id = R.id.placeinfo_locate_call_iv;
       ImageView placeinfoLocateCallIv = ViewBindings.findChildViewById(rootView, id);
       if (placeinfoLocateCallIv == null) {
-        break missingId;
-      }
-
-      id = R.id.placeinfo_locate_call_layout;
-      LinearLayout placeinfoLocateCallLayout = ViewBindings.findChildViewById(rootView, id);
-      if (placeinfoLocateCallLayout == null) {
         break missingId;
       }
 
@@ -650,27 +633,9 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.placeinfo_locate_time_layout;
-      LinearLayout placeinfoLocateTimeLayout = ViewBindings.findChildViewById(rootView, id);
-      if (placeinfoLocateTimeLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.placeinfo_locate_time_tv1;
-      TextView placeinfoLocateTimeTv1 = ViewBindings.findChildViewById(rootView, id);
-      if (placeinfoLocateTimeTv1 == null) {
-        break missingId;
-      }
-
-      id = R.id.placeinfo_locate_time_tv2;
-      TextView placeinfoLocateTimeTv2 = ViewBindings.findChildViewById(rootView, id);
-      if (placeinfoLocateTimeTv2 == null) {
-        break missingId;
-      }
-
-      id = R.id.placeinfo_locate_time_tv3;
-      TextView placeinfoLocateTimeTv3 = ViewBindings.findChildViewById(rootView, id);
-      if (placeinfoLocateTimeTv3 == null) {
+      id = R.id.placeinfo_locate_time_tv;
+      TextView placeinfoLocateTimeTv = ViewBindings.findChildViewById(rootView, id);
+      if (placeinfoLocateTimeTv == null) {
         break missingId;
       }
 
@@ -689,24 +654,6 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
       id = R.id.placeinfo_locate_up_btn;
       ImageView placeinfoLocateUpBtn = ViewBindings.findChildViewById(rootView, id);
       if (placeinfoLocateUpBtn == null) {
-        break missingId;
-      }
-
-      id = R.id.placeinfo_locate_web_iv;
-      ImageView placeinfoLocateWebIv = ViewBindings.findChildViewById(rootView, id);
-      if (placeinfoLocateWebIv == null) {
-        break missingId;
-      }
-
-      id = R.id.placeinfo_locate_web_layout;
-      LinearLayout placeinfoLocateWebLayout = ViewBindings.findChildViewById(rootView, id);
-      if (placeinfoLocateWebLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.placeinfo_locate_web_tv;
-      TextView placeinfoLocateWebTv = ViewBindings.findChildViewById(rootView, id);
-      if (placeinfoLocateWebTv == null) {
         break missingId;
       }
 
@@ -729,7 +676,7 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
       }
 
       id = R.id.placeinfo_locate_where_info_map;
-      FrameLayout placeinfoLocateWhereInfoMap = ViewBindings.findChildViewById(rootView, id);
+      ImageView placeinfoLocateWhereInfoMap = ViewBindings.findChildViewById(rootView, id);
       if (placeinfoLocateWhereInfoMap == null) {
         break missingId;
       }
@@ -750,24 +697,22 @@ public final class ActivityPlaceinfoLocateBinding implements ViewBinding {
           itemPlaceinfoReviewBottomImgLayout, itemPlaceinfoReviewBottomLayout,
           itemPlaceinfoReviewContentsTv, itemPlaceinfoReviewDateTv, itemPlaceinfoReviewImg01,
           itemPlaceinfoReviewImg02, itemPlaceinfoReviewImg03, itemPlaceinfoReviewMoreIv,
-          itemPlaceinfoReviewNameTv, itemPlaceinfoReviewProfileIv, itemPlaceinfoReviewStarTv,
-          itemPlaceinfoReviewTopLayout, placeinfoDialogIv, placeinfoHashtagTv,
-          placeinfoLocateAddMyCourseBtn, placeinfoLocateAllReviewBtn, placeinfoLocateBackIv,
-          placeinfoLocateBasicInfoLayout, placeinfoLocateBasicInfoLayoutUnderview,
-          placeinfoLocateBasicInfoTitleTv, placeinfoLocateCallIv, placeinfoLocateCallLayout,
-          placeinfoLocateCallTv, placeinfoLocateCoverAddressIv, placeinfoLocateCoverAddressTv,
-          placeinfoLocateCoverIv, placeinfoLocateCoverLayout, placeinfoLocateCoverLayoutUnderview,
-          placeinfoLocateCoverTv, placeinfoLocateFlagIv, placeinfoLocateFrm,
-          placeinfoLocateMenuLayout, placeinfoLocateMenuLayoutDetail1,
+          itemPlaceinfoReviewNameTv, itemPlaceinfoReviewProfileIv, itemPlaceinfoReviewScoreIv,
+          itemPlaceinfoReviewScoreTv, itemPlaceinfoReviewStarTv, itemPlaceinfoReviewTopLayout,
+          placeinfoDialogIv, placeinfoHashtagTv, placeinfoLocateAddMyCourseBtn,
+          placeinfoLocateAllReviewBtn, placeinfoLocateBackIv, placeinfoLocateBasicInfoLayout,
+          placeinfoLocateBasicInfoLayoutUnderview, placeinfoLocateBasicInfoTitleTv,
+          placeinfoLocateCallIv, placeinfoLocateCallTv, placeinfoLocateCoverAddressIv,
+          placeinfoLocateCoverAddressTv, placeinfoLocateCoverIv, placeinfoLocateCoverLayout,
+          placeinfoLocateCoverLayoutUnderview, placeinfoLocateCoverTv, placeinfoLocateFlagIv,
+          placeinfoLocateFrm, placeinfoLocateMenuLayout, placeinfoLocateMenuLayoutDetail1,
           placeinfoLocateMenuLayoutDetail2, placeinfoLocateMenuLayoutUnderview,
           placeinfoLocateMenuPriceIv1, placeinfoLocateMenuPriceIv2, placeinfoLocateMenuPriceTv1,
           placeinfoLocateMenuPriceTv2, placeinfoLocateMenuTitleTv, placeinfoLocateMenuTv1,
           placeinfoLocateMenuTv2, placeinfoLocateMoreIv, placeinfoLocateReviewLayout,
           placeinfoLocateReviewTitleTv, placeinfoLocateSv, placeinfoLocateTagIv,
-          placeinfoLocateTalkLayoutUnderview, placeinfoLocateTimeIv, placeinfoLocateTimeLayout,
-          placeinfoLocateTimeTv1, placeinfoLocateTimeTv2, placeinfoLocateTimeTv3,
+          placeinfoLocateTalkLayoutUnderview, placeinfoLocateTimeIv, placeinfoLocateTimeTv,
           placeinfoLocateTopLayout, placeinfoLocateTopTitleTv, placeinfoLocateUpBtn,
-          placeinfoLocateWebIv, placeinfoLocateWebLayout, placeinfoLocateWebTv,
           placeinfoLocateWhereInfoIv, placeinfoLocateWhereInfoLayout,
           placeinfoLocateWhereInfoLayoutUnderview, placeinfoLocateWhereInfoMap,
           placeinfoLocateWhereInfoTitleTv, placeinfoLocateWhereInfoTv);

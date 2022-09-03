@@ -10,10 +10,7 @@ import com.example.fika_project.R
 import com.example.fika_project.databinding.ItemHomeCourseBinding
 import com.example.fika_project.ui.main.MainActivity
 import com.example.fika_project.ui.main.explore.ExploreFragment
-import com.example.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
-import com.example.fika_project.ui.main.mycourse.review.ReviewReportFragment
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.item_home_course.view.*
 
 class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
 {
@@ -33,18 +30,18 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
     fun setMyItemClickListener(itemClickListener: MyItemClickListener){
         mItemClickListner = itemClickListener
     }
-
-    private var tasks: ArrayList<myCourseList> = arrayListOf()
+//
+//    private var tasks: ArrayList<myCourseList> = arrayListOf()
 
     private fun ViewGroup.inflate(layoutRes: Int): View = LayoutInflater.from(context).inflate(layoutRes, this, false)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding:ItemHomeCourseBinding = ItemHomeCourseBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
 
-
         return when(viewType) {
             FOOTER -> FooterViewHolder(viewGroup.inflate(R.layout.footer_home_my_course_rv))
-            else ->  ItemViewHolder(binding)
+            HEADER -> bindViewHolder(binding)
+            else -> ItemViewHolder(binding)
         }
     }
 
@@ -67,40 +64,36 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
                         .replace(R.id.main_frm, ExploreFragment())
                         .commitAllowingStateLoss()
                     Snackbar.make(it, "드라마를 탐색하러 갑니다!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
-                }
-            }
-            else -> {
+                } }
+            is ItemViewHolder -> { holder.bind(courseList[position]) }
+            is bindViewHolder -> { holder.bind() }
 
-                if (tasks.size!== 0) {
-                    val item = tasks[position]
-                }
-
-                // 내부 데이터를 사용하여 각 아이템 값 설정
-                holder.itemView.apply {
-
-                }
-
-                }
             }
     }
 
-    inner class FooterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-    inner class ItemViewHolder(val binding: ItemHomeCourseBinding):RecyclerView.ViewHolder(binding.root){
-        fun bind(itemCourse: myCourseList){
-            //코스 없을 경우
-            val urlString = itemCourse.locageImageUrl
+    inner class bindViewHolder(val binding: ItemHomeCourseBinding) :RecyclerView.ViewHolder(binding.root){
+        fun bind(){
+            binding.itemHomeCourseNullCard.setOnClickListener {
+                (context as MainActivity).supportFragmentManager.beginTransaction()
+                    .replace(R.id.main_frm, ExploreFragment())
+                    .commitAllowingStateLoss()
+                Snackbar.make(it, "드라마를 탐색하러 갑니다!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
+            }
 
-            if(urlString?.isEmpty()!!){
-                binding.itemHomeCourseIv?.setImageResource(R.color.sub_yellow)
-            } else {
-                binding.itemHomeCourseIv?.visibility = View.GONE }
-
-            Glide.with(context).load(itemCourse.locageImageUrl).into(binding.itemHomeCourseIv)
-
-            binding.itemHomeCourseNameTv.text = itemCourse.courseTitle
-            binding.itemHomeCourseDramaNameTv.text = itemCourse.dramaTitle
-            binding.itemHomeCourseSpotTv.text = itemCourse.spotTitleList.toString()
+            binding.itemHomeCourseNullCard.visibility = View.VISIBLE
+            binding.itemHomeCourseTopCv.visibility = View.GONE
+            binding.itemHomeCourseBottomCv.visibility = View.GONE
         }
     }
 
+    inner class FooterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
+    inner class ItemViewHolder(val binding: ItemHomeCourseBinding):RecyclerView.ViewHolder(binding.root){
+        fun bind(itemCourse: myCourseList){
+                Glide.with(context).load(itemCourse.locageImageUrl).into(binding.itemHomeCourseIv)
+                binding.itemHomeCourseNameTv.text = itemCourse.courseTitle
+                binding.itemHomeCourseDramaNameTv.text = itemCourse.dramaTitle
+                binding.itemHomeCourseSpotTv.text = itemCourse.spotTitleList.toString()
+        }
+    }
 }

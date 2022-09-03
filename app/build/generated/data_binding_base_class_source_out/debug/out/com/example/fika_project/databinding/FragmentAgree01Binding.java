@@ -4,7 +4,7 @@ package com.example.fika_project.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -26,19 +26,19 @@ public final class FragmentAgree01Binding implements ViewBinding {
   public final ImageView agree01BackBtn;
 
   @NonNull
-  public final CheckBox agree01Cb01;
+  public final ImageButton agree01Cb01;
 
   @NonNull
-  public final CheckBox agree01Cb02;
+  public final ImageButton agree01Cb02;
 
   @NonNull
-  public final CheckBox agree01Cb03;
+  public final ImageButton agree01Cb03;
 
   @NonNull
-  public final CheckBox agree01Cb04;
+  public final ImageButton agree01Cb04;
 
   @NonNull
-  public final CheckBox agree01Cb05;
+  public final ImageButton agree01Cb05;
 
   @NonNull
   public final TextView agree01Contents01;
@@ -89,17 +89,17 @@ public final class FragmentAgree01Binding implements ViewBinding {
   public final TextView agree01TitleTv;
 
   private FragmentAgree01Binding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView agree01BackBtn, @NonNull CheckBox agree01Cb01,
-      @NonNull CheckBox agree01Cb02, @NonNull CheckBox agree01Cb03, @NonNull CheckBox agree01Cb04,
-      @NonNull CheckBox agree01Cb05, @NonNull TextView agree01Contents01,
-      @NonNull TextView agree01Contents02, @NonNull TextView agree01Contents03,
-      @NonNull TextView agree01Contents04, @NonNull TextView agree01Contents05,
-      @NonNull LinearLayout agree01ContentsLayout, @NonNull LinearLayout agree01ContentsLayout01,
-      @NonNull LinearLayout agree01ContentsLayout02, @NonNull LinearLayout agree01ContentsLayout03,
-      @NonNull LinearLayout agree01ContentsLayout04, @NonNull LinearLayout agree01ContentsLayout05,
-      @NonNull TextView agree01CountinueBtn, @NonNull ImageView agree01More03,
-      @NonNull ImageView agree01More04, @NonNull ImageView agree01More05,
-      @NonNull TextView agree01TitleTv) {
+      @NonNull ImageView agree01BackBtn, @NonNull ImageButton agree01Cb01,
+      @NonNull ImageButton agree01Cb02, @NonNull ImageButton agree01Cb03,
+      @NonNull ImageButton agree01Cb04, @NonNull ImageButton agree01Cb05,
+      @NonNull TextView agree01Contents01, @NonNull TextView agree01Contents02,
+      @NonNull TextView agree01Contents03, @NonNull TextView agree01Contents04,
+      @NonNull TextView agree01Contents05, @NonNull LinearLayout agree01ContentsLayout,
+      @NonNull LinearLayout agree01ContentsLayout01, @NonNull LinearLayout agree01ContentsLayout02,
+      @NonNull LinearLayout agree01ContentsLayout03, @NonNull LinearLayout agree01ContentsLayout04,
+      @NonNull LinearLayout agree01ContentsLayout05, @NonNull TextView agree01CountinueBtn,
+      @NonNull ImageView agree01More03, @NonNull ImageView agree01More04,
+      @NonNull ImageView agree01More05, @NonNull TextView agree01TitleTv) {
     this.rootView = rootView;
     this.agree01BackBtn = agree01BackBtn;
     this.agree01Cb01 = agree01Cb01;
@@ -159,31 +159,31 @@ public final class FragmentAgree01Binding implements ViewBinding {
       }
 
       id = R.id.agree_01_cb_01;
-      CheckBox agree01Cb01 = ViewBindings.findChildViewById(rootView, id);
+      ImageButton agree01Cb01 = ViewBindings.findChildViewById(rootView, id);
       if (agree01Cb01 == null) {
         break missingId;
       }
 
       id = R.id.agree_01_cb_02;
-      CheckBox agree01Cb02 = ViewBindings.findChildViewById(rootView, id);
+      ImageButton agree01Cb02 = ViewBindings.findChildViewById(rootView, id);
       if (agree01Cb02 == null) {
         break missingId;
       }
 
       id = R.id.agree_01_cb_03;
-      CheckBox agree01Cb03 = ViewBindings.findChildViewById(rootView, id);
+      ImageButton agree01Cb03 = ViewBindings.findChildViewById(rootView, id);
       if (agree01Cb03 == null) {
         break missingId;
       }
 
       id = R.id.agree_01_cb_04;
-      CheckBox agree01Cb04 = ViewBindings.findChildViewById(rootView, id);
+      ImageButton agree01Cb04 = ViewBindings.findChildViewById(rootView, id);
       if (agree01Cb04 == null) {
         break missingId;
       }
 
       id = R.id.agree_01_cb_05;
-      CheckBox agree01Cb05 = ViewBindings.findChildViewById(rootView, id);
+      ImageButton agree01Cb05 = ViewBindings.findChildViewById(rootView, id);
       if (agree01Cb05 == null) {
         break missingId;
       }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.example.fika_project.databinding.FragmentAgree02Binding
 
 class Agree02Fragment  : Fragment() {
@@ -19,10 +20,11 @@ class Agree02Fragment  : Fragment() {
     }
 
     private fun initClickListener(){
-        val lActivity = activity as LoginActivity
+        val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
 
         binding.agree02CountinueBtn.setOnClickListener{
-            lActivity.changeFragment(4)
+            fragmentManager.beginTransaction().remove(this).commit()
+            fragmentManager.popBackStack()
         }
     }
 
