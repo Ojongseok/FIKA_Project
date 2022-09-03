@@ -28,7 +28,7 @@
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <application
-        android:name="com.example.fika_project.ApplicationClass"
+        android:name="com.fika.fika_project.ApplicationClass"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -40,28 +40,28 @@
         android:theme="@style/Theme.FIKA_Project"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.example.fika_project.ui.main.mycourse.CourseInfoEditActivity"
+            android:name="com.fika.fika_project.ui.main.mycourse.CourseInfoEditActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.fika_project.ui.main.explore.drama_info.LargeMapActivity"
+            android:name="com.fika.fika_project.ui.main.explore.drama_info.LargeMapActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.fika_project.ui.main.mypage.myspot.MySpotActivity"
+            android:name="com.fika.fika_project.ui.main.mypage.myspot.MySpotActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.fika_project.ui.main.explore.CourseDetailDramaOthers"
+            android:name="com.fika.fika_project.ui.main.explore.CourseDetailDramaOthers"
             android:exported="false" />
         <activity
-            android:name="com.example.fika_project.ui.main.mycourse.ReviewWriteActivity"
+            android:name="com.fika.fika_project.ui.main.mycourse.ReviewWriteActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.fika_project.ui.main.mycourse.VisitCompleteCourse"
+            android:name="com.fika.fika_project.ui.main.mycourse.VisitCompleteCourse"
             android:exported="false" />
         <activity
-            android:name="com.example.fika_project.ui.main.mycourse.search.SearchResultActivity"
+            android:name="com.fika.fika_project.ui.main.mycourse.search.SearchResultActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.fika_project.ui.splash.SplashActivity"
+            android:name="com.fika.fika_project.ui.splash.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -69,15 +69,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.fika_project.ui.main.MainActivity" />
-        <activity android:name="com.example.fika_project.ui.login.LoginActivity" />
-        <activity android:name="com.example.fika_project.ui.main.mycourse.search.SearchActivity" />
-        <activity android:name="com.example.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity" />
-        <activity android:name="com.example.fika_project.ui.main.explore.FolderSelectActivity" />
-        <activity android:name="com.example.fika_project.ui.main.explore.CourseDetailDrama" />
-        <activity android:name="com.example.fika_project.ui.main.explore.drama_info.DramaInfoActivity" />
-        <activity android:name="com.example.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity" />
-        <activity android:name="com.example.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.MainActivity" />
+        <activity android:name="com.fika.fika_project.ui.login.LoginActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.mycourse.search.SearchActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.explore.FolderSelectActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.explore.CourseDetailDrama" />
+        <activity android:name="com.fika.fika_project.ui.main.explore.drama_info.DramaInfoActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity" />
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.fika_project">
+    package="com.fika.fika_project">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,7 +13,7 @@
     </queries>
 
     <application
-        android:name=".ApplicationClass"
+        android:name="com.fika.fika_project.ApplicationClass"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,29 +23,29 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name=".ui.main.mycourse.CourseInfoEditActivity"
+            android:name="com.fika.fika_project.ui.main.mycourse.CourseInfoEditActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.explore.drama_info.LargeMapActivity"
+            android:name="com.fika.fika_project.ui.main.explore.drama_info.LargeMapActivity"
             android:exported="false" />
         <activity
             android:name=".ui.main.mypage.myspot.MySpotActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.explore.CourseDetailDramaOthers"
+            android:name="com.fika.fika_project.ui.main.explore.CourseDetailDramaOthers"
             android:exported="false" />
         <activity
-            android:name=".ui.main.mycourse.ReviewWriteActivity"
+            android:name="com.fika.fika_project.ui.main.mycourse.ReviewWriteActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.mycourse.VisitCompleteCourse"
+            android:name="com.fika.fika_project.ui.main.mycourse.VisitCompleteCourse"
             android:exported="false" />
         <activity
-            android:name=".ui.main.mycourse.search.SearchResultActivity"
+            android:name="com.fika.fika_project.ui.main.mycourse.search.SearchResultActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name="com.fika.fika_project.ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,15 +54,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.main.MainActivity" />
-        <activity android:name=".ui.login.LoginActivity" />
-        <activity android:name=".ui.main.mycourse.search.SearchActivity" />
-        <activity android:name=".ui.main.mycourse.course_edit.MyCourseViewActivity" />
-        <activity android:name=".ui.main.explore.FolderSelectActivity" />
-        <activity android:name=".ui.main.explore.CourseDetailDrama" />
-        <activity android:name=".ui.main.explore.drama_info.DramaInfoActivity" />
-        <activity android:name=".ui.main.mycourse.course_edit.MyHoldLocationActivity" />
-        <activity android:name=".ui.main.mycourse.placeinfo.PlaceinfoActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.MainActivity" />
+        <activity android:name="com.fika.fika_project.ui.login.LoginActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.mycourse.search.SearchActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.explore.FolderSelectActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.explore.CourseDetailDrama" />
+        <activity android:name="com.fika.fika_project.ui.main.explore.drama_info.DramaInfoActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity" />
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">

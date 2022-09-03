@@ -60,8 +60,8 @@
 29
 30    <application
 30-->D:\FIKA\app\src\main\AndroidManifest.xml:15:5-85:19
-31        android:name="com.example.fika_project.ApplicationClass"
-31-->D:\FIKA\app\src\main\AndroidManifest.xml:16:9-41
+31        android:name="com.fika.fika_project.ApplicationClass"
+31-->D:\FIKA\app\src\main\AndroidManifest.xml:16:9-62
 32        android:allowBackup="true"
 32-->D:\FIKA\app\src\main\AndroidManifest.xml:17:9-35
 33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -82,50 +82,50 @@
 41-->D:\FIKA\app\src\main\AndroidManifest.xml:23:9-44
 42        <activity
 42-->D:\FIKA\app\src\main\AndroidManifest.xml:25:9-27:40
-43            android:name="com.example.fika_project.ui.main.mycourse.CourseInfoEditActivity"
-43-->D:\FIKA\app\src\main\AndroidManifest.xml:26:13-68
+43            android:name="com.fika.fika_project.ui.main.mycourse.CourseInfoEditActivity"
+43-->D:\FIKA\app\src\main\AndroidManifest.xml:26:13-89
 44            android:exported="false" />
 44-->D:\FIKA\app\src\main\AndroidManifest.xml:27:13-37
 45        <activity
 45-->D:\FIKA\app\src\main\AndroidManifest.xml:28:9-30:40
-46            android:name="com.example.fika_project.ui.main.explore.drama_info.LargeMapActivity"
-46-->D:\FIKA\app\src\main\AndroidManifest.xml:29:13-72
+46            android:name="com.fika.fika_project.ui.main.explore.drama_info.LargeMapActivity"
+46-->D:\FIKA\app\src\main\AndroidManifest.xml:29:13-93
 47            android:exported="false" />
 47-->D:\FIKA\app\src\main\AndroidManifest.xml:30:13-37
 48        <activity
 48-->D:\FIKA\app\src\main\AndroidManifest.xml:31:9-33:40
-49            android:name="com.example.fika_project.ui.main.mypage.myspot.MySpotActivity"
+49            android:name="com.fika.fika_project.ui.main.mypage.myspot.MySpotActivity"
 49-->D:\FIKA\app\src\main\AndroidManifest.xml:32:13-65
 50            android:exported="false" />
 50-->D:\FIKA\app\src\main\AndroidManifest.xml:33:13-37
 51        <activity
 51-->D:\FIKA\app\src\main\AndroidManifest.xml:34:9-36:40
-52            android:name="com.example.fika_project.ui.main.explore.CourseDetailDramaOthers"
-52-->D:\FIKA\app\src\main\AndroidManifest.xml:35:13-68
+52            android:name="com.fika.fika_project.ui.main.explore.CourseDetailDramaOthers"
+52-->D:\FIKA\app\src\main\AndroidManifest.xml:35:13-89
 53            android:exported="false" />
 53-->D:\FIKA\app\src\main\AndroidManifest.xml:36:13-37
 54        <activity
 54-->D:\FIKA\app\src\main\AndroidManifest.xml:37:9-39:40
-55            android:name="com.example.fika_project.ui.main.mycourse.ReviewWriteActivity"
-55-->D:\FIKA\app\src\main\AndroidManifest.xml:38:13-65
+55            android:name="com.fika.fika_project.ui.main.mycourse.ReviewWriteActivity"
+55-->D:\FIKA\app\src\main\AndroidManifest.xml:38:13-86
 56            android:exported="false" />
 56-->D:\FIKA\app\src\main\AndroidManifest.xml:39:13-37
 57        <activity
 57-->D:\FIKA\app\src\main\AndroidManifest.xml:40:9-42:40
-58            android:name="com.example.fika_project.ui.main.mycourse.VisitCompleteCourse"
-58-->D:\FIKA\app\src\main\AndroidManifest.xml:41:13-65
+58            android:name="com.fika.fika_project.ui.main.mycourse.VisitCompleteCourse"
+58-->D:\FIKA\app\src\main\AndroidManifest.xml:41:13-86
 59            android:exported="false" />
 59-->D:\FIKA\app\src\main\AndroidManifest.xml:42:13-37
 60        <activity
 60-->D:\FIKA\app\src\main\AndroidManifest.xml:43:9-45:40
-61            android:name="com.example.fika_project.ui.main.mycourse.search.SearchResultActivity"
-61-->D:\FIKA\app\src\main\AndroidManifest.xml:44:13-73
+61            android:name="com.fika.fika_project.ui.main.mycourse.search.SearchResultActivity"
+61-->D:\FIKA\app\src\main\AndroidManifest.xml:44:13-94
 62            android:exported="false" />
 62-->D:\FIKA\app\src\main\AndroidManifest.xml:45:13-37
 63        <activity
 63-->D:\FIKA\app\src\main\AndroidManifest.xml:47:9-55:20
-64            android:name="com.example.fika_project.ui.splash.SplashActivity"
-64-->D:\FIKA\app\src\main\AndroidManifest.xml:48:13-53
+64            android:name="com.fika.fika_project.ui.splash.SplashActivity"
+64-->D:\FIKA\app\src\main\AndroidManifest.xml:48:13-74
 65            android:exported="true" >
 65-->D:\FIKA\app\src\main\AndroidManifest.xml:49:13-36
 66            <intent-filter>
@@ -139,33 +139,33 @@
 69-->D:\FIKA\app\src\main\AndroidManifest.xml:53:27-74
 70            </intent-filter>
 71        </activity>
-72        <activity android:name="com.example.fika_project.ui.main.MainActivity" />
-72-->D:\FIKA\app\src\main\AndroidManifest.xml:57:9-58
-72-->D:\FIKA\app\src\main\AndroidManifest.xml:57:19-55
-73        <activity android:name="com.example.fika_project.ui.login.LoginActivity" />
-73-->D:\FIKA\app\src\main\AndroidManifest.xml:58:9-60
-73-->D:\FIKA\app\src\main\AndroidManifest.xml:58:19-57
-74        <activity android:name="com.example.fika_project.ui.main.mycourse.search.SearchActivity" />
-74-->D:\FIKA\app\src\main\AndroidManifest.xml:59:9-76
-74-->D:\FIKA\app\src\main\AndroidManifest.xml:59:19-73
-75        <activity android:name="com.example.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity" />
-75-->D:\FIKA\app\src\main\AndroidManifest.xml:60:9-87
-75-->D:\FIKA\app\src\main\AndroidManifest.xml:60:19-84
-76        <activity android:name="com.example.fika_project.ui.main.explore.FolderSelectActivity" />
-76-->D:\FIKA\app\src\main\AndroidManifest.xml:61:9-74
-76-->D:\FIKA\app\src\main\AndroidManifest.xml:61:19-71
-77        <activity android:name="com.example.fika_project.ui.main.explore.CourseDetailDrama" />
-77-->D:\FIKA\app\src\main\AndroidManifest.xml:62:9-71
-77-->D:\FIKA\app\src\main\AndroidManifest.xml:62:19-68
-78        <activity android:name="com.example.fika_project.ui.main.explore.drama_info.DramaInfoActivity" />
-78-->D:\FIKA\app\src\main\AndroidManifest.xml:63:9-82
-78-->D:\FIKA\app\src\main\AndroidManifest.xml:63:19-79
-79        <activity android:name="com.example.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity" />
-79-->D:\FIKA\app\src\main\AndroidManifest.xml:64:9-89
-79-->D:\FIKA\app\src\main\AndroidManifest.xml:64:19-86
-80        <activity android:name="com.example.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity" />
-80-->D:\FIKA\app\src\main\AndroidManifest.xml:65:9-82
-80-->D:\FIKA\app\src\main\AndroidManifest.xml:65:19-79
+72        <activity android:name="com.fika.fika_project.ui.main.MainActivity" />
+72-->D:\FIKA\app\src\main\AndroidManifest.xml:57:9-79
+72-->D:\FIKA\app\src\main\AndroidManifest.xml:57:19-76
+73        <activity android:name="com.fika.fika_project.ui.login.LoginActivity" />
+73-->D:\FIKA\app\src\main\AndroidManifest.xml:58:9-81
+73-->D:\FIKA\app\src\main\AndroidManifest.xml:58:19-78
+74        <activity android:name="com.fika.fika_project.ui.main.mycourse.search.SearchActivity" />
+74-->D:\FIKA\app\src\main\AndroidManifest.xml:59:9-97
+74-->D:\FIKA\app\src\main\AndroidManifest.xml:59:19-94
+75        <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity" />
+75-->D:\FIKA\app\src\main\AndroidManifest.xml:60:9-108
+75-->D:\FIKA\app\src\main\AndroidManifest.xml:60:19-105
+76        <activity android:name="com.fika.fika_project.ui.main.explore.FolderSelectActivity" />
+76-->D:\FIKA\app\src\main\AndroidManifest.xml:61:9-95
+76-->D:\FIKA\app\src\main\AndroidManifest.xml:61:19-92
+77        <activity android:name="com.fika.fika_project.ui.main.explore.CourseDetailDrama" />
+77-->D:\FIKA\app\src\main\AndroidManifest.xml:62:9-92
+77-->D:\FIKA\app\src\main\AndroidManifest.xml:62:19-89
+78        <activity android:name="com.fika.fika_project.ui.main.explore.drama_info.DramaInfoActivity" />
+78-->D:\FIKA\app\src\main\AndroidManifest.xml:63:9-103
+78-->D:\FIKA\app\src\main\AndroidManifest.xml:63:19-100
+79        <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity" />
+79-->D:\FIKA\app\src\main\AndroidManifest.xml:64:9-110
+79-->D:\FIKA\app\src\main\AndroidManifest.xml:64:19-107
+80        <activity android:name="com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity" />
+80-->D:\FIKA\app\src\main\AndroidManifest.xml:65:9-103
+80-->D:\FIKA\app\src\main\AndroidManifest.xml:65:19-100
 81        <activity
 81-->D:\FIKA\app\src\main\AndroidManifest.xml:66:9-80:20
 82            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"

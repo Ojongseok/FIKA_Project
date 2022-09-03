@@ -24,12 +24,12 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\activity_placeinfo_locate.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_course_info_edit.xml",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\activity_course_info_edit.xml"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_loading.xml",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\dialog_loading.xml"
+    },
+    {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_course_info_edit.xml",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\activity_course_info_edit.xml"
     },
     {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_view_pager.xml",

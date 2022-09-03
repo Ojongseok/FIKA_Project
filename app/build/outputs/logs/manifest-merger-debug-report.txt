@@ -113,7 +113,7 @@ INJECTED from D:\FIKA\app\src\main\AndroidManifest.xml:2:1-86:12
 INJECTED from D:\FIKA\app\src\main\AndroidManifest.xml:2:1-86:12
 INJECTED from D:\FIKA\app\src\main\AndroidManifest.xml:2:1-86:12
 	package
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:4:5-39
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:4:5-36
 		INJECTED from D:\FIKA\app\src\main\AndroidManifest.xml
 		INJECTED from D:\FIKA\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -259,55 +259,55 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\yuny0\.gradle\cach
 	android:usesCleartextTraffic
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:23:9-44
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:16:9-41
-activity#com.example.fika_project.ui.main.mycourse.CourseInfoEditActivity
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:16:9-62
+activity#com.fika.fika_project.ui.main.mycourse.CourseInfoEditActivity
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:25:9-27:40
 	android:exported
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:26:13-68
-activity#com.example.fika_project.ui.main.explore.drama_info.LargeMapActivity
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:26:13-89
+activity#com.fika.fika_project.ui.main.explore.drama_info.LargeMapActivity
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:28:9-30:40
 	android:exported
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:29:13-72
-activity#com.example.fika_project.ui.main.mypage.myspot.MySpotActivity
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:29:13-93
+activity#com.fika.fika_project.ui.main.mypage.myspot.MySpotActivity
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:31:9-33:40
 	android:exported
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:33:13-37
 	android:name
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:32:13-65
-activity#com.example.fika_project.ui.main.explore.CourseDetailDramaOthers
+activity#com.fika.fika_project.ui.main.explore.CourseDetailDramaOthers
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:34:9-36:40
 	android:exported
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:35:13-68
-activity#com.example.fika_project.ui.main.mycourse.ReviewWriteActivity
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:35:13-89
+activity#com.fika.fika_project.ui.main.mycourse.ReviewWriteActivity
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:37:9-39:40
 	android:exported
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:38:13-65
-activity#com.example.fika_project.ui.main.mycourse.VisitCompleteCourse
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:38:13-86
+activity#com.fika.fika_project.ui.main.mycourse.VisitCompleteCourse
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:40:9-42:40
 	android:exported
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:41:13-65
-activity#com.example.fika_project.ui.main.mycourse.search.SearchResultActivity
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:41:13-86
+activity#com.fika.fika_project.ui.main.mycourse.search.SearchResultActivity
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:43:9-45:40
 	android:exported
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:44:13-73
-activity#com.example.fika_project.ui.splash.SplashActivity
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:44:13-94
+activity#com.fika.fika_project.ui.splash.SplashActivity
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:47:9-55:20
 	android:exported
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:49:13-36
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:48:13-53
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:48:13-74
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:50:13-54:29
 action#android.intent.action.MAIN
@@ -318,42 +318,42 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:53:17-77
 	android:name
 		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:53:27-74
-activity#com.example.fika_project.ui.main.MainActivity
-ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:57:9-58
+activity#com.fika.fika_project.ui.main.MainActivity
+ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:57:9-79
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:57:19-55
-activity#com.example.fika_project.ui.login.LoginActivity
-ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:58:9-60
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:57:19-76
+activity#com.fika.fika_project.ui.login.LoginActivity
+ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:58:9-81
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:58:19-57
-activity#com.example.fika_project.ui.main.mycourse.search.SearchActivity
-ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:59:9-76
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:58:19-78
+activity#com.fika.fika_project.ui.main.mycourse.search.SearchActivity
+ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:59:9-97
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:59:19-73
-activity#com.example.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity
-ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:60:9-87
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:59:19-94
+activity#com.fika.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity
+ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:60:9-108
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:60:19-84
-activity#com.example.fika_project.ui.main.explore.FolderSelectActivity
-ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:61:9-74
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:60:19-105
+activity#com.fika.fika_project.ui.main.explore.FolderSelectActivity
+ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:61:9-95
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:61:19-71
-activity#com.example.fika_project.ui.main.explore.CourseDetailDrama
-ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:62:9-71
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:61:19-92
+activity#com.fika.fika_project.ui.main.explore.CourseDetailDrama
+ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:62:9-92
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:62:19-68
-activity#com.example.fika_project.ui.main.explore.drama_info.DramaInfoActivity
-ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:63:9-82
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:62:19-89
+activity#com.fika.fika_project.ui.main.explore.drama_info.DramaInfoActivity
+ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:63:9-103
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:63:19-79
-activity#com.example.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity
-ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:64:9-89
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:63:19-100
+activity#com.fika.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity
+ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:64:9-110
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:64:19-86
-activity#com.example.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
-ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:65:9-82
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:64:19-107
+activity#com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
+ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:65:9-103
 	android:name
-		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:65:19-79
+		ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:65:19-100
 activity#com.kakao.sdk.auth.AuthCodeHandlerActivity
 ADDED from D:\FIKA\app\src\main\AndroidManifest.xml:66:9-80:20
 MERGED from [com.kakao.sdk:v2-auth:2.7.0] C:\Users\yuny0\.gradle\caches\transforms-3\051375f6d3016fab07097f856c023817\transformed\v2-auth-2.7.0\AndroidManifest.xml:17:9-20:56
