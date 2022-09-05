@@ -1,182 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slide_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.main.explore.CourseDetailDrama">
+    android:layout_height="600dp"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity">
 
-    <ImageView
-        android:id="@+id/course_detail_drama_back_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
+    <FrameLayout
+        android:id="@+id/mycourse_indicator_bar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
-
-    <LinearLayout
-        android:id="@+id/filter_drama_sorting_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toStartOf="@+id/imageView14"
-        app:layout_constraintStart_toEndOf="@+id/course_detail_drama_back_btn"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="드라마 제목"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
         <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginLeft="8dp"
-            app:srcCompat="@drawable/down" />
-    </LinearLayout>
+            android:layout_width="80dp"
+            android:layout_height="6dp"
+            android:layout_gravity="center"
+            android:background="@android:drawable/button_onoff_indicator_off"
+            android:scaleType="fitXY" />
+    </FrameLayout>
 
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="142dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/filter_rec"
-        android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <FrameLayout
+        android:id="@+id/mycourse_view_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/mycourse_view_add_location"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filter_drama_sorting_btn">
+        app:layout_constraintTop_toBottomOf="@+id/mycourse_indicator_bar" />
 
-        <ImageView
-            android:id="@+id/course_detail_iv_by_drama"
-            android:layout_width="116dp"
-            android:layout_height="116dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/sample_image" />
-
-        <TextView
-            android:id="@+id/course_detail_locage_tiltle_by_drama"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="박새로이와 조이서가 함께 오픈한 꿀밤포차"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/imageView16"
-            app:layout_constraintStart_toEndOf="@+id/course_detail_iv_by_drama"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/dot" />
-
-        <TextView
-            android:id="@+id/detail_course_hash_tv_by_drama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="# 순두부찌개"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/course_detail_locage_tiltle_by_drama" />
-
-        <TextView
-            android:id="@+id/textView30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:text="# 분위기"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/detail_course_hash_tv_by_drama" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:text="전체선택"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-    <TextView
-        android:id="@+id/others_star_count_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:text="1061"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView31" />
-
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/others_star_count_tv"
-        app:layout_constraintEnd_toStartOf="@+id/others_star_count_tv"
-        app:layout_constraintTop_toTopOf="@+id/textView31"
-        app:srcCompat="@drawable/ic_star_off" />
-
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="로케지"
-        android:textSize="18sp"
+        android:id="@+id/mycourse_view_add_location"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/main_blue"
+        android:gravity="center"
+        android:text="장소 추가하기"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView31"
-        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/detail_course_location_recyclerview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/others_star_count_tv"
-        app:layout_constraintStart_toStartOf="@+id/textView33"
-        app:layout_constraintTop_toBottomOf="@+id/textView33" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="함께 가면 좋을 장소"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView33"
-        app:layout_constraintTop_toBottomOf="@+id/detail_course_location_recyclerview" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/detail_course_together_recyclerview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/detail_course_location_recyclerview"
-        app:layout_constraintStart_toStartOf="@+id/detail_course_location_recyclerview"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
 </androidx.constraintlayout.widget.ConstraintLayout>

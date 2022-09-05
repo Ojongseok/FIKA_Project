@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/mainFrame"
     tools:context=".ui.main.mycourse.course_edit.MyCourseViewActivity"
     android:gravity="bottom"
     app:umanoDragView="@id/slide_layout"
@@ -79,8 +80,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/myhold_title_bar"></androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/slide_layout"
@@ -89,73 +90,46 @@
         android:orientation="vertical"
         tools:context=".ui.main.MainActivity">
 
-        <ImageView
-            android:id="@+id/mycourse_indicator_bar"
-            android:layout_width="70dp"
-            android:layout_height="6dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp"
-            android:background="@android:drawable/button_onoff_indicator_off"
-            android:scaleType="fitXY" />
-
         <FrameLayout
-            android:id="@+id/mycourse_layout_1"
+            android:id="@+id/mycourse_indicator_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/mycourse_indicator_bar"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="18dp">
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/mycourse_calender_btn"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginLeft="20dp"
-                app:srcCompat="@drawable/calender" />
-
-            <TextView
-                android:id="@+id/mycourse_edit_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/mycourse_edit_btn_shape"
-                android:paddingLeft="12dp"
-                android:paddingTop="2dp"
-                android:paddingRight="12dp"
-                android:paddingBottom="2dp"
-                android:text="편집" />
+                android:layout_width="80dp"
+                android:layout_height="6dp"
+                android:layout_gravity="center"
+                android:background="@android:drawable/button_onoff_indicator_off"
+                android:scaleType="fitXY" />
         </FrameLayout>
 
-<!--&lt;!&ndash;        <androidx.recyclerview.widget.RecyclerView&ndash;&gt;-->
-<!--&lt;!&ndash;            android:id="@+id/recyclerView"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:layout_above="@+id/mycourse_view_add_location"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:layout_below="@id/mycourse_layout_1"&ndash;&gt;-->
-<!--&lt;!&ndash;            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">&ndash;&gt;-->
-<!--    </androidx.recyclerview.widget.RecyclerView>-->
-
-    <FrameLayout
+        <FrameLayout
             android:id="@+id/mycourse_view_list_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/mycourse_view_add_location"
-            android:layout_below="@+id/mycourse_layout_1"/>
-
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/mycourse_view_add_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mycourse_indicator_bar" />
 
         <TextView
             android:id="@+id/mycourse_view_add_location"
             android:layout_width="match_parent"
             android:layout_height="72dp"
-            android:layout_alignParentBottom="true"
-            android:background="#F3F3F3"
+            android:background="@color/main_blue"
             android:gravity="center"
             android:text="장소 추가하기"
+            android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/mycourse_view_list_container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

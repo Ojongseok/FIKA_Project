@@ -43,6 +43,9 @@ drawable camera
 drawable chat_rectangle
 drawable check
 drawable checkbox_custom
+drawable course_edit_bar_blue
+drawable course_edit_bar_red
+drawable course_edit_bar_yellow
 drawable course_off
 drawable course_on
 drawable dot
@@ -233,13 +236,16 @@ id course_detail_locage_tiltle
 id course_detail_locage_tiltle_by_drama
 id course_detail_location_flag_btn
 id course_detail_where_tv
+id course_edit_bar
+id course_edit_image
+id course_edit_sub
+id course_edit_title
 id course_info_back_btn
 id course_info_edit_switch_btn
 id course_info_top_layout
 id course_item_number
 id detail_course_hash
 id detail_course_hash_tv_by_drama
-id detail_course_location_recyclerview
 id detail_course_together_recyclerview
 id detail_scene_list_layout
 id dialog_quit_back_btn
@@ -312,9 +318,10 @@ id home_scrapcourse_rank_tv
 id home_search_et
 id imageView
 id imageView10
+id imageView11
+id imageView12
 id imageView13
 id imageView14
-id imageView16
 id imageView17
 id imageView18
 id imageView19
@@ -421,6 +428,7 @@ id login_question_tv
 id login_sign_up_question_tv
 id login_yahoo_iv
 id login_yahoo_tv
+id mainFrame
 id main_frm
 id map_flag
 id map_iv
@@ -656,7 +664,6 @@ id textView23
 id textView24
 id textView27
 id textView3
-id textView30
 id textView31
 id textView32
 id textView33

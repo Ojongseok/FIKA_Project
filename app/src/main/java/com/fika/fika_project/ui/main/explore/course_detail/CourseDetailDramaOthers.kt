@@ -18,12 +18,15 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
     private var _Binding: ActivityCourseDetailDramaOthersBinding? = null
     private val binding get() = _Binding!!
     lateinit var locationAdapter : CourseDetailLocationOthersAdapter
+    var courseId = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityCourseDetailDramaOthersBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val service = CourseDetailService(this,intent.getIntExtra("courseId",0))
+        courseId = intent.getIntExtra("courseId",0)
+
+        val service = CourseDetailService(this,courseId)
         service.tryLoadCourseDetail()
 
     }
@@ -56,7 +59,9 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
                     binding.courseDetailHoldBtn.setBackgroundResource(R.drawable.button_background_on)
                     binding.courseDetailHoldBtn.isClickable = true
                     binding.courseDetailHoldBtn.setOnClickListener {
-                        startActivity(Intent(applicationContext, FolderSelectActivity::class.java))
+                        val intent = Intent(applicationContext, FolderSelectActivity::class.java)
+                        intent.putExtra("courseId",courseId)
+                        startActivity(intent)
                         overridePendingTransition(R.anim.slide_up_enter, R.anim.slide_up_exit)
                     }
                 }

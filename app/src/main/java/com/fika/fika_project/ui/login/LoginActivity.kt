@@ -9,6 +9,7 @@ import com.fika.fika_project.ApplicationClass.Companion.TAG
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityLoginBinding
 import com.fika.fika_project.ui.main.MainActivity
+import com.fika.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity
 import com.fika.fika_project.utils.spfManager
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
@@ -33,9 +34,9 @@ class LoginActivity : AppCompatActivity(), LoginView {
         spfManager.ClearJwt()
 
 //         편의상 시작
-        val intent = Intent(this, MainActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intent)
+//        val intent = Intent(this, MyCourseViewActivity::class.java)
+//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//        startActivity(intent)
     }
 
     private fun initClickListener(){

@@ -14,6 +14,7 @@ import com.fika.fika_project.ui.main.mypage.MyScrapResponse
 import com.fika.fika_project.ui.main.mypage.MypageResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationScrapResponse
 import com.fika.fika_project.ui.main.mycourse.MyCourseResponse
+import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.CourseViewResponse
 import com.fika.fika_project.ui.main.mycourse.placeinfo.ReportResponse
 import retrofit2.Call
 import retrofit2.http.*
@@ -34,6 +35,12 @@ interface RetrofitInterface {
     //8. 메인 페이지 데이터 조회
     @GET("/nav/main")
     fun loadHome(): Call<HomeResponse>
+
+    //7. 단일 내 코스 조회
+    @GET("/course/{courseId}")
+    fun loadCourseView(
+        @Path("courseId") courseId : Int
+    ) :Call<CourseViewResponse>
 
     //10. 드라마 필터 조회
     @GET("/drama/{filter}")

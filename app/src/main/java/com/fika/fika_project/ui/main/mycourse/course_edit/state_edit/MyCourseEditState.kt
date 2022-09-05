@@ -1,4 +1,4 @@
-package com.fika.fika_project.ui.main.mycourse.course_edit
+package com.fika.fika_project.ui.main.mycourse.course_edit.state_edit
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View

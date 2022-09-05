@@ -161,23 +161,32 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView33">
 
                 <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_checkbox_on" />
+
+                <ImageView
                     android:id="@+id/course_detail_iv"
                     android:layout_width="140dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/sample_image"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView11"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/course_detail_location_flag_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="121dp"
+                    android:layout_marginStart="150dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"

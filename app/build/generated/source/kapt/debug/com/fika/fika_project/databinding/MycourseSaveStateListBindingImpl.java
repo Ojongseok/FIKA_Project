@@ -19,8 +19,10 @@ public class MycourseSaveStateListBindingImpl extends MycourseSaveStateListBindi
         sViewsWithIds.put(R.id.save_state_line, 3);
         sViewsWithIds.put(R.id.course_item_number, 4);
         sViewsWithIds.put(R.id.item_list_contents_layout, 5);
-        sViewsWithIds.put(R.id.imageView7, 6);
-        sViewsWithIds.put(R.id.item_list_drama_image, 7);
+        sViewsWithIds.put(R.id.course_edit_bar, 6);
+        sViewsWithIds.put(R.id.course_edit_image, 7);
+        sViewsWithIds.put(R.id.course_edit_title, 8);
+        sViewsWithIds.put(R.id.course_edit_sub, 9);
     }
     // views
     @NonNull
@@ -31,14 +33,16 @@ public class MycourseSaveStateListBindingImpl extends MycourseSaveStateListBindi
     // Inverse Binding Event Handlers
 
     public MycourseSaveStateListBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private MycourseSaveStateListBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.TextView) bindings[4]
             , (android.widget.ImageView) bindings[6]
-            , (android.widget.RelativeLayout) bindings[5]
             , (android.widget.ImageView) bindings[7]
+            , (android.widget.TextView) bindings[9]
+            , (android.widget.TextView) bindings[8]
+            , (android.widget.TextView) bindings[4]
+            , (android.widget.RelativeLayout) bindings[5]
             , (android.widget.FrameLayout) bindings[3]
             , (android.widget.LinearLayout) bindings[1]
             , (android.widget.TextView) bindings[2]

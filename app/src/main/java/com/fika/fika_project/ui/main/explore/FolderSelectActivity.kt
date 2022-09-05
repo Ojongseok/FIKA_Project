@@ -3,6 +3,7 @@ package com.fika.fika_project.ui.main.explore
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,14 +17,17 @@ import kotlinx.android.synthetic.main.folder_item.view.*
 class FolderSelectActivity : AppCompatActivity() {
     private var _Binding: ActivityFolderSelectBinding? = null
     private val binding get() = _Binding!!
+    var courseId = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityFolderSelectBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        courseId = intent.getIntExtra("courseId",0)
         binding.folderSelectGoCourseBtn.setOnClickListener {
-            startActivity(Intent(this, MyCourseViewActivity::class.java))
+            val intent = Intent(this, MyCourseViewActivity::class.java)
+            intent.putExtra("courseId",courseId)
+            startActivity(intent)
         }
         binding.folderSelectStayBtn.setOnClickListener {
             onBackPressed()
