@@ -95,6 +95,7 @@ drawable login_dialog_btn
 drawable login_google
 drawable login_kakao
 drawable login_line
+drawable login_tester_btn
 drawable login_yahoo
 drawable logindialog_background
 drawable logo_fikaapp
@@ -409,6 +410,7 @@ id login_easy_login_tv
 id login_frm
 id login_google_iv
 id login_google_tv
+id login_icon_layout
 id login_kakao_iv
 id login_kakao_tv
 id login_line_iv
@@ -419,6 +421,7 @@ id login_logo_big_iv
 id login_logo_iv
 id login_question_tv
 id login_sign_up_question_tv
+id login_tester_btn
 id login_yahoo_iv
 id login_yahoo_tv
 id main_frm
@@ -795,6 +798,7 @@ string project_id
 string sample_review
 string service_agree_j
 string service_agree_k
+string tester_key
 string verti_bar
 style CustomBottomSheetDialogTheme
 style CustomBottomSheetStyle

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.fika.fika_project.ApplicationClass.Companion.TAG
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityLoginBinding
+import com.fika.fika_project.retrofit.testerCode
 import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.utils.spfManager
 import com.kakao.sdk.auth.model.OAuthToken
@@ -30,18 +31,23 @@ class LoginActivity : AppCompatActivity(), LoginView {
         initClickListener()
         setContentView(binding.root)
 
-        spfManager.ClearJwt()
+        spfManager.RemoveKakaoJwt()
 
 //         편의상 시작
-        val intent = Intent(this, MainActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intent)
+//        val intent = Intent(this, MainActivity::class.java)
+//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//        startActivity(intent)
     }
 
     private fun initClickListener(){
         binding.loginQuestionTv.setOnClickListener {
             val bottomDialog = LoginDialog()
             bottomDialog.show(supportFragmentManager, bottomDialog.tag)
+        }
+
+        binding.loginTesterBtn.setOnClickListener {
+            val getCode = testerCode("rf2amgpNuA")
+            service.tryTesterLogin(getCode)
         }
 
         binding.loginGoogleIv.setOnClickListener {
@@ -158,4 +164,11 @@ class LoginActivity : AppCompatActivity(), LoginView {
                 Log.d("LOGIN", "로그인 실패 : 서버 오류")
             } }
     }
-}
+
+    override fun onTesterSuccess(response: KakaoResponse) {
+        Toast.makeText(this,"로그인되었습니다!",Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        }
+    }

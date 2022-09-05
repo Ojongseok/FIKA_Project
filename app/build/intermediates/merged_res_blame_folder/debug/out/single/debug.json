@@ -464,6 +464,10 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
     },
     {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\drawable_login_tester_btn.png.flat",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\drawable\\login_tester_btn.png"
+    },
+    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_mypage.png.flat",
         "source": "D:\\FIKA\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_mypage.png"
     },

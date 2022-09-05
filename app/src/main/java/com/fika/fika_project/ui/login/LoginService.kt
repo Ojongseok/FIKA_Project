@@ -3,6 +3,7 @@ package com.fika.fika_project.ui.login
 import android.util.Log
 import com.fika.fika_project.ApplicationClass
 import com.fika.fika_project.retrofit.RetrofitInterface
+import com.fika.fika_project.retrofit.testerCode
 import com.fika.fika_project.utils.spfManager
 import retrofit2.Call
 import retrofit2.Callback
@@ -48,4 +49,31 @@ class LoginService (val View : LoginView) {
                 Log.d("LOGIN", "로그인 실패 : 서버 오류")
             }
         })}
+
+    fun tryTesterLogin(testerCode: testerCode){
+        retrofit.TesterLogin(testerCode).enqueue(object : Callback<KakaoResponse> {
+            override fun onResponse(call: Call<KakaoResponse>, response: Response<KakaoResponse>) {
+                var result: KakaoResponse? = response.body()
+                val resp = response.body()
+
+                Log.d("TESTER/API-RESPONSE", result.toString())
+
+                when(resp?.code){
+                    //성공
+                    1000 -> {
+                        View.onTesterSuccess(response.body() as KakaoResponse)
+                        Log.d("TESTER/1000", resp.message)
+
+                        spfManager.setJwt(resp.result)
+                        Log.d("TESTER-setJwt", resp.result) }
+
+                    else ->  { Log.d("TESTER", "로그인 실패 : 서버 오류") }
+                }
+            }
+
+            override fun onFailure(call: Call<KakaoResponse>, t: Throwable) {
+                Log.d("TESTER", "로그인 실패 : 서버 오류")
+            }
+        })}
+
 }

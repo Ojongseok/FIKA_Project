@@ -2670,6 +2670,7 @@ drawable login_dialog_btn
 drawable login_google
 drawable login_kakao
 drawable login_line
+drawable login_tester_btn
 drawable login_yahoo
 drawable logindialog_background
 drawable logo_fikaapp
@@ -3299,6 +3300,7 @@ id login_easy_login_tv
 id login_frm
 id login_google_iv
 id login_google_tv
+id login_icon_layout
 id login_kakao_iv
 id login_kakao_tv
 id login_line_iv
@@ -3313,6 +3315,7 @@ id login_method_layout
 id login_method_text
 id login_question_tv
 id login_sign_up_question_tv
+id login_tester_btn
 id login_title_text
 id login_yahoo_iv
 id login_yahoo_tv
@@ -4309,6 +4312,7 @@ string search_menu_title
 string service_agree_j
 string service_agree_k
 string status_bar_notification_info_overflow
+string tester_key
 string title_for_ssl_warning
 string verti_bar
 style AlertDialog_AppCompat
