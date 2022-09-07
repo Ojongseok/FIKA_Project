@@ -5,6 +5,15 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\yuny0\\Desktop\\android_app_key\\TestKey.jks')
+            storePassword 'yeajin@2020'
+            keyAlias 'TestKey'
+            keyPassword 'yeajin@2020'
+        }
+    }
+
     compileSdk 32
 
     defaultConfig {
@@ -12,7 +21,7 @@ android {
         minSdk 21
         targetSdk 32
         versionCode 2
-        versionName "1.1"
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

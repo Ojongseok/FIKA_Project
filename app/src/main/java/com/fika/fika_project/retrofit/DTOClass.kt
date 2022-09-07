@@ -17,7 +17,6 @@ data class ReviewReport(
     var reportDetail: String?
 )
 
-data class CourseEditDTO(
-    val courseTitle : String,
-    val spotIdList : ArrayList<Int>
+data class testerCode(
+    var testerCode: String
 )

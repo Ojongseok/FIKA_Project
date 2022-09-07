@@ -14,8 +14,8 @@ object spfManager {
         return prefs.getString("kakaoToken", "").toString()
     }
 
-    fun ClearJwt() {
-        prefs.edit().clear().commit()
+    fun RemoveKakaoJwt() {
+        prefs.edit().remove("kakaoToken").apply()
     }
 
     fun setJwt(jwtToken: String?) {
@@ -46,5 +46,9 @@ object spfManager {
 
     fun setImgUrl(imgUrl: String) { editor.putString("imgUrl", imgUrl).apply() }
     fun getImgUrl(): String? { return prefs.getString("imgUrl", "").toString() }
+
+    fun ClearSpf() {
+        prefs.edit().clear().commit()
+    }
 
 }

@@ -118,4 +118,9 @@ interface RetrofitInterface {
     // 30. 내 코스 보기
     @GET("/course/my")
     fun MyCourse() : Call<MyCourseResponse>
+
+    // 31. 테스터 로그인
+    @POST("/member/demo/tester")
+    fun TesterLogin(@Body testerCode:testerCode) : Call<KakaoResponse>
+
 }
