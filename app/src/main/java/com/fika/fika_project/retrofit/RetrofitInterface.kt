@@ -9,6 +9,7 @@ import com.fika.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.fika.fika_project.ui.login.AuthResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.fika.fika_project.ui.login.KakaoResponse
+import com.fika.fika_project.ui.main.explore.folder.FolderResponse
 import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceInfoResponse
 import com.fika.fika_project.ui.main.mypage.MyScrapResponse
 import com.fika.fika_project.ui.main.mypage.MypageResponse
@@ -114,6 +115,10 @@ interface RetrofitInterface {
     // 25. 마이페이지 조회
     @GET("/course/my/scrap")
     fun MyScrap() : Call<MyScrapResponse>
+
+    // 27. 그룹 선택
+    @GET("/group/my")
+    fun loadFolder() : Call<FolderResponse>
 
     // 30. 내 코스 보기
     @GET("/course/my")

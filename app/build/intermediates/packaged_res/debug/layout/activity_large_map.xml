@@ -60,7 +60,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/large_map_bottom_view"
         android:layout_width="369dp"
-        android:layout_height="140dp"
+        android:layout_height="120dp"
         android:layout_marginBottom="20dp"
         android:background="#FFFFFF"
         app:cardCornerRadius="32dp"

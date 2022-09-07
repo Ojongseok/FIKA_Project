@@ -5,15 +5,6 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        debug {
-            storeFile file('C:\\Users\\yuny0\\Desktop\\android_app_key\\TestKey.jks')
-            storePassword 'yeajin@2020'
-            keyAlias 'TestKey'
-            keyPassword 'yeajin@2020'
-        }
-    }
-
     compileSdk 32
 
     defaultConfig {

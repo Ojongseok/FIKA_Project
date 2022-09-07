@@ -29,9 +29,6 @@
             android:name="com.fika.fika_project.ui.main.explore.drama_info.LargeMapActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.mypage.myspot.MySpotActivity"
-            android:exported="false" />
-        <activity
             android:name="com.fika.fika_project.ui.main.explore.CourseDetailDramaOthers"
             android:exported="false" />
         <activity

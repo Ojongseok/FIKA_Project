@@ -19,16 +19,16 @@ import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
 class CourseDetailLocationOthersAdapter(val locationList: ArrayList<spotList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>(),LocationHoldView {
     private lateinit var itemClickListener : OnItemClickListener
     var checkStateList = Array<Boolean>(locationList.size) { i -> false }
-
+    var count = 0
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.myhold_location_item_list,parent,false)
 
         return CustomViewHolder(view)
     }
     interface OnItemClickListener {
-        fun onClick(view: View, position: Int, list : Array<Boolean>) {
+        fun onClick(view: View, position: Int, list : Array<Boolean>, count : Int) {
         }
-        fun notClick(view:View,position: Int,  list : Array<Boolean>) {
+        fun notClick(view:View,position: Int,  list : Array<Boolean>, count : Int) {
         }
     }
 
@@ -48,11 +48,13 @@ class CourseDetailLocationOthersAdapter(val locationList: ArrayList<spotList>, v
 
         view.myhold_checkbox_btn.setOnCheckedChangeListener { compoundButton, checked ->
             if (checked) {
+                count++
                 checkStateList[position] = true
-                itemClickListener.onClick(view, position,checkStateList)
+                itemClickListener.onClick(view, position,checkStateList,count)
             } else {
+                count--
                 checkStateList[position] = false
-                itemClickListener.notClick(view, position,checkStateList)
+                itemClickListener.notClick(view, position,checkStateList,count)
             }
         }
         view.course_detail_location_flag_btn.setOnClickListener {

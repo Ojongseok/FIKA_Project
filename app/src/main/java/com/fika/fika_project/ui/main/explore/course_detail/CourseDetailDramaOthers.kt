@@ -52,9 +52,9 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
 
     private fun setOnClickEvent() {
         locationAdapter.setItemClickListener(object: CourseDetailLocationOthersAdapter.OnItemClickListener {
-            override fun onClick(view: View, position: Int, checkStateList : Array<Boolean>) {
-                super.onClick(view, position, checkStateList) // 미리 정의해둔 onClick 호출
-
+            override fun onClick(view: View, position: Int, checkStateList : Array<Boolean>, count : Int) {
+                super.onClick(view, position, checkStateList,count) // 미리 정의해둔 onClick 호출
+                binding.courseDetailCheckCountTv.text = "+" + count.toString()
                 if (checkStateList.contains(true)) {
                     binding.courseDetailHoldBtn.setBackgroundResource(R.drawable.button_background_on)
                     binding.courseDetailHoldBtn.isClickable = true
@@ -66,8 +66,9 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
                     }
                 }
             }
-            override fun notClick(view: View, position: Int, checkStateList : Array<Boolean>) {
-                super.notClick(view, position, checkStateList)
+            override fun notClick(view: View, position: Int, checkStateList : Array<Boolean>,count:Int) {
+                super.notClick(view, position, checkStateList,count)
+                binding.courseDetailCheckCountTv.text = "+" + count.toString()
                 if (!checkStateList.contains(true)) {
                     binding.courseDetailHoldBtn.setBackgroundResource(R.drawable.button_background_off)
                     binding.courseDetailHoldBtn.isClickable = false

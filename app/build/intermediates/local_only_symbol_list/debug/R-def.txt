@@ -104,6 +104,9 @@ drawable logindialog_background
 drawable logo_fikaapp
 drawable logo_fikaduck
 drawable logo_fulltext
+drawable marker_blue
+drawable marker_red
+drawable marker_yellow
 drawable menu
 drawable metro
 drawable mycourse_edit_btn_shape
@@ -209,6 +212,8 @@ id all_view_back_btn
 id all_view_sub_title_num_tv
 id all_view_sub_title_tv
 id all_view_title_tv
+id ball_tv_name
+id ball_view
 id bottom_navigation
 id btm_nav_home
 id btm_nav_mypage
@@ -223,6 +228,7 @@ id constraintLayout
 id constraintLayout2
 id contents_layout
 id course_detail_category_tv
+id course_detail_check_count_tv
 id course_detail_course_name
 id course_detail_course_title
 id course_detail_drama_back_btn
@@ -596,6 +602,7 @@ id review_write_image_select_btn
 id sadasdwq
 id save_state_line
 id save_state_recyclerview
+id scrollView2
 id search_back_btn
 id search_contents_textview
 id search_ok_button
@@ -721,6 +728,7 @@ layout activity_search
 layout activity_search_result
 layout activity_splash
 layout activity_visit_complete_course
+layout ballon_layout
 layout balloon_layout
 layout detail_scene_list_item
 layout dialog_loading

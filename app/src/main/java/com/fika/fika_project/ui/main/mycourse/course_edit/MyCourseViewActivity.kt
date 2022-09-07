@@ -8,9 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityMycourseViewBinding
+import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.MyCourseEditState
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.*
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
+import kotlinx.android.synthetic.main.mycourse_save_state_list.view.*
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
 import net.daum.mf.map.api.MapView
@@ -40,24 +42,14 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView {
                 bundle.putInt("courseId",courseId)
                 arguments = bundle
             }).commit()
+        binding.myholdHomeBtn.setOnClickListener {
+//            val intent = Intent(this,MainActivity::class.java)
+//            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+//            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+//            startActivity(intent)
+//            finish()
+        }
 
-//        binding.mycourseEditBtn.setOnClickListener {
-//            if (editState) {
-//                binding.mycourseEditBtn.text = "편집"
-//                editState = false
-//                binding.mycourseEditText.visibility = View.INVISIBLE
-//                binding.myholdTitle.visibility = View.VISIBLE
-//                supportFragmentManager.beginTransaction().replace(R.id.mycourse_view_list_container,MyCourseSaveState()).commit()
-//            } else {
-//                binding.mycourseEditBtn.text = "저장"
-//                editState = true
-//                binding.mycourseEditText.visibility = View.VISIBLE
-//                binding.myholdTitle.visibility = View.INVISIBLE
-//                supportFragmentManager.beginTransaction().replace(R.id.mycourse_view_list_container,
-//                    MyCourseEditState()
-//                ).commit()
-//            }
-//        }
         binding.mycourseViewAddLocation.setOnClickListener {
             startActivity(Intent(this, MyHoldLocationActivity::class.java))
         }
@@ -66,14 +58,23 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView {
         val mapView = MapView(this)
         val mapViewContainer = findViewById<View>(R.id.map_view) as ViewGroup
         mapViewContainer.addView(mapView)
-        mapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(37.5518018, 127.0736343),true)
+        mapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(spotList[0].mapY!!, spotList[0].mapX!!),true)
 
         for (i in 0 until spotList.size) {
             val marker = MapPOIItem()
             marker.apply {
                 itemName = spotList[i].spotTitle
                 mapPoint = MapPoint.mapPointWithGeoCoord(spotList[i].mapY!!, spotList[i].mapX!!)
-                markerType = MapPOIItem.MarkerType.BluePin
+                markerType = MapPOIItem.MarkerType.CustomImage
+                if (spotList[i].type.equals("cafe")) {
+                    customImageResourceId = R.drawable.marker_yellow
+                } else if (spotList[i].type.equals("playground")) {
+                    customImageResourceId = R.drawable.marker_blue
+                } else {
+                    customImageResourceId = R.drawable.marker_red
+                }
+                setCustomImageAnchor(1.0f,1.0f)
+                isCustomImageAutoscale = false
             }
             mapView.addPOIItem(marker)
         }

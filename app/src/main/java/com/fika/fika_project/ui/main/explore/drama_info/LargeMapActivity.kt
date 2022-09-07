@@ -37,9 +37,16 @@ class LargeMapActivity : AppCompatActivity() {
             marker.apply {
                 itemName = spotlist[i].spotTitle
                 mapPoint = mapPointWithGeoCoord(spotlist[i].mapY!!, spotlist[i].mapX!!)
-                markerType = MapPOIItem.MarkerType.BluePin
-                selectedMarkerType = MapPOIItem.MarkerType.RedPin
-                isCustomImageAutoscale = true
+                markerType = MapPOIItem.MarkerType.CustomImage
+                if (spotlist[i].type.equals("cafe")) {
+                    customImageResourceId = R.drawable.marker_yellow
+                } else if (spotlist[i].type.equals("playground")) {
+                    customImageResourceId = R.drawable.marker_blue
+                } else {
+                    customImageResourceId = R.drawable.marker_red
+                }
+                setCustomImageAnchor(0.5f,0.5f)
+                isCustomImageAutoscale = false
             }
             mapView.addPOIItem(marker)
             markerList.add(marker)

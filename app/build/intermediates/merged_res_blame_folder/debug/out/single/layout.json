@@ -248,6 +248,10 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\activity_search.xml"
     },
     {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\ballon_layout.xml",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\ballon_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_large_map.xml",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\activity_large_map.xml"
     },

@@ -2687,6 +2687,9 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable marker_blue
+drawable marker_red
+drawable marker_yellow
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2926,6 +2929,8 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id ball_tv_name
+id ball_view
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2997,6 +3002,7 @@ id coordinator
 id cos
 id counterclockwise
 id course_detail_category_tv
+id course_detail_check_count_tv
 id course_detail_course_name
 id course_detail_course_title
 id course_detail_drama_back_btn
@@ -3615,6 +3621,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollView2
 id scrollable
 id search_back_btn
 id search_badge
@@ -3969,6 +3976,7 @@ layout activity_search_result
 layout activity_splash
 layout activity_talk_auth_code
 layout activity_visit_complete_course
+layout ballon_layout
 layout balloon_layout
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
