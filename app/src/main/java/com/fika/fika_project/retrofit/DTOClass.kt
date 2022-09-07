@@ -17,6 +17,11 @@ data class ReviewReport(
     var reportDetail: String?
 )
 
+data class GroupName(
+    var groupName: String
+)
+
 data class testerCode(
     var testerCode: String
 )
+

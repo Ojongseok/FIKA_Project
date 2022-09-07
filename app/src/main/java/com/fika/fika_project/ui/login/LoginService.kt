@@ -13,9 +13,11 @@ class LoginService (val View : LoginView) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
 
     fun tryKakaoLogin(token: String){
-        retrofit.kakaoLogin(token).enqueue(object : Callback<KakaoResponse> {
-            override fun onResponse(call: Call<KakaoResponse>, response: Response<KakaoResponse>) {
-                var result: KakaoResponse? = response.body()
+        View.onLoading()
+
+        retrofit.kakaoLogin(token).enqueue(object : Callback<BasicResponse> {
+            override fun onResponse(call: Call<BasicResponse>, response: Response<BasicResponse>) {
+                var result: BasicResponse? = response.body()
                 val resp = response.body()
 
                 Log.d("KAKAOLOGIN/token", token)
@@ -25,7 +27,7 @@ class LoginService (val View : LoginView) {
                 when(resp?.code){
                     //성공
                     1000 -> {
-                        View.onKakaoSuccess(response.body() as KakaoResponse)
+                        View.onKakaoSuccess(response.body() as BasicResponse)
                         Log.d("KAKAOLOGIN/1000", resp.message)
 
                         spfManager.setJwt(resp.result)
@@ -34,7 +36,7 @@ class LoginService (val View : LoginView) {
                     }
                     //최초
                     1002 -> {
-                        View.onKakaoSuccess(response.body() as KakaoResponse)
+                        View.onKakaoSuccess(response.body() as BasicResponse)
                         spfManager.setEmail(resp.result)
                         Log.d("KAKAOLOGIN/1002", spfManager.getEmail().toString())
                     }
@@ -45,15 +47,15 @@ class LoginService (val View : LoginView) {
                 } }
             }
 
-            override fun onFailure(call: Call<KakaoResponse>, t: Throwable) {
+            override fun onFailure(call: Call<BasicResponse>, t: Throwable) {
                 Log.d("LOGIN", "로그인 실패 : 서버 오류")
             }
         })}
 
     fun tryTesterLogin(testerCode: testerCode){
-        retrofit.TesterLogin(testerCode).enqueue(object : Callback<KakaoResponse> {
-            override fun onResponse(call: Call<KakaoResponse>, response: Response<KakaoResponse>) {
-                var result: KakaoResponse? = response.body()
+        retrofit.TesterLogin(testerCode).enqueue(object : Callback<BasicResponse> {
+            override fun onResponse(call: Call<BasicResponse>, response: Response<BasicResponse>) {
+                var result: BasicResponse? = response.body()
                 val resp = response.body()
 
                 Log.d("TESTER/API-RESPONSE", result.toString())
@@ -61,7 +63,7 @@ class LoginService (val View : LoginView) {
                 when(resp?.code){
                     //성공
                     1000 -> {
-                        View.onTesterSuccess(response.body() as KakaoResponse)
+                        View.onTesterSuccess(response.body() as BasicResponse)
                         Log.d("TESTER/1000", resp.message)
 
                         spfManager.setJwt(resp.result)
@@ -71,7 +73,7 @@ class LoginService (val View : LoginView) {
                 }
             }
 
-            override fun onFailure(call: Call<KakaoResponse>, t: Throwable) {
+            override fun onFailure(call: Call<BasicResponse>, t: Throwable) {
                 Log.d("TESTER", "로그인 실패 : 서버 오류")
             }
         })}

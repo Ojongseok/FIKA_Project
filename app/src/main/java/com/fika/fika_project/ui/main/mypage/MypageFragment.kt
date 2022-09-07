@@ -62,9 +62,12 @@ class MypageFragment : Fragment(),MypageView {
     }
 
     override fun onLoading() {
+        binding.mypagePb.visibility = View.VISIBLE
     }
 
     override fun onMypageSuccess(response: MypageResponse) {
+        binding.mypagePb.visibility = View.GONE
+
         when(response.code) {
             1000 -> {
                 val resp = response.result!!

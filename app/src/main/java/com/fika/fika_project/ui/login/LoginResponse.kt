@@ -5,7 +5,7 @@ import java.io.Serializable
 
 //1. 카카오 로그인
 //20. 소셜 인증 후 회원가입
-data class KakaoResponse(
+data class BasicResponse(
     @SerializedName("isSuccess") val isSuccess: Boolean,
     @SerializedName("code") val code: Int,
     @SerializedName("message") val message: String,

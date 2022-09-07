@@ -1365,6 +1365,8 @@ color foreground_material_light
 color grey
 color grey2
 color grey3
+color grey4
+color grey5
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color login_btn
@@ -2857,6 +2859,7 @@ id activity_chooser_view_content
 id add
 id add12dkhk
 id add_group_btn
+id add_group_et
 id agree_01_back_btn
 id agree_01_cb_01
 id agree_01_cb_02
@@ -3180,7 +3183,6 @@ id ignore
 id ignoreRequest
 id image
 id imageView
-id imageView10
 id imageView13
 id imageView14
 id imageView16
@@ -3230,7 +3232,6 @@ id item_home_coursescrap_drama_star_iv
 id item_home_coursescrap_drama_title_tv
 id item_home_coursescrap_info_tv
 id item_home_coursescrap_number_tv
-id item_home_coursescrap_verti_bar
 id item_home_coursescrap_where_tv
 id item_home_dramarank_layout
 id item_home_placerank_layout
@@ -3394,6 +3395,7 @@ id mycourse_edit_text
 id mycourse_expand_list_recyclerview
 id mycourse_indicator_bar
 id mycourse_layout_1
+id mycourse_pb
 id mycourse_view_add_location
 id mycourse_view_list_container
 id myhold_back_btn
@@ -3413,6 +3415,7 @@ id mypage_course_tv
 id mypage_edit_btn
 id mypage_frm
 id mypage_logo_iv
+id mypage_pb
 id mypage_place_arrow_iv
 id mypage_place_cover_iv
 id mypage_place_flag_iv
@@ -3594,7 +3597,6 @@ id right_side
 id rounded
 id row_index_key
 id rtl
-id sadasdwq
 id save_non_transition_alpha
 id save_overlay_view
 id save_state_line

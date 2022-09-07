@@ -11,6 +11,8 @@ class HomeService(val View: HomeView) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
 
     fun tryLoadHome(){
+        View.onHomeLoading()
+
         retrofit.loadHome().enqueue(object : Callback<HomeResponse> {
             override fun onResponse(call: Call<HomeResponse>, response: Response<HomeResponse>) {
                 val result : HomeResponse? = response.body()

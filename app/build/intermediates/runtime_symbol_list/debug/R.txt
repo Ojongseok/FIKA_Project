@@ -1364,6 +1364,8 @@ int color foreground_material_light 0x7f060068
 int color grey 0x7f060069
 int color grey2 0x7f06006a
 int color grey3 0x7f06006b
+int color grey4 0x7f060271
+int color grey5 0x7f060272
 int color highlighted_text_material_dark 0x7f06006c
 int color highlighted_text_material_light 0x7f06006d
 int color login_btn 0x7f06006e
@@ -2856,6 +2858,7 @@ int id activity_chooser_view_content 0x7f0a0046
 int id add 0x7f0a0047
 int id add12dkhk 0x7f0a0048
 int id add_group_btn 0x7f0a0049
+int id add_group_et 0x7f0a0429
 int id agree_01_back_btn 0x7f0a004a
 int id agree_01_cb_01 0x7f0a004b
 int id agree_01_cb_02 0x7f0a004c
@@ -3179,7 +3182,6 @@ int id ignore 0x7f0a0189
 int id ignoreRequest 0x7f0a018a
 int id image 0x7f0a018b
 int id imageView 0x7f0a018c
-int id imageView10 0x7f0a018d
 int id imageView13 0x7f0a018e
 int id imageView14 0x7f0a018f
 int id imageView16 0x7f0a0190
@@ -3229,7 +3231,6 @@ int id item_home_coursescrap_drama_star_iv 0x7f0a01bb
 int id item_home_coursescrap_drama_title_tv 0x7f0a01bc
 int id item_home_coursescrap_info_tv 0x7f0a01bd
 int id item_home_coursescrap_number_tv 0x7f0a01be
-int id item_home_coursescrap_verti_bar 0x7f0a01bf
 int id item_home_coursescrap_where_tv 0x7f0a01c0
 int id item_home_dramarank_layout 0x7f0a01c1
 int id item_home_placerank_layout 0x7f0a01c2
@@ -3393,6 +3394,7 @@ int id mycourse_edit_text 0x7f0a025f
 int id mycourse_expand_list_recyclerview 0x7f0a0260
 int id mycourse_indicator_bar 0x7f0a0261
 int id mycourse_layout_1 0x7f0a0262
+int id mycourse_pb 0x7f0a042a
 int id mycourse_view_add_location 0x7f0a0263
 int id mycourse_view_list_container 0x7f0a0264
 int id myhold_back_btn 0x7f0a0265
@@ -3412,6 +3414,7 @@ int id mypage_course_tv 0x7f0a0272
 int id mypage_edit_btn 0x7f0a0273
 int id mypage_frm 0x7f0a0274
 int id mypage_logo_iv 0x7f0a0275
+int id mypage_pb 0x7f0a0428
 int id mypage_place_arrow_iv 0x7f0a0276
 int id mypage_place_cover_iv 0x7f0a0277
 int id mypage_place_flag_iv 0x7f0a0278
@@ -3593,7 +3596,6 @@ int id right_side 0x7f0a0327
 int id rounded 0x7f0a0328
 int id row_index_key 0x7f0a0329
 int id rtl 0x7f0a032a
-int id sadasdwq 0x7f0a032b
 int id save_non_transition_alpha 0x7f0a032c
 int id save_overlay_view 0x7f0a032d
 int id save_state_line 0x7f0a032e

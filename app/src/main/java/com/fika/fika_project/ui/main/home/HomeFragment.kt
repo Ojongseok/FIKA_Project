@@ -80,11 +80,12 @@ class HomeFragment : Fragment(), HomeView {
 
         when(response.code) {
             1000 -> {
+                binding.homePb.visibility = View.GONE
+
                 response?.let { setMyCourseRVAdapter((it.result?.myCourseList!!)) }
                 response?.let { setDramaRankRVAdapter(it.result?.dramaList!!) }
                 response?.let { setCourseRVAdapter((it.result?.coursesSortBySaved!!)) }
                 response?.let { setPlaceRankRVAdapter((it.result?.spotsSortBySaved!!)) }
-                binding.homePb.visibility = View.GONE
             }
         }
     }

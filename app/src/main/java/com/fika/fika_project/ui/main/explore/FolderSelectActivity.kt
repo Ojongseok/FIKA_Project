@@ -21,7 +21,6 @@ class FolderSelectActivity : AppCompatActivity() {
         _Binding = ActivityFolderSelectBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         binding.folderSelectGoCourseBtn.setOnClickListener {
             startActivity(Intent(this, MyCourseViewActivity::class.java))
         }

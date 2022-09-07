@@ -38,14 +38,10 @@ class ScrapCourserankRVAdapter(private val scrapCourserankList: ArrayList<course
 
 
         fun bind(itemScrapCourserank: coursesSortBySaved){
-            val number = itemScrapCourserank.courseSavedCount.toString()
-            val got = "곳"
-
             binding.itemHomeCoursescrapDramaTitleTv.text = itemScrapCourserank.dramaTitle
             binding.itemHomeCoursescrapWhereTv.text = itemScrapCourserank.baseAddress
             binding.childTitle.text = itemScrapCourserank.courseTitle
             binding.itemHomeCoursescrapInfoTv.text = itemScrapCourserank.spotTitleList.toString()
-            binding.itemHomeCoursescrapNumberTv.append(number+got)
             Glide.with(context).load(itemScrapCourserank.locageImageUrl).into(binding.itemHomeScrapcourseIv)
 
         }

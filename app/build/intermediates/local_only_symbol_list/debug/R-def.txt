@@ -12,6 +12,8 @@ color black2
 color grey
 color grey2
 color grey3
+color grey4
+color grey5
 color login_btn
 color login_hint
 color login_text
@@ -158,6 +160,7 @@ font pretendardbold
 font pretendardregular
 id add12dkhk
 id add_group_btn
+id add_group_et
 id agree_01_back_btn
 id agree_01_cb_01
 id agree_01_cb_02
@@ -312,7 +315,6 @@ id home_scrapcourse_rank_rv
 id home_scrapcourse_rank_tv
 id home_search_et
 id imageView
-id imageView10
 id imageView13
 id imageView14
 id imageView16
@@ -356,7 +358,6 @@ id item_home_coursescrap_drama_star_iv
 id item_home_coursescrap_drama_title_tv
 id item_home_coursescrap_info_tv
 id item_home_coursescrap_number_tv
-id item_home_coursescrap_verti_bar
 id item_home_coursescrap_where_tv
 id item_home_dramarank_layout
 id item_home_placerank_layout
@@ -440,6 +441,7 @@ id mycourse_edit_text
 id mycourse_expand_list_recyclerview
 id mycourse_indicator_bar
 id mycourse_layout_1
+id mycourse_pb
 id mycourse_view_add_location
 id mycourse_view_list_container
 id myhold_back_btn
@@ -459,6 +461,7 @@ id mypage_course_tv
 id mypage_edit_btn
 id mypage_frm
 id mypage_logo_iv
+id mypage_pb
 id mypage_place_arrow_iv
 id mypage_place_cover_iv
 id mypage_place_flag_iv
@@ -584,7 +587,6 @@ id review_report_title_tv
 id review_write_container
 id review_write_fragment_container
 id review_write_image_select_btn
-id sadasdwq
 id save_state_line
 id save_state_recyclerview
 id search_back_btn

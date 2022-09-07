@@ -10,6 +10,7 @@ import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ItemHomeCourseBinding
 import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.ui.main.explore.ExploreFragment
+import com.fika.fika_project.ui.main.mycourse.coursePreviewList
 import com.google.android.material.snackbar.Snackbar
 
 class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
@@ -38,14 +39,22 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding:ItemHomeCourseBinding = ItemHomeCourseBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
 
-        return when(viewType) {
-            FOOTER -> FooterViewHolder(viewGroup.inflate(R.layout.footer_home_my_course_rv))
-            HEADER -> bindViewHolder(binding)
-            else -> ItemViewHolder(binding)
+        if(itemCount != 0){
+            return when(viewType) {
+                FOOTER -> FooterViewHolder(viewGroup.inflate(R.layout.footer_home_my_course_rv))
+//            HEADER -> bindViewHolder(binding)
+                else -> ItemViewHolder(binding)
+            }
+        }else{
+            return when(viewType) {
+                FOOTER -> FooterViewHolder(viewGroup.inflate(R.drawable.home_course_null_card))
+                else -> ItemViewHolder(binding)
         }
+
+         }
     }
 
-    override fun getItemCount(): Int = courseList.size + 2
+    override fun getItemCount(): Int = courseList.size + 1
 
     override fun getItemViewType(position: Int): Int {
         return when (position) {
@@ -66,12 +75,14 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
                     Snackbar.make(it, "드라마를 탐색하러 갑니다!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
                 } }
             is ItemViewHolder -> { holder.bind(courseList[position]) }
-            is bindViewHolder -> { holder.bind() }
-
             }
     }
 
     inner class bindViewHolder(val binding: ItemHomeCourseBinding) :RecyclerView.ViewHolder(binding.root){
+        fun gone(){
+            binding.itemHomeCourseTopCv.visibility = View.GONE
+            binding.itemHomeCourseBottomCv.visibility = View.GONE
+        }
         fun bind(){
             binding.itemHomeCourseNullCard.setOnClickListener {
                 (context as MainActivity).supportFragmentManager.beginTransaction()

@@ -104,30 +104,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         />
 
-    <TextView
-        android:id="@+id/item_home_coursescrap_verti_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="|"
-        android:textStyle="normal"
-        android:textSize="14sp"
-        android:textColor="@color/grey"
-        android:layout_marginStart="4dp"
-        app:layout_constraintStart_toEndOf="@id/item_home_coursescrap_info_tv"
-        app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_info_tv"
-        />
-
-    <TextView
-        android:id="@+id/item_home_coursescrap_number_tv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="총 "
-        android:textStyle="normal"
-        android:textSize="14sp"
-        android:textColor="@color/grey"
-        android:layout_marginStart="4dp"
-        app:layout_constraintStart_toEndOf="@id/item_home_coursescrap_verti_bar"
-        app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_info_tv"
-        />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
