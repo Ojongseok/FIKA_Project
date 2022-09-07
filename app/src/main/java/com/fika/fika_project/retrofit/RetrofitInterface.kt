@@ -14,6 +14,7 @@ import com.fika.fika_project.ui.main.mypage.MyScrapResponse
 import com.fika.fika_project.ui.main.mypage.MypageResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationScrapResponse
 import com.fika.fika_project.ui.main.mycourse.MyCourseResponse
+import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.CourseEditResponse
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.CourseViewResponse
 import com.fika.fika_project.ui.main.mycourse.placeinfo.ReportResponse
 import retrofit2.Call
@@ -59,6 +60,13 @@ interface RetrofitInterface {
     fun loadDramaInfoCourse(
         @Path("dramaId") dramaId : Int
     ) :Call<DramaInfoResponse>
+
+    //17. 코스 편집
+    @PATCH("/course/edit/{courseId}")
+    fun loadCourseEdit(
+        @Path("courseId") courseId : Int,
+        @Body courseEditList : CourseEditDTO
+    ) :Call<CourseEditResponse>
 
     //18. 코스 상세 조회
    @GET("course/detail/{courseId}")

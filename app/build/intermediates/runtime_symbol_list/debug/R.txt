@@ -3011,6 +3011,8 @@ int id course_detail_location_flag_btn 0x7f0a00df
 int id course_detail_where_tv 0x7f0a00e0
 int id course_edit_bar 0x7f0a00e1
 int id course_edit_image 0x7f0a0427
+int id course_edit_state_name 0x7f0a042a
+int id course_edit_state_sub 0x7f0a042b
 int id course_edit_sub 0x7f0a0428
 int id course_edit_title 0x7f0a0429
 int id course_info_back_btn 0x7f0a00e2
@@ -3205,7 +3207,6 @@ int id imageView3 0x7f0a019e
 int id imageView4 0x7f0a019f
 int id imageView5 0x7f0a01a0
 int id imageView6 0x7f0a01a1
-int id imageView7 0x7f0a01a2
 int id imageView8 0x7f0a01a3
 int id imageView9 0x7f0a01a4
 int id imageView99 0x7f0a01a5
@@ -3707,6 +3708,7 @@ int id startHorizontal 0x7f0a0394
 int id startToEnd 0x7f0a0395
 int id startVertical 0x7f0a0396
 int id start_gallery_btn 0x7f0a0397
+int id state_edit_bar 0x7f0a042c
 int id staticLayout 0x7f0a0398
 int id staticPostLayout 0x7f0a0399
 int id status_bar_latest_event_content 0x7f0a039a
@@ -3746,12 +3748,10 @@ int id textSpacerNoButtons 0x7f0a03bb
 int id textSpacerNoTitle 0x7f0a03bc
 int id textStart 0x7f0a03bd
 int id textTop 0x7f0a03be
-int id textView 0x7f0a03bf
 int id textView10 0x7f0a03c0
 int id textView11 0x7f0a03c1
 int id textView12 0x7f0a03c2
 int id textView14 0x7f0a03c3
-int id textView15 0x7f0a03c4
 int id textView16 0x7f0a03c5
 int id textView17 0x7f0a03c6
 int id textView18 0x7f0a03c7

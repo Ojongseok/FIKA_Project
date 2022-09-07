@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityMycourseViewBinding
+import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.MyCourseEditState
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.*
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import net.daum.mf.map.api.MapPOIItem

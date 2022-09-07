@@ -19,10 +19,10 @@ public class MycourseViewItemListBindingImpl extends MycourseViewItemListBinding
         sViewsWithIds.put(R.id.imageView3, 3);
         sViewsWithIds.put(R.id.course_item_number, 4);
         sViewsWithIds.put(R.id.item_list_contents_layout, 5);
-        sViewsWithIds.put(R.id.imageView7, 6);
+        sViewsWithIds.put(R.id.state_edit_bar, 6);
         sViewsWithIds.put(R.id.item_list_drama_image, 7);
-        sViewsWithIds.put(R.id.textView, 8);
-        sViewsWithIds.put(R.id.textView15, 9);
+        sViewsWithIds.put(R.id.course_edit_state_name, 8);
+        sViewsWithIds.put(R.id.course_edit_state_sub, 9);
     }
     // views
     @NonNull
@@ -37,14 +37,14 @@ public class MycourseViewItemListBindingImpl extends MycourseViewItemListBinding
     }
     private MycourseViewItemListBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.TextView) bindings[4]
-            , (android.widget.ImageView) bindings[3]
-            , (android.widget.ImageView) bindings[6]
-            , (android.widget.RelativeLayout) bindings[5]
-            , (android.widget.ImageView) bindings[7]
-            , (android.widget.LinearLayout) bindings[2]
             , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[9]
+            , (android.widget.TextView) bindings[4]
+            , (android.widget.ImageView) bindings[3]
+            , (android.widget.RelativeLayout) bindings[5]
+            , (android.widget.ImageView) bindings[7]
+            , (android.widget.ImageView) bindings[6]
+            , (android.widget.LinearLayout) bindings[2]
             , (android.widget.TextView) bindings[1]
             );
         this.mboundView0 = (android.widget.FrameLayout) bindings[0];

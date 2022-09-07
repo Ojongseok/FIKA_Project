@@ -16,3 +16,8 @@ data class ReviewReport(
     var reportType: String?,
     var reportDetail: String?
 )
+
+data class CourseEditDTO(
+    val courseTitle : String,
+    val spotIdList : ArrayList<Int>
+)

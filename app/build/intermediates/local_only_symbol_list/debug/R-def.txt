@@ -238,6 +238,8 @@ id course_detail_location_flag_btn
 id course_detail_where_tv
 id course_edit_bar
 id course_edit_image
+id course_edit_state_name
+id course_edit_state_sub
 id course_edit_sub
 id course_edit_title
 id course_info_back_btn
@@ -338,7 +340,6 @@ id imageView3
 id imageView4
 id imageView5
 id imageView6
-id imageView7
 id imageView8
 id imageView9
 id imageView99
@@ -641,18 +642,17 @@ id slide_layout
 id splash_logo
 id splash_sublogo
 id start_gallery_btn
+id state_edit_bar
 id swipe_view
 id switch_off_tv2
 id switch_on_tv
 id test_button1
 id textHome
 id textInputLayout
-id textView
 id textView10
 id textView11
 id textView12
 id textView14
-id textView15
 id textView16
 id textView17
 id textView18

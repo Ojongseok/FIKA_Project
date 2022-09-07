@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.ItemTouchHelper.*
 import androidx.recyclerview.widget.RecyclerView
 import com.fika.fika_project.R
+import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.MyRecyclerViewAdapter
 import kotlin.math.min
 
 // 롱터치 후 드래그, 스와이프 동작 제어
