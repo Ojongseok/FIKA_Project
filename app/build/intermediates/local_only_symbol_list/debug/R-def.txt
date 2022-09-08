@@ -449,7 +449,6 @@ id map_top_layout
 id map_view
 id map_where_tv1
 id map_where_tv2
-id mycourse_calender_btn
 id mycourse_child_layout
 id mycourse_edit_btn
 id mycourse_edit_text

@@ -22,5 +22,5 @@ data class testerCode(
 )
 data class CourseEditDTO(
     val courseTitle : String?,
-    val spotIdList : ArrayList<Int>
+    val spotIdList : ArrayList<Long>
 )

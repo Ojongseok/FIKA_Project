@@ -16,6 +16,7 @@ import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.CourseViewR
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.CourseViewService
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.CourseViewView
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.spotList
+import kotlinx.android.synthetic.main.activity_mycourse_view.*
 import kotlinx.android.synthetic.main.drama_info_course_item.view.*
 import kotlinx.android.synthetic.main.mycourse_save_state_list.view.*
 import kotlinx.android.synthetic.main.mycourse_view_item_list.view.*
@@ -28,7 +29,6 @@ class MyCourseSaveState : Fragment(),CourseViewView {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentMyCourseSaveStateBinding.inflate(inflater, container, false)
-
 
 
 

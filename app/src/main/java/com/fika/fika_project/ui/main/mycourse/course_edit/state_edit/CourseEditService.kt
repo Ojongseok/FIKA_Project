@@ -15,17 +15,17 @@ class CourseEditService(val View: CourseEditView, val courseId : Int) {
         retrofit.loadCourseEdit(courseId, courseEditDTO).enqueue(object : Callback<CourseEditResponse> {
             override fun onResponse(call: Call<CourseEditResponse>, response: Response<CourseEditResponse>) {
                 val resp = response.body()
-                Log.d("coursedetail1/API", response.body().toString())
+                Log.d("coursedetail122", response.body().toString())
 
                 when(resp?.code){
                     1000 -> {
                         View.onExploreSuccess(response.body() as CourseEditResponse)
-                        Log.d("coursedetail1", "성공.")
+                        Log.d("coursedetail122", "성공.")
                     }
                 }
             }
             override fun onFailure(call: Call<CourseEditResponse>, t: Throwable) {
-                Log.d("coursedetail1/API-ERROR", t.toString())
+                Log.d("coursedetail122", "실패")
             }
         })
     }

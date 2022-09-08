@@ -3403,7 +3403,6 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
-id mycourse_calender_btn
 id mycourse_child_layout
 id mycourse_edit_btn
 id mycourse_edit_text

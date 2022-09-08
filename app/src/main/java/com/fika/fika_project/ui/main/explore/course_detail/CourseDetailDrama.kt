@@ -39,11 +39,11 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView 
         }
 
         binding.courseDetailDramaNameBtn.setOnClickListener {
-            val menuList =arrayOf("하나","둘","셋")
+            val menuList =arrayOf("이태원 클라쓰","사랑의 불시착","그 해 우리는")
             val dialog = AlertDialog.Builder(this,android.R.style.Theme_DeviceDefault_Light_Dialog_Alert)
-            dialog.setTitle("정렬")
+            dialog.setTitle("드라마 제목")
             dialog.setItems(menuList,DialogInterface.OnClickListener {dialogInterface, i ->
-                Toast.makeText(this,menuList[i].toString(),Toast.LENGTH_SHORT).show()
+                binding.courseDetailDramaNameTv.text = menuList[i]
             })
             dialog.show()
         }

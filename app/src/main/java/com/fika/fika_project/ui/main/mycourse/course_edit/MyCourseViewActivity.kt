@@ -3,6 +3,7 @@ package com.fika.fika_project.ui.main.mycourse.course_edit
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -32,6 +33,7 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView {
         slidePanel.addPanelSlideListener(PanelEventListener())
 
         courseId = intent.getIntExtra("courseId",0)
+        Log.d("TAG",courseId.toString())
         val service = CourseViewService(this,courseId)
         service.tryCourseView()
 

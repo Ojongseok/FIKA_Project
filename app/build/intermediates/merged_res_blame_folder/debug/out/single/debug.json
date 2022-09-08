@@ -12,12 +12,12 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_more_info.png"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_logo_fikaduck.xml.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\logo_fikaduck.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_view_pager.xml.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\fragment_view_pager.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_logo_fikaduck.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\logo_fikaduck.xml"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_search_result.xml.flat",
@@ -28,24 +28,24 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\folder_button_background_on.xml"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_btn_all_review.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\btn_all_review.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_edittext_background.xml.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\edittext_background.xml"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_btn_all_review.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\btn_all_review.png"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_mystate_on.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\mystate_on.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_btn_all_review.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\btn_all_review.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_more_info.xml.flat",
@@ -60,12 +60,12 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\round_checkbox_off.png"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_review_white.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\review_white.png"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_mypage_card_background.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\mypage_card_background.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_review_white.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\review_white.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
@@ -140,12 +140,12 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\switch_track_selector.xml"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_course_edit_bar_blue.xml.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\course_edit_bar_blue.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_like_on.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\ic_like_on.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_course_edit_bar_blue.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\course_edit_bar_blue.xml"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_home_course_null_card.png.flat",
@@ -204,16 +204,16 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\btn_all_review.png"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_quitdialog_bottom_left_background.xml.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\quitdialog_bottom_left_background.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_login_tester_btn.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\login_tester_btn.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_background_on.xml.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\button_background_on.xml"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_login_tester_btn.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\login_tester_btn.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_quitdialog_bottom_left_background.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\quitdialog_bottom_left_background.xml"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_filter.png.flat",
@@ -236,24 +236,24 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\item_placeinfo_review.xml"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_camera.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\camera.png"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_home.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\home.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_camera.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\camera.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_star_blue.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\star_blue.png"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_signup_02.xml.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\fragment_signup_02.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_website.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\website.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_signup_02.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\fragment_signup_02.xml"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_agree_01.xml.flat",
@@ -268,12 +268,12 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\ballon_layout.xml"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_mypage.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_mypage.png"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_item_list_circle.xml.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\item_list_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_mypage.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_mypage.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_mypage.png.flat",
