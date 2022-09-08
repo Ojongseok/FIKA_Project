@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.activity_mycourse_view.*
 class MyCourseEditState : Fragment(),CourseEditView {
     private var _binding: FragmentMyCourseEditStateBinding? = null
     private val binding get() = _binding!!
+    lateinit var spotList : ArrayList<spotList>
     var courseId = 0
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentMyCourseEditStateBinding.inflate(inflater, container, false)
