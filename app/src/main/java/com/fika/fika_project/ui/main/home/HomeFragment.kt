@@ -1,5 +1,6 @@
 package com.fika.fika_project.ui.main.home
 
+import android.content.Context
 import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,13 +11,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.fika.fika_project.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(), HomeView {
-    private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
-
+    private lateinit var binding: FragmentHomeBinding
+    private lateinit var fContext : Context
     val service = HomeService(this)
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        fContext = context
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         service.tryLoadHome()
 
@@ -24,9 +29,9 @@ class HomeFragment : Fragment(), HomeView {
     }
 
     private fun setMyCourseRVAdapter(courseList: ArrayList<myCourseList>){
-        val myCourseRVAdapter = MyCourseRVAdapter(courseList,requireContext())
+        val myCourseRVAdapter = MyCourseRVAdapter(courseList,fContext)
 
-        binding.homeMyCourseRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.homeMyCourseRv.layoutManager = LinearLayoutManager(fContext, LinearLayoutManager.HORIZONTAL, false)
         binding.homeMyCourseRv.adapter = myCourseRVAdapter
         binding.homeMyCourseRv.setHasFixedSize(false)
 
@@ -38,17 +43,17 @@ class HomeFragment : Fragment(), HomeView {
     }
 
     private fun setDramaRankRVAdapter(dramaRankList: ArrayList<dramaList>){
-        val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankList,requireContext())
+        val dramaRankRVAdapter = DramaRankRVAdapter(dramaRankList,fContext)
 
-        binding.homeDramaRankRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.homeDramaRankRv.layoutManager = LinearLayoutManager(fContext, LinearLayoutManager.HORIZONTAL, false)
         binding.homeDramaRankRv.adapter = dramaRankRVAdapter
         binding.homeDramaRankRv.setHasFixedSize(false)
     }
 
     private fun setCourseRVAdapter(scrapCourserankList: ArrayList<coursesSortBySaved>){
-        val scrapCourserankRVAdapter = ScrapCourserankRVAdapter(scrapCourserankList,requireContext())
+        val scrapCourserankRVAdapter = ScrapCourserankRVAdapter(scrapCourserankList,fContext)
 
-        binding.homeScrapcourseRankRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.homeScrapcourseRankRv.layoutManager = LinearLayoutManager(fContext, LinearLayoutManager.VERTICAL, false)
         binding.homeScrapcourseRankRv.adapter = scrapCourserankRVAdapter
         binding.homeDramaRankRv.setHasFixedSize(false)
 
@@ -60,16 +65,15 @@ class HomeFragment : Fragment(), HomeView {
     }
 
     private fun setPlaceRankRVAdapter(placeRankList: ArrayList<spotsSortBySaved>){
-        val placeRankRVAdapter = PlaceRankRVAdapter(placeRankList,requireContext())
+        val placeRankRVAdapter = PlaceRankRVAdapter(placeRankList,fContext)
 
-        binding.homePlaceRankRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.homePlaceRankRv.layoutManager = LinearLayoutManager(fContext, LinearLayoutManager.HORIZONTAL, false)
         binding.homePlaceRankRv.adapter = placeRankRVAdapter
         binding.homePlaceRankRv.setHasFixedSize(false)
  }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
     }
 
     override fun onHomeLoading() {

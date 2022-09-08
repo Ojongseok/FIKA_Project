@@ -13,7 +13,7 @@ data class MyCourseResponse (
 data class MyCourse (
     @SerializedName("groupId") val groupId: Int,
     @SerializedName("groupName") val groupName: String,
-    @SerializedName("coursePreviewList") val coursePreviewList: ArrayList<coursePreviewList>?
+    @SerializedName("coursePreviewList") var coursePreviewList: ArrayList<coursePreviewList>?
 )
 
 data class coursePreviewList (

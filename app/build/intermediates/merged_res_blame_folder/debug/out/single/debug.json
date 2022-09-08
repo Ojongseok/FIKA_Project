@@ -188,6 +188,10 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\drawable\\quitdialog_bottom_left_background.xml"
     },
     {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\layout_footer_home_my_course_null.xml.flat",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\footer_home_my_course_null.xml"
+    },
+    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\layout_item_myplace_2.xml.flat",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\item_myplace_2.xml"
     },

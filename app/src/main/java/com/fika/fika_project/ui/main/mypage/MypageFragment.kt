@@ -75,6 +75,8 @@ class MypageFragment : Fragment(),MypageView {
                 val spot = resp.savedSpotCount.toString()
                 val course = resp.savedCourseCount.toString()
 
+                binding.mypageProfileIv.setImageResource(R.drawable.logo_fikaduck)
+
                 binding.mypageProfileTv.setText(resp.memberNickname)
                 binding.mypagePlaceNumberTv.text = spot+"개"
                 binding.mypageCourseNumberTv.text = course + "개"

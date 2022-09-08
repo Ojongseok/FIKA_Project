@@ -2859,7 +2859,6 @@ id activity_chooser_view_content
 id add
 id add12dkhk
 id add_group_btn
-id add_group_et
 id agree_01_back_btn
 id agree_01_cb_01
 id agree_01_cb_02
@@ -3159,6 +3158,7 @@ id group_divider
 id grouping
 id groups
 id guideline
+id header_layout
 id header_title
 id hidden
 id hideable
@@ -3994,6 +3994,7 @@ layout dramalist_item
 layout ex_activity_sign_up
 layout explore_course_item_list
 layout folder_item
+layout footer_home_my_course_null
 layout footer_home_my_course_rv
 layout fragment_agree_01
 layout fragment_agree_02

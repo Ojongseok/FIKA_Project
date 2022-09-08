@@ -2858,7 +2858,6 @@ int id activity_chooser_view_content 0x7f0a0046
 int id add 0x7f0a0047
 int id add12dkhk 0x7f0a0048
 int id add_group_btn 0x7f0a0049
-int id add_group_et 0x7f0a0429
 int id agree_01_back_btn 0x7f0a004a
 int id agree_01_cb_01 0x7f0a004b
 int id agree_01_cb_02 0x7f0a004c
@@ -3158,6 +3157,7 @@ int id group_divider 0x7f0a0171
 int id grouping 0x7f0a0172
 int id groups 0x7f0a0173
 int id guideline 0x7f0a0174
+int id header_layout 0x7f0a042b
 int id header_title 0x7f0a0175
 int id hidden 0x7f0a0176
 int id hideable 0x7f0a0177
@@ -3993,6 +3993,7 @@ int layout dramalist_item 0x7f0d004b
 int layout ex_activity_sign_up 0x7f0d004c
 int layout explore_course_item_list 0x7f0d004d
 int layout folder_item 0x7f0d004e
+int layout footer_home_my_course_null 0x7f0d00d1
 int layout footer_home_my_course_rv 0x7f0d004f
 int layout fragment_agree_01 0x7f0d0050
 int layout fragment_agree_02 0x7f0d0051

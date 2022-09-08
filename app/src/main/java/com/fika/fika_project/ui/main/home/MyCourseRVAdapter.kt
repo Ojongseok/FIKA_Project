@@ -31,24 +31,21 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
     fun setMyItemClickListener(itemClickListener: MyItemClickListener){
         mItemClickListner = itemClickListener
     }
-//
-//    private var tasks: ArrayList<myCourseList> = arrayListOf()
 
     private fun ViewGroup.inflate(layoutRes: Int): View = LayoutInflater.from(context).inflate(layoutRes, this, false)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding:ItemHomeCourseBinding = ItemHomeCourseBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
 
-        if(itemCount != 0){
+        if(courseList.size != 0){
             return when(viewType) {
                 FOOTER -> FooterViewHolder(viewGroup.inflate(R.layout.footer_home_my_course_rv))
-//            HEADER -> bindViewHolder(binding)
                 else -> ItemViewHolder(binding)
             }
         }else{
             return when(viewType) {
                 FOOTER -> FooterViewHolder(viewGroup.inflate(R.drawable.home_course_null_card))
-                else -> ItemViewHolder(binding)
+                else -> FooterViewHolder(viewGroup.inflate(R.layout.footer_home_my_course_null))
         }
 
          }
@@ -74,37 +71,23 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
                         .commitAllowingStateLoss()
                     Snackbar.make(it, "드라마를 탐색하러 갑니다!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
                 } }
-            is ItemViewHolder -> { holder.bind(courseList[position]) }
+            is ItemViewHolder -> {
+                if(courseList.size == 0){
+                    //
+                }else{
+                    holder.bind(courseList[position]) }
+                }
             }
-    }
-
-    inner class bindViewHolder(val binding: ItemHomeCourseBinding) :RecyclerView.ViewHolder(binding.root){
-        fun gone(){
-            binding.itemHomeCourseTopCv.visibility = View.GONE
-            binding.itemHomeCourseBottomCv.visibility = View.GONE
-        }
-        fun bind(){
-            binding.itemHomeCourseNullCard.setOnClickListener {
-                (context as MainActivity).supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_frm, ExploreFragment())
-                    .commitAllowingStateLoss()
-                Snackbar.make(it, "드라마를 탐색하러 갑니다!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
-            }
-
-            binding.itemHomeCourseNullCard.visibility = View.VISIBLE
-            binding.itemHomeCourseTopCv.visibility = View.GONE
-            binding.itemHomeCourseBottomCv.visibility = View.GONE
-        }
     }
 
     inner class FooterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     inner class ItemViewHolder(val binding: ItemHomeCourseBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(itemCourse: myCourseList){
-                Glide.with(context).load(itemCourse.locageImageUrl).into(binding.itemHomeCourseIv)
-                binding.itemHomeCourseNameTv.text = itemCourse.courseTitle
-                binding.itemHomeCourseDramaNameTv.text = itemCourse.dramaTitle
-                binding.itemHomeCourseSpotTv.text = itemCourse.spotTitleList.toString()
+            Glide.with(context).load(itemCourse.locageImageUrl).into(binding.itemHomeCourseIv)
+            binding.itemHomeCourseNameTv.text = itemCourse.courseTitle
+            binding.itemHomeCourseDramaNameTv.text = itemCourse.dramaTitle
+            binding.itemHomeCourseSpotTv.text = itemCourse.spotTitleList.toString()
         }
     }
 }

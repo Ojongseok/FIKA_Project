@@ -135,3 +135,39 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
         const val CHILD = 1
     }
 }
+
+
+//제가 하던거라 지우셔도 돼요!!(예진)
+//class ExpandableListAdapter(private val headerList: ArrayList<MyCourse>, val context: Context) : RecyclerView.Adapter<ExpandableListAdapter.ListHeaderViewHolder>() {
+//
+//    override fun onCreateViewHolder(parent: ViewGroup, type: Int): ListHeaderViewHolder {
+//        val binding = FragmentMycourseListHeaderBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+//        return ListHeaderViewHolder(binding)
+//    }
+//
+//    override fun onBindViewHolder(holder: ListHeaderViewHolder, position: Int) {
+//        holder.bind(headerList[position])
+//    }
+//
+//    //그룹 갯수
+//    override fun getItemCount(): Int = headerList.size
+//
+//    inner class ListHeaderViewHolder(val binding: FragmentMycourseListHeaderBinding) : RecyclerView.ViewHolder(binding.root){
+//        fun bind(itemHeader : MyCourse){
+////            val itemChild = itemHeader.coursePreviewList!![0]
+//
+//            binding.listHeaderTitle.text = itemHeader.groupName
+//
+////            if(itemHeader.coursePreviewList != null){
+////                Glide.with(context).load(itemChild.locageImageUrl).into(binding.itemHomeScrapcourseIv)
+////                binding.childTitle.text = itemChild.courseTitle
+////                binding.itemHomeCoursescrapDramaTitleTv.text = itemChild.dramaTitle
+////                binding.itemHomeCoursescrapWhereTv.text = itemChild.baseAddress
+////                binding.itemHomeCoursescrapInfoTv.text = itemChild.spotTitleList.toString()
+////            }else{
+////              binding.mycourseChildLayout.visibility = View.GONE
+////            }
+//        }
+//    }
+//
+//}

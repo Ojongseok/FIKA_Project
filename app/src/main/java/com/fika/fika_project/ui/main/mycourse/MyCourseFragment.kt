@@ -42,7 +42,7 @@ class MyCourseFragment :Fragment(), MyCourseView {
 
 
         binding.addGroupBtn.setOnClickListener {
-            val getGroupName = GroupName(binding.addGroupEt.text.toString())
+            val getGroupName = GroupName("새로운 그룹")
             service.tryAddGroup(getGroupName)
         }
 
@@ -65,24 +65,24 @@ class MyCourseFragment :Fragment(), MyCourseView {
         binding.mycoursePb.visibility = View.GONE
 
         when(response.code) {
-                1000 -> {
-                    if(response.result!!.size == 0){
-                        binding.mycourseExpandListRecyclerview.visibility = View.GONE
-                        binding.myscrapcourseEmptyIv.visibility = View.VISIBLE
-                    }else{
+            1000 -> {
+                if(response.result!!.size == 0){
+                    binding.mycourseExpandListRecyclerview.visibility = View.GONE
+                    binding.myscrapcourseEmptyIv.visibility = View.VISIBLE
+                }else{
 //                        response.let { setMyCourseRVAdapter(it.result!!) }
-                    }
                 }
+            }
 
         }
     }
 
     override fun onAddGroupSuccess(response: BasicResponse) {
         when(response.code){
-          1000 -> {
-              Snackbar.make(requireView(), "${response.result} 그룹이 생성되었습니다!", Snackbar.LENGTH_SHORT
-              ).setAction("Action", null).show()
-          }
-          }
+            1000 -> {
+                Snackbar.make(requireView(), "${response.result} 그룹이 생성되었습니다!", Snackbar.LENGTH_SHORT
+                ).setAction("Action", null).show()
+            }
+        }
     }
 }

@@ -54,16 +54,6 @@
 
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/add_group_et"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/edittext_background"
-                android:backgroundTint="@color/sub_blue"
-                android:elevation="2dp"
-                app:layout_constraintTop_toBottomOf="@id/add_group_btn"
-                android:layout_margin="30dp"/>
-
             <LinearLayout
                 android:id="@+id/edit_group_name_btn"
                 android:layout_width="wrap_content"
@@ -95,9 +85,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="20dp"
+                tools:listitem="@layout/fragment_mycourse_list_header"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_group_et" />
+                app:layout_constraintTop_toBottomOf="@+id/add_group_btn" />
 
             <TextView
                 android:id="@+id/tour_notice"

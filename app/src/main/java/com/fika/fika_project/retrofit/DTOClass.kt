@@ -24,4 +24,3 @@ data class GroupName(
 data class testerCode(
     var testerCode: String
 )
-

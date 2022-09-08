@@ -12,6 +12,7 @@
         <entry key="..\:/FIKA/app/src/main/res/layout/dialog_login.xml" value="0.2" />
         <entry key="..\:/FIKA/app/src/main/res/layout/dialog_quit.xml" value="0.19739583333333333" />
         <entry key="..\:/FIKA/app/src/main/res/layout/drama_info_course_item.xml" value="0.159375" />
+        <entry key="..\:/FIKA/app/src/main/res/layout/footer_home_my_course_null.xml" value="0.103125" />
         <entry key="..\:/FIKA/app/src/main/res/layout/footer_home_my_course_rv.xml" value="0.18229166666666666" />
         <entry key="..\:/FIKA/app/src/main/res/layout/fragment_agree_01.xml" value="0.2" />
         <entry key="..\:/FIKA/app/src/main/res/layout/fragment_agree_02.xml" value="0.1" />
@@ -21,7 +22,7 @@
         <entry key="..\:/FIKA/app/src/main/res/layout/fragment_home.xml" value="0.17864583333333334" />
         <entry key="..\:/FIKA/app/src/main/res/layout/fragment_mycourse.xml" value="0.2" />
         <entry key="..\:/FIKA/app/src/main/res/layout/fragment_mycourse_list_child.xml" value="0.2" />
-        <entry key="..\:/FIKA/app/src/main/res/layout/fragment_mycourse_list_header.xml" value="0.264" />
+        <entry key="..\:/FIKA/app/src/main/res/layout/fragment_mycourse_list_header.xml" value="0.2" />
         <entry key="..\:/FIKA/app/src/main/res/layout/fragment_mypage.xml" value="0.1953125" />
         <entry key="..\:/FIKA/app/src/main/res/layout/fragment_nickname.xml" value="0.17864583333333334" />
         <entry key="..\:/FIKA/app/src/main/res/layout/item_home_course.xml" value="0.264" />

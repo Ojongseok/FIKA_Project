@@ -120,6 +120,10 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\activity_my_scrap.xml"
     },
     {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\footer_home_my_course_null.xml",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\footer_home_my_course_null.xml"
+    },
+    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_large_map.xml",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\activity_large_map.xml"
     },

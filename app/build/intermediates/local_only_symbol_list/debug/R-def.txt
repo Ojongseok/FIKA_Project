@@ -160,7 +160,6 @@ font pretendardbold
 font pretendardregular
 id add12dkhk
 id add_group_btn
-id add_group_et
 id agree_01_back_btn
 id agree_01_cb_01
 id agree_01_cb_02
@@ -304,6 +303,7 @@ id folder_select_go_course_btn
 id folder_select_recyclerview
 id folder_select_stay_btn
 id genre_filter_tv
+id header_layout
 id home_drama_rank_rv
 id home_drama_rank_tv
 id home_logo_iv
@@ -727,6 +727,7 @@ layout dramalist_item
 layout ex_activity_sign_up
 layout explore_course_item_list
 layout folder_item
+layout footer_home_my_course_null
 layout footer_home_my_course_rv
 layout fragment_agree_01
 layout fragment_agree_02
