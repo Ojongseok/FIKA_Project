@@ -28,7 +28,7 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
 
         val service = CourseDetailService(this,courseId)
         service.tryLoadCourseDetail()
-
+        binding.courseDetailDramaBackBtn.setOnClickListener { finish() }
     }
 
     private fun initData(initList: result) {

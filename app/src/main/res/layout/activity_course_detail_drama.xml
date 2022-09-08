@@ -7,6 +7,7 @@
     tools:context=".ui.main.explore.CourseDetailDrama">
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/course_detail_hold_btn"
@@ -271,7 +272,7 @@
         android:id="@+id/course_detail_hold_btn"
         android:layout_width="0dp"
         android:layout_height="72dp"
-        android:background="#94B4EC"
+        android:background="@drawable/button_background_off"
         android:gravity="center"
         android:text="내 코스에 담기"
         android:textColor="@color/white"
@@ -280,4 +281,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/course_detail_drama_check_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="+0"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

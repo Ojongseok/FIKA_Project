@@ -23,20 +23,17 @@ import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
 class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView {
     private var _Binding: ActivityCourseDetailDramaBinding? = null
     private val binding get() = _Binding!!
-    private val listOfYear = ArrayList<SpinnerModel>()
     lateinit var dramaAdapter: CourseDetailDramaAdapter
-
+    var courseId = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityCourseDetailDramaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val service = CourseDetailService(this,intent.getIntExtra("courseId",0))
+        courseId = intent.getIntExtra("courseId",0)
 
-        binding.courseDetailHoldBtn.setOnClickListener {
-            startActivity(Intent(this,FolderSelectActivity::class.java))
-            overridePendingTransition(R.anim.slide_up_enter,R.anim.slide_up_exit)
-        }
+
         binding.courseDetailDramaBackBtn.setOnClickListener {
             finish()
         }
@@ -73,9 +70,28 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView 
 
     private fun setOnClickEvent() {
         dramaAdapter.setItemClickListener(object: CourseDetailDramaAdapter.OnItemClickListener {
-            override fun onClick(view: View, position: Int) {
-                super.onClick(view, position) // 미리 정의해둔 onClick 호출
-                dramaAdapter.notifyDataSetChanged()
+            override fun onClick(view: View, position: Int, list: Array<Boolean>, count: Int) {
+                super.onClick(view, position,list,count) // 미리 정의해둔 onClick 호출
+                binding.courseDetailDramaCheckCount.text = "+" + count.toString()
+                if (list.contains(true)) {
+                    binding.courseDetailHoldBtn.setBackgroundResource(R.drawable.button_background_on)
+                    binding.courseDetailHoldBtn.isClickable = true
+                    binding.courseDetailHoldBtn.setOnClickListener {
+                        val intent = Intent(applicationContext, FolderSelectActivity::class.java)
+                        intent.putExtra("courseId",courseId)
+                        startActivity(intent)
+                        overridePendingTransition(R.anim.slide_up_enter, R.anim.slide_up_exit)
+                    }
+                }
+            }
+            override fun notClick(view: View, position: Int, list : Array<Boolean>,count:Int) {
+                super.notClick(view, position, list,count)
+                binding.courseDetailDramaCheckCount.text = "+" + count.toString()
+                if (!list.contains(true)) {
+                    binding.courseDetailHoldBtn.setBackgroundResource(R.drawable.button_background_off)
+                    binding.courseDetailHoldBtn.isClickable = false
+                }
+
             }
         })
     }

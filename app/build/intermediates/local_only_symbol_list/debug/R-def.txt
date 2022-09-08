@@ -232,6 +232,7 @@ id course_detail_check_count_tv
 id course_detail_course_name
 id course_detail_course_title
 id course_detail_drama_back_btn
+id course_detail_drama_check_count
 id course_detail_drama_name_btn
 id course_detail_drama_name_tv
 id course_detail_drama_title
@@ -603,6 +604,7 @@ id sadasdwq
 id save_state_line
 id save_state_recyclerview
 id scrollView2
+id scrollView3
 id search_back_btn
 id search_contents_textview
 id search_ok_button

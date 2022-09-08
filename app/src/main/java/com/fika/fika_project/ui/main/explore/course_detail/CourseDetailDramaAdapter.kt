@@ -17,7 +17,9 @@ import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
 
 
 class CourseDetailDramaAdapter(val locationList: ArrayList<spotList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>(),LocationHoldView {
-    private lateinit var itemClickListener : CourseDetailDramaAdapter.OnItemClickListener
+    private lateinit var itemClickListener : OnItemClickListener
+    var checkStateList = Array<Boolean>(locationList.size) { i -> false }
+    var count = 0
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.myhold_location_item_list,parent,false)
@@ -39,8 +41,16 @@ class CourseDetailDramaAdapter(val locationList: ArrayList<spotList>, val contex
             view.course_detail_location_flag_btn.setImageResource(R.drawable.ic_flag_off)
         }
 
-        view.myhold_checkbox_btn.setOnClickListener {
-            itemClickListener.onClick(it,position)
+        view.myhold_checkbox_btn.setOnCheckedChangeListener { compoundButton, checked ->
+            if (checked) {
+                count++
+                checkStateList[position] = true
+                itemClickListener.onClick(view, position,checkStateList,count)
+            } else {
+                count--
+                checkStateList[position] = false
+                itemClickListener.notClick(view, position,checkStateList,count)
+            }
         }
         view.course_detail_location_flag_btn.setOnClickListener {
             var service = LocationHoldService(this,locationList[position].spotId!!)
@@ -51,8 +61,9 @@ class CourseDetailDramaAdapter(val locationList: ArrayList<spotList>, val contex
     override fun getItemCount() = locationList.size
 
     interface OnItemClickListener {
-        fun onClick(view: View, position: Int) {
-            Toast.makeText(view.context,position.toString(), Toast.LENGTH_SHORT).show()
+        fun onClick(view: View, position: Int, list : Array<Boolean>, count : Int) {
+        }
+        fun notClick(view:View,position: Int,  list : Array<Boolean>, count : Int) {
         }
     }
     fun setItemClickListener(onItemClickListener: OnItemClickListener) {
