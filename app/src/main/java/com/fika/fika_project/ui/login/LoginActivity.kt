@@ -3,6 +3,7 @@ package com.fika.fika_project.ui.login
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fika.fika_project.ApplicationClass.Companion.TAG
@@ -15,6 +16,7 @@ import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
 import com.kakao.sdk.user.UserApiClient
+import com.kakao.util.helper.Utility
 
 class LoginActivity : AppCompatActivity(), LoginView {
     lateinit var binding : ActivityLoginBinding
@@ -24,14 +26,14 @@ class LoginActivity : AppCompatActivity(), LoginView {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
 
-
+//
 //        var keyHash = Utility.getKeyHash(this)
 //        Log.e(TAG, "해시 키 값 : ${keyHash}")
 
         initClickListener()
         setContentView(binding.root)
 
-        spfManager.RemoveKakaoJwt()
+        spfManager.ClearSpf()
 
 //         편의상 시작
 //        val intent = Intent(this, MainActivity::class.java)
@@ -142,10 +144,12 @@ class LoginActivity : AppCompatActivity(), LoginView {
 
 
     override fun onLoading() {
-//        TODO("Not yet implemented")
+        binding.loginLoadingPb.visibility = View.VISIBLE
     }
 
-    override fun onKakaoSuccess(response: KakaoResponse) {
+    override fun onKakaoSuccess(response: BasicResponse) {
+        binding.loginLoadingPb.visibility = View.GONE
+
         Toast.makeText(this,"카카오 로그인되었습니다",Toast.LENGTH_SHORT).show()
         when(response.code){
             //성공
@@ -165,8 +169,9 @@ class LoginActivity : AppCompatActivity(), LoginView {
             } }
     }
 
-    override fun onTesterSuccess(response: KakaoResponse) {
+    override fun onTesterSuccess(response: BasicResponse) {
         Toast.makeText(this,"로그인되었습니다!",Toast.LENGTH_SHORT).show()
+
         val intent = Intent(this, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)

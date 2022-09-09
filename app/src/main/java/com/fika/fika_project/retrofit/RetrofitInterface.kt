@@ -7,16 +7,13 @@ import com.fika.fika_project.ui.main.explore.filter_drama.ExploreDramaResponse
 import com.fika.fika_project.ui.main.home.HomeResponse
 import com.fika.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.fika.fika_project.ui.login.AuthResponse
+import com.fika.fika_project.ui.login.BasicResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
-import com.fika.fika_project.ui.login.KakaoResponse
-import com.fika.fika_project.ui.main.explore.folder.FolderResponse
 import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceInfoResponse
 import com.fika.fika_project.ui.main.mypage.MyScrapResponse
 import com.fika.fika_project.ui.main.mypage.MypageResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationScrapResponse
 import com.fika.fika_project.ui.main.mycourse.MyCourseResponse
-import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.CourseEditResponse
-import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.CourseViewResponse
 import com.fika.fika_project.ui.main.mycourse.placeinfo.ReportResponse
 import retrofit2.Call
 import retrofit2.http.*
@@ -26,7 +23,7 @@ interface RetrofitInterface {
     @POST("/oauth/login/kakao")
     fun kakaoLogin(
         @Header("Access-Token") token: String
-    ): Call<KakaoResponse>
+    ): Call<BasicResponse>
 
     //4. 닉네임 유효성 검사
     @POST("/member/valid/nickname")
@@ -37,12 +34,6 @@ interface RetrofitInterface {
     //8. 메인 페이지 데이터 조회
     @GET("/nav/main")
     fun loadHome(): Call<HomeResponse>
-
-    //7. 단일 내 코스 조회
-    @GET("/course/{courseId}")
-    fun loadCourseView(
-        @Path("courseId") courseId : Int
-    ) :Call<CourseViewResponse>
 
     //10. 드라마 필터 조회
     @GET("/drama/{filter}")
@@ -61,13 +52,6 @@ interface RetrofitInterface {
     fun loadDramaInfoCourse(
         @Path("dramaId") dramaId : Int
     ) :Call<DramaInfoResponse>
-
-    //17. 코스 편집
-    @PATCH("/course/edit/{courseId}")
-    fun loadCourseEdit(
-        @Path("courseId") courseId : Int,
-        @Body courseEditList : CourseEditDTO
-    ) :Call<CourseEditResponse>
 
     //18. 코스 상세 조회
    @GET("course/detail/{courseId}")
@@ -96,7 +80,7 @@ interface RetrofitInterface {
     @POST("/member/social")
     fun signUp(
         @Body user: User
-    ): Call<KakaoResponse>
+    ): Call<BasicResponse>
 
     //20. 장소 상세 조회
     @GET("/spot/detail/{spotId}")
@@ -116,9 +100,9 @@ interface RetrofitInterface {
     @GET("/course/my/scrap")
     fun MyScrap() : Call<MyScrapResponse>
 
-    // 27. 그룹 선택
-    @GET("/group/my")
-    fun loadFolder() : Call<FolderResponse>
+    // 29. 그룹 생성
+    @POST("/group")
+    fun AddGroup(@Body groupName: GroupName) : Call<BasicResponse>
 
     // 30. 내 코스 보기
     @GET("/course/my")
@@ -126,6 +110,6 @@ interface RetrofitInterface {
 
     // 31. 테스터 로그인
     @POST("/member/demo/tester")
-    fun TesterLogin(@Body testerCode:testerCode) : Call<KakaoResponse>
+    fun TesterLogin(@Body testerCode:testerCode) : Call<BasicResponse>
 
 }

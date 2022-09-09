@@ -78,7 +78,7 @@ class NicknameFragment  : Fragment(), NicknameView {
         }
     }
 
-    override fun onSignUpSuccess(response: KakaoResponse) {
+    override fun onSignUpSuccess(response: BasicResponse) {
         when(response.code){
             //성공
             1000 -> {

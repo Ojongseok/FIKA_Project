@@ -42,9 +42,9 @@ class NicknameService(val View : NicknameView) {
         })}
 
     fun trySignUp(user : User){
-        retrofit.signUp(user).enqueue(object : Callback<KakaoResponse> {
-            override fun onResponse(call: Call<KakaoResponse>, response: Response<KakaoResponse>) {
-                var result: KakaoResponse? = response.body()
+        retrofit.signUp(user).enqueue(object : Callback<BasicResponse> {
+            override fun onResponse(call: Call<BasicResponse>, response: Response<BasicResponse>) {
+                var result: BasicResponse? = response.body()
                 val resp = response.body()
 
                 Log.d("SIGNUP/API-RESPONSE", result.toString())
@@ -55,7 +55,7 @@ class NicknameService(val View : NicknameView) {
                         spfManager.setJwt(resp.result)
                         Log.d("SIGNUP-setJwt", resp.result)
 
-                        View.onSignUpSuccess(response.body() as KakaoResponse)
+                        View.onSignUpSuccess(response.body() as BasicResponse)
                         Log.d("SIGNUP", resp.message)
                     }
                     //최초
@@ -65,7 +65,7 @@ class NicknameService(val View : NicknameView) {
                     } }
             }
 
-            override fun onFailure(call: Call<KakaoResponse>, t: Throwable) {
+            override fun onFailure(call: Call<BasicResponse>, t: Throwable) {
                 Log.d("SIGNUP-FAIL", "SIGNUP 실패 : 서버 오류")
             }
         })}

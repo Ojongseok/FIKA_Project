@@ -10,15 +10,16 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fika.fika_project.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment(),HomeView {
+class HomeFragment : Fragment(), HomeView {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var fContext : Context
     val service = HomeService(this)
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        fContext =context
+        fContext = context
     }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
@@ -27,7 +28,6 @@ class HomeFragment : Fragment(),HomeView {
         return binding.root
     }
 
-
     private fun setMyCourseRVAdapter(courseList: ArrayList<myCourseList>){
         val myCourseRVAdapter = MyCourseRVAdapter(courseList,fContext)
 
@@ -35,11 +35,11 @@ class HomeFragment : Fragment(),HomeView {
         binding.homeMyCourseRv.adapter = myCourseRVAdapter
         binding.homeMyCourseRv.setHasFixedSize(false)
 
-//        myCourseRVAdapter.setMyItemClickListener(object  : MyCourseRVAdapter.MyItemClickListener{
-//            override fun onItemClick(course: myCourseList) {
-//
-//            }
-//        })
+        myCourseRVAdapter.setMyItemClickListener(object  : MyCourseRVAdapter.MyItemClickListener{
+            override fun onItemClick(course: myCourseList) {
+
+            }
+        })
     }
 
     private fun setDramaRankRVAdapter(dramaRankList: ArrayList<dramaList>){
@@ -57,6 +57,11 @@ class HomeFragment : Fragment(),HomeView {
         binding.homeScrapcourseRankRv.adapter = scrapCourserankRVAdapter
         binding.homeDramaRankRv.setHasFixedSize(false)
 
+//        scrapCourserankRVAdapter.setMyItemClickListener(object  : ScrapCourserankRVAdapter.MyItemClickListener{
+//            override fun onItemClick(scrapCourserank: coursesSortBySaved) {
+//                TODO("Not yet implemented")
+//            }
+//        })
     }
 
     private fun setPlaceRankRVAdapter(placeRankList: ArrayList<spotsSortBySaved>){
@@ -67,6 +72,9 @@ class HomeFragment : Fragment(),HomeView {
         binding.homePlaceRankRv.setHasFixedSize(false)
  }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+    }
 
     override fun onHomeLoading() {
         binding.homePb.visibility = View.VISIBLE
@@ -76,17 +84,18 @@ class HomeFragment : Fragment(),HomeView {
 
         when(response.code) {
             1000 -> {
+                binding.homePb.visibility = View.GONE
+
                 response?.let { setMyCourseRVAdapter((it.result?.myCourseList!!)) }
                 response?.let { setDramaRankRVAdapter(it.result?.dramaList!!) }
                 response?.let { setCourseRVAdapter((it.result?.coursesSortBySaved!!)) }
                 response?.let { setPlaceRankRVAdapter((it.result?.spotsSortBySaved!!)) }
-                binding.homePb.visibility = View.GONE
             }
         }
     }
 
     override fun onHomeFailure(code: Int, message: String) {
-        Toast.makeText(fContext,"통신 에러",Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(),"통신 에러",Toast.LENGTH_SHORT).show()
     }
 }
 

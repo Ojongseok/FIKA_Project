@@ -11,6 +11,8 @@ class MypageService(val View : MypageView) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
 
     fun tryMypage(){
+        View.onLoading()
+
         retrofit.Mypage().enqueue(object : Callback<MypageResponse> {
             override fun onResponse(call: Call<MypageResponse>, response: Response<MypageResponse>) {
                 var result: MypageResponse? = response.body()

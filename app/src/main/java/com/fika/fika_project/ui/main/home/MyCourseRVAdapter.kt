@@ -10,6 +10,7 @@ import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ItemHomeCourseBinding
 import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.ui.main.explore.ExploreFragment
+import com.fika.fika_project.ui.main.mycourse.coursePreviewList
 import com.google.android.material.snackbar.Snackbar
 
 class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
@@ -30,22 +31,27 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
     fun setMyItemClickListener(itemClickListener: MyItemClickListener){
         mItemClickListner = itemClickListener
     }
-//
-//    private var tasks: ArrayList<myCourseList> = arrayListOf()
 
     private fun ViewGroup.inflate(layoutRes: Int): View = LayoutInflater.from(context).inflate(layoutRes, this, false)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding:ItemHomeCourseBinding = ItemHomeCourseBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
 
-        return when(viewType) {
-            FOOTER -> FooterViewHolder(viewGroup.inflate(R.layout.footer_home_my_course_rv))
-            HEADER -> bindViewHolder(binding)
-            else -> ItemViewHolder(binding)
+        if(courseList.size != 0){
+            return when(viewType) {
+                FOOTER -> FooterViewHolder(viewGroup.inflate(R.layout.footer_home_my_course_rv))
+                else -> ItemViewHolder(binding)
+            }
+        }else{
+            return when(viewType) {
+                FOOTER -> FooterViewHolder(viewGroup.inflate(R.drawable.home_course_null_card))
+                else -> FooterViewHolder(viewGroup.inflate(R.layout.footer_home_my_course_null))
         }
+
+         }
     }
 
-    override fun getItemCount(): Int = courseList.size + 2
+    override fun getItemCount(): Int = courseList.size + 1
 
     override fun getItemViewType(position: Int): Int {
         return when (position) {
@@ -65,35 +71,23 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
                         .commitAllowingStateLoss()
                     Snackbar.make(it, "드라마를 탐색하러 갑니다!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
                 } }
-            is ItemViewHolder -> { holder.bind(courseList[position]) }
-            is bindViewHolder -> { holder.bind() }
-
+            is ItemViewHolder -> {
+                if(courseList.size == 0){
+                    //
+                }else{
+                    holder.bind(courseList[position]) }
+                }
             }
-    }
-
-    inner class bindViewHolder(val binding: ItemHomeCourseBinding) :RecyclerView.ViewHolder(binding.root){
-        fun bind(){
-            binding.itemHomeCourseNullCard.setOnClickListener {
-                (context as MainActivity).supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_frm, ExploreFragment())
-                    .commitAllowingStateLoss()
-                Snackbar.make(it, "드라마를 탐색하러 갑니다!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
-            }
-
-            binding.itemHomeCourseNullCard.visibility = View.VISIBLE
-            binding.itemHomeCourseTopCv.visibility = View.GONE
-            binding.itemHomeCourseBottomCv.visibility = View.GONE
-        }
     }
 
     inner class FooterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     inner class ItemViewHolder(val binding: ItemHomeCourseBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(itemCourse: myCourseList){
-                Glide.with(context).load(itemCourse.locageImageUrl).into(binding.itemHomeCourseIv)
-                binding.itemHomeCourseNameTv.text = itemCourse.courseTitle
-                binding.itemHomeCourseDramaNameTv.text = itemCourse.dramaTitle
-                binding.itemHomeCourseSpotTv.text = itemCourse.spotTitleList.toString()
+            Glide.with(context).load(itemCourse.locageImageUrl).into(binding.itemHomeCourseIv)
+            binding.itemHomeCourseNameTv.text = itemCourse.courseTitle
+            binding.itemHomeCourseDramaNameTv.text = itemCourse.dramaTitle
+            binding.itemHomeCourseSpotTv.text = itemCourse.spotTitleList.toString()
         }
     }
 }

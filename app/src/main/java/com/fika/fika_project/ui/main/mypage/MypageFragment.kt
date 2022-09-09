@@ -62,15 +62,20 @@ class MypageFragment : Fragment(),MypageView {
     }
 
     override fun onLoading() {
+        binding.mypagePb.visibility = View.VISIBLE
     }
 
     override fun onMypageSuccess(response: MypageResponse) {
+        binding.mypagePb.visibility = View.GONE
+
         when(response.code) {
             1000 -> {
                 val resp = response.result!!
 
                 val spot = resp.savedSpotCount.toString()
                 val course = resp.savedCourseCount.toString()
+
+                binding.mypageProfileIv.setImageResource(R.drawable.logo_fikaduck)
 
                 binding.mypageProfileTv.setText(resp.memberNickname)
                 binding.mypagePlaceNumberTv.text = spot+"개"

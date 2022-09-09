@@ -1365,6 +1365,8 @@ color foreground_material_light
 color grey
 color grey2
 color grey3
+color grey4
+color grey5
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color login_btn
@@ -2591,9 +2593,6 @@ drawable camera
 drawable chat_rectangle
 drawable check
 drawable checkbox_custom
-drawable course_edit_bar_blue
-drawable course_edit_bar_red
-drawable course_edit_bar_yellow
 drawable course_off
 drawable course_on
 drawable design_fab_background
@@ -2687,9 +2686,6 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
-drawable marker_blue
-drawable marker_red
-drawable marker_yellow
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2929,8 +2925,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id ball_tv_name
-id ball_view
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3002,11 +2996,9 @@ id coordinator
 id cos
 id counterclockwise
 id course_detail_category_tv
-id course_detail_check_count_tv
 id course_detail_course_name
 id course_detail_course_title
 id course_detail_drama_back_btn
-id course_detail_drama_check_count
 id course_detail_drama_name_btn
 id course_detail_drama_name_tv
 id course_detail_drama_title
@@ -3018,12 +3010,6 @@ id course_detail_locage_tiltle
 id course_detail_locage_tiltle_by_drama
 id course_detail_location_flag_btn
 id course_detail_where_tv
-id course_edit_bar
-id course_edit_image
-id course_edit_state_name
-id course_edit_state_sub
-id course_edit_sub
-id course_edit_title
 id course_info_back_btn
 id course_info_edit_switch_btn
 id course_info_top_layout
@@ -3047,6 +3033,7 @@ id design_menu_item_text
 id design_navigation_view
 id detail_course_hash
 id detail_course_hash_tv_by_drama
+id detail_course_location_recyclerview
 id detail_course_together_recyclerview
 id detail_scene_list_layout
 id dialog_button
@@ -3171,6 +3158,7 @@ id group_divider
 id grouping
 id groups
 id guideline
+id header_layout
 id header_title
 id hidden
 id hideable
@@ -3195,11 +3183,9 @@ id ignore
 id ignoreRequest
 id image
 id imageView
-id imageView10
-id imageView11
-id imageView12
 id imageView13
 id imageView14
+id imageView16
 id imageView17
 id imageView18
 id imageView19
@@ -3216,6 +3202,7 @@ id imageView3
 id imageView4
 id imageView5
 id imageView6
+id imageView7
 id imageView8
 id imageView9
 id imageView99
@@ -3245,7 +3232,6 @@ id item_home_coursescrap_drama_star_iv
 id item_home_coursescrap_drama_title_tv
 id item_home_coursescrap_info_tv
 id item_home_coursescrap_number_tv
-id item_home_coursescrap_verti_bar
 id item_home_coursescrap_where_tv
 id item_home_dramarank_layout
 id item_home_placerank_layout
@@ -3335,7 +3321,6 @@ id login_title_text
 id login_yahoo_iv
 id login_yahoo_tv
 id ltr
-id mainFrame
 id main_frm
 id map_flag
 id map_iv
@@ -3403,12 +3388,14 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id mycourse_calender_btn
 id mycourse_child_layout
 id mycourse_edit_btn
 id mycourse_edit_text
 id mycourse_expand_list_recyclerview
 id mycourse_indicator_bar
 id mycourse_layout_1
+id mycourse_pb
 id mycourse_view_add_location
 id mycourse_view_list_container
 id myhold_back_btn
@@ -3428,6 +3415,7 @@ id mypage_course_tv
 id mypage_edit_btn
 id mypage_frm
 id mypage_logo_iv
+id mypage_pb
 id mypage_place_arrow_iv
 id mypage_place_cover_iv
 id mypage_place_flag_iv
@@ -3609,7 +3597,6 @@ id right_side
 id rounded
 id row_index_key
 id rtl
-id sadasdwq
 id save_non_transition_alpha
 id save_overlay_view
 id save_state_line
@@ -3621,8 +3608,6 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id scrollView2
-id scrollView3
 id scrollable
 id search_back_btn
 id search_badge
@@ -3720,7 +3705,6 @@ id startHorizontal
 id startToEnd
 id startVertical
 id start_gallery_btn
-id state_edit_bar
 id staticLayout
 id staticPostLayout
 id status_bar_latest_event_content
@@ -3760,10 +3744,12 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textView10
 id textView11
 id textView12
 id textView14
+id textView15
 id textView16
 id textView17
 id textView18
@@ -3775,6 +3761,7 @@ id textView23
 id textView24
 id textView27
 id textView3
+id textView30
 id textView31
 id textView32
 id textView33
@@ -3977,7 +3964,6 @@ layout activity_search_result
 layout activity_splash
 layout activity_talk_auth_code
 layout activity_visit_complete_course
-layout ballon_layout
 layout balloon_layout
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -4008,6 +3994,7 @@ layout dramalist_item
 layout ex_activity_sign_up
 layout explore_course_item_list
 layout folder_item
+layout footer_home_my_course_null
 layout footer_home_my_course_rv
 layout fragment_agree_01
 layout fragment_agree_02

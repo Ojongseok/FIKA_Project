@@ -3,7 +3,6 @@ package com.fika.fika_project.ui.main.explore
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,34 +10,27 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityFolderSelectBinding
-import com.fika.fika_project.ui.main.explore.folder.FolderResponse
-import com.fika.fika_project.ui.main.explore.folder.FolderService
-import com.fika.fika_project.ui.main.explore.folder.FolderView
-import com.fika.fika_project.ui.main.explore.folder.result
 import com.fika.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity
 import kotlinx.android.synthetic.main.folder_item.view.*
 
-class FolderSelectActivity : AppCompatActivity(),FolderView {
+class FolderSelectActivity : AppCompatActivity() {
     private var _Binding: ActivityFolderSelectBinding? = null
     private val binding get() = _Binding!!
-    var courseId = 0
-    val service = FolderService(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityFolderSelectBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        courseId = intent.getIntExtra("courseId",0)
         binding.folderSelectGoCourseBtn.setOnClickListener {
-            val intent = Intent(this, MyCourseViewActivity::class.java)
-            intent.putExtra("courseId",courseId)
-            startActivity(intent)
+            startActivity(Intent(this, MyCourseViewActivity::class.java))
         }
         binding.folderSelectStayBtn.setOnClickListener {
             onBackPressed()
         }
-
-        service.tryloadFolder()
+        binding.folderSelectRecyclerview.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = FolderSelectAdapter()
+        }
 
     }
     override fun onBackPressed() {
@@ -50,25 +42,9 @@ class FolderSelectActivity : AppCompatActivity(),FolderView {
         _Binding = null
         super.onDestroy()
     }
-
-    override fun onExploreSuccess(response: FolderResponse) {
-        when(response.code) {
-            1000 -> {
-                response.let {
-                    binding.folderSelectRecyclerview.apply {
-                        layoutManager = LinearLayoutManager(context)
-                        adapter = FolderSelectAdapter(it.result!!)
-                    }
-                }
-            }
-        }
-
-    }
-    override fun onExploreFailure() {
-    }
 }
 
-class FolderSelectAdapter(val folderList : ArrayList<result>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class FolderSelectAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.folder_item,parent,false)
 
@@ -77,9 +53,13 @@ class FolderSelectAdapter(val folderList : ArrayList<result>) : RecyclerView.Ada
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val view = (holder as CustomViewHolder).itemView
+        var list : ArrayList<String> = ArrayList()
+        list.add("기본 그룹")
+        list.add("새로운 그룹1")
+        list.add("새로운 그룹2")
 
-        view.folder_name_tv.text = folderList[position].courseGroupName
+        view.folder_name_tv.text = list[position]
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
-    override fun getItemCount() = folderList.size
+    override fun getItemCount() = 3
 }

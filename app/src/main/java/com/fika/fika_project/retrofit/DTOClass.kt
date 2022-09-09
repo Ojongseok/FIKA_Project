@@ -17,10 +17,10 @@ data class ReviewReport(
     var reportDetail: String?
 )
 
+data class GroupName(
+    var groupName: String
+)
+
 data class testerCode(
     var testerCode: String
-)
-data class CourseEditDTO(
-    val courseTitle : String?,
-    val spotIdList : ArrayList<Long>
 )
