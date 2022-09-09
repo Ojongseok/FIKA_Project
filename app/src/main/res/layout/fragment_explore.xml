@@ -23,10 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginRight="72dp"
         android:text="코스로 탐색"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/explore_drama_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -34,10 +34,10 @@
         android:id="@+id/explore_drama_click_circle"
         android:layout_width="8dp"
         android:layout_height="8dp"
-        android:layout_marginLeft="111.5dp"
         android:layout_marginTop="4dp"
         android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/explore_drama_tv"
+        app:layout_constraintEnd_toEndOf="@id/explore_drama_tv"
         app:layout_constraintTop_toBottomOf="@+id/explore_drama_tv"
         app:srcCompat="@drawable/explore_circle" />
 
@@ -45,12 +45,12 @@
         android:id="@+id/explore_drama_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="72dp"
         android:layout_marginTop="24dp"
         android:text="드라마로 탐색"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/explore_course_tv"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <ImageView
@@ -58,9 +58,9 @@
         android:layout_width="8dp"
         android:layout_height="8dp"
         android:layout_marginTop="4dp"
-        android:layout_marginRight="104.5dp"
         android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/explore_course_tv"
+        app:layout_constraintEnd_toEndOf="@id/explore_course_tv"
         app:layout_constraintTop_toBottomOf="@+id/explore_course_tv"
         app:srcCompat="@drawable/explore_circle" />
 
@@ -77,5 +77,17 @@
         app:layout_constraintTop_toBottomOf="@+id/explore_course_click_circle">
 
     </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/explore_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:indeterminateTint="@color/main_yellow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

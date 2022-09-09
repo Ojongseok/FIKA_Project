@@ -2689,9 +2689,6 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
-drawable marker_blue
-drawable marker_red
-drawable marker_yellow
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3087,6 +3084,7 @@ id drama_info_main_iv
 id drama_info_mapview
 id drama_info_title_tv
 id dramalist_dramaimage
+id dramalist_dramaimage_cv
 id dramalist_dramaname
 id dropdown_editable
 id dropdown_menu
@@ -3123,13 +3121,16 @@ id expanded_menu
 id explore_child_title
 id explore_course_click_circle
 id explore_course_page_recyclerview
+id explore_course_pb
 id explore_course_tv
 id explore_coursepage_search_number
 id explore_drama_click_circle
 id explore_drama_page_recyclerview
+id explore_drama_pb
 id explore_drama_tv
 id explore_drana_page_search_number
 id explore_main_container
+id explore_pb
 id fade
 id filer_course_tv_1
 id fill
@@ -3188,7 +3189,9 @@ id home_place_rank_rv
 id home_place_rank_tv
 id home_scrapcourse_rank_rv
 id home_scrapcourse_rank_tv
+id home_search_cancel_iv
 id home_search_et
+id home_search_iv
 id honorRequest
 id horizontal_only
 id icon
@@ -3252,6 +3255,7 @@ id item_home_dramarank_layout
 id item_home_placerank_layout
 id item_home_scrapcourse_cv
 id item_home_scrapcourse_iv
+id item_layout
 id item_list_contents_layout
 id item_list_drama_image
 id item_location_placerank_category_tv

@@ -11,7 +11,10 @@ import retrofit2.Response
 class ExploreCourseService(val View: ExploreCourseView, val filter : String) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
     val loadExploreCourse = retrofit.loadCourseFilter(filter)
+
     fun tryLoadExploreCourse(){
+        View.onExploreLoading()
+
         loadExploreCourse.enqueue(object : Callback<ExploreCourseResponse> {
             override fun onResponse(call: Call<ExploreCourseResponse>, response: Response<ExploreCourseResponse>) {
                 val resp = response.body()

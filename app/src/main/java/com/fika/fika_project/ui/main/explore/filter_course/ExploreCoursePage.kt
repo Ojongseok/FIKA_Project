@@ -55,14 +55,15 @@ class ExploreCoursePage : Fragment(), ExploreCourseView {
     }
 
     override fun onExploreLoading() {
+        binding.exploreCoursePb.visibility = View.VISIBLE
     }
 
     override fun onExploreSuccess(response: ExploreCourseResponse) {
+        binding.exploreCoursePb.visibility = View.GONE
+
         when(response.code) {
             1000 -> {
-                response.let {
-                    response?.let { setDramalist(it.result!!) }
-                }
+                response.let { setDramalist(it.result!!) }
             }
         }
     }
