@@ -60,7 +60,7 @@ class MyRecyclerViewAdapter(private val items : ArrayList<spotList>, val context
             binding.courseEditStateSub.text = items[layoutPosition].shortAddress + "·" + items[layoutPosition].type
             if (items[layoutPosition].type.equals("cafe")) {
                 binding.stateEditBar.setImageResource(R.drawable.course_edit_bar_yellow)
-            } else if (items[layoutPosition].type.equals("playground")) {
+            } else if (items[layoutPosition].type.equals("place")) {
                 binding.stateEditBar.setImageResource(R.drawable.course_edit_bar_blue)
             } else {
                 binding.stateEditBar.setImageResource(R.drawable.course_edit_bar_red)

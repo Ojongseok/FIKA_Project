@@ -26,9 +26,10 @@ class MyCourseSaveState : Fragment(),CourseViewView {
     private var _binding: FragmentMyCourseSaveStateBinding? = null
     private val binding get() = _binding!!
     lateinit var list : ArrayList<spotList>
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentMyCourseSaveStateBinding.inflate(inflater, container, false)
+
+        (activity as MyCourseViewActivity).saveVisible()
 
         return binding.root
     }
@@ -50,6 +51,9 @@ class MyCourseSaveState : Fragment(),CourseViewView {
                         arguments = bundle
                     }).commit()
         }
+    }
+    interface SaveVisible {
+        fun saveVisible()
     }
     override fun onExploreSuccess(response: CourseViewResponse) {
         when(response.code) {
@@ -83,7 +87,7 @@ class SaveStateAdapter(val spotList : ArrayList<spotList>,val context: Context) 
         view.course_edit_sub.text = spotList[position].shortAddress + "·" + spotList[position].type
         if (spotList[position].type.equals("cafe")) {
             view.course_edit_bar.setImageResource(R.drawable.course_edit_bar_yellow)
-        } else if (spotList[position].type.equals("playground")) {
+        } else if (spotList[position].type.equals("place")) {
             view.course_edit_bar.setImageResource(R.drawable.course_edit_bar_blue)
         } else {
             view.course_edit_bar.setImageResource(R.drawable.course_edit_bar_red)

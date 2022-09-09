@@ -42,6 +42,7 @@
                 android:background="@drawable/edittext_background"
                 android:ems="13"
                 android:gravity="center_vertical"
+                android:hint="코스명을 입력해주세요."
                 android:inputType="textPersonName"
                 android:paddingLeft="8dp"
                 android:textColor="#9D9D9D"

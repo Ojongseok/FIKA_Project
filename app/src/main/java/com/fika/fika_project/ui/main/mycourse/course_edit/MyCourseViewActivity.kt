@@ -9,16 +9,16 @@ import android.view.View
 import android.view.ViewGroup
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityMycourseViewBinding
+import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.MyCourseEditState
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.*
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
 import net.daum.mf.map.api.MapView
 
-class MyCourseViewActivity :AppCompatActivity(),CourseViewView {
+class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState.EditVisible,MyCourseSaveState.SaveVisible {
     private var _Binding: ActivityMycourseViewBinding? = null
     private val binding get() = _Binding!!
-    var editState : Boolean = false
     var courseId = 0
     lateinit var spotList : ArrayList<spotList>
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,6 +53,17 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView {
             startActivity(Intent(this, MyHoldLocationActivity::class.java))
         }
     }
+    override fun editvisible() {
+        binding.mycourseEditText.visibility = View.VISIBLE
+        binding.myholdTitle.visibility = View.INVISIBLE
+        binding.mycourseViewAddLocation.visibility = View.GONE
+    }
+    override fun saveVisible() {
+        binding.mycourseEditText.visibility = View.INVISIBLE
+        binding.myholdTitle.visibility = View.VISIBLE
+        binding.mycourseViewAddLocation.visibility = View.VISIBLE
+    }
+
     fun initKakaomapData(spotList: ArrayList<spotList>) {
         val mapView = MapView(this)
         val mapViewContainer = findViewById<View>(R.id.map_view) as ViewGroup
@@ -67,7 +78,7 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView {
                 markerType = MapPOIItem.MarkerType.CustomImage
                 if (spotList[i].type.equals("cafe")) {
                     customImageResourceId = R.drawable.marker_yellow
-                } else if (spotList[i].type.equals("playground")) {
+                } else if (spotList[i].type.equals("place")) {
                     customImageResourceId = R.drawable.marker_blue
                 } else {
                     customImageResourceId = R.drawable.marker_red
@@ -82,7 +93,6 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView {
         _Binding = null
         super.onDestroy()
     }
-
     override fun onExploreSuccess(response: CourseViewResponse) {
         when(response.code) {
             1000 -> {
@@ -112,4 +122,5 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView {
     }
     override fun onExploreFailure() {
     }
+
 }

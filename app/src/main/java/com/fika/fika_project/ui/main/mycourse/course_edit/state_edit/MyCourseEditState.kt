@@ -24,12 +24,15 @@ class MyCourseEditState : Fragment(),CourseEditView {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentMyCourseEditStateBinding.inflate(inflater, container, false)
 
-
+        (activity as MyCourseViewActivity).editvisible()
 
         return binding.root
     }
     interface returnItems {
         fun getItems() : ArrayList<Long>
+    }
+    interface EditVisible {
+        fun editvisible()
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -49,6 +52,7 @@ class MyCourseEditState : Fragment(),CourseEditView {
                     bundle.putInt("courseId",courseId)
                     arguments = bundle
                 }).commit()
+
         }
 
         // 리사이클러뷰에 스와이프, 드래그 기능 달기

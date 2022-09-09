@@ -40,7 +40,7 @@ class LargeMapActivity : AppCompatActivity() {
                 markerType = MapPOIItem.MarkerType.CustomImage
                 if (spotlist[i].type.equals("cafe")) {
                     customImageResourceId = R.drawable.marker_yellow
-                } else if (spotlist[i].type.equals("playground")) {
+                } else if (spotlist[i].type.equals("place")) {
                     customImageResourceId = R.drawable.marker_blue
                 } else {
                     customImageResourceId = R.drawable.marker_red
