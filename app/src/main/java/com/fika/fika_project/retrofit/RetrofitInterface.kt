@@ -8,12 +8,15 @@ import com.fika.fika_project.ui.main.home.HomeResponse
 import com.fika.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.fika.fika_project.ui.login.AuthResponse
 import com.fika.fika_project.ui.login.BasicResponse
+import com.fika.fika_project.ui.main.explore.folder.FolderResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceInfoResponse
 import com.fika.fika_project.ui.main.mypage.MyScrapResponse
 import com.fika.fika_project.ui.main.mypage.MypageResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationScrapResponse
 import com.fika.fika_project.ui.main.mycourse.MyCourseResponse
+import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.CourseEditResponse
+import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.CourseViewResponse
 import com.fika.fika_project.ui.main.mycourse.placeinfo.ReportResponse
 import retrofit2.Call
 import retrofit2.http.*
@@ -30,6 +33,12 @@ interface RetrofitInterface {
     fun nicknameCheck(
         @Body nickname: Nickname
     ): Call<AuthResponse>
+
+    //7. 단일 내 코스 조회
+    @GET("/course/{courseId}")
+    fun loadCourseView(
+        @Path("courseId") courseId : Int
+    ) :Call<CourseViewResponse>
 
     //8. 메인 페이지 데이터 조회
     @GET("/nav/main")
@@ -76,6 +85,13 @@ interface RetrofitInterface {
         @Path("spotId") spotId : Int
     ): Call<LocationHoldResponse>
 
+    //17. 코스 편집
+    @PATCH("/course/edit/{courseId}")
+    fun loadCourseEdit(
+        @Path("courseId") courseId : Int,
+        @Body courseEditList : CourseEditDTO
+    ) :Call<CourseEditResponse>
+
     //20. 소셜 인증 후 회원가입
     @POST("/member/social")
     fun signUp(
@@ -99,6 +115,10 @@ interface RetrofitInterface {
     // 25. 마이페이지 조회
     @GET("/course/my/scrap")
     fun MyScrap() : Call<MyScrapResponse>
+
+    // 27. 그룹 선택
+    @GET("/group/my")
+    fun loadFolder() : Call<FolderResponse>
 
     // 29. 그룹 생성
     @POST("/group")

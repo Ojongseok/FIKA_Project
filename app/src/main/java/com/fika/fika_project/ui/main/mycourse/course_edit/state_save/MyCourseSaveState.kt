@@ -30,8 +30,6 @@ class MyCourseSaveState : Fragment(),CourseViewView {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentMyCourseSaveStateBinding.inflate(inflater, container, false)
 
-
-
         return binding.root
     }
 

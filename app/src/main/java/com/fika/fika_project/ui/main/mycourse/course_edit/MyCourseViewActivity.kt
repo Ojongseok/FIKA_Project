@@ -9,11 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityMycourseViewBinding
-import com.fika.fika_project.ui.main.MainActivity
-import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.MyCourseEditState
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.*
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
-import kotlinx.android.synthetic.main.mycourse_save_state_list.view.*
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
 import net.daum.mf.map.api.MapView

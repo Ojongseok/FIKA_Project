@@ -24,7 +24,6 @@ class MyCourseEditState : Fragment(),CourseEditView {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentMyCourseEditStateBinding.inflate(inflater, container, false)
 
-        MyCourseViewActivity().mycourse_view_add_location.visibility = View.GONE
 
 
         return binding.root

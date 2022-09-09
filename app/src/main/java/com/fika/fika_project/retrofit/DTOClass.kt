@@ -24,3 +24,7 @@ data class GroupName(
 data class testerCode(
     var testerCode: String
 )
+data class CourseEditDTO(
+    val courseTitle : String?,
+    val spotIdList : ArrayList<Long>
+)
