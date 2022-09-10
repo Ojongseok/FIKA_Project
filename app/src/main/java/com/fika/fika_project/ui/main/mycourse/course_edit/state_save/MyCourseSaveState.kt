@@ -27,6 +27,8 @@ import kotlinx.android.synthetic.main.drama_info_course_item.view.*
 import kotlinx.android.synthetic.main.mycourse_save_state_list.view.*
 import kotlinx.android.synthetic.main.mycourse_view_item_list.view.*
 import kotlinx.android.synthetic.main.mycourse_view_item_list.view.course_item_number
+import java.lang.Math.*
+import kotlin.math.pow
 
 class MyCourseSaveState : Fragment(),CourseViewView {
     private var _binding: FragmentMyCourseSaveStateBinding? = null
@@ -100,24 +102,40 @@ class SaveStateAdapter(val spotList : ArrayList<spotList>,val context: Context) 
         }
         Glide.with(context).load(spotList[position].spotImageUrl).into(view.course_edit_image)
         view.course_item_number.text = (position+1).toString()
-
+        if (position!=spotList.size-1) {
+            //마지막꺼 왜 되지
+            val dis = getDistance(spotList[position].mapY!!,spotList[position].mapX!!,spotList[position+1].mapY!!,spotList[position+1].mapX!!)
+            var disKm = dis / 1000.0
+            disKm = round(disKm*10)/10.0
+            view.save_state_distinct.text = disKm.toString() + "km"
+        }
         view.save_state_distinct.setOnClickListener {
-            val url = "kakaomap://route?sp=37.5518018, 127.0736343&ep=37.5518018, 127.973634&by=CAR"
-            var intent =  Intent(Intent.ACTION_VIEW, Uri.parse(url))
-            intent.addCategory(Intent.CATEGORY_BROWSABLE)
+            if (position!=spotList.size-1) {
+                val url = "kakaomap://route?sp=${spotList[position].mapY}, ${spotList[position].mapX}&ep=${spotList[position+1].mapY}, ${spotList[position+1].mapX}&by=PUBLICTRANSIT"
+                var intent =  Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                intent.addCategory(Intent.CATEGORY_BROWSABLE)
 //            var list = context.packageManager?.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY)
 
-
-             //설치 되어있으면 카맵으로 넘어가야되는데 안됨
+                //설치 되어있으면 카맵으로 넘어가야되는데 안됨
 //            if (list== null || list.isEmpty()){
 //                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=net.daum.android.map")))
 //            }else{
                 context.startActivity(intent)
 //            }
+            }
         }
 
 
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
     override fun getItemCount() = spotList.size
+
+    fun getDistance(lat1: Double, lon1: Double, lat2: Double, lon2: Double): Int {
+        val R = 6372.8 * 1000
+        val dLat = Math.toRadians(lat2 - lat1)
+        val dLon = Math.toRadians(lon2 - lon1)
+        val a = sin(dLat / 2).pow(2.0) + sin(dLon / 2).pow(2.0) * cos(Math.toRadians(lat1)) * cos(Math.toRadians(lat2))
+        val c = 2 * asin(sqrt(a))
+        return (R * c).toInt()
+    }
 }

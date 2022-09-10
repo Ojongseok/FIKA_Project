@@ -3,6 +3,7 @@ package com.fika.fika_project.ui.main.explore.drama_info
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.fika.fika_project.ApplicationClass
@@ -18,11 +19,8 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
     lateinit var spotlist : ArrayList<spotDataList>
     lateinit var dramaName : String
     var position = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
         _Binding = ActivityDramaInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -58,10 +56,12 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
     }
 
     override fun onExploreLoading() {
+        binding.dramaInfoPr.visibility = View.VISIBLE
     }
     override fun onExploreSuccess(response: DramaInfoResponse) {
         when(response.code) {
             1000 -> {
+                binding.dramaInfoPr.visibility = View.GONE
                 response.let {
                     val resp = response.result
 

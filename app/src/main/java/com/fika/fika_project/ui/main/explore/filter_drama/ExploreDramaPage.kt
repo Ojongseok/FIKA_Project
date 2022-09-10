@@ -49,6 +49,7 @@ class ExploreDramaPage : Fragment(), ExploreDramaView {
         return binding.root
     }
     override fun onExploreLoading() {
+        binding.progressbarDramaPage.visibility = View.VISIBLE
     }
     override fun onExploreSuccess(response: ExploreDramaResponse) {
         when(response.code) {
@@ -64,7 +65,7 @@ class ExploreDramaPage : Fragment(), ExploreDramaView {
     private fun setDramalist(dramalist: ArrayList<result>) {
         binding.exploreDramaPageRecyclerview.layoutManager = GridLayoutManager(requireContext(),3)
         binding.exploreDramaPageRecyclerview.adapter = ExploreDramaPageAdapter(dramalist, requireContext())
-        binding.exploreDranaPageSearchNumber.text = dramalist.size.toString()
+        binding.exploreDranaPageSearchNumber.text = dramalist.size.toString() + "개"
     }
     override fun onExploreFailure(code: Int, message: String) {
     }

@@ -77,11 +77,11 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
                 mapPoint = MapPoint.mapPointWithGeoCoord(spotList[i].mapY!!, spotList[i].mapX!!)
                 markerType = MapPOIItem.MarkerType.CustomImage
                 if (spotList[i].type.equals("cafe")) {
-                    customImageResourceId = R.drawable.checkbox_custom
+                    customImageResourceId = R.drawable.marker_yellow
                 } else if (spotList[i].type.equals("place")) {
-                    customImageResourceId = R.drawable.checkbox_custom
+                    customImageResourceId = R.drawable.marker_blue
                 } else {
-                    customImageResourceId = R.drawable.checkbox_custom
+                    customImageResourceId = R.drawable.marker_red
                 }
                 setCustomImageAnchor(1.0f,1.0f)
                 isCustomImageAutoscale = false

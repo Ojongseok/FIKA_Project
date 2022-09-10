@@ -96,6 +96,7 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView 
         when(response.code) {
             1000 -> {
                 response.let {
+                    binding.courseDetailDramaPr.visibility = View.GONE
                     binding.detailCourseTogetherRecyclerview.apply {
                         layoutManager = LinearLayoutManager(context)
                         dramaAdapter = CourseDetailDramaAdapter(it.result?.spotList!!, context)
@@ -115,6 +116,7 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView 
     }
 
     override fun onExploreLoading() {
+        binding.courseDetailDramaPr.visibility = View.VISIBLE
     }
 
     override fun onExploreSuccess(response: LocationHoldResponse, iv: ImageView) {

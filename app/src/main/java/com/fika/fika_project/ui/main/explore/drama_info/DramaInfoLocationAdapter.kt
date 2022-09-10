@@ -16,6 +16,7 @@ import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldView
 import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
 import kotlinx.android.synthetic.main.drama_info_course_item.view.*
 import kotlinx.android.synthetic.main.drama_info_location_item.view.*
+import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
 
 class DramaInfoLocationAdapter(private val locationList : ArrayList<spotDataList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>(),LocationHoldView {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -33,7 +34,9 @@ class DramaInfoLocationAdapter(private val locationList : ArrayList<spotDataList
         view.item__location_placerank_where_tv.text = locationList[position].shortAddress
         view.item_location_placerank_title_tv.text = locationList[position].spotTitle
         view.item_location_placerank_category_tv.text = locationList[position].type
-
+        if (locationList[position].locage!!) {
+            view.drama_info_locage_tv.visibility = View.VISIBLE
+        }
 
         if (locationList[position].scrapped!!) {
             view.item_location_placerank_flag_iv.setImageResource(R.drawable.ic_flag_on)

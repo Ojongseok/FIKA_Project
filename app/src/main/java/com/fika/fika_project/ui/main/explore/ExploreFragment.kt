@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.FragmentExploreBinding
@@ -19,11 +20,15 @@ class ExploreFragment:Fragment() {
         binding.exploreDramaTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.VISIBLE
             binding.exploreCourseClickCircle.visibility = View.INVISIBLE
+            binding.exploreDramaTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.main_blue))
+            binding.exploreCourseTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.grey3))
             parentFragmentManager.beginTransaction().replace(R.id.explore_main_container, ExploreDramaPage()).commit()
         }
         binding.exploreCourseTv.setOnClickListener {
             binding.exploreDramaClickCircle.visibility = View.INVISIBLE
             binding.exploreCourseClickCircle.visibility = View.VISIBLE
+            binding.exploreDramaTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.grey3))
+            binding.exploreCourseTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.main_blue))
             parentFragmentManager.beginTransaction().replace(R.id.explore_main_container, ExploreCoursePage()).commit()
         }
 

@@ -42,7 +42,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="50dp"
-                    android:text="164m\n길찾기"
+                    android:background="@drawable/filter_rec"
+                    android:backgroundTint="@color/main_blue"
+                    android:text="xxxm"
+                    android:textColor="#FFFFFF"
                     android:textSize="12sp" />
 
                 <FrameLayout

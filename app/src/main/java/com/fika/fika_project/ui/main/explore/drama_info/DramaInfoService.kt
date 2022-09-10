@@ -11,8 +11,8 @@ import retrofit2.Response
 class DramaInfoService(val View: DramaInfoView, val dramaId : Int) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
     val load = retrofit.loadDramaInfoCourse(dramaId)
-
     fun tryLoadDramaInfoCourse(){
+        View.onExploreLoading()
         load.enqueue(object : Callback<DramaInfoResponse> {
             override fun onResponse(call: Call<DramaInfoResponse>, response: Response<DramaInfoResponse>) {
                 val resp = response.body()

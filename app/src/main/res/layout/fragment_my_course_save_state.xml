@@ -16,6 +16,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="* 거리(km) 버튼을 누르면 카카오맵 교통편이 제공됩니다."
+            android:textSize="10sp" />
+
+        <TextView
             android:id="@+id/mycourse_edit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

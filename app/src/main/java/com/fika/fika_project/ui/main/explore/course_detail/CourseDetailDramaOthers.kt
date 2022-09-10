@@ -80,6 +80,7 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
 
 
     override fun onExploreLoading() {
+        binding.courseDetailOthersPr.visibility = View.VISIBLE
     }
 
     override fun onExploreSuccess(response: LocationHoldResponse, iv: ImageView) {
@@ -100,6 +101,7 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
     override fun onExploreSuccess(response: CourseDetailResponse) {
         when(response.code) {
             1000 -> {
+                binding.courseDetailOthersPr.visibility = View.GONE
                 response.let {
                     binding.detailCourseTogetherRecyclerview.apply {
                         layoutManager = LinearLayoutManager(context)

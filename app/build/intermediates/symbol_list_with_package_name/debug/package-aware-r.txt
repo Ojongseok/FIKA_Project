@@ -2671,6 +2671,7 @@ drawable kakaomap_somenail
 drawable kakaostory_icon
 drawable kakaotalk_icon
 drawable loacte_tag
+drawable locage_tv_background
 drawable login_btn
 drawable login_dialog_btn
 drawable login_google
@@ -2690,6 +2691,9 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable marker_blue
+drawable marker_red
+drawable marker_yellow
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3009,6 +3013,7 @@ id course_detail_drama_back_btn
 id course_detail_drama_check_count
 id course_detail_drama_name_btn
 id course_detail_drama_name_tv
+id course_detail_drama_pr
 id course_detail_drama_title
 id course_detail_hold_btn
 id course_detail_iv
@@ -3017,6 +3022,7 @@ id course_detail_iv_location
 id course_detail_locage_tiltle
 id course_detail_locage_tiltle_by_drama
 id course_detail_location_flag_btn
+id course_detail_others_pr
 id course_detail_where_tv
 id course_edit_bar
 id course_edit_image
@@ -3080,9 +3086,11 @@ id drama_info_course_image
 id drama_info_course_item_layout
 id drama_info_course_item_star
 id drama_info_course_recyclerview
+id drama_info_locage_tv
 id drama_info_location_recyclerview
 id drama_info_main_iv
 id drama_info_mapview
+id drama_info_pr
 id drama_info_title_tv
 id dramalist_dramaimage
 id dramalist_dramaimage_cv
@@ -3122,12 +3130,10 @@ id expanded_menu
 id explore_child_title
 id explore_course_click_circle
 id explore_course_page_recyclerview
-id explore_course_pb
 id explore_course_tv
 id explore_coursepage_search_number
 id explore_drama_click_circle
 id explore_drama_page_recyclerview
-id explore_drama_pb
 id explore_drama_tv
 id explore_drana_page_search_number
 id explore_main_container
@@ -3202,7 +3208,6 @@ id ignore
 id ignoreRequest
 id image
 id imageView
-id imageView11
 id imageView12
 id imageView13
 id imageView14
@@ -3298,6 +3303,7 @@ id labeled
 id large_map
 id large_map_bottom_view
 id large_map_btn
+id large_map_locage_tv
 id large_map_title_name
 id layout
 id left
@@ -3313,6 +3319,9 @@ id list_child_toggle_btn
 id list_header_expand_btn
 id list_header_title
 id list_item
+id locage_tv
+id locage_tv2
+id locage_tv3
 id locale
 id login_close_button
 id login_close_layout
@@ -3562,10 +3571,10 @@ id position
 id postLayout
 id progressBar
 id progressBar2
-id progressBar3
 id progress_bar
 id progress_circular
 id progress_horizontal
+id progressbar_drama_page
 id quit_back_btn
 id quit_btn
 id quit_contents_layout
@@ -3770,6 +3779,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textView10
 id textView11
 id textView12

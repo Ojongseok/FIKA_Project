@@ -6,6 +6,22 @@
     android:layout_height="140dp"
     android:layout_marginRight="16dp">
 
+    <TextView
+        android:id="@+id/drama_info_locage_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/locage_tv_background"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="로케지"
+        android:textColor="@color/main_blue"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/item_location_placerank_img_iv"
         android:layout_width="160dp"

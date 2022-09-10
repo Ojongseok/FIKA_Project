@@ -12,6 +12,7 @@ class CourseDetailService(val View: CourseDetailView, val courseId : Int) {
     val load = retrofit.loadDetailCourse(courseId)
 
     fun tryLoadCourseDetail(){
+        View.onExploreLoading()
         load.enqueue(object : Callback<CourseDetailResponse> {
             override fun onResponse(call: Call<CourseDetailResponse>, response: Response<CourseDetailResponse>) {
                 val resp = response.body()

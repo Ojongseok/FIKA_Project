@@ -34,7 +34,9 @@ class CourseDetailDramaAdapter(val locationList: ArrayList<spotList>, val contex
         view.course_detail_where_tv.text = locationList[position].shortAddress
         view.course_detail_category_tv.text = locationList[position].type
         view.map_title_name_tv.text = locationList[position].spotTitle
-
+        if (locationList[position].locage!!) {
+            view.locage_tv.visibility = View.VISIBLE
+        }
         if (locationList[position].scrapped!!) {
             view.course_detail_location_flag_btn.setImageResource(R.drawable.ic_flag_on)
         } else {

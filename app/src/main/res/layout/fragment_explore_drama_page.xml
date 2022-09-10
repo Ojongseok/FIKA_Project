@@ -24,7 +24,8 @@
             android:id="@+id/genre_filter_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="장르" />
+            android:text="장르"
+            android:textColor="#9D9D9D" />
 
         <ImageView
             android:id="@+id/imageView99"
@@ -52,7 +53,8 @@
             android:id="@+id/filter_actor_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="배우" />
+            android:text="배우"
+            android:textColor="#9D9D9D" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -67,6 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:text="검색결과"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/filter_drama_btn" />
@@ -78,6 +81,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="26dp"
         android:text="-개"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/textView24"
         app:layout_constraintTop_toBottomOf="@id/filter_drama_actor_btn" />
 

@@ -29,6 +29,10 @@ class PagerRecyclerAdapter(val spotlist : ArrayList<spotDataList>, val context :
             map_tv_1.text = spotlist.shortAddress
             map_tv_2.text = spotlist.type
             Glide.with(context).load(spotlist.spotImageUrl).into(mapIv)
+            if (spotlist.locage!!) {
+                itemView.large_map_locage_tv.visibility = View.VISIBLE
+            }
+            itemView.large_map_locage_tv.visibility = View.VISIBLE
         }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PagerViewHolder {

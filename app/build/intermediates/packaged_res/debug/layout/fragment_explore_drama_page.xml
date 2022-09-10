@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -25,7 +24,8 @@
             android:id="@+id/genre_filter_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="장르" />
+            android:text="장르"
+            android:textColor="#9D9D9D" />
 
         <ImageView
             android:id="@+id/imageView99"
@@ -53,7 +53,8 @@
             android:id="@+id/filter_actor_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="배우" />
+            android:text="배우"
+            android:textColor="#9D9D9D" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -68,6 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:text="검색결과"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/filter_drama_btn" />
@@ -79,6 +81,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="26dp"
         android:text="-개"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/textView24"
         app:layout_constraintTop_toBottomOf="@id/filter_drama_actor_btn" />
 
@@ -98,6 +101,7 @@
             android:id="@+id/filter_sorting_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/main_blue"
             android:text="최신순" />
 
         <ImageView
@@ -120,11 +124,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <ProgressBar
-        android:id="@+id/progressBar3"
+        android:id="@+id/progressbar_drama_page"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:progressBackgroundTint="#94B4EC"
+        android:indeterminateTint="@color/main_blue"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

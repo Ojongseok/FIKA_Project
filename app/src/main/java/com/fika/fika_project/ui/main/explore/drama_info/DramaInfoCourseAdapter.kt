@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.drama_info_course_item.view.child_title
 import kotlinx.android.synthetic.main.drama_info_course_item.view.item_home_coursescrap_drama_title_tv
 import kotlinx.android.synthetic.main.drama_info_location_item.view.*
 import kotlinx.android.synthetic.main.item_home_scrapcourse.view.*
+import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
 
 class DramaInfoCourseAdapter(val courselist : ArrayList<courseList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>(),LocationScrapView {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

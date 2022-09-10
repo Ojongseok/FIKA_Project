@@ -55,6 +55,7 @@ class ExploreCoursePage : Fragment(), ExploreCourseView {
     }
 
     override fun onExploreLoading() {
+        binding.progressBar.visibility = View.VISIBLE
     }
 
     override fun onExploreSuccess(response: ExploreCourseResponse) {
@@ -70,7 +71,7 @@ class ExploreCoursePage : Fragment(), ExploreCourseView {
     private fun setDramalist(dramalist : ArrayList<course>) {
         binding.exploreCoursePageRecyclerview.layoutManager = LinearLayoutManager(requireContext())
         binding.exploreCoursePageRecyclerview.adapter = ExploreCoursePageAdapter(dramalist, requireContext())
-        binding.exploreCoursepageSearchNumber.text = dramalist.size.toString()
+        binding.exploreCoursepageSearchNumber.text = dramalist.size.toString() + "개"
     }
 
     override fun onExploreFailure(code: Int, message: String) {

@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.explore.CourseDetailDrama">
 
+    <ProgressBar
+        android:id="@+id/course_detail_drama_pr"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/main_blue"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
@@ -48,6 +61,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_weight="1"
                     android:text="드라마 제목"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -89,7 +103,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/sample_image" />
+                    tools:srcCompat="@drawable/sample_image" />
 
                 <TextView
                     android:id="@+id/course_detail_locage_tiltle_by_drama"
@@ -97,6 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:text="박새로이와 조이서가 함께 오픈한 꿀밤포차"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -136,6 +151,7 @@
                 android:id="@+id/imageView17"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
+                android:layout_marginRight="2dp"
                 app:layout_constraintBottom_toBottomOf="@+id/others_star_count_tv"
                 app:layout_constraintEnd_toStartOf="@+id/others_star_count_tv"
                 app:layout_constraintTop_toTopOf="@+id/textView31"
@@ -147,6 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="로케지"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/textView31"
@@ -161,14 +178,17 @@
                 app:layout_constraintStart_toStartOf="@+id/constraintLayout"
                 app:layout_constraintTop_toBottomOf="@+id/textView33">
 
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <CheckBox
+                    android:id="@+id/imageView12"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_checkbox_on" />
+                    android:button="@null"
+                    android:background="@drawable/checkbox_custom"
+                    android:clickable="false"
+                    android:checked="false"/>
 
                 <ImageView
                     android:id="@+id/course_detail_iv"
@@ -178,16 +198,31 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/sample_image"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView11"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintStart_toEndOf="@+id/imageView12"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/sample_image" />
+
+                <TextView
+                    android:id="@+id/locage_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/locage_tv_background"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="로케지"
+                    android:textColor="@color/main_blue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/course_detail_iv"
+                    app:layout_constraintTop_toTopOf="@+id/course_detail_iv" />
 
                 <ImageView
                     android:id="@+id/course_detail_location_flag_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="150dp"
+                    android:layout_marginStart="144dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -249,6 +284,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="함께 가면 좋을 장소"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/textView33"
