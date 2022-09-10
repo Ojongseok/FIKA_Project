@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.fika.fika_project.databinding.ActivityDramaInfoBinding
-import com.fika.fika_project.ui.main.LoadingDialog
 import com.fika.fika_project.ui.main.explore.DramaInfoResponse
 import com.fika.fika_project.ui.main.explore.spotDataList
 import com.fika.fika_project.utils.spfManager
@@ -18,14 +17,12 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
     lateinit var spotlist : ArrayList<spotDataList>
     lateinit var dramaName : String
     var position = 0
-    lateinit var loadingDialog : LoadingDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityDramaInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        loadingDialog = LoadingDialog(this)
         initData()
 
 
@@ -46,7 +43,6 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
 
         val service = DramaInfoService(this, position)
         service.tryLoadDramaInfoCourse()
-        loadingDialog.show()
 
     }
 
@@ -80,7 +76,6 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
                 }
             }
         }
-        loadingDialog.dismiss()
     }
 
     override fun onDestroy() {

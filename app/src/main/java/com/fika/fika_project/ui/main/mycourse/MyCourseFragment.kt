@@ -37,9 +37,6 @@ class MyCourseFragment :Fragment(), MyCourseView {
         data.add(ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "새로운 그룹 2"))
         data.add(ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, "새로운 그룹2 - 1"))
 
-        binding.mycourseExpandListRecyclerview.layoutManager = LinearLayoutManager(requireContext())
-        binding.mycourseExpandListRecyclerview.adapter = ExpandableListAdapter(requireContext(), data)
-
 
         binding.addGroupBtn.setOnClickListener {
             val getGroupName = GroupName("새로운 그룹")
@@ -69,6 +66,10 @@ class MyCourseFragment :Fragment(), MyCourseView {
                 if(response.result!!.size == 0){
                     binding.mycourseExpandListRecyclerview.visibility = View.GONE
                     binding.myscrapcourseEmptyIv.visibility = View.VISIBLE
+
+                    binding.mycourseExpandListRecyclerview.layoutManager = LinearLayoutManager(requireContext())
+                    binding.mycourseExpandListRecyclerview.adapter = ExpandableListAdapter(requireContext(), data, response.result)
+
                 }else{
 //                        response.let { setMyCourseRVAdapter(it.result!!) }
                 }

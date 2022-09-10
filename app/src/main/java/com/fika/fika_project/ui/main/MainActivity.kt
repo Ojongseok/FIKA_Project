@@ -26,17 +26,6 @@ class MainActivity : AppCompatActivity() {
         initNavigation()
     }
 
-    override fun onRestart() {
-        super.onRestart()
-        Log.d("TAG","1233")
-        supportFragmentManager.beginTransaction().replace(R.id.main_frm,HomeFragment()).commitAllowingStateLoss()
-    }
-    override fun onResume() {
-        super.onResume()
-        Log.d("TAG","123")
-        supportFragmentManager.beginTransaction().replace(R.id.main_frm,HomeFragment()).commitAllowingStateLoss()
-    }
-
     private fun initNavigation() {
         supportFragmentManager.beginTransaction().replace(R.id.main_frm, HomeFragment())
             .commitAllowingStateLoss()

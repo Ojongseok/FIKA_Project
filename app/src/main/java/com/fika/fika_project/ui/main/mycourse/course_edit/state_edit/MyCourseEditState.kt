@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.ItemTouchHelper
 import com.fika.fika_project.R
@@ -52,7 +53,7 @@ class MyCourseEditState : Fragment(),CourseEditView {
                     bundle.putInt("courseId",courseId)
                     arguments = bundle
                 }).commit()
-
+            Toast.makeText(context,"코스가 성공적으로 저장되었습니다.",Toast.LENGTH_SHORT).show()
         }
 
         // 리사이클러뷰에 스와이프, 드래그 기능 달기

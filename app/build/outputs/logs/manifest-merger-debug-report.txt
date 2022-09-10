@@ -284,12 +284,12 @@ ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\Android
 		ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
 		ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:35:13-86
-activity#com.fika.fika_project.ui.main.mycourse.VisitCompleteCourse
+activity#com.fika.fika_project.ui.main.mycourse.visit_course.VisitCompleteCourse
 ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:37:9-39:40
 	android:exported
 		ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:38:13-86
+		ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:38:13-99
 activity#com.fika.fika_project.ui.main.mycourse.search.SearchResultActivity
 ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:40:9-42:40
 	android:exported

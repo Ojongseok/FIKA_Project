@@ -42,9 +42,9 @@
                 app:layout_constraintTop_toBottomOf="@+id/tour_notice">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/review" />
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:srcCompat="@drawable/plus" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -66,10 +66,10 @@
 
                 <ImageView
                     android:id="@+id/imageView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
                     android:layout_marginRight="2dp"
-                    app:srcCompat="@drawable/plus" />
+                    app:srcCompat="@drawable/review" />
 
                 <TextView
                     android:id="@+id/add12dkhk"

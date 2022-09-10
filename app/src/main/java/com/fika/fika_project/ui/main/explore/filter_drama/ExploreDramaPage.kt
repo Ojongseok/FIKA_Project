@@ -49,10 +49,16 @@ class ExploreDramaPage : Fragment(), ExploreDramaView {
         return binding.root
     }
     override fun onExploreLoading() {
+        binding.progressbarDramaPage.visibility = View.VISIBLE
     }
     override fun onExploreSuccess(response: ExploreDramaResponse) {
         when(response.code) {
-            1000 -> { response?.let { setDramalist(it.result!!) }
+
+            1000 -> {
+                binding.progressbarDramaPage.visibility = View.GONE
+                response?.let {
+                    setDramalist(it.result!!)
+                }
             }
         }
     }

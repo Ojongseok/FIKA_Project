@@ -15,7 +15,7 @@ public class MycourseSaveStateListBindingImpl extends MycourseSaveStateListBindi
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.swipe_view, 1);
-        sViewsWithIds.put(R.id.textView36, 2);
+        sViewsWithIds.put(R.id.save_state_distinct, 2);
         sViewsWithIds.put(R.id.save_state_line, 3);
         sViewsWithIds.put(R.id.course_item_number, 4);
         sViewsWithIds.put(R.id.item_list_contents_layout, 5);
@@ -43,9 +43,9 @@ public class MycourseSaveStateListBindingImpl extends MycourseSaveStateListBindi
             , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[4]
             , (android.widget.RelativeLayout) bindings[5]
+            , (android.widget.TextView) bindings[2]
             , (android.widget.FrameLayout) bindings[3]
             , (android.widget.LinearLayout) bindings[1]
-            , (android.widget.TextView) bindings[2]
             );
         this.mboundView0 = (android.widget.FrameLayout) bindings[0];
         this.mboundView0.setTag(null);

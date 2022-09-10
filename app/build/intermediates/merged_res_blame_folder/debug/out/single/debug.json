@@ -612,6 +612,10 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable_check_white.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\src\\main\\res\\drawable\\check_white.png"
+    },
+    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_flag.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_flag.png"
     },

@@ -18,6 +18,7 @@ import com.fika.fika_project.ui.main.mycourse.MyCourseResponse
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.CourseEditResponse
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.CourseViewResponse
 import com.fika.fika_project.ui.main.mycourse.placeinfo.ReportResponse
+import com.fika.fika_project.ui.main.mycourse.visit_course.VisitCourseResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -39,6 +40,12 @@ interface RetrofitInterface {
     fun loadCourseView(
         @Path("courseId") courseId : Int
     ) :Call<CourseViewResponse>
+
+    //32. 코스 보기(리뷰 작성 포함)
+    @GET("/course/{courseId}/reviews")
+    fun loadVisitCourse(
+        @Path("courseId") courseId : Int
+    ) :Call<VisitCourseResponse>
 
     //8. 메인 페이지 데이터 조회
     @GET("/nav/main")

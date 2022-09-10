@@ -1,19 +1,23 @@
 package com.fika.fika_project.ui.main.mycourse
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.fika.fika_project.R
+import com.fika.fika_project.ui.main.mycourse.visit_course.VisitCompleteCourse
 import kotlinx.android.synthetic.main.fragment_mycourse_list_child.view.*
 import kotlinx.android.synthetic.main.fragment_mycourse_list_header.view.*
 
 
-class ExpandableListAdapter(val context: Context, private val data: MutableList<Item>) : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
+class ExpandableListAdapter(val context: Context, private val data: MutableList<Item>,val list:ArrayList<MyCourse>) : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
     override fun onCreateViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
         var view: View? = null
         val context = parent.context
@@ -75,9 +79,28 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
                 val itemController1 = holder as ListChildViewHolder?
                 itemController1!!.refferalItem = item
                 itemController1.child_title.text = item.text
-
                 itemController1.cardLayout.setOnClickListener {
-                    context.startActivity(Intent(context,VisitCompleteCourse::class.java))
+                    val menuList =arrayOf("리뷰 작성","이동","코스 정보 편집","코스 삭제")
+                    val dialog = AlertDialog.Builder(context,android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar)
+                    dialog.setTitle("선택").setItems(menuList, DialogInterface.OnClickListener { dialogInterface, i ->
+                        when(i) {
+                            0 -> {
+                                Toast.makeText(context,menuList[i],Toast.LENGTH_SHORT).show()
+                            }
+                            1 -> {
+                                context.startActivity(Intent(context, VisitCompleteCourse::class.java))
+                            }
+                            2 -> {
+                                context.startActivity(Intent(context,CourseInfoEditActivity::class.java))
+                            }
+                            3 -> {
+                                Toast.makeText(context,menuList[i],Toast.LENGTH_SHORT).show()
+                            }
+                        }
+
+                    })
+                    dialog.show()
+
                 }
                 itemController1.childToggleBtn.setOnClickListener {
                     context.startActivity(Intent(context,CourseInfoEditActivity::class.java))

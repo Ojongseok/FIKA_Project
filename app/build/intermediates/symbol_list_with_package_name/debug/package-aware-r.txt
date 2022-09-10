@@ -2592,6 +2592,7 @@ drawable call
 drawable camera
 drawable chat_rectangle
 drawable check
+drawable check_white
 drawable checkbox_custom
 drawable course_edit_bar_blue
 drawable course_edit_bar_red
@@ -3555,7 +3556,9 @@ id placeinfo_locate_where_info_title_tv
 id placeinfo_locate_where_info_tv
 id position
 id postLayout
+id progressBar
 id progressBar2
+id progressBar3
 id progress_bar
 id progress_circular
 id progress_horizontal
@@ -3614,6 +3617,7 @@ id row_index_key
 id rtl
 id save_non_transition_alpha
 id save_overlay_view
+id save_state_distinct
 id save_state_line
 id save_state_recyclerview
 id sawtooth
@@ -3781,14 +3785,12 @@ id textView31
 id textView32
 id textView33
 id textView34
-id textView36
 id textView37
 id textView38
 id textView39
 id textView4
 id textView40
 id textView41
-id textView42
 id textView43
 id textView44
 id textView45

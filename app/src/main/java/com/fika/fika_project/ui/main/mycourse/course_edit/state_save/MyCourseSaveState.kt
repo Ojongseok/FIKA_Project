@@ -1,10 +1,16 @@
 package com.fika.fika_project.ui.main.mycourse.course_edit
 import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
+import android.service.autofill.Validators.or
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -94,6 +100,21 @@ class SaveStateAdapter(val spotList : ArrayList<spotList>,val context: Context) 
         }
         Glide.with(context).load(spotList[position].spotImageUrl).into(view.course_edit_image)
         view.course_item_number.text = (position+1).toString()
+
+        view.save_state_distinct.setOnClickListener {
+            val url = "kakaomap://route?sp=37.5518018, 127.0736343&ep=37.5518018, 127.973634&by=CAR"
+            var intent =  Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            intent.addCategory(Intent.CATEGORY_BROWSABLE)
+//            var list = context.packageManager?.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY)
+
+
+             //설치 되어있으면 카맵으로 넘어가야되는데 안됨
+//            if (list== null || list.isEmpty()){
+//                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=net.daum.android.map")))
+//            }else{
+                context.startActivity(intent)
+//            }
+        }
 
 
     }

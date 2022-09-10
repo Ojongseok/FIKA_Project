@@ -5,20 +5,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityCourseDetailDramaBinding
-import com.fika.fika_project.ui.main.SpinnerModel
 import com.fika.fika_project.ui.main.explore.course_detail.*
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldService
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldView
-import kotlinx.android.synthetic.main.item_spinner.view.*
-import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
 
 class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView {
     private var _Binding: ActivityCourseDetailDramaBinding? = null
