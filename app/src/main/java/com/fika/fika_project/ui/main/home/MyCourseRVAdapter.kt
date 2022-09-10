@@ -10,6 +10,7 @@ import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ItemHomeCourseBinding
 import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.ui.main.explore.ExploreFragment
+import com.fika.fika_project.ui.main.explore.courseList
 import com.fika.fika_project.ui.main.mycourse.coursePreviewList
 import com.google.android.material.snackbar.Snackbar
 
@@ -74,8 +75,8 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
             is ItemViewHolder -> {
                 if(courseList.size == 0){
                     //
-                }else{
-                    holder.bind(courseList[position]) }
+                }else{ holder.bind(courseList[position]) }
+
                 }
             }
     }

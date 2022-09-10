@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.fika.fika_project.ApplicationClass
 import com.fika.fika_project.databinding.ActivityDramaInfoBinding
 import com.fika.fika_project.ui.main.explore.DramaInfoResponse
 import com.fika.fika_project.ui.main.explore.spotDataList
@@ -20,6 +21,8 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         _Binding = ActivityDramaInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

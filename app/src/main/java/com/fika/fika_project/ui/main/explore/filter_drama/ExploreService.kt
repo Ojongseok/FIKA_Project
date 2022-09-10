@@ -12,6 +12,8 @@ class ExploreService(val View: ExploreDramaView, private val filter : String) {
     val loadExploreDrama = retrofit.loadDramaFilter(filter)
 
     fun tryLoadExploreDrama(){
+        View.onExploreLoading()
+
         loadExploreDrama.enqueue(object : Callback<ExploreDramaResponse> {
             override fun onResponse(call: Call<ExploreDramaResponse>, response: Response<ExploreDramaResponse>) {
                 val resp = response.body()

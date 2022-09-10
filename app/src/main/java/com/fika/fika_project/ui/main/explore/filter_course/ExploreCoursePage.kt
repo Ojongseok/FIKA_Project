@@ -1,7 +1,6 @@
 package com.fika.fika_project.ui.main.explore.filter_course
 
 import android.content.DialogInterface
-import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -56,7 +55,6 @@ class ExploreCoursePage : Fragment(), ExploreCourseView {
     }
 
     override fun onExploreLoading() {
-        binding.progressBar.visibility = View.VISIBLE
     }
 
     override fun onExploreSuccess(response: ExploreCourseResponse) {

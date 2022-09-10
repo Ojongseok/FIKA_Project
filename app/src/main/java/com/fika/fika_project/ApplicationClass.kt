@@ -1,8 +1,12 @@
 package com.fika.fika_project
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
+import android.os.Build
+import android.view.WindowManager
+import androidx.core.view.WindowCompat
 import com.fika.fika_project.config.XAccessTokenInterceptor
 import com.kakao.auth.BuildConfig
 import com.kakao.sdk.common.KakaoSdk

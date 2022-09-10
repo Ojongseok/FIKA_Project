@@ -39,11 +39,11 @@ class LargeMapActivity : AppCompatActivity() {
                 mapPoint = mapPointWithGeoCoord(spotlist[i].mapY!!, spotlist[i].mapX!!)
                 markerType = MapPOIItem.MarkerType.CustomImage
                 if (spotlist[i].type.equals("cafe")) {
-                    customImageResourceId = R.drawable.marker_yellow
+                    customImageResourceId = R.drawable.checkbox_custom
                 } else if (spotlist[i].type.equals("place")) {
-                    customImageResourceId = R.drawable.marker_blue
+                    customImageResourceId = R.drawable.checkbox_custom
                 } else {
-                    customImageResourceId = R.drawable.marker_red
+                    customImageResourceId = R.drawable.checkbox_custom
                 }
                 setCustomImageAnchor(0.5f,0.5f)
                 isCustomImageAutoscale = false

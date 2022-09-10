@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
     tools:context=".ui.main.explore.drama_info.DramaInfoActivity">
 
     <FrameLayout
@@ -55,8 +54,8 @@
                 <ImageView
                     android:id="@+id/drama_info_main_iv"
                     android:layout_width="match_parent"
-                    android:layout_height="511dp"
-                    android:scaleType="fitXY"
+                    android:layout_height="411dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/sample_image" />
 
                 <TextView
@@ -67,7 +66,8 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginBottom="24dp"
                     android:text="드라마제목"
-                    android:textSize="28sp"
+                    android:textColor="@color/grey2"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
 

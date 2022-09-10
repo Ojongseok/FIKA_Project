@@ -49,7 +49,6 @@ class ExploreDramaPage : Fragment(), ExploreDramaView {
         return binding.root
     }
     override fun onExploreLoading() {
-        binding.progressbarDramaPage.visibility = View.VISIBLE
     }
     override fun onExploreSuccess(response: ExploreDramaResponse) {
         when(response.code) {
