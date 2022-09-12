@@ -349,7 +349,6 @@ id imageView14
 id imageView17
 id imageView18
 id imageView19
-id imageView2
 id imageView20
 id imageView21
 id imageView22
@@ -738,6 +737,7 @@ id viewPager
 id viewpager_container
 id visit_complete_course_recyclerview
 id visit_complete_review_write_btn
+id visit_course_back_btn
 layout activity_course_detail_drama
 layout activity_course_detail_drama_others
 layout activity_course_info_edit
