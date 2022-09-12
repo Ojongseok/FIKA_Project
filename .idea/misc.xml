@@ -31,6 +31,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/filter_rec.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/folder_background.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/folder_button_background.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/folder_button_background_blue.xml" value="0.109" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/folder_button_background_on.xml" value="0.107" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/ic_flag.xml" value="0.107" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
@@ -154,7 +155,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/test_spinner_custom.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/tour_actor_select_shape.xml" value="0.5927734375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/tour_recyclerview_dramalist_item.xml" value="0.536" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/visit_complete_course_list.xml" value="0.72" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/visit_complete_course_list.xml" value="0.536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/User/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.6" />

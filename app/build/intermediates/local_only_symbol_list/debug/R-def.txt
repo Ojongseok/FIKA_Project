@@ -65,6 +65,7 @@ drawable filter_rec
 drawable flag_blue
 drawable folder_background
 drawable folder_button_background
+drawable folder_button_background_blue
 drawable folder_button_background_on
 drawable gallery
 drawable gallery_plus
@@ -623,6 +624,7 @@ id save_state_line
 id save_state_recyclerview
 id scrollView2
 id scrollView3
+id scrollView4
 id search_back_btn
 id search_contents_textview
 id search_ok_button

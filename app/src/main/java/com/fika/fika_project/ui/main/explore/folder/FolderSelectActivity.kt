@@ -2,6 +2,7 @@ package com.fika.fika_project.ui.main.explore
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,12 +20,15 @@ import com.fika.fika_project.ui.main.explore.folder.FolderView
 import com.fika.fika_project.ui.main.explore.folder.result
 import com.fika.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity
 import kotlinx.android.synthetic.main.folder_item.view.*
+import okhttp3.internal.notify
 
 class FolderSelectActivity : AppCompatActivity(),FolderView {
     private var _Binding: ActivityFolderSelectBinding? = null
     private val binding get() = _Binding!!
     var courseId = 0
     val service = FolderService(this)
+    var selectPosition = -1
+    var groupId = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityFolderSelectBinding.inflate(layoutInflater)
@@ -33,9 +37,11 @@ class FolderSelectActivity : AppCompatActivity(),FolderView {
         courseId = intent.getIntExtra("courseId",0)
         binding.folderSelectGoCourseBtn.setOnClickListener {
             val intent = Intent(this, MyCourseViewActivity::class.java)
-            intent.putExtra("courseId",courseId)
+            intent.putExtra("courseId", courseId)
+            intent.putExtra("groupId", groupId)
             startActivity(intent)
         }
+
         binding.folderSelectStayBtn.setOnClickListener {
             onBackPressed()
         }
@@ -64,35 +70,32 @@ class FolderSelectActivity : AppCompatActivity(),FolderView {
                 }
             }
         }
-
     }
     override fun onExploreFailure() {
     }
-}
+    inner class FolderSelectAdapter(val folderList : ArrayList<result>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.folder_item,parent,false)
 
-class FolderSelectAdapter(val folderList : ArrayList<result>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    var clickList = Array(folderList.size) {false}
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.folder_item,parent,false)
-
-        return CustomViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val view = (holder as CustomViewHolder).itemView
-        view.folder_name_tv.text = folderList[position].courseGroupName
-        view.folder_name_tv.setOnClickListener {
-            clickList[position] = true
-            Log.d("TAG",clickList[position].toString())
-
-        }
-        if (clickList[position]) {
-            view.folder_name_tv.setTextColor(ContextCompat.getColor(context,R.color.black))
-        } else {
-            view.folder_name_tv.setTextColor(ContextCompat.getColor(context,R.color.grey3))
+            return CustomViewHolder(view)
         }
 
+        override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+            val view = (holder as CustomViewHolder).itemView
+            view.folder_name_tv.text = folderList[position].courseGroupName
+            if (selectPosition ==position) {
+                view.folder_name_tv.setTextColor(ContextCompat.getColor(context,R.color.black))
+            } else {
+                view.folder_name_tv.setTextColor(ContextCompat.getColor(context,R.color.grey3))
+            }
+            view.folder_name_tv.setOnClickListener {
+                selectPosition = position
+                groupId = folderList[position].courseGroupId!!
+                binding.folderSelectGoCourseBtn.isClickable = true
+                notifyDataSetChanged()
+            }
+        }
+        inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
+        override fun getItemCount() = folderList.size
     }
-    inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
-    override fun getItemCount() = folderList.size
 }

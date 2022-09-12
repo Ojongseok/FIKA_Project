@@ -75,6 +75,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/folder_button_background"
             android:backgroundTint="#F3F3F3"
+            android:clickable="false"
             android:gravity="center"
             android:text="코스 보러가기"
             android:textSize="16sp"

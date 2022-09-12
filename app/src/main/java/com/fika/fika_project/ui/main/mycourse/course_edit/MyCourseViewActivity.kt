@@ -20,6 +20,7 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
     private var _Binding: ActivityMycourseViewBinding? = null
     private val binding get() = _Binding!!
     var courseId = 0
+    var groupId = 0
     lateinit var spotList : ArrayList<spotList>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,9 +29,8 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
 
         val slidePanel = binding.mainFrame
         slidePanel.addPanelSlideListener(PanelEventListener())
-
         courseId = intent.getIntExtra("courseId",0)
-        Log.d("TAG",courseId.toString())
+        groupId = intent.getIntExtra("groupId",0)
         val service = CourseViewService(this,courseId)
         service.tryCourseView()
 
@@ -41,13 +41,6 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
                 bundle.putInt("courseId",courseId)
                 arguments = bundle
             }).commit()
-        binding.myholdHomeBtn.setOnClickListener {
-//            val intent = Intent(this,MainActivity::class.java)
-//            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-//            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-//            startActivity(intent)
-//            finish()
-        }
 
         binding.mycourseViewAddLocation.setOnClickListener {
             startActivity(Intent(this, MyHoldLocationActivity::class.java))
