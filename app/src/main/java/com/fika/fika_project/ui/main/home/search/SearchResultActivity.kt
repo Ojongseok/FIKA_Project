@@ -1,5 +1,6 @@
-package com.fika.fika_project.ui.main.mycourse.search
+package com.fika.fika_project.ui.main.home.search
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
@@ -14,6 +15,11 @@ class SearchResultActivity : AppCompatActivity() {
         _Binding = ActivitySearchResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setOnClickListener()
+        setAdapter()
+    }
+
+    private fun setAdapter() {
         binding.searchResultDramaRecyclerview.apply {
             layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
             adapter = SearchResultDramaAdapter(context)
@@ -26,7 +32,12 @@ class SearchResultActivity : AppCompatActivity() {
             layoutManager = GridLayoutManager(context,2)
             adapter = SearchResultLocationAdapter(context)
         }
+    }
 
+    private fun setOnClickListener(){
+        binding.searchBackBtn.setOnClickListener {
+            finish()
+        }
     }
     override fun onDestroy() {
         _Binding = null

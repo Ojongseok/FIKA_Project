@@ -1,16 +1,20 @@
 package com.fika.fika_project.ui.main.mypage
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
+import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.FragmentMypageBinding
+import com.fika.fika_project.ui.main.mypage.mycourse.MyscrapcourseFragment
+import com.fika.fika_project.ui.main.mypage.myspot.MySpotResponse
 
-class MypageFragment : Fragment(),MypageView {
+class MypageFragment : Fragment(), MypageView {
     private var _binding: FragmentMypageBinding? = null
     private val binding get() = _binding!!
     val service = MypageService(this)
@@ -26,9 +30,9 @@ class MypageFragment : Fragment(),MypageView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         service.tryMypage()
-//        binding.mypageProfileTv.setText(spfManager.getNickname().toString())
+        service.tryloadMySpot()
+        service.tryMyScrap()
     }
 
 
@@ -87,7 +91,32 @@ class MypageFragment : Fragment(),MypageView {
         }
     }
 
+    override fun onMySpotSuccess(response: MySpotResponse) {
+        when(response.code){
+            1000 -> {
+                if (response.result!!.size != 0) {
+                    Glide.with(requireContext()).load(response.result[0].spotImageUrl)
+                        .into(binding.mypagePlaceCoverIv)
+                } else {
+                    binding.mypagePlaceCoverIv.setImageResource(R.color.white)
+
+                }
+            }
+        }
+    }
+
     override fun onMyScrapSuccess(response: MyScrapResponse) {
-//        TODO("Not yet implemented")
+        when(response.code){
+            1000 -> {
+                if (response.result!!.size != 0) {
+                    Glide.with(requireContext()).load(response.result[0].locageImageUrl.toString())
+                        .into(binding.mypageCourseCoverIv)
+
+                } else {
+                    binding.mypageCourseCoverIv.setImageResource(R.color.white)
+
+                }
+            }
+        }
     }
 }

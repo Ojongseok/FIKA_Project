@@ -55,7 +55,7 @@
             android:name="com.fika.fika_project.ui.main.mycourse.visit_course.VisitCompleteCourse"
             android:exported="false" />
         <activity
-            android:name="com.fika.fika_project.ui.main.mycourse.search.SearchResultActivity"
+            android:name="com.fika.fika_project.ui.main.home.search.SearchResultActivity"
             android:exported="false" />
         <activity
             android:name="com.fika.fika_project.ui.splash.SplashActivity"
@@ -68,7 +68,7 @@
         </activity>
         <activity android:name="com.fika.fika_project.ui.main.MainActivity" />
         <activity android:name="com.fika.fika_project.ui.login.LoginActivity" />
-        <activity android:name="com.fika.fika_project.ui.main.mycourse.search.SearchActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.home.search.SearchActivity" />
         <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity" />
         <activity android:name="com.fika.fika_project.ui.main.explore.FolderSelectActivity" />
         <activity android:name="com.fika.fika_project.ui.main.explore.CourseDetailDrama" />

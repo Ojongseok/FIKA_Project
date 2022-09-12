@@ -1,139 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.mycourse.search.SearchActivity">
+    tools:context=".ui.main.home.search.SearchActivity">
 
-    <RelativeLayout
-        android:id="@+id/top_layout"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_marginLeft="20dp"
+    <ImageView
+        android:id="@+id/serach_back_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/back"
+        android:scaleType="fitCenter"
+        android:layout_margin="26dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_layout"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:background="@drawable/folder_button_background"
+        android:backgroundTint="#F3F3F3"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="20dp">
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/serach_back_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/search_back_btn"
+            android:id="@+id/search_iv"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_centerVertical="true"
-            app:srcCompat="@drawable/back" />
+            android:elevation="1dp"
+            android:src="@drawable/search"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <EditText
-            android:id="@+id/search_contents_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_toLeftOf="@id/search_ok_button"
-            android:layout_toRightOf="@id/search_back_btn"
-            android:background="@drawable/folder_button_background"
-            android:backgroundTint="#F3F3F3"
-            android:ems="15"
-            android:hint="검색어를 입력해주세요."
-            android:inputType="textPersonName|text"
-            android:paddingLeft="42dp"
-            android:textSize="14sp" />
+            android:id="@+id/search_et"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="검색어를 입력하세요"
+            android:background="@null"
+            android:layout_marginStart="7dp"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:lines="1"
+            android:gravity="center_vertical"
+            android:textColorHint="#D9D9D9"
+            android:textColor="@color/black2"
+            app:layout_constraintStart_toEndOf="@id/search_iv"
+            app:layout_constraintEnd_toStartOf="@id/search_ok_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <ImageView
-            android:id="@+id/search_remove_button"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignEnd="@id/search_contents_textview"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="10dp"
-            app:srcCompat="@drawable/tour_searchbar_remove" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@id/search_contents_textview"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            app:srcCompat="@drawable/search" />
-
-        <Button
             android:id="@+id/search_ok_button"
-            android:layout_width="20dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="5dp"
-            android:text="Button" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/round_checkbox_on"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/search_recent_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="32dp"
         android:text="최근 검색어"
+        android:textColor="@color/grey2"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/search_layout"
+        app:layout_constraintStart_toStartOf="@id/serach_back_iv"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/search_recent_keyword_recyclerview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        tools:listitem="@layout/search_recent_keyword_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/search_recent_tv"
+        app:layout_constraintStart_toStartOf="@id/serach_back_iv"/>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/search_reccomend_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="32dp"
         android:text="추천 검색어"
+        android:textColor="@color/grey2"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/serach_back_iv"
+        app:layout_constraintTop_toBottomOf="@id/search_recent_keyword_recyclerview"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/search_reccomend_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="20dp" />
-
-    <TextView
-        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        tools:listitem="@layout/search_reccomend_keyword_item"
+        app:layout_constraintTop_toBottomOf="@id/search_reccomend_tv"
+        app:layout_constraintStart_toStartOf="@id/serach_back_iv"
+        />
+
+    <TextView
+        android:id="@+id/serach_rank_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="인기 검색어"
+        android:textColor="@color/grey2"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/search_reccomend_recyclerview"
+        app:layout_constraintStart_toStartOf="@id/serach_back_iv"/>
 
     <TextView
-        android:id="@+id/textView38"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="2dp"
-        android:text="FIKA 이용자들이 많이 검색했어요." />
-
-    <RelativeLayout
+        android:id="@+id/search_rank_sub_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp">
+        android:layout_marginTop="2dp"
+        android:textColor="@color/grey2"
+        android:text="FIKA 이용자들이 많이 검색했어요"
+        app:layout_constraintStart_toStartOf="@id/serach_back_iv"
+        app:layout_constraintTop_toBottomOf="@id/serach_rank_tv"/>
+
+    <RelativeLayout
+        android:id="@+id/serach_rank_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/search_rank_sub_tv"
+        app:layout_constraintStart_toStartOf="@id/serach_back_iv">
 
         <TextView
             android:id="@+id/search_rank_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="1. " />
 
         <TextView
@@ -150,7 +168,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/search_rank_1"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="2. " />
 
         <TextView
@@ -167,7 +185,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/search_rank_2"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="3. " />
 
         <TextView
@@ -184,7 +202,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/search_rank_3"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="4. " />
 
         <TextView
@@ -201,7 +219,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/search_rank_4"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="5. " />
 
         <TextView
@@ -213,4 +231,4 @@
             android:layout_toRightOf="@id/search_rank_5"
             android:text="우영우" />
     </RelativeLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

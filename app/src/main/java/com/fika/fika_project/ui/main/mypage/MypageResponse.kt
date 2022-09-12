@@ -1,6 +1,7 @@
 package com.fika.fika_project.ui.main.mypage
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class MypageResponse (
     @SerializedName("isSuccess") val isSuccess: Boolean,
@@ -26,11 +27,11 @@ data class MyScrapResponse (
 
 data class MyScrap(
     @SerializedName("courseId") val courseId: Int,
-    @SerializedName("locageImageUrl") val locageImageUrl: String,
-    @SerializedName("courseTitle") val courseTitle: String,
-    @SerializedName("dramaTitle") val dramaTitle: String,
-    @SerializedName("baseAddress") val baseAddress: String,
-    @SerializedName("spotTitleList") val spotTitleList: String,
-    @SerializedName("courseSavedCount") val courseSavedCount: Int,
-    @SerializedName("scrapped") val scrapped: Boolean
-)
+    @SerializedName("locageImageUrl") val locageImageUrl: String?,
+    @SerializedName("courseTitle") val courseTitle: String?,
+    @SerializedName("dramaTitle") val dramaTitle: String?,
+    @SerializedName("baseAddress") val baseAddress: String?,
+    @SerializedName("spotTitleList") val spotTitleList: ArrayList<String>?,
+    @SerializedName("courseSavedCount") val courseSavedCount: Int?,
+    @SerializedName("scrapped") val scrapped: Boolean?
+) : Serializable

@@ -1,6 +1,7 @@
 package com.fika.fika_project.ui.main.home
 
 import android.content.Context
+import android.content.Intent
 import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fika.fika_project.databinding.FragmentHomeBinding
+import com.fika.fika_project.ui.main.home.search.SearchActivity
 
 class HomeFragment : Fragment(), HomeView {
     private lateinit var binding: FragmentHomeBinding
@@ -24,8 +26,15 @@ class HomeFragment : Fragment(), HomeView {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         service.tryLoadHome()
-
+        setOnClickListener()
         return binding.root
+    }
+
+    fun setOnClickListener(){
+        binding.homeSearchEt.setOnClickListener {
+            val intent = Intent(context, SearchActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setMyCourseRVAdapter(courseList: ArrayList<myCourseList>){
@@ -56,12 +65,6 @@ class HomeFragment : Fragment(), HomeView {
         binding.homeScrapcourseRankRv.layoutManager = LinearLayoutManager(fContext, LinearLayoutManager.VERTICAL, false)
         binding.homeScrapcourseRankRv.adapter = scrapCourserankRVAdapter
         binding.homeDramaRankRv.setHasFixedSize(false)
-
-//        scrapCourserankRVAdapter.setMyItemClickListener(object  : ScrapCourserankRVAdapter.MyItemClickListener{
-//            override fun onItemClick(scrapCourserank: coursesSortBySaved) {
-//                TODO("Not yet implemented")
-//            }
-//        })
     }
 
     private fun setPlaceRankRVAdapter(placeRankList: ArrayList<spotsSortBySaved>){
