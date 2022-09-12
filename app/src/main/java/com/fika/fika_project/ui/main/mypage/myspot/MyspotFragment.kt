@@ -1,8 +1,8 @@
 package com.fika.fika_project.ui.main.mypage
 
+import androidx.fragment.app.Fragment
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.FragmentMyholdcourseBinding
+import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.fika.fika_project.ui.main.mypage.myspot.MySpotService
 import com.fika.fika_project.ui.main.mypage.myspot.MySpotView
@@ -41,8 +42,13 @@ class MyholdcourseFragment : Fragment(),MySpotView {
             fragmentManager.beginTransaction().remove(this).commit()
             fragmentManager.popBackStack()
         }
+
         binding.myplaceHomeIv.setOnClickListener {
-            // 홈버튼 누르면 홈으로 가도록 어떻게 만들죠,,?
+            //추가했습니다!
+            val mActivity = activity as MainActivity
+            binding.myplaceHomeIv.setOnClickListener {
+                mActivity.changeFragment(1)
+            }
         }
 
     }
@@ -55,7 +61,7 @@ class MyholdcourseFragment : Fragment(),MySpotView {
                 if (response.result!!.size == 0) {
                     binding.myscrapcourseEmptyIv.visibility = View.VISIBLE
                 } else {
-                    response?.let {
+                    response.let {
                         binding.myplaceRv.layoutManager = LinearLayoutManager(requireContext())
                         binding.myplaceRv.adapter = MySpotAdapter(it.result!!, requireContext())
                         binding.myscrapcourseEmptyIv.visibility = View.INVISIBLE
@@ -64,9 +70,11 @@ class MyholdcourseFragment : Fragment(),MySpotView {
             }
         }
     }
+
     override fun onExploreFailure(code: Int, message: String) {
     }
 }
+
 class MySpotAdapter(val mySpotList: ArrayList<result>,val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_myplace_2,parent,false)
@@ -82,6 +90,8 @@ class MySpotAdapter(val mySpotList: ArrayList<result>,val context: Context) : Re
         view.item_myplace_place_where_tv2.text = mySpotList[position].shortAddress
 
     }
+
+
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
     override fun getItemCount() = mySpotList.size
 }

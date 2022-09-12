@@ -1,6 +1,8 @@
-package com.fika.fika_project.ui.main.mypage
+package com.fika.fika_project.ui.main.mypage.mycourse
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fika.fika_project.databinding.FragmentMyscrapcourseBinding
-import com.fika.fika_project.ui.main.home.*
+import com.fika.fika_project.ui.login.LoginActivity
+import com.fika.fika_project.ui.main.MainActivity
+import com.fika.fika_project.ui.main.mypage.*
+import com.fika.fika_project.ui.main.mypage.myspot.MySpotResponse
 
 
 class MyscrapcourseFragment: Fragment(), MypageView {
@@ -23,7 +28,6 @@ class MyscrapcourseFragment: Fragment(), MypageView {
 
         service.tryMyScrap()
 
-
         return binding.root
     }
 
@@ -34,11 +38,6 @@ class MyscrapcourseFragment: Fragment(), MypageView {
         binding.myscrapcourseRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.myscrapcourseRv.adapter = scrapRVAdapter
         binding.myscrapcourseRv.setHasFixedSize(false)
-
-        scrapRVAdapter.setMyItemClickListener(object  : MyscrapcourseRVAdapter.MyItemClickListener{
-            override fun onItemClick(mycourse: MyScrap) {
-                TODO("Not yet implemented")
-            } })
     }
 
     private fun onClickListener() {
@@ -47,6 +46,11 @@ class MyscrapcourseFragment: Fragment(), MypageView {
         binding.myscrapcourseBackIv.setOnClickListener {
             fragmentManager.beginTransaction().remove(this).commit()
             fragmentManager.popBackStack()
+        }
+
+        val mActivity = activity as MainActivity
+        binding.myscrapcourseHomeIv.setOnClickListener {
+            mActivity.changeFragment(1)
         }
     }
 
@@ -63,14 +67,19 @@ class MyscrapcourseFragment: Fragment(), MypageView {
 //        없는 함수
     }
 
+    override fun onMySpotSuccess(response: MySpotResponse) {
+        //없는 함수
+    }
+
     override fun onMyScrapSuccess(response: MyScrapResponse) {
         when(response.code) {
             1000 -> {
                 if(response.result!!.size == 0){
                     binding.myscrapcourseEmptyIv.visibility = View.VISIBLE
-                } else{
-               response?.let { setScrapRVAdapter((it.result!!)) }
-            }
+                } else {
+                    binding.myscrapcourseEmptyIv.visibility = View.GONE
+                    response.let { setScrapRVAdapter(it.result!!) }
+                }
             }
         }
     }

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginRight="8dp"
-    android:background="@drawable/folder_button_background"
-    android:backgroundTint="#D9D9D9"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/search_recommend_backgroud"
     android:paddingLeft="16dp"
     android:paddingTop="8dp"
     android:paddingRight="16dp"
@@ -15,6 +13,8 @@
         android:id="@+id/search_recent_keyword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text" />
+        android:text="text"
+        android:textSize="14sp"
+        android:textColor="#94B4EC"/>
 
 </RelativeLayout>

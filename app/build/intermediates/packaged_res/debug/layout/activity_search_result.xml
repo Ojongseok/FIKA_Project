@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.mycourse.search.SearchResultActivity">
+    tools:context=".ui.main.home.search.SearchResultActivity">
 
     <ScrollView
         android:layout_width="match_parent"

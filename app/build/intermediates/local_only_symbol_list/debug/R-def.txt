@@ -142,6 +142,8 @@ drawable round_checkbox_off
 drawable round_checkbox_on
 drawable sample_image
 drawable search
+drawable search_recent_background
+drawable search_recommend_backgroud
 drawable share
 drawable signup_textbox
 drawable sort
@@ -627,6 +629,9 @@ id scrollView3
 id scrollView4
 id search_back_btn
 id search_contents_textview
+id search_et
+id search_iv
+id search_layout
 id search_ok_button
 id search_rank_1
 id search_rank_1_contents
@@ -638,10 +643,13 @@ id search_rank_4
 id search_rank_4_contents
 id search_rank_5
 id search_rank_5_contents
+id search_rank_sub_tv
 id search_reccomend_recyclerview
+id search_reccomend_tv
 id search_recent_keyword
 id search_recent_keyword_recyclerview
 id search_recent_remove_button
+id search_recent_tv
 id search_remove_button
 id search_result_course_recyclerview
 id search_result_drama_recyclerview
@@ -649,6 +657,9 @@ id search_result_location_recyclerview
 id sejong_login_dialog_no
 id sejong_login_dialog_tv
 id sejong_login_dialog_yes
+id serach_back_iv
+id serach_rank_layout
+id serach_rank_tv
 id siginup_email_editText
 id siginup_nickname_editText
 id siginup_passwordRe_editText
@@ -696,15 +707,12 @@ id textView22
 id textView23
 id textView24
 id textView27
-id textView3
 id textView31
 id textView32
 id textView33
 id textView34
 id textView37
-id textView38
 id textView39
-id textView4
 id textView40
 id textView41
 id textView43
@@ -714,7 +722,6 @@ id textView46
 id textView47
 id textView48
 id textView49
-id textView5
 id textView51
 id textView6
 id textView7

@@ -28,6 +28,5 @@ class SplashActivity : AppCompatActivity(){
 
     private fun setupTimber() {
         Timber.plant(Timber.DebugTree())
-
     }
 }

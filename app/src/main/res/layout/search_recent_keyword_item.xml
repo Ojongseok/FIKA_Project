@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginRight="8dp"
-    android:background="@drawable/mycourse_edit_btn_shape"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/search_recent_background"
     android:paddingLeft="16dp"
     android:paddingTop="8dp"
     android:paddingRight="16dp"
@@ -14,15 +14,17 @@
         android:id="@+id/search_recent_keyword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text"/>
+        android:text="text"
+        android:textSize="14sp"
+        android:layout_marginEnd="4dp"
+        android:textColor="@color/black2"/>
 
     <ImageView
         android:id="@+id/search_recent_remove_button"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
         android:layout_alignTop="@id/search_recent_keyword"
         android:layout_alignBottom="@id/search_recent_keyword"
-        android:layout_marginLeft="4dp"
         android:layout_toRightOf="@id/search_recent_keyword"
-        android:background="@drawable/tour_searchbar_remove" />
+        android:background="@drawable/remove_property" />
 </RelativeLayout>

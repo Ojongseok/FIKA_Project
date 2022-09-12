@@ -18,14 +18,14 @@ class DramaRankRVAdapter(private val dramaRankList: ArrayList<dramaList>, val co
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(dramaRankList[position],position)
+        holder.bind(dramaRankList[position])
     }
 
     override fun getItemCount(): Int = dramaRankList.size
 
     inner class ViewHolder(val binding: ItemHomeDramarankBinding):RecyclerView.ViewHolder(binding.root){
 
-        fun bind(itemdramaRank: dramaList, position: Int){
+        fun bind(itemdramaRank: dramaList){
             val DramaId = itemdramaRank.dramaId
             spfManager.setDramaId(DramaId!!)
 
