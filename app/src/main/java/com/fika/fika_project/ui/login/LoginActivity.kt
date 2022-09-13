@@ -19,7 +19,7 @@ import com.kakao.sdk.user.UserApiClient
 import com.kakao.util.helper.Utility
 
 class LoginActivity : AppCompatActivity(), LoginView {
-    lateinit var binding : ActivityLoginBinding
+    lateinit var binding: ActivityLoginBinding
     val service = LoginService(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,15 +41,19 @@ class LoginActivity : AppCompatActivity(), LoginView {
 //        startActivity(intent)
     }
 
-    private fun initClickListener(){
+    private fun initClickListener() {
         binding.loginQuestionTv.setOnClickListener {
             val bottomDialog = LoginDialog()
             bottomDialog.show(supportFragmentManager, bottomDialog.tag)
         }
 
         binding.loginTesterBtn.setOnClickListener {
-            val getCode = testerCode("rf2amgpNuA")
-            service.tryTesterLogin(getCode)
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.login_frm, TesterloginFragment())
+                .commitAllowingStateLoss()
+//편의상 시작
+//            val getCode = testerCode("rf2amgpNuA")
+//            service.tryTesterLogin(getCode)
         }
 
         binding.loginGoogleIv.setOnClickListener {
@@ -69,7 +73,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
                     spfManager.saveKakaoJwt(token.accessToken).toString()
                     val kakaoToken = spfManager.getKakaoJwt()
 
-                    Log.i(TAG,"카카오 로그인 토큰 : ${kakaoToken}")
+                    Log.i(TAG, "카카오 로그인 토큰 : ${kakaoToken}")
                     service.tryKakaoLogin(kakaoToken)
                 }
             }
@@ -93,7 +97,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
                         spfManager.saveKakaoJwt(token.accessToken).toString()
                         val kakaoToken = spfManager.getKakaoJwt()
 
-                        Log.i(TAG,"카카오 로그인 토큰 : ${kakaoToken}")
+                        Log.i(TAG, "카카오 로그인 토큰 : ${kakaoToken}")
                         service.tryKakaoLogin(kakaoToken)
                     }
                 }
@@ -101,15 +105,15 @@ class LoginActivity : AppCompatActivity(), LoginView {
                 UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
                 val kakaoToken = spfManager.getKakaoJwt()
 
-                Log.i(TAG,"카카오 로그인 토큰4 : ${kakaoToken}")
+                Log.i(TAG, "카카오 로그인 토큰4 : ${kakaoToken}")
                 service.tryKakaoLogin(kakaoToken)
             }
         }
     }
 
-    fun changeFragment(index: Int){
+    fun changeFragment(index: Int) {
         when (index) {
-            1->{
+            1 -> {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
@@ -127,13 +131,13 @@ class LoginActivity : AppCompatActivity(), LoginView {
                     .addToBackStack(null)
                     .commit()
             }
-            4->{
+            4 -> {
                 supportFragmentManager.beginTransaction()
                     .add(R.id.login_frm, Agree03Fragment())
                     .addToBackStack(null)
                     .commit()
             }
-            5->{
+            5 -> {
                 supportFragmentManager.beginTransaction()
                     .add(R.id.login_frm, NicknameFragment())
                     .addToBackStack(null)
@@ -150,8 +154,8 @@ class LoginActivity : AppCompatActivity(), LoginView {
     override fun onKakaoSuccess(response: BasicResponse) {
         binding.loginLoadingPb.visibility = View.GONE
 
-        Toast.makeText(this,"카카오 로그인되었습니다",Toast.LENGTH_SHORT).show()
-        when(response.code){
+        Toast.makeText(this, "카카오 로그인되었습니다", Toast.LENGTH_SHORT).show()
+        when (response.code) {
             //성공
             1000 -> {
                 val intent = Intent(this, MainActivity::class.java)
@@ -162,18 +166,22 @@ class LoginActivity : AppCompatActivity(), LoginView {
             1002 -> {
                 changeFragment(2)
             }
-            4000 -> { Log.d("KAKAOLOGIN", "Access-Token이 존재하지 않는 경우") }
-            4001 -> { Log.d("KAKAOLOGIN", "유효하지 않은 AccessToken") }
-            else ->  {
+            4000 -> {
+                Log.d("KAKAOLOGIN", "Access-Token이 존재하지 않는 경우")
+            }
+            4001 -> {
+                Log.d("KAKAOLOGIN", "유효하지 않은 AccessToken")
+            }
+            else -> {
                 Log.d("LOGIN", "로그인 실패 : 서버 오류")
-            } }
+            }
+        }
     }
 
     override fun onTesterSuccess(response: BasicResponse) {
-        Toast.makeText(this,"로그인되었습니다!",Toast.LENGTH_SHORT).show()
-
-        val intent = Intent(this, MainActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intent)
-        }
-    }
+        //편의상 시작 원래는 없는 함수
+//        val intent = Intent(this, MainActivity::class.java)
+//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//        startActivity(intent)
+            }
+}

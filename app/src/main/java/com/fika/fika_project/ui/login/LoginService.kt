@@ -55,6 +55,8 @@ class LoginService (val View : LoginView) {
     fun tryTesterLogin(testerCode: testerCode){
         retrofit.TesterLogin(testerCode).enqueue(object : Callback<BasicResponse> {
             override fun onResponse(call: Call<BasicResponse>, response: Response<BasicResponse>) {
+                View.onLoading()
+
                 var result: BasicResponse? = response.body()
                 val resp = response.body()
 

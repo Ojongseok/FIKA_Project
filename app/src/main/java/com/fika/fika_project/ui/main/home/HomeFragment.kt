@@ -10,8 +10,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fika.fika_project.databinding.FragmentHomeBinding
+import com.fika.fika_project.ui.main.explore.CourseDetailDramaOthers
 import com.fika.fika_project.ui.main.home.search.SearchActivity
 import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
+import kotlinx.android.synthetic.main.item_home_scrapcourse.view.*
 
 class HomeFragment : Fragment(), HomeView {
     private lateinit var binding: FragmentHomeBinding
@@ -44,12 +46,6 @@ class HomeFragment : Fragment(), HomeView {
         binding.homeMyCourseRv.layoutManager = LinearLayoutManager(fContext, LinearLayoutManager.HORIZONTAL, false)
         binding.homeMyCourseRv.adapter = myCourseRVAdapter
         binding.homeMyCourseRv.setHasFixedSize(false)
-
-        myCourseRVAdapter.setMyItemClickListener(object  : MyCourseRVAdapter.MyItemClickListener{
-            override fun onItemClick(course: myCourseList) {
-
-            }
-        })
     }
 
     private fun setDramaRankRVAdapter(dramaRankList: ArrayList<dramaList>){

@@ -240,6 +240,10 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\myhold_location_item_list.xml"
     },
     {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_testerlogin.xml",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_testerlogin.xml"
+    },
+    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_explore_drama_page.xml",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_explore_drama_page.xml"
     },

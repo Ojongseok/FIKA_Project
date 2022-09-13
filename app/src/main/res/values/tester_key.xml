@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="tester_key">rf2amgpNuA</string>
+    <string name="tester_key" translatable="false">rf2amgpNuA</string>
 </resources>

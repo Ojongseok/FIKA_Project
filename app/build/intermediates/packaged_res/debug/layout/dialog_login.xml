@@ -8,32 +8,36 @@
     android:paddingTop="44dp"
     android:paddingStart="20dp"
     android:paddingEnd="20dp"
+    android:paddingBottom="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
         <TextView
+            android:id="@+id/login_dialog_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="로그인에 어려움이 있나요?"
+            android:text="@string/login_dialog_title"
             android:textColor="@color/black"
             android:gravity="center"
             android:textSize="20sp"
             android:textStyle="bold"/>
 
         <TextView
+            android:id="@+id/login_dialog_tv_01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black2"
-            android:text="예전에 이 소셜서비스로 로그인했는데 지금은 안돼요."
+            android:text="@string/login_dialog_tv_01"
             android:layout_marginTop="32dp"
             android:gravity="start"
             android:textSize="14sp"
             />
 
         <TextView
+            android:id="@+id/login_dialog_tv_02"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black2"
-            android:text="- 혹시 로그인했던 소셜 서비스의 계정을 삭제했거나, 비밀번호를 변경했나요? 이 경우, 해당 소셜 서비스에서 확인 후 FIKA에 로그인이 가능합니다."
+            android:text="@string/login_dialog_tv_02"
             android:layout_marginTop="16dp"
             android:lineSpacingExtra="3dp"
             android:gravity="start"
@@ -41,10 +45,11 @@
             />
 
         <TextView
+            android:id="@+id/login_dialog_tv_03"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black2"
-            android:text="문제가 계속 해결되지 않는다면 고객센터로 이메일을 보내주세요. 여러분을 위해 발전하는 FIKA가 되겠습니다😊"
+            android:text="@string/login_dialog_tv_03"
             android:layout_marginTop="68dp"
             android:lineSpacingExtra="3dp"
             android:gravity="start"

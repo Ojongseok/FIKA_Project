@@ -26,8 +26,6 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
 
         initData()
 
-
-
         binding.dramaDetailBackBtn.setOnClickListener { finish() }
 
         binding.largeMapBtn.setOnClickListener {
