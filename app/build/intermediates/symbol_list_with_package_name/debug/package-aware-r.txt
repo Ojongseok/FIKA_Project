@@ -2915,6 +2915,7 @@ id allStates
 id all_review_empty_tv
 id all_review_look_photo_cb
 id all_review_option_layout
+id all_review_pb
 id all_review_rv
 id all_review_spinner
 id all_review_spinner_tv
@@ -3278,18 +3279,26 @@ id item_myplace_place_verti_bar
 id item_myplace_place_where_tv
 id item_myplace_place_where_tv2
 id item_placeinfo_review_bottom_img_layout
+id item_placeinfo_review_bottom_img_rv
 id item_placeinfo_review_bottom_layout
 id item_placeinfo_review_contents_tv
 id item_placeinfo_review_date_tv
 id item_placeinfo_review_img_01
 id item_placeinfo_review_img_02
 id item_placeinfo_review_img_03
+id item_placeinfo_review_img_iv
 id item_placeinfo_review_more_iv
 id item_placeinfo_review_name_tv
 id item_placeinfo_review_profile_cv
 id item_placeinfo_review_profile_iv
 id item_placeinfo_review_score_iv
 id item_placeinfo_review_score_tv
+id item_placeinfo_review_star_01
+id item_placeinfo_review_star_02
+id item_placeinfo_review_star_03
+id item_placeinfo_review_star_04
+id item_placeinfo_review_star_05
+id item_placeinfo_review_star_layout
 id item_placeinfo_review_star_tv
 id item_placeinfo_review_top_layout
 id item_placerank_category_tv
@@ -3541,6 +3550,7 @@ id placeinfo_locate_cover_layout_underview
 id placeinfo_locate_cover_tv
 id placeinfo_locate_flag_iv
 id placeinfo_locate_frm
+id placeinfo_locate_home_iv
 id placeinfo_locate_menu_layout
 id placeinfo_locate_menu_layout_detail1
 id placeinfo_locate_menu_layout_detail2
@@ -3552,7 +3562,6 @@ id placeinfo_locate_menu_price_tv2
 id placeinfo_locate_menu_title_tv
 id placeinfo_locate_menu_tv1
 id placeinfo_locate_menu_tv2
-id placeinfo_locate_more_iv
 id placeinfo_locate_review_layout
 id placeinfo_locate_review_title_tv
 id placeinfo_locate_sv
@@ -3569,6 +3578,7 @@ id placeinfo_locate_where_info_layout_underview
 id placeinfo_locate_where_info_map
 id placeinfo_locate_where_info_title_tv
 id placeinfo_locate_where_info_tv
+id placeinfo_pb
 id position
 id postLayout
 id progressBar
@@ -4068,6 +4078,7 @@ layout item_home_scrapcourse
 layout item_myplace
 layout item_myplace_2
 layout item_placeinfo_review
+layout item_review_img
 layout item_spinner
 layout item_view
 layout kakao_login_layout

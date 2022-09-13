@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fika.fika_project.R
@@ -37,43 +39,36 @@ class AllReviewRVAdapter (private val reviewList: ArrayList<ReviewList>, val con
         }
     }
 
+
     override fun getItemCount(): Int = reviewList.size
 
     inner class ViewHolder(val binding: ItemPlaceinfoReviewBinding):RecyclerView.ViewHolder(binding.root){
-
         fun bind(itemReview: ReviewList){
+            setAdapter(itemReview)
+
             binding.itemPlaceinfoReviewNameTv.text = itemReview.userNickname
             binding.itemPlaceinfoReviewContentsTv.text = itemReview.reviewContents
+            binding.itemPlaceinfoReviewDateTv.text = itemReview.createAt
 
             spfManager.setReviewId(itemReview.reviewId)
 
             if(itemReview.imageUrls?.size == 0){
-                binding.itemPlaceinfoReviewBottomImgLayout.visibility = View.GONE
+                binding.itemPlaceinfoReviewBottomImgRv.visibility = View.GONE
             } else{
-                val bottomDialog = ReviewImgFragment()
-
-                Glide.with(context).load(itemReview.imageUrls?.get(0)).into(binding.itemPlaceinfoReviewImg01)
-                Glide.with(context).load(itemReview.imageUrls?.get(1)).into(binding.itemPlaceinfoReviewImg02)
-                Glide.with(context).load(itemReview.imageUrls?.get(2)).into(binding.itemPlaceinfoReviewImg03)
-
-                binding.itemPlaceinfoReviewImg01.setOnClickListener {
-                    bottomDialog.show((context as PlaceinfoActivity).supportFragmentManager, bottomDialog.tag)
-                    spfManager.setImgUrl(itemReview.imageUrls!!.get(0))
-                }
-                binding.itemPlaceinfoReviewImg02.setOnClickListener {
-                    bottomDialog.show((context as PlaceinfoActivity).supportFragmentManager, bottomDialog.tag)
-                    spfManager.setImgUrl(itemReview.imageUrls!!.get(1))
-                }
-                binding.itemPlaceinfoReviewImg03.setOnClickListener {
-                    bottomDialog.show((context as PlaceinfoActivity).supportFragmentManager, bottomDialog.tag)
-                    spfManager.setImgUrl(itemReview.imageUrls!!.get(2))
-                }
+                binding.itemPlaceinfoReviewBottomImgRv.visibility = View.VISIBLE
 
                 binding.itemPlaceinfoReviewMoreIv.setOnClickListener {
                     (context as PlaceinfoActivity).supportFragmentManager.beginTransaction()
                         .replace(R.id.placeinfo_locate_frm, ReviewReportFragment())
                         .commitAllowingStateLoss() }
                 }
+            }
+
+        private fun setAdapter(reviewList: ReviewList) {
+            val reviewImgRVAdapter = ReviewImgRVAdapter(reviewList,context)
+            binding.itemPlaceinfoReviewBottomImgRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            binding.itemPlaceinfoReviewBottomImgRv.adapter = reviewImgRVAdapter
+            binding.itemPlaceinfoReviewBottomImgRv.setHasFixedSize(false)
             }
         }
     }

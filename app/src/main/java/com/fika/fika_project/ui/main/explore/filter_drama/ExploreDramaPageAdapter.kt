@@ -22,8 +22,6 @@ class ExploreDramaPageAdapter(val dramalist : ArrayList<result>, val context: Co
         val view = (holder as CustomViewHolder).itemView
 
         val dramaId = dramalist[position].dramaId
-        spfManager.setDramaId(dramaId!!)
-
 
         view.dramalist_dramaname.text = dramalist[position].dramaTitle
         Glide.with(context).load(dramalist[position].thumbnailUrl).into(view.dramalist_dramaimage)

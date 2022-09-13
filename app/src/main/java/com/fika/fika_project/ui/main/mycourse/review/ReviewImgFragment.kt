@@ -15,7 +15,6 @@ import com.google.gson.Gson
 class ReviewImgFragment : BottomSheetDialogFragment() {
     private var _binding: FragmentReviewImgBinding? = null
     private val binding get() = _binding!!
-    val gson : Gson = Gson()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +31,7 @@ class ReviewImgFragment : BottomSheetDialogFragment() {
 
     private fun setView() {
         val reviewImg = spfManager.getImgUrl()
+
         Glide.with(requireContext()).load(reviewImg).into(binding.dialogReviewIv)
     }
 

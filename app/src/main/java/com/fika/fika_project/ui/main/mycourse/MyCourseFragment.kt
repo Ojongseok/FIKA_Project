@@ -60,7 +60,8 @@ class MyCourseFragment :Fragment(), MyCourseView {
                                 response.result[i].coursePreviewList?.get(j)?.dramaTitle,
                                 response.result[i].coursePreviewList?.get(j)?.baseAddress,
                                 response.result[i].coursePreviewList?.get(j)?.locageImageUrl,
-                                response.result[i].coursePreviewList?.get(j)?.courseId
+                                response.result[i].coursePreviewList?.get(j)?.courseId,
+                                response.result[i].coursePreviewList?.get(j)?.spotTitleList.toString()
                             ))
                         }
                     }

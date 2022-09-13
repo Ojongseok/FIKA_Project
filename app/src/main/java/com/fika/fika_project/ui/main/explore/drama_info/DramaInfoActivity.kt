@@ -65,7 +65,7 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
                 response.let {
                     val resp = response.result
 
-                    Glide.with(this).load(resp.thumbnailUrl).into(binding.dramaInfoMainIv)
+                    Glide.with(this).load(resp.thumbnailUrl.toString()).disallowHardwareConfig().into(binding.dramaInfoMainIv)
                     binding.dramaInfoTitleTv.text =resp.dramaTitle
                     binding.dramaDetailInfoTitleName.text = resp.dramaTitle
 

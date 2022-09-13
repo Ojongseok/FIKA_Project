@@ -16,7 +16,13 @@ import com.fika.fika_project.R
 import com.fika.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity
 import com.fika.fika_project.ui.main.mycourse.visit_course.VisitCompleteCourse
 import kotlinx.android.synthetic.main.fragment_mycourse_list_child.view.*
+import kotlinx.android.synthetic.main.fragment_mycourse_list_child.view.child_title
+import kotlinx.android.synthetic.main.fragment_mycourse_list_child.view.item_home_coursescrap_drama_title_tv
+import kotlinx.android.synthetic.main.fragment_mycourse_list_child.view.item_home_coursescrap_info_tv
+import kotlinx.android.synthetic.main.fragment_mycourse_list_child.view.item_home_coursescrap_where_tv
+import kotlinx.android.synthetic.main.fragment_mycourse_list_child.view.item_home_scrapcourse_iv
 import kotlinx.android.synthetic.main.fragment_mycourse_list_header.view.*
+import kotlinx.android.synthetic.main.item_home_scrapcourse.view.*
 
 
 class ExpandableListAdapter(val context: Context, private val data: MutableList<Item>) : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
@@ -82,6 +88,8 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
                 itemController1.dramatitle.text = item.dramaTitle
                 itemController1.address.text = item.address
                 Glide.with(context).load(item.imageUrl).into(itemController1.imageurl)
+                itemController1.spotList.text = item.spotList.toString()
+
                 itemController1.cardLayout.setOnClickListener {
                     val intent = Intent(context,MyCourseViewActivity::class.java)
                     intent.putExtra("courseId",item.courseId)
@@ -137,6 +145,7 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
         var dramatitle = itemView!!.item_home_coursescrap_drama_title_tv
         var address = itemView!!.item_home_coursescrap_where_tv
         var imageurl = itemView!!.item_home_scrapcourse_iv
+        val spotList = itemView!!.item_home_coursescrap_info_tv
 
         init {
             child_title = itemView!!.child_title
@@ -152,18 +161,20 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
         var imageUrl:String? = null
         var invisibleChildren: MutableList<Item?>? = null
         var courseId:Int? =0
+        var spotList:String? = null
 
         constructor(type: Int,text: String?) {
             this.type = type
             this.text = text
         }
-        constructor(type: Int, text: String?,dramaTitle:String?,address: String?,imageUrl:String?,courseId:Int?) {
+        constructor(type: Int, text: String?,dramaTitle:String?,address: String?,imageUrl:String?,courseId:Int?,spotList:String?) {
             this.type = type
             this.text = text
             this.address = address
             this.imageUrl = imageUrl
             this.dramaTitle = dramaTitle
             this.courseId = courseId
+            this.spotList = spotList
         }
     }
 

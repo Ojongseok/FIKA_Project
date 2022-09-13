@@ -11,22 +11,37 @@ import com.fika.fika_project.databinding.ActivityPlaceinfoLocateBinding
 import com.fika.fika_project.ui.main.mycourse.review.AllReviewFragment
 import com.fika.fika_project.ui.main.mycourse.review.ReviewReportFragment
 import com.fika.fika_project.utils.spfManager
+import timber.log.Timber
 
 class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
     lateinit var binding: ActivityPlaceinfoLocateBinding
-    val courseId = spfManager.getCourseId()!!.toInt()
     val service = PlaceinfoService(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityPlaceinfoLocateBinding.inflate(layoutInflater)
         initView()
 
-        service.tryPlaceinfo(courseId)
         setContentView(binding.root)
     }
 
     private fun initView() {
+        val homeSpotId = intent.getIntExtra("homeSpotId",0)
+        Timber.tag("Print_CourseId").d(homeSpotId.toString())
+
+        spfManager.setCourseId(homeSpotId)
+
+        service.tryPlaceinfo(homeSpotId!!)
+
+        binding.placeinfoLocateBackIv.setOnClickListener {
+            finish()
+        }
+
+        binding.placeinfoLocateHomeIv.setOnClickListener {
+            finish()
+        }
+
         binding.placeinfoLocateUpBtn.setOnClickListener {
                 binding.placeinfoLocateSv.fullScroll(ScrollView.FOCUS_UP)
         }
@@ -36,17 +51,19 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
                 .replace(R.id.placeinfo_locate_frm, AllReviewFragment())
                 .commitAllowingStateLoss() }
 
-        binding.placeinfoLocateMoreIv.setOnClickListener {
+        binding.itemPlaceinfoReviewMoreIv.setOnClickListener {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.placeinfo_locate_frm, ReviewReportFragment())
                 .commitAllowingStateLoss() }
         }
 
     override fun onLoading() {
-        TODO("Not yet implemented")
+        binding.placeinfoPb.visibility = View.VISIBLE
     }
 
     override fun onPlaceinfoSuccess(response: PlaceInfoResponse) {
+        binding.placeinfoPb.visibility = View.GONE
+
         when(response?.code){
             //성공
             1000 -> {

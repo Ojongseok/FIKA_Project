@@ -2,6 +2,7 @@ package com.fika.fika_project.ui.main.explore.drama_info
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,8 @@ import kotlinx.android.synthetic.main.drama_info_course_item.view.item_home_cour
 import kotlinx.android.synthetic.main.drama_info_location_item.view.*
 import kotlinx.android.synthetic.main.item_home_scrapcourse.view.*
 import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
+import java.net.URI
+import java.util.logging.Level.parse
 
 class DramaInfoCourseAdapter(val courselist : ArrayList<courseList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>(),LocationScrapView {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -31,8 +34,9 @@ class DramaInfoCourseAdapter(val courselist : ArrayList<courseList>, val context
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val view = (holder as CustomViewHolder).itemView
+        val imgUri = courselist[position].locageImageUrl!!.trim()
 
-        Glide.with(context).load(courselist[position].locageImageUrl).into(view.item_home_scrapcourse_iv)
+        Glide.with(context).load(imgUri).disallowHardwareConfig().into(view.item_home_scrapcourse_iv)
         view.item_home_coursescrap_drama_title_tv.text = courselist[position].dramaTitle
         view.item_home_coursescrap_where_tv.text = courselist[position].baseAddress
         view.child_title.text = courselist[position].courseTitle

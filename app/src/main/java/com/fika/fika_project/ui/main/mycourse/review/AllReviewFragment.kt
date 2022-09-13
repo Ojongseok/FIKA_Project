@@ -1,5 +1,6 @@
 package com.fika.fika_project.ui.main.mycourse.review
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,7 +16,6 @@ import com.fika.fika_project.utils.spfManager
 class AllReviewFragment: Fragment(), PlaceinfoView {
     private var _binding: FragmentAllReviewBinding? = null
     private val binding get() = _binding!!
-    val courseId = spfManager.getCourseId()!!.toInt()
     val service = PlaceinfoService(this)
 
     private var isChecked: Boolean = false
@@ -25,7 +25,9 @@ class AllReviewFragment: Fragment(), PlaceinfoView {
 
         onClickListener()
 
-        service.tryPlaceinfo(courseId)
+        val homeSpotId = spfManager.getCourseId()!!.toInt()
+
+        service.tryPlaceinfo(homeSpotId)
         return binding.root
     }
 
@@ -73,15 +75,24 @@ class AllReviewFragment: Fragment(), PlaceinfoView {
     }
 
     override fun onLoading() {
-        TODO("Not yet implemented")
+        binding.allReviewPb.visibility = View.VISIBLE
     }
 
     override fun onPlaceinfoSuccess(response: PlaceInfoResponse) {
+        binding.allReviewPb.visibility = View.GONE
+
         when(response.code){
             1000 -> {
                 response.let { setAdapter(it.result!!.reviewList) }
                 binding.allViewSubTitleNumTv.text = response.result!!.reviewCount.toString()
-                if(response.result.reviewCount > 0){ binding.allReviewEmptyTv.visibility = View.GONE }
+
+                if(response.result.reviewCount == 0){
+                    binding.allReviewEmptyTv.visibility = View.VISIBLE
+                    binding.allReviewRv.visibility = View.GONE
+                } else {
+                    binding.allReviewEmptyTv.visibility = View.GONE
+                    binding.allReviewRv.visibility = View.VISIBLE
+                }
             }
         }
     }

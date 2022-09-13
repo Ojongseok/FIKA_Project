@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fika.fika_project.databinding.FragmentHomeBinding
 import com.fika.fika_project.ui.main.home.search.SearchActivity
+import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
 
 class HomeFragment : Fragment(), HomeView {
     private lateinit var binding: FragmentHomeBinding
