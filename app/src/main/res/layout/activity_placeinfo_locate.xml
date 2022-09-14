@@ -666,6 +666,19 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/item_placeinfo_review_bottom_layout" />
 
+
+            <ProgressBar
+                android:id="@+id/placeinfo_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:indeterminateTint="@color/main_blue"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
@@ -690,18 +703,6 @@
 <!--        android:padding="22dp"-->
 <!--        android:layout_alignParentEnd="true"-->
 <!--        android:layout_alignParentBottom="true"/>-->
-
-    <ProgressBar
-        android:id="@+id/placeinfo_pb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="10dp"
-        android:indeterminateTint="@color/main_blue"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.fika.fika_project.ui.main.explore.course_detail
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import com.fika.fika_project.R
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldService
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldView
+import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
 import kotlinx.android.synthetic.main.drama_info_location_item.view.*
 import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
 
@@ -58,6 +60,7 @@ class CourseDetailDramaAdapter(val locationList: ArrayList<spotList>, val contex
             var service = LocationHoldService(this,locationList[position].spotId!!)
             service.tryLoadLocationHold(view.course_detail_location_flag_btn)
         }
+
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
     override fun getItemCount() = locationList.size

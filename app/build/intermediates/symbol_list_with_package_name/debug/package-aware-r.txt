@@ -4279,6 +4279,7 @@ string com_kakao_unlink_button
 string common_google_play_services_unknown_issue
 string core_com_kakao_sdk_loading
 string course
+string course_detail_hold_btn
 string course_explore_actor
 string course_explore_course
 string course_explore_drama

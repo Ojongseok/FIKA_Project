@@ -857,6 +857,7 @@ string btm_nav_mycourse
 string btm_nav_mypage
 string btm_nav_search
 string course
+string course_detail_hold_btn
 string course_explore_actor
 string course_explore_course
 string course_explore_drama

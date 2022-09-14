@@ -544,5 +544,6 @@ WEFIY | 대표 홍예진
     <string name="만족도">만족도</string>
     <string name="review_write_review_empty">리뷰를 작성해주세요.</string>
     <string name="review_write_warning">장소와 무관한 사진을 첨부하면 노출이 제한될 수 있습니다.</string>
+    <string name="course_detail_hold_btn">내 코스에 담기</string>
 
 </resources>

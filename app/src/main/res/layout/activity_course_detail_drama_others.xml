@@ -323,7 +323,7 @@
         android:layout_height="72dp"
         android:background="@drawable/button_background_off"
         android:gravity="center"
-        android:text="自分のコースに入れる"
+        android:text="@string/course_detail_hold_btn"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"

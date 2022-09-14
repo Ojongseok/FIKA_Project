@@ -47,7 +47,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_logo_big_iv"/>
 
-
     <LinearLayout
         android:id="@+id/login_icon_layout"
         android:layout_width="0dp"
@@ -70,7 +69,6 @@
                 android:layout_width="58dp"
                 android:layout_height="58dp"
                 android:src="@drawable/login_kakao"/>
-
 
             <TextView
                 android:id="@+id/login_kakao_tv"
@@ -95,7 +93,6 @@
                 android:layout_height="58dp"
                 android:src="@drawable/login_line"/>
 
-
             <TextView
                 android:id="@+id/login_line_tv"
                 android:layout_width="wrap_content"
@@ -119,7 +116,6 @@
                 android:layout_height="58dp"
                 android:src="@drawable/login_google"/>
 
-
             <TextView
                 android:id="@+id/login_google_tv"
                 android:layout_width="wrap_content"
@@ -137,13 +133,11 @@
             android:gravity="center"
             android:visibility="gone">
 
-
         <ImageView
                 android:id="@+id/login_yahoo_iv"
                 android:layout_width="58dp"
                 android:layout_height="58dp"
                 android:src="@drawable/login_yahoo"/>
-
 
             <TextView
                 android:id="@+id/login_yahoo_tv"
