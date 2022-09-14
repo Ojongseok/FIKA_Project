@@ -38,9 +38,6 @@ object spfManager {
     fun setCourseId(courseId: Int) { editor.putInt("courseId", courseId).apply() }
     fun getCourseId(): Int? { return prefs.getInt("courseId", 0) }
 
-    fun setSpotId(spotId: Int) { editor.putInt("spotId", spotId).apply() }
-    fun getSpotId(): Int? { return prefs.getInt("spotId", 0) }
-
     fun setReviewId(reviewId: Int) { editor.putInt("reviewId", reviewId).apply() }
     fun getReviewId(): Int? { return prefs.getInt("reviewId", 0) }
 

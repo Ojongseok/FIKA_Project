@@ -14,6 +14,8 @@ class PlaceinfoService (val View : PlaceinfoView) {
     fun tryPlaceinfo(spotId: Int){
         retrofit.placeInfo(spotId).enqueue(object : Callback<PlaceInfoResponse> {
             override fun onResponse(call: Call<PlaceInfoResponse>, response: Response<PlaceInfoResponse>) {
+                View.onLoading()
+
                 var result: PlaceInfoResponse? = response.body()
                 val resp = response.body()
 
@@ -41,6 +43,8 @@ class PlaceinfoService (val View : PlaceinfoView) {
     fun tryReviwReport(reviewReport: ReviewReport){
         retrofit.ReviewReport(reviewReport).enqueue(object : Callback<ReportResponse> {
             override fun onResponse(call: Call<ReportResponse>, response: Response<ReportResponse>) {
+                View.onLoading()
+
                 var result: ReportResponse? = response.body()
                 val resp = response.body()
 

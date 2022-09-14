@@ -2,10 +2,10 @@
     <string name="app_name">FIKA_Project</string>
     <string name="img_app_logo">FIKA_logo</string>
 
-    <string name="btm_nav_search">탐색</string>
-    <string name="btm_nav_mycourse">내코스</string>
-    <string name="btm_nav_home">홈</string>
-    <string name="btm_nav_mypage">마이페이지</string>
+    <string name="btm_nav_search">探索</string>
+    <string name="btm_nav_mycourse">私のコース</string>
+    <string name="btm_nav_home">" ホーム"</string>
+    <string name="btm_nav_mypage">" マイページ"</string>
 
 
     <!-- 로그인 -->
@@ -18,7 +18,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="sample_review">가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가</string>
-    <string name="verti_bar">|</string>
+    <string name="verti_bar" translatable="false">|</string>
     <string name="back_btn">back_btn</string>
     <string name="home_btn">home_btn</string>
 
@@ -463,5 +463,18 @@ WEFIY | 대표 홍예진
 
 본 약관은 2022년 9월 16일부터 시행합니다.
     </string>
+
+
+    <string name="tester_login_title_tv">테스터 코드를 받으셨나요? \n전달 받은 코드를 입력해주세요.</string>
+    <string name="tester_login_sub_title_tv">테스터 코드를 받지 못하셨다면, 간편 로그인을 이용해주세요 : )</string>
+    <string name="tester_login_et">테스터 코드를 입력해주세요.</string>
+    <string name="tester_login_warning_tv">사용불가능한 코드입니다</string>
+    <string name="tester_login_done_tv">FIKAと一緒に旅行を準備します。</string>
+    <string name="login_question_tv">ログインに困難がありますか。</string>
+    <string name="login_easy_login_tv">簡便ログイン</string>
+    <string name="login_dialog_title">ログインに困難がありますか</string>
+    <string name="login_dialog_tv_01">以前、このソーシャルサービスでログインしましたが、今はダメです</string>
+    <string name="login_dialog_tv_02">- ログインしていたソーシャルサービスのアカウントを削除したり、パスワードを変更したりしましたか？ この場合、当該ソーシャルサービスで確認後FIKAにログインが可能です。</string>
+    <string name="login_dialog_tv_03">- 問題が解決されなければカスタマーセンターにメールを送ってください! いつも発展するFIKAになります。😊</string>
 
 </resources>

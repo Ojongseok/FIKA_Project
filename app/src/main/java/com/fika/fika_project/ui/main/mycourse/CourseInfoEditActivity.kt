@@ -6,7 +6,7 @@ import android.view.View
 import com.fika.fika_project.databinding.ActivityCourseInfoEditBinding
 
 class CourseInfoEditActivity : AppCompatActivity() {
-    private var _Binding: ActivityCourseInfoEditBinding? = null
+    private var _Binding : ActivityCourseInfoEditBinding? = null
     private val binding get() = _Binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

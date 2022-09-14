@@ -1,6 +1,7 @@
 package com.fika.fika_project.ui.main.home
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +10,12 @@ import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ItemHomeCourseBinding
 import com.fika.fika_project.ui.main.MainActivity
+import com.fika.fika_project.ui.main.explore.CourseDetailDramaOthers
 import com.fika.fika_project.ui.main.explore.ExploreFragment
 import com.fika.fika_project.ui.main.explore.courseList
 import com.fika.fika_project.ui.main.mycourse.coursePreviewList
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.item_home_scrapcourse.view.*
 
 class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
 {
@@ -89,6 +92,12 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
             binding.itemHomeCourseNameTv.text = itemCourse.courseTitle
             binding.itemHomeCourseDramaNameTv.text = itemCourse.dramaTitle
             binding.itemHomeCourseSpotTv.text = itemCourse.spotTitleList.toString()
+
+            binding.itemHomeCourseTopCv.setOnClickListener {
+                val intent = Intent(context, CourseDetailDramaOthers::class.java)
+                intent.putExtra("courseId",itemCourse.courseId)
+                context.startActivity(intent)
+            }
         }
     }
 }

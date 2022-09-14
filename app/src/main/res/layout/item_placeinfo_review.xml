@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="264dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/item_placeinfo_review_top_layout"
@@ -43,19 +44,47 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/item_placeinfo_review_profile_cv"/>
 
-        <ImageView
-            android:id="@+id/item_placeinfo_review_star_tv"
-            android:layout_width="14dp"
+        <LinearLayout
+            android:id="@+id/item_placeinfo_review_star_layout"
+            android:layout_width="wrap_content"
             android:layout_height="14dp"
-            android:src="@drawable/star_blue"
             app:layout_constraintStart_toStartOf="@id/item_placeinfo_review_name_tv"
-            app:layout_constraintTop_toBottomOf="@id/item_placeinfo_review_name_tv"/>
+            app:layout_constraintTop_toBottomOf="@id/item_placeinfo_review_name_tv"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/item_placeinfo_review_star_01"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/star_blue" />
+            <ImageView
+                android:id="@+id/item_placeinfo_review_star_02"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/star_blue" />
+            <ImageView
+                android:id="@+id/item_placeinfo_review_star_03"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/star_blue" />
+            <ImageView
+                android:id="@+id/item_placeinfo_review_star_04"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/star_blue" />
+            <ImageView
+                android:id="@+id/item_placeinfo_review_star_05"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/star_blue" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/item_placeinfo_review_date_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2022-07-27"
+            android:text="2022-00-00"
             android:textSize="14sp"
             android:textStyle="normal"
             android:layout_marginEnd="24dp"
@@ -81,54 +110,18 @@
         app:layout_constraintStart_toStartOf="@id/item_placeinfo_review_top_layout"
         app:layout_constraintEnd_toEndOf="@id/item_placeinfo_review_top_layout">
 
-        <LinearLayout
-            android:id="@+id/item_placeinfo_review_bottom_img_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="9.5dp"
-            android:layout_marginEnd="9.5dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/item_placeinfo_review_bottom_img_rv"
+            android:layout_width="0dp"
+            android:layout_height="106dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            tools:listitem="@layout/item_review_img"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <ImageView
-                android:id="@+id/item_placeinfo_review_img_01"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/sample_image"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-
-            <ImageView
-                android:id="@+id/item_placeinfo_review_img_02"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/sample_image"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-
-            <ImageView
-                android:id="@+id/item_placeinfo_review_img_03"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/sample_image"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-        </LinearLayout>
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/item_placeinfo_review_contents_tv"
@@ -137,9 +130,9 @@
             android:text="@string/sample_review"
             android:ellipsize="end"
             android:maxLines="3"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="128dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item_placeinfo_review_bottom_img_layout"/>
+            app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

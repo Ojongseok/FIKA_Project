@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/tester_login_back_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/back_btn"/>
+
+    <TextView
+        android:id="@+id/tester_login_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/tester_login_title_tv"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tester_login_back_btn"
+        app:layout_constraintStart_toStartOf="@id/tester_login_back_btn"/>
+
+    <TextView
+        android:id="@+id/tester_login_sub_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tester_login_sub_title_tv"
+        android:textColor="@color/grey3"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tester_login_title_tv"
+        app:layout_constraintTop_toBottomOf="@id/tester_login_title_tv"/>
+
+    <LinearLayout
+        android:id="@+id/tester_login_et_background"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:background="#D3E1E1E1"
+        app:layout_constraintStart_toStartOf="@id/tester_login_title_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tester_login_sub_title_tv">
+
+
+        <EditText
+            android:id="@+id/tester_login_et"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center"
+            android:hint="@string/tester_login_et"
+            android:singleLine="true"
+            android:lines="1"
+            android:textSize="16sp"
+            android:textColorHint="@color/grey2"
+            android:background="@null"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tester_login_warning_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tester_login_warning_tv"
+        android:textColor="@color/grey3"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tester_login_et_background"/>
+
+    <TextView
+        android:id="@+id/tester_login_done_tv"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:text="@string/tester_login_done_tv"
+        android:textColor="@color/grey2"
+        android:background="@color/grey3"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <ProgressBar
+        android:id="@+id/tester_login_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:indeterminateTint="@color/main_yellow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
