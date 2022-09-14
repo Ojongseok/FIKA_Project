@@ -486,7 +486,7 @@ WEFIY | 대표 홍예진
     <string name="agree_02_title_tv">(必須)サービス利用約款</string>
     <string name="확인">確認</string>
     <string name="agree_03_title_tv">(必須)個人情報処理方針</string>
-    <string name="nickname_title_tv">ニックネームは空白なしに2~10文字で入力してください。</string>
+    <string name="nickname_title_tv">FIKAで使用するニックネームを入力してください。</string>
     <string name="nickname_et">ニックネームを入力してください。</string>
     <string name="nickname_warning_tv">使用不可能な別名です</string>
     <string name="nickname_done_tv">FIKAと一緒に旅行を準備します。</string>

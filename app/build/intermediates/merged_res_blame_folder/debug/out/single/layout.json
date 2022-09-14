@@ -208,10 +208,6 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_signup_02.xml",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_signup_02.xml"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\mycourse_save_state_list.xml",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\mycourse_save_state_list.xml"
     },
