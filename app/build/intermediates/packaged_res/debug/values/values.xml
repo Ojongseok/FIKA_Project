@@ -54,6 +54,7 @@
     <string name="btm_nav_mycourse">私のコース</string>
     <string name="btm_nav_mypage">" マイページ"</string>
     <string name="btm_nav_search">探索</string>
+    <string name="course">コース</string>
     <string name="course_explore_actor">俳優</string>
     <string name="course_explore_course">コース探索</string>
     <string name="course_explore_drama">ドラマで探索</string>
@@ -61,9 +62,7 @@
     <string name="course_explore_search_result">検索結果</string>
     <string name="course_explore_sort">最新順</string>
     <string name="course_explore_title">自分に合った旅行を探索する</string>
-    <string name="course">コース</string>
     <string name="default_web_client_id" translatable="false">476932942629-cioekbgo78bgdetfj1au7ud2fi8oklsp.apps.googleusercontent.com</string>
-    <string name="filter_drama">ドラマ</string>
     <string name="dialog_quit_back_btn">引き返す</string>
     <string name="dialog_quit_contents_tv">FIKAは皆様のために新しいドラマの場所をアップデートし続けています。 残念ですが、それでも脱退されますか？ </string>
     <string name="dialog_quit_quit_btn">脱退</string>
@@ -76,6 +75,7 @@
     <string name="edit_personal_sub_title_tv">ニックネーム</string>
     <string name="edit_personal_title_tv">個人情報変更</string>
     <string name="edit_personal_warning_tv">使用不可能なニックネームです。</string>
+    <string name="filter_drama">ドラマ</string>
     <string name="footer_add_course_tv">コースを追加</string>
     <string name="gcm_defaultSenderId" translatable="false">476932942629</string>
     <string name="google_api_key" translatable="false">AIzaSyA-9XXqFZ4GHDALLQHFIe1enFaDeYXiRAk</string>
@@ -91,8 +91,8 @@
     <string name="img_app_logo" translatable="false">FIKA_logo</string>
     <string name="kakao_app_key" translatable="false">5b9af1e01eae99f78d6c93638dd51b75</string>
     <string name="kakao_native_key" translatable="false">kakao5b9af1e01eae99f78d6c93638dd51b75</string>
-    <string name="locage">ロケ地</string>
     <string name="loading">loading…</string>
+    <string name="locage">ロケ地</string>
     <string name="locate">ロケ地</string>
     <string name="login">로그인</string>
     <string name="login_dialog_email">メールを送る</string>
@@ -106,18 +106,18 @@
     <string name="login_ps_hint">비밀번호 입력</string>
     <string name="login_question_tv">ログインに困難がありますか。</string>
     <string name="login_signup">회원가입</string>
+    <string name="login_tester_btn">テスト用ログイン →</string>
+    <string name="mypage_course_tv">スクラップしたコース</string>
     <string name="mypage_edit_myinfo">私がスクラップしたコース</string>
     <string name="mypage_myhold_location">私が盛り込んだ場所</string>
     <string name="mypage_myscrap_course">スクラップしたコース</string>
-    <string name="mypage_title">マイページ</string>
-    <string name="login_tester_btn">テスト用ログイン →</string>
-    <string name="mypage_course_tv">スクラップしたコース</string>
     <string name="mypage_place_tv">盛り込んだ場所</string>
+    <string name="mypage_title">マイページ</string>
     <string name="mypage_title_tv">マイページ</string>
     <string name="nickname_done_tv">FIKAと一緒に旅行を準備します。</string>
     <string name="nickname_et">ニックネームを入力してください。</string>
     <string name="nickname_sub_title_tv">ニックネームは空白なしに2~10文字で入力してください。</string>
-    <string name="nickname_title_tv">ニックネームは空白なしに2~10文字で入力してください。</string>
+    <string name="nickname_title_tv">FIKAで使用するニックネームを入力してください。</string>
     <string name="nickname_warning_tv">使用不可能な別名です</string>
     <string name="n개">nつ</string>
     <string name="placeinfo_all_review_btn">全体レビューを見ること</string>
@@ -128,12 +128,12 @@
     <string name="placeinfo_review">レビュー</string>
     <string name="placeinfo_where_info">位置情報</string>
     <string name="project_id" translatable="false">fika-project</string>
-    <string name="review_inform_text">場所と関係のない写真を添付すると、露出が制限されることがあります。</string>
     <string name="quit_contents_tv_1">退会すると、登録履歴、ニックネーム、作ったコースがなくなり復旧が不可能です。</string>
     <string name="quit_contents_tv_2">退会後も作成したレビューは削除されず、unknownの掲示物として維持されます。</string>
     <string name="quit_contents_warning_tv">注意事項を熟知し、脱退を行います。</string>
     <string name="quit_sub_title_tv">留意事項</string>
     <string name="quit_title_tv">FIKA 脱退</string>
+    <string name="review_inform_text">場所と関係のない写真を添付すると、露出が制限されることがあります。</string>
     <string name="review_report_contents_01">関係のない内容</string>
     <string name="review_report_contents_02">同じ内容で覆い隠れする</string>
     <string name="review_report_contents_03">悪口/人身攻撃/淫乱/扇情性</string>
@@ -592,6 +592,7 @@ WEFIY | 대표 홍예진
 
 본 약관은 2022년 9월 16일부터 시행합니다.
     </string>
+    <string name="spot">場所</string>
     <string name="tester_key" translatable="false">rf2amgpNuA</string>
     <string name="tester_login_done_tv">FIKAと一緒に旅行を準備します。</string>
     <string name="tester_login_et">테스터 코드를 입력해주세요.</string>
@@ -599,6 +600,7 @@ WEFIY | 대표 홍예진
     <string name="tester_login_title_tv">테스터 코드를 받으셨나요? \n전달 받은 코드를 입력해주세요.</string>
     <string name="tester_login_warning_tv">사용불가능한 코드입니다</string>
     <string name="verti_bar" translatable="false">|</string>
+    <string name="with_location">一緒に行きやすい場所</string>
     <string name="만족도">満足度</string>
     <string name="확인">確認</string>
     <style name="CustomBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
