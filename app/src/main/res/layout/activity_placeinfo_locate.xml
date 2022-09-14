@@ -49,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="장소 정보"
+                    android:text="@string/placeinfo_locate_top_title_tv"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -77,16 +77,20 @@
                 app:layout_constraintTop_toBottomOf="@id/placeinfo_locate_top_layout"
                 app:srcCompat="@drawable/sample_image" />
 
-            <ImageView
+            <TextView
                 android:id="@+id/placeinfo_locate_tag_iv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="53dp"
+                android:layout_height="20dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
                 android:scaleType="fitXY"
+                android:text="@string/locate"
+                android:textColor="@color/main_blue"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:background="@drawable/grey_btn_background"
                 app:layout_constraintStart_toStartOf="@id/placeinfo_locate_cover_iv"
-                app:layout_constraintTop_toTopOf="@id/placeinfo_locate_cover_iv"
-                app:srcCompat="@drawable/loacte_tag" />
+                app:layout_constraintTop_toTopOf="@id/placeinfo_locate_cover_iv"/>
 
 
             <ImageView
@@ -116,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
-                    android:text="단밤"
+                    android:text="@string/loading"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -142,19 +146,21 @@
                         android:id="@+id/placeinfo_locate_cover_address_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="경기 고양시 일산동구 호수로 731"
+                        android:text="@string/loading"
                         android:textSize="14sp"
                         android:textStyle="normal" />
 
                 </LinearLayout>
 
 
-                <ImageView
+                <TextView
                     android:id="@+id/placeinfo_locate_add_my_course_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="260dp"
+                    android:layout_height="48dp"
                     android:layout_marginTop="16dp"
-                    android:background="@drawable/btn_add_my_course"
+                    android:textColor="@color/white"
+                    android:text="@string/placeinfo_locate_add_my_course_btn"
+                    android:background="@drawable/blue_btn_background"
                     android:gravity="center"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -176,7 +182,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:gravity="center"
-                android:text="#시끌벅적한 #순두부찌개 #포차문화 #포차문화"
+                android:text="@string/loading"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -221,7 +227,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text="기본 정보"
+                    android:text="@string/placeinfo_basic_info"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -244,7 +250,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:text="운영중"
+                        android:text="@string/loading"
                         android:textSize="16sp"
                         android:textStyle="normal"
                         app:layout_constraintStart_toEndOf="@id/placeinfo_locate_time_iv"
@@ -263,7 +269,7 @@
                         android:id="@+id/placeinfo_locate_call_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="운영중"
+                        android:text="@string/loading"
                         android:textSize="16sp"
                         android:textStyle="normal"
                         android:layout_marginStart="4dp"
@@ -299,7 +305,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text="위치 정보"
+                    android:text="@string/placeinfo_where_info"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -336,7 +342,7 @@
                             android:id="@+id/placeinfo_locate_where_info_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="서울특별시 이태원~"
+                            android:text="@string/loading"
                             android:textSize="14sp"
                             android:textStyle="normal" />
 
@@ -371,7 +377,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text="대표 메뉴 및 가격"
+                    android:text="@string/placeinfo_menu_info"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -392,7 +398,7 @@
                             android:id="@+id/placeinfo_locate_menu_tv1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="수타짬뽕"
+                            android:text="@string/loading"
                             android:textSize="16sp"
                             android:textStyle="normal" />
 
@@ -405,7 +411,7 @@
                             android:id="@+id/placeinfo_locate_menu_price_tv1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="10,000원"
+                            android:text="@string/loading"
                             android:textSize="16sp"
                             android:textStyle="normal" />
 
@@ -431,7 +437,7 @@
                             android:id="@+id/placeinfo_locate_menu_tv2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="수타짬뽕"
+                            android:text="@string/loading"
                             android:textSize="16sp"
                             android:textStyle="normal" />
 
@@ -444,7 +450,7 @@
                             android:id="@+id/placeinfo_locate_menu_price_tv2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="10,000원"
+                            android:text="@string/loading"
                             android:textSize="16sp"
                             android:textStyle="normal" />
 
@@ -486,7 +492,7 @@
                     android:id="@+id/placeinfo_locate_review_title_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="리뷰"
+                    android:text="@string/placeinfo_review"
                     android:layout_marginStart="20dp"
                     android:layout_gravity="center"
                     android:textColor="@color/black2"
@@ -510,17 +516,6 @@
                     android:text="( - )"
                     android:textColor="@color/black2"
                     android:textSize="16sp" />
-
-
-                <!--            <com.github.rubensousa.gravitysnaphelper.GravitySnapRecyclerView-->
-                <!--                android:id="@+id/placeinfo_locate_review_rv"-->
-                <!--                android:layout_width="match_parent"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-                <!--                android:layout_marginTop="8dp"-->
-                <!--                android:orientation="vertical"-->
-                <!--                tools:listitem="@layout/item_placeinfo_review"-->
-                <!--                app:snapGravity="start"/>-->
             </LinearLayout>
 
 
@@ -549,7 +544,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:text="새로이짱"
+                    android:text="@string/loading"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@id/item_placeinfo_review_profile_iv"
@@ -655,15 +650,20 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageView
+            <TextView
                 android:id="@+id/placeinfo_locate_all_review_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/btn_all_review"
+                android:layout_width="371dp"
+                android:layout_height="48dp"
+                android:layout_margin="20dp"
+                android:textColor="@color/main_blue"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:text="@string/placeinfo_all_review_btn"
+                android:background="@drawable/grey_btn_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/item_placeinfo_review_bottom_layout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,12 +16,12 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/search_result_drama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="32dp"
-                android:text="드라마"
+                android:text="@string/drama"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="4개"
+                android:text="@string/n개"
                 app:layout_constraintBottom_toBottomOf="@+id/textView12"
                 app:layout_constraintStart_toEndOf="@+id/textView12"
                 app:layout_constraintTop_toTopOf="@+id/textView12" />
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="4개"
+                android:text="@string/n개"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textvieww"
                 app:layout_constraintStart_toEndOf="@+id/textvieww"
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:text="코스"
+                android:text="@string/course"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/search_result_drama_recyclerview"
@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:text="장소"
+                android:text="@string/spot"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/search_result_course_recyclerview"
@@ -96,8 +96,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:layout_constraintStart_toStartOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                app:layout_constraintStart_toStartOf="@+id/search_result_drama"
+                app:layout_constraintTop_toBottomOf="@+id/search_result_drama" />
 
             <RelativeLayout
                 android:id="@+id/top_layout"
@@ -130,7 +130,7 @@
                     android:background="@drawable/folder_button_background"
                     android:backgroundTint="#F3F3F3"
                     android:ems="15"
-                    android:hint="검색어를 입력해주세요."
+                    android:hint="@string/home_search_et"
                     android:inputType="textPersonName|text"
                     android:paddingLeft="42dp"
                     android:textSize="14sp" />
@@ -171,11 +171,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="3개"
+                android:text="@string/n개"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView10"
-                app:layout_constraintStart_toEndOf="@+id/textView10"
-                app:layout_constraintTop_toTopOf="@+id/textView10" />
+                app:layout_constraintBottom_toBottomOf="@+id/search_result_drama"
+                app:layout_constraintStart_toEndOf="@+id/search_result_drama"
+                app:layout_constraintTop_toTopOf="@+id/search_result_drama" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:text="서비스 이용 동의"
+        android:text="@string/agree_01_title_tv"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -60,7 +60,7 @@
                 android:id="@+id/agree_01_contents_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="약관 전체동의"
+                android:text="@string/agree_01_contents_01"
                 android:textStyle="bold"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
@@ -90,7 +90,7 @@
                 android:id="@+id/agree_01_contents_02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="만 14세 이상입니다."
+                android:text="@string/agree_01_contents_02"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
 
@@ -117,7 +117,7 @@
                 android:id="@+id/agree_01_contents_03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(필수) 서비스 이용약관"
+                android:text="@string/agree_01_contents_03"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
 
@@ -152,7 +152,7 @@
                 android:id="@+id/agree_01_contents_04"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(필수) 개인정보 처리방침"
+                android:text="@string/agree_01_contents_04"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
 
@@ -187,7 +187,7 @@
                 android:id="@+id/agree_01_contents_05"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(선택) 마케팅 정보 수신동의"
+                android:text="@string/agree_01_contents_05"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
 
@@ -201,6 +201,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/arrow"
+                android:visibility="invisible"
                 />
 
         </LinearLayout>
@@ -211,7 +212,7 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:textStyle="bold"
-        android:text="동의하고 계속하기"
+        android:text="@string/agree_01_countinue_btn"
         android:textSize="16sp"
         android:background="#F3F3F3"
         android:gravity="center"
