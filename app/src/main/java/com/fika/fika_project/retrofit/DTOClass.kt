@@ -1,5 +1,8 @@
 package com.fika.fika_project.retrofit
 
+import java.io.Serializable
+import java.util.concurrent.atomic.AtomicReferenceArray
+
 
 data class User(
     var nickname: String?,
@@ -30,3 +33,10 @@ data class CourseEditDTO(
     val courseTitle : String?,
     val spotIdList : ArrayList<Long>
 )
+data class AddCourseDTO(
+    var courseTitle : String? =null,
+    var baseAddress : String?=null,
+    var courseGroupId : Int?=0,
+    var locageSpotId : Int?=0,
+    var spotIdList : ArrayList<Int> = ArrayList()
+) : Serializable

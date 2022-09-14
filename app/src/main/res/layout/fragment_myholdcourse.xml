@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="내가 담은 장소"
+                android:text="@string/mypage_myhold_location"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 

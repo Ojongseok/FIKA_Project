@@ -48,7 +48,7 @@
         android:background="@drawable/locage_tv_background"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        android:text="로케지"
+        android:text="@string/locage"
         android:textColor="@color/main_blue"
         android:textStyle="bold"
         android:visibility="invisible"

@@ -20,7 +20,7 @@ class ExploreCoursePage : Fragment(), ExploreCourseView {
         _binding = FragmentExploreCoursePageBinding.inflate(inflater, container, false)
 
         binding.filterCoursePageBtn1.setOnClickListener {
-            val menuList =arrayOf("전체","이태원클라쓰","사랑의 불시착","그 해 우리는")
+            val menuList =arrayOf("전체","梨泰院クラス","愛の不時着")
             val dialog = AlertDialog.Builder(requireContext(),android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar)
             dialog.setTitle("드라마").setItems(menuList, DialogInterface.OnClickListener { dialogInterface, i ->
                 binding.filerCourseTv1.text = menuList[i]
@@ -29,7 +29,7 @@ class ExploreCoursePage : Fragment(), ExploreCourseView {
             dialog.show()
         }
         binding.filterCoursePageBtn2.setOnClickListener {
-            val menuList =arrayOf("전체","배우1","배우2","배우3")
+            val menuList =arrayOf("전체","キム・ダミ","パク・ソジュン","アン・ボヒョン")
             val dialog = AlertDialog.Builder(requireContext(),android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar)
             dialog.setTitle("배우").setItems(menuList, DialogInterface.OnClickListener { dialogInterface, i ->
                 binding.filterCourseTv2.text = menuList[i]
@@ -38,7 +38,7 @@ class ExploreCoursePage : Fragment(), ExploreCourseView {
             dialog.show()
         }
         binding.filterCourseSortingBtn.setOnClickListener {
-            val menuList =arrayOf("최신순","평점 높은순")
+            val menuList =arrayOf("最新順","スクラップの多い順")
             val dialog = AlertDialog.Builder(requireContext(),android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar)
             dialog.setTitle("정렬").setItems(menuList, DialogInterface.OnClickListener { dialogInterface, i ->
                 binding.filterSortTvCourse.text = menuList[i]
@@ -71,7 +71,7 @@ class ExploreCoursePage : Fragment(), ExploreCourseView {
     private fun setDramalist(dramalist : ArrayList<course>) {
         binding.exploreCoursePageRecyclerview.layoutManager = LinearLayoutManager(requireContext())
         binding.exploreCoursePageRecyclerview.adapter = ExploreCoursePageAdapter(dramalist, requireContext())
-        binding.exploreCoursepageSearchNumber.text = dramalist.size.toString() + "개"
+        binding.exploreCoursepageSearchNumber.text = dramalist.size.toString() + "つ"
     }
 
     override fun onExploreFailure(code: Int, message: String) {

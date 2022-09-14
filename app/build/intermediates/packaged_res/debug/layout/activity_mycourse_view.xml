@@ -123,7 +123,7 @@
             android:layout_height="72dp"
             android:background="@color/main_blue"
             android:gravity="center"
-            android:text="장소 추가하기"
+            android:text="場所追加"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:textStyle="bold"

@@ -82,8 +82,8 @@ class MypageFragment : Fragment(), MypageView {
                 binding.mypageProfileIv.setImageResource(R.drawable.logo_fikaduck)
 
                 binding.mypageProfileTv.setText(resp.memberNickname)
-                binding.mypagePlaceNumberTv.text = spot+"개"
-                binding.mypageCourseNumberTv.text = course + "개"
+                binding.mypagePlaceNumberTv.text = spot+"つ"
+                binding.mypageCourseNumberTv.text = course + "つ"
             }
             else ->{
                 binding.mypageProfileTv.setText("FIKA")

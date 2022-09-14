@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:layout_marginBottom="18dp"
-            android:text="코스 정보 편집"
+            android:text="コース情報編集"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -49,7 +49,7 @@
             android:paddingTop="6dp"
             android:paddingRight="12dp"
             android:paddingBottom="6dp"
-            android:text="완료"
+            android:text="完了"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:text="코스 이름"
+        android:text="コース名"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +85,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="코스 이름..."
+            android:hint="コース名..."
             android:inputType="text"
             android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
-        android:text="공개 여부"
+        android:text="公開の可否"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView16"
@@ -105,11 +105,11 @@
         android:id="@+id/course_info_edit_switch_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
+        android:layout_marginEnd="20dp"
         android:switchMinWidth="72dp"
         android:thumb="@drawable/switch_thumb"
         android:track="@drawable/switch_track_selector"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView18" />
 
     <TextView
@@ -117,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
-        android:text="커버 사진"
+        android:text="カバー写真"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView18"
@@ -128,7 +128,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
-        android:text="공개"
+        android:text="公開"
         android:textColor="@color/white"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/course_info_edit_switch_btn"
@@ -140,7 +140,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="6dp"
-        android:text="비공개"
+        android:text="非公開"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/course_info_edit_switch_btn"
         app:layout_constraintEnd_toEndOf="@+id/course_info_edit_switch_btn"
@@ -156,5 +156,28 @@
         app:layout_constraintStart_toStartOf="@+id/textView19"
         app:layout_constraintTop_toBottomOf="@+id/textView19">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="208dp"
+            android:background="@color/white">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/white">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="104dp"
+            android:background="@color/white">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityCourseDetailDramaOthersBinding
+import com.fika.fika_project.retrofit.AddCourseDTO
 import com.fika.fika_project.ui.main.explore.course_detail.*
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldService
@@ -19,6 +20,8 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
     private val binding get() = _Binding!!
     lateinit var locationAdapter : CourseDetailLocationOthersAdapter
     var courseId = 0
+     var addCourseDTO = AddCourseDTO()
+    lateinit var spotList :ArrayList<spotList>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityCourseDetailDramaOthersBinding.inflate(layoutInflater)
@@ -48,6 +51,9 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
             var service = LocationHoldService(this,initList.courseLocage?.spotId!!)
             service.tryLoadLocationHold(binding.courseDetailLocationFlagBtn)
         }
+        addCourseDTO.courseTitle = initList.courseTitle
+        addCourseDTO.baseAddress = initList.baseAddress
+        addCourseDTO.locageSpotId = initList.courseLocage?.spotId
     }
 
     private fun setOnClickEvent() {
@@ -59,8 +65,16 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
                     binding.courseDetailHoldBtn.setBackgroundResource(R.drawable.button_background_on)
                     binding.courseDetailHoldBtn.isClickable = true
                     binding.courseDetailHoldBtn.setOnClickListener {
+                        val checkSpot = ArrayList<Int>()
+                        for (i in 0 until checkStateList.size) {
+                            if (checkStateList[i]) {
+                                checkSpot.add(spotList[i].spotId!!)
+                            }
+                        }
+                        addCourseDTO.spotIdList = checkSpot
                         val intent = Intent(applicationContext, FolderSelectActivity::class.java)
                         intent.putExtra("courseId",courseId)
+                        intent.putExtra("addCourseDTO",addCourseDTO)
                         startActivity(intent)
                         overridePendingTransition(R.anim.slide_up_enter, R.anim.slide_up_exit)
                     }
@@ -106,6 +120,7 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
                     binding.detailCourseTogetherRecyclerview.apply {
                         layoutManager = LinearLayoutManager(context)
                         locationAdapter = CourseDetailLocationOthersAdapter(it.result?.spotList!!, context)
+                        spotList = it.result?.spotList
                         adapter = locationAdapter
                     }
                     binding.courseDetailCourseTitle.text = it.result?.courseTitle

@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="마이페이지"
+        android:text="@string/mypage_title"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,13 +121,13 @@
             android:id="@+id/mypage_place_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="내가 담은 장소"
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:layout_marginStart="4dp"
+            android:text="@string/mypage_myhold_location"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/mypage_place_flag_iv"
             app:layout_constraintStart_toEndOf="@id/mypage_place_flag_iv"
-            app:layout_constraintTop_toTopOf="@id/mypage_place_flag_iv"
-            app:layout_constraintBottom_toBottomOf="@id/mypage_place_flag_iv"/>
+            app:layout_constraintTop_toTopOf="@id/mypage_place_flag_iv" />
 
         <TextView
             android:id="@+id/mypage_place_number_tv"
@@ -153,16 +153,16 @@
             android:id="@+id/mypage_place_cover_iv"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:scaleType="fitXY"
             android:src="@drawable/sample_image"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/mypage_place_arrow_iv"/>
+            app:layout_constraintStart_toEndOf="@id/mypage_place_arrow_iv"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <ImageView
@@ -218,13 +218,13 @@
             android:id="@+id/mypage_course_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="내가 스크랩한 코스"
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:layout_marginStart="4dp"
+            android:text="@string/mypage_myscrap_course"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/mypage_course_flag_iv"
             app:layout_constraintStart_toEndOf="@id/mypage_course_flag_iv"
-            app:layout_constraintTop_toTopOf="@id/mypage_course_flag_iv"
-            app:layout_constraintBottom_toBottomOf="@id/mypage_course_flag_iv"/>
+            app:layout_constraintTop_toTopOf="@id/mypage_course_flag_iv" />
 
         <TextView
             android:id="@+id/mypage_course_number_tv"

@@ -851,7 +851,15 @@ string btm_nav_home
 string btm_nav_mycourse
 string btm_nav_mypage
 string btm_nav_search
+string course_explore_actor
+string course_explore_course
+string course_explore_drama
+string course_explore_genre
+string course_explore_search_result
+string course_explore_sort
+string course_explore_title
 string default_web_client_id
+string filter_drama
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
@@ -862,6 +870,7 @@ string home_btn
 string img_app_logo
 string kakao_app_key
 string kakao_native_key
+string locage
 string login
 string login_dialog_title
 string login_dialog_tv_01
@@ -873,7 +882,12 @@ string login_name_hint
 string login_ps_hint
 string login_question_tv
 string login_signup
+string mypage_edit_myinfo
+string mypage_myhold_location
+string mypage_myscrap_course
+string mypage_title
 string project_id
+string review_inform_text
 string sample_review
 string service_agree_j
 string service_agree_k
@@ -884,6 +898,7 @@ string tester_login_sub_title_tv
 string tester_login_title_tv
 string tester_login_warning_tv
 string verti_bar
+string with_location
 style CustomBottomSheetDialogTheme
 style CustomBottomSheetStyle
 style Theme.FIKA_Project

@@ -477,4 +477,21 @@ WEFIY | 대표 홍예진
     <string name="login_dialog_tv_02">- ログインしていたソーシャルサービスのアカウントを削除したり、パスワードを変更したりしましたか？ この場合、当該ソーシャルサービスで確認後FIKAにログインが可能です。</string>
     <string name="login_dialog_tv_03">- 問題が解決されなければカスタマーセンターにメールを送ってください! いつも発展するFIKAになります。😊</string>
 
+
+    <string name="mypage_title">マイページ</string>
+    <string name="mypage_myhold_location">私が盛り込んだ場所</string>
+    <string name="mypage_myscrap_course">スクラップしたコース</string>
+    <string name="mypage_edit_myinfo">私がスクラップしたコース</string>
+
+    <string name="course_explore_title">自分に合った旅行を探索する</string>
+    <string name="course_explore_drama">ドラマで探索</string>
+    <string name="course_explore_course">コース探索</string>
+    <string name="course_explore_genre">ジャンル</string>
+    <string name="course_explore_actor">俳優</string>
+    <string name="course_explore_sort">最新順</string>
+    <string name="course_explore_search_result">検索結果</string>
+    <string name="filter_drama">ドラマ</string>
+    <string name="locage">ロケ地</string>
+    <string name="with_location">一緒に行きやすい場所</string>
+    <string name="review_inform_text">場所と関係のない写真を添付すると、露出が制限されることがあります。</string>
 </resources>

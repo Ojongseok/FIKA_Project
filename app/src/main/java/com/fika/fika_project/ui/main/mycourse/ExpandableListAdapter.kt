@@ -96,7 +96,7 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
                     context.startActivity(intent)
                 }
                 itemController1.childToggleBtn.setOnClickListener {
-                    val menuList =arrayOf("리뷰 작성","그룹 이동","코스 정보 편집","코스 삭제")
+                    val menuList =arrayOf("レビュー作成","グループ移動","코스 정보 편집","コース削除")
                     val dialog = AlertDialog.Builder(context,android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar)
                     dialog.setTitle("선택").setItems(menuList, DialogInterface.OnClickListener { dialogInterface, i ->
                         when(i) {

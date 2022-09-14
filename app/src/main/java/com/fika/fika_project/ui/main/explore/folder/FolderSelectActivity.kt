@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityFolderSelectBinding
+import com.fika.fika_project.retrofit.AddCourseDTO
 import com.fika.fika_project.ui.main.explore.folder.FolderResponse
 import com.fika.fika_project.ui.main.explore.folder.FolderService
 import com.fika.fika_project.ui.main.explore.folder.FolderView
@@ -29,16 +30,20 @@ class FolderSelectActivity : AppCompatActivity(),FolderView {
     val service = FolderService(this)
     var selectPosition = -1
     var groupId = 0
+    lateinit var addCourseDTO : AddCourseDTO
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivityFolderSelectBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         courseId = intent.getIntExtra("courseId",0)
+        addCourseDTO = intent.getSerializableExtra("addCourseDTO") as AddCourseDTO
         binding.folderSelectGoCourseBtn.setOnClickListener {
+            addCourseDTO.courseGroupId = groupId
             val intent = Intent(this, MyCourseViewActivity::class.java)
             intent.putExtra("courseId", courseId)
             intent.putExtra("groupId", groupId)
+            intent.putExtra("addCourseDTO",addCourseDTO)
             startActivity(intent)
         }
 

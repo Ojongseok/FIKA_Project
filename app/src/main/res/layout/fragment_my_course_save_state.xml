@@ -35,7 +35,7 @@
             android:paddingTop="2dp"
             android:paddingRight="12dp"
             android:paddingBottom="2dp"
-            android:text="편집" />
+            android:text="編集" />
     </FrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView

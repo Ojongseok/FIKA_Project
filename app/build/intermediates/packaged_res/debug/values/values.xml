@@ -43,7 +43,15 @@
     <string name="btm_nav_mycourse">私のコース</string>
     <string name="btm_nav_mypage">" マイページ"</string>
     <string name="btm_nav_search">探索</string>
+    <string name="course_explore_actor">俳優</string>
+    <string name="course_explore_course">コース探索</string>
+    <string name="course_explore_drama">ドラマで探索</string>
+    <string name="course_explore_genre">ジャンル</string>
+    <string name="course_explore_search_result">検索結果</string>
+    <string name="course_explore_sort">最新順</string>
+    <string name="course_explore_title">自分に合った旅行を探索する</string>
     <string name="default_web_client_id" translatable="false">476932942629-cioekbgo78bgdetfj1au7ud2fi8oklsp.apps.googleusercontent.com</string>
+    <string name="filter_drama">ドラマ</string>
     <string name="gcm_defaultSenderId" translatable="false">476932942629</string>
     <string name="google_api_key" translatable="false">AIzaSyA-9XXqFZ4GHDALLQHFIe1enFaDeYXiRAk</string>
     <string name="google_app_id" translatable="false">1:476932942629:android:9011bc21953466476208cc</string>
@@ -54,6 +62,7 @@
     <string name="img_app_logo">FIKA_logo</string>
     <string name="kakao_app_key" translatable="false">5b9af1e01eae99f78d6c93638dd51b75</string>
     <string name="kakao_native_key" translatable="false">kakao5b9af1e01eae99f78d6c93638dd51b75</string>
+    <string name="locage">ロケ地</string>
     <string name="login">로그인</string>
     <string name="login_dialog_title">ログインに困難がありますか</string>
     <string name="login_dialog_tv_01">以前、このソーシャルサービスでログインしましたが、今はダメです</string>
@@ -65,7 +74,12 @@
     <string name="login_ps_hint">비밀번호 입력</string>
     <string name="login_question_tv">ログインに困難がありますか。</string>
     <string name="login_signup">회원가입</string>
+    <string name="mypage_edit_myinfo">私がスクラップしたコース</string>
+    <string name="mypage_myhold_location">私が盛り込んだ場所</string>
+    <string name="mypage_myscrap_course">スクラップしたコース</string>
+    <string name="mypage_title">マイページ</string>
     <string name="project_id" translatable="false">fika-project</string>
+    <string name="review_inform_text">場所と関係のない写真を添付すると、露出が制限されることがあります。</string>
     <string name="sample_review">가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가</string>
     <string name="service_agree_j">
 第1章総則
@@ -515,6 +529,7 @@ WEFIY | 대표 홍예진
     <string name="tester_login_title_tv">테스터 코드를 받으셨나요? \n전달 받은 코드를 입력해주세요.</string>
     <string name="tester_login_warning_tv">사용불가능한 코드입니다</string>
     <string name="verti_bar" translatable="false">|</string>
+    <string name="with_location">一緒に行きやすい場所</string>
     <style name="CustomBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
     </style>

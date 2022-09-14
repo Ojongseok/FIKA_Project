@@ -4273,11 +4273,19 @@ string com_kakao_tokeninfo_button
 string com_kakao_unlink_button
 string common_google_play_services_unknown_issue
 string core_com_kakao_sdk_loading
+string course_explore_actor
+string course_explore_course
+string course_explore_drama
+string course_explore_genre
+string course_explore_search_result
+string course_explore_sort
+string course_explore_title
 string default_web_client_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string filter_drama
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
@@ -4293,6 +4301,7 @@ string item_view_role_description
 string kakao_app_key
 string kakao_native_key
 string label
+string locage
 string log_in_text
 string login
 string login_dialog_title
@@ -4378,6 +4387,10 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
+string mypage_edit_myinfo
+string mypage_myhold_location
+string mypage_myscrap_course
+string mypage_title
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string password_toggle_content_description
@@ -4386,6 +4399,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
+string review_inform_text
 string sample_review
 string search_menu_title
 string service_agree_j
@@ -4399,6 +4413,7 @@ string tester_login_title_tv
 string tester_login_warning_tv
 string title_for_ssl_warning
 string verti_bar
+string with_location
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

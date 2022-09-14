@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:text="내게 맞는 여행 탐색하기"
+        android:text="@string/course_explore_title"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -24,12 +24,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="코스로 탐색"
+        android:text="@string/course_explore_course"
+        android:textColor="@color/grey3"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/grey3"
-        app:layout_constraintStart_toEndOf="@id/explore_drama_tv"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/explore_drama_tv"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <ImageView
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="드라마로 탐색"
+        android:text="@string/course_explore_drama"
         android:textColor="@color/main_blue"
         android:textSize="16sp"
         android:textStyle="bold"

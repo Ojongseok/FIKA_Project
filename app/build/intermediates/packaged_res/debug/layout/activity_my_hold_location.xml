@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|center_vertical"
-            android:text="드라마 제목"
+            android:text="私が盛り込んだ場所"
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -46,7 +46,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/main_blue"
         android:gravity="center"
-        android:text="추가하고 이동하기"
+        android:text="追加して移動する"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold" />

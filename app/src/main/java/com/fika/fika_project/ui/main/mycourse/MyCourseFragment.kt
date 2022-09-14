@@ -75,8 +75,9 @@ class MyCourseFragment :Fragment(), MyCourseView {
 
     override fun onAddGroupSuccess(response: BasicResponse) {
         when(response.code){
-            1000 -> {
-                Snackbar.make(requireView(), "${response.result} 그룹이 생성되었습니다!", Snackbar.LENGTH_SHORT
+                1000 -> {
+                    binding.mycoursePb.visibility = View.GONE
+                    Snackbar.make(requireView(), "${response.result} 그룹이 생성되었습니다!", Snackbar.LENGTH_SHORT
                 ).setAction("Action", null).show()
             }
         }

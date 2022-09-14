@@ -24,7 +24,7 @@
             android:id="@+id/filer_course_tv_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="드라마"
+            android:text="@string/filter_drama"
             android:textColor="#9D9D9D" />
 
         <ImageView
@@ -52,7 +52,7 @@
             android:id="@+id/filter_course_tv_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="배우"
+            android:text="@string/course_explore_actor"
             android:textColor="#9D9D9D" />
 
         <ImageView
@@ -66,7 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
-        android:text="검색결과"
+        android:text="@string/course_explore_search_result"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +99,7 @@
             android:id="@+id/filter_sort_tv_course"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="최신순"
+            android:text="@string/course_explore_sort"
             android:textColor="@color/main_blue" />
 
         <ImageView

@@ -19,7 +19,6 @@ class MyHoldLocationActivity : AppCompatActivity(),AddLocationView,MySpotView {
         _Binding = ActivityMyHoldLocationBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.myholdBackBtn.setOnClickListener { finish() }
-        binding.myholdTitle.text = intent.getStringExtra("dramaTitle")
 //        courseId = intent.getIntExtra("courseId",0)
 //        val service = AddLocationService(this,courseId)
 //        service.tryAddLocation()
