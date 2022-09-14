@@ -37,7 +37,16 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">FIKA_Project</string>
+    <string name="agree_01_contents_01">約款全体同意</string>
+    <string name="agree_01_contents_02">14歳以上です。</string>
+    <string name="agree_01_contents_03">(必須)サービス利用約款</string>
+    <string name="agree_01_contents_04">(必須)個人情報処理方針</string>
+    <string name="agree_01_contents_05">(選択)マーケティング情報受信同意</string>
+    <string name="agree_01_countinue_btn">同意して続ける</string>
+    <string name="agree_01_title_tv">サービス利用同意</string>
+    <string name="agree_02_title_tv">(必須)サービス利用約款</string>
+    <string name="agree_03_title_tv">(必須)個人情報処理方針</string>
+    <string name="app_name" translatable="false">FIKA_Project</string>
     <string name="back_btn">back_btn</string>
     <string name="btm_nav_home">" ホーム"</string>
     <string name="btm_nav_mycourse">私のコース</string>
@@ -51,7 +60,11 @@
     <string name="google_storage_bucket" translatable="false">fika-project.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_btn">home_btn</string>
-    <string name="img_app_logo">FIKA_logo</string>
+    <string name="home_drama_rank_tv">人気ドラマ</string>
+    <string name="home_place_rank_tv">多く盛り込んだ場所</string>
+    <string name="home_scrapcourse_rank_tv">たくさんスクラップしたコース</string>
+    <string name="home_search_et">検索ワードを入力してください。</string>
+    <string name="img_app_logo" translatable="false">FIKA_logo</string>
     <string name="kakao_app_key" translatable="false">5b9af1e01eae99f78d6c93638dd51b75</string>
     <string name="kakao_native_key" translatable="false">kakao5b9af1e01eae99f78d6c93638dd51b75</string>
     <string name="login">로그인</string>
@@ -65,6 +78,14 @@
     <string name="login_ps_hint">비밀번호 입력</string>
     <string name="login_question_tv">ログインに困難がありますか。</string>
     <string name="login_signup">회원가입</string>
+    <string name="mypage_course_tv">私がスクラップしたコース</string>
+    <string name="mypage_place_tv">私が盛り込んだ場所</string>
+    <string name="mypage_title_tv">" マイページ"</string>
+    <string name="nickname_done_tv">FIKAと一緒に旅行を準備します。</string>
+    <string name="nickname_et">ニックネームを入力してください。</string>
+    <string name="nickname_sub_title_tv">ニックネームは空白なしに2~10文字で入力してください。</string>
+    <string name="nickname_title_tv">ニックネームは空白なしに2~10文字で入力してください。</string>
+    <string name="nickname_warning_tv">使用不可能な別名です</string>
     <string name="project_id" translatable="false">fika-project</string>
     <string name="sample_review">가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가</string>
     <string name="service_agree_j">
@@ -515,6 +536,7 @@ WEFIY | 대표 홍예진
     <string name="tester_login_title_tv">테스터 코드를 받으셨나요? \n전달 받은 코드를 입력해주세요.</string>
     <string name="tester_login_warning_tv">사용불가능한 코드입니다</string>
     <string name="verti_bar" translatable="false">|</string>
+    <string name="확인">確認</string>
     <style name="CustomBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
     </style>

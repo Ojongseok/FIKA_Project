@@ -516,10 +516,6 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\drawable\\login_btn.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_signup_02.xml.flat",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_signup_02.xml"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\drawable_order.png.flat",
         "source": "D:\\FIKA\\app\\src\\main\\res\\drawable\\order.png"
     },

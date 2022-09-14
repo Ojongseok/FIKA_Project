@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:layout_marginBottom="18dp"
-            android:text="리뷰 작성"
+            android:text="@string/review_write"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +51,7 @@
             android:paddingTop="6dp"
             android:paddingRight="12dp"
             android:paddingBottom="6dp"
-            android:text="완료"
+            android:text="@string/done"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -173,7 +173,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="만족도"
+        android:text="@string/만족도"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/review_write_container"
@@ -232,7 +232,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="리뷰"
+        android:text="@string/placeinfo_review"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/review_write_container"
@@ -248,11 +248,11 @@
         android:src="@drawable/gallery_plus"/>
 
     <TextView
-        android:id="@+id/textView45"
+        android:id="@+id/review_write_warning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="장소와 무관한 사진을 첨부하면 노출이 제한될 수 있습니다."
+        android:text="@string/review_write_warning"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/review_write_image_select_btn"
         app:layout_constraintTop_toBottomOf="@+id/review_write_image_select_btn" />
@@ -265,13 +265,13 @@
         android:background="@drawable/edittext_background"
         android:ems="10"
         android:gravity="top"
-        android:hint="리뷰를 작성해주세요."
+        android:hint="@string/review_write_review_empty"
         android:inputType="textPersonName"
         android:padding="16dp"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/review_write_container"
         app:layout_constraintStart_toStartOf="@+id/review_write_image_select_btn"
-        app:layout_constraintTop_toBottomOf="@+id/textView45" />
+        app:layout_constraintTop_toBottomOf="@+id/review_write_warning" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/review_write_fragment_container"

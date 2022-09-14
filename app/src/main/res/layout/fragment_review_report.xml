@@ -20,20 +20,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:text="신고하기"
+        android:text="@string/review_report_title_tv"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <ImageView
+    <TextView
         android:id="@+id/review_report_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/review_report_btn"
+        android:padding="6dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="@string/done"
+        android:gravity="center"
+        android:background="@drawable/blue_btn_background"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -42,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="신고하시는 사유가 무엇인가요? (필수)"
+        android:text="@string/review_report_sub_title_tv"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/review_report_title_tv"
@@ -79,7 +84,7 @@
                 android:id="@+id/review_report_contents_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="관련 없는 내용"
+                android:text="@string/review_report_contents_01"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
 
@@ -104,7 +109,7 @@
                 android:id="@+id/review_report_contents_02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="같은 내용 도배"
+                android:text="@string/review_report_contents_02"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
 
@@ -137,7 +142,7 @@
                 android:id="@+id/review_report_contents_03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="욕설/인신공격/음란/선정성"
+                android:text="@string/review_report_contents_03"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
 
@@ -170,7 +175,7 @@
                 android:id="@+id/review_report_contents_04"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="개인정보 누출 위험"
+                android:text="@string/review_report_contents_04"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
 
@@ -203,7 +208,7 @@
                 android:id="@+id/review_report_contents_05"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="권리침해 신고"
+                android:text="@string/review_report_contents_05"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
 
@@ -236,7 +241,7 @@
                 android:id="@+id/review_report_contents_06"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="기타"
+                android:text="@string/review_report_contents_06"
                 android:layout_marginStart="4dp"
                 android:textSize="16sp"/>
 
@@ -262,7 +267,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="신고하시는 사유를 구체적으로 작성해주세요. (필수)"
+        android:text="@string/review_report_detail_tv"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/review_report_contents_layout"

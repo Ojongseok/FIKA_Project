@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">FIKA_Project</string>
-    <string name="img_app_logo">FIKA_logo</string>
+    <string name="app_name" translatable="false">FIKA_Project</string>
+    <string name="img_app_logo" translatable="false">FIKA_logo</string>
 
     <string name="btm_nav_search">探索</string>
     <string name="btm_nav_mycourse">私のコース</string>
@@ -476,5 +476,78 @@ WEFIY | 대표 홍예진
     <string name="login_dialog_tv_01">以前、このソーシャルサービスでログインしましたが、今はダメです</string>
     <string name="login_dialog_tv_02">- ログインしていたソーシャルサービスのアカウントを削除したり、パスワードを変更したりしましたか？ この場合、当該ソーシャルサービスで確認後FIKAにログインが可能です。</string>
     <string name="login_dialog_tv_03">- 問題が解決されなければカスタマーセンターにメールを送ってください! いつも発展するFIKAになります。😊</string>
+    <string name="agree_01_title_tv">サービス利用同意</string>
+    <string name="agree_01_contents_01">約款全体同意</string>
+    <string name="agree_01_contents_02">14歳以上です。</string>
+    <string name="agree_01_contents_03">(必須)サービス利用約款</string>
+    <string name="agree_01_contents_04">(必須)個人情報処理方針</string>
+    <string name="agree_01_contents_05">(選択)マーケティング情報受信同意</string>
+    <string name="agree_01_countinue_btn">同意して続ける</string>
+    <string name="agree_02_title_tv">(必須)サービス利用約款</string>
+    <string name="확인">確認</string>
+    <string name="agree_03_title_tv">(必須)個人情報処理方針</string>
+    <string name="nickname_title_tv">ニックネームは空白なしに2~10文字で入力してください。</string>
+    <string name="nickname_et">ニックネームを入力してください。</string>
+    <string name="nickname_warning_tv">使用不可能な別名です</string>
+    <string name="nickname_done_tv">FIKAと一緒に旅行を準備します。</string>
+    <string name="nickname_sub_title_tv">ニックネームは空白なしに2~10文字で入力してください。</string>
+    <string name="home_search_et">検索ワードを入力してください。</string>
+    <string name="home_drama_rank_tv">人気ドラマ</string>
+    <string name="home_scrapcourse_rank_tv">たくさんスクラップしたコース</string>
+    <string name="home_place_rank_tv">多く盛り込んだ場所</string>
+    <string name="mypage_title_tv">マイページ</string>
+    <string name="mypage_place_tv">盛り込んだ場所</string>
+    <string name="mypage_course_tv">スクラップしたコース</string>
+    <string name="edit_personal_title_tv">個人情報変更</string>
+    <string name="edit_personal_sub_title_tv">ニックネーム</string>
+    <string name="edit_personal_warning_tv">使用不可能なニックネームです。</string>
+    <string name="edit_personal_quit_tv">FIKA脱退する</string>
+    <string name="edit_personal_done_btn">完了</string>
+    <string name="quit_title_tv">FIKA 脱退</string>
+    <string name="quit_sub_title_tv">留意事項</string>
+    <string name="quit_contents_tv_1">退会すると、登録履歴、ニックネーム、作ったコースがなくなり復旧が不可能です。</string>
+    <string name="quit_contents_tv_2">退会後も作成したレビューは削除されず、unknownの掲示物として維持されます。</string>
+    <string name="quit_contents_warning_tv">注意事項を熟知し、脱退を行います。</string>
+    <string name="edit_personal_et">new nickname</string>
+    <string name="dialog_quit_title_tv">脱退</string>
+    <string name="dialog_quit_contents_tv">FIKAは皆様のために新しいドラマの場所をアップデートし続けています。 残念ですが、それでも脱退されますか？ </string>
+    <string name="dialog_quit_back_btn">引き返す</string>
+    <string name="dialog_quit_quit_btn">脱退</string>
+    <string name="loading">loading…</string>
+    <string name="footer_add_course_tv">コースを追加</string>
+    <string name="login_tester_btn">テスト用ログイン →</string>
+    <string name="login_dialog_email">メールを送る</string>
+    <string name="search_recent_tv">最近の検索ワード</string>
+    <string name="search_recomend_tv">オススメ検索ワード</string>
+    <string name="serach_rank_tv">人気検索ワード</string>
+    <string name="search_rank_sub_tv">FIKA利用者が多く検索しました。</string>
+    <string name="n개">nつ</string>
+    <string name="drama">ドラマ</string>
+    <string name="course">コース</string>
+    <string name="spot">場所</string>
+    <string name="placeinfo_locate_top_title_tv">場所情報</string>
+    <string name="placeinfo_locate_add_my_course_btn">┼ 自分のコースに入れる</string>
+    <string name="placeinfo_basic_info">基本情報</string>
+    <string name="placeinfo_where_info">位置情報</string>
+    <string name="placeinfo_menu_info">代表メニュー及び価格</string>
+    <string name="placeinfo_review">レビュー</string>
+    <string name="placeinfo_all_review_btn">全体レビューを見ること</string>
+    <string name="locate">ロケ地</string>
+    <string name="all_view_title_tv">全体レビューを見ること</string>
+    <string name="all_view_photoreview">写真のレビューだけ見る</string>
+    <string name="review_report_title_tv">申告</string>
+    <string name="review_report_sub_title_tv">申告する理由は何ですか?(必須)</string>
+    <string name="review_report_contents_01">関係のない内容</string>
+    <string name="review_report_contents_02">同じ内容で覆い隠れする</string>
+    <string name="review_report_contents_03">悪口/人身攻撃/淫乱/扇情性</string>
+    <string name="review_report_contents_04">個人情報漏洩の危険性</string>
+    <string name="review_report_contents_05">権利侵害申告</string>
+    <string name="review_report_contents_06">その他</string>
+    <string name="review_report_detail_tv">申告する事由を具体的に作成してください。(必須)</string>
+    <string name="done">登録</string>
+    <string name="review_write">レビュー作成</string>
+    <string name="만족도">満足度</string>
+    <string name="review_write_warning">場所と関係のない写真を添付すると、露出が制限されることがあります。</string>
+    <string name="review_write_review_empty">レビューを作成してください</string>
 
 </resources>

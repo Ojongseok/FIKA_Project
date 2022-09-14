@@ -25,7 +25,7 @@
         android:id="@+id/all_view_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="전체 리뷰 보기"
+        android:text="@string/all_view_title_tv"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
@@ -37,7 +37,7 @@
         android:id="@+id/all_view_sub_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="리뷰"
+        android:text="@string/placeinfo_review"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="32dp"
@@ -49,7 +49,7 @@
         android:id="@+id/all_view_sub_title_num_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0개"
+        android:text="@string/n개"
         android:textSize="16sp"
         android:layout_marginStart="8dp"
         app:layout_constraintTop_toTopOf="@id/all_view_sub_title_tv"
@@ -75,7 +75,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="사진 리뷰만 보기"
+            android:text="@string/all_view_photoreview"
             android:textSize="16sp"
             android:layout_marginStart="4dp"/>
         <View
@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/sub_blue"
-            android:text="정렬"
+            android:text="最新順"
             android:textSize="16sp"
             android:layout_marginEnd="5dp"/>
 

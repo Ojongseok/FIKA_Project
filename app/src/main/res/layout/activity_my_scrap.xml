@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="내가 스크랩한 코스"
+                android:text="@string/mypage_course_tv"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 

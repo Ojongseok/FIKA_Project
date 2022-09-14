@@ -48,7 +48,7 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
             }
         }else{
             return when(viewType) {
-                FOOTER -> FooterViewHolder(viewGroup.inflate(R.drawable.home_course_null_card))
+                FOOTER -> FooterViewHolder(viewGroup.inflate(R.drawable.home_course_null_card_jp))
                 else -> FooterViewHolder(viewGroup.inflate(R.layout.footer_home_my_course_null))
         }
 
