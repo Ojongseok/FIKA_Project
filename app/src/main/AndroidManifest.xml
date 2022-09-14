@@ -58,7 +58,7 @@
         <activity android:name="com.fika.fika_project.ui.main.explore.FolderSelectActivity" />
         <activity android:name="com.fika.fika_project.ui.main.explore.CourseDetailDrama" />
         <activity android:name="com.fika.fika_project.ui.main.explore.drama_info.DramaInfoActivity" />
-        <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity" />
+        <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.add_location.MyHoldLocationActivity" />
         <activity android:name="com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity" />
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"

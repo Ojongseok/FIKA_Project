@@ -8,6 +8,7 @@ import com.fika.fika_project.ui.main.home.HomeResponse
 import com.fika.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.fika.fika_project.ui.login.AuthResponse
 import com.fika.fika_project.ui.login.BasicResponse
+import com.fika.fika_project.ui.main.explore.AddLocationResponse
 import com.fika.fika_project.ui.main.explore.folder.FolderResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceInfoResponse
@@ -92,6 +93,13 @@ interface RetrofitInterface {
         @Path("spotId") spotId : Int
     ): Call<LocationHoldResponse>
 
+    //17. 코스에 장소 추가
+    @PATCH("/course/{courseId}/spots")
+    fun loadAddLocation(
+        @Path("courseId") courseId : Int,
+        @Body addLocation : AddLocationDTO?
+    ) :Call<AddLocationResponse>
+
     //17. 코스 편집
     @PATCH("/course/edit/{courseId}")
     fun loadCourseEdit(
@@ -139,4 +147,9 @@ interface RetrofitInterface {
     @POST("/member/demo/tester")
     fun TesterLogin(@Body testerCode:testerCode) : Call<BasicResponse>
 
+    // 33. 리뷰 편집
+    @PUT("/review/{reviewId}")
+    fun editReview(
+        @Path("reviewId") reviewId : Int
+    )
 }

@@ -79,6 +79,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
+                    android:maxLines="3"
                     android:text="박새로이와 조이서가 함께 오픈한 꿀밤포차"
                     android:textColor="@color/black"
                     android:textSize="20sp"

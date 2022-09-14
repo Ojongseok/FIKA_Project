@@ -154,9 +154,9 @@
 75        <activity android:name="com.fika.fika_project.ui.main.explore.drama_info.DramaInfoActivity" />
 75-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:60:9-103
 75-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:60:19-100
-76        <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity" />
-76-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:61:9-110
-76-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:61:19-107
+76        <activity android:name="com.fika.fika_project.ui.main.mycourse.course_edit.add_location.MyHoldLocationActivity" />
+76-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:61:9-123
+76-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:61:19-120
 77        <activity android:name="com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity" />
 77-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:62:9-103
 77-->C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:62:19-100

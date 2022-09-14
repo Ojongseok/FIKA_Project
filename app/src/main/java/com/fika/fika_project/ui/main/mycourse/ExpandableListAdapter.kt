@@ -81,6 +81,7 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
                 itemController1.child_title.text = item.text
                 itemController1.dramatitle.text = item.dramaTitle
                 itemController1.address.text = item.address
+                itemController1.spotinfo.text = item.spotList.toString()
                 Glide.with(context).load(item.imageUrl).into(itemController1.imageurl)
                 itemController1.cardLayout.setOnClickListener {
                     val intent = Intent(context,MyCourseViewActivity::class.java)
@@ -137,6 +138,7 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
         var dramatitle = itemView!!.item_home_coursescrap_drama_title_tv
         var address = itemView!!.item_home_coursescrap_where_tv
         var imageurl = itemView!!.item_home_scrapcourse_iv
+        var spotinfo = itemView!!.item_home_coursescrap_info_tv
 
         init {
             child_title = itemView!!.child_title
@@ -152,18 +154,20 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
         var imageUrl:String? = null
         var invisibleChildren: MutableList<Item?>? = null
         var courseId:Int? =0
+        var spotList:List<String>? = null
 
         constructor(type: Int,text: String?) {
             this.type = type
             this.text = text
         }
-        constructor(type: Int, text: String?,dramaTitle:String?,address: String?,imageUrl:String?,courseId:Int?) {
+        constructor(type: Int, text: String?,dramaTitle:String?,address: String?,imageUrl:String?,courseId:Int?,spotList:List<String>?) {
             this.type = type
             this.text = text
             this.address = address
             this.imageUrl = imageUrl
             this.dramaTitle = dramaTitle
             this.courseId = courseId
+            this.spotList = spotList
         }
     }
 

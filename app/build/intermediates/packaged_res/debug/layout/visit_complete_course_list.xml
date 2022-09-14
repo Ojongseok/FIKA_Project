@@ -96,13 +96,14 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout3">
 
         <ImageView
-            android:id="@+id/imageView18"
+            android:id="@+id/visit_complete_visit_iv"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginRight="4dp"
             app:srcCompat="@drawable/review_white" />
 
         <TextView
+            android:id="@+id/visit_complete_review_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="리뷰"

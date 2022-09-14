@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.mycourse.course_edit.MyHoldLocationActivity">
+    tools:context=".ui.main.mycourse.course_edit.add_location.MyHoldLocationActivity">
 
     <FrameLayout
         android:id="@+id/myhold_title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
-        android:paddingTop="8dp"
+        android:paddingTop="16dp"
         android:paddingRight="20dp"
         android:paddingBottom="8dp">
 
@@ -26,7 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|center_vertical"
-            android:text="이태원 클라쓰"
+            android:text="드라마 제목"
+            android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -43,9 +44,10 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:layout_alignParentBottom="true"
-        android:background="#F3F3F3"
+        android:background="@color/main_blue"
         android:gravity="center"
         android:text="추가하고 이동하기"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -58,5 +60,14 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="20dp" />
+
+    <ProgressBar
+        android:id="@+id/hold_location_pr"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/main_blue"
+        android:visibility="invisible" />
 
 </RelativeLayout>

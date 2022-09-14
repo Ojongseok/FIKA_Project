@@ -13,7 +13,7 @@ data class result(
     @SerializedName("courseId") val courseId: Int?,
     @SerializedName("courseTitle") val courseTitle : String?,
     @SerializedName("dramaId") val dramaId : Int?,
-    @SerializedName("locageSceneDescribe") val locageSceneDescribe : String?,
+    @SerializedName("dramaTitle") val dramaTitle : String?,
     @SerializedName("baseAddress") val baseAddress : String?,
     @SerializedName("spotList") val spotList : ArrayList<spotList>?,
     @SerializedName("courseSavedCount") val courseSavedCount : Int?

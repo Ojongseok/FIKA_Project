@@ -14,7 +14,6 @@ class MyCourseService (val View: MyCourseView){
 
     fun tryAddGroup(groupName: GroupName){
         View.onLoading()
-
         retrofit.AddGroup(groupName).enqueue(object : Callback<BasicResponse> {
             override fun onResponse(call: Call<BasicResponse>, response: Response<BasicResponse>) {
                 val result : BasicResponse? = response.body()

@@ -60,7 +60,8 @@ class MyCourseFragment :Fragment(), MyCourseView {
                                 response.result[i].coursePreviewList?.get(j)?.dramaTitle,
                                 response.result[i].coursePreviewList?.get(j)?.baseAddress,
                                 response.result[i].coursePreviewList?.get(j)?.locageImageUrl,
-                                response.result[i].coursePreviewList?.get(j)?.courseId
+                                response.result[i].coursePreviewList?.get(j)?.courseId,
+                                response.result[i].coursePreviewList?.get(j)?.spotTitleList
                             ))
                         }
                     }
@@ -75,6 +76,7 @@ class MyCourseFragment :Fragment(), MyCourseView {
     override fun onAddGroupSuccess(response: BasicResponse) {
         when(response.code){
             1000 -> {
+                binding.mycoursePb.visibility = View.GONE
                 Snackbar.make(requireView(), "${response.result} 그룹이 생성되었습니다!", Snackbar.LENGTH_SHORT
                 ).setAction("Action", null).show()
             }

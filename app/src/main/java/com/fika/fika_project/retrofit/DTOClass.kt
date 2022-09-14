@@ -20,7 +20,9 @@ data class ReviewReport(
 data class GroupName(
     var groupName: String
 )
-
+data class AddLocationDTO(
+    var spotIdList : ArrayList<Int>?
+)
 data class testerCode(
     var testerCode: String
 )

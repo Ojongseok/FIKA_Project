@@ -340,10 +340,10 @@ activity#com.fika.fika_project.ui.main.explore.drama_info.DramaInfoActivity
 ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:60:9-103
 	android:name
 		ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:60:19-100
-activity#com.fika.fika_project.ui.main.mycourse.course_edit.MyHoldLocationActivity
-ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:61:9-110
+activity#com.fika.fika_project.ui.main.mycourse.course_edit.add_location.MyHoldLocationActivity
+ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:61:9-123
 	android:name
-		ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:61:19-107
+		ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:61:19-120
 activity#com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
 ADDED from C:\Users\User\AndroidStudioProjects\FIKA_Project\app\src\main\AndroidManifest.xml:62:9-103
 	android:name

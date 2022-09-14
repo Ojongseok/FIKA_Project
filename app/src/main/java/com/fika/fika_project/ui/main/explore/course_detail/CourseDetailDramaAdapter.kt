@@ -33,7 +33,7 @@ class CourseDetailDramaAdapter(val locationList: ArrayList<spotList>, val contex
         Glide.with(context).load(locationList[position].spotImageUrl).into(view.course_detail_iv)
         view.course_detail_where_tv.text = locationList[position].shortAddress
         view.course_detail_category_tv.text = locationList[position].type
-        view.map_title_name_tv.text = locationList[position].spotTitle
+        view.hold_title_name_tv.text = locationList[position].spotTitle
         if (locationList[position].locage!!) {
             view.locage_tv.visibility = View.VISIBLE
         }

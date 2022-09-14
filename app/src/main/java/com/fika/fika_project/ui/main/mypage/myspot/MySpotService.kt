@@ -12,6 +12,7 @@ class MySpotService(val View: MySpotView) {
     val load = retrofit.loadMySpot()
 
     fun tryloadMySpot(){
+        View.onExploreLoading()
         load.enqueue(object : Callback<MySpotResponse> {
             override fun onResponse(call: Call<MySpotResponse>, response: Response<MySpotResponse>) {
                 val resp = response.body()

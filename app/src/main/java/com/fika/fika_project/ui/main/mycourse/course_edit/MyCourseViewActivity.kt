@@ -3,12 +3,12 @@ package com.fika.fika_project.ui.main.mycourse.course_edit
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityMycourseViewBinding
+import com.fika.fika_project.ui.main.mycourse.course_edit.add_location.MyHoldLocationActivity
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.MyCourseEditState
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.*
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
@@ -21,6 +21,7 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
     private val binding get() = _Binding!!
     var courseId = 0
     var groupId = 0
+    var dramaTitle = ""
     lateinit var spotList : ArrayList<spotList>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +44,18 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
             }).commit()
 
         binding.mycourseViewAddLocation.setOnClickListener {
-            startActivity(Intent(this, MyHoldLocationActivity::class.java))
+            val intent = Intent(this, MyHoldLocationActivity::class.java)
+            intent.putExtra("dramaTitle",dramaTitle)
+            intent.putExtra("courseId",courseId)
+            startActivity(intent)
+        }
+        binding.myholdHomeBtn.setOnClickListener {
+//            val intent = Intent(this,MainActivity::class.java)
+//            intent.putExtra("homeState",1)
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+//            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+//            startActivity(intent)
+//            finish()
         }
     }
     override fun editvisible() {
@@ -91,6 +103,7 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
             1000 -> {
                 response.let {
                     spotList = it.result?.spotList!!
+                    dramaTitle = it.result?.dramaTitle!!
                     initKakaomapData(spotList)
                 }
             }
