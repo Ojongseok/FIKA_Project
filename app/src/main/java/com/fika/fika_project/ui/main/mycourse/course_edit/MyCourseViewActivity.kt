@@ -59,12 +59,10 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
         }
     }
     override fun editvisible() {
-        binding.mycourseEditText.visibility = View.VISIBLE
         binding.myholdTitle.visibility = View.INVISIBLE
         binding.mycourseViewAddLocation.visibility = View.GONE
     }
     override fun saveVisible() {
-        binding.mycourseEditText.visibility = View.INVISIBLE
         binding.myholdTitle.visibility = View.VISIBLE
         binding.mycourseViewAddLocation.visibility = View.VISIBLE
     }

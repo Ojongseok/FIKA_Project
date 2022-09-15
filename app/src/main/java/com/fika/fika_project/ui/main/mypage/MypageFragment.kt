@@ -98,7 +98,7 @@ class MypageFragment : Fragment(), MypageView {
                     Glide.with(requireContext()).load(response.result[0].spotImageUrl)
                         .into(binding.mypagePlaceCoverIv)
                 } else {
-                    binding.mypagePlaceCoverIv.setImageResource(R.color.white)
+                    binding.mypagePlaceCoverIv.setImageResource(R.color.grey4)
 
                 }
             }
@@ -113,7 +113,7 @@ class MypageFragment : Fragment(), MypageView {
                         .into(binding.mypageCourseCoverIv)
 
                 } else {
-                    binding.mypageCourseCoverIv.setImageResource(R.color.white)
+                    binding.mypageCourseCoverIv.setImageResource(R.color.grey4)
 
                 }
             }

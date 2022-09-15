@@ -1,10 +1,13 @@
 package com.fika.fika_project.ui.login
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.fika.fika_project.ApplicationClass.Companion.TAG
 import com.fika.fika_project.R
@@ -12,6 +15,12 @@ import com.fika.fika_project.databinding.ActivityLoginBinding
 import com.fika.fika_project.retrofit.testerCode
 import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.utils.spfManager
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
@@ -20,13 +29,27 @@ import com.kakao.util.helper.Utility
 
 class LoginActivity : AppCompatActivity(), LoginView {
     lateinit var binding: ActivityLoginBinding
+    lateinit var mGoogleSignInClient : GoogleSignInClient
+    lateinit var resultRuncher : ActivityResultLauncher<Intent>
+
     val service = LoginService(this)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+    override fun onStart() {
+        super.onStart()
 
-//
+        val account = GoogleSignIn.getLastSignedInAccount(this)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        super.onCreate(savedInstanceState)
+
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestEmail()
+            .build()
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+
 //        var keyHash = Utility.getKeyHash(this)
 //        Log.e(TAG, "해시 키 값 : ${keyHash}")
 
@@ -39,6 +62,33 @@ class LoginActivity : AppCompatActivity(), LoginView {
 //        val intent = Intent(this, MainActivity::class.java)
 //        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 //        startActivity(intent)
+
+    }
+
+    private fun setResultSignUp(){
+        resultRuncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
+            if(result.resultCode == Activity.RESULT_OK){
+                val task : Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(result.data)
+                
+                handleSignInResult(task)
+            }
+        }
+    }
+
+    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
+        try{
+          val account = completedTask.getResult(ApiException::class.java)
+          val email = account?.email.toString()
+
+        Log.d("유저 google 이메일",email)
+        }catch(e: ApiException){
+            Log.w("failed","signInResult:failed code = " + e.statusCode)
+        }
+    }
+
+    private fun googleLogin(){
+        val signIntent: Intent = mGoogleSignInClient.signInIntent
+        resultRuncher.launch(signIntent)
     }
 
     private fun initClickListener() {
@@ -48,19 +98,23 @@ class LoginActivity : AppCompatActivity(), LoginView {
         }
 
         binding.loginTesterBtn.setOnClickListener {
-            supportFragmentManager.beginTransaction()
+                    supportFragmentManager.beginTransaction()
                 .replace(R.id.login_frm, TesterloginFragment())
                 .commitAllowingStateLoss()
-//편의상 시작
+
 //            val getCode = testerCode("rf2amgpNuA")
-//            service.tryTesterLogin(getCode)
         }
 
         binding.loginGoogleIv.setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.login_frm, Agree01Fragment())
-                .commitAllowingStateLoss()
+//            googleLogin()
+
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.login_frm, Agree01Fragment())
+//                .commitAllowingStateLoss()
+
         }
+
+
 
         binding.loginKakaoIv.setOnClickListener {
             // 카카오계정으로 로그인 공통 callback 구성
