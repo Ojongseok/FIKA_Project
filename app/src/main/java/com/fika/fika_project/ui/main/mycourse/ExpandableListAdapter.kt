@@ -3,6 +3,7 @@ package com.fika.fika_project.ui.main.mycourse
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +26,9 @@ import kotlinx.android.synthetic.main.fragment_mycourse_list_header.view.*
 import kotlinx.android.synthetic.main.item_home_scrapcourse.view.*
 
 
-class ExpandableListAdapter(val context: Context, private val data: MutableList<Item>) : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
+class ExpandableListAdapter(val context: Context, private val data: MutableList<Item>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder?>(),DeleteCourseView {
+    var removePosition = -1
     override fun onCreateViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
         var view: View? = null
         val context = parent.context
@@ -47,6 +50,7 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = data[position]
+        Log.d("TTT",position.toString())
         when (item!!.type) {
             HEADER -> {
                 val itemController = holder as ListHeaderViewHolder?
@@ -96,7 +100,7 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
                     context.startActivity(intent)
                 }
                 itemController1.childToggleBtn.setOnClickListener {
-                    val menuList =arrayOf("レビュー作成","グループ移動","코스 정보 편집","コース削除")
+                    val menuList =arrayOf("レビュー作成","グループ移動","コース情報編集","コース削除")
                     val dialog = AlertDialog.Builder(context,android.R.style.Theme_DeviceDefault_Light_Dialog_NoActionBar)
                     dialog.setTitle("선택").setItems(menuList, DialogInterface.OnClickListener { dialogInterface, i ->
                         when(i) {
@@ -112,14 +116,16 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
                                 context.startActivity(Intent(context,CourseInfoEditActivity::class.java))
                             }
                             3 -> {
-                                Toast.makeText(context,menuList[i],Toast.LENGTH_SHORT).show()
+                                removePosition = position
+                                val service = DeleteCourseService(this,item.courseId!!)
+                                service.tryDeleteCourse()
+                                data.removeAt(removePosition)
+                                notifyDataSetChanged()
                             }
                         }
-
                     })
                     dialog.show()
                 }
-
             }
         }
     }
@@ -182,4 +188,19 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
         const val HEADER = 0
         const val CHILD = 1
     }
+
+    override fun onLoading() {
+
+    }
+
+    override fun onDeleteCourseSuccess(response: DeleteCourseResponse) {
+        when (response.code) {
+            1021 -> {
+                response.let {
+                    Toast.makeText(context,"成功的に削除されました。",Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
 }

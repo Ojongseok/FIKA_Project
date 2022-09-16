@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -36,12 +37,13 @@ class FolderSelectActivity : AppCompatActivity(),FolderView,CreateCourseView {
         courseId = intent.getIntExtra("courseId",0)
         addCourseDTO = intent.getSerializableExtra("addCourseDTO") as AddCourseDTO
         binding.folderSelectGoCourseBtn.setOnClickListener {
-            addCourseDTO.courseGroupId = groupId
-
-            val service = CreateCourseService(this,addCourseDTO)
-            service.tryCreateCourse()
-
-
+            if (selectPosition ==-1) {
+                Toast.makeText(this,"메뉴를 선택해주세요",Toast.LENGTH_SHORT).show()
+            } else {
+                addCourseDTO.courseGroupId = groupId
+                val service = CreateCourseService(this,addCourseDTO)
+                service.tryCreateCourse()
+            }
         }
 
         binding.folderSelectStayBtn.setOnClickListener {
@@ -87,6 +89,7 @@ class FolderSelectActivity : AppCompatActivity(),FolderView,CreateCourseView {
                     intent.putExtra("courseId", it.result)
                     intent.putExtra("addCourseDTO",addCourseDTO)
                     startActivity(intent)
+                    finish()
                 }
             }
         }

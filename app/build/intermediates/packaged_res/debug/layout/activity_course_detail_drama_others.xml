@@ -291,6 +291,42 @@
                 app:layout_constraintStart_toStartOf="@+id/textView33"
                 app:layout_constraintTop_toBottomOf="@+id/myhold_top_layout" />
 
+            <LinearLayout
+                android:layout_width="216dp"
+                android:layout_height="0dp"
+                android:gravity="right"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/textView27"
+                app:layout_constraintStart_toEndOf="@+id/textView27"
+                app:layout_constraintTop_toTopOf="@+id/textView27"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/others_filter1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="4dp"
+                    android:text="おいしい店" />
+
+                <TextView
+                    android:id="@+id/others_filter2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="4dp"
+                    android:text="行くに足る所" />
+
+                <TextView
+                    android:id="@+id/others_filter3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="4dp"
+                    android:text="カフェ" />
+
+            </LinearLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/detail_course_together_recyclerview"
                 android:layout_width="0dp"

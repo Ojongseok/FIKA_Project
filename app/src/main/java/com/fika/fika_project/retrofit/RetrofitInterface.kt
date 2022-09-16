@@ -16,6 +16,7 @@ import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceInfoResponse
 import com.fika.fika_project.ui.main.mypage.MyScrapResponse
 import com.fika.fika_project.ui.main.mypage.MypageResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationScrapResponse
+import com.fika.fika_project.ui.main.mycourse.DeleteCourseResponse
 import com.fika.fika_project.ui.main.mycourse.MyCourseResponse
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.CourseEditResponse
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.CourseViewResponse
@@ -159,4 +160,10 @@ interface RetrofitInterface {
     fun editReview(
         @Path("reviewId") reviewId : Int
     )
+
+    // 36. 코스 삭제
+    @DELETE("/course/{courseId}")
+    fun deleteCourse(
+        @Path("courseId") courseId : Int
+    ) : Call<DeleteCourseResponse>
 }

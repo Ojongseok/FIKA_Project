@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.fika.fika_project.R
@@ -20,7 +21,7 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
     private val binding get() = _Binding!!
     lateinit var locationAdapter : CourseDetailLocationOthersAdapter
     var courseId = 0
-     var addCourseDTO = AddCourseDTO()
+    var addCourseDTO = AddCourseDTO()
     lateinit var spotList :ArrayList<spotList>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,8 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
         val service = CourseDetailService(this,courseId)
         service.tryLoadCourseDetail()
         binding.courseDetailDramaBackBtn.setOnClickListener { finish() }
+
+
     }
 
     private fun initData(initList: result) {
@@ -126,10 +129,26 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
 
                     setOnClickEvent()
                     initData(it.result!!)
+                    filterSet()
                 }
             }
         }
     }
+    private fun filterSet() {
+        binding.othersFilter1.setOnClickListener {
+            var filterList = ArrayList<spotList>()
+            for (i in 0 until spotList.size) {
+                if (spotList[i].type.equals("restaurant")) {
+                    filterList.add(spotList[i])
+                }
+            }
+            binding.detailCourseTogetherRecyclerview.adapter.apply {
+                CourseDetailLocationOthersAdapter(filterList,applicationContext)
+            }
+            Toast.makeText(applicationContext,"ㅋ",Toast.LENGTH_SHORT).show()
+        }
+    }
+
     override fun onExploreFailure(code: Int, message: String) {
     }
 }
