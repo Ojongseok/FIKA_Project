@@ -23,19 +23,27 @@ data class ReviewReport(
 data class GroupName(
     var groupName: String
 )
+
 data class AddLocationDTO(
     var spotIdList : ArrayList<Int>?
 )
+
 data class testerCode(
     var testerCode: String
 )
+
 data class CourseEditDTO(
     val courseTitle : String?,
     val spotIdList : ArrayList<Long>
 )
+
 data class AddCourseDTO(
     var baseCourseId : Int?=0,
     var courseGroupId : Int?=0,
     var locageSpotId : Int?=0,
     var spotIdList : ArrayList<Int> = ArrayList()
 ) : Serializable
+
+data class GoogleEmail(
+    var googleRequestEmail: String
+)

@@ -38,15 +38,7 @@ class AllReviewFragment: Fragment(), PlaceinfoView {
             fragmentManager.popBackStack()
         }
 
-        binding.allReviewLookPhotoCb.setOnClickListener {
-            isChecked = !isChecked
 
-            if(isChecked){
-                binding.allReviewLookPhotoCb.setImageResource(R.drawable.ic_checkbox_off)
-            }else{
-                binding.allReviewLookPhotoCb.setImageResource(R.drawable.ic_checkbox_on)
-            }
-        }
     }
 
     private fun setAdapter(reviewList: ArrayList<ReviewList>) {
@@ -92,6 +84,16 @@ class AllReviewFragment: Fragment(), PlaceinfoView {
                 } else {
                     binding.allReviewEmptyTv.visibility = View.GONE
                     binding.allReviewRv.visibility = View.VISIBLE
+                }
+
+                binding.allReviewLookPhotoCb.setOnClickListener {
+                    isChecked = !isChecked
+
+                    if(isChecked){
+                        binding.allReviewLookPhotoCb.setImageResource(R.drawable.ic_checkbox_off)
+                    }else{
+                        binding.allReviewLookPhotoCb.setImageResource(R.drawable.ic_checkbox_on)
+                    }
                 }
             }
         }

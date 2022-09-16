@@ -48,13 +48,14 @@
     <string name="agree_03_title_tv">(必須)個人情報処理方針</string>
     <string name="all_view_photoreview">写真のレビューだけ見る</string>
     <string name="all_view_title_tv">全体レビューを見ること</string>
-    <string name="app_name" translatable="false">FIKA_Project</string>
+    <string name="app_name" translatable="false">FIKA</string>
     <string name="back_btn">back_btn</string>
     <string name="btm_nav_home">" ホーム"</string>
     <string name="btm_nav_mycourse">私のコース</string>
     <string name="btm_nav_mypage">" マイページ"</string>
     <string name="btm_nav_search">探索</string>
     <string name="course">コース</string>
+    <string name="course_detail_hold_btn">自分のコースに入れる</string>
     <string name="course_explore_actor">俳優</string>
     <string name="course_explore_course">コース探索</string>
     <string name="course_explore_drama">ドラマで探索</string>
@@ -89,8 +90,8 @@
     <string name="home_scrapcourse_rank_tv">たくさんスクラップしたコース</string>
     <string name="home_search_et">検索ワードを入力してください。</string>
     <string name="img_app_logo" translatable="false">FIKA_logo</string>
-    <string name="kakao_app_key" translatable="false">5b9af1e01eae99f78d6c93638dd51b75</string>
-    <string name="kakao_native_key" translatable="false">kakao5b9af1e01eae99f78d6c93638dd51b75</string>
+    <string name="kakao_app_key">5b9af1e01eae99f78d6c93638dd51b75</string>
+    <string name="kakao_native_key">kakao5b9af1e01eae99f78d6c93638dd51b75</string>
     <string name="loading">loading…</string>
     <string name="locage">ロケ地</string>
     <string name="locate">ロケ地</string>
@@ -106,7 +107,7 @@
     <string name="login_ps_hint">비밀번호 입력</string>
     <string name="login_question_tv">ログインに困難がありますか。</string>
     <string name="login_signup">회원가입</string>
-    <string name="login_tester_btn">テスト用ログイン →</string>
+    <string name="login_tester_btn">테스터용 로그인 →</string>
     <string name="mypage_course_tv">スクラップしたコース</string>
     <string name="mypage_edit_myinfo">私がスクラップしたコース</string>
     <string name="mypage_myhold_location">私が盛り込んだ場所</string>
@@ -610,21 +611,21 @@ WEFIY | 대표 홍예진
         <item name="android:background">@android:color/transparent</item>
     </style>
     <style name="Theme.FIKA_Project" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Primary brand color. -->
+        
         <item name="colorPrimary">@color/main_blue</item>
         <item name="colorPrimaryVariant">@color/sub_blue</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
+        
         <item name="colorSecondary">@color/main_yellow</item>
         <item name="colorSecondaryVariant">@color/sub_yellow</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
+        
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar" ns1:ignore="NewApi">true</item>
-        <!-- Customize your theme here. -->
+        
         <item name="android:windowBackground">@color/white</item>
 
-        <!--custom font-family-->
+        
         <item name="android:textViewStyle">@style/customTextViewFontStyle</item>
         <item name="android:buttonStyle">@style/customButtonFontStyle</item>
         <item name="android:editTextStyle">@style/customEditTextFontStyle</item>

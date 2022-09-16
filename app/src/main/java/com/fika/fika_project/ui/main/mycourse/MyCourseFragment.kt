@@ -44,6 +44,7 @@ class MyCourseFragment :Fragment(), MyCourseView {
 
     override fun onMyCourseSuccess(response: MyCourseResponse) {
         binding.mycoursePb.visibility = View.GONE
+
         when(response.code) {
             1000 -> {
                 if(response.result!!.size == 0){
@@ -74,6 +75,8 @@ class MyCourseFragment :Fragment(), MyCourseView {
     }
 
     override fun onAddGroupSuccess(response: BasicResponse) {
+        binding.mycoursePb.visibility = View.GONE
+
         when(response.code){
                 1000 -> {
                     binding.mycoursePb.visibility = View.GONE

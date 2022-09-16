@@ -34,21 +34,21 @@
                 android:layout_marginBottom="16dp"
                 app:srcCompat="@drawable/back" />
 
-            <EditText
-                android:id="@+id/mycourse_edit_text"
-                android:layout_width="wrap_content"
-                android:layout_height="28dp"
-                android:layout_gravity="center"
-                android:background="@drawable/edittext_background"
-                android:ems="13"
-                android:gravity="center_vertical"
-                android:hint="코스명을 입력해주세요."
-                android:inputType="textPersonName"
-                android:paddingLeft="8dp"
-                android:textColor="#9D9D9D"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:visibility="invisible" />
+<!--            <EditText-->
+<!--                android:id="@+id/mycourse_edit_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="28dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@drawable/edittext_background"-->
+<!--                android:ems="13"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:hint="코스명을 입력해주세요."-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:paddingLeft="8dp"-->
+<!--                android:textColor="#9D9D9D"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:visibility="invisible" />-->
 
             <TextView
                 android:id="@+id/myhold_title"
@@ -80,12 +80,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/myhold_title_bar"></androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toBottomOf="@+id/myhold_title_bar"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/slide_layout"
         android:layout_width="match_parent"
         android:layout_height="600dp"

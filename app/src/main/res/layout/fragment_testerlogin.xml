@@ -83,7 +83,7 @@
         android:id="@+id/tester_login_done_tv"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:background="@color/main_blue"
+        android:background="@color/grey3"
         android:gravity="center"
         android:text="@string/tester_login_done_tv"
         android:textColor="@color/white"

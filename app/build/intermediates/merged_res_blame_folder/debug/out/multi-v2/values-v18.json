@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\User\\AndroidStudioProjects\\FIKA_Project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+            "outputFile": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\50c60a78e407fa9817440d623948bc3a\\transformed\\appcompat-1.5.0\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\yuny0\\.gradle\\caches\\transforms-3\\50c60a78e407fa9817440d623948bc3a\\transformed\\appcompat-1.5.0\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

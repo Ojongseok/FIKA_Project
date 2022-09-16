@@ -92,4 +92,5 @@
     <string name="review_write_review_empty">レビューを作成してください</string>
     <string name="review_write_warning">場所と関係のない写真を添付すると、露出が制限されることがあります。</string>
     <string name="review_write">レビュー作成</string>
+    <string name="course_detail_hold_btn">自分のコースに入れる</string>
 </resources>

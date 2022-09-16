@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">FIKA_Project</string>
+    <string name="app_name" translatable="false">FIKA</string>
     <string name="img_app_logo" translatable="false">FIKA_logo</string>
 
     <string name="btm_nav_search">探索</string>
@@ -515,7 +515,7 @@ WEFIY | 대표 홍예진
     <string name="dialog_quit_quit_btn">脱退</string>
     <string name="loading">loading…</string>
     <string name="footer_add_course_tv">コースを追加</string>
-    <string name="login_tester_btn">テスト用ログイン →</string>
+    <string name="login_tester_btn">테스터용 로그인 →</string>
     <string name="login_dialog_email">メールを送る</string>
     <string name="search_recent_tv">最近の検索ワード</string>
     <string name="search_recomend_tv">オススメ検索ワード</string>
@@ -549,6 +549,7 @@ WEFIY | 대표 홍예진
     <string name="만족도">満足度</string>
     <string name="review_write_warning">場所と関係のない写真を添付すると、露出が制限されることがあります。</string>
     <string name="review_write_review_empty">レビューを作成してください</string>
+    <string name="course_detail_hold_btn">自分のコースに入れる</string>
 
 
     <string name="mypage_title">マイページ</string>

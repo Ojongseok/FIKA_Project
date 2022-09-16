@@ -47,11 +47,14 @@ class DramaInfoLocationAdapter(private val locationList : ArrayList<spotDataList
         view.item_location_placerank_flag_iv.setOnClickListener {
             service.tryLoadLocationHold(view.item_location_placerank_flag_iv)
         }
+
         view.item_home_placerank_layout.setOnClickListener {
+            val spotId = locationList[position].spotId
+
             val intent = Intent(context, PlaceinfoActivity::class.java)
+            intent.putExtra("homeSpotId",spotId)
             context.startActivity(intent)
         }
-
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
     override fun getItemCount() = locationList.size

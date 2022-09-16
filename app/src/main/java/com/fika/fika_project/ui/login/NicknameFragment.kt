@@ -1,12 +1,16 @@
 package com.fika.fika_project.ui.login
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.fika.fika_project.R
 import com.fika.fika_project.databinding.FragmentNicknameBinding
 import com.fika.fika_project.retrofit.Nickname
 import com.fika.fika_project.retrofit.User
@@ -42,12 +46,31 @@ class NicknameFragment  : Fragment(), NicknameView {
             service.tryNicknameCheck(getNickname)
             //1000 이면 20번 api 회원가입 완료
        }
+
+        binding.nicknameEt.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+                //텍스트를 입력 후
+
+            }
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                //텍스트 입력 전
+            }
+            @SuppressLint("ResourceAsColor")
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                //텍스트 입력 중
+                if(binding.nicknameEt.length() < 4) { // 패스워드의 길이가 4미만이면
+                    binding.nicknameDoneTv.isEnabled = false // 버튼 비활성화
+                    binding.nicknameDoneTv.setBackgroundColor(R.color.grey3)
+                } else {
+                    binding.nicknameDoneTv.isEnabled = true // 버튼 활성화
+                    binding.nicknameDoneTv.setBackgroundColor(R.color.main_blue)
+                }
+            }
+        })
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
     }
 
     override fun onDestroyView() {
@@ -71,10 +94,9 @@ class NicknameFragment  : Fragment(), NicknameView {
 
                 service.trySignUp(getUser)
             }
-            4020 ->  { Log.d("LOGIN/4020", "필수값이 포함되지 않은 경우") }
-            4024 ->  { Log.d("LOGIN/4024", "닉네임이 중복된 경우") }
-            4026 ->  { Log.d("LOGIN/4026", "닉네임 형식이 아닌경우") }
-            else ->  { Log.d("LOGIN", "로그인 실패 : 오류") }
+            else ->  {
+                binding.nicknameWarningTv.visibility = View.VISIBLE
+                Log.d("LOGIN", "로그인 실패 : 오류") }
         }
     }
 

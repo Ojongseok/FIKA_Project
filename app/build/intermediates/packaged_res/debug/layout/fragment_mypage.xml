@@ -151,7 +151,7 @@
 
         <ImageView
             android:id="@+id/mypage_place_cover_iv"
-            android:layout_width="0dp"
+            android:layout_width="124dp"
             android:layout_height="0dp"
             android:scaleType="fitXY"
             android:src="@drawable/sample_image"
@@ -216,7 +216,7 @@
 
         <TextView
             android:id="@+id/mypage_course_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/mypage_course_tv"
             android:textColor="@color/grey2"
@@ -224,8 +224,7 @@
             android:textSize="18sp"
             android:layout_marginStart="4dp"
             app:layout_constraintStart_toEndOf="@id/mypage_course_flag_iv"
-            app:layout_constraintTop_toTopOf="@id/mypage_course_flag_iv"
-            app:layout_constraintBottom_toBottomOf="@id/mypage_course_flag_iv"/>
+            app:layout_constraintTop_toTopOf="@id/mypage_course_flag_iv"/>
 
         <TextView
             android:id="@+id/mypage_course_number_tv"
@@ -249,7 +248,7 @@
 
         <ImageView
             android:id="@+id/mypage_course_cover_iv"
-            android:layout_width="0dp"
+            android:layout_width="124dp"
             android:layout_height="0dp"
             android:scaleType="fitXY"
             android:src="@drawable/sample_image"

@@ -15,6 +15,8 @@ import com.fika.fika_project.ui.main.explore.course_detail.*
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldService
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldView
+import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
+import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
 
 class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHoldView {
     private var _Binding: ActivityCourseDetailDramaOthersBinding? = null
@@ -56,6 +58,14 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
         }
         addCourseDTO.baseCourseId = courseId
         addCourseDTO.locageSpotId = initList.courseLocage?.spotId
+
+        binding.myholdTopLayout.setOnClickListener {
+             val spotId = initList.courseLocage?.spotId
+
+            val intent = Intent(this, PlaceinfoActivity::class.java)
+            intent.putExtra("homeSpotId",spotId)
+            startActivity(intent)
+        }
     }
 
     private fun setOnClickEvent() {

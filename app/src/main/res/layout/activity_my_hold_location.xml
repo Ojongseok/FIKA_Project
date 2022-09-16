@@ -55,6 +55,7 @@
         android:id="@+id/myhold_location_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        tools:listitem="@layout/myhold_location_item_list"
         android:layout_above="@id/mycourse_view_add_location"
         android:layout_below="@id/myhold_title_bar"
         android:layout_marginLeft="20dp"
