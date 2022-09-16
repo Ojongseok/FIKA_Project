@@ -38,26 +38,30 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\yuny0\.g
 MERGED from [androidx.appcompat:appcompat-resources:1.5.0] C:\Users\yuny0\.gradle\caches\transforms-3\437efab0e8d70c8f52af4225d2f96e17\transformed\appcompat-resources-1.5.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.5.0] C:\Users\yuny0\.gradle\caches\transforms-3\50c60a78e407fa9817440d623948bc3a\transformed\appcompat-1.5.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\yuny0\.gradle\caches\transforms-3\6d85a77261a764ee570d033ea8d4fb03\transformed\glide-4.11.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:17:1-40:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\8119ee4b811ae08a310472a4ae17be71\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
 MERGED from [com.kakao.sdk:usermgmt:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\906dd696ded6b177df9ca804a65d5e5c\transformed\usermgmt-1.30.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:2:1-22:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\9ea4fed7d7a4684a08a7c3e9a713620a\transformed\play-services-auth-api-phone-18.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\yuny0\.gradle\caches\transforms-3\ecff38673b62fb671f15042f77bc6ce0\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\fda89ec6dbe8b2919968cc69537947f3\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\9a02ebf3ac3615f6ef876cce870b22c8\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-analytics:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\f7c14a3681044596bb4127dc874b84c3\transformed\firebase-analytics-21.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\4b9ca5176648a6c59254df3c08e20c50\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.firebase:firebase-installations:17.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\f101ce963aebdb0909d46bb9c14a1234\transformed\firebase-installations-17.0.1\AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:15:1-40:12
-MERGED from [com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:17:1-46:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\afef7e446c06f5cd0d6212735acccbee\transformed\play-services-measurement-sdk-21.1.0\AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\2690bf8fec185756b41433f314708782\transformed\firebase-installations-interop-17.0.1\AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\119a734d84934088d22d1f66d952dd16\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\afef7e446c06f5cd0d6212735acccbee\transformed\play-services-measurement-sdk-21.1.0\AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\19dac35c71fc06dd9336687aede8cc74\transformed\play-services-measurement-impl-21.1.0\AndroidManifest.xml:17:1-32:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\c98bde4cd8f91a138a843d2dc6723128\transformed\play-services-ads-identifier-18.0.0\AndroidManifest.xml:17:1-27:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\f2fc61d2b09937e316b9e92346557c72\transformed\play-services-measurement-sdk-api-21.1.0\AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.android.gms:play-services-measurement-base:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\df1994a0c2d9ab59d889215d8df913fb\transformed\play-services-measurement-base-21.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\yuny0\.gradle\caches\transforms-3\bd164b5300384178ad1376f0c2a4f2bd\transformed\play-services-stats-17.0.2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\dc44d5dd2fd1d0fa01d540c195d0c678\transformed\firebase-measurement-connector-19.0.0\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:16:1-26:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\52fdeed5296b387c875fea9f74e2a4c4\transformed\play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\yuny0\.gradle\caches\transforms-3\13da37f8e5d2e1ed61acbf528abcfc63\transformed\fragment-1.5.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.5.1] C:\Users\yuny0\.gradle\caches\transforms-3\383e9270a5c1a85e1d1ec0a21b23c942\transformed\activity-1.5.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\c4b8186b7c38d89f48974c8149d99322\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -190,10 +194,14 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\yuny0\.g
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\yuny0\.gradle\caches\transforms-3\83ace6ea65ec047c6bc65f091ecd28ca\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\yuny0\.gradle\caches\transforms-3\6d85a77261a764ee570d033ea8d4fb03\transformed\glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\yuny0\.gradle\caches\transforms-3\6d85a77261a764ee570d033ea8d4fb03\transformed\glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:22:5-38:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\8119ee4b811ae08a310472a4ae17be71\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\8119ee4b811ae08a310472a4ae17be71\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:11:5-20:19
 MERGED from [com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:11:5-20:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\fda89ec6dbe8b2919968cc69537947f3\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\fda89ec6dbe8b2919968cc69537947f3\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\9a02ebf3ac3615f6ef876cce870b22c8\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:11:5-19:19
@@ -206,12 +214,12 @@ MERGED from [com.google.firebase:firebase-installations:17.0.1] C:\Users\yuny0\.
 MERGED from [com.google.firebase:firebase-installations:17.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\f101ce963aebdb0909d46bb9c14a1234\transformed\firebase-installations-17.0.1\AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:25:5-38:19
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\119a734d84934088d22d1f66d952dd16\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\119a734d84934088d22d1f66d952dd16\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\afef7e446c06f5cd0d6212735acccbee\transformed\play-services-measurement-sdk-21.1.0\AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\afef7e446c06f5cd0d6212735acccbee\transformed\play-services-measurement-sdk-21.1.0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\119a734d84934088d22d1f66d952dd16\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\119a734d84934088d22d1f66d952dd16\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\19dac35c71fc06dd9336687aede8cc74\transformed\play-services-measurement-impl-21.1.0\AndroidManifest.xml:29:5-30:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\19dac35c71fc06dd9336687aede8cc74\transformed\play-services-measurement-impl-21.1.0\AndroidManifest.xml:29:5-30:19
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\c98bde4cd8f91a138a843d2dc6723128\transformed\play-services-ads-identifier-18.0.0\AndroidManifest.xml:25:5-20
@@ -222,8 +230,8 @@ MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\yuny0\.
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\yuny0\.gradle\caches\transforms-3\bd164b5300384178ad1376f0c2a4f2bd\transformed\play-services-stats-17.0.2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\dc44d5dd2fd1d0fa01d540c195d0c678\transformed\firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\dc44d5dd2fd1d0fa01d540c195d0c678\transformed\firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\52fdeed5296b387c875fea9f74e2a4c4\transformed\play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\52fdeed5296b387c875fea9f74e2a4c4\transformed\play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\yuny0\.gradle\caches\transforms-3\7394f3631455196ebe5d7492959fa6df\transformed\timber-4.7.1\AndroidManifest.xml:7:5-20
 MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\yuny0\.gradle\caches\transforms-3\7394f3631455196ebe5d7492959fa6df\transformed\timber-4.7.1\AndroidManifest.xml:7:5-20
 MERGED from [com.jakewharton.threetenabp:threetenabp:1.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\ac322590ef24cef2ab08ad5411cd8bfd\transformed\threetenabp-1.3.0\AndroidManifest.xml:7:5-20
@@ -458,12 +466,20 @@ MERGED from [androidx.appcompat:appcompat:1.5.0] C:\Users\yuny0\.gradle\caches\t
 MERGED from [androidx.appcompat:appcompat:1.5.0] C:\Users\yuny0\.gradle\caches\transforms-3\50c60a78e407fa9817440d623948bc3a\transformed\appcompat-1.5.0\AndroidManifest.xml:20:5-44
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\yuny0\.gradle\caches\transforms-3\6d85a77261a764ee570d033ea8d4fb03\transformed\glide-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\yuny0\.gradle\caches\transforms-3\6d85a77261a764ee570d033ea8d4fb03\transformed\glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\8119ee4b811ae08a310472a4ae17be71\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\8119ee4b811ae08a310472a4ae17be71\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.kakao.sdk:usermgmt:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\906dd696ded6b177df9ca804a65d5e5c\transformed\usermgmt-1.30.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.kakao.sdk:usermgmt:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\906dd696ded6b177df9ca804a65d5e5c\transformed\usermgmt-1.30.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\9ea4fed7d7a4684a08a7c3e9a713620a\transformed\play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\9ea4fed7d7a4684a08a7c3e9a713620a\transformed\play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\yuny0\.gradle\caches\transforms-3\ecff38673b62fb671f15042f77bc6ce0\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\yuny0\.gradle\caches\transforms-3\ecff38673b62fb671f15042f77bc6ce0\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\fda89ec6dbe8b2919968cc69537947f3\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\fda89ec6dbe8b2919968cc69537947f3\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\9a02ebf3ac3615f6ef876cce870b22c8\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:6:5-8:41
@@ -476,14 +492,14 @@ MERGED from [com.google.firebase:firebase-installations:17.0.1] C:\Users\yuny0\.
 MERGED from [com.google.firebase:firebase-installations:17.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\f101ce963aebdb0909d46bb9c14a1234\transformed\firebase-installations-17.0.1\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\d3e2f09906b96e434fdb4a6844085de2\transformed\firebase-common-20.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\afef7e446c06f5cd0d6212735acccbee\transformed\play-services-measurement-sdk-21.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\afef7e446c06f5cd0d6212735acccbee\transformed\play-services-measurement-sdk-21.1.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\2690bf8fec185756b41433f314708782\transformed\firebase-installations-interop-17.0.1\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\2690bf8fec185756b41433f314708782\transformed\firebase-installations-interop-17.0.1\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\119a734d84934088d22d1f66d952dd16\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\119a734d84934088d22d1f66d952dd16\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\afef7e446c06f5cd0d6212735acccbee\transformed\play-services-measurement-sdk-21.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\afef7e446c06f5cd0d6212735acccbee\transformed\play-services-measurement-sdk-21.1.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\19dac35c71fc06dd9336687aede8cc74\transformed\play-services-measurement-impl-21.1.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\19dac35c71fc06dd9336687aede8cc74\transformed\play-services-measurement-impl-21.1.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\c98bde4cd8f91a138a843d2dc6723128\transformed\play-services-ads-identifier-18.0.0\AndroidManifest.xml:20:5-44
@@ -496,8 +512,8 @@ MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\yuny0\.
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\yuny0\.gradle\caches\transforms-3\bd164b5300384178ad1376f0c2a4f2bd\transformed\play-services-stats-17.0.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\dc44d5dd2fd1d0fa01d540c195d0c678\transformed\firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\dc44d5dd2fd1d0fa01d540c195d0c678\transformed\firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\52fdeed5296b387c875fea9f74e2a4c4\transformed\play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\52fdeed5296b387c875fea9f74e2a4c4\transformed\play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
 MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\yuny0\.gradle\caches\transforms-3\13da37f8e5d2e1ed61acbf528abcfc63\transformed\fragment-1.5.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\yuny0\.gradle\caches\transforms-3\13da37f8e5d2e1ed61acbf528abcfc63\transformed\fragment-1.5.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.5.1] C:\Users\yuny0\.gradle\caches\transforms-3\383e9270a5c1a85e1d1ec0a21b23c942\transformed\activity-1.5.1\AndroidManifest.xml:20:5-22:41
@@ -656,6 +672,26 @@ ADDED from [androidx.window:window:1.0.0] C:\Users\yuny0\.gradle\caches\transfor
 		ADDED from [androidx.window:window:1.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\073da2f410ca49964bd1bfb364aca84f\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
 	android:name
 		ADDED from [androidx.window:window:1.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\073da2f410ca49964bd1bfb364aca84f\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.3.0] C:\Users\yuny0\.gradle\caches\transforms-3\dfbe34b6617cf34f58f990bbca58bc56\transformed\play-services-auth-20.3.0\AndroidManifest.xml:34:13-89
 activity#com.kakao.auth.authorization.authcode.KakaoWebViewActivity
 ADDED from [com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:12:9-19:20
 	android:label
@@ -670,6 +706,14 @@ ADDED from [com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-
 		ADDED from [com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:14:13-59
 	android:name
 		ADDED from [com.kakao.sdk:auth:1.30.0] C:\Users\yuny0\.gradle\caches\transforms-3\ec784b4b59575ee42a77d07cbeb01d3a\transformed\auth-1.30.0\AndroidManifest.xml:13:13-86
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\fda89ec6dbe8b2919968cc69537947f3\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\fda89ec6dbe8b2919968cc69537947f3\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\fda89ec6dbe8b2919968cc69537947f3\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\yuny0\.gradle\caches\transforms-3\fda89ec6dbe8b2919968cc69537947f3\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-analytics-ktx:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\188cc5a9c77f5a13c0a9ed9d1b0e5736\transformed\firebase-analytics-ktx-21.1.0\AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\yuny0\.gradle\caches\transforms-3\9a02ebf3ac3615f6ef876cce870b22c8\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:12:9-18:19
@@ -777,11 +821,11 @@ ADDED from [com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yu
 	android:name
 		ADDED from [com.google.android.gms:play-services-measurement:21.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\6afcbb1f4ad86c332db629956a0b65dd\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:40:13-87
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\52fdeed5296b387c875fea9f74e2a4c4\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\52fdeed5296b387c875fea9f74e2a4c4\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\yuny0\.gradle\caches\transforms-3\3cd314a1a92780ba04484ddb808abd27\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\yuny0\.gradle\caches\transforms-3\52fdeed5296b387c875fea9f74e2a4c4\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\yuny0\.gradle\caches\transforms-3\a5e92bc27fe73a696e034afe60b05d75\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\yuny0\.gradle\caches\transforms-3\7c98fea4d132ec2d8d101aa08431d132\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20

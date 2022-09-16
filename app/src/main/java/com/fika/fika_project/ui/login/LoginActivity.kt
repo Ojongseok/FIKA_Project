@@ -1,6 +1,7 @@
 package com.fika.fika_project.ui.login
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -10,8 +11,10 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.fika.fika_project.ApplicationClass.Companion.TAG
+import com.fika.fika_project.ApplicationClass.Companion.retrofit
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityLoginBinding
+import com.fika.fika_project.retrofit.GoogleEmail
 import com.fika.fika_project.retrofit.testerCode
 import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.utils.spfManager
@@ -32,6 +35,8 @@ class LoginActivity : AppCompatActivity(), LoginView {
     lateinit var mGoogleSignInClient : GoogleSignInClient
     lateinit var resultRuncher : ActivityResultLauncher<Intent>
 
+    public var RC_SIGN_IN = 1
+
     val service = LoginService(this)
 
     override fun onStart() {
@@ -43,6 +48,8 @@ class LoginActivity : AppCompatActivity(), LoginView {
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
+
+        setResultSignUp()
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestEmail()
@@ -68,28 +75,53 @@ class LoginActivity : AppCompatActivity(), LoginView {
     private fun setResultSignUp(){
         resultRuncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
             if(result.resultCode == Activity.RESULT_OK){
-                val task : Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(result.data)
-                
+                val task : Task<GoogleSignInAccount> =
+                    GoogleSignIn.getSignedInAccountFromIntent(result.data)
+
                 handleSignInResult(task)
+                Log.d("done",resultRuncher.toString())
+
             }
+        }
+    }
+
+
+    private fun googleLogin(){
+        val signIntent: Intent = mGoogleSignInClient.signInIntent
+
+        //인증허가 화면 보여주기
+        startActivityForResult(signIntent, RC_SIGN_IN)
+//       resultRuncher.launch(signIntent)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            // The Task returned from this call is always completed, no need to attach
+            // a listener.
+            val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
+            handleSignInResult(task)
         }
     }
 
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try{
-          val account = completedTask.getResult(ApiException::class.java)
-          val email = account?.email.toString()
+            val account = completedTask.getResult(ApiException::class.java)
+            val googleEmail = account?.email.toString()
 
-        Log.d("유저 google 이메일",email)
+            val getGoogleEmail = GoogleEmail(googleEmail)
+
+            Log.d("유저 google 이메일",googleEmail)
+
+            service.tryGoogleLogin(getGoogleEmail)
+
         }catch(e: ApiException){
             Log.w("failed","signInResult:failed code = " + e.statusCode)
         }
     }
 
-    private fun googleLogin(){
-        val signIntent: Intent = mGoogleSignInClient.signInIntent
-        resultRuncher.launch(signIntent)
-    }
 
     private fun initClickListener() {
         binding.loginQuestionTv.setOnClickListener {
@@ -106,7 +138,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
         }
 
         binding.loginGoogleIv.setOnClickListener {
-//            googleLogin()
+            googleLogin()
 
 //            supportFragmentManager.beginTransaction()
 //                .replace(R.id.login_frm, Agree01Fragment())
@@ -208,7 +240,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
     override fun onKakaoSuccess(response: BasicResponse) {
         binding.loginLoadingPb.visibility = View.GONE
 
-        Toast.makeText(this, "카카오 로그인되었습니다", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "KAKAO LOGIN", Toast.LENGTH_SHORT).show()
         when (response.code) {
             //성공
             1000 -> {
@@ -217,18 +249,10 @@ class LoginActivity : AppCompatActivity(), LoginView {
                 startActivity(intent)
             }
             //최초
-            1002 -> {
-                changeFragment(2)
-            }
-            4000 -> {
-                Log.d("KAKAOLOGIN", "Access-Token이 존재하지 않는 경우")
-            }
-            4001 -> {
-                Log.d("KAKAOLOGIN", "유효하지 않은 AccessToken")
-            }
-            else -> {
-                Log.d("LOGIN", "로그인 실패 : 서버 오류")
-            }
+            1002 -> { changeFragment(2) }
+            4000 -> { Log.d("KAKAOLOGIN", "Access-Token이 존재하지 않는 경우") }
+            4001 -> { Log.d("KAKAOLOGIN", "유효하지 않은 AccessToken") }
+            else -> { Log.d("KAKAOLOGIN", "로그인 실패 : 서버 오류") }
         }
     }
 
@@ -238,4 +262,23 @@ class LoginActivity : AppCompatActivity(), LoginView {
 //        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 //        startActivity(intent)
             }
+
+    override fun onGoogleSuccess(response: BasicResponse) {
+        binding.loginLoadingPb.visibility = View.GONE
+
+        Toast.makeText(this, "GOOGLE LOGIN", Toast.LENGTH_SHORT).show()
+        when (response.code) {
+            //성공
+            1000 -> {
+                val intent = Intent(this, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            }
+            //최초
+            1002 -> { changeFragment(2) }
+            4000 -> { Log.d("GOOGLE", "Access-Token이 존재하지 않는 경우") }
+            4001 -> { Log.d("GOOGLE", "유효하지 않은 AccessToken") }
+            else -> { Log.d("GOOGLE", "로그인 실패 : 서버 오류") }
+        }
+    }
 }

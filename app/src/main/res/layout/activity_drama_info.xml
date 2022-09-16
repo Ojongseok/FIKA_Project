@@ -59,18 +59,6 @@
                     android:scaleType="centerCrop"
                     tools:src="@drawable/sample_image" />
 
-                <TextView
-                    android:id="@+id/drama_info_title_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="24dp"
-                    android:text="드라마제목"
-                    android:textColor="@color/black"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
                 <ProgressBar
                     android:id="@+id/drama_info_pr"
                     style="?android:attr/progressBarStyle"

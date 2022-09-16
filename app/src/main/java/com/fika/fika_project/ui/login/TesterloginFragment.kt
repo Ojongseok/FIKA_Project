@@ -98,4 +98,8 @@ class TesterloginFragment  : Fragment(), LoginView {
           }
         }
     }
+
+    override fun onGoogleSuccess(response: BasicResponse) {
+//        없는 함수
+    }
 }

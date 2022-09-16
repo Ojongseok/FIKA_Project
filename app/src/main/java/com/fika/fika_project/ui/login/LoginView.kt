@@ -8,4 +8,7 @@ interface LoginView {
 
     // 31. 테스터 로그인
     fun onTesterSuccess(response: BasicResponse)
+
+    // 37. 구글 로그인
+    fun onGoogleSuccess(response: BasicResponse)
 }

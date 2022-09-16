@@ -292,7 +292,6 @@ id drama_info_location_recyclerview
 id drama_info_main_iv
 id drama_info_mapview
 id drama_info_pr
-id drama_info_title_tv
 id dramalist_dramaimage
 id dramalist_dramaimage_cv
 id dramalist_dramaname
@@ -481,7 +480,6 @@ id map_where_tv1
 id map_where_tv2
 id mycourse_child_layout
 id mycourse_edit_btn
-id mycourse_edit_text
 id mycourse_expand_list_recyclerview
 id mycourse_indicator_bar
 id mycourse_layout_1

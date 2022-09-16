@@ -151,7 +151,7 @@
 
         <ImageView
             android:id="@+id/mypage_place_cover_iv"
-            android:layout_width="0dp"
+            android:layout_width="124dp"
             android:layout_height="0dp"
             android:scaleType="fitXY"
             android:src="@drawable/sample_image"
@@ -223,7 +223,6 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginStart="4dp"
-            app:layout_constraintEnd_toEndOf="@id/mypage_course_arrow_iv"
             app:layout_constraintStart_toEndOf="@id/mypage_course_flag_iv"
             app:layout_constraintTop_toTopOf="@id/mypage_course_flag_iv"/>
 
@@ -249,7 +248,7 @@
 
         <ImageView
             android:id="@+id/mypage_course_cover_iv"
-            android:layout_width="0dp"
+            android:layout_width="124dp"
             android:layout_height="0dp"
             android:scaleType="fitXY"
             android:src="@drawable/sample_image"

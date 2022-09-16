@@ -30,6 +30,12 @@ interface RetrofitInterface {
         @Header("Access-Token") token: String
     ): Call<BasicResponse>
 
+    //37. 구글 로그인
+    @POST("/oauth/login/google")
+    fun googleLogin(
+        @Body googleEmail: GoogleEmail
+    ): Call<BasicResponse>
+
     //4. 닉네임 유효성 검사
     @POST("/member/valid/nickname")
     fun nicknameCheck(

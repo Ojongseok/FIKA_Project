@@ -84,12 +84,12 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_explore_course_page.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_agree_01.xml",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_agree_01.xml"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dramalist_item.xml",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\dramalist_item.xml"
+    },
+    {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_agree_01.xml",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_agree_01.xml"
     },
     {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\ex_activity_sign_up.xml",
@@ -136,12 +136,12 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\activity_my_hold_location.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\balloon_layout.xml",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\balloon_layout.xml"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\drama_info_location_item.xml",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\drama_info_location_item.xml"
+    },
+    {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\balloon_layout.xml",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\balloon_layout.xml"
     },
     {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_quit.xml",
@@ -232,12 +232,12 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_mycourse.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\myhold_location_item_list.xml",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\myhold_location_item_list.xml"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_testerlogin.xml",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_testerlogin.xml"
+    },
+    {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\myhold_location_item_list.xml",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\myhold_location_item_list.xml"
     },
     {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_explore_drama_page.xml",
@@ -288,11 +288,11 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_agree_03.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_edit_personal.xml",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_edit_personal.xml"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_explore.xml",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_explore.xml"
+    },
+    {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_edit_personal.xml",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_edit_personal.xml"
     }
 ]
