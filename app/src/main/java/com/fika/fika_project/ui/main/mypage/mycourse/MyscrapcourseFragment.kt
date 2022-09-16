@@ -60,7 +60,7 @@ class MyscrapcourseFragment: Fragment(), MypageView {
     }
 
     override fun onLoading() {
-//        TODO("Not yet implemented")
+        binding.myscrapcoursePb.visibility = View.VISIBLE
     }
 
     override fun onMypageSuccess(response: MypageResponse) {
@@ -72,6 +72,8 @@ class MyscrapcourseFragment: Fragment(), MypageView {
     }
 
     override fun onMyScrapSuccess(response: MyScrapResponse) {
+        binding.myscrapcoursePb.visibility = View.GONE
+
         when(response.code) {
             1000 -> {
                 if(response.result!!.size == 0){

@@ -17,6 +17,7 @@ import com.fika.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.fika.fika_project.ui.main.mypage.myspot.MySpotService
 import com.fika.fika_project.ui.main.mypage.myspot.MySpotView
 import com.fika.fika_project.ui.main.mypage.myspot.result
+import kotlinx.android.synthetic.main.fragment_myholdcourse.view.*
 import kotlinx.android.synthetic.main.item_myplace.view.*
 
 class MyholdcourseFragment : Fragment(),MySpotView {
@@ -54,8 +55,12 @@ class MyholdcourseFragment : Fragment(),MySpotView {
     }
 
     override fun onExploreLoading() {
+        binding.myscrapcourseEmptyPb.visibility = View.VISIBLE
     }
+
     override fun onExploreSuccess(response: MySpotResponse) {
+        binding.myscrapcourseEmptyPb.visibility = View.GONE
+
         when(response.code) {
             1000 -> {
                 if (response.result!!.size == 0) {
@@ -83,6 +88,15 @@ class MySpotAdapter(val mySpotList: ArrayList<result>,val context: Context) : Re
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val view = (holder as CustomViewHolder).itemView
+
+        if(itemCount == 0){
+            view.myscrapcourse_empty_iv.visibility = View.VISIBLE
+            view.myplace_rv.visibility = View.GONE
+
+        }else{
+            view.myscrapcourse_empty_iv.visibility = View.GONE
+            view.myplace_rv.visibility = View.VISIBLE
+        }
 
         Glide.with(context).load(mySpotList[position].spotImageUrl).into(view.item_myplace_iv)
         view.item_myplace_place_tv.text = mySpotList[position].spotTitle

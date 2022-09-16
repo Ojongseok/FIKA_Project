@@ -41,6 +41,7 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
 
     private fun initData(initList: result) {
         binding.courseDetailCourseTitle.text = initList.courseTitle
+        binding.detailCourseNickname.text = initList.courseCreateMember
         Glide.with(this).load(initList.locageSceneImageUrl).into(binding.courseDetailIv)
         binding.courseDetailLocageTiltle.text = initList.locageSceneDescribe
         binding.detailCourseHash.text = initList.hashTag
@@ -155,7 +156,7 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
             binding.detailCourseTogetherRecyclerview.adapter.apply {
                 CourseDetailLocationOthersAdapter(filterList,applicationContext)
             }
-            Toast.makeText(applicationContext,"ㅋ",Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext,"others_filter1",Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -81,7 +81,7 @@
         </LinearLayout>
 
         <View
-            android:layout_width="160dp"
+            android:layout_width="155dp"
             android:layout_height="0dp"
             />
 

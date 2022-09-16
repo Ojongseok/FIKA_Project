@@ -92,6 +92,8 @@ class MypageFragment : Fragment(), MypageView {
     }
 
     override fun onMySpotSuccess(response: MySpotResponse) {
+        binding.mypagePb.visibility = View.GONE
+
         when(response.code){
             1000 -> {
                 if (response.result!!.size != 0) {
@@ -106,6 +108,8 @@ class MypageFragment : Fragment(), MypageView {
     }
 
     override fun onMyScrapSuccess(response: MyScrapResponse) {
+        binding.mypagePb.visibility = View.GONE
+
         when(response.code){
             1000 -> {
                 if (response.result!!.size != 0) {

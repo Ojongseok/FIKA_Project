@@ -223,6 +223,7 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toEndOf="@id/mypage_course_arrow_iv"
             app:layout_constraintStart_toEndOf="@id/mypage_course_flag_iv"
             app:layout_constraintTop_toTopOf="@id/mypage_course_flag_iv"/>
 

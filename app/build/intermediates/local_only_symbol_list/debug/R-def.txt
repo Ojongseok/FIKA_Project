@@ -18,6 +18,7 @@ color login_btn
 color login_hint
 color login_text
 color main_blue
+color main_blue2_1
 color main_yellow
 color purple_200
 color purple_500
@@ -225,6 +226,7 @@ id all_view_back_btn
 id all_view_sub_title_num_tv
 id all_view_sub_title_tv
 id all_view_title_tv
+id arrow
 id ball_tv_name
 id ball_view
 id bottom_navigation
@@ -271,6 +273,7 @@ id course_info_top_layout
 id course_item_number
 id detail_course_hash
 id detail_course_hash_tv_by_drama
+id detail_course_nickname
 id detail_course_together_recyclerview
 id detail_scene_list_layout
 id dialog_quit_back_btn
@@ -523,7 +526,9 @@ id myplace_top_layout
 id myplace_top_title_tv
 id myscrapcourse_back_iv
 id myscrapcourse_empty_iv
+id myscrapcourse_empty_pb
 id myscrapcourse_home_iv
+id myscrapcourse_pb
 id myscrapcourse_rv
 id myscrapcourse_top_layout
 id myscrapcourse_top_title_tv
@@ -745,7 +750,6 @@ id textView45
 id textView46
 id textView47
 id textView48
-id textView49
 id textView51
 id textView6
 id textView7
@@ -917,6 +921,8 @@ string login_signup
 string login_tester_btn
 string mypage_course_tv
 string mypage_edit_myinfo
+string mypage_empty_tv_01
+string mypage_empty_tv_02
 string mypage_myhold_location
 string mypage_myscrap_course
 string mypage_place_tv

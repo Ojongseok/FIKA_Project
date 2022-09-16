@@ -12,6 +12,7 @@ data class CourseDetailResponse(
 data class result(
     @SerializedName("courseId") val courseId: Int?,
     @SerializedName("courseTitle") val courseTitle : String?,
+    @SerializedName("courseCreateMember") val courseCreateMember : String?,
     @SerializedName("dramaId") val dramaId : Int?,
     @SerializedName("locageSceneDescribe") val locageSceneDescribe : String?,
     @SerializedName("hashTag") val hashTag : String?,

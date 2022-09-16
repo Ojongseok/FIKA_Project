@@ -45,7 +45,7 @@
                     android:id="@+id/course_detail_course_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="박새로이와 일산 코스"
+                    android:text="@string/loading"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -69,6 +69,7 @@
                     android:id="@+id/course_detail_iv"
                     android:layout_width="116dp"
                     android:layout_height="116dp"
+                    android:scaleType="centerCrop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -80,9 +81,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:maxLines="3"
-                    android:text="박새로이와 조이서가 함께 오픈한 꿀밤포차"
+                    android:ellipsize="end"
+                    android:text="@string/loading"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/course_detail_iv"
@@ -92,27 +94,37 @@
                     android:id="@+id/textView48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:text="by."
+                    android:textColor="@color/grey"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="@+id/course_detail_locage_tiltle"
                     app:layout_constraintTop_toBottomOf="@+id/course_detail_locage_tiltle" />
 
                 <TextView
-                    android:id="@+id/textView49"
+                    android:id="@+id/detail_course_nickname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="새로이짱"
+                    android:text="@string/loading"
+                    android:textColor="@color/grey"
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/textView48"
-                    app:layout_constraintTop_toBottomOf="@+id/course_detail_locage_tiltle" />
+                    app:layout_constraintTop_toTopOf="@+id/textView48" />
 
                 <TextView
                     android:id="@+id/detail_course_hash"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="# 순두부찌개"
+                    android:text="@string/loading"
+                    android:textSize="13sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/textView48" />
+                    app:layout_constraintStart_toStartOf="@+id/textView48"
+                    app:layout_constraintEnd_toEndOf="@id/constraintLayout"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -150,24 +162,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="代表ロケ地 >"
+                android:text="代表ロケ地"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/textView31"
                 app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/arrow"
+                app:layout_constraintTop_toTopOf="@id/textView33"
+                app:layout_constraintStart_toEndOf="@id/textView33"
+                app:layout_constraintBottom_toBottomOf="@id/textView33"/>
+
             <TextView
                 android:id="@+id/course_detail_drama_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="이태원 클라쓰"
+                android:text="@string/loading"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/textView33"
-                app:layout_constraintStart_toEndOf="@+id/textView33"
-                app:layout_constraintTop_toTopOf="@+id/textView33"
+                app:layout_constraintBottom_toBottomOf="@+id/arrow"
+                app:layout_constraintStart_toEndOf="@+id/arrow"
+                app:layout_constraintTop_toTopOf="@+id/arrow"
                 android:textColor="@color/black" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -239,7 +261,9 @@
                             android:id="@+id/course_detail_where_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="서울" />
+                            android:text="@string/loading"
+                            android:textColor="@color/black2"
+                            />
 
                         <TextView
                             android:id="@+id/textView20"
@@ -253,14 +277,17 @@
                             android:id="@+id/course_detail_category_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="공원" />
+                            android:text="@string/loading"
+                            android:textColor="@color/black2"
+/>
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/map_title_name_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="투명 카약"
+                        android:text="@string/loading"
+                        android:textColor="@color/black2"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -307,15 +334,21 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|center_vertical"
                     android:layout_marginRight="4dp"
-                    android:text="おいしい店" />
+                    android:text="おいしい店"
+                    android:textColor="@color/grey3"
+                    android:textSize="14sp"
+                    />
 
                 <TextView
                     android:id="@+id/others_filter2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|center_vertical"
-                    android:layout_marginRight="4dp"
-                    android:text="行くに足る所" />
+                    android:layout_marginEnd="4dp"
+                    android:text="行くに足る所"
+                    android:textColor="@color/grey3"
+                    android:textSize="14sp"
+                    />
 
                 <TextView
                     android:id="@+id/others_filter3"
@@ -323,15 +356,20 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|center_vertical"
                     android:layout_marginRight="4dp"
-                    android:text="カフェ" />
+                    android:text="カフェ"
+                    android:textColor="@color/grey3"
+                    android:textSize="14sp"
+                    />
 
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/detail_course_together_recyclerview"
+                android:overScrollMode="never"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/myhold_top_layout"
                 app:layout_constraintStart_toStartOf="@+id/textView27"
                 app:layout_constraintTop_toBottomOf="@+id/textView27" />

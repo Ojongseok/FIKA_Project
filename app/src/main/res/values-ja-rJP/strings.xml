@@ -93,4 +93,6 @@
     <string name="review_write_warning">場所と関係のない写真を添付すると、露出が制限されることがあります。</string>
     <string name="review_write">レビュー作成</string>
     <string name="course_detail_hold_btn">自分のコースに入れる</string>
+    <string name="mypage_empty_tv_01">まだ盛り込んだ場所がありません。</string>
+    <string name="mypage_empty_tv_02">気に入った場所を盛り込んでみてください。</string>
 </resources>

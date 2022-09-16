@@ -1708,6 +1708,7 @@ color m3_timepicker_secondary_text_button_ripple_color
 color m3_timepicker_secondary_text_button_text_color
 color m3_tonal_button_ripple_color_selector
 color main_blue
+color main_blue2_1
 color main_yellow
 color material_blue_grey_800
 color material_blue_grey_900
@@ -2976,6 +2977,7 @@ id animateToStart
 id antiClockwise
 id anticipate
 id arc
+id arrow
 id asConfigured
 id async
 id auto
@@ -3103,6 +3105,7 @@ id design_menu_item_text
 id design_navigation_view
 id detail_course_hash
 id detail_course_hash_tv_by_drama
+id detail_course_nickname
 id detail_course_together_recyclerview
 id detail_scene_list_layout
 id dialog_button
@@ -3520,7 +3523,9 @@ id myplace_top_layout
 id myplace_top_title_tv
 id myscrapcourse_back_iv
 id myscrapcourse_empty_iv
+id myscrapcourse_empty_pb
 id myscrapcourse_home_iv
+id myscrapcourse_pb
 id myscrapcourse_rv
 id myscrapcourse_top_layout
 id myscrapcourse_top_title_tv
@@ -3888,7 +3893,6 @@ id textView45
 id textView46
 id textView47
 id textView48
-id textView49
 id textView51
 id textView6
 id textView7
@@ -4483,6 +4487,8 @@ string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
 string mypage_course_tv
 string mypage_edit_myinfo
+string mypage_empty_tv_01
+string mypage_empty_tv_02
 string mypage_myhold_location
 string mypage_myscrap_course
 string mypage_place_tv

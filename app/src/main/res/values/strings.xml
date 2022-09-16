@@ -568,4 +568,6 @@ WEFIY | 대표 홍예진
     <string name="locage">ロケ地</string>
     <string name="with_location">一緒に行きやすい場所</string>
     <string name="review_inform_text">場所と関係のない写真を添付すると、露出が制限されることがあります。</string>
+    <string name="mypage_empty_tv_01">まだ盛り込んだ場所がありません。</string>
+    <string name="mypage_empty_tv_02">気に入った場所を盛り込んでみてください。</string>
 </resources>

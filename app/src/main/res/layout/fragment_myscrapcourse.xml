@@ -73,16 +73,55 @@
             app:layout_constraintTop_toBottomOf="@id/myscrapcourse_top_layout"/>
 
 
-        <ImageView
+        <LinearLayout
             android:id="@+id/myscrapcourse_empty_iv"
-            android:layout_width="166dp"
-            android:layout_height="196dp"
-            android:layout_marginTop="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
             android:visibility="gone"
-            android:src="@drawable/logo_fikaduck"
+            android:layout_marginTop="260dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="166dp"
+                android:layout_height="196dp"
+                android:src="@drawable/logo_fikaduck"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mypage_empty_tv_01"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginTop="32dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mypage_empty_tv_02"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/myscrapcourse_pb"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/main_blue"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
