@@ -9,6 +9,7 @@ import com.fika.fika_project.ui.main.mypage.myspot.MySpotResponse
 import com.fika.fika_project.ui.login.AuthResponse
 import com.fika.fika_project.ui.login.BasicResponse
 import com.fika.fika_project.ui.main.explore.AddLocationResponse
+import com.fika.fika_project.ui.main.explore.folder.CreateCourseResponse
 import com.fika.fika_project.ui.main.explore.folder.FolderResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceInfoResponse
@@ -51,6 +52,12 @@ interface RetrofitInterface {
     //8. 메인 페이지 데이터 조회
     @GET("/nav/main")
     fun loadHome(): Call<HomeResponse>
+
+    //9. 코스 생성
+    @POST("/course")
+    fun loadCreateCourse(
+        @Body course : AddCourseDTO
+    ): Call<CreateCourseResponse>
 
     //10. 드라마 필터 조회
     @GET("/drama/{filter}")

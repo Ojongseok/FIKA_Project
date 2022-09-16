@@ -20,7 +20,6 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
     private var _Binding: ActivityMycourseViewBinding? = null
     private val binding get() = _Binding!!
     var courseId = 0
-    var groupId = 0
     var dramaTitle = ""
     lateinit var spotList : ArrayList<spotList>
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +30,6 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
         val slidePanel = binding.mainFrame
         slidePanel.addPanelSlideListener(PanelEventListener())
         courseId = intent.getIntExtra("courseId",0)
-        groupId = intent.getIntExtra("groupId",0)
         val service = CourseViewService(this,courseId)
         service.tryCourseView()
 

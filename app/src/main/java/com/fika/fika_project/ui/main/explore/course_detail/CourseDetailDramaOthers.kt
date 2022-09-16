@@ -51,8 +51,7 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
             var service = LocationHoldService(this,initList.courseLocage?.spotId!!)
             service.tryLoadLocationHold(binding.courseDetailLocationFlagBtn)
         }
-        addCourseDTO.courseTitle = initList.courseTitle
-        addCourseDTO.baseAddress = initList.baseAddress
+        addCourseDTO.baseCourseId = courseId
         addCourseDTO.locageSpotId = initList.courseLocage?.spotId
     }
 

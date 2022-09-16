@@ -15,15 +15,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityFolderSelectBinding
 import com.fika.fika_project.retrofit.AddCourseDTO
-import com.fika.fika_project.ui.main.explore.folder.FolderResponse
-import com.fika.fika_project.ui.main.explore.folder.FolderService
-import com.fika.fika_project.ui.main.explore.folder.FolderView
-import com.fika.fika_project.ui.main.explore.folder.result
+import com.fika.fika_project.ui.main.explore.folder.*
 import com.fika.fika_project.ui.main.mycourse.course_edit.MyCourseViewActivity
 import kotlinx.android.synthetic.main.folder_item.view.*
 import okhttp3.internal.notify
 
-class FolderSelectActivity : AppCompatActivity(),FolderView {
+class FolderSelectActivity : AppCompatActivity(),FolderView,CreateCourseView {
     private var _Binding: ActivityFolderSelectBinding? = null
     private val binding get() = _Binding!!
     var courseId = 0
@@ -40,11 +37,11 @@ class FolderSelectActivity : AppCompatActivity(),FolderView {
         addCourseDTO = intent.getSerializableExtra("addCourseDTO") as AddCourseDTO
         binding.folderSelectGoCourseBtn.setOnClickListener {
             addCourseDTO.courseGroupId = groupId
-            val intent = Intent(this, MyCourseViewActivity::class.java)
-            intent.putExtra("courseId", courseId)
-            intent.putExtra("groupId", groupId)
-            intent.putExtra("addCourseDTO",addCourseDTO)
-            startActivity(intent)
+
+            val service = CreateCourseService(this,addCourseDTO)
+            service.tryCreateCourse()
+
+
         }
 
         binding.folderSelectStayBtn.setOnClickListener {
@@ -76,6 +73,25 @@ class FolderSelectActivity : AppCompatActivity(),FolderView {
             }
         }
     }
+
+    override fun onExploreLoading() {
+        binding.folderPr.visibility = View.VISIBLE
+    }
+
+    override fun onExploreSuccess(response: CreateCourseResponse) {
+        when (response.code) {
+            1000 -> {
+                binding.folderPr.visibility = View.GONE
+                response.let {
+                    val intent = Intent(this, MyCourseViewActivity::class.java)
+                    intent.putExtra("courseId", it.result)
+                    intent.putExtra("addCourseDTO",addCourseDTO)
+                    startActivity(intent)
+                }
+            }
+        }
+    }
+
     override fun onExploreFailure() {
     }
     inner class FolderSelectAdapter(val folderList : ArrayList<result>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

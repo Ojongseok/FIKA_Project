@@ -34,8 +34,7 @@ data class CourseEditDTO(
     val spotIdList : ArrayList<Long>
 )
 data class AddCourseDTO(
-    var courseTitle : String? =null,
-    var baseAddress : String?=null,
+    var baseCourseId : Int?=0,
     var courseGroupId : Int?=0,
     var locageSpotId : Int?=0,
     var spotIdList : ArrayList<Int> = ArrayList()

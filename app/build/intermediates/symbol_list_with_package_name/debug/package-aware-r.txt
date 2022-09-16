@@ -3172,6 +3172,7 @@ id fixed
 id flip
 id floating
 id folder_name_tv
+id folder_pr
 id folder_select_go_course_btn
 id folder_select_recyclerview
 id folder_select_stay_btn
