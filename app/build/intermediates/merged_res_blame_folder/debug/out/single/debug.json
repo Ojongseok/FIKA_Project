@@ -36,24 +36,24 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\activity_visit_complete_course.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\drawable_kakaomap_somenail.png.flat",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\drawable\\kakaomap_somenail.png"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_mypage.png.flat",
         "source": "D:\\FIKA\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_mypage.png"
+    },
+    {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\drawable_kakaomap_somenail.png.flat",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\drawable\\kakaomap_somenail.png"
     },
     {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_explore_drama_page.xml.flat",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_explore_drama_page.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\drawable_time.png.flat",
         "source": "D:\\FIKA\\app\\src\\main\\res\\drawable\\time.png"
+    },
+    {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\drawable_stroke_up.png.flat",
@@ -128,12 +128,12 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\fragment_explore.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\layout_item_placeinfo_review.xml.flat",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\item_placeinfo_review.xml"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\drawable_home_off.png.flat",
         "source": "D:\\FIKA\\app\\src\\main\\res\\drawable\\home_off.png"
+    },
+    {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\layout_item_placeinfo_review.xml.flat",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\item_placeinfo_review.xml"
     },
     {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\merged_res\\debug\\drawable_logo_fikaduck.xml.flat",
