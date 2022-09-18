@@ -60,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
                     android:layout_weight="1"
-                    android:text="드라마 제목"
+                    android:text="@string/loading"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -111,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:maxLines="3"
-                    android:text="박새로이와 조이서가 함께 오픈한 꿀밤포차"
+                    android:text="@string/loading"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -123,7 +123,7 @@
                     android:id="@+id/detail_course_hash_tv_by_drama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="# 순두부찌개"
+                    android:text="@string/loading"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/course_detail_locage_tiltle_by_drama" />
 
@@ -152,7 +152,7 @@
                 android:id="@+id/imageView17"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginEnd="2dp"
                 app:layout_constraintBottom_toBottomOf="@+id/others_star_count_tv"
                 app:layout_constraintEnd_toStartOf="@+id/others_star_count_tv"
                 app:layout_constraintTop_toTopOf="@+id/textView31"
@@ -287,7 +287,8 @@
                             android:id="@+id/course_detail_where_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="서울" />
+                            android:text="@string/loading"
+                            />
 
                         <TextView
                             android:id="@+id/textView20"
@@ -301,14 +302,15 @@
                             android:id="@+id/course_detail_category_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="공원" />
+                            android:text="@string/loading"
+                            />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/course_detail_course_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="투명 카약"
+                        android:text="@string/loading"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 

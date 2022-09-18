@@ -44,13 +44,11 @@ class MyholdcourseFragment : Fragment(),MySpotView {
             fragmentManager.popBackStack()
         }
 
+        val mActivity = activity as MainActivity
         binding.myplaceHomeIv.setOnClickListener {
-            //추가했습니다!
-            val mActivity = activity as MainActivity
-            binding.myplaceHomeIv.setOnClickListener {
-                mActivity.changeFragment(1)
-            }
+            mActivity.changeFragment(1)
         }
+
 
     }
 
@@ -89,14 +87,14 @@ class MySpotAdapter(val mySpotList: ArrayList<result>,val context: Context) : Re
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val view = (holder as CustomViewHolder).itemView
 
-        if(itemCount == 0){
-            view.myscrapcourse_empty_iv.visibility = View.VISIBLE
-            view.myplace_rv.visibility = View.GONE
-
-        }else{
-            view.myscrapcourse_empty_iv.visibility = View.GONE
-            view.myplace_rv.visibility = View.VISIBLE
-        }
+//        if(itemCount == 0){
+//            view.myscrapcourse_empty_iv.visibility = View.VISIBLE
+//            view.myplace_rv.visibility = View.INVISIBLE
+//
+//        }else{
+//            view.myscrapcourse_empty_iv.visibility = View.INVISIBLE
+//            view.myplace_rv.visibility = View.VISIBLE
+//        }
 
         Glide.with(context).load(mySpotList[position].spotImageUrl).into(view.item_myplace_iv)
         view.item_myplace_place_tv.text = mySpotList[position].spotTitle

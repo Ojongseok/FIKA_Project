@@ -48,7 +48,6 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
-
             <ImageView
                 android:id="@+id/myscrapcourse_home_iv"
                 android:layout_width="24dp"

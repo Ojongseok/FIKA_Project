@@ -32,7 +32,7 @@
             android:layout_gravity="center|center_vertical"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="이태원 클라쓰"
+            android:text="@string/loading"
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -72,9 +72,7 @@
         <FrameLayout
             android:id="@+id/viewpager_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </FrameLayout>
+            android:layout_height="match_parent"/>
 
         <ImageView
             android:id="@+id/imageView"
