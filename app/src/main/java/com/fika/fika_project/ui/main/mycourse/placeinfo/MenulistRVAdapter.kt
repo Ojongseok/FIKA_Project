@@ -1,17 +1,10 @@
 package com.fika.fika_project.ui.main.mycourse.placeinfo
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.fika.fika_project.databinding.ItemHomeDramarankBinding
 import com.fika.fika_project.databinding.ItemPlaceinfoMenuBinding
-import com.fika.fika_project.ui.main.explore.drama_info.DramaInfoActivity
-import com.fika.fika_project.ui.main.home.DramaRankRVAdapter
-import com.fika.fika_project.ui.main.home.dramaList
-import com.fika.fika_project.utils.spfManager
 
 class MenulistRVAdapter(private val MenuList: ArrayList<MenuList>, val context: Context) : RecyclerView.Adapter<MenulistRVAdapter.ViewHolder>()
 {
@@ -30,7 +23,6 @@ class MenulistRVAdapter(private val MenuList: ArrayList<MenuList>, val context: 
         fun bind(itemMenulist: MenuList){
             binding.placeinfoLocateMenuTv.text = itemMenulist.menuName
             binding.placeinfoLocateMenuPriceTv.text = itemMenulist.menuPrice
-
         }
     }
 

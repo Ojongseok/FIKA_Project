@@ -3731,17 +3731,6 @@ id search_layout
 id search_mag_icon
 id search_ok_button
 id search_plate
-id search_rank_1
-id search_rank_1_contents
-id search_rank_2
-id search_rank_2_contents
-id search_rank_3
-id search_rank_3_contents
-id search_rank_4
-id search_rank_4_contents
-id search_rank_5
-id search_rank_5_contents
-id search_rank_sub_tv
 id search_reccomend_recyclerview
 id search_recent_keyword
 id search_recent_keyword_recyclerview
@@ -3762,8 +3751,6 @@ id select_dialog_listview
 id selected
 id selection_type
 id serach_back_iv
-id serach_rank_layout
-id serach_rank_tv
 id sharedValueSet
 id sharedValueUnset
 id shortcut

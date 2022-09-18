@@ -168,12 +168,12 @@
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_folder_select.xml",
-        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\activity_folder_select.xml"
-    },
-    {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_placeinfo_menu.xml",
         "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\item_placeinfo_menu.xml"
+    },
+    {
+        "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_folder_select.xml",
+        "source": "D:\\FIKA\\app\\src\\main\\res\\layout\\activity_folder_select.xml"
     },
     {
         "merged": "D:\\FIKA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_mypage.xml",

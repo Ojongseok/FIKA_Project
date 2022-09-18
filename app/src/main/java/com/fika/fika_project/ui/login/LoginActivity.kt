@@ -33,7 +33,8 @@ import com.kakao.util.helper.Utility
 class LoginActivity : AppCompatActivity(), LoginView {
     lateinit var binding: ActivityLoginBinding
     lateinit var mGoogleSignInClient : GoogleSignInClient
-    lateinit var resultRuncher : ActivityResultLauncher<Intent>
+//    lateinit var resultRuncher : ActivityResultLauncher<Intent>
+    private lateinit var GoogleSignResultLauncher:ActivityResultLauncher<Intent>
 
     public var RC_SIGN_IN = 1
 
@@ -43,13 +44,18 @@ class LoginActivity : AppCompatActivity(), LoginView {
         super.onStart()
 
         val account = GoogleSignIn.getLastSignedInAccount(this)
+        if (account == null) {
+            Log.e("Google account", "로그인 안되어있음")
+        } else {
+            Log.e("Google account", "로그인 완료된 상태")
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
 
-        setResultSignUp()
+//        setResultSignUp()
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestEmail()
@@ -70,29 +76,35 @@ class LoginActivity : AppCompatActivity(), LoginView {
 //        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 //        startActivity(intent)
 
-    }
-
-    private fun setResultSignUp(){
-        resultRuncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
-            if(result.resultCode == Activity.RESULT_OK){
-                val task : Task<GoogleSignInAccount> =
-                    GoogleSignIn.getSignedInAccountFromIntent(result.data)
-
-                handleSignInResult(task)
-                Log.d("done",resultRuncher.toString())
-
-            }
+        GoogleSignResultLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()){ result ->
+            val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(result.data)
+            handleSignInResult(task)
         }
+
     }
 
+//    private fun setResultSignUp(){
+//        resultRuncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
+//            if(result.resultCode == Activity.RESULT_OK){
+//                val task : Task<GoogleSignInAccount> =
+//                    GoogleSignIn.getSignedInAccountFromIntent(result.data)
+//
+//                handleSignInResult(task)
+//                Log.d("done",resultRuncher.toString())
+//
+//            }
+//        }
+//    }
 
-    private fun googleLogin(){
-        val signIntent: Intent = mGoogleSignInClient.signInIntent
-
-        //인증허가 화면 보여주기
-        startActivityForResult(signIntent, RC_SIGN_IN)
-//       resultRuncher.launch(signIntent)
-    }
+//
+//    private fun googleLogin(){
+//        val signIntent: Intent = mGoogleSignInClient.signInIntent
+//
+//        //인증허가 화면 보여주기
+//        startActivityForResult(signIntent, RC_SIGN_IN)
+////       resultRuncher.launch(signIntent)
+//    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -134,16 +146,12 @@ class LoginActivity : AppCompatActivity(), LoginView {
                 .replace(R.id.login_frm, TesterloginFragment())
                 .commitAllowingStateLoss()
 
-//            val getCode = testerCode("rf2amgpNuA")
         }
 
         binding.loginGoogleIv.setOnClickListener {
-            googleLogin()
-
-//            supportFragmentManager.beginTransaction()
-//                .replace(R.id.login_frm, Agree01Fragment())
-//                .commitAllowingStateLoss()
-
+//            googleLogin()
+            var signIntent : Intent = mGoogleSignInClient.signInIntent
+            GoogleSignResultLauncher.launch(signIntent)
         }
 
 

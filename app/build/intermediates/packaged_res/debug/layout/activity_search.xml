@@ -46,7 +46,7 @@
             android:id="@+id/search_et"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="@string/home_search_et"
+            android:hint="@string/home_search_et"
             android:background="@null"
             android:layout_marginStart="7dp"
             android:textSize="14sp"
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/search_recent_tv"
-        android:textColor="@color/grey2"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/search_layout"
@@ -88,7 +88,7 @@
         android:id="@+id/search_recent_keyword_recyclerview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         tools:listitem="@layout/search_recent_keyword_item"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="horizontal"
@@ -101,7 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/search_recomend_tv"
-        android:textColor="@color/grey2"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/serach_back_iv"
@@ -109,126 +109,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/search_reccomend_recyclerview"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         tools:listitem="@layout/search_recommend_keyword_item"
         app:layout_constraintTop_toBottomOf="@id/search_recomend_tv"
         app:layout_constraintStart_toStartOf="@id/serach_back_iv"
+        app:layout_constraintEnd_toEndOf="@id/search_layout"
         />
 
-    <TextView
-        android:id="@+id/serach_rank_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/serach_rank_tv"
-        android:textColor="@color/grey2"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/search_reccomend_recyclerview"
-        app:layout_constraintStart_toStartOf="@id/serach_back_iv"/>
-
-    <TextView
-        android:id="@+id/search_rank_sub_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:textColor="@color/grey2"
-        android:text="@string/search_rank_sub_tv"
-        app:layout_constraintStart_toStartOf="@id/serach_back_iv"
-        app:layout_constraintTop_toBottomOf="@id/serach_rank_tv"/>
-
-    <RelativeLayout
-        android:id="@+id/serach_rank_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintTop_toBottomOf="@id/search_rank_sub_tv"
-        app:layout_constraintStart_toStartOf="@id/serach_back_iv">
-
-        <TextView
-            android:id="@+id/search_rank_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="1. " />
-
-        <TextView
-            android:id="@+id/search_rank_1_contents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/search_rank_1"
-            android:layout_alignBottom="@id/search_rank_1"
-            android:layout_toRightOf="@id/search_rank_1"
-            android:text="붉은 단심" />
-
-        <TextView
-            android:id="@+id/search_rank_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/search_rank_1"
-            android:layout_marginTop="8dp"
-            android:text="2. " />
-
-        <TextView
-            android:id="@+id/search_rank_2_contents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/search_rank_2"
-            android:layout_alignBottom="@id/search_rank_2"
-            android:layout_toRightOf="@id/search_rank_2"
-            android:text="이준" />
-
-        <TextView
-            android:id="@+id/search_rank_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/search_rank_2"
-            android:layout_marginTop="8dp"
-            android:text="3. " />
-
-        <TextView
-            android:id="@+id/search_rank_3_contents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/search_rank_3"
-            android:layout_alignBottom="@id/search_rank_3"
-            android:layout_toRightOf="@id/search_rank_3"
-            android:text="강한나" />
-
-        <TextView
-            android:id="@+id/search_rank_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/search_rank_3"
-            android:layout_marginTop="8dp"
-            android:text="4. " />
-
-        <TextView
-            android:id="@+id/search_rank_4_contents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/search_rank_4"
-            android:layout_alignBottom="@id/search_rank_4"
-            android:layout_toRightOf="@id/search_rank_4"
-            android:text="이상한 변호사 우영우" />
-
-        <TextView
-            android:id="@+id/search_rank_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/search_rank_4"
-            android:layout_marginTop="8dp"
-            android:text="5. " />
-
-        <TextView
-            android:id="@+id/search_rank_5_contents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/search_rank_5"
-            android:layout_alignBottom="@id/search_rank_5"
-            android:layout_toRightOf="@id/search_rank_5"
-            android:text="우영우" />
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
