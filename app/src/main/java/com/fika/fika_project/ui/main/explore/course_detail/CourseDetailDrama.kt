@@ -38,7 +38,7 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView 
         }
 
         binding.courseDetailDramaNameBtn.setOnClickListener {
-            val menuList =arrayOf("이태원 클라쓰","사랑의 불시착","그 해 우리는")
+            val menuList =arrayOf("梨泰院クラス","愛の不時着","그 해 우리는")
             val dialog = AlertDialog.Builder(this,android.R.style.Theme_DeviceDefault_Light_Dialog_Alert)
             dialog.setTitle("드라마 제목")
             dialog.setItems(menuList,DialogInterface.OnClickListener {dialogInterface, i ->
@@ -60,6 +60,7 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView 
         binding.courseDetailCategoryTv.text = initList.courseLocage?.type
         binding.courseDetailCourseName.text = initList.courseLocage?.spotTitle
         binding.othersStarCountTv.text = initList.courseSavedCount.toString()
+        binding.courseDetailDramaNameTv.text = initList.dramaTitle
 
         binding.courseDetailLocationFlagBtn.setOnClickListener {
             var service = LocationHoldService(this,initList.courseLocage?.spotId!!)

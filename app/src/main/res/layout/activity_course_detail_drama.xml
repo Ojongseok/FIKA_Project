@@ -60,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
                     android:layout_weight="1"
-                    android:text="드라마 제목"
+                    android:text="-"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -111,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:maxLines="3"
-                    android:text="박새로이와 조이서가 함께 오픈한 꿀밤포차"
+                    android:text="-"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -123,7 +123,7 @@
                     android:id="@+id/detail_course_hash_tv_by_drama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="# 순두부찌개"
+                    android:text="# HashTag"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/course_detail_locage_tiltle_by_drama" />
 
@@ -169,42 +169,6 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/textView31"
                 app:layout_constraintTop_toBottomOf="@+id/textView31" />
-
-            <LinearLayout
-                android:layout_width="216dp"
-                android:layout_height="0dp"
-                android:gravity="right"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="@+id/textView27"
-                app:layout_constraintStart_toEndOf="@+id/textView27"
-                app:layout_constraintTop_toTopOf="@+id/textView27"
-                app:layout_constraintVertical_bias="0.0">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|center_vertical"
-                    android:layout_marginRight="4dp"
-                    android:text="おいしい店" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|center_vertical"
-                    android:layout_marginRight="4dp"
-                    android:text="行くに足る所" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|center_vertical"
-                    android:layout_marginRight="4dp"
-                    android:text="カフェ" />
-
-            </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/myhold_top_layout"
@@ -308,7 +272,7 @@
                         android:id="@+id/course_detail_course_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="투명 카약"
+                        android:text="-"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -347,7 +311,7 @@
         android:layout_height="72dp"
         android:background="@drawable/button_background_off"
         android:gravity="center"
-        android:text="自分のコースに入れる"
+        android:text="コース作り"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"

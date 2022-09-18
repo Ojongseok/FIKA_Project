@@ -46,10 +46,6 @@ class FolderSelectActivity : AppCompatActivity(),FolderView,CreateCourseView {
             }
         }
 
-        binding.folderSelectStayBtn.setOnClickListener {
-            onBackPressed()
-        }
-
         service.tryloadFolder()
 
     }

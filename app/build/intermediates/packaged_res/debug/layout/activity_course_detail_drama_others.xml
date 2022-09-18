@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:maxLines="3"
-                    android:text="박새로이와 조이서가 함께 오픈한 꿀밤포차"
+                    android:text="-"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -110,7 +110,7 @@
                     android:id="@+id/detail_course_hash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="# 순두부찌개"
+                    android:text="# HashTag"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView48" />
 
@@ -162,13 +162,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="이태원 클라쓰"
+                android:text="-"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textView33"
                 app:layout_constraintStart_toEndOf="@+id/textView33"
-                app:layout_constraintTop_toTopOf="@+id/textView33"
-                android:textColor="@color/black" />
+                app:layout_constraintTop_toTopOf="@+id/textView33" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/myhold_top_layout"
@@ -260,7 +260,7 @@
                         android:id="@+id/map_title_name_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="투명 카약"
+                        android:text="-"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -290,42 +290,6 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/textView33"
                 app:layout_constraintTop_toBottomOf="@+id/myhold_top_layout" />
-
-            <LinearLayout
-                android:layout_width="216dp"
-                android:layout_height="0dp"
-                android:gravity="right"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="@+id/textView27"
-                app:layout_constraintStart_toEndOf="@+id/textView27"
-                app:layout_constraintTop_toTopOf="@+id/textView27"
-                app:layout_constraintVertical_bias="0.0">
-
-                <TextView
-                    android:id="@+id/others_filter1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|center_vertical"
-                    android:layout_marginRight="4dp"
-                    android:text="おいしい店" />
-
-                <TextView
-                    android:id="@+id/others_filter2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|center_vertical"
-                    android:layout_marginRight="4dp"
-                    android:text="行くに足る所" />
-
-                <TextView
-                    android:id="@+id/others_filter3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|center_vertical"
-                    android:layout_marginRight="4dp"
-                    android:text="カフェ" />
-
-            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/detail_course_together_recyclerview"
@@ -359,7 +323,7 @@
         android:layout_height="72dp"
         android:background="@drawable/button_background_off"
         android:gravity="center"
-        android:text="@string/course_detail_hold_btn"
+        android:text="コース作り"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"

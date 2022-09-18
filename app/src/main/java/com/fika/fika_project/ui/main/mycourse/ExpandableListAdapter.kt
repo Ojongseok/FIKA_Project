@@ -50,7 +50,6 @@ class ExpandableListAdapter(val context: Context, private val data: MutableList<
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = data[position]
-        Log.d("TTT",position.toString())
         when (item!!.type) {
             HEADER -> {
                 val itemController = holder as ListHeaderViewHolder?

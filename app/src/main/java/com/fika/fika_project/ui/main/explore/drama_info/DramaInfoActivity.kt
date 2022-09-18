@@ -45,13 +45,6 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
 
     }
 
-    override fun onResume() {
-        super.onResume()
-
-        val dramaId = spfManager.getDramaId()!!.toInt()
-        val service = DramaInfoService(this, dramaId)
-        service.tryLoadDramaInfoCourse()
-    }
 
     override fun onExploreLoading() {
         binding.dramaInfoPr.visibility = View.VISIBLE

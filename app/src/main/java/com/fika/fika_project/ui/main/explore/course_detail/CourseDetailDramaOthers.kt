@@ -139,26 +139,10 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
 
                     setOnClickEvent()
                     initData(it.result!!)
-                    filterSet()
                 }
             }
         }
     }
-    private fun filterSet() {
-        binding.othersFilter1.setOnClickListener {
-            var filterList = ArrayList<spotList>()
-            for (i in 0 until spotList.size) {
-                if (spotList[i].type.equals("restaurant")) {
-                    filterList.add(spotList[i])
-                }
-            }
-            binding.detailCourseTogetherRecyclerview.adapter.apply {
-                CourseDetailLocationOthersAdapter(filterList,applicationContext)
-            }
-            Toast.makeText(applicationContext,"ㅋ",Toast.LENGTH_SHORT).show()
-        }
-    }
-
     override fun onExploreFailure(code: Int, message: String) {
     }
 }

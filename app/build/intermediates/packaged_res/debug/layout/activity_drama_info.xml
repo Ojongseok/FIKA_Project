@@ -107,7 +107,7 @@
                     android:background="@drawable/filter_rec"
                     android:backgroundTint="@color/main_blue"
                     android:padding="8dp"
-                    android:text="확대해서 카카오맵으로 보기"
+                    android:text="マップで接続 "
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
