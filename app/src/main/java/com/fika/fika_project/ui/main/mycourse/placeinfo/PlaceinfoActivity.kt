@@ -11,12 +11,15 @@ import com.fika.fika_project.databinding.ActivityPlaceinfoLocateBinding
 import com.fika.fika_project.ui.main.mycourse.review.AllReviewFragment
 import com.fika.fika_project.ui.main.mycourse.review.ReviewReportFragment
 import com.fika.fika_project.utils.spfManager
+import io.reactivex.Single
+import org.jsoup.Jsoup
+import org.jsoup.select.Elements
 import timber.log.Timber
 
 class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
     lateinit var binding: ActivityPlaceinfoLocateBinding
     val service = PlaceinfoService(this)
-
+    var money = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -24,8 +27,14 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
         initView()
 
         setContentView(binding.root)
-    }
 
+        Thread(Runnable {
+            val url ="https://search.naver.com/search.naver?where=nexearch&sm=top_sug.ase&fbm=0&acr=1&acq=%EC%97%94%ED%99%94+&qdt=0&ie=utf8&query=%EC%97%94%ED%99%94+%ED%99%98%EC%9C%A8"
+            val doc = Jsoup.connect(url).get()
+            val title = doc.title()
+            money = doc.select("span.spt_con.dw strong").text()
+        }).start()
+    }
     private fun initView() {
         val homeSpotId = intent.getIntExtra("homeSpotId",0)
         Timber.tag("Print_CourseId").d(homeSpotId.toString())
@@ -116,6 +125,7 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
                 }
 
                 Log.d("PLACEINFO/1000", response.message)
+
             }
 
             4020 -> { Log.d("PLACEINFO/4020", "필수값이 포함되지 않은 경우") }
