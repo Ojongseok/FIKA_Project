@@ -5,11 +5,15 @@ import android.util.Log
 import android.view.View
 import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityPlaceinfoLocateBinding
 import com.fika.fika_project.ui.main.mycourse.review.AllReviewFragment
 import com.fika.fika_project.ui.main.mycourse.review.ReviewReportFragment
+import com.fika.fika_project.ui.main.mypage.MyScrap
+import com.fika.fika_project.ui.main.mypage.mycourse.MyscrapcourseRVAdapter
+import com.fika.fika_project.ui.main.mypage.myspot.MyspotRVAdapter
 import com.fika.fika_project.utils.spfManager
 import timber.log.Timber
 
@@ -57,6 +61,14 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
                 .commitAllowingStateLoss() }
         }
 
+    fun setMenuRVAdapter(menuList: ArrayList<MenuList>) {
+        val scrapRVAdapter = MenulistRVAdapter(menuList, this)
+
+        binding.placeinfoLocateMenuRv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.placeinfoLocateMenuRv.adapter = scrapRVAdapter
+        binding.placeinfoLocateMenuRv.setHasFixedSize(false)
+    }
+
     override fun onLoading() {
         binding.placeinfoPb.visibility = View.VISIBLE
     }
@@ -89,15 +101,10 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
 
                 //메뉴
                 if(resp.spotMenuList?.size == 0){
-                    binding.placeinfoLocateMenuTv1.visibility = View.GONE
-                    binding.placeinfoLocateMenuPriceTv1.visibility = View.GONE
-                    binding.placeinfoLocateMenuTv2.visibility = View.GONE
-                    binding.placeinfoLocateMenuPriceTv2.visibility = View.GONE
+                    binding.placeinfoLocateMenuRv.visibility = View.GONE
                 }else{
-                    binding.placeinfoLocateMenuTv1.text = resp.spotMenuList!![0].menuName
-                    binding.placeinfoLocateMenuPriceTv1.text = resp.spotMenuList!![0].menuPrice
-                    binding.placeinfoLocateMenuTv2.text = resp.spotMenuList!![1].menuName
-                    binding.placeinfoLocateMenuPriceTv2.text = resp.spotMenuList!![1].menuPrice
+                    binding.placeinfoLocateMenuRv.visibility = View.VISIBLE
+                    response.let { setMenuRVAdapter(it.result!!.spotMenuList!!) }
                 }
 
                 //리뷰

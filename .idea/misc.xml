@@ -28,7 +28,7 @@
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_my_scrap.xml" value="0.12" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_my_spot.xml" value="0.16209371042634022" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_mycourse_view.xml" value="0.15818725951261223" />
-        <entry key="..\:/FIKA/app/src/main/res/layout/activity_placeinfo_locate.xml" value="0.12287822878228782" />
+        <entry key="..\:/FIKA/app/src/main/res/layout/activity_placeinfo_locate.xml" value="0.21364795918367346" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_review_write.xml" value="0.176" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_search.xml" value="0.152" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_search_result.xml" value="0.2" />
@@ -63,9 +63,11 @@
         <entry key="..\:/FIKA/app/src/main/res/layout/fragment_testerlogin.xml" value="0.16203505771697307" />
         <entry key="..\:/FIKA/app/src/main/res/layout/item_home_course.xml" value="0.176" />
         <entry key="..\:/FIKA/app/src/main/res/layout/item_home_dramarank.xml" value="0.536" />
-        <entry key="..\:/FIKA/app/src/main/res/layout/item_home_placerank.xml" value="0.1633176571184267" />
+        <entry key="..\:/FIKA/app/src/main/res/layout/item_home_placerank.xml" value="0.264" />
         <entry key="..\:/FIKA/app/src/main/res/layout/item_home_scrapcourse.xml" value="0.264" />
         <entry key="..\:/FIKA/app/src/main/res/layout/item_myplace.xml" value="0.4" />
+        <entry key="..\:/FIKA/app/src/main/res/layout/item_myplace_2.xml" value="0.17015818725951262" />
+        <entry key="..\:/FIKA/app/src/main/res/layout/item_placeinfo_menu.xml" value="0.2" />
         <entry key="..\:/FIKA/app/src/main/res/layout/item_placeinfo_review.xml" value="0.2" />
         <entry key="..\:/FIKA/app/src/main/res/layout/item_review_img.xml" value="0.1628901239846088" />
         <entry key="..\:/FIKA/app/src/main/res/layout/mycourse_view_item_list.xml" value="0.15818725951261223" />
@@ -73,6 +75,7 @@
         <entry key="..\:/FIKA/app/src/main/res/layout/review_dialog.xml" value="0.15220179563916203" />
         <entry key="..\:/FIKA/app/src/main/res/layout/search_reccomend_keyword_item.xml" value="0.6" />
         <entry key="..\:/FIKA/app/src/main/res/layout/search_recent_keyword_item.xml" value="0.6" />
+        <entry key="..\:/FIKA/app/src/main/res/layout/search_recommend_keyword_item.xml" value="0.21248396750748183" />
         <entry key="..\:/FIKA/app/src/main/res/layout/visit_complete_course_list.xml" value="0.15818725951261223" />
         <entry key="..\:/FIKA/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1778537836682343" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/drawable-v24/home_rank_background.xml" value="0.1" />
@@ -159,7 +162,6 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/explore_course_page.xml" value="0.37890625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/explore_drama_page.xml" value="0.6156763590391909" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/folder_item.xml" value="0.536" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/footer_home_my_course_rv.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_all_review.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_banner.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_edit_personal.xml" value="0.25364583333333335" />
@@ -190,7 +192,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_home_course.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_home_dramarank.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_home_placerank.xml" value="0.38046875" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_home_scrapcourse.xml" value="0.6" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_home_scrapcourse.xml" value="0.6655052264808362" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_homecourse.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_list.xml" value="1.0" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_myplace.xml" value="0.4" />

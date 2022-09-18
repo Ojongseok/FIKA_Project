@@ -13,6 +13,7 @@ class SearchActivity : AppCompatActivity() {
     private var _Binding: ActivitySearchBinding? = null
     private val binding get() = _Binding!!
     var recentKeywordList : ArrayList<String> = ArrayList()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _Binding = ActivitySearchBinding.inflate(layoutInflater)

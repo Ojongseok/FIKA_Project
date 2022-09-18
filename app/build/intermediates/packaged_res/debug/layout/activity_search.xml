@@ -112,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        tools:listitem="@layout/search_reccomend_keyword_item"
+        tools:listitem="@layout/search_recommend_keyword_item"
         app:layout_constraintTop_toBottomOf="@id/search_recomend_tv"
         app:layout_constraintStart_toStartOf="@id/serach_back_iv"
         />

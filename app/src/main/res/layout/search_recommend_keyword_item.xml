@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="text"
-        android:textSize="14sp"
-        android:textColor="#94B4EC"/>
+        android:textColor="#94B4EC"
+        android:textSize="14sp" />
 
 </RelativeLayout>
