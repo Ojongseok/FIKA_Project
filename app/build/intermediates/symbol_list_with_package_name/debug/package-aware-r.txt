@@ -3067,6 +3067,7 @@ id course_detail_drama_name_tv
 id course_detail_drama_pr
 id course_detail_drama_title
 id course_detail_hold_btn
+id course_detail_home_btn
 id course_detail_iv
 id course_detail_iv_by_drama
 id course_detail_iv_location
@@ -3109,6 +3110,8 @@ id detail_course_nickname
 id detail_course_together_recyclerview
 id detail_scene_list_layout
 id dialog_button
+id dialog_menuname_tv
+id dialog_menuprice_tv
 id dialog_quit_back_btn
 id dialog_quit_contents_tv
 id dialog_quit_quit_btn
@@ -3117,6 +3120,7 @@ id dialog_review_close_iv
 id dialog_review_cv
 id dialog_review_iv
 id dialog_review_layout
+id dialog_title
 id dimensions
 id direct
 id disableHome
@@ -3266,8 +3270,8 @@ id image
 id imageView
 id imageView12
 id imageView13
-id imageView14
 id imageView17
+id imageView2
 id imageView24
 id imageView25
 id imageView27
@@ -3354,6 +3358,7 @@ id item_placerank_title_tv
 id item_placerank_where_tv
 id item_placerank_where_tv_2
 id item_touch_helper_previous_elevation
+id japan_money_tv
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3489,6 +3494,8 @@ id mycourse_view_list_container
 id myhold_back_btn
 id myhold_checkbox_btn
 id myhold_home_btn
+id myhold_home_btn2
+id myhold_home_btn3
 id myhold_location_recyclerview
 id myhold_title
 id myhold_title_bar
@@ -3861,6 +3868,7 @@ id textView21
 id textView22
 id textView23
 id textView24
+id textView25
 id textView27
 id textView3
 id textView31
@@ -4151,6 +4159,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout momey_dialog
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

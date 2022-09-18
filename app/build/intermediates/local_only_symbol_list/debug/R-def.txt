@@ -253,6 +253,7 @@ id course_detail_drama_name_tv
 id course_detail_drama_pr
 id course_detail_drama_title
 id course_detail_hold_btn
+id course_detail_home_btn
 id course_detail_iv
 id course_detail_iv_by_drama
 id course_detail_iv_location
@@ -276,6 +277,8 @@ id detail_course_hash_tv_by_drama
 id detail_course_nickname
 id detail_course_together_recyclerview
 id detail_scene_list_layout
+id dialog_menuname_tv
+id dialog_menuprice_tv
 id dialog_quit_back_btn
 id dialog_quit_contents_tv
 id dialog_quit_quit_btn
@@ -284,6 +287,7 @@ id dialog_review_close_iv
 id dialog_review_cv
 id dialog_review_iv
 id dialog_review_layout
+id dialog_title
 id drama_detail_back_btn
 id drama_detail_info_title_name
 id drama_info_course_image
@@ -356,8 +360,8 @@ id home_search_iv
 id imageView
 id imageView12
 id imageView13
-id imageView14
 id imageView17
+id imageView2
 id imageView24
 id imageView25
 id imageView27
@@ -437,6 +441,7 @@ id item_placerank_img_iv
 id item_placerank_title_tv
 id item_placerank_where_tv
 id item_placerank_where_tv_2
+id japan_money_tv
 id large_map
 id large_map_bottom_view
 id large_map_btn
@@ -492,6 +497,8 @@ id mycourse_view_list_container
 id myhold_back_btn
 id myhold_checkbox_btn
 id myhold_home_btn
+id myhold_home_btn2
+id myhold_home_btn3
 id myhold_location_recyclerview
 id myhold_title
 id myhold_title_bar
@@ -718,6 +725,7 @@ id textView21
 id textView22
 id textView23
 id textView24
+id textView25
 id textView27
 id textView3
 id textView31
@@ -819,6 +827,7 @@ layout item_placeinfo_review
 layout item_review_img
 layout item_spinner
 layout item_view
+layout momey_dialog
 layout mycourse_save_state_list
 layout mycourse_view_item_list
 layout myhold_location_item_list

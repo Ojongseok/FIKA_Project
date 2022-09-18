@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.fika.fika_project.ApplicationClass
 import com.fika.fika_project.databinding.ActivityDramaInfoBinding
+import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.ui.main.explore.DramaInfoResponse
 import com.fika.fika_project.ui.main.explore.spotDataList
 import com.fika.fika_project.utils.spfManager
@@ -25,7 +26,13 @@ class DramaInfoActivity : AppCompatActivity(), DramaInfoView,Serializable {
         setContentView(binding.root)
 
         initData()
-
+        binding.myholdHomeBtn3.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent)
+            finish()
+        }
         binding.dramaDetailBackBtn.setOnClickListener { finish() }
 
         binding.largeMapBtn.setOnClickListener {

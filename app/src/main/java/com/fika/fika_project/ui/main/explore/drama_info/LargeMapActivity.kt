@@ -1,11 +1,13 @@
 package com.fika.fika_project.ui.main.explore.drama_info
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityLargeMapBinding
+import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.ui.main.explore.spotDataList
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint.mapPointWithGeoCoord
@@ -26,6 +28,13 @@ class LargeMapActivity : AppCompatActivity() {
 
         binding.largeMapTitleName.text = position
         binding.myholdBackBtn.setOnClickListener {
+            finish()
+        }
+        binding.myholdHomeBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent)
             finish()
         }
 

@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityCourseDetailDramaOthersBinding
 import com.fika.fika_project.retrofit.AddCourseDTO
+import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.ui.main.explore.course_detail.*
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldService
@@ -36,7 +37,13 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
         service.tryLoadCourseDetail()
         binding.courseDetailDramaBackBtn.setOnClickListener { finish() }
 
-
+        binding.myholdHomeBtn2.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun initData(initList: result) {

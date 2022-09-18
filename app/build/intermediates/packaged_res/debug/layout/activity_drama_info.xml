@@ -19,6 +19,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/myhold_home_btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
             android:id="@+id/drama_detail_back_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

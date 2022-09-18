@@ -32,12 +32,7 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
 
         setContentView(binding.root)
 
-        Thread(Runnable {
-            val url ="https://search.naver.com/search.naver?where=nexearch&sm=top_sug.ase&fbm=0&acr=1&acq=%EC%97%94%ED%99%94+&qdt=0&ie=utf8&query=%EC%97%94%ED%99%94+%ED%99%98%EC%9C%A8"
-            val doc = Jsoup.connect(url).get()
-            val title = doc.title()
-            money = doc.select("span.spt_con.dw strong").text()
-        }).start()
+
     }
     private fun initView() {
         val homeSpotId = intent.getIntExtra("homeSpotId",0)
@@ -71,11 +66,21 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
         }
 
     fun setMenuRVAdapter(menuList: ArrayList<MenuList>) {
-        val scrapRVAdapter = MenulistRVAdapter(menuList, this)
+        Thread(Runnable {
+            val url ="https://search.naver.com/search.naver?where=nexearch&sm=top_sug.ase&fbm=0&acr=1&acq=%EC%97%94%ED%99%94+&qdt=0&ie=utf8&query=%EC%97%94%ED%99%94+%ED%99%98%EC%9C%A8"
+            val doc = Jsoup.connect(url).get()
+            money = doc.select("span.spt_con.dw strong").text()
 
-        binding.placeinfoLocateMenuRv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.placeinfoLocateMenuRv.adapter = scrapRVAdapter
-        binding.placeinfoLocateMenuRv.setHasFixedSize(false)
+            this@PlaceinfoActivity.runOnUiThread(java.lang.Runnable {
+                val scrapRVAdapter = MenulistRVAdapter(menuList, this,money)
+
+                binding.placeinfoLocateMenuRv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+                binding.placeinfoLocateMenuRv.adapter = scrapRVAdapter
+                binding.placeinfoLocateMenuRv.setHasFixedSize(false)
+            })
+        }).start()
+
+
     }
 
     override fun onLoading() {

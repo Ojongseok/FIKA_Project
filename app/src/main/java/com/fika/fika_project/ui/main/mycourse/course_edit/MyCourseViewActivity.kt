@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityMycourseViewBinding
+import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.ui.main.mycourse.course_edit.add_location.MyHoldLocationActivity
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_edit.MyCourseEditState
 import com.fika.fika_project.ui.main.mycourse.course_edit.state_save.*
@@ -48,12 +49,11 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
             startActivity(intent)
         }
         binding.myholdHomeBtn.setOnClickListener {
-//            val intent = Intent(this,MainActivity::class.java)
-//            intent.putExtra("homeState",1)
-//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-//            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-//            startActivity(intent)
-//            finish()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent)
+            finish()
         }
     }
     override fun editvisible() {

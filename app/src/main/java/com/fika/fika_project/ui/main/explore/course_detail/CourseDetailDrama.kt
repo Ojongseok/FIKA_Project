@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityCourseDetailDramaBinding
 import com.fika.fika_project.retrofit.AddCourseDTO
+import com.fika.fika_project.ui.main.MainActivity
 import com.fika.fika_project.ui.main.explore.course_detail.*
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldResponse
 import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldService
@@ -36,7 +37,13 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView 
         binding.courseDetailDramaBackBtn.setOnClickListener {
             finish()
         }
-
+        binding.courseDetailHomeBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent)
+            finish()
+        }
         binding.courseDetailDramaNameBtn.setOnClickListener {
             val menuList =arrayOf("梨泰院クラス","愛の不時着","그 해 우리는")
             val dialog = AlertDialog.Builder(this,android.R.style.Theme_DeviceDefault_Light_Dialog_Alert)
