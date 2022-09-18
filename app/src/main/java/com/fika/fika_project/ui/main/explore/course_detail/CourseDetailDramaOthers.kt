@@ -41,6 +41,7 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
 
     private fun initData(initList: result) {
         binding.courseDetailCourseTitle.text = initList.courseTitle
+        binding.detailCourseNickname.text = initList.courseCreateMember
         Glide.with(this).load(initList.locageSceneImageUrl).into(binding.courseDetailIv)
         binding.courseDetailLocageTiltle.text = initList.locageSceneDescribe
         binding.detailCourseHash.text = initList.hashTag
@@ -139,10 +140,26 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
 
                     setOnClickEvent()
                     initData(it.result!!)
+                    filterSet()
                 }
             }
         }
     }
+    private fun filterSet() {
+        binding.othersFilter1.setOnClickListener {
+            var filterList = ArrayList<spotList>()
+            for (i in 0 until spotList.size) {
+                if (spotList[i].type.equals("restaurant")) {
+                    filterList.add(spotList[i])
+                }
+            }
+            binding.detailCourseTogetherRecyclerview.adapter.apply {
+                CourseDetailLocationOthersAdapter(filterList,applicationContext)
+            }
+            Toast.makeText(applicationContext,"others_filter1",Toast.LENGTH_SHORT).show()
+        }
+    }
+
     override fun onExploreFailure(code: Int, message: String) {
     }
 }

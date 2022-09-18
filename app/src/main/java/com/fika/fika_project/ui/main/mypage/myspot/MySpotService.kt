@@ -13,6 +13,7 @@ class MySpotService(val View: MySpotView) {
 
     fun tryloadMySpot(){
         View.onExploreLoading()
+
         load.enqueue(object : Callback<MySpotResponse> {
             override fun onResponse(call: Call<MySpotResponse>, response: Response<MySpotResponse>) {
                 val resp = response.body()

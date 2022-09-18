@@ -44,6 +44,8 @@ class MypageService(val View : MypageView) {
     fun tryloadMySpot(){
         retrofit.loadMySpot().enqueue(object : Callback<MySpotResponse> {
             override fun onResponse(call: Call<MySpotResponse>, response: Response<MySpotResponse>) {
+                View.onLoading()
+
                 val resp = response.body()
 
                 Log.d("LOADEXPLORE/API", response.body().toString())
@@ -64,6 +66,8 @@ class MypageService(val View : MypageView) {
     fun tryMyScrap(){
         retrofit.MyScrap().enqueue(object : Callback<MyScrapResponse> {
             override fun onResponse(call: Call<MyScrapResponse>, response: Response<MyScrapResponse>) {
+                View.onLoading()
+
                 var result: MyScrapResponse? = response.body()
                 val resp = response.body()
 

@@ -61,6 +61,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_weight="1"
                     android:text="-"
+                    android:text="@string/loading"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -111,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:maxLines="3"
-                    android:text="-"
+                    android:text="@string/loading"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -123,7 +124,7 @@
                     android:id="@+id/detail_course_hash_tv_by_drama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="# HashTag"
+                    android:text="@string/loading"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/course_detail_locage_tiltle_by_drama" />
 
@@ -152,7 +153,7 @@
                 android:id="@+id/imageView17"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginEnd="2dp"
                 app:layout_constraintBottom_toBottomOf="@+id/others_star_count_tv"
                 app:layout_constraintEnd_toStartOf="@+id/others_star_count_tv"
                 app:layout_constraintTop_toTopOf="@+id/textView31"
@@ -169,6 +170,42 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/textView31"
                 app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+            <LinearLayout
+                android:layout_width="216dp"
+                android:layout_height="0dp"
+                android:gravity="right"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/textView27"
+                app:layout_constraintStart_toEndOf="@+id/textView27"
+                app:layout_constraintTop_toTopOf="@+id/textView27"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="4dp"
+                    android:text="おいしい店" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="4dp"
+                    android:text="行くに足る所" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="4dp"
+                    android:text="カフェ" />
+
+            </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/myhold_top_layout"
@@ -251,7 +288,8 @@
                             android:id="@+id/course_detail_where_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="서울" />
+                            android:text="@string/loading"
+                            />
 
                         <TextView
                             android:id="@+id/textView20"
@@ -265,14 +303,15 @@
                             android:id="@+id/course_detail_category_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="공원" />
+                            android:text="@string/loading"
+                            />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/course_detail_course_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="-"
+                        android:text="@string/loading"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -311,7 +350,7 @@
         android:layout_height="72dp"
         android:background="@drawable/button_background_off"
         android:gravity="center"
-        android:text="コース作り"
+        android:text="自分のコースに入れる"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
