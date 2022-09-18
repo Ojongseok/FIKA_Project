@@ -110,8 +110,9 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
 
                 //메뉴
                 if(resp.spotMenuList?.size == 0){
-                    binding.placeinfoLocateMenuRv.visibility = View.GONE
+                    binding.placeinfoLocateMenuLayout.visibility = View.GONE
                 }else{
+                    binding.placeinfoLocateMenuLayout.visibility = View.VISIBLE
                     binding.placeinfoLocateMenuRv.visibility = View.VISIBLE
                     response.let { setMenuRVAdapter(it.result!!.spotMenuList!!) }
                 }
