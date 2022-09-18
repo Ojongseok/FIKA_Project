@@ -42,7 +42,7 @@
             android:layout_gravity="center|center_vertical"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="이태원 클라쓰"
+            android:text="@string/loading"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -80,16 +80,46 @@
 
             </FrameLayout>
 
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginTop="56dp"
-                android:text="ロケ地カタログ"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                >
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ロケ地カタログ"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/plus"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/large_map_btn"/>
+
+                <TextView
+                    android:id="@+id/large_map_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/large_map_btn"
+                    android:textColor="@color/grey2"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -106,33 +136,20 @@
 
                 </FrameLayout>
 
-                <TextView
-                    android:id="@+id/large_map_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="14dp"
-                    android:layout_marginRight="14dp"
-                    android:background="@drawable/filter_rec"
-                    android:backgroundTint="@color/main_blue"
-                    android:padding="8dp"
-                    android:text="マップで接続 "
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
             </FrameLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/drama_info_location_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                tools:listitem="@layout/item_home_placerank"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="56dp"
                 android:text="コースカタログ"
                 android:textColor="@color/black"
@@ -143,9 +160,11 @@
                 android:id="@+id/drama_info_course_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                tools:listitem="@layout/item_home_scrapcourse"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginRight="20dp" />
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"/>
 
         </LinearLayout>
     </ScrollView>
