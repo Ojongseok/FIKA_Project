@@ -13,10 +13,7 @@ import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.FragmentMyholdcourseBinding
 import com.fika.fika_project.ui.main.MainActivity
-import com.fika.fika_project.ui.main.mypage.myspot.MySpotResponse
-import com.fika.fika_project.ui.main.mypage.myspot.MySpotService
-import com.fika.fika_project.ui.main.mypage.myspot.MySpotView
-import com.fika.fika_project.ui.main.mypage.myspot.result
+import com.fika.fika_project.ui.main.mypage.myspot.*
 import kotlinx.android.synthetic.main.fragment_myholdcourse.view.*
 import kotlinx.android.synthetic.main.item_myplace.view.*
 
@@ -63,11 +60,14 @@ class MyholdcourseFragment : Fragment(),MySpotView {
             1000 -> {
                 if (response.result!!.size == 0) {
                     binding.myscrapcourseEmptyIv.visibility = View.VISIBLE
+                    binding.myplaceRv.visibility = View.GONE
                 } else {
                     response.let {
+                        binding.myscrapcourseEmptyIv.visibility = View.GONE
+                        binding.myplaceRv.visibility = View.VISIBLE
+
                         binding.myplaceRv.layoutManager = LinearLayoutManager(requireContext())
-                        binding.myplaceRv.adapter = MySpotAdapter(it.result!!, requireContext())
-                        binding.myscrapcourseEmptyIv.visibility = View.INVISIBLE
+                        binding.myplaceRv.adapter = MyspotRVAdapter(it.result!!, requireContext())
                     }
                 }
             }
@@ -78,32 +78,3 @@ class MyholdcourseFragment : Fragment(),MySpotView {
     }
 }
 
-class MySpotAdapter(val mySpotList: ArrayList<result>,val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_myplace_2,parent,false)
-        return CustomViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val view = (holder as CustomViewHolder).itemView
-
-//        if(itemCount == 0){
-//            view.myscrapcourse_empty_iv.visibility = View.VISIBLE
-//            view.myplace_rv.visibility = View.INVISIBLE
-//
-//        }else{
-//            view.myscrapcourse_empty_iv.visibility = View.INVISIBLE
-//            view.myplace_rv.visibility = View.VISIBLE
-//        }
-
-        Glide.with(context).load(mySpotList[position].spotImageUrl).into(view.item_myplace_iv)
-        view.item_myplace_place_tv.text = mySpotList[position].spotTitle
-        view.item_myplace_place_cate_tv.text = mySpotList[position].type
-        view.item_myplace_place_where_tv2.text = mySpotList[position].shortAddress
-
-    }
-
-
-    inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)
-    override fun getItemCount() = mySpotList.size
-}
