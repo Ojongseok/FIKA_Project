@@ -95,4 +95,10 @@
     <string name="course_detail_hold_btn">自分のコースに入れる</string>
     <string name="mypage_empty_tv_01">まだ盛り込んだ場所がありません。</string>
     <string name="mypage_empty_tv_02">気に入った場所を盛り込んでみてください。</string>
+    <string name="map_zoom">マップで接続</string>
+    <string name="group_add">グループ追加</string>
+    <string name="group_edit">グループ名修正</string>
+    <string name="new_group">新しいグループ</string>
+    <string name="all_review_empty_tv">初レビューを書いてください : )</string>
+    <string name="large_map_btn">マップ拡大</string>
 </resources>

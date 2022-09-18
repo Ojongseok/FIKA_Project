@@ -58,19 +58,12 @@
                     android:id="@+id/course_detail_drama_name_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
                     android:layout_weight="1"
                     android:text="@string/loading"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/course_detail_drama_name_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/down" />
             </LinearLayout>
 
             <ImageView

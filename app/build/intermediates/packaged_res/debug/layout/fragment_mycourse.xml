@@ -45,12 +45,13 @@
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    app:srcCompat="@drawable/plus" />
+                    app:srcCompat="@drawable/blue_plus" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="グループ追加"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/group_add"
                     android:textColor="@color/sub_blue" />
 
             </LinearLayout>
@@ -76,7 +77,7 @@
                     android:id="@+id/add12dkhk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="그룹 수정" />
+                    android:text="@string/group_edit" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView

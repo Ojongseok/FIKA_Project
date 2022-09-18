@@ -101,27 +101,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView48"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="by."
-                    android:textColor="@color/grey"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="@+id/course_detail_locage_tiltle"
-                    app:layout_constraintTop_toBottomOf="@+id/course_detail_locage_tiltle" />
-
-                <TextView
-                    android:id="@+id/detail_course_nickname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/loading"
-                    android:textColor="@color/grey"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toEndOf="@+id/textView48"
-                    app:layout_constraintTop_toTopOf="@+id/textView48" />
-
-                <TextView
                     android:id="@+id/detail_course_hash"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -133,10 +112,21 @@
                     android:layout_marginEnd="4dp"
                     android:layout_marginTop="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/textView48"
+                    app:layout_constraintStart_toStartOf="@id/course_detail_locage_tiltle"
                     app:layout_constraintEnd_toEndOf="@id/constraintLayout"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/detail_course_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout"/>
 
             <TextView
                 android:id="@+id/textView31"
@@ -146,7 +136,7 @@
                 android:layout_marginTop="32dp"
                 android:text="全体選択"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/detail_course_nickname" />
 
             <TextView
                 android:id="@+id/others_star_count_tv"
@@ -355,7 +345,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|center_vertical"
                     android:layout_marginEnd="4dp"
-                    android:text="行くに足る所"
+                    android:text="カフェ"
                     android:textColor="@color/grey3"
                     android:textSize="14sp"
                     />
@@ -366,7 +356,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|center_vertical"
                     android:layout_marginRight="4dp"
-                    android:text="カフェ"
+                    android:text="観光地"
                     android:textColor="@color/grey3"
                     android:textSize="14sp"
                     />

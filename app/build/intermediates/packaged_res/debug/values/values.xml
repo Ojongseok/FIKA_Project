@@ -47,6 +47,7 @@
     <string name="agree_01_title_tv">サービス利用同意</string>
     <string name="agree_02_title_tv">(必須)サービス利用約款</string>
     <string name="agree_03_title_tv">(必須)個人情報処理方針</string>
+    <string name="all_review_empty_tv">初レビューを書いてください : )</string>
     <string name="all_view_photoreview">写真のレビューだけ見る</string>
     <string name="all_view_title_tv">全体レビューを見ること</string>
     <string name="app_name" translatable="false">FIKA</string>
@@ -84,6 +85,8 @@
     <string name="google_app_id" translatable="false">1:476932942629:android:9011bc21953466476208cc</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA-9XXqFZ4GHDALLQHFIe1enFaDeYXiRAk</string>
     <string name="google_storage_bucket" translatable="false">fika-project.appspot.com</string>
+    <string name="group_add">グループ追加</string>
+    <string name="group_edit">グループ名修正</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_btn">home_btn</string>
     <string name="home_drama_rank_tv">人気ドラマ</string>
@@ -91,8 +94,9 @@
     <string name="home_scrapcourse_rank_tv">たくさんスクラップしたコース</string>
     <string name="home_search_et">検索ワードを入力してください。</string>
     <string name="img_app_logo" translatable="false">FIKA_logo</string>
-    <string name="kakao_app_key">5b9af1e01eae99f78d6c93638dd51b75</string>
-    <string name="kakao_native_key">kakao5b9af1e01eae99f78d6c93638dd51b75</string>
+    <string name="kakao_app_key" translatable="false">5b9af1e01eae99f78d6c93638dd51b75</string>
+    <string name="kakao_native_key" translatable="false">kakao5b9af1e01eae99f78d6c93638dd51b75</string>
+    <string name="large_map_btn">マップ拡大</string>
     <string name="loading">loading…</string>
     <string name="locage">ロケ地</string>
     <string name="locate">ロケ地</string>
@@ -109,6 +113,7 @@
     <string name="login_question_tv">ログインに困難がありますか。</string>
     <string name="login_signup">회원가입</string>
     <string name="login_tester_btn">테스터용 로그인 →</string>
+    <string name="map_zoom">マップで接続</string>
     <string name="mypage_course_tv">スクラップしたコース</string>
     <string name="mypage_edit_myinfo">私がスクラップしたコース</string>
     <string name="mypage_empty_tv_01">まだ盛り込んだ場所がありません。</string>
@@ -118,6 +123,7 @@
     <string name="mypage_place_tv">盛り込んだ場所</string>
     <string name="mypage_title">マイページ</string>
     <string name="mypage_title_tv">マイページ</string>
+    <string name="new_group">新しいグループ</string>
     <string name="nickname_done_tv">FIKAと一緒に旅行を準備します。</string>
     <string name="nickname_et">ニックネームを入力してください。</string>
     <string name="nickname_sub_title_tv">ニックネームは空白なしに2~10文字で入力してください。</string>
@@ -155,7 +161,7 @@
     <string name="search_recent_tv">最近の検索ワード</string>
     <string name="search_recomend_tv">オススメ検索ワード</string>
     <string name="serach_rank_tv">人気検索ワード</string>
-    <string name="service_agree_j">
+    <string name="service_agree_j" translatable="false">
 第1章総則
 
 第1条(目的)
@@ -367,7 +373,7 @@ WEFIY|代表ホン·イェジン
 本約款は2022年9月16日から施行します。
 
     </string>
-    <string name="service_agree_k">
+    <string name="service_agree_k" translatable="false">
 제1장 총칙
 
 제1조 (목적)
@@ -614,21 +620,21 @@ WEFIY | 대표 홍예진
         <item name="android:background">@android:color/transparent</item>
     </style>
     <style name="Theme.FIKA_Project" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Primary brand color. -->
+        
         <item name="colorPrimary">@color/main_blue</item>
         <item name="colorPrimaryVariant">@color/sub_blue</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
+        
         <item name="colorSecondary">@color/main_yellow</item>
         <item name="colorSecondaryVariant">@color/sub_yellow</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
+        
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar" ns1:ignore="NewApi">true</item>
-        <!-- Customize your theme here. -->
+        
         <item name="android:windowBackground">@color/white</item>
 
-        <!--custom font-family-->
+        
         <item name="android:textViewStyle">@style/customTextViewFontStyle</item>
         <item name="android:buttonStyle">@style/customButtonFontStyle</item>
         <item name="android:editTextStyle">@style/customEditTextFontStyle</item>

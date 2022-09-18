@@ -16,11 +16,13 @@ import com.fika.fika_project.ui.main.hold_and_scrap.LocationHoldView
 import com.fika.fika_project.ui.main.mycourse.placeinfo.PlaceinfoActivity
 import kotlinx.android.synthetic.main.drama_info_course_item.view.*
 import kotlinx.android.synthetic.main.drama_info_location_item.view.*
+import kotlinx.android.synthetic.main.drama_info_location_item.view.item_home_placerank_layout
+import kotlinx.android.synthetic.main.item_home_placerank.view.*
 import kotlinx.android.synthetic.main.myhold_location_item_list.view.*
 
 class DramaInfoLocationAdapter(private val locationList : ArrayList<spotDataList>, val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>(),LocationHoldView {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.drama_info_location_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_home_placerank,parent,false)
 
         return CustomViewHolder(view)
     }
@@ -30,22 +32,25 @@ class DramaInfoLocationAdapter(private val locationList : ArrayList<spotDataList
 
         var service = LocationHoldService(this,locationList[position].spotId!!)
 
-        Glide.with(context).load(locationList[position].spotImageUrl).into(view.item_location_placerank_img_iv)
-        view.item__location_placerank_where_tv.text = locationList[position].shortAddress
-        view.item_location_placerank_title_tv.text = locationList[position].spotTitle
-        view.item_location_placerank_category_tv.text = locationList[position].type
-        if (locationList[position].locage!!) {
-            view.drama_info_locage_tv.visibility = View.VISIBLE
+        Glide.with(context).load(locationList[position].spotImageUrl).into(view.item_placerank_img_iv)
+        view.item_placerank_where_tv.text = locationList[position].shortAddress
+        view.item_placerank_title_tv.text = locationList[position].spotTitle
+        view.item_placerank_category_tv.text = locationList[position].type
+        view.item_placerank_where_tv_2.visibility = View.GONE
+        if (locationList[position].locage == true) {
+            view.item_placerank_locage_tv.visibility = View.VISIBLE
+        } else{
+            view.item_placerank_locage_tv.visibility = View.GONE
         }
 
         if (locationList[position].scrapped!!) {
-            view.item_location_placerank_flag_iv.setImageResource(R.drawable.ic_flag_on)
+            view.item_placerank_flag_iv.setImageResource(R.drawable.ic_flag_on)
         } else {
-            view.item_location_placerank_flag_iv.setImageResource(R.drawable.ic_flag_off)
+            view.item_placerank_flag_iv.setImageResource(R.drawable.ic_flag_off)
         }
 
-        view.item_location_placerank_flag_iv.setOnClickListener {
-            service.tryLoadLocationHold(view.item_location_placerank_flag_iv)
+        view.item_placerank_flag_iv.setOnClickListener {
+            service.tryLoadLocationHold(view.item_placerank_flag_iv)
         }
 
         view.item_home_placerank_layout.setOnClickListener {

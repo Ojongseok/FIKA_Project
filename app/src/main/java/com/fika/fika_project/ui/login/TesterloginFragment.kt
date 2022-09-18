@@ -63,6 +63,7 @@ class TesterloginFragment  : Fragment(), LoginView {
                 } else {
                     binding.testerLoginDoneTv.isEnabled = true // 버튼 활성화
                     binding.testerLoginDoneTv.setBackgroundColor(R.color.main_blue)
+                    binding.testerLoginDoneTv.setTextColor(R.color.white)
                 }
             }
         })

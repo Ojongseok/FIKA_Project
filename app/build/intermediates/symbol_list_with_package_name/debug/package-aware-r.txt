@@ -2592,6 +2592,7 @@ drawable black_5stars
 drawable blue_5stars
 drawable blue_btn
 drawable blue_btn_background
+drawable blue_plus
 drawable btn_add_my_course
 drawable btn_all_review
 drawable btn_checkbox_checked_mtrl
@@ -3062,7 +3063,6 @@ id course_detail_course_name
 id course_detail_course_title
 id course_detail_drama_back_btn
 id course_detail_drama_check_count
-id course_detail_drama_name_btn
 id course_detail_drama_name_tv
 id course_detail_drama_pr
 id course_detail_drama_title
@@ -3354,6 +3354,7 @@ id item_placeinfo_review_top_layout
 id item_placerank_category_tv
 id item_placerank_flag_iv
 id item_placerank_img_iv
+id item_placerank_locage_tv
 id item_placerank_title_tv
 id item_placerank_where_tv
 id item_placerank_where_tv_2
@@ -3882,7 +3883,6 @@ id textView44
 id textView45
 id textView46
 id textView47
-id textView48
 id textView51
 id textView6
 id textView7
@@ -4278,6 +4278,7 @@ string agree_01_countinue_btn
 string agree_01_title_tv
 string agree_02_title_tv
 string agree_03_title_tv
+string all_review_empty_tv
 string all_view_photoreview
 string all_view_title_tv
 string androidx_startup
@@ -4374,6 +4375,8 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string group_add
+string group_edit
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string home_btn
@@ -4388,6 +4391,7 @@ string item_view_role_description
 string kakao_app_key
 string kakao_native_key
 string label
+string large_map_btn
 string loading
 string locage
 string locate
@@ -4421,6 +4425,7 @@ string m3_sys_motion_easing_linear
 string m3_sys_motion_easing_standard
 string m3_sys_motion_easing_standard_accelerate
 string m3_sys_motion_easing_standard_decelerate
+string map_zoom
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -4489,6 +4494,7 @@ string mypage_title
 string mypage_title_tv
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string new_group
 string nickname_done_tv
 string nickname_et
 string nickname_sub_title_tv

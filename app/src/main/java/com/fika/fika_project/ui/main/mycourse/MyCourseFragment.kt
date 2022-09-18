@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.fika.fika_project.R
 import com.fika.fika_project.databinding.FragmentMycourseBinding
 import com.fika.fika_project.retrofit.GroupName
 import com.fika.fika_project.ui.login.BasicResponse
@@ -28,8 +29,12 @@ class MyCourseFragment :Fragment(), MyCourseView {
         service.tryMyCourse()
 
         binding.addGroupBtn.setOnClickListener {
-            val getGroupName = GroupName("새로운 그룹")
+            val newGroup = "新しいグループ"
+            val getGroupName = GroupName(newGroup)
             service.tryAddGroup(getGroupName)
+
+            Snackbar.make(it, "リフレッシュ :)", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
+
         }
 
         binding.editGroupNameBtn.setOnClickListener {

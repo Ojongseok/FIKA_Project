@@ -44,20 +44,11 @@ class CourseDetailDrama : AppCompatActivity(),CourseDetailView,LocationHoldView 
             startActivity(intent)
             finish()
         }
-        binding.courseDetailDramaNameBtn.setOnClickListener {
-            val menuList =arrayOf("梨泰院クラス","愛の不時着","그 해 우리는")
-            val dialog = AlertDialog.Builder(this,android.R.style.Theme_DeviceDefault_Light_Dialog_Alert)
-            dialog.setTitle("드라마 제목")
-            dialog.setItems(menuList,DialogInterface.OnClickListener {dialogInterface, i ->
-                binding.courseDetailDramaNameTv.text = menuList[i]
-            })
-            dialog.show()
-        }
 
         service.tryLoadCourseDetail()
     }
     private fun initData(initList: result) {
-        binding.courseDetailLocageTiltleByDrama.text = initList.courseTitle
+//        binding.courseDetailLocageTiltleByDrama.text = initList.courseTitle
         Glide.with(this).load(initList.locageSceneImageUrl).into(binding.courseDetailIvByDrama)
         binding.courseDetailLocageTiltleByDrama.text = initList.locageSceneDescribe
         binding.detailCourseHashTvByDrama.text = initList.hashTag

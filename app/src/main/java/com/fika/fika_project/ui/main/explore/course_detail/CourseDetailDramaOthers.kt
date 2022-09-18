@@ -48,7 +48,10 @@ class CourseDetailDramaOthers : AppCompatActivity(),CourseDetailView,LocationHol
 
     private fun initData(initList: result) {
         binding.courseDetailCourseTitle.text = initList.courseTitle
-        binding.detailCourseNickname.text = initList.courseCreateMember
+
+        val nickname = initList.courseCreateMember
+        binding.detailCourseNickname.text = "by.$nickname"
+
         Glide.with(this).load(initList.locageSceneImageUrl).into(binding.courseDetailIv)
         binding.courseDetailLocageTiltle.text = initList.locageSceneDescribe
         binding.detailCourseHash.text = initList.hashTag

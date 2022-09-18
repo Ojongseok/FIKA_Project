@@ -58,13 +58,13 @@ class NicknameFragment  : Fragment(), NicknameView {
             @SuppressLint("ResourceAsColor")
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 //텍스트 입력 중
-                if(binding.nicknameEt.length() < 4) { // 패스워드의 길이가 4미만이면
+                if(binding.nicknameEt.length() < 2) { // 패스워드의 길이가 4미만이면
                     binding.nicknameDoneTv.isEnabled = false // 버튼 비활성화
                     binding.nicknameDoneTv.setBackgroundColor(R.color.grey3)
                 } else {
                     binding.nicknameDoneTv.isEnabled = true // 버튼 활성화
                     binding.nicknameDoneTv.setBackgroundColor(R.color.main_blue)
-                }
+                    binding.nicknameDoneTv.setTextColor(R.color.white)                }
             }
         })
     }
