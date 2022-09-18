@@ -34,11 +34,10 @@ class MyCourseFragment :Fragment(), MyCourseView {
             service.tryAddGroup(getGroupName)
 
             Snackbar.make(it, "リフレッシュ :)", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
-
         }
 
         binding.editGroupNameBtn.setOnClickListener {
-
+            Snackbar.make(it, "準備中 :)", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
         }
     }
 

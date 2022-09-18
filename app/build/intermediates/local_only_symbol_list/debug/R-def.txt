@@ -14,6 +14,10 @@ color grey2
 color grey3
 color grey4
 color grey5
+color home_blue
+color home_purple
+color home_red
+color home_yellow
 color login_btn
 color login_hint
 color login_text
@@ -156,6 +160,7 @@ drawable signup_textbox
 drawable sort
 drawable splash_logo
 drawable splash_sublogo
+drawable splash_subtext
 drawable star_blue
 drawable star_yellow
 drawable stroke_down
@@ -382,6 +387,7 @@ id item_drama_rank_img_cv
 id item_drama_rank_img_iv
 id item_drama_rank_title_tv
 id item_home_course_bottom_cv
+id item_home_course_color_card
 id item_home_course_cv
 id item_home_course_drama_name_tv
 id item_home_course_iv

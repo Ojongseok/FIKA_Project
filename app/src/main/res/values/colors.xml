@@ -24,6 +24,11 @@
 
     <color name="white">#FFFFFFFF</color>
 
+    <color name="home_purple">#DBD2FF</color>
+    <color name="home_yellow">#FFF2CC</color>
+    <color name="home_blue">#CCE7FF</color>
+    <color name="home_red">#FFCCCC</color>
+
     <!--로그인-->
     <color name="login_hint">#D9D9D9</color>
 

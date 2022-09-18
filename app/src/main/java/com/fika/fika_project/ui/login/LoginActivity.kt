@@ -89,7 +89,9 @@ class LoginActivity : AppCompatActivity(), LoginView {
         }
 
         binding.loginGoogleIv.setOnClickListener {
-            googleLogin()
+//            googleLogin()
+            Snackbar.make(it, "準備中", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
+
         }
 
         binding.loginKakaoIv.setOnClickListener {
@@ -97,11 +99,11 @@ class LoginActivity : AppCompatActivity(), LoginView {
         }
 
         binding.loginYahooIv.setOnClickListener {
-            Snackbar.make(it, "준비중입니다", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
+            Snackbar.make(it, "準備中", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
         }
 
         binding.loginLineIv.setOnClickListener {
-            Snackbar.make(it, "준비중입니다", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
+            Snackbar.make(it, "準備中", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
         }
     }
 

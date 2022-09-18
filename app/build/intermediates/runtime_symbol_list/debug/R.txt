@@ -1385,6 +1385,10 @@ int color grey4 0x7f060077
 int color grey5 0x7f060078
 int color highlighted_text_material_dark 0x7f060079
 int color highlighted_text_material_light 0x7f06007a
+int color home_blue 0x7f06027f
+int color home_purple 0x7f060280
+int color home_red 0x7f060281
+int color home_yellow 0x7f060282
 int color login_btn 0x7f06007b
 int color login_hint 0x7f06007c
 int color login_text 0x7f06007d
@@ -2810,6 +2814,7 @@ int drawable signup_textbox 0x7f08013a
 int drawable sort 0x7f08013b
 int drawable splash_logo 0x7f08013c
 int drawable splash_sublogo 0x7f08013d
+int drawable splash_subtext 0x7f080159
 int drawable spring_dot_background 0x7f08013e
 int drawable spring_dot_stroke_background 0x7f08013f
 int drawable star_blue 0x7f080140
@@ -3297,6 +3302,7 @@ int id item_drama_rank_img_cv 0x7f0a01c6
 int id item_drama_rank_img_iv 0x7f0a01c7
 int id item_drama_rank_title_tv 0x7f0a01c8
 int id item_home_course_bottom_cv 0x7f0a01c9
+int id item_home_course_color_card 0x7f0a045c
 int id item_home_course_cv 0x7f0a01ca
 int id item_home_course_drama_name_tv 0x7f0a01cb
 int id item_home_course_iv 0x7f0a01cc
