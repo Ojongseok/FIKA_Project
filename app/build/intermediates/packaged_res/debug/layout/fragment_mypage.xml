@@ -218,14 +218,14 @@
             android:id="@+id/mypage_course_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:text="@string/mypage_course_tv"
             android:textColor="@color/grey2"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginStart="4dp"
             app:layout_constraintEnd_toEndOf="@id/mypage_course_arrow_iv"
             app:layout_constraintStart_toEndOf="@id/mypage_course_flag_iv"
-            app:layout_constraintTop_toTopOf="@id/mypage_course_flag_iv"/>
+            app:layout_constraintTop_toTopOf="@id/mypage_course_flag_iv" />
 
         <TextView
             android:id="@+id/mypage_course_number_tv"

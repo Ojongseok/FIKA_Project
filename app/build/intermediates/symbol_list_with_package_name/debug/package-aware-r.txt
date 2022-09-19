@@ -2596,6 +2596,7 @@ drawable black_5stars
 drawable blue_5stars
 drawable blue_btn
 drawable blue_btn_background
+drawable blue_plus
 drawable btn_add_my_course
 drawable btn_all_review
 drawable btn_checkbox_checked_mtrl
@@ -3888,6 +3889,7 @@ id textView44
 id textView45
 id textView46
 id textView47
+id textView5
 id textView51
 id textView6
 id textView7

@@ -15,16 +15,15 @@
         <entry key="..\:/FIKA/app/src/main/res/drawable/home_make_course_btn.xml" value="0.1" />
         <entry key="..\:/FIKA/app/src/main/res/drawable/locage_tv_background.xml" value="0.1" />
         <entry key="..\:/FIKA/app/src/main/res/drawable/login_btn.xml" value="0.1" />
-        <entry key="..\:/FIKA/app/src/main/res/drawable/logo_fulltext.xml" value="0.1" />
         <entry key="..\:/FIKA/app/src/main/res/drawable/mycourse_edit_btn_shape.xml" value="0.1" />
         <entry key="..\:/FIKA/app/src/main/res/drawable/search_recent_background.xml" value="0.1" />
         <entry key="..\:/FIKA/app/src/main/res/drawable/search_recommend_backgroud.xml" value="0.1" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_course_detail_drama.xml" value="0.176" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_course_detail_drama_others.xml" value="0.2" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_course_info_edit.xml" value="0.15818725951261223" />
-        <entry key="..\:/FIKA/app/src/main/res/layout/activity_drama_info.xml" value="0.15235294117647058" />
+        <entry key="..\:/FIKA/app/src/main/res/layout/activity_drama_info.xml" value="0.17616580310880828" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_large_map.xml" value="0.21248396750748183" />
-        <entry key="..\:/FIKA/app/src/main/res/layout/activity_login.xml" value="0.12" />
+        <entry key="..\:/FIKA/app/src/main/res/layout/activity_login.xml" value="0.22807017543859648" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_main.xml" value="0.1778537836682343" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_my_hold_location.xml" value="0.136" />
         <entry key="..\:/FIKA/app/src/main/res/layout/activity_my_scrap.xml" value="0.12" />
@@ -171,7 +170,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_explore.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_explore_course_page.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_explore_drama_page.xml" value="0.4" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_home.xml" value="0.8" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_kakaomap_test.xml" value="0.38046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_my_course_edit_state.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/fragment_my_course_save_state.xml" value="0.5015447991761071" />
@@ -205,6 +204,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/item_view.xml" value="0.4744525547445255" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/layout_parent.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/layout_second.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/momey_dialog.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/mycourse_edit_state_list.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/mycourse_recyclerview_state_edit.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FIKA_Project/app/src/main/res/layout/mycourse_recyclerview_state_save.xml" value="0.25364583333333335" />

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fika.fika_project.databinding.ItemHomeDramarankBinding
@@ -33,9 +34,13 @@ class DramaRankRVAdapter(private val dramaRankList: ArrayList<dramaList>, val co
             Glide.with(context).load(itemdramaRank.thumbnailUrl).into(binding.itemDramaRankImgIv)
 
             itemView.setOnClickListener{
-                val intent = Intent(context, DramaInfoActivity::class.java)
-                intent.putExtra("number",itemdramaRank.dramaId)
-                context.startActivity(intent)
+                if (layoutPosition==0 || layoutPosition==1) {
+                    val intent = Intent(context, DramaInfoActivity::class.java)
+                    intent.putExtra("number",itemdramaRank.dramaId)
+                    context.startActivity(intent)
+                } else {
+                    Toast.makeText(context,"準備中です。", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }

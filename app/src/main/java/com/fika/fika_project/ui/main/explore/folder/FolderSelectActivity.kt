@@ -38,7 +38,7 @@ class FolderSelectActivity : AppCompatActivity(),FolderView,CreateCourseView {
         addCourseDTO = intent.getSerializableExtra("addCourseDTO") as AddCourseDTO
         binding.folderSelectGoCourseBtn.setOnClickListener {
             if (selectPosition ==-1) {
-                Toast.makeText(this,"메뉴를 선택해주세요",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"グループを選択してください。",Toast.LENGTH_SHORT).show()
             } else {
                 addCourseDTO.courseGroupId = groupId
                 val service = CreateCourseService(this,addCourseDTO)

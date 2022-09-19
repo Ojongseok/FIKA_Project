@@ -27,6 +27,7 @@ class MenuDialog(val context: Context, val name : String, val price : String,val
         dialog.dialog_title.text = "현재시간 기준 엔화 환율\n[100￥당 : " + money + "원]"
         dialog.dialog_menuname_tv.text = name
         dialog.dialog_menuprice_tv.text = price + "원"
+        Log.d("TTT",money)
         val kr_price = price.replace(",","").toInt()
         val jp_money = (ceil((kr_price / money.toDouble()) * 100)).toInt()
         dialog.japan_money_tv.text ="약 " + jp_money.toString()+"￥"

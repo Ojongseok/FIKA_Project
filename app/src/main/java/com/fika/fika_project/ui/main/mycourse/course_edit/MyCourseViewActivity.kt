@@ -84,7 +84,7 @@ class MyCourseViewActivity :AppCompatActivity(),CourseViewView,MyCourseEditState
                 } else {
                     customImageResourceId = R.drawable.marker_red
                 }
-                setCustomImageAnchor(1.0f,1.0f)
+                setCustomImageAnchor(0.5f,0.5f)
                 isCustomImageAutoscale = false
             }
             mapView.addPOIItem(marker)

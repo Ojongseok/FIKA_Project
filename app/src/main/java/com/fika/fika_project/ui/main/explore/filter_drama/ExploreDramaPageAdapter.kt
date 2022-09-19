@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fika.fika_project.R
@@ -27,9 +28,14 @@ class ExploreDramaPageAdapter(val dramalist : ArrayList<result>, val context: Co
         Glide.with(context).load(dramalist[position].thumbnailUrl).into(view.dramalist_dramaimage)
 
         view.dramalist_dramaimage.setOnClickListener {
-            val intent = Intent(context, DramaInfoActivity::class.java)
-            intent.putExtra("number",dramaId)
-            context.startActivity(intent)
+            if (position==0 || position==1) {
+                val intent = Intent(context, DramaInfoActivity::class.java)
+                intent.putExtra("number",dramaId)
+                context.startActivity(intent)
+            } else {
+                Toast.makeText(context,"準備中です。",Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
     inner class CustomViewHolder(var view : View) : RecyclerView.ViewHolder(view)

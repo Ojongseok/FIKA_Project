@@ -109,6 +109,10 @@ class SaveStateAdapter(val spotList : ArrayList<spotList>,val context: Context) 
             disKm = round(disKm*10)/10.0
             view.save_state_distinct.text = disKm.toString() + "km"
         }
+        if (position ==spotList.size-1) {
+            view.save_state_line.visibility = View.INVISIBLE
+            view.save_state_distinct.visibility = View.INVISIBLE
+        }
         view.save_state_distinct.setOnClickListener {
             if (position!=spotList.size-1) {
                 val url = "kakaomap://route?sp=${spotList[position].mapY}, ${spotList[position].mapX}&ep=${spotList[position+1].mapY}, ${spotList[position+1].mapX}&by=PUBLICTRANSIT"
