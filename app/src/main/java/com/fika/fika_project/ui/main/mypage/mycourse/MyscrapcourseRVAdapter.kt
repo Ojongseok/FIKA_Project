@@ -1,6 +1,7 @@
 package com.fika.fika_project.ui.main.mypage.mycourse
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,6 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ItemHomeScrapcourseBinding
+import com.fika.fika_project.ui.main.explore.CourseDetailDramaOthers
+import com.fika.fika_project.ui.main.hold_and_scrap.LocationScrapService
+import com.fika.fika_project.ui.main.hold_and_scrap.LocationScrapView
 import com.fika.fika_project.ui.main.mypage.MyScrap
 
 class MyscrapcourseRVAdapter (private val myscrapcourseList: ArrayList<MyScrap>, val context: Context) : RecyclerView.Adapter<MyscrapcourseRVAdapter.ViewHolder>()
@@ -37,6 +41,12 @@ class MyscrapcourseRVAdapter (private val myscrapcourseList: ArrayList<MyScrap>,
             binding.childTitle.text = itemScrapcourse.courseTitle
             binding.itemHomeCoursescrapWhereTv.text = itemScrapcourse.baseAddress
             binding.itemHomeCoursescrapInfoTv.text = itemScrapcourse.spotTitleList.toString()
+
+            binding.itemLayout.setOnClickListener {
+                val intent = Intent(context, CourseDetailDramaOthers::class.java)
+                intent.putExtra("courseId",itemScrapcourse.courseId)
+                context.startActivity(intent)
+            }
         }
     }
 

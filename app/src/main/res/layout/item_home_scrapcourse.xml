@@ -39,7 +39,7 @@
 
     <TextView
         android:id="@+id/item_home_coursescrap_drama_title_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/loading"
         android:textStyle="normal"
@@ -47,7 +47,10 @@
         android:textColor="@color/black2"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
         app:layout_constraintStart_toEndOf="@id/item_home_scrapcourse_cv"
+        app:layout_constraintEnd_toEndOf="@id/textView51"
         app:layout_constraintTop_toTopOf="parent"
         />
 
@@ -56,11 +59,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:text="|"
+        android:text="@string/verti_bar"
         android:textColor="@color/black2"
         android:textSize="14sp"
         android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@id/item_home_coursescrap_drama_title_tv"
+        app:layout_constraintEnd_toStartOf="@id/item_home_coursescrap_where_tv"
         app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_drama_title_tv" />
 
     <TextView
@@ -68,11 +72,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/loading"
         android:textColor="@color/black2"
         android:textSize="14sp"
         android:textStyle="normal"
+        android:maxLines="1"
+        android:ellipsize="end"
         app:layout_constraintStart_toEndOf="@+id/textView51"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/item_home_coursescrap_drama_title_tv" />
 
     <TextView

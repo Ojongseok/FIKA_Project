@@ -32,8 +32,8 @@
     <string name="nickname_done_tv">FIKAと一緒に旅行を準備します。</string>
     <string name="home_search_et">検索ワードを入力してください。</string>
     <string name="home_drama_rank_tv">人気ドラマ</string>
-    <string name="home_scrapcourse_rank_tv">たくさんスクラップしたコース</string>
-    <string name="home_place_rank_tv">多く盛り込んだ場所</string>
+    <string name="home_scrapcourse_rank_tv">人気コース</string>
+    <string name="home_place_rank_tv">人気スポット</string>
     <string name="mypage_title_tv">" マイページ"</string>
     <string name="mypage_place_tv">盛り込んだ場所</string>
     <string name="mypage_course_tv">スクラップしたコース</string>

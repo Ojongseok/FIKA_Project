@@ -10,7 +10,6 @@ import retrofit2.Response
 
 class LocationHoldService(val View: LocationHoldView, private val filter : Int) {
     val retrofit = ApplicationClass.retrofit.create(RetrofitInterface::class.java)
-    val token = ApplicationClass.X_ACCESS_TOKEN
 
     val load = retrofit.postLocationHold(filter)
     fun tryLoadLocationHold(iv : ImageView){

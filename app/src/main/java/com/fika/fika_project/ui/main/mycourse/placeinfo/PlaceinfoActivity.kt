@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.ActivityPlaceinfoLocateBinding
+import com.fika.fika_project.ui.main.hold_and_scrap.LocationScrapService
 import com.fika.fika_project.ui.main.mycourse.review.AllReviewFragment
 import com.fika.fika_project.ui.main.mycourse.review.ReviewReportFragment
 import com.fika.fika_project.ui.main.mypage.MyScrap
@@ -31,8 +32,6 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
         initView()
 
         setContentView(binding.root)
-
-
     }
     private fun initView() {
         val homeSpotId = intent.getIntExtra("homeSpotId",0)
@@ -49,6 +48,8 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
         binding.placeinfoLocateHomeIv.setOnClickListener {
             finish()
         }
+
+
 
         binding.placeinfoLocateUpBtn.setOnClickListener {
                 binding.placeinfoLocateSv.fullScroll(ScrollView.FOCUS_UP)

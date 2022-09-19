@@ -153,17 +153,17 @@
                 </LinearLayout>
 
 
-                <TextView
-                    android:id="@+id/placeinfo_locate_add_my_course_btn"
-                    android:layout_width="260dp"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="16dp"
-                    android:textColor="@color/white"
-                    android:text="@string/placeinfo_locate_add_my_course_btn"
-                    android:background="@drawable/blue_btn_background"
-                    android:gravity="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:id="@+id/placeinfo_locate_add_my_course_btn"-->
+<!--                    android:layout_width="260dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:text="@string/placeinfo_locate_add_my_course_btn"-->
+<!--                    android:background="@drawable/blue_btn_background"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
 
             </LinearLayout>
 

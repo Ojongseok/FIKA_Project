@@ -3,6 +3,7 @@ package com.fika.fika_project.ui.main.home
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
@@ -38,7 +39,7 @@ class PlaceRankRVAdapter (private val placeRankList: ArrayList<spotsSortBySaved>
             binding.itemPlacerankWhereTv.text = itemPlaceRank.shortAddress
             binding.itemPlacerankCategoryTv.text = itemPlaceRank.type
             binding.itemPlacerankTitleTv.text = itemPlaceRank.spotTitle
-            binding.itemPlacerankWhereTv2.text = itemPlaceRank.shortAddress
+            binding.itemPlacerankWhereTv2.visibility = View.GONE
 
             if (itemPlaceRank.scrapped!!) {
                 binding.itemPlacerankFlagIv.setImageResource(R.drawable.ic_flag_on)

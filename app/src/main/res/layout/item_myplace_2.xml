@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="88dp">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp">
 
     <ImageView
         android:id="@+id/item_myplace_iv"
@@ -27,11 +28,29 @@
         app:layout_constraintTop_toTopOf="@id/item_myplace_iv"
         />
 
+    <TextView
+        android:id="@+id/item_myplace_locate_tag_iv"
+        android:layout_width="53dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitXY"
+        android:text="@string/locate"
+        android:textColor="@color/main_blue"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:background="@drawable/grey_btn_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="9dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,7 +58,7 @@
         app:layout_constraintStart_toEndOf="@+id/item_myplace_iv"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
@@ -47,9 +66,16 @@
 
             <TextView
                 android:id="@+id/item_myplace_place_where_tv2"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="서울" />
+                android:text="@string/loading"
+                android:textColor="@color/black2"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/item_myplace_place_verti_bar"
+                />
 
             <TextView
                 android:id="@+id/item_myplace_place_verti_bar"
@@ -57,20 +83,32 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="@string/verti_bar" />
+                android:text="@string/verti_bar"
+                app:layout_constraintStart_toEndOf="@id/item_myplace_place_where_tv2"
+                app:layout_constraintEnd_toEndOf="@id/item_myplace_place_cate_tv"
+                app:layout_constraintTop_toTopOf="@id/item_myplace_place_where_tv2"
+                />
 
             <TextView
                 android:id="@+id/item_myplace_place_cate_tv"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:text="공원" />
-        </LinearLayout>
+                android:text="@string/loading"
+                android:textColor="@color/black2"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:layout_constraintTop_toTopOf="@id/item_myplace_place_where_tv2"
+                app:layout_constraintStart_toEndOf="@id/item_myplace_place_verti_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/item_myplace_place_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="투명 카약"
+            android:text="@string/loading"
+            android:textColor="@color/black2"
             android:textSize="18sp"
             android:textStyle="bold" />
 

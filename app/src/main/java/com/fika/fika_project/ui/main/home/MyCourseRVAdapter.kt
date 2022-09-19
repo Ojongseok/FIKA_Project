@@ -27,17 +27,6 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
     val FOOTER = 2
 
 
-
-    interface MyItemClickListener{
-        fun onItemClick(course: myCourseList)
-    }
-
-    private lateinit var mItemClickListner: MyItemClickListener
-
-    fun setMyItemClickListener(itemClickListener: MyItemClickListener){
-        mItemClickListner = itemClickListener
-    }
-
     private fun ViewGroup.inflate(layoutRes: Int): View = LayoutInflater.from(context).inflate(layoutRes, this, false)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -82,13 +71,14 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
                 if(courseList.size == 0){
                     //
                 }else{
-                    holder.bind(courseList[position])
+                    val pos = courseList[position]
+                    holder.bind(pos)
 
-                    if(position % 1 == 0) { holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_purple)) }
-                    if(position % 2 == 0) { holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_yellow)) }
-                    if(position % 3 == 0) { holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_blue))
-                        } else {
-                            holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_red))
+                    when (position % 4) {
+                        0 -> holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_purple))
+                        1 -> holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_yellow))
+                        2 -> holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_blue))
+                        else -> holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_red))
                         }
                     }
 
