@@ -1,10 +1,12 @@
 package com.fika.fika_project.ui.main.home
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fika.fika_project.R
@@ -66,6 +68,7 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
     }
 
 
+    @SuppressLint("ResourceAsColor")
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
             when(holder){
             is FooterViewHolder -> {
@@ -78,7 +81,16 @@ class MyCourseRVAdapter(private val courseList: ArrayList<myCourseList>, val con
             is ItemViewHolder -> {
                 if(courseList.size == 0){
                     //
-                }else{ holder.bind(courseList[position]) }
+                }else{
+                    holder.bind(courseList[position])
+
+                    if(position % 1 == 0) { holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_purple)) }
+                    if(position % 2 == 0) { holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_yellow)) }
+                    if(position % 3 == 0) { holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_blue))
+                        } else {
+                            holder.binding.itemHomeCourseColorCard.setBackgroundColor(ContextCompat.getColor(context,R.color.home_red))
+                        }
+                    }
 
                 }
             }

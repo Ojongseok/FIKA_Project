@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.fika.fika_project.R
 import com.fika.fika_project.databinding.FragmentNicknameBinding
@@ -62,7 +63,7 @@ class TesterloginFragment  : Fragment(), LoginView {
                     binding.testerLoginDoneTv.setBackgroundColor(R.color.grey3)
                 } else {
                     binding.testerLoginDoneTv.isEnabled = true // 버튼 활성화
-                    binding.testerLoginDoneTv.setBackgroundColor(R.color.main_blue)
+                    binding.testerLoginDoneTv.setBackgroundColor(ContextCompat.getColor(requireContext(),R.color.main_blue))
                     binding.testerLoginDoneTv.setTextColor(R.color.white)
                 }
             }
