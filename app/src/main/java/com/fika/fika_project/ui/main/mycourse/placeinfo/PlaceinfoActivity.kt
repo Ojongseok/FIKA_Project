@@ -70,7 +70,7 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
         Thread(Runnable {
             val url ="https://search.naver.com/search.naver?where=nexearch&sm=top_sug.ase&fbm=0&acr=1&acq=%EC%97%94%ED%99%94+&qdt=0&ie=utf8&query=%EC%97%94%ED%99%94+%ED%99%98%EC%9C%A8"
             val doc = Jsoup.connect(url).get()
-            money = doc.select("span.spt_con.up strong").text()
+            money = doc.select("span.spt_con strong").text()
             Log.d("menu",money)
 
             this@PlaceinfoActivity.runOnUiThread(java.lang.Runnable {

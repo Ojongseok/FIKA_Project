@@ -413,6 +413,7 @@ id item_location_placerank_img_iv
 id item_location_placerank_title_tv
 id item_myplace_flag_iv
 id item_myplace_iv
+id item_myplace_locate_tag_iv
 id item_myplace_place_cate_tv
 id item_myplace_place_tv
 id item_myplace_place_verti_bar
@@ -557,15 +558,11 @@ id nickname_et_background
 id nickname_sub_title_tv
 id nickname_title_tv
 id nickname_warning_tv
-id others_filter1
-id others_filter2
-id others_filter3
 id others_star_count_tv
 id passwordRe_editText_usable
 id password_editText_usable
 id placeinfo_dialog_iv
 id placeinfo_hashtag_tv
-id placeinfo_locate_add_my_course_btn
 id placeinfo_locate_all_review_btn
 id placeinfo_locate_back_iv
 id placeinfo_locate_basic_info_layout

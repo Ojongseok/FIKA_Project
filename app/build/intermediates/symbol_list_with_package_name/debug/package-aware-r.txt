@@ -3329,6 +3329,7 @@ id item_location_placerank_img_iv
 id item_location_placerank_title_tv
 id item_myplace_flag_iv
 id item_myplace_iv
+id item_myplace_locate_tag_iv
 id item_myplace_place_cate_tv
 id item_myplace_place_tv
 id item_myplace_place_verti_bar
@@ -3579,9 +3580,6 @@ id on
 id onAttachStateChangeListener
 id onDateChanged
 id onInterceptTouchReturnSwipe
-id others_filter1
-id others_filter2
-id others_filter3
 id others_star_count_tv
 id outline
 id outward
@@ -3602,7 +3600,6 @@ id percent
 id pin
 id placeinfo_dialog_iv
 id placeinfo_hashtag_tv
-id placeinfo_locate_add_my_course_btn
 id placeinfo_locate_all_review_btn
 id placeinfo_locate_back_iv
 id placeinfo_locate_basic_info_layout
