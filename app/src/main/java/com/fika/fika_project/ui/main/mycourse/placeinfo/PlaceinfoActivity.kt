@@ -49,8 +49,6 @@ class PlaceinfoActivity: AppCompatActivity(), PlaceinfoView {
             finish()
         }
 
-
-
         binding.placeinfoLocateUpBtn.setOnClickListener {
                 binding.placeinfoLocateSv.fullScroll(ScrollView.FOCUS_UP)
         }
