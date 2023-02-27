@@ -2,4 +2,4 @@
 
 2022 관광데이터 활용 공모전
 
-<img src="https://user-images.githubusercontent.com/98886487/221552204-f9d9ad18-c616-4e8f-b957-f73ebed1bb21.png"  width="600" height="360"/>
+![image 148](https://user-images.githubusercontent.com/98886487/221552738-58ba3d1c-538c-4931-86b2-23329b7f7306.png)
