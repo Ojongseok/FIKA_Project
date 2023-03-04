@@ -17,7 +17,9 @@
 
 ## ✅ Main Function
 <p>
-<img src="https://user-images.githubusercontent.com/98886487/221556632-a32c2490-6722-415a-9f1e-b05e4816a48e.png" width="180" height="400" /> <img src="https://user-images.githubusercontent.com/98886487/221557928-223ce860-aec3-48da-92b4-ad3035c62a5f.png" width="180" height="400" />
-주요기능입니다.
+<div align=pull-left>
+<img src="https://user-images.githubusercontent.com/98886487/221556632-a32c2490-6722-415a-9f1e-b05e4816a48e.png" width="180" height="400" /> 
+<img src="https://user-images.githubusercontent.com/98886487/221557928-223ce860-aec3-48da-92b4-ad3035c62a5f.png" width="180" height="400"/>
+<top>주요기능입니다.</top>
+</div>
 </p>
-
