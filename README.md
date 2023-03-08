@@ -3,7 +3,7 @@
 ![image 148](https://user-images.githubusercontent.com/98886487/221552738-58ba3d1c-538c-4931-86b2-23329b7f7306.png)
 프로젝트명 : [FIKA] Find-In-Korea-Drama   
 개발 기간 : 2022.07 ~ 2022.09   
-팀원 및 역할 : 기획/마케팅/데이터 5명, UI/UX 디자이너 1명, Android 프론트엔드 2명, 백엔드 1명   
+팀원 및 역할 : 기획/마케팅/데이터 5명, UI/UX 디자이너 1명, Android 프론트엔드 개발 2명, 백엔드 개발 1명   
 
 
 ## 💡 Topic
@@ -18,9 +18,12 @@
 ## ✅ Main Function
 <p>
 일본인 대상 앱으로 일본어로 번역되어 있음에 양해부탁드립니다.
-<div align=pull-left>
-<img src="https://user-images.githubusercontent.com/98886487/221556632-a32c2490-6722-415a-9f1e-b05e4816a48e.png" width="180" height="400" /> 
-<img src="https://user-images.githubusercontent.com/98886487/221557928-223ce860-aec3-48da-92b4-ad3035c62a5f.png" width="180" height="400"/>
-<top>주요기능입니다.</top>
+<div>
+<img src="https://user-images.githubusercontent.com/98886487/223594131-0bfef979-9b69-4bf3-85a4-8fd7b267a14f.png" width="200" height="400" /> 
+<img src="https://user-images.githubusercontent.com/98886487/221556632-a32c2490-6722-415a-9f1e-b05e4816a48e.png" width="200" height="400" /> 
+<img src="https://user-images.githubusercontent.com/98886487/221557928-223ce860-aec3-48da-92b4-ad3035c62a5f.png" width="200" height="400" />
 </div>
 </p>
+
+* 관광지 추천 기능
+  *  한국에 낯선 일본인 관관객을 위해 드라마와 지역을 중심으로 관광지/관광 코스를 제공합니다.
