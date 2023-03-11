@@ -34,9 +34,7 @@
 
 <div>
 <img src="https://user-images.githubusercontent.com/98886487/224473841-ea02d5a8-5b51-48a2-9ec4-ecea3136e81d.png" width="200" height="400" /> 
-<img src="https://user-images.githubusercontent.com/98886487/224473863-fb7f6269-0f15-4bcd-8661-3e5ebf9c199f.png" width="200" height="400" /> 
-<img src="https://user-images.githubusercontent.com/98886487/224473867-178ea051-be33-4041-b693-ed97204f7d44.png" width="200" height="400" />
-<img src="https://user-images.githubusercontent.com/98886487/224474588-bb9156e8-cbc5-4090-893f-286a1397f519.png" width="200" height="400" />
+
 </div>
 
 ### 2️⃣ 여행코스 제작 및 교통편 확인 기능 
@@ -46,3 +44,9 @@
 * 다양한 카카오 API(Login, WebView, Maps, Navigation)를 사용해볼 수 있었습니다.
 
 ### 3️⃣ 
+<div>
+<img src="https://user-images.githubusercontent.com/98886487/224475939-220585ae-a7bb-4df4-ab1f-0afb0e8dfb91.png" width="200" height="400" /> 
+<img src="https://user-images.githubusercontent.com/98886487/224475887-19dc757b-0811-4171-9abb-0b7d9ae671ee.png" width="200" height="400" /> 
+<img src="https://user-images.githubusercontent.com/98886487/224475963-8ca71c3b-bbbc-4edf-a947-201a988da7d8.png" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/98886487/224475996-ae655e87-6dbc-44c8-9d0d-d19c484ba643.png" width="200" height="400" />
+</div>
