@@ -3,7 +3,7 @@
 ![image 148](https://user-images.githubusercontent.com/98886487/221552738-58ba3d1c-538c-4931-86b2-23329b7f7306.png)
 프로젝트명 : [FIKA] Find-In-Korea-Drama   
 개발 기간 : 2022.07 ~ 2022.09   
-팀원 및 역할 : 기획/마케팅/데이터 5명, UI/UX 디자이너 1명, Android 프론트엔드 개발 2명, 백엔드 개발 1명   
+팀원 및 역할 : 기획/마케팅/데이터 5명, UI/UX 디자이너 1명, **Android 프론트엔드 개발** 2명, 백엔드 개발 1명   
 
 ## 💡 Topic
 * **일본인 대상 K-드라마 촬영지를 기반으로 한국의 관광지를 추천하고 여행 코스를 제공하는 여행서비스 앱**
@@ -12,11 +12,11 @@
 ## 📝 Description
 > 일본 내에서 K-Pop과 더불어 한류 열풍의 주역이라 할 수 있는 K-Drama, 그 중에서도 드라마 촬영지와 주변 관광지를 중심으로 사용자가 직접 여행 코스를 설계하는 서비스입니다. 
 드라마를 보는 시청자의 입장에서 “아! 저기 어디지? 한 번 가보고 싶다”라는 가정에서 시작해 아이디어를 구체화했습니다.<br><br>
-관광지 정보는 한국관광공사의 'TourAPI 4.0'에서 제공하는 관광데이터를 활용했습니다.
+관광지 정보는 한국관광공사의 'TourAPI 4.0'에서 제공하는 관광데이터를 활용했습니다.   
 그리고 공모전 제출 당시 ‘이태원 클라스’, ‘이상한 변호사 우영우’의 제작사에 직접 문의해 해당 드라마의 포스터와 대본의 일부를 앱에 사용할 수 있는 권한을 허가 받았습니다.
 
 ## 🛠️ Tech Stack
-Kotlin, Kakao API, Retrofit2, Jsoup, JWT Token, 
+```Kotlin```, ```Kakao API```, ```Retrofit2```, ```Jsoup```, ```JWT Token```, 
 
 ## ✅ Main Function
 **일본인 대상 앱으로 일본어로 번역되어 있음에 양해부탁드립니다.**
@@ -60,3 +60,10 @@ Kotlin, Kakao API, Retrofit2, Jsoup, JWT Token,
 * 카카오맵은 WebView, 여행코스는 SlidingPanel을 이용해 화면을 구성했습니다.
 * 다양한 카카오 API(Login, WebView, Maps, Navigation)를 사용해볼 수 있었습니다.
 <br>
+
+## 📝 Learned
+
+<br>
+
+## 🔗 PlayStore Link
+https://play.google.com/store/apps/details?id=com.fika.fika_project
