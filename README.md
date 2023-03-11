@@ -15,6 +15,9 @@
 관광지 정보는 한국관광공사의 'TourAPI 4.0'에서 제공하는 관광데이터를 활용했습니다.
 그리고 공모전 제출 당시 ‘이태원 클라스’, ‘이상한 변호사 우영우’의 제작사에 직접 문의해 해당 드라마의 포스터와 대본의 일부를 앱에 사용할 수 있는 권한을 허가 받았습니다.
 
+## 🛠️ Tech Stack
+Kotlin, Kakao API, Retrofit2, Jsoup, JWT Token, 
+
 ## ✅ Main Function
 <p>
 일본인 대상 앱으로 일본어로 번역되어 있음에 양해부탁드립니다.
@@ -34,21 +37,21 @@
 <div>
   <img src="https://user-images.githubusercontent.com/98886487/224473841-ea02d5a8-5b51-48a2-9ec4-ecea3136e81d.png" width="190" height="400" /> 
   <img src="https://user-images.githubusercontent.com/98886487/224476657-599816bd-c9b1-40be-b8e3-3d1b2ec416d0.png" width="190" height="400" /> 
-  <img src="https://user-images.githubusercontent.com/98886487/224476647-0d49c389-1fc5-40e1-89d6-05b6fd02dca8.png" width="190" height="400" /> 
+  <img src="https://user-images.githubusercontent.com/98886487/224478358-705665c0-f805-4af1-a1ba-f3d0935003e1.png" width="190" height="400" /> 
   <img src="https://user-images.githubusercontent.com/98886487/224476647-0d49c389-1fc5-40e1-89d6-05b6fd02dca8.png" width="190" height="400" /> 
 </div>   
 
 ### 2️⃣ 사용자가 직접 만드는 K-Drama 여행 코스
 * 드라마와 촬영지, 추천 여행지를 바탕으로 사용자가 직접 여행코스를 제작하고 해당 코스를 확인할 수 있습니다.
 * 추천 관광지는 드라마 촬영지 주변 반경 10km를 기준으로 Tour API에서 제공하는 '맛집', '카페', '쇼핑' 카테고리로 구분하여 추천합니다.
-* 관광지별 상세정보를 제공합니다. 사진필요
+* API에서 제공받는 관광지 정보를 가공하여 관광지별 상세정보를 제공합니다.
 * Jsoup 라이브러리를 이용해 네이버 엔화 환율을 파싱해두어 실시간 환율에 따른 원화 -> 엔화 금액을 제공합니다.
 <br>
 
 <div> 
   <img src="https://user-images.githubusercontent.com/98886487/224475939-220585ae-a7bb-4df4-ab1f-0afb0e8dfb91.png" width="190" height="400" /> 
   <img src="https://user-images.githubusercontent.com/98886487/224475887-19dc757b-0811-4171-9abb-0b7d9ae671ee.png" width="190" height="400" /> 
-  <img src="https://user-images.githubusercontent.com/98886487/224475963-8ca71c3b-bbbc-4edf-a947-201a988da7d8.png" width="190" height="400" />
+  <img src="https://user-images.githubusercontent.com/98886487/224478079-4277fa96-ae73-4082-ae5f-59c8ce233441.png" width="190" height="400" />
   <img src="https://user-images.githubusercontent.com/98886487/224475996-ae655e87-6dbc-44c8-9d0d-d19c484ba643.png" width="190" height="400" />
 </div>
 
