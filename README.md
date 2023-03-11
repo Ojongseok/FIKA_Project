@@ -6,8 +6,8 @@
 팀원 및 역할 : 기획/마케팅/데이터 5명, UI/UX 디자이너 1명, Android 프론트엔드 개발 2명, 백엔드 개발 1명   
 
 ## 💡 Topic
-* 일본인 대상 K-드라마 촬영지를 기반으로 한국의 관광지를 추천하고 여행 코스를 제공하는 여행서비스 앱
-* 2022 관광데이터 활용 공모전 출품작 [우수상] 
+* **일본인 대상 K-드라마 촬영지를 기반으로 한국의 관광지를 추천하고 여행 코스를 제공하는 여행서비스 앱**
+* **2022 관광데이터 활용 공모전 출품작 [우수상]**
 
 ## 📝 Description
 > 일본 내에서 K-Pop과 더불어 한류 열풍의 주역이라 할 수 있는 K-Drama, 그 중에서도 드라마 촬영지와 주변 관광지를 중심으로 사용자가 직접 여행 코스를 설계하는 서비스입니다. 
@@ -19,14 +19,13 @@
 Kotlin, Kakao API, Retrofit2, Jsoup, JWT Token, 
 
 ## ✅ Main Function
-<p>
-일본인 대상 앱으로 일본어로 번역되어 있음에 양해부탁드립니다.
+**일본인 대상 앱으로 일본어로 번역되어 있음에 양해부탁드립니다.**
 <div>
   <img src="https://user-images.githubusercontent.com/98886487/223594131-0bfef979-9b69-4bf3-85a4-8fd7b267a14f.png" width="200" height="400" /> 
   <img src="https://user-images.githubusercontent.com/98886487/221556632-a32c2490-6722-415a-9f1e-b05e4816a48e.png" width="200" height="400" /> 
   <img src="https://user-images.githubusercontent.com/98886487/221557928-223ce860-aec3-48da-92b4-ad3035c62a5f.png" width="200" height="400" />
 </div>
-</p>
+
 
 ### 1️⃣ 관광지 추천 기능   
 * 한국에 낯선 일본인 관관객을 위해 드라마와 지역을 구분하여 관광지/관광 코스를 제공합니다.
