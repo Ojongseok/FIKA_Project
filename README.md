@@ -32,7 +32,10 @@
 <br>
 
 <div>
-  <img src="https://user-images.githubusercontent.com/98886487/224473841-ea02d5a8-5b51-48a2-9ec4-ecea3136e81d.png" width="200" height="400" /> 
+  <img src="https://user-images.githubusercontent.com/98886487/224473841-ea02d5a8-5b51-48a2-9ec4-ecea3136e81d.png" width="190" height="400" /> 
+  <img src="https://user-images.githubusercontent.com/98886487/224476657-599816bd-c9b1-40be-b8e3-3d1b2ec416d0.png" width="190" height="400" /> 
+  <img src="https://user-images.githubusercontent.com/98886487/224476647-0d49c389-1fc5-40e1-89d6-05b6fd02dca8.png" width="190" height="400" /> 
+  <img src="https://user-images.githubusercontent.com/98886487/224476647-0d49c389-1fc5-40e1-89d6-05b6fd02dca8.png" width="190" height="400" /> 
 </div>   
 
 ### 2️⃣ 사용자가 직접 만드는 K-Drama 여행 코스
@@ -41,10 +44,10 @@
 <br>
 
 <div> 
-  <img src="https://user-images.githubusercontent.com/98886487/224475939-220585ae-a7bb-4df4-ab1f-0afb0e8dfb91.png" width="200" height="400" /> 
-  <img src="https://user-images.githubusercontent.com/98886487/224475887-19dc757b-0811-4171-9abb-0b7d9ae671ee.png" width="200" height="400" /> 
-  <img src="https://user-images.githubusercontent.com/98886487/224475963-8ca71c3b-bbbc-4edf-a947-201a988da7d8.png" width="200" height="400" />
-  <img src="https://user-images.githubusercontent.com/98886487/224475996-ae655e87-6dbc-44c8-9d0d-d19c484ba643.png" width="200" height="400" />
+  <img src="https://user-images.githubusercontent.com/98886487/224475939-220585ae-a7bb-4df4-ab1f-0afb0e8dfb91.png" width="190" height="400" /> 
+  <img src="https://user-images.githubusercontent.com/98886487/224475887-19dc757b-0811-4171-9abb-0b7d9ae671ee.png" width="190" height="400" /> 
+  <img src="https://user-images.githubusercontent.com/98886487/224475963-8ca71c3b-bbbc-4edf-a947-201a988da7d8.png" width="190" height="400" />
+  <img src="https://user-images.githubusercontent.com/98886487/224475996-ae655e87-6dbc-44c8-9d0d-d19c484ba643.png" width="190" height="400" />
 </div>
 
 ### 3️⃣ 카카오맵을 통한 여행지 확인 및 교통편 확인 기능 
