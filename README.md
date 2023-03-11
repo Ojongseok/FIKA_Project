@@ -51,7 +51,7 @@ Kotlin, Kakao API, Retrofit2, Jsoup, JWT Token,
 <div> 
   <img src="https://user-images.githubusercontent.com/98886487/224475939-220585ae-a7bb-4df4-ab1f-0afb0e8dfb91.png" width="190" height="400" /> 
   <img src="https://user-images.githubusercontent.com/98886487/224475887-19dc757b-0811-4171-9abb-0b7d9ae671ee.png" width="190" height="400" /> 
-  <img src="https://user-images.githubusercontent.com/98886487/224478079-4277fa96-ae73-4082-ae5f-59c8ce233441.png" width="190" height="400" />
+  <img src="https://user-images.githubusercontent.com/98886487/224478545-e38dae25-e253-4c58-b284-d748ab7ed8bc.png" width="190" height="400" />
   <img src="https://user-images.githubusercontent.com/98886487/224475996-ae655e87-6dbc-44c8-9d0d-d19c484ba643.png" width="190" height="400" />
 </div>
 
