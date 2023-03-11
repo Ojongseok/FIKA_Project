@@ -35,7 +35,7 @@
 <img src="https://user-images.githubusercontent.com/98886487/224473841-ea02d5a8-5b51-48a2-9ec4-ecea3136e81d.png" width="200" height="400" /> 
 <img src="https://user-images.githubusercontent.com/98886487/224473863-fb7f6269-0f15-4bcd-8661-3e5ebf9c199f.png" width="200" height="400" /> 
 <img src="https://user-images.githubusercontent.com/98886487/224473867-178ea051-be33-4041-b693-ed97204f7d44.png" width="200" height="400" />
-<img src="https://user-images.githubusercontent.com/98886487/224474588-bb9156e8-cbc5-4090-893f-286a1397f519.png" height="400" />
+<img src="https://user-images.githubusercontent.com/98886487/224474588-bb9156e8-cbc5-4090-893f-286a1397f519.png" width="200" height="400" />
 </div>
 
 ### 2️⃣ 여행코스 제작 및 교통편 확인 기능 
