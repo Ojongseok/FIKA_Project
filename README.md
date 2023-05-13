@@ -69,4 +69,5 @@
 <br>
 
 ## 🔗 PlayStore Link
-https://play.google.com/store/apps/details?id=com.fika.fika_project
+https://play.google.com/store/apps/details?id=com.fika.fika_project   
+현재 서버가 닫혀 실행은 불가합니다.
